@@ -24,31 +24,52 @@ const config = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'config.jso
 
 const API_BASE = 'https://api.hubapi.com';
 
-async function hubspotSearch(objectType, body) {
-  const res = await fetch(`${API_BASE}/crm/v3/objects/${objectType}/search`, {
-    method: 'POST',
-    headers: {
-      'Authorization': `Bearer ${HUBSPOT_TOKEN}`,
-      'Content-Type': 'application/json'
-    },
-    body: JSON.stringify(body)
-  });
-  if (!res.ok) {
+function sleep(ms) {
+  return new Promise(resolve => setTimeout(resolve, ms));
+}
+
+async function hubspotSearch(objectType, body, retries = 4) {
+  for (let attempt = 1; attempt <= retries; attempt++) {
+    const res = await fetch(`${API_BASE}/crm/v3/objects/${objectType}/search`, {
+      method: 'POST',
+      headers: {
+        'Authorization': `Bearer ${HUBSPOT_TOKEN}`,
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(body)
+    });
+    if (res.ok) return res.json();
+
     const text = await res.text();
+
+    // Retry on rate limit (429) or server/transient errors (400 sem detalhe, 500+)
+    const shouldRetry = res.status === 429 || res.status >= 500 ||
+      (res.status === 400 && text.includes('There was a problem with the request'));
+
+    if (shouldRetry && attempt < retries) {
+      const delay = attempt * 3000; // 3s, 6s, 9s
+      console.log(`HubSpot API ${res.status} na tentativa ${attempt}/${retries} — aguardando ${delay / 1000}s...`);
+      await sleep(delay);
+      continue;
+    }
+
     throw new Error(`HubSpot API ${res.status}: ${text}`);
   }
-  return res.json();
 }
 
 async function fetchAllDeals(filterGroups, properties) {
   let results = [];
   let after = undefined;
+  let pageNum = 0;
   do {
+    // Pausa entre páginas para evitar rate limit no endpoint de search
+    if (pageNum > 0) await sleep(400);
     const body = { filterGroups, properties, limit: 100 };
     if (after) body.after = after;
     const page = await hubspotSearch('deals', body);
     results = results.concat(page.results || []);
     after = page.paging && page.paging.next ? page.paging.next.after : undefined;
+    pageNum++;
   } while (after);
   return results;
 }
@@ -58,10 +79,6 @@ function monthWindow() {
   const now = new Date();
   const first = new Date(now.getFullYear(), now.getMonth(), 1);
   return { first, now };
-}
-
-function isoDate(d) {
-  return d.toISOString().slice(0, 10);
 }
 
 function fmtDiaMes(d) {
@@ -82,18 +99,20 @@ async function main() {
     }],
     ['dealname', 'amount', 'closedate', 'hubspot_owner_id']
   );
+  await sleep(500);
 
-  // 1b) Deals ganhos no funil de Cross-Sell (pipeline confirmada via amostragem no HubSpot)
+  // 1b) Deals ganhos no funil de Cross-Sell
   const crossSellDeals = config.crossSellPipelineId ? await fetchAllDeals(
     [{
       filters: [
         { propertyName: 'pipeline', operator: 'EQ', value: config.crossSellPipelineId },
-        { propertyName: 'hs_is_closed_won', operator: 'EQ', value: 'true' },
+        { propertyName: 'dealstage', operator: 'EQ', value: 'closedwon' },
         { propertyName: 'closedate', operator: 'GTE', value: String(first.getTime()) }
       ]
     }],
     ['dealname', 'amount', 'closedate', 'hubspot_owner_id']
   ) : [];
+  await sleep(500);
 
   // 2) Deals perdidos (closedlost) no mês, para win rate
   const lostDeals = await fetchAllDeals(
@@ -106,6 +125,7 @@ async function main() {
     }],
     ['dealname', 'amount', 'closedate', 'hubspot_owner_id']
   );
+  await sleep(500);
 
   // 3) Deals abertos (pipeline ativo), para aging
   const openDeals = await fetchAllDeals(
@@ -117,8 +137,9 @@ async function main() {
     }],
     ['dealname', 'amount', 'createdate', 'hubspot_owner_id', 'dealstage']
   );
+  await sleep(500);
 
-  // ── receita acumulada por dia do mês (Aquisição + Cross-Sell, como no total do topo) ──
+  // ── receita acumulada por dia do mês ─────────────────────────────────────
   const dayCount = now.getDate();
   const dailyTotals = new Array(dayCount).fill(0);
   for (const d of [...wonDeals, ...crossSellDeals]) {
@@ -164,11 +185,6 @@ async function main() {
   // Nomes confirmados no HubSpot (get_properties > dealstage):
   //   appointmentscheduled = SQL · qualifiedtobuy = Demo Realizada
   //   presentationscheduled = SAL · decisionmakerboughtin = Proposta Enviada
-  // Aproximação: o HubSpot não nos expõe aqui um histórico de "data de entrada
-  // por etapa", então contamos deals cujo estágio ATUAL é aquela etapa ou uma
-  // etapa posterior no funil (incluindo ganhos). É uma aproximação razoável,
-  // não o número exato de "quantos passaram por ali em algum momento" — um
-  // deal que retrocedeu de etapa não é recontado no estágio anterior.
   const STAGE_ORDER = ['appointmentscheduled', 'qualifiedtobuy', 'presentationscheduled', 'decisionmakerboughtin', 'contractsent', 'closedwon'];
   const allDefaultDeals = await fetchAllDeals(
     [{ filters: [{ propertyName: 'pipeline', operator: 'EQ', value: config.pipelineId }] }],
@@ -197,7 +213,6 @@ async function main() {
       winRateP: (won + lost) > 0 ? Math.round((won / (won + lost)) * 1000) / 10 : null
     };
   }
-
 
   const closerStats = config.closers.map(c => {
     const won = wonDeals.filter(d => Number(d.properties.hubspot_owner_id) === c.ownerId);
