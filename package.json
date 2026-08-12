@@ -1,0 +1,10 @@
+{
+  "name": "amplimed-painel-vivo",
+  "version": "1.0.0",
+  "description": "Painel Comercial Amplimed com dados atualizados automaticamente via HubSpot + GitHub Actions.",
+  "private": true,
+  "engines": { "node": ">=18" },
+  "scripts": {
+    "update-data": "node scripts/fetch-hubspot-data.js"
+  }
+}
