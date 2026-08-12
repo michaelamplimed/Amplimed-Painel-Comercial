@@ -3748,7 +3748,7 @@ const FALLBACK_DATA = {
 
 async function loadPainelData(){
   try{
-    const res = await fetch('./data/data.json', {cache:'no-store'});
+    const res = await fetch('./data/data.json?v=' + Date.now(), {cache:'no-store'});
     if(!res.ok) throw new Error('HTTP '+res.status);
     return await res.json();
   }catch(e){
