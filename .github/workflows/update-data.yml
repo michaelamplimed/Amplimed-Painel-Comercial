@@ -2,12 +2,13 @@ name: Atualizar dados do Painel Amplimed
 
 on:
   schedule:
-    # Roda de hora em hora das 10h às 22h UTC = 7h–19h BRT
-    - cron: '0 10-22 * * *'
-  workflow_dispatch: # permite rodar manualmente pela aba Actions
+    # Backup: GitHub cron nativo (pode atrasar 15-60min, usado só como fallback)
+    # Roda a cada hora das 10h às 22h UTC = 7h–19h BRT
+    - cron: '5 10-22 * * *'
+  workflow_dispatch: # disparo principal via cron-job.org (confiável)
 
 permissions:
-  contents: write  # necessário para commitar o data.json atualizado
+  contents: write
 
 jobs:
   update:
@@ -32,5 +33,5 @@ jobs:
           git config user.name  "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add data/data.json
-          git diff --staged --quiet || git commit -m "chore: atualiza data.json [$(date -u '+%Y-%m-%d %H:%M UTC')]"
+          git diff --staged --quiet || git commit -m "chore: atualiza data.json [$(date -u '+%Y-%m-%d %H:%M UTC')] via ${{ github.event_name }}"
           git push
