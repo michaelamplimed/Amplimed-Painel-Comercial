@@ -5,10 +5,11 @@
   "crossSellPipelineId": "713767850",
   "timezone": "America/Sao_Paulo",
   "closers": [
-    { "name": "Tamara",   "ownerId": 418032145, "nivel": "Sênior", "metaMes": 10600 },
-    { "name": "Eduardo",  "ownerId": 88206054,  "nivel": "Sênior", "metaMes": 10600 },
-    { "name": "Juliano",  "ownerId": 84254525,  "nivel": "Pleno",  "metaMes": 8600 },
-    { "name": "Ariel",    "ownerId": 88439406,  "nivel": "Pleno",  "metaMes": 8600 },
-    { "name": "Mayara",   "ownerId": 90883963,  "nivel": "Pleno",  "metaMes": 8600 }
+    { "name": "Tamara",   "ownerId": 418032145, "nivel": "Sênior",       "metaMes": 10600 },
+    { "name": "Eduardo",  "ownerId": 88206054,  "nivel": "Sênior",       "metaMes": 10600 },
+    { "name": "Juliano",  "ownerId": 84254525,  "nivel": "Pleno",        "metaMes": 8600  },
+    { "name": "Ariel",    "ownerId": 88439406,  "nivel": "Pleno",        "metaMes": 8600  },
+    { "name": "Mayara",   "ownerId": 90883963,  "nivel": "Pleno",        "metaMes": 8600  },
+    { "name": "Catiane",  "ownerId": 421811032, "nivel": "Coordenadora", "metaMes": 0     }
   ]
 }
