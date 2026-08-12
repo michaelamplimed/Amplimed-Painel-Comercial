@@ -3845,6 +3845,29 @@ function aplicarDadosNoPainel(d){
 }
 
 loadPainelData().then(aplicarDadosNoPainel);
+
+// ── Auto-refresh: recarrega os dados sem precisar fechar/abrir a aba ──────
+// Busca o data.json atualizado a cada 5 minutos e re-renderiza o painel.
+// Charts dinâmicos são destruídos antes de serem recriados para evitar erros.
+const DYNAMIC_CHARTS = ['chartRec','chartResultadoRec','chartAging',
+  'chartFunilTotal','chartFunilCloser','chartSdrFunil','chartSdrFunilDetalhe',
+  'chartConvSdr','chartSdrForecast'];
+
+setInterval(async () => {
+  try {
+    const d = await loadPainelData();
+    // Destroi instâncias existentes dos charts dinâmicos antes de recriar
+    DYNAMIC_CHARTS.forEach(id => {
+      const el = document.getElementById(id);
+      const inst = el && Chart.getChart(el);
+      if (inst) inst.destroy();
+    });
+    aplicarDadosNoPainel(d);
+    console.log('[Painel] Dados atualizados em', new Date().toLocaleTimeString('pt-BR'));
+  } catch(e) {
+    console.warn('[Painel] Auto-refresh falhou:', e);
+  }
+}, 5 * 60 * 1000); // a cada 5 minutos
 // ── chart: radar closers ──────────────────────────────────────────────────────
 new Chart(document.getElementById('chartRadar').getContext('2d'), {
   type:'radar',
