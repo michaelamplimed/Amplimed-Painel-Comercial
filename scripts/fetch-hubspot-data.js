@@ -6,9 +6,9 @@
  * Executado pelo GitHub Actions (.github/workflows/update-data.yml) de hora em
  * hora, das 7h às 19h (horário de Brasília), de segunda a sábado.
  *
- * Requer a variável de ambiente HUBSPOT_TOKEN (token de uma Private App do
- * HubSpot com escopo "crm.objects.deals.read" e "crm.objects.owners.read").
- * Nunca coloque o token direto no código — ele deve vir de um GitHub Secret.
+ * Requer a variável de ambiente HUBSPOT_TOKEN com escopo
+ * "crm.objects.deals.read" e "crm.objects.owners.read".
+ * Nunca coloque o token direto no código — use um GitHub Secret.
  */
 
 const fs = require('fs');
@@ -28,7 +28,7 @@ function sleep(ms) {
   return new Promise(resolve => setTimeout(resolve, ms));
 }
 
-async function hubspotSearch(objectType, body, retries = 4) {
+async function hubspotSearch(objectType, body, retries = 3) {
   for (let attempt = 1; attempt <= retries; attempt++) {
     const res = await fetch(`${API_BASE}/crm/v3/objects/${objectType}/search`, {
       method: 'POST',
@@ -42,13 +42,10 @@ async function hubspotSearch(objectType, body, retries = 4) {
 
     const text = await res.text();
 
-    // Retry on rate limit (429) or server/transient errors (400 sem detalhe, 500+)
-    const shouldRetry = res.status === 429 || res.status >= 500 ||
-      (res.status === 400 && text.includes('There was a problem with the request'));
-
-    if (shouldRetry && attempt < retries) {
-      const delay = attempt * 3000; // 3s, 6s, 9s
-      console.log(`HubSpot API ${res.status} na tentativa ${attempt}/${retries} — aguardando ${delay / 1000}s...`);
+    // Retry only on rate limit (429) or server errors (5xx)
+    if ((res.status === 429 || res.status >= 500) && attempt < retries) {
+      const delay = attempt * 3000;
+      console.log(`HubSpot API ${res.status} (tentativa ${attempt}/${retries}) — aguardando ${delay / 1000}s...`);
       await sleep(delay);
       continue;
     }
@@ -62,8 +59,7 @@ async function fetchAllDeals(filterGroups, properties) {
   let after = undefined;
   let pageNum = 0;
   do {
-    // Pausa entre páginas para evitar rate limit no endpoint de search
-    if (pageNum > 0) await sleep(400);
+    if (pageNum > 0) await sleep(400); // evita rate limit entre páginas
     const body = { filterGroups, properties, limit: 100 };
     if (after) body.after = after;
     const page = await hubspotSearch('deals', body);
@@ -74,7 +70,7 @@ async function fetchAllDeals(filterGroups, properties) {
   return results;
 }
 
-// ── janela do mês corrente (America/Sao_Paulo) ────────────────────────────
+// ── janela do mês corrente ────────────────────────────────────────────────
 function monthWindow() {
   const now = new Date();
   const first = new Date(now.getFullYear(), now.getMonth(), 1);
@@ -88,7 +84,10 @@ function fmtDiaMes(d) {
 async function main() {
   const { first, now } = monthWindow();
 
-  // 1) Deals ganhos (closedwon) com data de fechamento no mês corrente — Aquisição
+  // Propriedades comuns para deals ganhos/perdidos (inclui dealstage para o funil)
+  const DEAL_PROPS_CLOSED = ['dealname', 'amount', 'closedate', 'hubspot_owner_id', 'dealstage'];
+
+  // 1) Deals ganhos (closedwon) no mês corrente — Aquisição
   const wonDeals = await fetchAllDeals(
     [{
       filters: [
@@ -97,7 +96,7 @@ async function main() {
         { propertyName: 'closedate', operator: 'GTE', value: String(first.getTime()) }
       ]
     }],
-    ['dealname', 'amount', 'closedate', 'hubspot_owner_id']
+    DEAL_PROPS_CLOSED
   );
   await sleep(500);
 
@@ -110,7 +109,7 @@ async function main() {
         { propertyName: 'closedate', operator: 'GTE', value: String(first.getTime()) }
       ]
     }],
-    ['dealname', 'amount', 'closedate', 'hubspot_owner_id']
+    DEAL_PROPS_CLOSED
   ) : [];
   await sleep(500);
 
@@ -123,11 +122,11 @@ async function main() {
         { propertyName: 'closedate', operator: 'GTE', value: String(first.getTime()) }
       ]
     }],
-    ['dealname', 'amount', 'closedate', 'hubspot_owner_id']
+    DEAL_PROPS_CLOSED
   );
   await sleep(500);
 
-  // 3) Deals abertos (pipeline ativo), para aging
+  // 3) Deals abertos (pipeline ativo), para aging e funil
   const openDeals = await fetchAllDeals(
     [{
       filters: [
@@ -137,7 +136,13 @@ async function main() {
     }],
     ['dealname', 'amount', 'createdate', 'hubspot_owner_id', 'dealstage']
   );
-  await sleep(500);
+
+  // ── funil: reutiliza os dados já buscados ────────────────────────────────
+  // Nota: o pipeline default tem 17k+ deals históricos, acima do limite de
+  // paginação do HubSpot Search API (10k). Por isso montamos o funil a partir
+  // dos deals abertos + fechados do mês corrente, o que é mais relevante para
+  // o dashboard mensal e evita a limitação da API.
+  const allDefaultDeals = [...openDeals, ...wonDeals, ...lostDeals];
 
   // ── receita acumulada por dia do mês ─────────────────────────────────────
   const dayCount = now.getDate();
@@ -186,16 +191,14 @@ async function main() {
   //   appointmentscheduled = SQL · qualifiedtobuy = Demo Realizada
   //   presentationscheduled = SAL · decisionmakerboughtin = Proposta Enviada
   const STAGE_ORDER = ['appointmentscheduled', 'qualifiedtobuy', 'presentationscheduled', 'decisionmakerboughtin', 'contractsent', 'closedwon'];
-  const allDefaultDeals = await fetchAllDeals(
-    [{ filters: [{ propertyName: 'pipeline', operator: 'EQ', value: config.pipelineId }] }],
-    ['dealstage', 'hubspot_owner_id']
-  );
+
   function reachedStage(deal, stageKey) {
     if (deal.properties.dealstage === 'closedwon') return true;
     const idx = STAGE_ORDER.indexOf(stageKey);
     const dealIdx = STAGE_ORDER.indexOf(deal.properties.dealstage);
     return dealIdx >= idx;
   }
+
   const funilPorCloser = {};
   for (const c of config.closers) {
     const deals = allDefaultDeals.filter(d => Number(d.properties.hubspot_owner_id) === c.ownerId);
