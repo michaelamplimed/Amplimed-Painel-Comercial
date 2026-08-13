@@ -1,16 +1,16 @@
 {
-  "geradoEm": "2026-08-13T19:45:25.157Z",
-  "geradoEmBR": "13/08/2026, 16:45:25",
+  "geradoEm": "2026-08-13T19:59:13.113Z",
+  "geradoEmBR": "13/08/2026, 16:59:13",
   "mes": {
     "ano": 2026,
     "mes": 8
   },
   "kpis": {
-    "receitaRealizada": 25972.75,
+    "receitaRealizada": 26111.94,
     "metaMensal": 47000,
-    "pctMeta": 55.3,
-    "pipelineAberto": 38486.09,
-    "mediaDiaria": 1997.9
+    "pctMeta": 55.6,
+    "pipelineAberto": 38346.9,
+    "mediaDiaria": 2008.61
   },
   "receitaAcumulada": {
     "labels": [
@@ -41,7 +41,7 @@
       21195.99,
       22903.85,
       23946.75,
-      25972.75
+      26111.94
     ],
     "meta": [
       1516.13,
@@ -60,8 +60,8 @@
     ]
   },
   "aging": {
-    "0-7d": 36,
-    "8-15d": 19,
+    "0-7d": 35,
+    "8-15d": 20,
     "16-30d": 16,
     "31-60d": 8,
     "+60d": 6
@@ -70,27 +70,27 @@
     {
       "name": "Tamara",
       "nivel": "Sênior",
-      "ganhos": 17,
+      "ganhos": 18,
       "perdidos": 10,
       "crossSellGanhos": 1,
-      "aquisicaoAmount": 4804.97,
+      "aquisicaoAmount": 4944.16,
       "crossSellAmount": 15,
-      "totalAmount": 4819.97,
-      "ticketMedio": 283.53,
-      "winRate": 63,
+      "totalAmount": 4959.16,
+      "ticketMedio": 275.51,
+      "winRate": 64.3,
       "metaMes": 10600,
       "metaProRata": 4445.16,
-      "pctMetaProRata": 108.4,
+      "pctMetaProRata": 111.6,
       "funil": {
-        "sql": 30,
-        "demo": 30,
-        "sal": 26,
-        "proposta": 21,
-        "won": 17,
+        "sql": 31,
+        "demo": 31,
+        "sal": 27,
+        "proposta": 22,
+        "won": 18,
         "sqlToDemoP": 100,
-        "demoToSalP": 86.7,
-        "salToPropP": 80.8,
-        "winRateP": 63
+        "demoToSalP": 87.1,
+        "salToPropP": 81.5,
+        "winRateP": 64.3
       }
     },
     {
@@ -160,13 +160,13 @@
       "metaProRata": 3606.45,
       "pctMetaProRata": 128.9,
       "funil": {
-        "sql": 28,
-        "demo": 28,
+        "sql": 29,
+        "demo": 29,
         "sal": 17,
         "proposta": 14,
         "won": 13,
         "sqlToDemoP": 100,
-        "demoToSalP": 60.7,
+        "demoToSalP": 58.6,
         "salToPropP": 82.4,
         "winRateP": 76.5
       }
