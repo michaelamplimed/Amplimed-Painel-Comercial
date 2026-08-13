@@ -1,16 +1,16 @@
 {
-  "geradoEm": "2026-08-13T16:45:25.747Z",
-  "geradoEmBR": "13/08/2026, 13:45:25",
+  "geradoEm": "2026-08-13T17:00:32.119Z",
+  "geradoEmBR": "13/08/2026, 14:00:32",
   "mes": {
     "ano": 2026,
     "mes": 8
   },
   "kpis": {
-    "receitaRealizada": 24838.96,
+    "receitaRealizada": 25066.96,
     "metaMensal": 47000,
-    "pctMeta": 52.8,
-    "pipelineAberto": 38466.79,
-    "mediaDiaria": 1910.69
+    "pctMeta": 53.3,
+    "pipelineAberto": 38238.79,
+    "mediaDiaria": 1928.23
   },
   "receitaAcumulada": {
     "labels": [
@@ -41,7 +41,7 @@
       21195.99,
       22903.85,
       23946.75,
-      24838.96
+      25066.96
     ],
     "meta": [
       1516.13,
@@ -60,9 +60,9 @@
     ]
   },
   "aging": {
-    "0-7d": 35,
+    "0-7d": 36,
     "8-15d": 22,
-    "16-30d": 14,
+    "16-30d": 13,
     "31-60d": 8,
     "+60d": 6
   },
@@ -122,27 +122,27 @@
     {
       "name": "Juliano",
       "nivel": "Pleno",
-      "ganhos": 14,
+      "ganhos": 15,
       "perdidos": 6,
       "crossSellGanhos": 4,
-      "aquisicaoAmount": 2154.8,
+      "aquisicaoAmount": 2293.8,
       "crossSellAmount": 406,
-      "totalAmount": 2560.8,
-      "ticketMedio": 182.91,
-      "winRate": 70,
+      "totalAmount": 2699.8,
+      "ticketMedio": 179.99,
+      "winRate": 71.4,
       "metaMes": 8600,
       "metaProRata": 3606.45,
-      "pctMetaProRata": 71,
+      "pctMetaProRata": 74.9,
       "funil": {
         "sql": 27,
         "demo": 27,
         "sal": 27,
         "proposta": 27,
-        "won": 14,
+        "won": 15,
         "sqlToDemoP": 100,
         "demoToSalP": 100,
         "salToPropP": 100,
-        "winRateP": 70
+        "winRateP": 71.4
       }
     },
     {
@@ -200,14 +200,14 @@
     {
       "name": "Catiane",
       "nivel": "Coordenadora",
-      "ganhos": 1,
+      "ganhos": 2,
       "perdidos": 1,
       "crossSellGanhos": 2,
-      "aquisicaoAmount": 794.9,
+      "aquisicaoAmount": 883.9,
       "crossSellAmount": 258.8,
-      "totalAmount": 1053.7,
-      "ticketMedio": 1053.7,
-      "winRate": 50,
+      "totalAmount": 1142.7,
+      "ticketMedio": 571.35,
+      "winRate": 66.7,
       "metaMes": 0,
       "metaProRata": 0,
       "pctMetaProRata": 0,
@@ -216,11 +216,11 @@
         "demo": 6,
         "sal": 4,
         "proposta": 3,
-        "won": 1,
+        "won": 2,
         "sqlToDemoP": 100,
         "demoToSalP": 66.7,
         "salToPropP": 75,
-        "winRateP": 50
+        "winRateP": 66.7
       }
     }
   ]
