@@ -1,6 +1,6 @@
 {
-  "geradoEm": "2026-08-13T21:15:27.240Z",
-  "geradoEmBR": "13/08/2026, 18:15:27",
+  "geradoEm": "2026-08-13T21:30:29.210Z",
+  "geradoEmBR": "13/08/2026, 18:30:29",
   "mes": {
     "ano": 2026,
     "mes": 8
@@ -110,12 +110,12 @@
       "funil": {
         "sql": 25,
         "demo": 25,
-        "sal": 16,
-        "proposta": 15,
+        "sal": 17,
+        "proposta": 16,
         "won": 15,
         "sqlToDemoP": 100,
-        "demoToSalP": 64,
-        "salToPropP": 93.8,
+        "demoToSalP": 68,
+        "salToPropP": 94.1,
         "winRateP": 60
       }
     },
