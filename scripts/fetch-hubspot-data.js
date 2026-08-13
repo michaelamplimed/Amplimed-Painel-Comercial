@@ -234,6 +234,7 @@ async function main() {
       nivel: c.nivel || null,
       ganhos: won.length,
       perdidos: lost.length,
+      crossSellGanhos: cross.length,
       aquisicaoAmount: Math.round(aquisicaoAmount * 100) / 100,
       crossSellAmount: Math.round(crossSellAmount * 100) / 100,
       totalAmount: Math.round(totalAmount * 100) / 100,
