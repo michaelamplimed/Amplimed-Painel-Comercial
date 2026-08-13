@@ -897,13 +897,13 @@ body.dark ::-webkit-scrollbar-thumb{background:#2D4060}
           <th style="background:#1B5E20">Ago/26 D7</th>
           <th style="background:#1B5E20">Tend&ecirc;ncia</th>
         </tr>
-        <tr style="background:#FEF2F2"><td>Receita Total</td><td class="num">R$56.681,12</td><td class="num fw">R$22.903,85</td><td class="num"><span class="delta dn">&#9660; 59.6%</span></td></tr>
-        <tr style="background:#FEF2F2"><td>Receita Aquisição</td><td class="num">R$51.636,02</td><td class="num fw">R$20.652,96</td><td class="num"><span class="delta dn">&#9660; 60.0%</span></td></tr>
-        <tr style="background:#FEF2F2"><td>Ganhos (Total)</td><td class="num">157</td><td class="num fw">83</td><td class="num"><span class="delta dn">&#9660; 47.1%</span></td></tr>
-        <tr style="background:#FEF2F2"><td>Ticket Médio</td><td class="num">R$328,89</td><td class="num fw">R$308,25</td><td class="num"><span class="delta dn">&#9660; 6.3%</span></td></tr>
+        <tr style="background:#FEF2F2"><td>Receita Total</td><td class="num">R$56.681,12</td><td id="comp-ago-receita" class="num fw">R$22.903,85</td><td class="num"><span class="delta dn">&#9660; 59.6%</span></td></tr>
+        <tr style="background:#FEF2F2"><td>Receita Aquisição</td><td class="num">R$51.636,02</td><td id="comp-ago-acq" class="num fw">R$20.652,96</td><td class="num"><span class="delta dn">&#9660; 60.0%</span></td></tr>
+        <tr style="background:#FEF2F2"><td>Ganhos (Total)</td><td class="num">157</td><td id="comp-ago-ganhos" class="num fw">83</td><td class="num"><span class="delta dn">&#9660; 47.1%</span></td></tr>
+        <tr style="background:#FEF2F2"><td>Ticket Médio</td><td class="num">R$328,89</td><td id="comp-ago-ticket" class="num fw">R$308,25</td><td class="num"><span class="delta dn">&#9660; 6.3%</span></td></tr>
         <tr style="background:#FEF2F2"><td>SQL Gerados</td><td class="num">263</td><td class="num fw">106</td><td class="num"><span class="delta dn">&#9660; 59.7%</span></td></tr>
         <tr style="background:#FEF2F2"><td>Rec. Influenciada SDR</td><td class="num">R$31.104,47</td><td class="num fw">R$19.070,06</td><td class="num"><span class="delta dn">&#9660; 38.7%</span></td></tr>
-        <tr style="background:#F0FDF4"><td>% Meta Acum.</td><td class="num">123%</td><td class="num fw">146%</td><td class="num"><span class="delta up">&#9650; 18.7%</span></td></tr>
+        <tr style="background:#F0FDF4"><td>% Meta Acum.</td><td class="num">123%</td><td id="comp-ago-pctmeta" class="num fw">146%</td><td class="num"><span class="delta up">&#9650; 18.7%</span></td></tr>
         <tr style="background:#FEF2F2"><td>Leads S/Tarefa</td><td class="num">313</td><td class="num fw">400</td><td class="num"><span class="delta dn">&#9660; 27.8%</span></td></tr>
       </table></div>
     </div>
@@ -916,7 +916,7 @@ body.dark ::-webkit-scrollbar-thumb{background:#2D4060}
       <div class="sec-body">
         <div class="tbl-wrap"><table>
           <tr><th style="background:#1B3A5C">Closer</th><th style="background:#1B3A5C">Vendas</th><th style="background:#1B3A5C">Rec. Aquisi&ccedil;&atilde;o</th><th style="background:#1B3A5C">Taxa de Ganho</th><th style="background:#1B3A5C">% da Meta</th></tr>
-          <tr style="background:#fff"><td>Tamara</td><td>14</td><td>R$4.387,97</td><td>74%</td><td><span class="bdg bdg-g">125%</span></td></tr><tr style="background:#fff"><td>Eduardo</td><td>13</td><td>R$5.637,75</td><td>72%</td><td><span class="bdg bdg-g">165%</span></td></tr><tr style="background:#fff"><td>Juliano</td><td>11</td><td>R$1.837,80</td><td>65%</td><td><span class="bdg bdg-a">78%</span></td></tr><tr style="background:#fff"><td>Ariel</td><td>9</td><td>R$2.967,07</td><td>64%</td><td><span class="bdg bdg-g">135%</span></td></tr><tr style="background:#fff"><td>Mayara</td><td>19</td><td>R$5.027,47</td><td>86%</td><td><span class="bdg bdg-g">192%</span></td></tr>
+          <tbody id="tbl-closers-mini"><tr style="background:#fff"><td>Tamara</td><td>14</td><td>R$4.387,97</td><td>74%</td><td><span class="bdg bdg-g">125%</span></td></tr><tr style="background:#fff"><td>Eduardo</td><td>13</td><td>R$5.637,75</td><td>72%</td><td><span class="bdg bdg-g">165%</span></td></tr><tr style="background:#fff"><td>Juliano</td><td>11</td><td>R$1.837,80</td><td>65%</td><td><span class="bdg bdg-a">78%</span></td></tr><tr style="background:#fff"><td>Ariel</td><td>9</td><td>R$2.967,07</td><td>64%</td><td><span class="bdg bdg-g">135%</span></td></tr><tr style="background:#fff"><td>Mayara</td><td>19</td><td>R$5.027,47</td><td>86%</td><td><span class="bdg bdg-g">192%</span></td></tr>
         </table></div>
       </div>
     </div>
@@ -936,15 +936,15 @@ body.dark ::-webkit-scrollbar-thumb{background:#2D4060}
   <div class="sec-card">
     <div class="sec-hdr" style="background:#0F5E54">&#128202; ATINGIMENTO POR INDICADOR &mdash; Vis&atilde;o Diretoria</div>
     <div class="sec-body">
-      <div class="pace-bar">&#128197; Meta di&aacute;ria R$2.238,10 &middot; D7/21 &middot; Realizado R$22.903,85 (146%) &middot; Proje&ccedil;&atilde;o R$68.711,55 &middot; Necess&aacute;rio R$1.721,15/dia</div>
+      <div id="pace-bar-diretoria" class="pace-bar">&#128197; Meta di&aacute;ria R$2.238,10 &middot; D7/21 &middot; Realizado R$22.903,85 (146%) &middot; Proje&ccedil;&atilde;o R$68.711,55 &middot; Necess&aacute;rio R$1.721,15/dia</div>
       <div class="tbl-wrap"><table>
-        <tr><th style="background:#137A6E">Indicador</th><th style="background:#137A6E">Realizado</th><th style="background:#137A6E">Proje&ccedil;&atilde;o</th><th style="background:#137A6E">Meta</th><th style="background:#137A6E">% Ating.</th><th style="background:#137A6E">Status</th></tr>
-        <tr style="background:#fff"><td>Receita (Acq+Cross)</td><td>R$22.903,85</td><td>R$68.711,55</td><td>R$47.000,00</td><td><span class="bdg bdg-g">146%</span></td><td>&#9989; No alvo</td></tr>
-        <tr style="background:#fff"><td>Total de Vendas</td><td>83</td><td>249</td><td>131</td><td><span class="bdg bdg-g">190%</span></td><td>&#9989; No alvo</td></tr>
-        <tr style="background:#fff"><td>Ticket M&eacute;dio</td><td>R$308,25</td><td>R$308,25</td><td>R$300</td><td><span class="bdg bdg-g">103%</span></td><td>&#9989; No alvo</td></tr>
+        <tr id="tbl-ating-header"><th style="background:#137A6E">Indicador</th><th style="background:#137A6E">Realizado</th><th style="background:#137A6E">Proje&ccedil;&atilde;o</th><th style="background:#137A6E">Meta</th><th style="background:#137A6E">% Ating.</th><th style="background:#137A6E">Status</th></tr>
+        <tr id="tbl-ating-receita" style="background:#fff"><td>Receita (Acq+Cross)</td><td>R$22.903,85</td><td>R$68.711,55</td><td>R$47.000,00</td><td><span class="bdg bdg-g">146%</span></td><td>&#9989; No alvo</td></tr>
+        <tr id="tbl-ating-vendas" style="background:#fff"><td>Total de Vendas</td><td>83</td><td>249</td><td>131</td><td><span class="bdg bdg-g">190%</span></td><td>&#9989; No alvo</td></tr>
+        <tr id="tbl-ating-ticket" style="background:#fff"><td>Ticket M&eacute;dio</td><td>R$308,25</td><td>R$308,25</td><td>R$300</td><td><span class="bdg bdg-g">103%</span></td><td>&#9989; No alvo</td></tr>
         <tr style="background:#fff"><td>SQL (SDR)</td><td>106</td><td>106</td><td>224</td><td><span class="bdg bdg-r">47%</span></td><td>&#9888; Aten&ccedil;&atilde;o</td></tr>
-        <tr style="background:#fff"><td>Taxa de Ganho</td><td>63.2%</td><td>63.2%</td><td>65%</td><td><span class="bdg bdg-g">97%</span></td><td>&#9888; Aten&ccedil;&atilde;o</td></tr>
-        <tr style="background:#fff"><td>Meta Q3 (Jul+Ago+Set)</td><td>R$22.903,85</td><td>R$206.134,65</td><td>R$141.000,00</td><td><span class="bdg bdg-r">16%</span></td><td>&#9989</td></tr>
+        <tr id="tbl-ating-wr" style="background:#fff"><td>Taxa de Ganho</td><td>63.2%</td><td>63.2%</td><td>65%</td><td><span class="bdg bdg-g">97%</span></td><td>&#9888; Aten&ccedil;&atilde;o</td></tr>
+        <tr id="tbl-ating-q3" style="background:#fff"><td>Meta Q3 (Jul+Ago+Set)</td><td>R$22.903,85</td><td>R$206.134,65</td><td>R$141.000,00</td><td><span class="bdg bdg-r">16%</span></td><td>&#9989</td></tr>
       </table></div>
     </div>
   </div>
@@ -3886,6 +3886,73 @@ function aplicarDadosNoPainel(d){
     const ae = el('meta-anual-ating');
     ae.textContent = pctMetaMes+'%';
     ae.className = 'bdg '+(pctMetaMes>=100?'bdg-g':(pctMetaMes>=70?'bdg-a':'bdg-r'));
+  }
+
+  // ── Comparativo AGO + Atingimento Diretoria + Closers Mini ──────────────────
+  const _countWD = labels => labels.filter(lbl => {
+    const p = lbl.split('/').map(Number);
+    const d2 = new Date(new Date().getFullYear(), p[1]-1, p[0]);
+    return d2.getDay()>0 && d2.getDay()<6;
+  }).length;
+  const _monthLabels = d.receitaAcumulada ? d.receitaAcumulada.labels : [];
+  const workingDaysSoFar = _countWD(_monthLabels);
+  const totalWorkingDays = (() => {
+    const now2 = new Date(); const yr = now2.getFullYear(), mo = now2.getMonth();
+    const dim = new Date(yr, mo+1, 0).getDate(); let cnt = 0;
+    for (let day=1;day<=dim;day++){const dt=new Date(yr,mo,day);if(dt.getDay()>0&&dt.getDay()<6)cnt++;}
+    return cnt || 21;
+  })();
+  const metaMensal = d.kpis.metaMensal || 47000;
+  const proRataMeta = totalWorkingDays>0 ? metaMensal/totalWorkingDays*workingDaysSoFar : 0;
+  const proRataPct = proRataMeta>0 ? Math.round(mrrTotal/proRataMeta*1000)/10 : 0;
+  const projecaoMes = workingDaysSoFar>0 ? Math.round(mrrTotal/workingDaysSoFar*totalWorkingDays*100)/100 : 0;
+  const metaDiaria = totalWorkingDays>0 ? Math.round(metaMensal/totalWorkingDays*100)/100 : 0;
+  const necessario = totalWorkingDays>workingDaysSoFar ? Math.round((metaMensal-mrrTotal)/(totalWorkingDays-workingDaysSoFar)*100)/100 : 0;
+
+  // Comparativo AGO column
+  if(el('comp-ago-receita')) el('comp-ago-receita').textContent = fmtMoeda(mrrTotal);
+  if(el('comp-ago-acq'))     el('comp-ago-acq').textContent     = fmtMoeda(mrrAcq);
+  if(el('comp-ago-ganhos'))  el('comp-ago-ganhos').textContent  = totVendas;
+  if(el('comp-ago-ticket'))  el('comp-ago-ticket').textContent  = fmtMoeda(ticketMedio);
+  if(el('comp-ago-pctmeta')) el('comp-ago-pctmeta').textContent = proRataPct+'%';
+
+  // Pace bar Atingimento
+  if(el('pace-bar-diretoria')) el('pace-bar-diretoria').innerHTML =
+    '📅 Meta diária '+fmtMoeda(metaDiaria)+' · D'+workingDaysSoFar+'/'+totalWorkingDays+' · Realizado '+fmtMoeda(mrrTotal)+' ('+proRataPct+'%) · Projeção '+fmtMoeda(projecaoMes)+' · Necessário '+fmtMoeda(necessario)+'/dia';
+
+  // Helper para atualizar linha do Atingimento
+  const updAting = (rowId, cells) => {
+    const row = document.getElementById(rowId); if (!row) return;
+    const tds = row.querySelectorAll('td'); if (!tds.length) return;
+    cells.forEach((val, i) => { if (tds[i+1] !== undefined) tds[i+1].innerHTML = val; });
+  };
+  const bdgSpan = (pct, v) => '<span class="bdg '+(pct>=100?'bdg-g':(pct>=70?'bdg-a':'bdg-r'))+'">'+v+'</span>';
+  const ico = ok => ok ? '✅ No alvo' : '⚠️ Atenção';
+
+  const recPct = proRataPct;
+  updAting('tbl-ating-receita', [fmtMoeda(mrrTotal), fmtMoeda(projecaoMes), fmtMoeda(metaMensal), bdgSpan(recPct, recPct+'%'), ico(recPct>=100)]);
+
+  const vndPct = Math.round(totVendas/131*1000)/10;
+  const vndProj = workingDaysSoFar>0 ? Math.round(totVendas/workingDaysSoFar*totalWorkingDays) : totVendas;
+  updAting('tbl-ating-vendas', [totVendas, vndProj, 131, bdgSpan(vndPct, vndPct+'%'), ico(vndPct>=100)]);
+
+  const tkPct = Math.round(ticketMedio/300*1000)/10;
+  updAting('tbl-ating-ticket', [fmtMoeda(ticketMedio), fmtMoeda(ticketMedio), 'R$300', bdgSpan(tkPct, tkPct+'%'), ico(tkPct>=100)]);
+
+  const wrPct = Math.round(winRateGeral/65*1000)/10;
+  updAting('tbl-ating-wr', [winRateGeral+'%', winRateGeral+'%', '65%', bdgSpan(wrPct, wrPct+'%'), ico(winRateGeral>=65)]);
+
+  const q3Meta = 141000, q3Pct = Math.round(mrrTotal/q3Meta*1000)/10;
+  const q3Proj = workingDaysSoFar>0 ? Math.round(projecaoMes*3*100)/100 : 0;
+  updAting('tbl-ating-q3', [fmtMoeda(mrrTotal), fmtMoeda(q3Proj), 'R$141.000,00', bdgSpan(q3Pct, q3Pct+'%'), '✅']);
+
+  // Closers mini-table
+  const tblMini = document.getElementById('tbl-closers-mini');
+  if(tblMini && d.closers){
+    tblMini.innerHTML = d.closers.filter(c=>c.metaMes>0).map(c=>{
+      const p=c.pctMetaProRata||0, bc=p>=100?'bdg-g':(p>=70?'bdg-a':'bdg-r');
+      return '<tr style="background:#fff"><td>'+c.name+'</td><td>'+c.ganhos+'</td><td>'+fmtMoeda(c.aquisicaoAmount)+'</td><td>'+c.winRate+'%</td><td><span class="bdg '+bc+'">'+p+'%</span></td></tr>';
+    }).join('');
   }
 }
 
