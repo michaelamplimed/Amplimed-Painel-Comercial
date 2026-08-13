@@ -1,16 +1,16 @@
 {
-  "geradoEm": "2026-08-13T18:00:33.619Z",
-  "geradoEmBR": "13/08/2026, 15:00:33",
+  "geradoEm": "2026-08-13T18:15:24.511Z",
+  "geradoEmBR": "13/08/2026, 15:15:24",
   "mes": {
     "ano": 2026,
     "mes": 8
   },
   "kpis": {
-    "receitaRealizada": 25325.86,
+    "receitaRealizada": 25597.75,
     "metaMensal": 47000,
-    "pctMeta": 53.9,
-    "pipelineAberto": 38238.79,
-    "mediaDiaria": 1948.14
+    "pctMeta": 54.5,
+    "pipelineAberto": 38055.9,
+    "mediaDiaria": 1969.06
   },
   "receitaAcumulada": {
     "labels": [
@@ -41,7 +41,7 @@
       21195.99,
       22903.85,
       23946.75,
-      25325.86
+      25597.75
     ],
     "meta": [
       1516.13,
@@ -60,7 +60,7 @@
     ]
   },
   "aging": {
-    "0-7d": 38,
+    "0-7d": 37,
     "8-15d": 21,
     "16-30d": 14,
     "31-60d": 8,
@@ -122,27 +122,27 @@
     {
       "name": "Juliano",
       "nivel": "Pleno",
-      "ganhos": 15,
+      "ganhos": 16,
       "perdidos": 6,
       "crossSellGanhos": 4,
-      "aquisicaoAmount": 2293.8,
+      "aquisicaoAmount": 2565.69,
       "crossSellAmount": 406,
-      "totalAmount": 2699.8,
-      "ticketMedio": 179.99,
-      "winRate": 71.4,
+      "totalAmount": 2971.69,
+      "ticketMedio": 185.73,
+      "winRate": 72.7,
       "metaMes": 8600,
       "metaProRata": 3606.45,
-      "pctMetaProRata": 74.9,
+      "pctMetaProRata": 82.4,
       "funil": {
         "sql": 27,
         "demo": 27,
         "sal": 27,
         "proposta": 27,
-        "won": 15,
+        "won": 16,
         "sqlToDemoP": 100,
         "demoToSalP": 100,
         "salToPropP": 100,
-        "winRateP": 71.4
+        "winRateP": 72.7
       }
     },
     {
@@ -212,14 +212,14 @@
       "metaProRata": 0,
       "pctMetaProRata": 0,
       "funil": {
-        "sql": 6,
-        "demo": 6,
-        "sal": 4,
+        "sql": 7,
+        "demo": 7,
+        "sal": 5,
         "proposta": 3,
         "won": 2,
         "sqlToDemoP": 100,
-        "demoToSalP": 66.7,
-        "salToPropP": 75,
+        "demoToSalP": 71.4,
+        "salToPropP": 60,
         "winRateP": 66.7
       }
     }
