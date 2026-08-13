@@ -105,7 +105,7 @@ async function main() {
     [{
       filters: [
         { propertyName: 'pipeline', operator: 'EQ', value: config.crossSellPipelineId },
-        { propertyName: 'dealstage', operator: 'EQ', value: 'closedwon' },
+        { propertyName: 'dealstage', operator: 'EQ', value: '1041958423' }, // stage "ganho" do pipeline Cross-Sell
         { propertyName: 'closedate', operator: 'GTE', value: String(first.getTime()) }
       ]
     }],
