@@ -1,16 +1,16 @@
 {
-  "geradoEm": "2026-08-13T17:15:24.168Z",
-  "geradoEmBR": "13/08/2026, 14:15:24",
+  "geradoEm": "2026-08-13T17:30:28.276Z",
+  "geradoEmBR": "13/08/2026, 14:30:28",
   "mes": {
     "ano": 2026,
     "mes": 8
   },
   "kpis": {
-    "receitaRealizada": 25066.96,
+    "receitaRealizada": 25325.86,
     "metaMensal": 47000,
-    "pctMeta": 53.3,
+    "pctMeta": 53.9,
     "pipelineAberto": 38238.79,
-    "mediaDiaria": 1928.23
+    "mediaDiaria": 1948.14
   },
   "receitaAcumulada": {
     "labels": [
@@ -41,7 +41,7 @@
       21195.99,
       22903.85,
       23946.75,
-      25066.96
+      25325.86
     ],
     "meta": [
       1516.13,
@@ -61,8 +61,8 @@
   },
   "aging": {
     "0-7d": 37,
-    "8-15d": 22,
-    "16-30d": 13,
+    "8-15d": 21,
+    "16-30d": 14,
     "31-60d": 8,
     "+60d": 6
   },
@@ -96,27 +96,27 @@
     {
       "name": "Eduardo",
       "nivel": "Sênior",
-      "ganhos": 13,
+      "ganhos": 14,
       "perdidos": 10,
       "crossSellGanhos": 3,
-      "aquisicaoAmount": 5637.75,
+      "aquisicaoAmount": 5896.65,
       "crossSellAmount": 199.9,
-      "totalAmount": 5837.65,
-      "ticketMedio": 449.05,
-      "winRate": 56.5,
+      "totalAmount": 6096.55,
+      "ticketMedio": 435.47,
+      "winRate": 58.3,
       "metaMes": 10600,
       "metaProRata": 4445.16,
-      "pctMetaProRata": 131.3,
+      "pctMetaProRata": 137.2,
       "funil": {
         "sql": 24,
         "demo": 24,
         "sal": 15,
         "proposta": 14,
-        "won": 13,
+        "won": 14,
         "sqlToDemoP": 100,
         "demoToSalP": 62.5,
         "salToPropP": 93.3,
-        "winRateP": 56.5
+        "winRateP": 58.3
       }
     },
     {
@@ -160,13 +160,13 @@
       "metaProRata": 3606.45,
       "pctMetaProRata": 118.5,
       "funil": {
-        "sql": 27,
-        "demo": 27,
+        "sql": 28,
+        "demo": 28,
         "sal": 17,
         "proposta": 14,
         "won": 12,
         "sqlToDemoP": 100,
-        "demoToSalP": 63,
+        "demoToSalP": 60.7,
         "salToPropP": 82.4,
         "winRateP": 75
       }
