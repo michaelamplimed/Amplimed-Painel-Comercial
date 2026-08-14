@@ -663,7 +663,7 @@ body.dark ::-webkit-scrollbar-thumb{background:#2D4060}
     <div class="kcard" style="border-top:3px solid #10B981"><div class="kcard-inner"><div style="flex:1;min-width:0"><div class="kcard-lbl">&#128101 Total de Vendas</div><div id="kcard-vendas-2-v" class="kcard-val" style="color:#059669">83</div><div id="kcard-vendas-2-n" class="kcard-note">Aquisi&ccedil;&atilde;o 67 + Cross 16 &middot; ritmo 249/131 </div></div><div style="flex-shrink:0"><svg viewBox="0 0 70 24" style="width:70px;height:24px;display:block"><polyline points="0.0,24.0 7.0,24.0 14.0,19.0 21.0,16.8 28.0,12.2 35.0,9.3 42.0,7.2 49.0,7.2 56.0,7.2 63.0,2.9 70.0,0.0" fill="none" stroke="#1B3A5C" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div></div></div>
   </div>
 
-  <div class="pace-bar">&#128197; Meta diária <strong>R$2.238,10</strong> &middot; Acum. D7: <strong>R$15.666,70</strong> &middot; Realizado: <strong>R$22.903,85 (146%)</strong> &middot; Necessário: <strong style="color:#10B981">R$1.721,15/dia (14 dias restantes)</strong></div>
+  <div class="pace-bar" id="pace-bar-main">&#128197; Carregando dados&hellip;</div>
 
   <!-- MRR breakdown -->
   <div class="three-col">
@@ -786,44 +786,11 @@ body.dark ::-webkit-scrollbar-thumb{background:#2D4060}
     </div>
   </div>
 
-  <!-- ── Marketing Intelligence card ── -->
+  <!-- Receita Diária MTD — 100% dinâmico via data.json -->
   <div class="sec-card">
-    <div class="sec-hdr" style="background:#1565C0">&#128226; Marketing Intelligence &mdash; S1/2026 + Ago/26 D7/21</div>
+    <div class="sec-hdr" style="background:#137A6E">&#128203; Receita Di&aacute;ria MTD &mdash; <span id="mtd-mes-label">carregando&hellip;</span></div>
     <div class="sec-body">
-      <div class="two-col">
-        <div>
-          <div class="sub">&#129504; Insights S1</div>
-          <div class="insight-item" style="background:#FEF3C7;border-left:3px solid #D97706">&#128310 CPL subiu no S1: R$67,70 &rarr; R$74,40 &mdash; revisar mix de canais</div>
-<div class="insight-item" style="background:#D1FAE5;border-left:3px solid #059669">&#9989 S1 atingimento: R$233.930,52 vs meta R$201.125,00 (116.3%)</div>
-<div class="insight-item" style="background:#D1FAE5;border-left:3px solid #059669">&#9989 Melhor CAC S1: Jan/26 &mdash; R$747,46 | Pior: Abr/26 &mdash; R$988,66</div>
-<div class="insight-item" style="background:#D1FAE5;border-left:3px solid #059669">&#9989 Ago MQL D7: 364/265 &mdash; 137% da meta parcial</div>
-<div class="insight-item" style="background:#D1FAE5;border-left:3px solid #059669">&#9989 SAL Ago D7: 95 realizados vs meta 34 &mdash; 279%</div>
-
-        </div>
-        <div>
-          <div class="sub">&#127919; Funil Ago/26 &mdash; Meta Parcial D7</div>
-          <div style="margin-bottom:9px"><div style="display:flex;justify-content:space-between;font-size:11px;margin-bottom:3px"><span style="color:var(--ink2);font-weight:500">MQL gerados</span><span style="color:#10B981;font-weight:700">364 / 265 &mdash; 137%</span></div><div style="height:7px;background:var(--border);border-radius:4px;overflow:hidden"><div style="width:92%;height:100%;background:#10B981;border-radius:4px;transition:width .6s"></div></div></div>
-          <div style="margin-bottom:9px"><div style="display:flex;justify-content:space-between;font-size:11px;margin-bottom:3px"><span style="color:var(--ink2);font-weight:500">SQL gerados</span><span style="color:#10B981;font-weight:700">106 / 59 &mdash; 180%</span></div><div style="height:7px;background:var(--border);border-radius:4px;overflow:hidden"><div style="width:100%;height:100%;background:#10B981;border-radius:4px;transition:width .6s"></div></div></div>
-          <div style="margin-bottom:9px"><div style="display:flex;justify-content:space-between;font-size:11px;margin-bottom:3px"><span style="color:var(--ink2);font-weight:500">SAL realizados</span><span style="color:#10B981;font-weight:700">95 / 34 &mdash; 279%</span></div><div style="height:7px;background:var(--border);border-radius:4px;overflow:hidden"><div style="width:100%;height:100%;background:#10B981;border-radius:4px;transition:width .6s"></div></div></div>
-          <div style="margin-bottom:9px"><div style="display:flex;justify-content:space-between;font-size:11px;margin-bottom:3px"><span style="color:var(--ink2);font-weight:500">Vendas realizadas</span><span style="color:#10B981;font-weight:700">67 / 31 &mdash; 216%</span></div><div style="height:7px;background:var(--border);border-radius:4px;overflow:hidden"><div style="width:100%;height:100%;background:#10B981;border-radius:4px;transition:width .6s"></div></div></div>
-          <div style="margin-bottom:9px"><div style="display:flex;justify-content:space-between;font-size:11px;margin-bottom:3px"><span style="color:var(--ink2);font-weight:500">NMRR (Rec. Acq.)</span><span style="color:#10B981;font-weight:700">R$20.652,96 / R$13.428,57 &mdash; 154%</span></div><div style="height:7px;background:var(--border);border-radius:4px;overflow:hidden"><div style="width:100%;height:100%;background:#10B981;border-radius:4px;transition:width .6s"></div></div></div>
-        </div>
-      </div>
-      <div class="sub">&#128200; Evolucao CPL Mensal &mdash; S1/2026</div>
-      <div class="flex-chips">
-        <div style="flex:1;min-width:80px;text-align:center;background:var(--surface2);border-radius:var(--r-sm);border:1px solid var(--border);padding:var(--sp-2)"><div style="font-size:9px;color:var(--ink3);margin-bottom:2px">Jan/26</div><div style="font-size:13px;font-weight:700;color:var(--acc)">R$67,70</div><div style="font-size:9px;color:var(--ink2)">CPL</div><div style="font-size:9px;color:var(--ink2)">R$747,46 CAC</div></div><div style="flex:1;min-width:80px;text-align:center;background:var(--surface2);border-radius:var(--r-sm);border:1px solid var(--border);padding:var(--sp-2)"><div style="font-size:9px;color:var(--ink3);margin-bottom:2px">Fev/26</div><div style="font-size:13px;font-weight:700;color:var(--acc)">R$69,76</div><div style="font-size:9px;color:var(--ink2)">CPL</div><div style="font-size:9px;color:var(--ink2)">R$875,92 CAC</div></div><div style="flex:1;min-width:80px;text-align:center;background:var(--surface2);border-radius:var(--r-sm);border:1px solid var(--border);padding:var(--sp-2)"><div style="font-size:9px;color:var(--ink3);margin-bottom:2px">Mar/26</div><div style="font-size:13px;font-weight:700;color:var(--acc)">R$85,45</div><div style="font-size:9px;color:var(--ink2)">CPL</div><div style="font-size:9px;color:var(--ink2)">R$946,29 CAC</div></div><div style="flex:1;min-width:80px;text-align:center;background:var(--surface2);border-radius:var(--r-sm);border:1px solid var(--border);padding:var(--sp-2)"><div style="font-size:9px;color:var(--ink3);margin-bottom:2px">Abr/26</div><div style="font-size:13px;font-weight:700;color:var(--acc)">R$66,18</div><div style="font-size:9px;color:var(--ink2)">CPL</div><div style="font-size:9px;color:var(--ink2)">R$988,66 CAC</div></div><div style="flex:1;min-width:80px;text-align:center;background:var(--surface2);border-radius:var(--r-sm);border:1px solid var(--border);padding:var(--sp-2)"><div style="font-size:9px;color:var(--ink3);margin-bottom:2px">Mai/26</div><div style="font-size:13px;font-weight:700;color:var(--acc)">R$68,42</div><div style="font-size:9px;color:var(--ink2)">CPL</div><div style="font-size:9px;color:var(--ink2)">R$799,42 CAC</div></div><div style="flex:1;min-width:80px;text-align:center;background:var(--surface2);border-radius:var(--r-sm);border:1px solid var(--border);padding:var(--sp-2)"><div style="font-size:9px;color:var(--ink3);margin-bottom:2px">Jun/26</div><div style="font-size:13px;font-weight:700;color:var(--acc)">R$74,40</div><div style="font-size:9px;color:var(--ink2)">CPL</div><div style="font-size:9px;color:var(--ink2)">R$805,35 CAC</div></div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Resumo Diário MTD — Painel Gerencial -->
-  <div class="sec-card">
-    <div class="sec-hdr" style="background:#137A6E">&#128203; Resumo Di&aacute;rio MTD &mdash; Agosto/2026</div>
-    <div class="sec-body">
-      <div class="tbl-wrap"><table class="tbl-num">
-        <tr><th style="background:#137A6E">Dia</th><th style="background:#137A6E">MQL</th><th style="background:#137A6E">SQL</th><th style="background:#137A6E">SAL</th><th style="background:#137A6E">Ganhos</th><th style="background:#137A6E">Rec. Acq.</th><th style="background:#137A6E">Cross</th><th style="background:#137A6E">Total Dia</th><th style="background:#137A6E">Ticket</th><th style="background:#137A6E">Meta Acum.</th><th style="background:#137A6E">% Ating.</th></tr>
-        <tr style="background:#FEF2F2"><td style="text-align:center">01/08</td><td>25</td><td>0</td><td>0</td><td>0</td><td>R$0,00</td><td>R$0,00</td><td><strong>R$0,00</strong></td><td>R$0,00</td><td>R$0,00</td><td><strong>0%</strong></td></tr><tr style="background:#FEF2F2"><td style="text-align:center">02/08</td><td>38</td><td>0</td><td>0</td><td>0</td><td>R$0,00</td><td>R$0,00</td><td><strong>R$0,00</strong></td><td>R$0,00</td><td>R$0,00</td><td><strong>0%</strong></td></tr><tr style="background:#F0FDF4"><td style="text-align:center">03/08</td><td>93</td><td>18</td><td>19</td><td>14</td><td>R$4.036,89</td><td>R$40,00</td><td><strong>R$4.076,89</strong></td><td>R$288,35</td><td>R$2.238,10</td><td><strong>182%</strong></td></tr><tr style="background:#F0FDF4"><td style="text-align:center">04/08</td><td>128</td><td>33</td><td>27</td><td>20</td><td>R$5.706,93</td><td>R$203,90</td><td><strong>R$5.910,83</strong></td><td>R$285,35</td><td>R$4.476,20</td><td><strong>132%</strong></td></tr><tr style="background:#F0FDF4"><td style="text-align:center">05/08</td><td>168</td><td>50</td><td>47</td><td>33</td><td>R$8.826,53</td><td>R$371,39</td><td><strong>R$9.197,92</strong></td><td>R$267,47</td><td>R$6.714,30</td><td><strong>137%</strong></td></tr><tr style="background:#F0FDF4"><td style="text-align:center">06/08</td><td>217</td><td>59</td><td>60</td><td>41</td><td>R$10.539,52</td><td>R$371,39</td><td><strong>R$10.910,91</strong></td><td>R$257,06</td><td>R$8.952,40</td><td><strong>122%</strong></td></tr><tr style="background:#F0FDF4"><td style="text-align:center">07/08</td><td>246</td><td>73</td><td>66</td><td>47</td><td>R$11.846,31</td><td>R$1.709,19</td><td><strong>R$13.555,50</strong></td><td>R$252,05</td><td>R$11.190,50</td><td><strong>121%</strong></td></tr><tr style="background:#F0FDF4"><td style="text-align:center">08/08</td><td>257</td><td>73</td><td>66</td><td>47</td><td>R$11.846,31</td><td>R$1.709,19</td><td><strong>R$13.555,50</strong></td><td>R$252,05</td><td>R$11.190,50</td><td><strong>121%</strong></td></tr><tr style="background:#F0FDF4"><td style="text-align:center">09/08</td><td>273</td><td>73</td><td>68</td><td>47</td><td>R$11.846,31</td><td>R$1.709,19</td><td><strong>R$13.555,50</strong></td><td>R$252,05</td><td>R$11.190,50</td><td><strong>121%</strong></td></tr><tr style="background:#F0FDF4"><td style="text-align:center">10/08</td><td>314</td><td>93</td><td>87</td><td>59</td><td>R$19.149,90</td><td>R$2.046,09</td><td><strong>R$21.195,99</strong></td><td>R$324,57</td><td>R$13.428,60</td><td><strong>158%</strong></td></tr><tr style="background:#F0FDF4"><td style="text-align:center">11/08</td><td>364</td><td>106</td><td>95</td><td>67</td><td>R$20.652,96</td><td>R$2.250,89</td><td><strong>R$22.903,85</strong></td><td>R$308,25</td><td>R$15.666,70</td><td><strong>146%</strong></td></tr>
-      </table></div>
+      <div id="resumo-mtd-wrap" style="padding:16px;text-align:center;color:var(--ink3)">&#128260; Carregando dados em tempo real&hellip;</div>
     </div>
   </div>
 
@@ -1126,6 +1093,62 @@ function aplicarDadosNoPainel(d){
       const p=c.pctMetaProRata||0, bc=p>=100?'bdg-g':(p>=70?'bdg-a':'bdg-r');
       return '<tr style="background:#fff"><td>'+c.name+'</td><td>'+c.ganhos+'</td><td>'+fmtMoeda(c.aquisicaoAmount)+'</td><td>'+c.winRate+'%</td><td><span class="bdg '+bc+'">'+p+'%</span></td></tr>';
     }).join('');
+  }
+
+  // ── Pace-bar principal (topo do sec-ceo) ─────────────────────────────────
+  const pbMain = el('pace-bar-main');
+  if(pbMain){
+    const diasRestantes = totalWorkingDays - workingDaysSoFar;
+    const corNecessario = necessario <= metaDiaria ? '#10B981' : '#EF4444';
+    pbMain.innerHTML = '📅 Meta diária <strong>'+fmtMoeda(metaDiaria)+'</strong>'
+      +' · Acum. D'+workingDaysSoFar+'/'+totalWorkingDays+': <strong>'+fmtMoeda(proRataMeta)+'</strong>'
+      +' · Realizado: <strong>'+fmtMoeda(mrrTotal)+' ('+proRataPct+'%)</strong>'
+      +' · Projeção: <strong>'+fmtMoeda(projecaoMes)+'</strong>'
+      +' · Necessário: <strong style="color:'+corNecessario+'">'+fmtMoeda(necessario)+'/dia ('+diasRestantes+' dias restantes)</strong>';
+  }
+
+  // ── Receita Diária MTD — gerado 100% a partir do data.json ───────────────
+  const mtdWrap = el('resumo-mtd-wrap');
+  const mtdLabel = el('mtd-mes-label');
+  if(mtdWrap && d.receitaAcumulada){
+    const now3 = new Date();
+    const mesNome = now3.toLocaleDateString('pt-BR',{month:'long',year:'numeric'});
+    if(mtdLabel) mtdLabel.textContent = mesNome.charAt(0).toUpperCase()+mesNome.slice(1);
+    const lbls = d.receitaAcumulada.labels;
+    const real = d.receitaAcumulada.realizado;
+    const meta3 = d.receitaAcumulada.meta;
+    let rows = '';
+    for(let i=0;i<lbls.length;i++){
+      const recDia = i===0 ? real[0] : Math.max(0, real[i]-real[i-1]);
+      const acum = real[i];
+      const metaAcum = meta3[i];
+      const pctAt = metaAcum>0 ? Math.round(acum/metaAcum*100) : 0;
+      const parts = lbls[i].split('/').map(Number);
+      const dtRow = new Date(now3.getFullYear(), parts[1]-1, parts[0]);
+      const isWknd = dtRow.getDay()===0||dtRow.getDay()===6;
+      const isToday = dtRow.toDateString()===now3.toDateString();
+      const bg = isToday?'#EFF6FF':(isWknd?'#F8FAFC':(recDia>0?'#F0FDF4':'#FEF2F2'));
+      const fw = isToday?'font-weight:700;':'';
+      const bc3 = pctAt>=100?'bdg-g':(pctAt>=70?'bdg-a':'bdg-r');
+      const todayBadge = isToday?' <span style="background:#3B82F6;color:#fff;font-size:9px;border-radius:3px;padding:1px 4px">HOJE</span>':'';
+      rows += '<tr style="background:'+bg+';'+fw+'">'
+        +'<td style="text-align:center">'+lbls[i]+todayBadge+'</td>'
+        +'<td class="num">'+fmtMoeda(recDia)+'</td>'
+        +'<td class="num"><strong>'+fmtMoeda(acum)+'</strong></td>'
+        +'<td class="num">'+fmtMoeda(metaAcum)+'</td>'
+        +'<td class="num"><span class="bdg '+bc3+'">'+pctAt+'%</span></td>'
+        +'</tr>';
+    }
+    mtdWrap.innerHTML = '<div class="tbl-wrap"><table class="tbl-num">'
+      +'<tr>'
+      +'<th style="background:#137A6E">Dia</th>'
+      +'<th style="background:#137A6E">Receita do Dia</th>'
+      +'<th style="background:#137A6E">Acumulado</th>'
+      +'<th style="background:#137A6E">Meta Acum.</th>'
+      +'<th style="background:#137A6E">% Ating.</th>'
+      +'</tr>'
+      +rows
+      +'</table></div>';
   }
 }
 
