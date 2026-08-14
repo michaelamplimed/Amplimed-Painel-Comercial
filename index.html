@@ -611,11 +611,11 @@ body.dark ::-webkit-scrollbar-thumb{background:#2D4060}
     </div>
     <div class="tpkpi">
       <div class="tpkpi-lbl">Pace</div>
-      <div class="tpkpi-val ok">R$68.711,55</div>
+      <div class="tpkpi-val ok" id="kpi-pace">R$68.711,55</div>
     </div>
     <div class="tpkpi">
       <div class="tpkpi-lbl">Win Rate</div>
-      <div class="tpkpi-val warn">63.2%</div>
+      <div class="tpkpi-val warn" id="kpi-winrate">63.2%</div>
     </div>
     <div class="tpkpi">
       <div class="tpkpi-lbl">Receita/Dia</div>
@@ -656,8 +656,8 @@ body.dark ::-webkit-scrollbar-thumb{background:#2D4060}
 
   <!-- KPI Grid principal -->
   <div class="kgrid-hero">
-    <div class="kcard" style="border-top:3px solid #10B981"><div class="kcard-inner"><div style="flex:1;min-width:0"><div class="kcard-lbl">&#128181 Receita Total</div><div class="kcard-val js-receita-total" style="color:#059669">R$22.903,85</div><div class="kcard-note">Meta acum. R$15.666,70 &middot; D7/21 <span class="delta dn">&#9660; 59.6%</span></div></div><div style="flex-shrink:0"><svg viewBox="0 0 70 24" style="width:70px;height:24px;display:block"><polyline points="0.0,24.0 7.0,24.0 14.0,19.7 21.0,17.8 28.0,14.4 35.0,12.6 42.0,9.8 49.0,9.8 56.0,9.8 63.0,1.8 70.0,0.0" fill="none" stroke="#1C9D8C" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div></div></div>
-    <div class="kcard" style="border-top:3px solid #10B981"><div class="kcard-inner"><div style="flex:1;min-width:0"><div class="kcard-lbl">&#128200 Proje&ccedil;&atilde;o do M&ecirc;s</div><div class="kcard-val" style="color:#059669">R$68.711,55</div><div class="kcard-note">Meta mensal R$47.000,00 <span class="delta up">&#9650; 32.8%</span></div></div><div style="flex-shrink:0"><svg viewBox="0 0 70 24" style="width:70px;height:24px;display:block"><polyline points="0.0,24.0 7.0,24.0 14.0,11.2 21.0,18.2 28.0,13.7 35.0,18.6 42.0,15.7 49.0,24.0 56.0,24.0 63.0,0.0 70.0,18.6" fill="none" stroke="#E08E0B" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div></div></div>
+    <div class="kcard" style="border-top:3px solid #10B981"><div class="kcard-inner"><div style="flex:1;min-width:0"><div class="kcard-lbl">&#128181 Receita Total</div><div class="kcard-val js-receita-total" style="color:#059669">R$22.903,85</div><div class="kcard-note" id="kcard-receita-n">Meta acum. R$15.666,70 &middot; D7/21 <span class="delta dn">&#9660; 59.6%</span></div></div><div style="flex-shrink:0"><svg viewBox="0 0 70 24" style="width:70px;height:24px;display:block"><polyline points="0.0,24.0 7.0,24.0 14.0,19.7 21.0,17.8 28.0,14.4 35.0,12.6 42.0,9.8 49.0,9.8 56.0,9.8 63.0,1.8 70.0,0.0" fill="none" stroke="#1C9D8C" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div></div></div>
+    <div class="kcard" style="border-top:3px solid #10B981"><div class="kcard-inner"><div style="flex:1;min-width:0"><div class="kcard-lbl">&#128200 Proje&ccedil;&atilde;o do M&ecirc;s</div><div class="kcard-val" id="kcard-proj-v" style="color:#059669">R$68.711,55</div><div class="kcard-note" id="kcard-proj-n">Meta mensal R$47.000,00 <span class="delta up">&#9650; 32.8%</span></div></div><div style="flex-shrink:0"><svg viewBox="0 0 70 24" style="width:70px;height:24px;display:block"><polyline points="0.0,24.0 7.0,24.0 14.0,11.2 21.0,18.2 28.0,13.7 35.0,18.6 42.0,15.7 49.0,24.0 56.0,24.0 63.0,0.0 70.0,18.6" fill="none" stroke="#E08E0B" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div></div></div>
     <div class="kcard" style="border-top:3px solid #10B981"><div class="kcard-inner"><div style="flex:1;min-width:0"><div class="kcard-lbl">&#9889 Receita por Dia</div><div id="kcard-recdia-v" class="kcard-val" style="color:#059669">R$3.271,98</div><div class="kcard-note">M&eacute;dia de receita por dia &uacute;til </div></div></div></div>
     <div class="kcard" style="border-top:3px solid #10B981"><div class="kcard-inner"><div style="flex:1;min-width:0"><div class="kcard-lbl">&#127915 Ticket M&eacute;dio</div><div class="kcard-val js-ticket-medio" style="color:#059669">R$308,25</div><div class="kcard-note">Meta R$300 &middot; 103% <span class="delta dn">&#9660; 6.3%</span></div></div></div></div>
     <div class="kcard" style="border-top:3px solid #10B981"><div class="kcard-inner"><div style="flex:1;min-width:0"><div class="kcard-lbl">&#128101 Total de Vendas</div><div id="kcard-vendas-2-v" class="kcard-val" style="color:#059669">83</div><div id="kcard-vendas-2-n" class="kcard-note">Aquisi&ccedil;&atilde;o 67 + Cross 16 &middot; ritmo 249/131 </div></div><div style="flex-shrink:0"><svg viewBox="0 0 70 24" style="width:70px;height:24px;display:block"><polyline points="0.0,24.0 7.0,24.0 14.0,19.0 21.0,16.8 28.0,12.2 35.0,9.3 42.0,7.2 49.0,7.2 56.0,7.2 63.0,2.9 70.0,0.0" fill="none" stroke="#1B3A5C" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div></div></div>
@@ -687,15 +687,16 @@ body.dark ::-webkit-scrollbar-thumb{background:#2D4060}
       </div>
     </div>
     <div class="sec-card">
-      <div class="sec-hdr" style="background:#1565C0">&#127919; Previs&atilde;o de Fechamento</div>
+      <div class="sec-hdr" style="background:#1565C0">&#127919; Ritmo &amp; Forecast</div>
       <div class="sec-body">
         <div class="kv-list">
-          <div class="kv-row"><span>Declarado</span><strong>R$8.212,90</strong></div>
-          <div class="kv-row"><span style="color:var(--gn)">Auditado &#9989;</span><strong>R$6.684,90</strong></div>
-          <div class="kv-row"><span style="color:var(--rd)">Gap &#9888;</span><strong style="color:var(--rd)">R$1.528,00 (19%)</strong></div>
-          <div class="kv-row"><span>Ponderado</span><strong>R$16.922,96</strong></div>
+          <div class="kv-row"><span>Meta Di&aacute;ria</span><strong id="kcard-meta-diaria">—</strong></div>
+          <div class="kv-row"><span>Acumulado Pro-Rata</span><strong id="kcard-prorata">—</strong></div>
+          <div class="kv-row"><span>Atingimento Pro-Rata</span><span id="kcard-prorata-pct" class="bdg bdg-g">—</span></div>
           <hr style="border:none;border-top:1px solid var(--border)">
-          <div class="kv-row"><span>Total Projetado</span><strong style="color:var(--acc)">R$39.826,81</strong></div>
+          <div class="kv-row"><span>Proje&ccedil;&atilde;o do M&ecirc;s</span><strong id="kcard-proj-forecast" style="color:var(--acc)">—</strong></div>
+          <div class="kv-row"><span>Necess&aacute;rio/dia</span><strong id="kcard-necessario">—</strong></div>
+          <div class="kv-row"><span>Dias Restantes</span><strong id="kcard-dias-restantes">—</strong></div>
         </div>
       </div>
     </div>
@@ -707,9 +708,9 @@ body.dark ::-webkit-scrollbar-thumb{background:#2D4060}
           <div class="kv-row"><span>Realizado</span><strong id="meta-anual-realizado">R$22.903,85</strong></div>
           <div class="kv-row"><span>Atingimento</span><span id="meta-anual-ating" class="bdg bdg-g">146%</span></div>
           <hr style="border:none;border-top:1px solid var(--border)">
-          <div class="kv-row"><span>ARR Projetado</span><strong style="color:#7C3AED">R$824.539</strong></div>
+          <div class="kv-row"><span>ARR Projetado</span><strong id="arr-projetado" style="color:#7C3AED">R$824.539</strong></div>
           <div class="kv-row"><span>Meta Anual</span><strong>R$191.000</strong></div>
-          <div class="kv-row"><span>Coverage</span><strong style="color:var(--rd)">1.6x</strong></div>
+          <div class="kv-row"><span>Coverage</span><strong id="coverage-val" style="color:var(--rd)">1.6x</strong></div>
         </div>
       </div>
     </div>
@@ -1126,6 +1127,60 @@ function aplicarDadosNoPainel(d){
       +'</tr>'
       +rows
       +'</table></div>';
+  }
+
+  // ── Topbar: Pace e Win Rate ──────────────────────────────────────────────
+  if(el('kpi-pace')) el('kpi-pace').textContent = fmtMoeda(projecaoMes);
+  if(el('kpi-winrate')){
+    const wrEl = el('kpi-winrate');
+    wrEl.textContent = winRateGeral+'%';
+    wrEl.className = 'tpkpi-val '+(winRateGeral>=65?'ok':'warn');
+  }
+
+  // ── KCard: Receita Total — nota dinâmica ─────────────────────────────────
+  if(el('kcard-receita-n')){
+    const arw = proRataPct >= 100 ? '&#9650;' : '&#9660;';
+    const cls = proRataPct >= 100 ? 'up' : 'dn';
+    el('kcard-receita-n').innerHTML = 'Meta acum. '+fmtMoeda(proRataMeta)
+      +' &middot; D'+workingDaysSoFar+'/'+totalWorkingDays
+      +' <span class="delta '+cls+'">'+arw+' '+proRataPct+'%</span>';
+  }
+
+  // ── KCard: Projeção do Mês — valor e nota dinâmicos ──────────────────────
+  if(el('kcard-proj-v')) el('kcard-proj-v').textContent = fmtMoeda(projecaoMes);
+  if(el('kcard-proj-n')){
+    const projVsMeta = metaMensal > 0 ? Math.round(projecaoMes/metaMensal*1000)/10 : 0;
+    const arw2 = projVsMeta >= 100 ? '&#9650;' : '&#9660;';
+    const cls2 = projVsMeta >= 100 ? 'up' : 'dn';
+    el('kcard-proj-n').innerHTML = 'Meta mensal '+fmtMoeda(metaMensal)
+      +' <span class="delta '+cls2+'">'+arw2+' '+projVsMeta+'%</span>';
+  }
+
+  // ── Ritmo & Forecast card ────────────────────────────────────────────────
+  const diasRest = totalWorkingDays - workingDaysSoFar;
+  if(el('kcard-meta-diaria')) el('kcard-meta-diaria').textContent = fmtMoeda(metaDiaria);
+  if(el('kcard-prorata')) el('kcard-prorata').textContent = fmtMoeda(proRataMeta);
+  if(el('kcard-prorata-pct')){
+    const rpEl = el('kcard-prorata-pct');
+    rpEl.textContent = proRataPct+'%';
+    rpEl.className = 'bdg '+(proRataPct>=100?'bdg-g':(proRataPct>=70?'bdg-a':'bdg-r'));
+  }
+  if(el('kcard-proj-forecast')) el('kcard-proj-forecast').textContent = fmtMoeda(projecaoMes);
+  if(el('kcard-necessario')){
+    const nc = necessario <= metaDiaria ? 'var(--gn)' : 'var(--rd)';
+    el('kcard-necessario').innerHTML = '<strong style="color:'+nc+'">'+fmtMoeda(necessario)+'</strong>';
+  }
+  if(el('kcard-dias-restantes')) el('kcard-dias-restantes').textContent = diasRest+' dias úteis';
+
+  // ── Meta & Projeção Anual — ARR e Coverage dinâmicos ────────────────────
+  const metaAnual = d.kpis.metaAnual || 191000;
+  const arrProjetado = Math.round(projecaoMes * 12);
+  const coverage = metaAnual > 0 ? (arrProjetado / metaAnual).toFixed(1) : '0.0';
+  if(el('arr-projetado')) el('arr-projetado').textContent = 'R$'+arrProjetado.toLocaleString('pt-BR');
+  if(el('coverage-val')){
+    const cvEl = el('coverage-val');
+    cvEl.textContent = coverage+'x';
+    cvEl.style.color = parseFloat(coverage) >= 1 ? 'var(--gn)' : 'var(--rd)';
   }
 }
 
