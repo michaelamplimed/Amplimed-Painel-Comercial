@@ -1,16 +1,16 @@
 {
-  "geradoEm": "2026-08-14T14:00:29.589Z",
-  "geradoEmBR": "14/08/2026, 11:00:29",
+  "geradoEm": "2026-08-14T14:15:21.793Z",
+  "geradoEmBR": "14/08/2026, 11:15:21",
   "mes": {
     "ano": 2026,
     "mes": 8
   },
   "kpis": {
-    "receitaRealizada": 27994.49,
+    "receitaRealizada": 28083.49,
     "metaMensal": 47000,
-    "pctMeta": 59.6,
-    "pipelineAberto": 34925.9,
-    "mediaDiaria": 1999.61
+    "pctMeta": 59.8,
+    "pipelineAberto": 34836.9,
+    "mediaDiaria": 2005.96
   },
   "receitaAcumulada": {
     "labels": [
@@ -43,7 +43,7 @@
       22903.85,
       23946.75,
       27280.84,
-      27994.49
+      28083.49
     ],
     "meta": [
       1516.13,
@@ -63,11 +63,11 @@
     ]
   },
   "aging": {
-    "0-7d": 34,
+    "0-7d": 33,
     "8-15d": 18,
     "16-30d": 13,
     "31-60d": 5,
-    "+60d": 4
+    "+60d": 3
   },
   "closers": [
     {
@@ -203,27 +203,27 @@
     {
       "name": "Catiane",
       "nivel": "Coordenadora",
-      "ganhos": 2,
-      "perdidos": 1,
+      "ganhos": 3,
+      "perdidos": 2,
       "crossSellGanhos": 2,
-      "aquisicaoAmount": 883.9,
+      "aquisicaoAmount": 972.9,
       "crossSellAmount": 258.8,
-      "totalAmount": 1142.7,
-      "ticketMedio": 571.35,
-      "winRate": 66.7,
+      "totalAmount": 1231.7,
+      "ticketMedio": 410.57,
+      "winRate": 60,
       "metaMes": 0,
       "metaProRata": 0,
       "pctMetaProRata": 0,
       "funil": {
-        "sql": 7,
-        "demo": 7,
+        "sql": 6,
+        "demo": 6,
         "sal": 5,
         "proposta": 4,
-        "won": 2,
+        "won": 3,
         "sqlToDemoP": 100,
-        "demoToSalP": 71.4,
+        "demoToSalP": 83.3,
         "salToPropP": 80,
-        "winRateP": 66.7
+        "winRateP": 60
       }
     }
   ]
