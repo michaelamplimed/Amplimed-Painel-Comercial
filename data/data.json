@@ -1,6 +1,6 @@
 {
-  "geradoEm": "2026-08-14T12:45:21.085Z",
-  "geradoEmBR": "14/08/2026, 09:45:21",
+  "geradoEm": "2026-08-14T13:00:29.626Z",
+  "geradoEmBR": "14/08/2026, 10:00:29",
   "mes": {
     "ano": 2026,
     "mes": 8
@@ -85,12 +85,12 @@
       "metaProRata": 4787.1,
       "pctMetaProRata": 108.1,
       "funil": {
-        "sql": 32,
+        "sql": 33,
         "demo": 32,
         "sal": 27,
         "proposta": 23,
         "won": 19,
-        "sqlToDemoP": 100,
+        "sqlToDemoP": 97,
         "demoToSalP": 84.4,
         "salToPropP": 85.2,
         "winRateP": 65.5
