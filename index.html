@@ -1186,30 +1186,421 @@ function aplicarDadosNoPainel(d){
 
 loadPainelData().then(aplicarDadosNoPainel);
 
-// ── Auto-refresh: recarrega os dados sem precisar fechar/abrir a aba ──────
-// Busca o data.json atualizado a cada 5 minutos e re-renderiza o painel.
-// Charts dinâmicos são destruídos antes de serem recriados para evitar erros.
-const DYNAMIC_CHARTS = ['chartRec','chartResultadoRec','chartAging',
-  'chartFunilTotal','chartFunilCloser','chartSdrFunil','chartSdrFunilDetalhe',
-  'chartConvSdr','chartSdrForecast'];
+   // ══════════════════════════════════════════════════════════════════════════════
+// AMPLIMED PAINEL VIVO — AUTO REFRESH E METAS DINÂMICAS
+// Atualização automática a cada 30 minutos.
+// HubSpot → GitHub Actions → data.json → painel.
+// ══════════════════════════════════════════════════════════════════════════════
 
-setInterval(async () => {
+const AMP_REFRESH_MS = 30 * 60 * 1000;
+
+const AMP_DYNAMIC_CHARTS = [
+  'chartRec',
+  'chartResultadoRec',
+  'chartAging',
+  'chartFunilTotal',
+  'chartFunilCloser',
+  'chartSdrFunil',
+  'chartSdrFunilDetalhe',
+  'chartConvSdr',
+  'chartSdrForecast'
+];
+
+function ampDestroyCharts() {
+  AMP_DYNAMIC_CHARTS.forEach(id => {
+    const canvas = document.getElementById(id);
+    if (!canvas) return;
+
+    const chart = Chart.getChart(canvas);
+
+    if (chart) {
+      chart.destroy();
+    }
+  });
+}
+
+async function ampLoadConfig() {
   try {
-    const d = await loadPainelData();
-    // Destroi instâncias existentes dos charts dinâmicos antes de recriar
-    DYNAMIC_CHARTS.forEach(id => {
-      const el = document.getElementById(id);
-      const inst = el && Chart.getChart(el);
-      if (inst) inst.destroy();
-    });
-    aplicarDadosNoPainel(d);
-    console.log('[Painel] Dados atualizados em', new Date().toLocaleTimeString('pt-BR'));
-  } catch(e) {
-    console.warn('[Painel] Auto-refresh falhou:', e);
-  }
-}, 5 * 60 * 1000); // a cada 5 minutos
-// chartRadar, chartOKRRadar, chartOKRDES removidos com as seções correspondentes
-</script>
+    const res = await fetch(
+      './config.json?v=' + Date.now(),
+      { cache: 'no-store' }
+    );
 
-</body>
-</html>
+    if (!res.ok) {
+      throw new Error('HTTP ' + res.status);
+    }
+
+    return await res.json();
+
+  } catch (e) {
+
+    console.warn(
+      '[Painel] Não foi possível carregar config.json.',
+      e
+    );
+
+    return null;
+  }
+}
+
+function ampMonthName(data) {
+
+  const ano =
+    Number(
+      data?.mes?.ano ||
+      new Date().getFullYear()
+    );
+
+  const mes =
+    Number(
+      data?.mes?.mes ||
+      new Date().getMonth() + 1
+    );
+
+  const dt =
+    new Date(
+      ano,
+      mes - 1,
+      1
+    );
+
+  const nome =
+    dt.toLocaleDateString(
+      'pt-BR',
+      {
+        month: 'long',
+        year: 'numeric'
+      }
+    );
+
+  return (
+    nome.charAt(0).toUpperCase() +
+    nome.slice(1)
+  );
+}
+
+function ampApplyDynamicMeta(data, config) {
+
+  // ─────────────────────────────────────────────────────────
+  // META MENSAL
+  // A meta vem do config.json de acordo com YYYY-MM.
+  // ─────────────────────────────────────────────────────────
+
+  const monthKey =
+    data?.mes?.chave ||
+    (
+      data?.mes?.ano &&
+      data?.mes?.mes
+        ? `${data.mes.ano}-${String(data.mes.mes).padStart(2, '0')}`
+        : null
+    );
+
+  const monthlyGoals =
+    config?.metasMensais?.[monthKey];
+
+  const metaCloser =
+    Number(
+      monthlyGoals?.closer ??
+      data?.metas?.closer ??
+      data?.kpis?.metaMensal ??
+      47000
+    );
+
+  const metaSdr =
+    Number(
+      monthlyGoals?.sdr ??
+      data?.metas?.sdr ??
+      0
+    );
+
+  // Injeta a meta no objeto usado pelo painel.
+  // Isso faz todo o cálculo existente usar a meta correta
+  // do mês sem precisar alterar o restante do código.
+  data.kpis =
+    data.kpis || {};
+
+  data.metas =
+    data.metas || {};
+
+  data.kpis.metaMensal =
+    metaCloser;
+
+  data.metas.closer =
+    metaCloser;
+
+  data.metas.sdr =
+    metaSdr;
+
+  // ─────────────────────────────────────────────────────────
+  // TÍTULO DO NAVEGADOR
+  // ─────────────────────────────────────────────────────────
+
+  document.title =
+    'Painel Gerencial Amplimed — ' +
+    ampMonthName(data);
+
+  // ─────────────────────────────────────────────────────────
+  // LABEL DO MÊS
+  // ─────────────────────────────────────────────────────────
+
+  const mtdLabel =
+    document.getElementById(
+      'mtd-mes-label'
+    );
+
+  if (mtdLabel) {
+    mtdLabel.textContent =
+      ampMonthName(data);
+  }
+
+  // ─────────────────────────────────────────────────────────
+  // META MENSAL VISÍVEL
+  // ─────────────────────────────────────────────────────────
+
+  const projNote =
+    document.getElementById(
+      'kcard-proj-n'
+    );
+
+  if (
+    projNote &&
+    !projNote.innerHTML.includes(
+      'Meta mensal'
+    )
+  ) {
+    projNote.innerHTML =
+      'Meta mensal ' +
+      fmtMoeda(metaCloser);
+  }
+
+  // ─────────────────────────────────────────────────────────
+  // META DO PAINEL GERENCIAL
+  // ─────────────────────────────────────────────────────────
+
+  const anualCard =
+    document.querySelector(
+      '#sec-ceo .three-col .sec-card:nth-child(3)'
+    );
+
+  if (anualCard) {
+
+    const rows =
+      anualCard.querySelectorAll(
+        '.kv-row'
+      );
+
+    rows.forEach(row => {
+
+      const label =
+        row.querySelector('span');
+
+      const value =
+        row.querySelector('strong');
+
+      if (
+        label &&
+        value &&
+        label.textContent
+          .trim()
+          .toLowerCase() ===
+          'meta mensal'
+      ) {
+        value.textContent =
+          fmtMoeda(metaCloser);
+      }
+
+    });
+  }
+
+  // ─────────────────────────────────────────────────────────
+  // METAS QUE SÃO FIXAS E NÃO MUDAM
+  // ─────────────────────────────────────────────────────────
+
+  const META_VENDAS = 131;
+  const META_TICKET = 300;
+  const META_WINRATE = 65;
+  const META_Q3 = 141000;
+
+  // Atualiza a linha de vendas.
+  const vendasRow =
+    document.getElementById(
+      'tbl-ating-vendas'
+    );
+
+  if (vendasRow) {
+
+    const cells =
+      vendasRow.querySelectorAll('td');
+
+    if (cells[3]) {
+      cells[3].textContent =
+        META_VENDAS;
+    }
+  }
+
+  // Atualiza a linha de ticket.
+  const ticketRow =
+    document.getElementById(
+      'tbl-ating-ticket'
+    );
+
+  if (ticketRow) {
+
+    const cells =
+      ticketRow.querySelectorAll('td');
+
+    if (cells[3]) {
+      cells[3].textContent =
+        'R$' +
+        META_TICKET.toLocaleString(
+          'pt-BR'
+        );
+    }
+  }
+
+  // Atualiza a linha de win rate.
+  const wrRow =
+    document.getElementById(
+      'tbl-ating-wr'
+    );
+
+  if (wrRow) {
+
+    const cells =
+      wrRow.querySelectorAll('td');
+
+    if (cells[3]) {
+      cells[3].textContent =
+        META_WINRATE + '%';
+    }
+  }
+
+  // Atualiza a meta Q3.
+  const q3Row =
+    document.getElementById(
+      'tbl-ating-q3'
+    );
+
+  if (q3Row) {
+
+    const cells =
+      q3Row.querySelectorAll('td');
+
+    if (cells[3]) {
+      cells[3].textContent =
+        fmtMoeda(META_Q3);
+    }
+  }
+
+  // ─────────────────────────────────────────────────────────
+  // INDICAÇÃO VISUAL DO ÚLTIMO UPDATE
+  // ─────────────────────────────────────────────────────────
+
+  const updateEl =
+    document.getElementById(
+      'ultima-atualizacao'
+    );
+
+  if (
+    updateEl &&
+    data.geradoEmBR
+  ) {
+
+    updateEl.innerHTML =
+      '&#128260; dados de ' +
+      data.geradoEmBR;
+  }
+}
+
+async function ampRender() {
+
+  try {
+
+    const [
+      data,
+      config
+    ] = await Promise.all([
+      loadPainelData(),
+      ampLoadConfig()
+    ]);
+
+    // Garante que a meta correta do mês
+    // esteja disponível para todo o painel.
+    ampApplyDynamicMeta(
+      data,
+      config
+    );
+
+    // Remove gráficos antigos antes
+    // de criar as novas instâncias.
+    ampDestroyCharts();
+
+    // Renderiza novamente todos os
+    // indicadores usando os dados atuais.
+    aplicarDadosNoPainel(data);
+
+    // Depois da renderização, reaplica
+    // as informações dinâmicas visuais.
+    ampApplyDynamicMeta(
+      data,
+      config
+    );
+
+    console.log(
+      '[Painel Amplimed] Dados atualizados:',
+      new Date().toLocaleString(
+        'pt-BR'
+      )
+    );
+
+    console.log(
+      '[Painel Amplimed] Mês:',
+      data?.mes?.chave
+    );
+
+    console.log(
+      '[Painel Amplimed] Meta Closer:',
+      data?.metas?.closer
+    );
+
+  } catch (e) {
+
+    console.error(
+      '[Painel Amplimed] Falha na atualização:',
+      e
+    );
+
+    const updateEl =
+      document.getElementById(
+        'ultima-atualizacao'
+      );
+
+    if (updateEl) {
+      updateEl.innerHTML =
+        '&#9888; erro ao atualizar dados';
+    }
+  }
+}
+
+// ─────────────────────────────────────────────────────────────
+// PRIMEIRA SINCRONIZAÇÃO
+// ─────────────────────────────────────────────────────────────
+
+setTimeout(
+  ampRender,
+  1000
+);
+
+// ─────────────────────────────────────────────────────────────
+// ATUALIZAÇÃO AUTOMÁTICA
+// EXATAMENTE A CADA 30 MINUTOS
+// ─────────────────────────────────────────────────────────────
+
+setInterval(
+  ampRender,
+  AMP_REFRESH_MS
+);
+
+console.log(
+  '[Painel Amplimed] Auto-refresh configurado para 30 minutos.'
+);
