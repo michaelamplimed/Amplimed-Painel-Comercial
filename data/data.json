@@ -1,9 +1,14 @@
 {
-  "geradoEm": "2026-08-16T21:00:33.389Z",
-  "geradoEmBR": "16/08/2026, 18:00:33",
+  "geradoEm": "2026-08-16T21:38:59.393Z",
+  "geradoEmBR": "16/08/2026, 18:38:59",
   "mes": {
     "ano": 2026,
-    "mes": 8
+    "mes": 8,
+    "chave": "2026-08"
+  },
+  "metas": {
+    "closer": 47000,
+    "sdr": 37000
   },
   "kpis": {
     "receitaRealizada": 29279.29,
