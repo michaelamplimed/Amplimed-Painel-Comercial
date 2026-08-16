@@ -1,22 +1,68 @@
-"metasMensais": {
-  "2026-08": {
-    "closer": 47000,
-    "sdr": 37000
+{
+  "_comment": "Configuração do Painel Comercial Amplimed. As metas são selecionadas automaticamente pelo mês corrente.",
+  "pipelineId": "default",
+  "crossSellPipelineId": "713767850",
+  "timezone": "America/Sao_Paulo",
+
+  "metasMensais": {
+    "2026-08": {
+      "closer": 47000,
+      "sdr": 37000
+    },
+    "2026-09": {
+      "closer": 48000,
+      "sdr": 40000
+    },
+    "2026-10": {
+      "closer": 50000,
+      "sdr": 42000
+    },
+    "2026-11": {
+      "closer": 50000,
+      "sdr": 45000
+    },
+    "2026-12": {
+      "closer": 30000,
+      "sdr": 30000
+    }
   },
-  "2026-09": {
-    "closer": 48000,
-    "sdr": 40000
-  },
-  "2026-10": {
-    "closer": 50000,
-    "sdr": 42000
-  },
-  "2026-11": {
-    "closer": 50000,
-    "sdr": 45000
-  },
-  "2026-12": {
-    "closer": 30000,
-    "sdr": 30000
-  }
+
+  "closers": [
+    {
+      "name": "Tamara",
+      "ownerId": 418032145,
+      "nivel": "Sênior",
+      "metaMes": 10600
+    },
+    {
+      "name": "Eduardo",
+      "ownerId": 88206054,
+      "nivel": "Sênior",
+      "metaMes": 10600
+    },
+    {
+      "name": "Juliano",
+      "ownerId": 84254525,
+      "nivel": "Pleno",
+      "metaMes": 8600
+    },
+    {
+      "name": "Ariel",
+      "ownerId": 88439406,
+      "nivel": "Pleno",
+      "metaMes": 8600
+    },
+    {
+      "name": "Mayara",
+      "ownerId": 90883963,
+      "nivel": "Pleno",
+      "metaMes": 8600
+    },
+    {
+      "name": "Catiane",
+      "ownerId": 421811032,
+      "nivel": "Coordenadora",
+      "metaMes": 0
+    }
+  ]
 }
