@@ -911,11 +911,11 @@ function aplicarDadosNoPainel(d){
                x:{ticks:{maxTicksLimit:10,font:{size:10}},grid:{display:false}}}
     }
   });
-  new Chart(document.getElementById('chartRec').getContext('2d'), recCfg('chartRec','#1C9D8C'));
-  new Chart(document.getElementById('chartResultadoRec').getContext('2d'), recCfg('chartResultadoRec','#10B981'));
+  { const c = document.getElementById('chartRec'); if(c) new Chart(c.getContext('2d'), recCfg('chartRec','#1C9D8C')); }
+  { const c = document.getElementById('chartResultadoRec'); if(c) new Chart(c.getContext('2d'), recCfg('chartResultadoRec','#10B981')); }
 
   // ── chart: aging ──────────────────────────────────────────────────────────
-  new Chart(document.getElementById('chartAging').getContext('2d'), {
+  { const _ca = document.getElementById('chartAging'); if(_ca) new Chart(_ca.getContext('2d'), {
     type:'doughnut',
     data:{
       labels:["0–7d","8–15d","16–30d","31–60d","+60d"],
@@ -929,7 +929,7 @@ function aplicarDadosNoPainel(d){
       responsive:true,maintainAspectRatio:false,
       plugins:{legend:{position:'right',labels:{font:{size:10}}}}
     }
-  });
+  }); }
   // ── tabela Closers — Desempenho MTD (Score Ativ. fica pendente até Fase 2b) ──
   const tblCl = document.getElementById('tbl-closers-mtd');
   if(tblCl && d.closers){
