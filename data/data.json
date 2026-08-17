@@ -1,6 +1,6 @@
 {
-  "geradoEm": "2026-08-17T19:16:12.456Z",
-  "geradoEmBR": "17/08/2026, 16:16:12",
+  "geradoEm": "2026-08-17T20:48:47.905Z",
+  "geradoEmBR": "17/08/2026, 17:48:47",
   "mes": {
     "ano": 2026,
     "mes": 8,
@@ -11,11 +11,11 @@
     "sdr": 37000
   },
   "kpis": {
-    "receitaRealizada": 30248.19,
+    "receitaRealizada": 30387.19,
     "metaMensal": 47000,
-    "pctMeta": 64.4,
-    "pipelineAberto": 35889.9,
-    "mediaDiaria": 1779.31
+    "pctMeta": 64.7,
+    "pipelineAberto": 35604.6,
+    "mediaDiaria": 1787.48
   },
   "receitaAcumulada": {
     "labels": [
@@ -54,7 +54,7 @@
       29389.29,
       29389.29,
       29389.29,
-      30248.19
+      30387.19
     ],
     "meta": [
       1516.13,
@@ -77,8 +77,8 @@
     ]
   },
   "aging": {
-    "0-7d": 33,
-    "8-15d": 19,
+    "0-7d": 35,
+    "8-15d": 18,
     "16-30d": 13,
     "31-60d": 7,
     "+60d": 3
@@ -87,27 +87,27 @@
     {
       "name": "Tamara",
       "nivel": "Sênior",
-      "ganhos": 20,
+      "ganhos": 21,
       "perdidos": 12,
       "crossSellGanhos": 3,
-      "aquisicaoAmount": 5222.16,
+      "aquisicaoAmount": 5361.16,
       "crossSellAmount": 694,
-      "totalAmount": 5916.16,
-      "ticketMedio": 295.81,
-      "winRate": 62.5,
+      "totalAmount": 6055.16,
+      "ticketMedio": 288.34,
+      "winRate": 63.6,
       "metaMes": 10600,
       "metaProRata": 5812.9,
-      "pctMetaProRata": 101.8,
+      "pctMetaProRata": 104.2,
       "funil": {
-        "sql": 33,
-        "demo": 33,
-        "sal": 30,
-        "proposta": 27,
-        "won": 20,
+        "sql": 34,
+        "demo": 34,
+        "sal": 31,
+        "proposta": 28,
+        "won": 21,
         "sqlToDemoP": 100,
-        "demoToSalP": 90.9,
-        "salToPropP": 90,
-        "winRateP": 62.5
+        "demoToSalP": 91.2,
+        "salToPropP": 90.3,
+        "winRateP": 63.6
       }
     },
     {
@@ -166,13 +166,13 @@
       "name": "Ariel",
       "nivel": "Pleno",
       "ganhos": 13,
-      "perdidos": 8,
+      "perdidos": 9,
       "crossSellGanhos": 1,
       "aquisicaoAmount": 3869.07,
       "crossSellAmount": 890,
       "totalAmount": 4759.07,
       "ticketMedio": 366.08,
-      "winRate": 61.9,
+      "winRate": 59.1,
       "metaMes": 8600,
       "metaProRata": 4716.13,
       "pctMetaProRata": 100.9,
@@ -185,7 +185,7 @@
         "sqlToDemoP": 100,
         "demoToSalP": 59.3,
         "salToPropP": 93.8,
-        "winRateP": 61.9
+        "winRateP": 59.1
       }
     },
     {
