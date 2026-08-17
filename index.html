@@ -1201,7 +1201,7 @@ ampRender();
 // HubSpot → GitHub Actions → data.json → painel.
 // ══════════════════════════════════════════════════════════════════════════════
 
-const AMP_REFRESH_MS = 30 * 60 * 1000;
+const AMP_REFRESH_MS = 5 * 60 * 1000;
 
 const AMP_DYNAMIC_CHARTS = [
   'chartRec',
@@ -1601,8 +1601,28 @@ setInterval(
   AMP_REFRESH_MS
 );
 
+// Page Visibility API: recarrega imediatamente ao voltar para a aba
+// após ausência superior a AMP_REFRESH_MS (5 min).
+// Resolve o throttling de timers do Chrome em abas inativas.
+let _ampHiddenAt = null;
+document.addEventListener('visibilitychange', function () {
+  if (document.visibilityState === 'hidden') {
+    _ampHiddenAt = Date.now();
+  } else if (document.visibilityState === 'visible') {
+    const awayMs = _ampHiddenAt ? (Date.now() - _ampHiddenAt) : Infinity;
+    if (awayMs >= AMP_REFRESH_MS) {
+      console.log(
+        '[Painel Amplimed] Aba reativada após ' +
+        Math.round(awayMs / 60000) + ' min — atualizando dados.'
+      );
+      ampRender();
+    }
+    _ampHiddenAt = null;
+  }
+});
+
 console.log(
-  '[Painel Amplimed] Auto-refresh configurado para 30 minutos.'
+  '[Painel Amplimed] Auto-refresh configurado: 5 min (intervalo) + visibilidade de aba.'
 );
 
 </script>
