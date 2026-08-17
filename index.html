@@ -854,13 +854,16 @@ const R = v => 'R$'+parseFloat(v).toLocaleString('pt-BR',{minimumFractionDigits:
 // valores estáticos abaixo como fallback, para o painel nunca quebrar.
 // ══════════════════════════════════════════════════════════════════════════
 const FALLBACK_DATA = {
+  mes:{chave:"2026-08",mes:8,ano:2026},
+  metas:{closer:47000,sdr:0},
   receitaAcumulada:{
-    labels:["01/08","02/08","03/08","04/08","05/08","06/08","07/08","08/08","09/08","10/08","11/08"],
-    realizado:[0.0,0.0,4076.89,5910.83,9197.92,10910.91,13555.5,13555.5,13555.5,21195.99,22903.85],
-    meta:[0.0,0.0,2238.1,4476.2,6714.3,8952.4,11190.5,11190.5,11190.5,13428.6,15666.7]
+    labels:["01/08","02/08","03/08","04/08","05/08","06/08","07/08","08/08","09/08","10/08","11/08","12/08","13/08","14/08","15/08","16/08","17/08"],
+    realizado:[0,0,4076.89,5910.83,9197.92,10910.91,13555.5,13555.5,13555.5,21195.99,22903.85,22903.85,22903.85,22903.85,26389.29,27389.29,29389.29],
+    meta:[0,0,2238.1,4476.2,6714.3,8952.4,11190.5,11190.5,11190.5,13428.6,15666.7,15666.7,15666.7,15666.7,17904.8,20142.9,22381.0]
   },
-  kpis:{receitaRealizada:22903.85,pctMeta:48.7,mediaDiaria:3271.98,pipelineAberto:39060.49},
-  aging:{"0-7d":81,"8-15d":4,"16-30d":3,"31-60d":2,"+60d":0},
+  kpis:{receitaRealizada:29389.29,metaMensal:47000,pctMeta:62.5,mediaDiaria:1728.78,pipelineAberto:34772},
+  closers:[],
+  aging:{"0-7d":70,"8-15d":10,"16-30d":8,"31-60d":5,"+60d":2},
   geradoEmBR:null
 };
 
@@ -911,25 +914,30 @@ function aplicarDadosNoPainel(d){
                x:{ticks:{maxTicksLimit:10,font:{size:10}},grid:{display:false}}}
     }
   });
-  { const c = document.getElementById('chartRec'); if(c) new Chart(c.getContext('2d'), recCfg('chartRec','#1C9D8C')); }
-  { const c = document.getElementById('chartResultadoRec'); if(c) new Chart(c.getContext('2d'), recCfg('chartResultadoRec','#10B981')); }
+  if(typeof Chart !== 'undefined'){
+    { const c = document.getElementById('chartRec'); if(c) new Chart(c.getContext('2d'), recCfg('chartRec','#1C9D8C')); }
+    { const c = document.getElementById('chartResultadoRec'); if(c) new Chart(c.getContext('2d'), recCfg('chartResultadoRec','#10B981')); }
+  }
 
   // ── chart: aging ──────────────────────────────────────────────────────────
-  { const _ca = document.getElementById('chartAging'); if(_ca) new Chart(_ca.getContext('2d'), {
-    type:'doughnut',
-    data:{
-      labels:["0–7d","8–15d","16–30d","31–60d","+60d"],
-      datasets:[{
-        data:[d.aging["0-7d"],d.aging["8-15d"],d.aging["16-30d"],d.aging["31-60d"],d.aging["+60d"]],
-        backgroundColor:['#10B981','#F59E0B','#F97316','#EF4444','#991B1B'],
-        borderWidth:2
-      }]
-    },
-    options:{
-      responsive:true,maintainAspectRatio:false,
-      plugins:{legend:{position:'right',labels:{font:{size:10}}}}
-    }
-  }); }
+  if(typeof Chart !== 'undefined'){
+    const _ca = document.getElementById('chartAging');
+    if(_ca) new Chart(_ca.getContext('2d'), {
+      type:'doughnut',
+      data:{
+        labels:["0–7d","8–15d","16–30d","31–60d","+60d"],
+        datasets:[{
+          data:[d.aging["0-7d"],d.aging["8-15d"],d.aging["16-30d"],d.aging["31-60d"],d.aging["+60d"]],
+          backgroundColor:['#10B981','#F59E0B','#F97316','#EF4444','#991B1B'],
+          borderWidth:2
+        }]
+      },
+      options:{
+        responsive:true,maintainAspectRatio:false,
+        plugins:{legend:{position:'right',labels:{font:{size:10}}}}
+      }
+    });
+  }
   // ── tabela Closers — Desempenho MTD (Score Ativ. fica pendente até Fase 2b) ──
   const tblCl = document.getElementById('tbl-closers-mtd');
   if(tblCl && d.closers){
@@ -1184,7 +1192,8 @@ function aplicarDadosNoPainel(d){
   }
 }
 
-loadPainelData().then(aplicarDadosNoPainel);
+// Inicialização — ampRender gerencia destrição de gráficos antigos antes de recriar
+ampRender();
 
    // ══════════════════════════════════════════════════════════════════════════════
 // AMPLIMED PAINEL VIVO — AUTO REFRESH E METAS DINÂMICAS
@@ -1583,17 +1592,8 @@ async function ampRender() {
 }
 
 // ─────────────────────────────────────────────────────────────
-// PRIMEIRA SINCRONIZAÇÃO
-// ─────────────────────────────────────────────────────────────
-
-setTimeout(
-  ampRender,
-  1000
-);
-
-// ─────────────────────────────────────────────────────────────
-// ATUALIZAÇÃO AUTOMÁTICA
-// EXATAMENTE A CADA 30 MINUTOS
+// ATUALIZAÇÃO AUTOMÁTICA A CADA 30 MINUTOS
+// (a primeira sincronização já ocorre via ampRender() acima)
 // ─────────────────────────────────────────────────────────────
 
 setInterval(
