@@ -1,6 +1,6 @@
 {
-  "geradoEm": "2026-08-17T14:04:09.502Z",
-  "geradoEmBR": "17/08/2026, 11:04:09",
+  "geradoEm": "2026-08-17T15:44:51.141Z",
+  "geradoEmBR": "17/08/2026, 12:44:51",
   "mes": {
     "ano": 2026,
     "mes": 8,
@@ -11,11 +11,11 @@
     "sdr": 37000
   },
   "kpis": {
-    "receitaRealizada": 29389.29,
+    "receitaRealizada": 29528.29,
     "metaMensal": 47000,
-    "pctMeta": 62.5,
-    "pipelineAberto": 35249.9,
-    "mediaDiaria": 1728.78
+    "pctMeta": 62.8,
+    "pipelineAberto": 35750.9,
+    "mediaDiaria": 1736.96
   },
   "receitaAcumulada": {
     "labels": [
@@ -54,7 +54,7 @@
       29389.29,
       29389.29,
       29389.29,
-      29389.29
+      29528.29
     ],
     "meta": [
       1516.13,
@@ -77,10 +77,10 @@
     ]
   },
   "aging": {
-    "0-7d": 26,
-    "8-15d": 20,
-    "16-30d": 13,
-    "31-60d": 6,
+    "0-7d": 29,
+    "8-15d": 19,
+    "16-30d": 12,
+    "31-60d": 7,
     "+60d": 3
   },
   "closers": [
@@ -191,27 +191,27 @@
     {
       "name": "Mayara",
       "nivel": "Pleno",
-      "ganhos": 24,
+      "ganhos": 25,
       "perdidos": 8,
       "crossSellGanhos": 5,
-      "aquisicaoAmount": 6899.28,
+      "aquisicaoAmount": 7038.28,
       "crossSellAmount": 481.19,
-      "totalAmount": 7380.47,
-      "ticketMedio": 307.52,
-      "winRate": 75,
+      "totalAmount": 7519.47,
+      "ticketMedio": 300.78,
+      "winRate": 75.8,
       "metaMes": 8600,
       "metaProRata": 4716.13,
-      "pctMetaProRata": 156.5,
+      "pctMetaProRata": 159.4,
       "funil": {
         "sql": 35,
         "demo": 35,
         "sal": 33,
         "proposta": 27,
-        "won": 24,
+        "won": 25,
         "sqlToDemoP": 100,
         "demoToSalP": 94.3,
         "salToPropP": 81.8,
-        "winRateP": 75
+        "winRateP": 75.8
       }
     },
     {
