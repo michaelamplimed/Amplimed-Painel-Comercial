@@ -1,6 +1,6 @@
 {
-  "geradoEm": "2026-08-18T11:58:55.408Z",
-  "geradoEmBR": "18/08/2026, 08:58:55",
+  "geradoEm": "2026-08-18T14:07:48.044Z",
+  "geradoEmBR": "18/08/2026, 11:07:48",
   "mes": {
     "ano": 2026,
     "mes": 8,
@@ -11,11 +11,11 @@
     "sdr": 37000
   },
   "kpis": {
-    "receitaRealizada": 30665.19,
+    "receitaRealizada": 31401.99,
     "metaMensal": 47000,
-    "pctMeta": 65.2,
-    "pipelineAberto": 35235.7,
-    "mediaDiaria": 1703.62
+    "pctMeta": 66.8,
+    "pipelineAberto": 34957.7,
+    "mediaDiaria": 1744.56
   },
   "receitaAcumulada": {
     "labels": [
@@ -56,7 +56,7 @@
       29389.29,
       29389.29,
       30526.19,
-      30665.19
+      31401.99
     ],
     "meta": [
       1516.13,
@@ -80,8 +80,8 @@
     ]
   },
   "aging": {
-    "0-7d": 35,
-    "8-15d": 18,
+    "0-7d": 34,
+    "8-15d": 17,
     "16-30d": 13,
     "31-60d": 7,
     "+60d": 3
@@ -90,27 +90,27 @@
     {
       "name": "Tamara",
       "nivel": "Sênior",
-      "ganhos": 21,
+      "ganhos": 22,
       "perdidos": 12,
       "crossSellGanhos": 3,
-      "aquisicaoAmount": 5361.16,
+      "aquisicaoAmount": 5500.16,
       "crossSellAmount": 694,
-      "totalAmount": 6055.16,
-      "ticketMedio": 288.34,
-      "winRate": 63.6,
+      "totalAmount": 6194.16,
+      "ticketMedio": 281.55,
+      "winRate": 64.7,
       "metaMes": 10600,
       "metaProRata": 6154.84,
-      "pctMetaProRata": 98.4,
+      "pctMetaProRata": 100.6,
       "funil": {
         "sql": 34,
         "demo": 34,
         "sal": 31,
         "proposta": 28,
-        "won": 21,
+        "won": 22,
         "sqlToDemoP": 100,
         "demoToSalP": 91.2,
         "salToPropP": 90.3,
-        "winRateP": 63.6
+        "winRateP": 64.7
       }
     },
     {
@@ -118,15 +118,15 @@
       "nivel": "Sênior",
       "ganhos": 19,
       "perdidos": 10,
-      "crossSellGanhos": 3,
+      "crossSellGanhos": 4,
       "aquisicaoAmount": 7074.3,
-      "crossSellAmount": 199.9,
-      "totalAmount": 7274.2,
-      "ticketMedio": 382.85,
+      "crossSellAmount": 538.8,
+      "totalAmount": 7613.1,
+      "ticketMedio": 400.69,
       "winRate": 65.5,
       "metaMes": 10600,
       "metaProRata": 6154.84,
-      "pctMetaProRata": 118.2,
+      "pctMetaProRata": 123.7,
       "funil": {
         "sql": 28,
         "demo": 28,
@@ -168,53 +168,53 @@
     {
       "name": "Ariel",
       "nivel": "Pleno",
-      "ganhos": 13,
+      "ganhos": 14,
       "perdidos": 10,
       "crossSellGanhos": 1,
-      "aquisicaoAmount": 3869.07,
+      "aquisicaoAmount": 4127.97,
       "crossSellAmount": 890,
-      "totalAmount": 4759.07,
-      "ticketMedio": 366.08,
-      "winRate": 56.5,
+      "totalAmount": 5017.97,
+      "ticketMedio": 358.43,
+      "winRate": 58.3,
       "metaMes": 8600,
       "metaProRata": 4993.55,
-      "pctMetaProRata": 95.3,
+      "pctMetaProRata": 100.5,
       "funil": {
-        "sql": 26,
-        "demo": 26,
-        "sal": 15,
-        "proposta": 15,
-        "won": 13,
+        "sql": 27,
+        "demo": 27,
+        "sal": 16,
+        "proposta": 16,
+        "won": 14,
         "sqlToDemoP": 100,
-        "demoToSalP": 57.7,
+        "demoToSalP": 59.3,
         "salToPropP": 100,
-        "winRateP": 56.5
+        "winRateP": 58.3
       }
     },
     {
       "name": "Mayara",
       "nivel": "Pleno",
       "ganhos": 26,
-      "perdidos": 8,
+      "perdidos": 9,
       "crossSellGanhos": 5,
       "aquisicaoAmount": 7177.28,
       "crossSellAmount": 481.19,
       "totalAmount": 7658.47,
       "ticketMedio": 294.56,
-      "winRate": 76.5,
+      "winRate": 74.3,
       "metaMes": 8600,
       "metaProRata": 4993.55,
       "pctMetaProRata": 153.4,
       "funil": {
-        "sql": 37,
-        "demo": 37,
-        "sal": 34,
+        "sql": 36,
+        "demo": 36,
+        "sal": 33,
         "proposta": 28,
         "won": 26,
         "sqlToDemoP": 100,
-        "demoToSalP": 91.9,
-        "salToPropP": 82.4,
-        "winRateP": 76.5
+        "demoToSalP": 91.7,
+        "salToPropP": 84.8,
+        "winRateP": 74.3
       }
     },
     {
