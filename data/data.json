@@ -1,6 +1,6 @@
 {
-  "geradoEm": "2026-08-18T15:59:00.580Z",
-  "geradoEmBR": "18/08/2026, 12:59:00",
+  "geradoEm": "2026-08-18T17:03:43.022Z",
+  "geradoEmBR": "18/08/2026, 14:03:43",
   "mes": {
     "ano": 2026,
     "mes": 8,
@@ -14,7 +14,7 @@
     "receitaRealizada": 31401.99,
     "metaMensal": 47000,
     "pctMeta": 66.8,
-    "pipelineAberto": 35904.7,
+    "pipelineAberto": 36043.7,
     "mediaDiaria": 1744.56
   },
   "receitaAcumulada": {
@@ -102,14 +102,14 @@
       "metaProRata": 6154.84,
       "pctMetaProRata": 100.6,
       "funil": {
-        "sql": 35,
-        "demo": 35,
-        "sal": 31,
+        "sql": 36,
+        "demo": 36,
+        "sal": 32,
         "proposta": 28,
         "won": 22,
         "sqlToDemoP": 100,
-        "demoToSalP": 88.6,
-        "salToPropP": 90.3,
+        "demoToSalP": 88.9,
+        "salToPropP": 87.5,
         "winRateP": 64.7
       }
     },
@@ -208,12 +208,12 @@
       "funil": {
         "sql": 36,
         "demo": 36,
-        "sal": 33,
+        "sal": 34,
         "proposta": 28,
         "won": 26,
         "sqlToDemoP": 100,
-        "demoToSalP": 91.7,
-        "salToPropP": 84.8,
+        "demoToSalP": 94.4,
+        "salToPropP": 82.4,
         "winRateP": 74.3
       }
     },
