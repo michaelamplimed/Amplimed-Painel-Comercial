@@ -1,6 +1,6 @@
 {
-  "geradoEm": "2026-08-18T20:00:36.372Z",
-  "geradoEmBR": "18/08/2026, 17:00:36",
+  "geradoEm": "2026-08-18T21:41:53.216Z",
+  "geradoEmBR": "18/08/2026, 18:41:53",
   "mes": {
     "ano": 2026,
     "mes": 8,
@@ -81,8 +81,8 @@
   },
   "aging": {
     "0-7d": 38,
-    "8-15d": 17,
-    "16-30d": 13,
+    "8-15d": 16,
+    "16-30d": 14,
     "31-60d": 7,
     "+60d": 3
   },
@@ -102,13 +102,13 @@
       "metaProRata": 6154.84,
       "pctMetaProRata": 102.9,
       "funil": {
-        "sql": 37,
-        "demo": 37,
+        "sql": 38,
+        "demo": 38,
         "sal": 32,
         "proposta": 29,
         "won": 23,
         "sqlToDemoP": 100,
-        "demoToSalP": 86.5,
+        "demoToSalP": 84.2,
         "salToPropP": 90.6,
         "winRateP": 65.7
       }
@@ -143,26 +143,26 @@
       "name": "Juliano",
       "nivel": "Pleno",
       "ganhos": 22,
-      "perdidos": 9,
+      "perdidos": 10,
       "crossSellGanhos": 5,
       "aquisicaoAmount": 3438.69,
       "crossSellAmount": 525.9,
       "totalAmount": 3964.59,
       "ticketMedio": 180.21,
-      "winRate": 71,
+      "winRate": 68.8,
       "metaMes": 8600,
       "metaProRata": 4993.55,
       "pctMetaProRata": 79.4,
       "funil": {
-        "sql": 30,
-        "demo": 30,
+        "sql": 29,
+        "demo": 29,
         "sal": 28,
         "proposta": 28,
         "won": 22,
         "sqlToDemoP": 100,
-        "demoToSalP": 93.3,
+        "demoToSalP": 96.6,
         "salToPropP": 100,
-        "winRateP": 71
+        "winRateP": 68.8
       }
     },
     {
@@ -195,13 +195,13 @@
       "name": "Mayara",
       "nivel": "Pleno",
       "ganhos": 26,
-      "perdidos": 9,
+      "perdidos": 10,
       "crossSellGanhos": 5,
       "aquisicaoAmount": 7177.28,
       "crossSellAmount": 481.19,
       "totalAmount": 7658.47,
       "ticketMedio": 294.56,
-      "winRate": 74.3,
+      "winRate": 72.2,
       "metaMes": 8600,
       "metaProRata": 4993.55,
       "pctMetaProRata": 153.4,
@@ -214,7 +214,7 @@
         "sqlToDemoP": 100,
         "demoToSalP": 91.9,
         "salToPropP": 82.4,
-        "winRateP": 74.3
+        "winRateP": 72.2
       }
     },
     {
