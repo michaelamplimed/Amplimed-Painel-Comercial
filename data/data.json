@@ -1,6 +1,6 @@
 {
-  "geradoEm": "2026-08-20T11:03:10.463Z",
-  "geradoEmBR": "20/08/2026, 08:03:10",
+  "geradoEm": "2026-08-20T14:03:30.939Z",
+  "geradoEmBR": "20/08/2026, 11:03:30",
   "mes": {
     "ano": 2026,
     "mes": 8,
@@ -11,11 +11,11 @@
     "sdr": 37000
   },
   "kpis": {
-    "receitaRealizada": 33156.07,
+    "receitaRealizada": 34057.97,
     "metaMensal": 47000,
-    "pctMeta": 70.5,
-    "pipelineAberto": 39508.5,
-    "mediaDiaria": 1657.8
+    "pctMeta": 72.5,
+    "pipelineAberto": 38250.6,
+    "mediaDiaria": 1702.9
   },
   "receitaAcumulada": {
     "labels": [
@@ -45,22 +45,22 @@
       0,
       4186.89,
       6020.83,
-      9307.92,
-      11020.91,
-      13665.5,
-      13665.5,
-      13665.5,
-      21305.99,
-      23013.85,
-      24056.75,
-      27390.84,
-      29389.29,
-      29389.29,
-      29389.29,
-      30526.19,
-      31818.99,
-      33156.07,
-      33156.07
+      9326.92,
+      11039.91,
+      13684.5,
+      13684.5,
+      13684.5,
+      21324.99,
+      23032.85,
+      24075.75,
+      27409.84,
+      29408.29,
+      29408.29,
+      29408.29,
+      30545.19,
+      31837.99,
+      33175.07,
+      34057.97
     ],
     "meta": [
       1516.13,
@@ -86,9 +86,9 @@
     ]
   },
   "aging": {
-    "0-7d": 32,
-    "8-15d": 23,
-    "16-30d": 12,
+    "0-7d": 33,
+    "8-15d": 22,
+    "16-30d": 11,
     "31-60d": 7,
     "+60d": 3
   },
@@ -122,53 +122,53 @@
     {
       "name": "Eduardo",
       "nivel": "Sênior",
-      "ganhos": 19,
+      "ganhos": 20,
       "perdidos": 10,
       "crossSellGanhos": 4,
-      "aquisicaoAmount": 7074.3,
-      "crossSellAmount": 538.8,
-      "totalAmount": 7613.1,
-      "ticketMedio": 400.69,
-      "winRate": 65.5,
+      "aquisicaoAmount": 7213.3,
+      "crossSellAmount": 557.8,
+      "totalAmount": 7771.1,
+      "ticketMedio": 388.55,
+      "winRate": 66.7,
       "metaMes": 10600,
       "metaProRata": 6838.71,
-      "pctMetaProRata": 111.3,
+      "pctMetaProRata": 113.6,
       "funil": {
-        "sql": 31,
-        "demo": 31,
-        "sal": 20,
-        "proposta": 19,
-        "won": 19,
+        "sql": 32,
+        "demo": 32,
+        "sal": 21,
+        "proposta": 20,
+        "won": 20,
         "sqlToDemoP": 100,
-        "demoToSalP": 64.5,
-        "salToPropP": 95,
-        "winRateP": 65.5
+        "demoToSalP": 65.6,
+        "salToPropP": 95.2,
+        "winRateP": 66.7
       }
     },
     {
       "name": "Juliano",
       "nivel": "Pleno",
       "ganhos": 25,
-      "perdidos": 10,
+      "perdidos": 12,
       "crossSellGanhos": 5,
       "aquisicaoAmount": 3855.69,
       "crossSellAmount": 525.9,
       "totalAmount": 4381.59,
       "ticketMedio": 175.26,
-      "winRate": 71.4,
+      "winRate": 67.6,
       "metaMes": 8600,
       "metaProRata": 5548.39,
       "pctMetaProRata": 79,
       "funil": {
-        "sql": 33,
-        "demo": 33,
-        "sal": 30,
-        "proposta": 30,
+        "sql": 31,
+        "demo": 31,
+        "sal": 29,
+        "proposta": 29,
         "won": 25,
         "sqlToDemoP": 100,
-        "demoToSalP": 90.9,
+        "demoToSalP": 93.5,
         "salToPropP": 100,
-        "winRateP": 71.4
+        "winRateP": 67.6
       }
     },
     {
@@ -186,13 +186,13 @@
       "metaProRata": 5548.39,
       "pctMetaProRata": 90.4,
       "funil": {
-        "sql": 28,
-        "demo": 28,
+        "sql": 29,
+        "demo": 29,
         "sal": 17,
         "proposta": 17,
         "won": 14,
         "sqlToDemoP": 100,
-        "demoToSalP": 60.7,
+        "demoToSalP": 58.6,
         "salToPropP": 100,
         "winRateP": 56
       }
@@ -200,27 +200,27 @@
     {
       "name": "Mayara",
       "nivel": "Pleno",
-      "ganhos": 27,
+      "ganhos": 29,
       "perdidos": 11,
       "crossSellGanhos": 5,
-      "aquisicaoAmount": 7559.17,
+      "aquisicaoAmount": 8303.07,
       "crossSellAmount": 481.19,
-      "totalAmount": 8040.36,
-      "ticketMedio": 297.79,
-      "winRate": 71.1,
+      "totalAmount": 8784.26,
+      "ticketMedio": 302.91,
+      "winRate": 72.5,
       "metaMes": 8600,
       "metaProRata": 5548.39,
-      "pctMetaProRata": 144.9,
+      "pctMetaProRata": 158.3,
       "funil": {
         "sql": 39,
         "demo": 39,
         "sal": 36,
         "proposta": 30,
-        "won": 27,
+        "won": 29,
         "sqlToDemoP": 100,
         "demoToSalP": 92.3,
         "salToPropP": 83.3,
-        "winRateP": 71.1
+        "winRateP": 72.5
       }
     },
     {
