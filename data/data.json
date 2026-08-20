@@ -1,6 +1,6 @@
 {
-  "geradoEm": "2026-08-20T21:03:09.858Z",
-  "geradoEmBR": "20/08/2026, 18:03:09",
+  "geradoEm": "2026-08-20T22:55:32.480Z",
+  "geradoEmBR": "20/08/2026, 19:55:32",
   "mes": {
     "ano": 2026,
     "mes": 8,
@@ -87,8 +87,8 @@
   },
   "aging": {
     "0-7d": 39,
-    "8-15d": 24,
-    "16-30d": 10,
+    "8-15d": 23,
+    "16-30d": 11,
     "31-60d": 6,
     "+60d": 2
   },
@@ -134,13 +134,13 @@
       "metaProRata": 6838.71,
       "pctMetaProRata": 113.6,
       "funil": {
-        "sql": 32,
-        "demo": 32,
+        "sql": 35,
+        "demo": 35,
         "sal": 21,
         "proposta": 20,
         "won": 20,
         "sqlToDemoP": 100,
-        "demoToSalP": 65.6,
+        "demoToSalP": 60,
         "salToPropP": 95.2,
         "winRateP": 66.7
       }
@@ -212,13 +212,13 @@
       "metaProRata": 5548.39,
       "pctMetaProRata": 158.3,
       "funil": {
-        "sql": 40,
-        "demo": 40,
+        "sql": 43,
+        "demo": 42,
         "sal": 36,
         "proposta": 30,
         "won": 29,
-        "sqlToDemoP": 100,
-        "demoToSalP": 90,
+        "sqlToDemoP": 97.7,
+        "demoToSalP": 85.7,
         "salToPropP": 83.3,
         "winRateP": 70.7
       }
