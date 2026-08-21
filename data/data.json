@@ -1,6 +1,6 @@
 {
-  "geradoEm": "2026-08-21T11:02:35.459Z",
-  "geradoEmBR": "21/08/2026, 08:02:35",
+  "geradoEm": "2026-08-21T14:00:33.577Z",
+  "geradoEmBR": "21/08/2026, 11:00:33",
   "mes": {
     "ano": 2026,
     "mes": 8,
@@ -11,11 +11,11 @@
     "sdr": 37000
   },
   "kpis": {
-    "receitaRealizada": 34196.97,
+    "receitaRealizada": 34566.06,
     "metaMensal": 47000,
-    "pctMeta": 72.8,
-    "pipelineAberto": 35678.9,
-    "mediaDiaria": 1628.43
+    "pctMeta": 73.5,
+    "pipelineAberto": 36186.8,
+    "mediaDiaria": 1646
   },
   "receitaAcumulada": {
     "labels": [
@@ -48,21 +48,21 @@
       6020.83,
       9326.92,
       11039.91,
-      13684.5,
-      13684.5,
-      13684.5,
-      21324.99,
-      23032.85,
-      24075.75,
-      27409.84,
-      29408.29,
-      29408.29,
-      29408.29,
-      30545.19,
-      31837.99,
-      33175.07,
-      34196.97,
-      34196.97
+      13804.4,
+      13804.4,
+      13804.4,
+      21444.89,
+      23152.75,
+      24195.65,
+      27529.74,
+      29528.19,
+      29528.19,
+      29528.19,
+      30665.09,
+      31957.89,
+      33294.97,
+      34316.87,
+      34566.06
     ],
     "meta": [
       1516.13,
@@ -89,9 +89,9 @@
     ]
   },
   "aging": {
-    "0-7d": 38,
-    "8-15d": 23,
-    "16-30d": 12,
+    "0-7d": 34,
+    "8-15d": 26,
+    "16-30d": 13,
     "31-60d": 6,
     "+60d": 2
   },
@@ -99,27 +99,27 @@
     {
       "name": "Tamara",
       "nivel": "Sênior",
-      "ganhos": 26,
+      "ganhos": 27,
       "perdidos": 16,
       "crossSellGanhos": 4,
-      "aquisicaoAmount": 6266.35,
+      "aquisicaoAmount": 6515.54,
       "crossSellAmount": 744,
-      "totalAmount": 7010.35,
-      "ticketMedio": 269.63,
-      "winRate": 61.9,
+      "totalAmount": 7259.54,
+      "ticketMedio": 268.87,
+      "winRate": 62.8,
       "metaMes": 10600,
       "metaProRata": 7180.65,
-      "pctMetaProRata": 97.6,
+      "pctMetaProRata": 101.1,
       "funil": {
-        "sql": 37,
-        "demo": 37,
-        "sal": 34,
-        "proposta": 32,
-        "won": 26,
+        "sql": 39,
+        "demo": 39,
+        "sal": 35,
+        "proposta": 33,
+        "won": 27,
         "sqlToDemoP": 100,
-        "demoToSalP": 91.9,
-        "salToPropP": 94.1,
-        "winRateP": 61.9
+        "demoToSalP": 89.7,
+        "salToPropP": 94.3,
+        "winRateP": 62.8
       }
     },
     {
@@ -207,13 +207,13 @@
       "perdidos": 12,
       "crossSellGanhos": 5,
       "aquisicaoAmount": 8303.07,
-      "crossSellAmount": 481.19,
-      "totalAmount": 8784.26,
-      "ticketMedio": 302.91,
+      "crossSellAmount": 601.09,
+      "totalAmount": 8904.16,
+      "ticketMedio": 307.04,
       "winRate": 70.7,
       "metaMes": 8600,
       "metaProRata": 5825.81,
-      "pctMetaProRata": 150.8,
+      "pctMetaProRata": 152.8,
       "funil": {
         "sql": 43,
         "demo": 42,
