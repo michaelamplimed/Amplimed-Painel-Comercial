@@ -1,6 +1,6 @@
 {
-  "geradoEm": "2026-08-21T22:55:54.410Z",
-  "geradoEmBR": "21/08/2026, 19:55:54",
+  "geradoEm": "2026-08-22T10:54:30.361Z",
+  "geradoEmBR": "22/08/2026, 07:54:30",
   "mes": {
     "ano": 2026,
     "mes": 8,
@@ -15,7 +15,7 @@
     "metaMensal": 47000,
     "pctMeta": 74.4,
     "pipelineAberto": 36307.7,
-    "mediaDiaria": 1664.42
+    "mediaDiaria": 1588.77
   },
   "receitaAcumulada": {
     "labels": [
@@ -39,7 +39,8 @@
       "18/08",
       "19/08",
       "20/08",
-      "21/08"
+      "21/08",
+      "22/08"
     ],
     "realizado": [
       0,
@@ -62,6 +63,7 @@
       31957.89,
       33294.97,
       34316.87,
+      34952.86,
       34952.86
     ],
     "meta": [
@@ -85,14 +87,15 @@
       27290.32,
       28806.45,
       30322.58,
-      31838.71
+      31838.71,
+      33354.84
     ]
   },
   "aging": {
     "0-7d": 31,
     "8-15d": 25,
-    "16-30d": 13,
-    "31-60d": 4,
+    "16-30d": 12,
+    "31-60d": 5,
     "+60d": 2
   },
   "closers": [
@@ -108,8 +111,8 @@
       "ticketMedio": 273.31,
       "winRate": 62.8,
       "metaMes": 10600,
-      "metaProRata": 7180.65,
-      "pctMetaProRata": 102.8,
+      "metaProRata": 7522.58,
+      "pctMetaProRata": 98.1,
       "funil": {
         "sql": 40,
         "demo": 40,
@@ -134,8 +137,8 @@
       "ticketMedio": 388.55,
       "winRate": 60.6,
       "metaMes": 10600,
-      "metaProRata": 7180.65,
-      "pctMetaProRata": 108.2,
+      "metaProRata": 7522.58,
+      "pctMetaProRata": 103.3,
       "funil": {
         "sql": 33,
         "demo": 33,
@@ -160,8 +163,8 @@
       "ticketMedio": 175.26,
       "winRate": 67.6,
       "metaMes": 8600,
-      "metaProRata": 5825.81,
-      "pctMetaProRata": 75.2,
+      "metaProRata": 6103.23,
+      "pctMetaProRata": 71.8,
       "funil": {
         "sql": 35,
         "demo": 35,
@@ -186,8 +189,8 @@
       "ticketMedio": 358.43,
       "winRate": 50,
       "metaMes": 8600,
-      "metaProRata": 5825.81,
-      "pctMetaProRata": 86.1,
+      "metaProRata": 6103.23,
+      "pctMetaProRata": 82.2,
       "funil": {
         "sql": 30,
         "demo": 30,
@@ -212,8 +215,8 @@
       "ticketMedio": 305.71,
       "winRate": 69.8,
       "metaMes": 8600,
-      "metaProRata": 5825.81,
-      "pctMetaProRata": 157.4,
+      "metaProRata": 6103.23,
+      "pctMetaProRata": 150.3,
       "funil": {
         "sql": 41,
         "demo": 41,
