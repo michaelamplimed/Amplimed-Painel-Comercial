@@ -3,6 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
 <title>Painel Gerencial Amplimed &mdash; Agosto/2026</title>
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
 <style>
@@ -654,16 +657,16 @@ body{height:100dvh;overflow:hidden;display:flex;flex-direction:column;margin:0}
 .content{flex:1!important;min-height:0!important;overflow:hidden!important;padding:8px 14px!important;display:flex!important;flex-direction:column!important;box-sizing:border-box}
 .section.active{display:flex!important;flex-direction:column!important;flex:1!important;min-height:0!important;overflow:hidden!important}
 /* sec-ceo: grid com ultima linha preenchendo o restante */
-#sec-ceo{display:grid!important;grid-template-rows:auto auto minmax(80px,1fr) minmax(100px,1.4fr) minmax(50px,.7fr);gap:6px;height:100%;max-height:100%;overflow:hidden}
+#sec-ceo{display:grid!important;grid-template-rows:auto auto minmax(0,1fr) minmax(0,1.4fr) minmax(0,.7fr);gap:6px;height:100%;max-height:100%;overflow:hidden}
 /* KPI hero (scorecard executivo — 6 KPIs) — nunca quebra em 2 linhas: no
    painel de tela única, altura é o recurso escasso, não largura. */
-.kgrid-hero{margin-bottom:0!important;gap:7px!important;grid-template-columns:repeat(6,minmax(0,1fr))!important}
+.kgrid-hero{margin-bottom:0!important;gap:7px!important;grid-template-columns:repeat(6,minmax(0,1fr))!important;max-height:112px;overflow:hidden}
 .kcard-inner{padding:7px 10px!important}
 .kcard-lbl{font-size:9px!important;margin-bottom:1px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .kcard-val{font-size:16px!important}
 .kcard-note{font-size:9px!important;margin-top:1px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 /* pace bar */
-.pace-bar{padding:4px 12px!important;margin-bottom:0!important;font-size:10px!important}
+.pace-bar{padding:4px 12px!important;margin-bottom:0!important;font-size:10px!important;max-height:26px;overflow:hidden;white-space:nowrap;text-overflow:ellipsis}
 /* linha central: gráfico + painel meta/forecast/pipeline */
 .central-row{gap:7px!important;margin-bottom:0!important;display:grid!important;min-height:0;max-height:100%;height:100%;overflow:hidden}
 .central-row .sec-card{display:flex!important;flex-direction:column!important;overflow:hidden!important;min-height:0;margin-bottom:0!important}
@@ -709,11 +712,11 @@ body{height:100dvh;overflow:hidden;display:flex;flex-direction:column;margin:0}
 }
 @media(max-height:700px){
   .footer-row{display:none!important}
-  #sec-ceo{grid-template-rows:auto auto minmax(80px,1fr) minmax(100px,1.4fr)!important}
+  #sec-ceo{grid-template-rows:auto auto minmax(0,1fr) minmax(0,1.4fr)!important}
 }
 @media(max-height:600px){
   .pace-bar{display:none!important}
-  #sec-ceo{grid-template-rows:auto minmax(70px,1fr) minmax(90px,1.4fr)!important}
+  #sec-ceo{grid-template-rows:auto minmax(0,1fr) minmax(0,1.4fr)!important}
 }
 /* tipografia — equilibrada entre topo e base do painel */
 .sec-hdr{padding:6px 12px!important;font-size:11px!important}
