@@ -50,6 +50,13 @@ body.dark{
   --ink:#F1F5F9;--ink2:#94A3B8;--ink3:#64748B;--ink4:#334155;
   --nav-bg:#060B16;
 }
+/* Paridade de dark mode: linhas de tabela geradas via JS usam fundo branco
+   fixo (zebra do modo claro) — no dark mode isso deixa o texto (--ink quase
+   branco) ilegível. Repinta apenas o fundo, sem alterar nenhum dado/cálculo. */
+body.dark #tbl-closers-mini tr[style*="background:#fff"],
+body.dark #tbl-sdr-mini tr[style*="background:#fff"]{background:var(--surface)!important}
+body.dark #tbl-closers-mini tr[style*="background:#F1F5F9"],
+body.dark #tbl-sdr-mini tr[style*="background:#F1F5F9"]{background:var(--surface2)!important}
 
 /* ── RESET ── */
 *{box-sizing:border-box;margin:0;padding:0}
@@ -215,7 +222,7 @@ body{
 .kgrid-2{display:grid;grid-template-columns:repeat(2,1fr);gap:var(--sp-3);margin-bottom:var(--sp-4)}
 .kgrid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--sp-3);margin-bottom:var(--sp-4)}
 .kgrid-4{display:grid;grid-template-columns:repeat(4,1fr);gap:var(--sp-3);margin-bottom:var(--sp-4)}
-.kgrid-hero{display:grid;grid-template-columns:repeat(5,1fr);gap:var(--sp-4);margin-bottom:var(--sp-4)}
+.kgrid-hero{display:grid;grid-template-columns:repeat(6,1fr);gap:var(--sp-4);margin-bottom:var(--sp-4)}
 
 /* ── KPI CARD ── */
 .kcard{
@@ -371,6 +378,38 @@ tr:hover td{background:var(--surface2)}
   border-radius:var(--r);margin-bottom:var(--sp-3);font-size:12px;color:var(--ink);
   padding:var(--sp-2) var(--sp-4)
 }
+
+/* ══════════════════════════════════════════════════
+   HEADER — título central dinâmico (mês/ano)
+══════════════════════════════════════════════════ */
+.topbar-center{
+  flex:1;text-align:center;font-size:13px;font-weight:700;letter-spacing:.6px;
+  text-transform:uppercase;opacity:.92;white-space:nowrap;overflow:hidden;text-overflow:ellipsis
+}
+
+/* ══════════════════════════════════════════════════
+   LINHA CENTRAL — gráfico dominante + painel Meta/Forecast/Pipeline
+══════════════════════════════════════════════════ */
+.central-row{display:grid;grid-template-columns:1.6fr 1fr;gap:var(--sp-4);margin-bottom:var(--sp-4)}
+.forecast-mini-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:6px}
+.forecast-mini-item{background:var(--surface2);border:1px solid var(--border);border-radius:var(--r-sm);padding:5px 8px}
+.forecast-mini-lbl{font-size:8.5px;color:var(--ink3);text-transform:uppercase;font-weight:700;letter-spacing:.3px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.forecast-mini-val{font-size:13px;font-weight:800;color:var(--ink);margin-top:1px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+
+/* ══════════════════════════════════════════════════
+   RODAPÉ — funil da equipe + composição/aging
+══════════════════════════════════════════════════ */
+.footer-row{display:grid;grid-template-columns:1.3fr 1fr;gap:var(--sp-4);margin-bottom:0}
+#team-funnel-row{display:flex;align-items:stretch;gap:6px;overflow-x:hidden}
+.tf-step{flex:1;min-width:0;background:var(--surface2);border:1px solid var(--border);border-radius:var(--r);padding:6px 8px;text-align:center}
+.tf-lbl{font-size:9px;color:var(--ink3);text-transform:uppercase;font-weight:700;letter-spacing:.4px}
+.tf-val{font-size:15px;font-weight:800;color:var(--ink);line-height:1.3;margin:2px 0}
+.tf-bar{height:5px;border-radius:3px;background:var(--border);overflow:hidden}
+.tf-bar-fill{height:100%;border-radius:3px;background:var(--acc);transition:width .6s}
+.tf-arrow{flex-shrink:0;display:flex;flex-direction:column;align-items:center;justify-content:center;font-size:9.5px;font-weight:700;color:var(--ink3);min-width:34px}
+.aging-bar-track{display:flex;height:10px;border-radius:6px;overflow:hidden;background:var(--border)}
+.aging-bar-seg{height:100%}
+.aging-legend{display:flex;justify-content:space-between;font-size:8.5px;color:var(--ink3);margin-top:4px;flex-wrap:wrap;gap:2px}
 
 /* ══════════════════════════════════════════════════
    SUB HEADER
@@ -615,18 +654,26 @@ body{height:100dvh;overflow:hidden;display:flex;flex-direction:column;margin:0}
 .content{flex:1!important;min-height:0!important;overflow:hidden!important;padding:8px 14px!important;display:flex!important;flex-direction:column!important;box-sizing:border-box}
 .section.active{display:flex!important;flex-direction:column!important;flex:1!important;min-height:0!important;overflow:hidden!important}
 /* sec-ceo: grid com ultima linha preenchendo o restante */
-#sec-ceo{display:grid!important;grid-template-rows:auto auto auto 1fr;gap:6px;height:100%;overflow:hidden}
-/* KPI hero */
-.kgrid-hero{margin-bottom:0!important;gap:7px!important}
+#sec-ceo{display:grid!important;grid-template-rows:auto auto minmax(140px,1.15fr) minmax(140px,1fr) auto;gap:6px;height:100%;overflow:hidden}
+/* KPI hero (scorecard executivo — 6 KPIs) — nunca quebra em 2 linhas: no
+   painel de tela única, altura é o recurso escasso, não largura. */
+.kgrid-hero{margin-bottom:0!important;gap:7px!important;grid-template-columns:repeat(6,1fr)!important}
 .kcard-inner{padding:7px 10px!important}
 .kcard-lbl{font-size:9px!important;margin-bottom:1px}
 .kcard-val{font-size:16px!important}
 .kcard-note{font-size:9px!important;margin-top:1px}
 /* pace bar */
 .pace-bar{padding:4px 12px!important;margin-bottom:0!important;font-size:10px!important}
-/* three-col */
-.three-col{gap:7px!important;margin-bottom:0!important}
-.three-col .sec-body{padding:6px 10px!important}
+/* linha central: gráfico + painel meta/forecast/pipeline */
+.central-row{gap:7px!important;margin-bottom:0!important;display:grid!important;min-height:0;height:100%;overflow:hidden}
+.central-row .sec-card{display:flex!important;flex-direction:column!important;overflow:hidden!important;min-height:0;margin-bottom:0!important}
+.central-row .sec-body{flex:1!important;min-height:0;overflow:hidden!important;padding:8px 10px!important;display:flex!important;flex-direction:column!important}
+.central-row .chart-wrap{flex:1;min-height:0;height:auto;position:relative}
+.central-row .chart-wrap canvas{position:absolute;inset:0;width:100%!important;height:100%!important}
+/* rodapé: funil da equipe + composição/aging */
+.footer-row{gap:7px!important;margin-bottom:0!important;display:grid!important}
+.footer-row .sec-card{margin-bottom:0!important}
+.footer-row .sec-body{padding:7px 10px!important}
 /* two-col: preenche o 1fr do grid */
 .two-col{gap:7px!important;margin-bottom:0!important;display:flex!important;align-items:stretch!important;min-height:0;height:100%;overflow:hidden}
 .two-col .sec-card{display:flex!important;flex-direction:column!important;flex:1!important;overflow:hidden!important;min-height:0}
@@ -651,9 +698,16 @@ body{height:100dvh;overflow:hidden;display:flex;flex-direction:column;margin:0}
   .sdr-insight{margin-top:5px;padding-top:5px}
   .sdr-insight-row{margin-bottom:2px}
   .sdr-insight-title{margin-bottom:3px}
+  .footer-row .sec-body{padding:5px 8px!important}
+  .aging-legend{display:none}
 }
 @media(max-height:740px){
   #sdr-insight{display:none}
+  #aging-bars-wrap{display:none}
+}
+@media(max-height:700px){
+  .footer-row{display:none!important}
+  #sec-ceo{grid-template-rows:auto auto minmax(140px,1.15fr) minmax(140px,1fr)!important}
 }
 /* tipografia — equilibrada entre topo e base do painel */
 .sec-hdr{padding:6px 12px!important;font-size:11px!important}
@@ -673,39 +727,15 @@ body{height:100dvh;overflow:hidden;display:flex;flex-direction:column;margin:0}
 <!-- TOP BAR ── cockpit strip ──────────────────────────────────────────────── -->
 <div class="topbar">
   <div class="topbar-brand">&#127968; Amplimed Sales Command Center</div>
-  <div class="topbar-strip">
-    <div class="tpkpi">
-      <div class="tpkpi-lbl">Receita</div>
-      <div class="tpkpi-val ok" id="kpi-receita">R$22.903,85</div>
-    </div>
-    <div class="tpkpi">
-      <div class="tpkpi-lbl">Meta Acum.</div>
-      <div class="tpkpi-val ok" id="kpi-pctmeta">146%</div>
-    </div>
-    <div class="tpkpi">
-      <div class="tpkpi-lbl">Pace</div>
-      <div class="tpkpi-val ok" id="kpi-pace">R$68.711,55</div>
-    </div>
-    <div class="tpkpi">
-      <div class="tpkpi-lbl">Win Rate</div>
-      <div class="tpkpi-val warn" id="kpi-winrate">63.2%</div>
-    </div>
-    <div class="tpkpi">
-      <div class="tpkpi-lbl">Receita/Dia</div>
-      <div class="tpkpi-val ok" id="kpi-receitadia">R$3.271,98/d</div>
-    </div>
-    <div class="tpkpi-progress-wrap">
-      <div class="tpkpi-progress-lbl"><span>Meta do M&ecirc;s</span><span id="tpkpi-progress-pct">&mdash;</span></div>
-      <div class="tpkpi-progress-track"><div class="tpkpi-progress-fill" id="tpkpi-progress-fill" style="width:0%"></div></div>
-      <div class="tpkpi-progress-sub" id="tpkpi-progress-sub">&mdash;</div>
-    </div>
-  </div>
+  <div class="topbar-center" id="header-month">Performance Comercial</div>
+  <!-- KPIs de topo migraram para o Scorecard Executivo (6 KPIs) no corpo do painel -->
   <div class="topbar-right">
     <span id="ultima-atualizacao" style="font-size:10px;opacity:.6;white-space:nowrap">&#128260; carregando dados&hellip;</span>
-    <button class="btn-icon" onclick="show('ceo')" title="Painel Gerencial" style="font-size:11px;padding:5px 10px">&#128202; Painel</button>
     <button class="btn-icon" onclick="toggleDark()" title="Dark Mode">&#9790;</button>
   </div>
 </div>
+<!-- kpi-pctmeta/kpi-pace/kpi-winrate/kpi-receitadia/tpkpi-progress-* saíram do
+     DOM: são lidos com if(el(...)) no JS, então continuam no-op com segurança. -->
 
 <!-- LAYOUT ──────────────────────────────────────────────────────────────────── -->
 <div class="layout">
@@ -716,67 +746,39 @@ body{height:100dvh;overflow:hidden;display:flex;flex-direction:column;margin:0}
 
 <div class="section active" id="sec-ceo">
 
-  <!-- KPI Grid principal -->
+  <!-- Scorecard Executivo — 6 KPIs -->
   <div class="kgrid-hero">
-    <div class="kcard" style="border-top:3px solid #10B981"><div class="kcard-inner"><div style="flex:1;min-width:0"><div class="kcard-lbl">&#128181 Receita Total</div><div class="kcard-val js-receita-total" style="color:#059669">R$22.903,85</div><div class="kcard-note" id="kcard-receita-n">Meta acum. R$15.666,70 &middot; D7/21 <span class="delta dn">&#9660; 59.6%</span></div></div><div style="flex-shrink:0" id="spark-receita-total"></div></div></div>
-    <div class="kcard" style="border-top:3px solid #10B981"><div class="kcard-inner"><div style="flex:1;min-width:0"><div class="kcard-lbl">&#128200 Proje&ccedil;&atilde;o do M&ecirc;s</div><div class="kcard-val" id="kcard-proj-v" style="color:#059669">R$68.711,55</div><div class="kcard-note" id="kcard-proj-n">Meta mensal R$47.000,00 <span class="delta up">&#9650; 32.8%</span></div></div><div style="flex-shrink:0" id="spark-projecao"></div></div></div>
-    <div class="kcard" style="border-top:3px solid #10B981"><div class="kcard-inner"><div style="flex:1;min-width:0"><div class="kcard-lbl">&#9889 Receita por Dia</div><div id="kcard-recdia-v" class="kcard-val" style="color:#059669">R$3.271,98</div><div class="kcard-note">M&eacute;dia de receita por dia &uacute;til </div></div><div style="flex-shrink:0" id="spark-recdia"></div></div></div>
-    <div class="kcard" style="border-top:3px solid #10B981"><div class="kcard-inner"><div style="flex:1;min-width:0"><div class="kcard-lbl">&#127915 Ticket M&eacute;dio</div><div class="kcard-val js-ticket-medio" style="color:#059669">R$308,25</div><div class="kcard-note">Meta R$300 &middot; 103% <span class="delta dn">&#9660; 6.3%</span></div><div class="kcard-gauge-track"><div class="kcard-gauge-fill" id="kcard-ticket-gauge" style="width:0%"></div></div></div></div></div>
-    <div class="kcard" style="border-top:3px solid #10B981"><div class="kcard-inner"><div style="flex:1;min-width:0"><div class="kcard-lbl">&#128101 Total de Vendas</div><div id="kcard-vendas-2-v" class="kcard-val" style="color:#059669">83</div><div id="kcard-vendas-2-n" class="kcard-note">Aquisi&ccedil;&atilde;o 67 + Cross 16 &middot; ritmo 249/131 </div></div><div style="flex-shrink:0"><svg viewBox="0 0 70 24" style="width:70px;height:24px;display:block"><polyline points="0.0,24.0 7.0,24.0 14.0,19.0 21.0,16.8 28.0,12.2 35.0,9.3 42.0,7.2 49.0,7.2 56.0,7.2 63.0,2.9 70.0,0.0" fill="none" stroke="#1B3A5C" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div></div></div>
+    <div class="kcard" style="border-top:3px solid #10B981"><div class="kcard-inner"><div style="flex:1;min-width:0"><div class="kcard-lbl">&#128181; Receita MTD</div><div class="kcard-val" id="kpi-receita" style="color:#059669">—</div><div class="kcard-note" id="kcard-receita-n">—</div></div><div style="flex-shrink:0" id="spark-receita-total"></div></div></div>
+    <div class="kcard" style="border-top:3px solid #1565C0"><div class="kcard-inner"><div style="flex:1;min-width:0"><div class="kcard-lbl">&#127919; Meta Acumulada</div><div class="kcard-val" id="kcard-prorata" style="color:#1565C0">—</div><div class="kcard-note">Pro-rata do m&ecirc;s at&eacute; hoje</div></div></div></div>
+    <div class="kcard" style="border-top:3px solid #7C3AED"><div class="kcard-inner"><div style="flex:1;min-width:0"><div class="kcard-lbl">&#128202; Atingimento da Meta Acum.</div><div class="kcard-val"><span id="kcard-prorata-pct" class="bdg bdg-g" style="font-size:16px;padding:2px 10px">—</span></div><div class="kcard-note">Realizado vs. meta pro-rata</div></div></div></div>
+    <div class="kcard" style="border-top:3px solid #E08E0B"><div class="kcard-inner"><div style="flex:1;min-width:0"><div class="kcard-lbl">&#128200; Forecast do M&ecirc;s</div><div class="kcard-val" id="kcard-proj-v" style="color:#E08E0B">—</div><div class="kcard-note" id="kcard-proj-n">—</div></div><div style="flex-shrink:0" id="spark-projecao"></div></div></div>
+    <div class="kcard" style="border-top:3px solid #EF4444"><div class="kcard-inner"><div style="flex:1;min-width:0"><div class="kcard-lbl">&#9888; Gap para Meta</div><div class="kcard-val" id="kpi-gap" style="color:#EF4444">—</div><div class="kcard-note">Falta para bater a meta do m&ecirc;s</div></div></div></div>
+    <div class="kcard" style="border-top:3px solid #10B981"><div class="kcard-inner"><div style="flex:1;min-width:0"><div class="kcard-lbl">&#127942; Win Rate</div><div class="kcard-val" id="kcard-winrate-v" style="color:#059669">—</div><div class="kcard-note" id="kcard-winrate-n">—</div></div></div></div>
   </div>
 
   <div class="pace-bar" id="pace-bar-main">&#128197; Carregando dados&hellip;</div>
 
-  <!-- MRR breakdown -->
-  <div class="three-col">
+  <!-- Linha central: gráfico dominante Receita x Meta + painel Meta/Forecast/Pipeline -->
+  <div class="central-row">
     <div class="sec-card">
-      <div class="sec-hdr" style="background:#0D5C2A">&#128181; Receita do M&ecirc;s</div>
+      <div class="sec-hdr" style="background:#1565C0">&#128200; Receita &times; Meta (Acumulado no M&ecirc;s)</div>
       <div class="sec-body">
-        <div class="kgrid-2 mb-0">
-          <div class="mrr-box" style="background:var(--gn-bg)">
-            <div style="font-size:10px;color:var(--ink3)">MRR Novo (Acq)</div>
-            <div id="mrr-acq" style="font-size:16px;font-weight:700;color:var(--gn)">R$20.652,96</div>
-          </div>
-          <div class="mrr-box" style="background:var(--bl-bg)">
-            <div style="font-size:10px;color:var(--ink3)">MRR Cross-Sell</div>
-            <div id="mrr-cross" style="font-size:16px;font-weight:700;color:var(--bl)">R$2.250,89</div>
-          </div>
-        </div>
-        <div class="mrr-box" style="background:#F3E8FF;margin-top:8px">
-          <div style="font-size:10px;color:var(--ink3)">MRR Total Mês</div>
-          <div id="mrr-total" style="font-size:20px;font-weight:800;color:#7C3AED">R$22.903,85</div>
-        </div>
-        <div style="margin-top:9px">
-          <div class="mrr-split-track"><div class="mrr-split-fill-acq" id="mrr-split-acq" style="width:50%"></div><div class="mrr-split-fill-cross" id="mrr-split-cross" style="width:50%"></div></div>
-          <div class="mrr-split-labels"><span>&#128994; Novo <strong id="mrr-split-acq-pct">&mdash;</strong></span><span>&#128309; Cross-Sell <strong id="mrr-split-cross-pct">&mdash;</strong></span></div>
-        </div>
+        <div class="chart-wrap"><canvas id="chartRec"></canvas></div>
       </div>
     </div>
     <div class="sec-card">
-      <div class="sec-hdr" style="background:#1565C0">&#127919; Ritmo &amp; Forecast</div>
+      <div class="sec-hdr" style="background:#4A235A">&#127775; Meta, Forecast &amp; Pipeline</div>
       <div class="sec-body">
-        <div class="kv-list">
-          <div class="kv-row"><span>Meta Di&aacute;ria</span><strong id="kcard-meta-diaria">—</strong></div>
-          <div class="kv-row"><span>Acumulado Pro-Rata</span><strong id="kcard-prorata">—</strong></div>
-          <div class="kv-row"><span>Atingimento Pro-Rata</span><span id="kcard-prorata-pct" class="bdg bdg-g">—</span></div>
-          <hr style="border:none;border-top:1px solid var(--border)">
-          <div class="kv-row"><span>Proje&ccedil;&atilde;o do M&ecirc;s</span><strong id="kcard-proj-forecast" style="color:var(--acc)">—</strong></div>
-          <div class="kv-row"><span>Necess&aacute;rio/dia</span><strong id="kcard-necessario">—</strong></div>
-          <div class="kv-row"><span>Dias Restantes</span><strong id="kcard-dias-restantes">—</strong></div>
-        </div>
-      </div>
-    </div>
-    <div class="sec-card">
-      <div class="sec-hdr" style="background:#4A235A">&#127775; Meta &amp; Proje&ccedil;&atilde;o Anual</div>
-      <div class="sec-body">
-        <div class="kv-list">
-          <div class="kv-row"><span>Meta Mensal</span><strong>R$47.000,00</strong></div>
-          <div class="kv-row"><span>Realizado</span><strong id="meta-anual-realizado">R$22.903,85</strong></div>
-          <div class="kv-row"><span>Atingimento</span><span id="meta-anual-ating" class="bdg bdg-g">146%</span></div>
-          <hr style="border:none;border-top:1px solid var(--border)">
-          <div class="kv-row"><span>ARR Projetado</span><strong id="arr-projetado" style="color:#7C3AED">R$824.539</strong></div>
-          <div class="kv-row"><span>Meta Anual</span><strong>R$191.000</strong></div>
-          <div class="kv-row"><span>Coverage</span><strong id="coverage-val" style="color:var(--rd)">1.6x</strong></div>
+        <!-- Meta Mensal já aparece na nota do card "Forecast do Mês" do scorecard;
+             mantido aqui oculto apenas para o hook de atualização dinâmica (config.json). -->
+        <strong id="kv-meta-mensal" style="display:none">R$47.000,00</strong>
+        <div class="forecast-mini-grid">
+          <div class="forecast-mini-item"><div class="forecast-mini-lbl">Meta Di&aacute;ria</div><div class="forecast-mini-val" id="kcard-meta-diaria">—</div></div>
+          <div class="forecast-mini-item"><div class="forecast-mini-lbl">Necess&aacute;rio/dia</div><div class="forecast-mini-val" id="kcard-necessario">—</div></div>
+          <div class="forecast-mini-item"><div class="forecast-mini-lbl">Dias Restantes</div><div class="forecast-mini-val" id="kcard-dias-restantes">—</div></div>
+          <div class="forecast-mini-item"><div class="forecast-mini-lbl">Pipeline Aberto</div><div class="forecast-mini-val" id="kpi-pipeline">—</div></div>
+          <div class="forecast-mini-item"><div class="forecast-mini-lbl">ARR Projetado</div><div class="forecast-mini-val" id="arr-projetado" style="color:#7C3AED">—</div></div>
+          <div class="forecast-mini-item"><div class="forecast-mini-lbl">Coverage (Meta Anual R$191k)</div><div class="forecast-mini-val" id="coverage-val" style="color:var(--rd)">—</div></div>
         </div>
       </div>
     </div>
@@ -805,6 +807,46 @@ body{height:100dvh;overflow:hidden;display:flex;flex-direction:column;margin:0}
     </div>
   </div>
 
+  <!-- Rodapé: funil horizontal da equipe + composição da receita / aging -->
+  <div class="footer-row">
+    <div class="sec-card">
+      <div class="sec-hdr" style="background:#0F6057">&#128268; Funil da Equipe &mdash; SQL &rarr; Demo &rarr; SAL &rarr; Proposta &rarr; Ganho</div>
+      <div class="sec-body">
+        <div id="team-funnel-row"></div>
+      </div>
+    </div>
+    <div class="sec-card">
+      <div class="sec-hdr" style="background:#0D5C2A">&#128181; Composi&ccedil;&atilde;o da Receita</div>
+      <div class="sec-body">
+        <div class="kgrid-2 mb-0">
+          <div class="mrr-box" style="background:var(--gn-bg)">
+            <div style="font-size:9.5px;color:var(--ink3)">Aquisi&ccedil;&atilde;o</div>
+            <div id="mrr-acq" style="font-size:13.5px;font-weight:700;color:var(--gn)">—</div>
+          </div>
+          <div class="mrr-box" style="background:var(--bl-bg)">
+            <div style="font-size:9.5px;color:var(--ink3)">Cross-Sell</div>
+            <div id="mrr-cross" style="font-size:13.5px;font-weight:700;color:var(--bl)">—</div>
+          </div>
+        </div>
+        <div style="margin-top:6px">
+          <div class="mrr-split-track"><div class="mrr-split-fill-acq" id="mrr-split-acq" style="width:50%"></div><div class="mrr-split-fill-cross" id="mrr-split-cross" style="width:50%"></div></div>
+        </div>
+        <div class="kgrid-2 mb-0" style="margin-top:7px">
+          <div class="mrr-box" style="background:var(--surface2)">
+            <div style="font-size:9.5px;color:var(--ink3)">Ticket M&eacute;dio</div>
+            <div class="js-ticket-medio" style="font-size:13.5px;font-weight:700;color:var(--ink)">—</div>
+            <div class="kcard-gauge-track"><div class="kcard-gauge-fill" id="kcard-ticket-gauge" style="width:0%"></div></div>
+          </div>
+          <div class="mrr-box" style="background:var(--surface2)">
+            <div style="font-size:9.5px;color:var(--ink3)">Total de Vendas</div>
+            <div id="kcard-vendas-2-v" style="font-size:13.5px;font-weight:700;color:var(--ink)">—</div>
+            <div id="kcard-vendas-2-n" style="font-size:9px;color:var(--ink3);margin-top:1px">—</div>
+          </div>
+        </div>
+        <div id="aging-bars-wrap" style="margin-top:7px"></div>
+      </div>
+    </div>
+  </div>
 
 </div><!-- /sec-ceo -->
 </div><!-- /content -->
@@ -1333,6 +1375,58 @@ function aplicarDadosNoPainel(d){
     cvEl.textContent = coverage+'x';
     cvEl.style.color = parseFloat(coverage) >= 1 ? 'var(--gn)' : 'var(--rd)';
   }
+
+  // ══════════════════════════════════════════════════════════════════════
+  // REDESIGN — blocos adicionais, somente apresentação. Não introduzem
+  // nenhuma regra de negócio nova: usam apenas valores já calculados acima
+  // (mrrTotal, metaMensal) ou somas simples de campos que já vêm prontos
+  // do data.json (d.closers[].funil, d.aging).
+  // ══════════════════════════════════════════════════════════════════════
+
+  // Gap para a meta do mês.
+  if(el('kpi-gap')){
+    const gapMeta = Math.max(0, Math.round((metaMensal - mrrTotal)*100)/100);
+    el('kpi-gap').textContent = fmtMoeda(gapMeta);
+  }
+
+  // Funil consolidado da equipe — soma dos funis já calculados por closer.
+  if(el('team-funnel-row') && d.closers){
+    const steps = [
+      {key:'sql',      lbl:'SQL'},
+      {key:'demo',     lbl:'Demo'},
+      {key:'sal',      lbl:'SAL'},
+      {key:'proposta', lbl:'Proposta'},
+      {key:'won',      lbl:'Ganho'}
+    ];
+    const totals = steps.map(s => d.closers.reduce((sum,c)=> sum + ((c.funil && c.funil[s.key]) || 0), 0));
+    const maxVal = Math.max.apply(null, totals) || 1;
+    let tfHtml = '';
+    steps.forEach((s,i) => {
+      const v = totals[i];
+      const w = Math.max(6, Math.round(v/maxVal*100));
+      tfHtml += '<div class="tf-step"><div class="tf-lbl">'+s.lbl+'</div><div class="tf-val">'+v+'</div><div class="tf-bar"><div class="tf-bar-fill" style="width:'+w+'%"></div></div></div>';
+      if(i < steps.length-1){
+        const prev = totals[i], next = totals[i+1];
+        const conv = prev>0 ? Math.round(next/prev*1000)/10 : 0;
+        tfHtml += '<div class="tf-arrow">&#8594;<br>'+conv+'%</div>';
+      }
+    });
+    el('team-funnel-row').innerHTML = tfHtml;
+  }
+
+  // Aging dos deals abertos — barra horizontal a partir dos mesmos valores
+  // de d.aging já usados no gráfico de rosca (chartAging).
+  if(el('aging-bars-wrap') && d.aging){
+    const agingKeys = ['0-7d','8-15d','16-30d','31-60d','+60d'];
+    const agingColors = ['#10B981','#F59E0B','#F97316','#EF4444','#991B1B'];
+    const agingVals = agingKeys.map(k => Number(d.aging[k]||0));
+    const agingTotal = agingVals.reduce((a,b)=>a+b,0) || 1;
+    const agTrack = agingVals.map((v,i)=>'<div class="aging-bar-seg" style="width:'+(v/agingTotal*100)+'%;background:'+agingColors[i]+'"></div>').join('');
+    const agLegend = agingKeys.map((k,i)=>'<span style="color:'+agingColors[i]+'">&#9679; '+k+' '+agingVals[i]+'%</span>').join('');
+    el('aging-bars-wrap').innerHTML = '<div style="font-size:9px;color:var(--ink3);text-transform:uppercase;font-weight:700;margin-bottom:3px">Aging Pipeline Aberto</div>'
+      + '<div class="aging-bar-track">'+agTrack+'</div>'
+      + '<div class="aging-legend">'+agLegend+'</div>';
+  }
 }
 
 // Inicialização — ampRender gerencia destrição de gráficos antigos antes de recriar
@@ -1492,6 +1586,21 @@ function ampApplyDynamicMeta(data, config) {
     ampMonthName(data);
 
   // ─────────────────────────────────────────────────────────
+  // TÍTULO CENTRAL DO HEADER (redesign — apenas apresentação)
+  // ─────────────────────────────────────────────────────────
+
+  const headerMonthEl =
+    document.getElementById(
+      'header-month'
+    );
+
+  if (headerMonthEl) {
+    headerMonthEl.textContent =
+      'Performance Comercial — ' +
+      ampMonthName(data);
+  }
+
+  // ─────────────────────────────────────────────────────────
   // LABEL DO MÊS
   // ─────────────────────────────────────────────────────────
 
@@ -1529,39 +1638,14 @@ function ampApplyDynamicMeta(data, config) {
   // META DO PAINEL GERENCIAL
   // ─────────────────────────────────────────────────────────
 
-  const anualCard =
-    document.querySelector(
-      '#sec-ceo .three-col .sec-card:nth-child(3)'
+  const metaMensalEl =
+    document.getElementById(
+      'kv-meta-mensal'
     );
 
-  if (anualCard) {
-
-    const rows =
-      anualCard.querySelectorAll(
-        '.kv-row'
-      );
-
-    rows.forEach(row => {
-
-      const label =
-        row.querySelector('span');
-
-      const value =
-        row.querySelector('strong');
-
-      if (
-        label &&
-        value &&
-        label.textContent
-          .trim()
-          .toLowerCase() ===
-          'meta mensal'
-      ) {
-        value.textContent =
-          fmtMoeda(metaCloser);
-      }
-
-    });
+  if (metaMensalEl) {
+    metaMensalEl.textContent =
+      fmtMoeda(metaCloser);
   }
 
   // ─────────────────────────────────────────────────────────
