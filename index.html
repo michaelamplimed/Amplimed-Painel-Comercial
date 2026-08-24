@@ -736,36 +736,51 @@ body{height:100dvh;overflow:hidden;display:flex;flex-direction:column;margin:0}
   .mrr-box div:first-child{font-size:10.5px!important}
   .kcard-gauge-track{height:4px!important;margin-top:2px!important}
   .mrr-split-track{height:6px!important}
-  #sdr-insight{display:block!important;margin-top:10px!important;padding-top:10px!important}
-  .sdr-insight-row{margin-bottom:6px!important}
-  .sdr-insight-title{margin-bottom:6px!important;font-size:10.5px!important}
-  .sdr-insight-name,.sdr-insight-pct{font-size:12.5px!important}
-  .sdr-insight-track{height:9px!important}
+  /* Ranking SDR — compacto: mantém nome, barra, % e cor, mas sem competir
+     visualmente com o funil ou os indicadores principais (ajuste round 7). */
+  #sdr-insight{display:block!important;margin-top:5px!important;padding-top:5px!important}
+  .sdr-insight-row{margin-bottom:3px!important}
+  .sdr-insight-title{margin-bottom:3px!important;font-size:8.5px!important}
+  .sdr-insight-name,.sdr-insight-pct{font-size:10.5px!important}
+  .sdr-insight-track{height:6px!important}
   #aging-bars-wrap{display:block!important;margin-top:4px!important}
   /* painel Meta/Forecast/Pipeline não tem um bloco "extra" pra crescer (como o
      ranking do SDR ou o aging) — em vez de deixar vão embaixo, centraliza o
      conteúdo verticalmente no espaço disponível */
   #forecast-panel-body{justify-content:center!important}
   /* balões do Funil da Equipe — crescem pra ocupar o espaço do card em vez de
-     ficar pequenos e colados no topo */
+     ficar pequenos e colados no topo (ajuste round 7: elementos maiores,
+     mesma altura do bloco) */
   #funil-panel-body{justify-content:center!important}
-  .tf-step{padding:12px 10px!important}
-  .tf-lbl{font-size:10.5px!important}
-  .tf-val{font-size:21px!important;margin:5px 0!important}
-  .tf-bar{height:7px!important}
-  .tf-arrow{font-size:13px!important}
+  #team-funnel-row{gap:10px!important}
+  .tf-step{padding:14px 10px!important;border-radius:10px!important}
+  .tf-lbl{font-size:11px!important;letter-spacing:.5px!important}
+  .tf-val{font-size:24px!important;margin:6px 0!important}
+  .tf-bar{height:8px!important}
+  .tf-arrow{font-size:14px!important;min-width:38px!important}
 }
 @media(min-height:960px){
   .tbl-wrap table td,.tbl-wrap table th{padding:9px 12px!important;font-size:14px!important}
   .forecast-mini-item{padding:11px 12px}
   .forecast-mini-val{font-size:16px}
+  #team-funnel-row{gap:12px!important}
+  .tf-step{padding:16px 12px!important}
+  .tf-lbl{font-size:11.5px!important}
+  .tf-val{font-size:27px!important;margin:7px 0!important}
+  .tf-bar{height:9px!important}
+  .tf-arrow{font-size:15px!important}
 }
-/* Ranking Closers (5 pessoas) precisa de mais altura que o Ranking SDR (3
-   pessoas) pra caber junto da própria tabela sem cortar linha — só entra em
-   telas visivelmente mais altas. Ajustado/testado por medição, não por
-   suposição. */
-@media(min-height:1080px){
-  #closers-insight{display:block!important;margin-top:10px!important;padding-top:10px!important}
+/* Performance dos Closers (5 pessoas, receita total) precisa de mais altura
+   que o Ranking SDR (3 pessoas) pra caber junto da própria tabela sem cortar
+   linha — só entra em telas visivelmente mais altas. Ajustado/testado por
+   medição, não por suposição. */
+@media(min-height:890px){
+  #closers-insight{display:block!important;margin-top:5px!important;padding-top:5px!important}
+  #closers-insight .sdr-insight-row{margin-bottom:2px!important}
+  #closers-insight .sdr-insight-title{margin-bottom:2px!important;font-size:8.5px!important}
+  #closers-insight .sdr-insight-name{font-size:10px!important;width:70px!important}
+  #closers-insight .sdr-insight-track{height:5px!important}
+  #closers-insight .sdr-insight-pct{font-size:9.5px!important;width:68px!important}
 }
 /* tipografia — equilibrada entre topo e base do painel */
 .sec-hdr{padding:5px 10px!important;font-size:10.5px!important;min-height:0!important}
@@ -1280,22 +1295,23 @@ function aplicarDadosNoPainel(d){
     const linhaTotal = '<tr style="background:#F1F5F9;font-weight:700;border-top:2px solid #1B3A5C"><td>Total / M&eacute;dia</td><td>'+somaVendas+'</td><td>'+fmtMoeda(somaTotalAmount)+'</td><td>'+taxaGeral+'%</td></tr>';
     tblMini.innerHTML = closersAtivos.length ? (linhas + linhaTotal) : '<tr><td colspan="4" style="text-align:center;color:var(--ink3);padding:22px 10px">Sem dados de closers no momento</td></tr>';
 
-    // Ranking visual Closers — % da meta pro-rata em barra, mesmo padrão do
-    // ranking SDR (substitui a antiga coluna "% da Meta" da tabela).
+    // Performance dos Closers — comparativo de Receita Total por closer (dado
+    // real já existente, sem número fictício), barras relativas ao maior
+    // valor do grupo (receita não tem um "alvo de 100%" natural como a meta).
     const closersInsight = el('closers-insight');
     if(closersInsight){
-      const rankedClosers = closersAtivos.slice().sort((a,b)=>(b.pctMetaProRata||0)-(a.pctMetaProRata||0));
-      const linhasInsightC = rankedClosers.map(c=>{
-        const p = c.pctMetaProRata||0;
-        const cor = p>=100?'#10B981':(p>=70?'#F59E0B':'#EF4444');
-        const w = Math.max(4, Math.min(100, p/1.5));
+      const rankedClosers = closersAtivos.slice().sort((a,b)=>(b.totalAmount||0)-(a.totalAmount||0));
+      const maxAmount = rankedClosers.length ? Math.max(...rankedClosers.map(c=>c.totalAmount||0), 1) : 1;
+      const linhasInsightC = rankedClosers.map((c,idx)=>{
+        const cor = idx===0 ? 'var(--acc)' : 'var(--acc3)';
+        const w = Math.max(4, Math.min(100, (c.totalAmount||0)/maxAmount*100));
         return '<div class="sdr-insight-row">'
           +'<span class="sdr-insight-name">'+c.name+'</span>'
           +'<div class="sdr-insight-track"><div class="sdr-insight-fill" style="width:'+w+'%;background:'+cor+'"></div></div>'
-          +'<span class="sdr-insight-pct" style="color:'+cor+'">'+p+'%</span>'
+          +'<span class="sdr-insight-pct">'+fmtMoeda(c.totalAmount||0)+'</span>'
           +'</div>';
       }).join('');
-      closersInsight.innerHTML = closersAtivos.length ? ('<div class="sdr-insight-title">Ranking Closers &mdash; % da meta (pro-rata)</div>' + linhasInsightC) : '';
+      closersInsight.innerHTML = closersAtivos.length ? ('<div class="sdr-insight-title">Performance dos Closers &mdash; Receita Total</div>' + linhasInsightC) : '';
     }
   }
 
