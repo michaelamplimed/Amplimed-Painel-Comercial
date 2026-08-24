@@ -618,12 +618,17 @@ body{height:100dvh;overflow:hidden;display:flex;flex-direction:column;margin:0}
 .two-col{gap:7px!important;margin-bottom:0!important;display:flex!important;align-items:stretch!important;min-height:0;height:100%;overflow:hidden}
 .two-col .sec-card{display:flex!important;flex-direction:column!important;flex:1!important;overflow:hidden!important;min-height:0}
 .two-col .sec-body{flex:1!important;overflow:hidden!important;padding:0!important;display:flex!important;flex-direction:column!important;min-height:0}
-.tbl-wrap{flex:1!important;overflow:auto!important;min-height:0}
-.tbl-wrap table{width:100%!important;height:100%!important}
-/* tipografia compacta */
-.sec-hdr{padding:5px 12px!important;font-size:10.5px!important}
-.tbl-wrap table td,.tbl-wrap table th{padding:8px 10px!important;font-size:13px!important}
-.kv-list .kv-row{padding:3px 0!important;font-size:11px!important}
+/* tabela: centraliza verticalmente em vez de esticar linhas (evita gaps desproporcionais) */
+.tbl-wrap{flex:1!important;overflow:auto!important;min-height:0;display:flex!important;flex-direction:column!important;justify-content:center!important}
+.tbl-wrap table{width:100%!important;height:auto!important}
+/* tipografia — equilibrada entre topo e base do painel */
+.sec-hdr{padding:6px 12px!important;font-size:11px!important}
+.tbl-wrap table td,.tbl-wrap table th{padding:9px 10px!important;font-size:13px!important}
+.kcard-val{font-size:19px!important}
+.kcard-lbl{font-size:9.5px!important}
+.kcard-inner{padding:9px 11px!important}
+.three-col .sec-body{padding:9px 12px!important}
+.kv-list .kv-row{padding:4px 0!important;font-size:12.5px!important}
 .kv-list hr{margin:3px 0!important}
 .mrr-box{padding:4px 8px!important;margin-top:4px}
 .kgrid-2{gap:6px!important}
