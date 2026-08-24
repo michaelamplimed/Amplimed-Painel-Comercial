@@ -1,6 +1,6 @@
 {
-  "geradoEm": "2026-08-24T13:34:15.894Z",
-  "geradoEmBR": "24/08/2026, 10:34:15",
+  "geradoEm": "2026-08-24T13:58:10.920Z",
+  "geradoEmBR": "24/08/2026, 10:58:10",
   "mes": {
     "ano": 2026,
     "mes": 8,
@@ -267,25 +267,25 @@
       "name": "Ana",
       "sql": 65,
       "recInfluenciada": 12749.59,
-      "metaMes": 12333.33,
-      "metaProRata": 9548.38,
-      "pctMetaProRata": 133.5
+      "metaMes": 13000,
+      "metaProRata": 10064.52,
+      "pctMetaProRata": 126.7
     },
     {
       "name": "Amanda",
       "sql": 92,
       "recInfluenciada": 10829.97,
-      "metaMes": 12333.33,
-      "metaProRata": 9548.38,
-      "pctMetaProRata": 113.4
+      "metaMes": 13000,
+      "metaProRata": 10064.52,
+      "pctMetaProRata": 107.6
     },
     {
       "name": "Francisco",
       "sql": 41,
       "recInfluenciada": 6004.01,
-      "metaMes": 12333.34,
-      "metaProRata": 9548.39,
-      "pctMetaProRata": 62.9
+      "metaMes": 11000,
+      "metaProRata": 8516.13,
+      "pctMetaProRata": 70.5
     }
   ]
 }
