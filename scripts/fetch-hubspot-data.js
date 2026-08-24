@@ -285,6 +285,28 @@ function getCloserMonthlyGoal(closer, totalCloserGoal) {
   ) / 100;
 }
 
+/**
+ * Calcula a meta individual dos SDRs.
+ * Mesmo racional de getCloserMonthlyGoal: distribui a meta
+ * total de SDR proporcionalmente ao peso cadastrado em config.sdrs.
+ */
+function getSdrMonthlyGoal(sdr, totalSdrGoal) {
+  const baseTotal = (config.sdrs || []).reduce(
+    (sum, s) => sum + Number(s.metaMes || 0),
+    0
+  );
+
+  if (baseTotal <= 0 || totalSdrGoal <= 0) {
+    return 0;
+  }
+
+  const baseIndividual = Number(sdr.metaMes || 0);
+
+  return Math.round(
+    (baseIndividual / baseTotal * totalSdrGoal) * 100
+  ) / 100;
+}
+
 async function main() {
 
   const nowReal = getCurrentDate();
@@ -328,7 +350,8 @@ async function main() {
     'amount',
     'closedate',
     'hubspot_owner_id',
-    'dealstage'
+    'dealstage',
+    'sdr_do_negocio'
   ];
 
   // ==========================================================
@@ -452,6 +475,37 @@ async function main() {
         'createdate',
         'hubspot_owner_id',
         'dealstage'
+      ]
+    );
+
+  await sleep(500);
+
+  // ==========================================================
+  // 5. DEALS QUE ENTRARAM EM SQL ESTE MÊS (para contagem por SDR)
+  // ==========================================================
+  // Espelha o relatório "Placar - Ranking SDR (Mês Atual)" do HubSpot,
+  // mas contando entradas em SQL em vez de somar receita.
+
+  const sqlDeals =
+    await fetchAllDeals(
+      [{
+        filters: [
+          {
+            propertyName: 'pipeline',
+            operator: 'EQ',
+            value: config.pipelineId
+          },
+          {
+            propertyName: 'data_de_entrada_em_sql',
+            operator: 'GTE',
+            value: String(firstTimestamp)
+          }
+        ]
+      }],
+      [
+        'dealname',
+        'sdr_do_negocio',
+        'data_de_entrada_em_sql'
       ]
     );
 
@@ -1019,6 +1073,99 @@ async function main() {
     );
 
   // ==========================================================
+  // ESTATÍSTICAS POR SDR
+  // ==========================================================
+  // Espelha o relatório "Placar - Ranking SDR (Mês Atual)" do HubSpot:
+  // receita influenciada = soma de deals ganhos (aquisição + cross-sell)
+  // filtrados pelo campo "SDR do Negócio" (sdr_do_negocio).
+  // SQL = quantidade de deals que entraram em SQL este mês, mesmo campo.
+
+  const sdrStats =
+    (config.sdrs || []).map(
+      s => {
+
+        const wonPorSdr =
+          wonDeals.filter(
+            d =>
+              Number(
+                d.properties
+                  .sdr_do_negocio
+              ) === s.ownerId
+          );
+
+        const crossPorSdr =
+          crossSellDeals.filter(
+            d =>
+              Number(
+                d.properties
+                  .sdr_do_negocio
+              ) === s.ownerId
+          );
+
+        const sqlPorSdr =
+          sqlDeals.filter(
+            d =>
+              Number(
+                d.properties
+                  .sdr_do_negocio
+              ) === s.ownerId
+          );
+
+        const recAquisicao =
+          wonPorSdr.reduce(
+            (sum, d) =>
+              sum +
+              (parseFloat(d.properties.amount || '0') || 0),
+            0
+          );
+
+        const recCross =
+          crossPorSdr.reduce(
+            (sum, d) =>
+              sum +
+              (parseFloat(d.properties.amount || '0') || 0),
+            0
+          );
+
+        const recInfluenciada =
+          recAquisicao + recCross;
+
+        const metaMes =
+          getSdrMonthlyGoal(
+            s,
+            currentGoals.sdr
+          );
+
+        const metaProRata =
+          metaMes > 0
+            ? Math.round(
+                (metaMes / daysInMonth * dayCount) * 100
+              ) / 100
+            : 0;
+
+        return {
+          name: s.name,
+
+          sql: sqlPorSdr.length,
+
+          recInfluenciada:
+            Math.round(recInfluenciada * 100) / 100,
+
+          metaMes,
+
+          metaProRata,
+
+          pctMetaProRata:
+            metaProRata > 0
+              ? Math.round(
+                  (recInfluenciada / metaProRata) * 1000
+                ) / 10
+              : 0
+        };
+      }
+    );
+
+  // ==========================================================
   // DATA.JSON
   // ==========================================================
 
@@ -1085,7 +1232,10 @@ async function main() {
       agingBuckets,
 
     closers:
-      closerStats
+      closerStats,
+
+    sdrs:
+      sdrStats
   };
 
   const outPath =

@@ -27,6 +27,24 @@
     }
   },
 
+  "sdrs": [
+    {
+      "name": "Ana",
+      "ownerId": 85856641,
+      "metaMes": 12333.33
+    },
+    {
+      "name": "Amanda",
+      "ownerId": 95430598,
+      "metaMes": 12333.33
+    },
+    {
+      "name": "Francisco",
+      "ownerId": 745240114,
+      "metaMes": 12333.34
+    }
+  ],
+
   "closers": [
     {
       "name": "Tamara",

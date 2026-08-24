@@ -772,11 +772,11 @@ body{height:100dvh;overflow:hidden;display:flex;flex-direction:column;margin:0}
       </div>
     </div>
     <div class="sec-card">
-      <div class="sec-hdr" style="background:#0D6E6E;display:flex;justify-content:space-between;align-items:center;gap:8px"><span>&#128100; SDR MTD</span><span style="font-size:10px;font-weight:500;opacity:.9;white-space:nowrap" title="Dados de SQL/Receita Influenciada ainda não sincronizados com o HubSpot">3 SDRs ativos &middot; &#9888; dados manuais</span></div>
+      <div class="sec-hdr" style="background:#0D6E6E;display:flex;justify-content:space-between;align-items:center;gap:8px"><span>&#128100; SDR MTD</span><span id="sdr-hdr-sub" style="font-size:10px;font-weight:500;opacity:.9;white-space:nowrap">&mdash;</span></div>
       <div class="sec-body">
         <div class="tbl-wrap"><table>
           <tr><th style="background:#0D6E6E">SDR</th><th style="background:#0D6E6E">SQL</th><th style="background:#0D6E6E">Rec. Influenciada</th><th style="background:#0D6E6E">% da Meta</th></tr>
-          <tr style="background:#fff"><td>Ana</td><td>33</td><td>R$9.685,35</td><td><span class="bdg bdg-g">224%</span></td></tr><tr style="background:#fff"><td>Amanda</td><td>49</td><td>R$5.049,69</td><td><span class="bdg bdg-g">117%</span></td></tr><tr style="background:#fff"><td>Francisco</td><td>23</td><td>R$4.335,02</td><td><span class="bdg bdg-g">118%</span></td></tr>
+          <tbody id="tbl-sdr-mini"><tr style="background:#fff"><td>Ana</td><td>33</td><td>R$9.685,35</td><td><span class="bdg bdg-g">224%</span></td></tr><tr style="background:#fff"><td>Amanda</td><td>49</td><td>R$5.049,69</td><td><span class="bdg bdg-g">117%</span></td></tr><tr style="background:#fff"><td>Francisco</td><td>23</td><td>R$4.335,02</td><td><span class="bdg bdg-g">118%</span></td></tr></tbody>
         </table></div>
       </div>
     </div>
@@ -1157,6 +1157,26 @@ function aplicarDadosNoPainel(d){
     const bcGeral = pctGeral>=100?'bdg-g':(pctGeral>=70?'bdg-a':'bdg-r');
     const linhaTotal = '<tr style="background:#F1F5F9;font-weight:700;border-top:2px solid #1B3A5C"><td>Total / M&eacute;dia</td><td>'+somaVendas+'</td><td>'+fmtMoeda(somaAquisicao)+'</td><td>'+taxaGeral+'%</td><td><span class="bdg '+bcGeral+'">'+pctGeral+'%</span></td></tr>';
     tblMini.innerHTML = linhas + linhaTotal;
+  }
+
+  // SDR mini-table — dados reais via HubSpot (campo "SDR do Negócio")
+  const tblSdr = document.getElementById('tbl-sdr-mini');
+  if(tblSdr && d.sdrs){
+    const sdrsAtivos = d.sdrs.filter(s=>s.metaMes>0);
+    const linhasSdr = sdrsAtivos.map(s=>{
+      const p=s.pctMetaProRata||0, bc=p>=100?'bdg-g':(p>=70?'bdg-a':'bdg-r');
+      return '<tr style="background:#fff"><td>'+s.name+'</td><td>'+s.sql+'</td><td>'+fmtMoeda(s.recInfluenciada)+'</td><td><span class="bdg '+bc+'">'+p+'%</span></td></tr>';
+    }).join('');
+    const somaSql = sdrsAtivos.reduce((s,x)=>s+(x.sql||0),0);
+    const somaRec = sdrsAtivos.reduce((s,x)=>s+(x.recInfluenciada||0),0);
+    const somaMetaProRataSdr = sdrsAtivos.reduce((s,x)=>s+(x.metaProRata||0),0);
+    const pctGeralSdr = somaMetaProRataSdr>0 ? Math.round(somaRec/somaMetaProRataSdr*1000)/10 : 0;
+    const bcGeralSdr = pctGeralSdr>=100?'bdg-g':(pctGeralSdr>=70?'bdg-a':'bdg-r');
+    const linhaTotalSdr = '<tr style="background:#F1F5F9;font-weight:700;border-top:2px solid #0D6E6E"><td>Total / M&eacute;dia</td><td>'+somaSql+'</td><td>'+fmtMoeda(somaRec)+'</td><td><span class="bdg '+bcGeralSdr+'">'+pctGeralSdr+'%</span></td></tr>';
+    tblSdr.innerHTML = linhasSdr + linhaTotalSdr;
+    if(el('sdr-hdr-sub')){
+      el('sdr-hdr-sub').textContent = sdrsAtivos.length+' SDRs ativos \u00b7 Meta '+fmtMoeda(d.metas ? d.metas.sdr : 0);
+    }
   }
 
   // ── Pace-bar principal (topo do sec-ceo) ─────────────────────────────────
