@@ -705,7 +705,7 @@ body{height:100dvh;overflow:hidden;display:flex;flex-direction:column;margin:0}
   .aging-legend{display:none}
 }
 @media(max-height:960px){
-  #sdr-insight{display:none}
+  #sdr-insight,#closers-insight{display:none}
 }
 @media(max-height:960px){
   #aging-bars-wrap{display:none}
@@ -746,11 +746,26 @@ body{height:100dvh;overflow:hidden;display:flex;flex-direction:column;margin:0}
      ranking do SDR ou o aging) — em vez de deixar vão embaixo, centraliza o
      conteúdo verticalmente no espaço disponível */
   #forecast-panel-body{justify-content:center!important}
+  /* balões do Funil da Equipe — crescem pra ocupar o espaço do card em vez de
+     ficar pequenos e colados no topo */
+  #funil-panel-body{justify-content:center!important}
+  .tf-step{padding:12px 10px!important}
+  .tf-lbl{font-size:10.5px!important}
+  .tf-val{font-size:21px!important;margin:5px 0!important}
+  .tf-bar{height:7px!important}
+  .tf-arrow{font-size:13px!important}
 }
 @media(min-height:960px){
   .tbl-wrap table td,.tbl-wrap table th{padding:9px 12px!important;font-size:14px!important}
   .forecast-mini-item{padding:11px 12px}
   .forecast-mini-val{font-size:16px}
+}
+/* Ranking Closers (5 pessoas) precisa de mais altura que o Ranking SDR (3
+   pessoas) pra caber junto da própria tabela sem cortar linha — só entra em
+   telas visivelmente mais altas. Ajustado/testado por medição, não por
+   suposição. */
+@media(min-height:1080px){
+  #closers-insight{display:block!important;margin-top:10px!important;padding-top:10px!important}
 }
 /* tipografia — equilibrada entre topo e base do painel */
 .sec-hdr{padding:5px 10px!important;font-size:10.5px!important;min-height:0!important}
@@ -833,17 +848,18 @@ body{height:100dvh;overflow:hidden;display:flex;flex-direction:column;margin:0}
       <div class="sec-hdr" style="display:flex;justify-content:space-between;align-items:center;gap:8px"><span>&#127942; Closers MTD</span><span id="closers-hdr-sub" style="font-size:10px;font-weight:500;opacity:.9;white-space:nowrap">&mdash;</span></div>
       <div class="sec-body">
         <div class="tbl-wrap" id="closers-tbl-wrap"><table>
-          <tr><th style="background:#1B3A5C">Closer</th><th style="background:#1B3A5C">Vendas</th><th style="background:#1B3A5C">Receita Total</th><th style="background:#1B3A5C">Taxa de Ganho</th><th style="background:#1B3A5C">% da Meta</th></tr>
-          <tbody id="tbl-closers-mini"><tr style="background:#fff"><td>Tamara</td><td>14</td><td>R$4.387,97</td><td>74%</td><td><span class="bdg bdg-g">125%</span></td></tr><tr style="background:#fff"><td>Eduardo</td><td>13</td><td>R$5.637,75</td><td>72%</td><td><span class="bdg bdg-g">165%</span></td></tr><tr style="background:#fff"><td>Juliano</td><td>11</td><td>R$1.837,80</td><td>65%</td><td><span class="bdg bdg-a">78%</span></td></tr><tr style="background:#fff"><td>Ariel</td><td>9</td><td>R$2.967,07</td><td>64%</td><td><span class="bdg bdg-g">135%</span></td></tr><tr style="background:#fff"><td>Mayara</td><td>19</td><td>R$5.027,47</td><td>86%</td><td><span class="bdg bdg-g">192%</span></td></tr>
+          <tr><th style="background:#1B3A5C">Closer</th><th style="background:#1B3A5C">Vendas</th><th style="background:#1B3A5C">Receita Total</th><th style="background:#1B3A5C">Taxa de Ganho</th></tr>
+          <tbody id="tbl-closers-mini"><tr style="background:#fff"><td>Tamara</td><td>14</td><td>R$4.387,97</td><td>74%</td></tr><tr style="background:#fff"><td>Eduardo</td><td>13</td><td>R$5.637,75</td><td>72%</td></tr><tr style="background:#fff"><td>Juliano</td><td>11</td><td>R$1.837,80</td><td>65%</td></tr><tr style="background:#fff"><td>Ariel</td><td>9</td><td>R$2.967,07</td><td>64%</td></tr><tr style="background:#fff"><td>Mayara</td><td>19</td><td>R$5.027,47</td><td>86%</td></tr>
         </table></div>
+        <div class="sdr-insight" id="closers-insight"></div>
       </div>
     </div>
     <div class="sec-card">
       <div class="sec-hdr" style="background:#0D6E6E;display:flex;justify-content:space-between;align-items:center;gap:8px"><span>&#128100; SDR MTD</span><span id="sdr-hdr-sub" style="font-size:10px;font-weight:500;opacity:.9;white-space:nowrap">&mdash;</span></div>
       <div class="sec-body">
         <div class="tbl-wrap" id="sdr-tbl-wrap"><table>
-          <tr><th style="background:#0D6E6E">SDR</th><th style="background:#0D6E6E">SQL</th><th style="background:#0D6E6E">Rec. Influenciada</th><th style="background:#0D6E6E">% da Meta</th></tr>
-          <tbody id="tbl-sdr-mini"><tr style="background:#fff"><td>Ana</td><td>33</td><td>R$9.685,35</td><td><span class="bdg bdg-g">224%</span></td></tr><tr style="background:#fff"><td>Amanda</td><td>49</td><td>R$5.049,69</td><td><span class="bdg bdg-g">117%</span></td></tr><tr style="background:#fff"><td>Francisco</td><td>23</td><td>R$4.335,02</td><td><span class="bdg bdg-g">118%</span></td></tr></tbody>
+          <tr><th style="background:#0D6E6E">SDR</th><th style="background:#0D6E6E">SQL</th><th style="background:#0D6E6E">Rec. Influenciada</th></tr>
+          <tbody id="tbl-sdr-mini"><tr style="background:#fff"><td>Ana</td><td>33</td><td>R$9.685,35</td></tr><tr style="background:#fff"><td>Amanda</td><td>49</td><td>R$5.049,69</td></tr><tr style="background:#fff"><td>Francisco</td><td>23</td><td>R$4.335,02</td></tr></tbody>
         </table></div>
         <div class="sdr-insight" id="sdr-insight"></div>
       </div>
@@ -854,7 +870,7 @@ body{height:100dvh;overflow:hidden;display:flex;flex-direction:column;margin:0}
   <div class="footer-row">
     <div class="sec-card">
       <div class="sec-hdr" style="background:#0F6057">&#128268; Funil da Equipe &mdash; SQL &rarr; Demo &rarr; SAL &rarr; Proposta &rarr; Ganho</div>
-      <div class="sec-body">
+      <div class="sec-body" id="funil-panel-body">
         <div id="team-funnel-row"></div>
       </div>
     </div>
@@ -1252,8 +1268,7 @@ function aplicarDadosNoPainel(d){
   if(tblMini && d.closers){
     const closersAtivos = d.closers.filter(c=>c.metaMes>0);
     const linhas = closersAtivos.map(c=>{
-      const p=c.pctMetaProRata||0, bc=p>=100?'bdg-g':(p>=70?'bdg-a':'bdg-r');
-      return '<tr style="background:#fff"><td>'+c.name+'</td><td>'+c.ganhos+'</td><td>'+fmtMoeda(c.totalAmount)+'</td><td>'+c.winRate+'%</td><td><span class="bdg '+bc+'">'+p+'%</span></td></tr>';
+      return '<tr style="background:#fff"><td>'+c.name+'</td><td>'+c.ganhos+'</td><td>'+fmtMoeda(c.totalAmount)+'</td><td>'+c.winRate+'%</td></tr>';
     }).join('');
     const somaVendas = closersAtivos.reduce((s,c)=>s+(c.ganhos||0),0);
     const somaTotalAmount = closersAtivos.reduce((s,c)=>s+(c.totalAmount||0),0);
@@ -1262,9 +1277,26 @@ function aplicarDadosNoPainel(d){
     const taxaGeral = (somaGanhos+somaPerdidos)>0 ? Math.round(somaGanhos/(somaGanhos+somaPerdidos)*1000)/10 : 0;
     const metaProRataSoma = closersAtivos.reduce((s,c)=>s+(c.metaProRata||0),0);
     const pctGeral = metaProRataSoma>0 ? Math.round(somaTotalAmount/metaProRataSoma*1000)/10 : 0;
-    const bcGeral = pctGeral>=100?'bdg-g':(pctGeral>=70?'bdg-a':'bdg-r');
-    const linhaTotal = '<tr style="background:#F1F5F9;font-weight:700;border-top:2px solid #1B3A5C"><td>Total / M&eacute;dia</td><td>'+somaVendas+'</td><td>'+fmtMoeda(somaTotalAmount)+'</td><td>'+taxaGeral+'%</td><td><span class="bdg '+bcGeral+'">'+pctGeral+'%</span></td></tr>';
-    tblMini.innerHTML = closersAtivos.length ? (linhas + linhaTotal) : '<tr><td colspan="5" style="text-align:center;color:var(--ink3);padding:22px 10px">Sem dados de closers no momento</td></tr>';
+    const linhaTotal = '<tr style="background:#F1F5F9;font-weight:700;border-top:2px solid #1B3A5C"><td>Total / M&eacute;dia</td><td>'+somaVendas+'</td><td>'+fmtMoeda(somaTotalAmount)+'</td><td>'+taxaGeral+'%</td></tr>';
+    tblMini.innerHTML = closersAtivos.length ? (linhas + linhaTotal) : '<tr><td colspan="4" style="text-align:center;color:var(--ink3);padding:22px 10px">Sem dados de closers no momento</td></tr>';
+
+    // Ranking visual Closers — % da meta pro-rata em barra, mesmo padrão do
+    // ranking SDR (substitui a antiga coluna "% da Meta" da tabela).
+    const closersInsight = el('closers-insight');
+    if(closersInsight){
+      const rankedClosers = closersAtivos.slice().sort((a,b)=>(b.pctMetaProRata||0)-(a.pctMetaProRata||0));
+      const linhasInsightC = rankedClosers.map(c=>{
+        const p = c.pctMetaProRata||0;
+        const cor = p>=100?'#10B981':(p>=70?'#F59E0B':'#EF4444');
+        const w = Math.max(4, Math.min(100, p/1.5));
+        return '<div class="sdr-insight-row">'
+          +'<span class="sdr-insight-name">'+c.name+'</span>'
+          +'<div class="sdr-insight-track"><div class="sdr-insight-fill" style="width:'+w+'%;background:'+cor+'"></div></div>'
+          +'<span class="sdr-insight-pct" style="color:'+cor+'">'+p+'%</span>'
+          +'</div>';
+      }).join('');
+      closersInsight.innerHTML = closersAtivos.length ? ('<div class="sdr-insight-title">Ranking Closers &mdash; % da meta (pro-rata)</div>' + linhasInsightC) : '';
+    }
   }
 
   // SDR mini-table — dados reais via HubSpot (campo "SDR do Negócio")
@@ -1272,16 +1304,14 @@ function aplicarDadosNoPainel(d){
   if(tblSdr && d.sdrs){
     const sdrsAtivos = d.sdrs.filter(s=>s.metaMes>0);
     const linhasSdr = sdrsAtivos.map(s=>{
-      const p=s.pctMetaProRata||0, bc=p>=100?'bdg-g':(p>=70?'bdg-a':'bdg-r');
-      return '<tr style="background:#fff"><td>'+s.name+'</td><td>'+s.sql+'</td><td>'+fmtMoeda(s.recInfluenciada)+'</td><td><span class="bdg '+bc+'">'+p+'%</span></td></tr>';
+      return '<tr style="background:#fff"><td>'+s.name+'</td><td>'+s.sql+'</td><td>'+fmtMoeda(s.recInfluenciada)+'</td></tr>';
     }).join('');
     const somaSql = sdrsAtivos.reduce((s,x)=>s+(x.sql||0),0);
     const somaRec = sdrsAtivos.reduce((s,x)=>s+(x.recInfluenciada||0),0);
     const somaMetaProRataSdr = sdrsAtivos.reduce((s,x)=>s+(x.metaProRata||0),0);
     const pctGeralSdr = somaMetaProRataSdr>0 ? Math.round(somaRec/somaMetaProRataSdr*1000)/10 : 0;
-    const bcGeralSdr = pctGeralSdr>=100?'bdg-g':(pctGeralSdr>=70?'bdg-a':'bdg-r');
-    const linhaTotalSdr = '<tr style="background:#F1F5F9;font-weight:700;border-top:2px solid #0D6E6E"><td>Total / M&eacute;dia</td><td>'+somaSql+'</td><td>'+fmtMoeda(somaRec)+'</td><td><span class="bdg '+bcGeralSdr+'">'+pctGeralSdr+'%</span></td></tr>';
-    tblSdr.innerHTML = sdrsAtivos.length ? (linhasSdr + linhaTotalSdr) : '<tr><td colspan="4" style="text-align:center;color:var(--ink3);padding:22px 10px">Sem dados de SDR no momento</td></tr>';
+    const linhaTotalSdr = '<tr style="background:#F1F5F9;font-weight:700;border-top:2px solid #0D6E6E"><td>Total / M&eacute;dia</td><td>'+somaSql+'</td><td>'+fmtMoeda(somaRec)+'</td></tr>';
+    tblSdr.innerHTML = sdrsAtivos.length ? (linhasSdr + linhaTotalSdr) : '<tr><td colspan="3" style="text-align:center;color:var(--ink3);padding:22px 10px">Sem dados de SDR no momento</td></tr>';
     if(el('sdr-hdr-sub')){
       el('sdr-hdr-sub').textContent = sdrsAtivos.length+' SDRs ativos \u00b7 Meta '+fmtMoeda(d.metas ? d.metas.sdr : 0);
     }
