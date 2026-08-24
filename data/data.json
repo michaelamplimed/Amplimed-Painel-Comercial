@@ -1,6 +1,6 @@
 {
-  "geradoEm": "2026-08-24T19:52:31.603Z",
-  "geradoEmBR": "24/08/2026, 16:52:31",
+  "geradoEm": "2026-08-24T21:05:06.283Z",
+  "geradoEmBR": "24/08/2026, 18:05:06",
   "mes": {
     "ano": 2026,
     "mes": 8,
@@ -11,11 +11,11 @@
     "sdr": 37000
   },
   "kpis": {
-    "receitaRealizada": 35873.26,
+    "receitaRealizada": 36602.26,
     "metaMensal": 47000,
-    "pctMeta": 76.3,
-    "pipelineAberto": 38328.6,
-    "mediaDiaria": 1494.72
+    "pctMeta": 77.9,
+    "pipelineAberto": 37858.5,
+    "mediaDiaria": 1525.09
   },
   "receitaAcumulada": {
     "labels": [
@@ -68,7 +68,7 @@
       34952.86,
       34952.86,
       34952.86,
-      35873.26
+      36602.26
     ],
     "meta": [
       1516.13,
@@ -102,7 +102,7 @@
     "8-15d": 26,
     "16-30d": 16,
     "31-60d": 7,
-    "+60d": 5
+    "+60d": 4
   },
   "closers": [
     {
@@ -160,27 +160,27 @@
     {
       "name": "Juliano",
       "nivel": "Pleno",
-      "ganhos": 26,
-      "perdidos": 24,
+      "ganhos": 27,
+      "perdidos": 25,
       "crossSellGanhos": 5,
-      "aquisicaoAmount": 3944.69,
+      "aquisicaoAmount": 4673.69,
       "crossSellAmount": 525.9,
-      "totalAmount": 4470.59,
-      "ticketMedio": 171.95,
-      "winRate": 52,
+      "totalAmount": 5199.59,
+      "ticketMedio": 192.58,
+      "winRate": 51.9,
       "metaMes": 8600,
       "metaProRata": 6658.06,
-      "pctMetaProRata": 67.1,
+      "pctMetaProRata": 78.1,
       "funil": {
-        "sql": 37,
-        "demo": 37,
+        "sql": 36,
+        "demo": 36,
         "sal": 33,
         "proposta": 32,
-        "won": 26,
+        "won": 27,
         "sqlToDemoP": 100,
-        "demoToSalP": 89.2,
+        "demoToSalP": 91.7,
         "salToPropP": 97,
-        "winRateP": 65
+        "winRateP": 64.3
       }
     },
     {
@@ -224,13 +224,13 @@
       "metaProRata": 6658.06,
       "pctMetaProRata": 141.6,
       "funil": {
-        "sql": 41,
-        "demo": 41,
+        "sql": 43,
+        "demo": 42,
         "sal": 38,
         "proposta": 33,
         "won": 31,
-        "sqlToDemoP": 100,
-        "demoToSalP": 92.7,
+        "sqlToDemoP": 97.7,
+        "demoToSalP": 90.5,
         "salToPropP": 86.8,
         "winRateP": 68.9
       }
@@ -281,7 +281,7 @@
     },
     {
       "name": "Francisco",
-      "sql": 46,
+      "sql": 47,
       "recInfluenciada": 6401.91,
       "metaMes": 11000,
       "metaProRata": 8516.13,
