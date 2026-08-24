@@ -262,49 +262,22 @@ function getCurrentMonthlyGoals() {
  * Isso mantém a proporção atual sem precisar editar
  * o código na virada do mês.
  */
-function getCloserMonthlyGoal(closer, totalCloserGoal) {
-  const baseTotal = config.closers.reduce(
-    (sum, c) => sum + Number(c.metaMes || 0),
-    0
-  );
+function getIndividualGoal(role, name, monthKey) {
+  const table =
+    config.metasIndividuais &&
+    config.metasIndividuais[role];
 
-  if (baseTotal <= 0 || totalCloserGoal <= 0) {
+  const monthTable = table && table[monthKey];
+
+  if (!monthTable || !(name in monthTable)) {
+    console.warn(
+      `AVISO: meta individual não cadastrada para ${role}/${name} em ${monthKey} ` +
+      `(config.metasIndividuais.${role}.${monthKey}). Usando 0 — verifique o config.json.`
+    );
     return 0;
   }
 
-  const baseIndividual = Number(
-    closer.metaMes || 0
-  );
-
-  return Math.round(
-    (
-      baseIndividual /
-      baseTotal *
-      totalCloserGoal
-    ) * 100
-  ) / 100;
-}
-
-/**
- * Calcula a meta individual dos SDRs.
- * Mesmo racional de getCloserMonthlyGoal: distribui a meta
- * total de SDR proporcionalmente ao peso cadastrado em config.sdrs.
- */
-function getSdrMonthlyGoal(sdr, totalSdrGoal) {
-  const baseTotal = (config.sdrs || []).reduce(
-    (sum, s) => sum + Number(s.metaMes || 0),
-    0
-  );
-
-  if (baseTotal <= 0 || totalSdrGoal <= 0) {
-    return 0;
-  }
-
-  const baseIndividual = Number(sdr.metaMes || 0);
-
-  return Math.round(
-    (baseIndividual / baseTotal * totalSdrGoal) * 100
-  ) / 100;
+  return Number(monthTable[name] || 0);
 }
 
 async function main() {
@@ -982,9 +955,10 @@ async function main() {
             : 0;
 
         const metaMes =
-          getCloserMonthlyGoal(
-            c,
-            currentGoals.closer
+          getIndividualGoal(
+            'closers',
+            c.name,
+            monthKey
           );
 
         const metaProRata =
@@ -1131,9 +1105,10 @@ async function main() {
           recAquisicao + recCross;
 
         const metaMes =
-          getSdrMonthlyGoal(
-            s,
-            currentGoals.sdr
+          getIndividualGoal(
+            'sdrs',
+            s.name,
+            monthKey
           );
 
         const metaProRata =
