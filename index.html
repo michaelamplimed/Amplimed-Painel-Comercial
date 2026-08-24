@@ -342,9 +342,9 @@ tr:hover td{background:var(--surface2)}
 .kv-row>span:first-child{display:flex;align-items:baseline;flex:1;min-width:0;white-space:nowrap}
 .kv-row>span:first-child::after{content:"";flex:1;border-bottom:1px dotted var(--border);margin:0 8px;transform:translateY(-4px);min-width:14px}
 .kv-row>strong,.kv-row>*:last-child{flex-shrink:0;white-space:nowrap}
-.kcard-gauge-track{height:5px;border-radius:4px;background:rgba(0,0,0,.08);overflow:hidden;margin-top:5px}
+.kcard-gauge-track{height:4px;border-radius:4px;background:rgba(0,0,0,.08);overflow:hidden;margin-top:3px}
 .kcard-gauge-fill{height:100%;border-radius:4px;background:linear-gradient(90deg,#059669,#10B981);transition:width .5s ease}
-.mrr-split-track{display:flex;height:9px;border-radius:6px;overflow:hidden;background:rgba(0,0,0,.08)}
+.mrr-split-track{display:flex;height:7px;border-radius:6px;overflow:hidden;background:rgba(0,0,0,.08)}
 .mrr-split-fill-acq{background:var(--gn,#10B981);height:100%;transition:width .5s ease}
 .mrr-split-fill-cross{background:var(--bl,#2563EB);height:100%;transition:width .5s ease}
 .mrr-split-labels{display:flex;justify-content:space-between;font-size:9.5px;color:var(--ink3);margin-top:5px}
@@ -657,7 +657,7 @@ body{height:100dvh;overflow:hidden;display:flex;flex-direction:column;margin:0}
 .content{flex:1!important;min-height:0!important;overflow:hidden!important;padding:8px 14px!important;display:flex!important;flex-direction:column!important;box-sizing:border-box}
 .section.active{display:flex!important;flex-direction:column!important;flex:1!important;min-height:0!important;overflow:hidden!important}
 /* sec-ceo: grid com ultima linha preenchendo o restante */
-#sec-ceo{display:grid!important;grid-template-rows:auto auto minmax(0,1fr) minmax(0,1.4fr) minmax(0,.7fr);gap:6px;height:100%;max-height:100%;overflow:hidden}
+#sec-ceo{display:grid!important;grid-template-rows:auto auto minmax(0,.85fr) minmax(0,1.35fr) minmax(0,.9fr);gap:6px;height:100%;max-height:100%;overflow:hidden}
 /* KPI hero (scorecard executivo — 6 KPIs) — nunca quebra em 2 linhas: no
    painel de tela única, altura é o recurso escasso, não largura. */
 .kgrid-hero{margin-bottom:0!important;gap:7px!important;grid-template-columns:repeat(6,minmax(0,1fr))!important;max-height:112px;overflow:hidden}
@@ -670,13 +670,13 @@ body{height:100dvh;overflow:hidden;display:flex;flex-direction:column;margin:0}
 /* linha central: gráfico + painel meta/forecast/pipeline */
 .central-row{gap:7px!important;margin-bottom:0!important;display:grid!important;min-height:0;max-height:100%;height:100%;overflow:hidden}
 .central-row .sec-card{display:flex!important;flex-direction:column!important;overflow:hidden!important;min-height:0;margin-bottom:0!important}
-.central-row .sec-body{flex:1!important;min-height:0;overflow:hidden!important;padding:8px 10px!important;display:flex!important;flex-direction:column!important}
+.central-row .sec-body{flex:1!important;min-height:0;overflow:hidden!important;padding:6px 10px!important;display:flex!important;flex-direction:column!important}
 .central-row .chart-wrap{flex:1;min-height:0;height:auto;position:relative}
 .central-row .chart-wrap canvas{position:absolute;inset:0;width:100%!important;height:100%!important}
 /* rodapé: funil da equipe + composição/aging */
 .footer-row{gap:7px!important;margin-bottom:0!important;display:grid!important;min-height:0;max-height:100%;overflow:hidden}
 .footer-row .sec-card{margin-bottom:0!important;min-height:0;max-height:100%;overflow:hidden;display:flex!important;flex-direction:column!important}
-.footer-row .sec-body{padding:7px 10px!important;min-height:0;overflow:hidden!important;flex:1!important}
+.footer-row .sec-body{padding:4px 10px!important;min-height:0;overflow:hidden!important;flex:1!important}
 /* two-col: preenche o 1fr do grid */
 .two-col{gap:7px!important;margin-bottom:0!important;display:flex!important;align-items:stretch!important;min-height:0;height:100%;max-height:100%;overflow:hidden}
 .two-col .sec-card{display:flex!important;flex-direction:column!important;flex:1!important;overflow:hidden!important;min-height:0}
@@ -704,10 +704,10 @@ body{height:100dvh;overflow:hidden;display:flex;flex-direction:column;margin:0}
   .footer-row .sec-body{padding:5px 8px!important}
   .aging-legend{display:none}
 }
-@media(max-height:900px){
+@media(max-height:960px){
   #sdr-insight{display:none}
 }
-@media(max-height:740px){
+@media(max-height:960px){
   #aging-bars-wrap{display:none}
 }
 @media(max-height:700px){
@@ -719,16 +719,16 @@ body{height:100dvh;overflow:hidden;display:flex;flex-direction:column;margin:0}
   #sec-ceo{grid-template-rows:auto minmax(0,1fr) minmax(0,1.4fr)!important}
 }
 /* tipografia — equilibrada entre topo e base do painel */
-.sec-hdr{padding:6px 12px!important;font-size:11px!important}
-.tbl-wrap table td,.tbl-wrap table th{padding:9px 10px!important;font-size:13px!important}
+.sec-hdr{padding:5px 10px!important;font-size:10.5px!important;min-height:0!important}
+.tbl-wrap table td,.tbl-wrap table th{padding:3px 10px!important;font-size:11.5px!important;line-height:1.15!important}
 .kcard-val{font-size:19px!important}
 .kcard-lbl{font-size:9.5px!important}
 .kcard-inner{padding:9px 11px!important}
 .three-col .sec-body{padding:9px 12px!important}
 .kv-list .kv-row{padding:4px 0!important;font-size:12.5px!important}
 .kv-list hr{margin:3px 0!important}
-.mrr-box{padding:4px 8px!important;margin-top:4px}
-.kgrid-2{gap:6px!important}
+.mrr-box{padding:2px 8px!important;margin-top:2px}
+.kgrid-2{gap:5px!important}
 </style>
 </head>
 <body>
@@ -830,25 +830,25 @@ body{height:100dvh;overflow:hidden;display:flex;flex-direction:column;margin:0}
         <div class="kgrid-2 mb-0">
           <div class="mrr-box" style="background:var(--gn-bg)">
             <div style="font-size:9.5px;color:var(--ink3)">Aquisi&ccedil;&atilde;o</div>
-            <div id="mrr-acq" style="font-size:13.5px;font-weight:700;color:var(--gn)">—</div>
+            <div id="mrr-acq" style="font-size:12.5px;font-weight:700;color:var(--gn)">—</div>
           </div>
           <div class="mrr-box" style="background:var(--bl-bg)">
             <div style="font-size:9.5px;color:var(--ink3)">Cross-Sell</div>
-            <div id="mrr-cross" style="font-size:13.5px;font-weight:700;color:var(--bl)">—</div>
+            <div id="mrr-cross" style="font-size:12.5px;font-weight:700;color:var(--bl)">—</div>
           </div>
         </div>
-        <div style="margin-top:6px">
+        <div style="margin-top:3px">
           <div class="mrr-split-track"><div class="mrr-split-fill-acq" id="mrr-split-acq" style="width:50%"></div><div class="mrr-split-fill-cross" id="mrr-split-cross" style="width:50%"></div></div>
         </div>
-        <div class="kgrid-2 mb-0" style="margin-top:7px">
+        <div class="kgrid-2 mb-0" style="margin-top:3px">
           <div class="mrr-box" style="background:var(--surface2)">
             <div style="font-size:9.5px;color:var(--ink3)">Ticket M&eacute;dio</div>
-            <div class="js-ticket-medio" style="font-size:13.5px;font-weight:700;color:var(--ink)">—</div>
+            <div class="js-ticket-medio" style="font-size:12.5px;font-weight:700;color:var(--ink)">—</div>
             <div class="kcard-gauge-track"><div class="kcard-gauge-fill" id="kcard-ticket-gauge" style="width:0%"></div></div>
           </div>
           <div class="mrr-box" style="background:var(--surface2)">
             <div style="font-size:9.5px;color:var(--ink3)">Total de Vendas</div>
-            <div id="kcard-vendas-2-v" style="font-size:13.5px;font-weight:700;color:var(--ink)">—</div>
+            <div id="kcard-vendas-2-v" style="font-size:12.5px;font-weight:700;color:var(--ink)">—</div>
             <div id="kcard-vendas-2-n" style="font-size:9px;color:var(--ink3);margin-top:1px">—</div>
           </div>
         </div>
