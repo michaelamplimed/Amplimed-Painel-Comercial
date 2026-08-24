@@ -52,4 +52,17 @@ jobs:
 
           git commit -m "chore: atualiza dados do painel via HubSpot"
 
-          git push
+          # Evita falha "fetch first" quando alguem deu push manual entre o checkout e o push do bot.
+          # Tenta ate 5x: rebase sobre o main remoto e reenvia.
+          for i in 1 2 3 4 5; do
+            if git push; then
+              echo "Push ok na tentativa $i"
+              break
+            fi
+            echo "Push falhou (tentativa $i), fazendo pull --rebase e tentando de novo..."
+            git pull --rebase origin main
+            if [ "$i" = "5" ]; then
+              echo "Falha apos 5 tentativas"
+              exit 1
+            fi
+          done
