@@ -654,7 +654,7 @@ body{height:100dvh;overflow:hidden;display:flex;flex-direction:column;margin:0}
 .content{flex:1!important;min-height:0!important;overflow:hidden!important;padding:8px 14px!important;display:flex!important;flex-direction:column!important;box-sizing:border-box}
 .section.active{display:flex!important;flex-direction:column!important;flex:1!important;min-height:0!important;overflow:hidden!important}
 /* sec-ceo: grid com ultima linha preenchendo o restante */
-#sec-ceo{display:grid!important;grid-template-rows:auto auto minmax(140px,1.15fr) minmax(140px,1fr) auto;gap:6px;height:100%;overflow:hidden}
+#sec-ceo{display:grid!important;grid-template-rows:auto auto minmax(150px,1fr) minmax(180px,1.4fr) minmax(110px,.7fr);gap:6px;height:100%;overflow:hidden}
 /* KPI hero (scorecard executivo — 6 KPIs) — nunca quebra em 2 linhas: no
    painel de tela única, altura é o recurso escasso, não largura. */
 .kgrid-hero{margin-bottom:0!important;gap:7px!important;grid-template-columns:repeat(6,1fr)!important}
@@ -707,7 +707,7 @@ body{height:100dvh;overflow:hidden;display:flex;flex-direction:column;margin:0}
 }
 @media(max-height:700px){
   .footer-row{display:none!important}
-  #sec-ceo{grid-template-rows:auto auto minmax(140px,1.15fr) minmax(140px,1fr)!important}
+  #sec-ceo{grid-template-rows:auto auto minmax(140px,1fr) minmax(160px,1.4fr)!important}
 }
 /* tipografia — equilibrada entre topo e base do painel */
 .sec-hdr{padding:6px 12px!important;font-size:11px!important}
