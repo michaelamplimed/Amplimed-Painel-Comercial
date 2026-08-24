@@ -324,7 +324,8 @@ async function main() {
     'closedate',
     'hubspot_owner_id',
     'dealstage',
-    'sdr_do_negocio'
+    'sdr_do_negocio',
+    'closer_do_negocio'
   ];
 
   // ==========================================================
@@ -876,12 +877,16 @@ async function main() {
     config.closers.map(
       c => {
 
+        // Agrupamento por "Closer do Negócio" (closer_do_negocio),
+        // mesmo campo/dimensão usado no relatório oficial "Placar - Ranking
+        // Closers (Mês Atual)" do HubSpot — não pelo dono padrão do negócio
+        // (hubspot_owner_id), que pode divergir do closer que realmente atuou.
         const won =
           wonDeals.filter(
             d =>
               Number(
                 d.properties
-                  .hubspot_owner_id
+                  .closer_do_negocio
               ) ===
               c.ownerId
           );
@@ -891,7 +896,7 @@ async function main() {
             d =>
               Number(
                 d.properties
-                  .hubspot_owner_id
+                  .closer_do_negocio
               ) ===
               c.ownerId
           );
@@ -901,7 +906,7 @@ async function main() {
             d =>
               Number(
                 d.properties
-                  .hubspot_owner_id
+                  .closer_do_negocio
               ) ===
               c.ownerId
           );

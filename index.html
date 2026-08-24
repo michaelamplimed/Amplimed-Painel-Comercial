@@ -634,6 +634,17 @@ body{height:100dvh;overflow:hidden;display:flex;flex-direction:column;margin:0}
 /* tabela: centraliza verticalmente em vez de esticar linhas (evita gaps desproporcionais) */
 .tbl-wrap{flex:1!important;overflow:auto!important;min-height:0;display:flex!important;flex-direction:column!important;justify-content:center!important}
 .tbl-wrap table{width:100%!important;height:auto!important}
+/* Ranking SDR/Closer — mesa alinhada ao topo (sem centralizar), espaço remanescente vira insight de dados */
+#closers-tbl-wrap,#sdr-tbl-wrap{justify-content:flex-start!important}
+.tpkpi-progress-sub{font-size:9px;opacity:.6;margin-top:2px;white-space:nowrap;color:#fff}
+.sdr-insight{margin-top:12px;padding-top:12px;border-top:1px dashed var(--border)}
+.sdr-insight-title{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:var(--ink2);margin-bottom:8px}
+.sdr-insight-row{display:flex;align-items:center;gap:8px;margin-bottom:7px}
+.sdr-insight-row:last-child{margin-bottom:0}
+.sdr-insight-name{width:92px;flex-shrink:0;font-size:12px;font-weight:600;color:var(--ink);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.sdr-insight-track{flex:1;height:10px;background:var(--border);border-radius:5px;overflow:hidden}
+.sdr-insight-fill{height:100%;border-radius:5px;transition:width .5s ease}
+.sdr-insight-pct{width:46px;text-align:right;font-size:12px;font-weight:700;font-variant-numeric:tabular-nums}
 /* tipografia — equilibrada entre topo e base do painel */
 .sec-hdr{padding:6px 12px!important;font-size:11px!important}
 .tbl-wrap table td,.tbl-wrap table th{padding:9px 10px!important;font-size:13px!important}
@@ -676,6 +687,7 @@ body{height:100dvh;overflow:hidden;display:flex;flex-direction:column;margin:0}
     <div class="tpkpi-progress-wrap">
       <div class="tpkpi-progress-lbl"><span>Meta do M&ecirc;s</span><span id="tpkpi-progress-pct">&mdash;</span></div>
       <div class="tpkpi-progress-track"><div class="tpkpi-progress-fill" id="tpkpi-progress-fill" style="width:0%"></div></div>
+      <div class="tpkpi-progress-sub" id="tpkpi-progress-sub">&mdash;</div>
     </div>
   </div>
   <div class="topbar-right">
@@ -765,7 +777,7 @@ body{height:100dvh;overflow:hidden;display:flex;flex-direction:column;margin:0}
     <div class="sec-card">
       <div class="sec-hdr" style="display:flex;justify-content:space-between;align-items:center;gap:8px"><span>&#127942; Closers MTD</span><span id="closers-hdr-sub" style="font-size:10px;font-weight:500;opacity:.9;white-space:nowrap">&mdash;</span></div>
       <div class="sec-body">
-        <div class="tbl-wrap"><table>
+        <div class="tbl-wrap" id="closers-tbl-wrap"><table>
           <tr><th style="background:#1B3A5C">Closer</th><th style="background:#1B3A5C">Vendas</th><th style="background:#1B3A5C">Rec. Aquisi&ccedil;&atilde;o</th><th style="background:#1B3A5C">Taxa de Ganho</th><th style="background:#1B3A5C">% da Meta</th></tr>
           <tbody id="tbl-closers-mini"><tr style="background:#fff"><td>Tamara</td><td>14</td><td>R$4.387,97</td><td>74%</td><td><span class="bdg bdg-g">125%</span></td></tr><tr style="background:#fff"><td>Eduardo</td><td>13</td><td>R$5.637,75</td><td>72%</td><td><span class="bdg bdg-g">165%</span></td></tr><tr style="background:#fff"><td>Juliano</td><td>11</td><td>R$1.837,80</td><td>65%</td><td><span class="bdg bdg-a">78%</span></td></tr><tr style="background:#fff"><td>Ariel</td><td>9</td><td>R$2.967,07</td><td>64%</td><td><span class="bdg bdg-g">135%</span></td></tr><tr style="background:#fff"><td>Mayara</td><td>19</td><td>R$5.027,47</td><td>86%</td><td><span class="bdg bdg-g">192%</span></td></tr>
         </table></div>
@@ -774,10 +786,11 @@ body{height:100dvh;overflow:hidden;display:flex;flex-direction:column;margin:0}
     <div class="sec-card">
       <div class="sec-hdr" style="background:#0D6E6E;display:flex;justify-content:space-between;align-items:center;gap:8px"><span>&#128100; SDR MTD</span><span id="sdr-hdr-sub" style="font-size:10px;font-weight:500;opacity:.9;white-space:nowrap">&mdash;</span></div>
       <div class="sec-body">
-        <div class="tbl-wrap"><table>
+        <div class="tbl-wrap" id="sdr-tbl-wrap"><table>
           <tr><th style="background:#0D6E6E">SDR</th><th style="background:#0D6E6E">SQL</th><th style="background:#0D6E6E">Rec. Influenciada</th><th style="background:#0D6E6E">% da Meta</th></tr>
           <tbody id="tbl-sdr-mini"><tr style="background:#fff"><td>Ana</td><td>33</td><td>R$9.685,35</td><td><span class="bdg bdg-g">224%</span></td></tr><tr style="background:#fff"><td>Amanda</td><td>49</td><td>R$5.049,69</td><td><span class="bdg bdg-g">117%</span></td></tr><tr style="background:#fff"><td>Francisco</td><td>23</td><td>R$4.335,02</td><td><span class="bdg bdg-g">118%</span></td></tr></tbody>
         </table></div>
+        <div class="sdr-insight" id="sdr-insight"></div>
       </div>
     </div>
   </div>
@@ -1177,6 +1190,25 @@ function aplicarDadosNoPainel(d){
     if(el('sdr-hdr-sub')){
       el('sdr-hdr-sub').textContent = sdrsAtivos.length+' SDRs ativos \u00b7 Meta '+fmtMoeda(d.metas ? d.metas.sdr : 0);
     }
+
+    // Ranking visual SDR — preenche o espaço remanescente do card com dado real
+    // (a tabela tem menos linhas que a de Closers; em vez de deixar em branco,
+    // mostra um ranking por % da meta pro-rata, já calculado acima).
+    const sdrInsight = el('sdr-insight');
+    if(sdrInsight){
+      const rankedSdr = sdrsAtivos.slice().sort((a,b)=>(b.pctMetaProRata||0)-(a.pctMetaProRata||0));
+      const linhasInsight = rankedSdr.map(s=>{
+        const p = s.pctMetaProRata||0;
+        const cor = p>=100?'#10B981':(p>=70?'#F59E0B':'#EF4444');
+        const w = Math.max(4, Math.min(100, p/1.5));
+        return '<div class="sdr-insight-row">'
+          +'<span class="sdr-insight-name">'+s.name+'</span>'
+          +'<div class="sdr-insight-track"><div class="sdr-insight-fill" style="width:'+w+'%;background:'+cor+'"></div></div>'
+          +'<span class="sdr-insight-pct" style="color:'+cor+'">'+p+'%</span>'
+          +'</div>';
+      }).join('');
+      sdrInsight.innerHTML = '<div class="sdr-insight-title">Ranking SDR &mdash; % da meta (pro-rata)</div>' + linhasInsight;
+    }
   }
 
   // ── Pace-bar principal (topo do sec-ceo) ─────────────────────────────────
@@ -1184,6 +1216,9 @@ function aplicarDadosNoPainel(d){
   if(pbMain){
     const diasRestantes = totalWorkingDays - workingDaysSoFar;
     const corNecessario = necessario <= metaDiaria ? '#10B981' : '#EF4444';
+    if(el('tpkpi-progress-sub')){
+      el('tpkpi-progress-sub').innerHTML = 'Necess\u00e1rio <strong style="color:'+corNecessario+'">'+fmtMoeda(necessario)+'/dia</strong> \u00b7 '+diasRestantes+'d \u00fateis';
+    }
     pbMain.innerHTML = '📅 Meta diária <strong>'+fmtMoeda(metaDiaria)+'</strong>'
       +' · Acum. D'+workingDaysSoFar+'/'+totalWorkingDays+': <strong>'+fmtMoeda(proRataMeta)+'</strong>'
       +' · Realizado: <strong>'+fmtMoeda(mrrTotal)+' ('+proRataPct+'%)</strong>'
