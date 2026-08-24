@@ -593,6 +593,29 @@ body.dark ::-webkit-scrollbar-thumb{background:#2D4060}
   .fn-row{flex-direction:column}
   .status-strip{grid-template-columns:repeat(2,1fr)}
 }
+
+/* ═══ SINGLE-SCREEN — sem rolagem ═══ */
+html,body{height:100%;overflow:hidden}
+.content{overflow:hidden!important;padding:8px 14px!important;display:flex;flex-direction:column;height:100%}
+#sec-ceo{display:flex;flex-direction:column;height:100%;gap:0}
+.kgrid-hero{margin-bottom:7px!important;gap:7px!important}
+.kcard-inner{padding:8px 10px!important}
+.kcard-lbl{font-size:9px!important;margin-bottom:2px}
+.kcard-val{font-size:17px!important}
+.kcard-note{font-size:9px!important;margin-top:2px}
+.pace-bar{padding:4px 12px!important;margin-bottom:7px!important;font-size:10.5px!important}
+.three-col{gap:7px!important;margin-bottom:7px!important}
+.two-col{gap:7px!important;margin-bottom:0!important;flex:1;min-height:0}
+.two-col .sec-card{display:flex;flex-direction:column;overflow:hidden}
+.two-col .sec-body{flex:1;overflow:hidden;padding:0!important}
+.sec-hdr{padding:5px 12px!important;font-size:10.5px!important}
+.three-col .sec-body{padding:7px 10px!important}
+.tbl-wrap{overflow:auto;max-height:100%}
+.tbl-wrap table td,.tbl-wrap table th{padding:4px 8px!important;font-size:11px!important}
+.kv-list .kv-row{padding:3px 0!important;font-size:11px!important}
+.kv-list hr{margin:3px 0!important}
+.mrr-box{padding:5px 8px!important;margin-top:5px}
+.kgrid-2{gap:6px!important}
 </style>
 </head>
 <body>
@@ -723,25 +746,6 @@ body.dark ::-webkit-scrollbar-thumb{background:#2D4060}
     </div>
   </div>
 
-
-
-
-  <!-- ── Visão Diretoria (incorporada) ── -->
-  <div class="sec-card">
-    <div class="sec-hdr" style="background:#0F5E54">&#128202; ATINGIMENTO POR INDICADOR &mdash; Vis&atilde;o Diretoria</div>
-    <div class="sec-body">
-      <div id="pace-bar-diretoria" class="pace-bar">&#128197; Meta di&aacute;ria R$2.238,10 &middot; D7/21 &middot; Realizado R$22.903,85 (146%) &middot; Proje&ccedil;&atilde;o R$68.711,55 &middot; Necess&aacute;rio R$1.721,15/dia</div>
-      <div class="tbl-wrap"><table>
-        <tr id="tbl-ating-header"><th style="background:#137A6E">Indicador</th><th style="background:#137A6E">Realizado</th><th style="background:#137A6E">Proje&ccedil;&atilde;o</th><th style="background:#137A6E">Meta</th><th style="background:#137A6E">% Ating.</th><th style="background:#137A6E">Status</th></tr>
-        <tr id="tbl-ating-receita" style="background:#fff"><td>Receita (Acq+Cross)</td><td>R$22.903,85</td><td>R$68.711,55</td><td>R$47.000,00</td><td><span class="bdg bdg-g">146%</span></td><td>&#9989; No alvo</td></tr>
-        <tr id="tbl-ating-vendas" style="background:#fff"><td>Total de Vendas</td><td>83</td><td>249</td><td>131</td><td><span class="bdg bdg-g">190%</span></td><td>&#9989; No alvo</td></tr>
-        <tr id="tbl-ating-ticket" style="background:#fff"><td>Ticket M&eacute;dio</td><td>R$308,25</td><td>R$308,25</td><td>R$300</td><td><span class="bdg bdg-g">103%</span></td><td>&#9989; No alvo</td></tr>
-        <tr style="background:#fff"><td>SQL (SDR)</td><td>106</td><td>106</td><td>224</td><td><span class="bdg bdg-r">47%</span></td><td>&#9888; Aten&ccedil;&atilde;o</td></tr>
-        <tr id="tbl-ating-wr" style="background:#fff"><td>Taxa de Ganho</td><td>63.2%</td><td>63.2%</td><td>65%</td><td><span class="bdg bdg-g">97%</span></td><td>&#9888; Aten&ccedil;&atilde;o</td></tr>
-
-      </table></div>
-    </div>
-  </div>
 
 </div><!-- /sec-ceo -->
 </div><!-- /content -->
