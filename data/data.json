@@ -1,6 +1,6 @@
 {
-  "geradoEm": "2026-08-25T11:04:32.075Z",
-  "geradoEmBR": "25/08/2026, 08:04:32",
+  "geradoEm": "2026-08-25T14:11:41.755Z",
+  "geradoEmBR": "25/08/2026, 11:11:41",
   "mes": {
     "ano": 2026,
     "mes": 8,
@@ -11,11 +11,11 @@
     "sdr": 37000
   },
   "kpis": {
-    "receitaRealizada": 36602.26,
+    "receitaRealizada": 37202.26,
     "metaMensal": 47000,
-    "pctMeta": 77.9,
-    "pipelineAberto": 37858.5,
-    "mediaDiaria": 1464.09
+    "pctMeta": 79.2,
+    "pipelineAberto": 37258.5,
+    "mediaDiaria": 1488.09
   },
   "receitaAcumulada": {
     "labels": [
@@ -70,7 +70,7 @@
       34952.86,
       34952.86,
       36602.26,
-      36602.26
+      37202.26
     ],
     "meta": [
       1516.13,
@@ -101,8 +101,8 @@
     ]
   },
   "aging": {
-    "0-7d": 28,
-    "8-15d": 25,
+    "0-7d": 26,
+    "8-15d": 26,
     "16-30d": 17,
     "31-60d": 7,
     "+60d": 4
@@ -189,27 +189,27 @@
     {
       "name": "Ariel",
       "nivel": "Pleno",
-      "ganhos": 14,
+      "ganhos": 15,
       "perdidos": 23,
       "crossSellGanhos": 1,
-      "aquisicaoAmount": 4127.97,
+      "aquisicaoAmount": 4727.97,
       "crossSellAmount": 890,
-      "totalAmount": 5017.97,
-      "ticketMedio": 358.43,
-      "winRate": 37.8,
+      "totalAmount": 5617.97,
+      "ticketMedio": 374.53,
+      "winRate": 39.5,
       "metaMes": 8600,
       "metaProRata": 6935.48,
-      "pctMetaProRata": 72.4,
+      "pctMetaProRata": 81,
       "funil": {
         "sql": 30,
         "demo": 30,
         "sal": 17,
         "proposta": 17,
-        "won": 14,
+        "won": 15,
         "sqlToDemoP": 100,
         "demoToSalP": 56.7,
         "salToPropP": 100,
-        "winRateP": 50
+        "winRateP": 51.7
       }
     },
     {
@@ -277,10 +277,10 @@
     {
       "name": "Amanda",
       "sql": 99,
-      "recInfluenciada": 10918.97,
+      "recInfluenciada": 11518.97,
       "metaMes": 13000,
       "metaProRata": 10483.87,
-      "pctMetaProRata": 104.2
+      "pctMetaProRata": 109.9
     },
     {
       "name": "Francisco",
