@@ -1,6 +1,6 @@
 {
-  "geradoEm": "2026-08-27T11:30:22.841Z",
-  "geradoEmBR": "27/08/2026, 08:30:22",
+  "geradoEm": "2026-08-27T12:00:29.330Z",
+  "geradoEmBR": "27/08/2026, 09:00:29",
   "mes": {
     "ano": 2026,
     "mes": 8,
@@ -14,7 +14,7 @@
     "receitaRealizada": 43061.6,
     "metaMensal": 47000,
     "pctMeta": 91.6,
-    "pipelineAberto": 29961.7,
+    "pipelineAberto": 30039.8,
     "mediaDiaria": 1594.87
   },
   "receitaAcumulada": {
@@ -108,7 +108,7 @@
   },
   "aging": {
     "0-7d": 25,
-    "8-15d": 31,
+    "8-15d": 30,
     "16-30d": 15,
     "31-60d": 4,
     "+60d": 4
@@ -118,26 +118,26 @@
       "name": "Tamara",
       "nivel": "Sênior",
       "ganhos": 33,
-      "perdidos": 20,
+      "perdidos": 22,
       "crossSellGanhos": 5,
       "aquisicaoAmount": 8670.73,
       "crossSellAmount": 863.8,
       "totalAmount": 9534.53,
       "ticketMedio": 288.93,
-      "winRate": 62.3,
+      "winRate": 60,
       "metaMes": 10600,
       "metaProRata": 9232.26,
       "pctMetaProRata": 103.3,
       "funil": {
-        "sql": 46,
-        "demo": 46,
-        "sal": 40,
-        "proposta": 37,
+        "sql": 44,
+        "demo": 44,
+        "sal": 39,
+        "proposta": 35,
         "won": 33,
         "sqlToDemoP": 100,
-        "demoToSalP": 87,
-        "salToPropP": 92.5,
-        "winRateP": 66
+        "demoToSalP": 88.6,
+        "salToPropP": 89.7,
+        "winRateP": 63.5
       }
     },
     {
@@ -181,13 +181,13 @@
       "metaProRata": 7490.32,
       "pctMetaProRata": 77.4,
       "funil": {
-        "sql": 39,
-        "demo": 39,
-        "sal": 35,
-        "proposta": 35,
+        "sql": 40,
+        "demo": 40,
+        "sal": 36,
+        "proposta": 36,
         "won": 30,
         "sqlToDemoP": 100,
-        "demoToSalP": 89.7,
+        "demoToSalP": 90,
         "salToPropP": 100,
         "winRateP": 65.2
       }
@@ -290,7 +290,7 @@
     },
     {
       "name": "Francisco",
-      "sql": 54,
+      "sql": 55,
       "recInfluenciada": 7768.1,
       "metaMes": 11000,
       "metaProRata": 9580.65,
