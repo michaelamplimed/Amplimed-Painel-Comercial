@@ -1,6 +1,6 @@
 {
-  "geradoEm": "2026-08-27T17:30:26.059Z",
-  "geradoEmBR": "27/08/2026, 14:30:26",
+  "geradoEm": "2026-08-27T18:00:31.630Z",
+  "geradoEmBR": "27/08/2026, 15:00:31",
   "mes": {
     "ano": 2026,
     "mes": 8,
@@ -11,11 +11,11 @@
     "sdr": 37000
   },
   "kpis": {
-    "receitaRealizada": 43459.5,
+    "receitaRealizada": 43529.4,
     "metaMensal": 47000,
-    "pctMeta": 92.5,
+    "pctMeta": 92.6,
     "pipelineAberto": 28650.8,
-    "mediaDiaria": 1609.61
+    "mediaDiaria": 1612.2
   },
   "receitaAcumulada": {
     "labels": [
@@ -74,7 +74,7 @@
       36602.26,
       38235.26,
       43061.6,
-      43459.5
+      43529.4
     ],
     "meta": [
       1516.13,
@@ -108,9 +108,9 @@
   },
   "aging": {
     "0-7d": 27,
-    "8-15d": 26,
+    "8-15d": 25,
     "16-30d": 16,
-    "31-60d": 4,
+    "31-60d": 5,
     "+60d": 4
   },
   "closers": [
@@ -155,13 +155,13 @@
       "metaProRata": 9232.26,
       "pctMetaProRata": 101.8,
       "funil": {
-        "sql": 40,
-        "demo": 40,
+        "sql": 41,
+        "demo": 41,
         "sal": 28,
         "proposta": 27,
         "won": 27,
         "sqlToDemoP": 100,
-        "demoToSalP": 70,
+        "demoToSalP": 68.3,
         "salToPropP": 96.4,
         "winRateP": 69.2
       }
@@ -171,15 +171,15 @@
       "nivel": "Pleno",
       "ganhos": 31,
       "perdidos": 27,
-      "crossSellGanhos": 6,
+      "crossSellGanhos": 7,
       "aquisicaoAmount": 5339.69,
-      "crossSellAmount": 595.8,
-      "totalAmount": 5935.49,
-      "ticketMedio": 191.47,
+      "crossSellAmount": 665.7,
+      "totalAmount": 6005.39,
+      "ticketMedio": 193.72,
       "winRate": 53.4,
       "metaMes": 8600,
       "metaProRata": 7490.32,
-      "pctMetaProRata": 79.2,
+      "pctMetaProRata": 80.2,
       "funil": {
         "sql": 40,
         "demo": 40,
