@@ -1,6 +1,6 @@
 {
-  "geradoEm": "2026-08-28T19:00:32.048Z",
-  "geradoEmBR": "28/08/2026, 16:00:32",
+  "geradoEm": "2026-08-28T19:30:23.468Z",
+  "geradoEmBR": "28/08/2026, 16:30:23",
   "mes": {
     "ano": 2026,
     "mes": 8,
@@ -110,10 +110,10 @@
     ]
   },
   "aging": {
-    "0-7d": 21,
+    "0-7d": 22,
     "8-15d": 26,
-    "16-30d": 18,
-    "31-60d": 6,
+    "16-30d": 17,
+    "31-60d": 7,
     "+60d": 4
   },
   "closers": [
@@ -210,13 +210,13 @@
       "metaProRata": 7767.74,
       "pctMetaProRata": 108.1,
       "funil": {
-        "sql": 29,
-        "demo": 29,
+        "sql": 30,
+        "demo": 30,
         "sal": 24,
         "proposta": 21,
         "won": 18,
         "sqlToDemoP": 100,
-        "demoToSalP": 82.8,
+        "demoToSalP": 80,
         "salToPropP": 87.5,
         "winRateP": 46.2
       }
@@ -277,7 +277,7 @@
   "sdrs": [
     {
       "name": "Ana",
-      "sql": 78,
+      "sql": 79,
       "recInfluenciada": 17162.19,
       "metaMes": 13000,
       "metaProRata": 11741.94,
