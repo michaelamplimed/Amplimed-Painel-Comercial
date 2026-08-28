@@ -1,6 +1,6 @@
 {
-  "geradoEm": "2026-08-28T20:30:27.666Z",
-  "geradoEmBR": "28/08/2026, 17:30:27",
+  "geradoEm": "2026-08-28T21:00:30.736Z",
+  "geradoEmBR": "28/08/2026, 18:00:30",
   "mes": {
     "ano": 2026,
     "mes": 8,
@@ -11,11 +11,11 @@
     "sdr": 37000
   },
   "kpis": {
-    "receitaRealizada": 49320.98,
+    "receitaRealizada": 49409.98,
     "metaMensal": 47000,
-    "pctMeta": 104.9,
-    "pipelineAberto": 26282,
-    "mediaDiaria": 1761.46
+    "pctMeta": 105.1,
+    "pipelineAberto": 26332,
+    "mediaDiaria": 1764.64
   },
   "receitaAcumulada": {
     "labels": [
@@ -76,7 +76,7 @@
       38096.26,
       42922.6,
       44517.4,
-      49320.98
+      49409.98
     ],
     "meta": [
       1516.13,
@@ -172,27 +172,27 @@
     {
       "name": "Juliano",
       "nivel": "Pleno",
-      "ganhos": 34,
+      "ganhos": 35,
       "perdidos": 27,
       "crossSellGanhos": 8,
-      "aquisicaoAmount": 7351.58,
+      "aquisicaoAmount": 7440.58,
       "crossSellAmount": 1194.7,
-      "totalAmount": 8546.28,
-      "ticketMedio": 251.36,
-      "winRate": 55.7,
+      "totalAmount": 8635.28,
+      "ticketMedio": 246.72,
+      "winRate": 56.5,
       "metaMes": 8600,
       "metaProRata": 7767.74,
-      "pctMetaProRata": 110,
+      "pctMetaProRata": 111.2,
       "funil": {
         "sql": 43,
         "demo": 43,
         "sal": 41,
         "proposta": 40,
-        "won": 34,
+        "won": 35,
         "sqlToDemoP": 100,
         "demoToSalP": 95.3,
         "salToPropP": 97.6,
-        "winRateP": 66.7
+        "winRateP": 67.3
       }
     },
     {
@@ -277,7 +277,7 @@
   "sdrs": [
     {
       "name": "Ana",
-      "sql": 81,
+      "sql": 82,
       "recInfluenciada": 17162.19,
       "metaMes": 13000,
       "metaProRata": 11741.94,
@@ -294,10 +294,10 @@
     {
       "name": "Francisco",
       "sql": 62,
-      "recInfluenciada": 8267.99,
+      "recInfluenciada": 8356.99,
       "metaMes": 11000,
       "metaProRata": 9935.48,
-      "pctMetaProRata": 83.2
+      "pctMetaProRata": 84.1
     }
   ]
 }
