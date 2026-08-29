@@ -1,6 +1,6 @@
 {
-  "geradoEm": "2026-08-29T13:00:28.436Z",
-  "geradoEmBR": "29/08/2026, 10:00:28",
+  "geradoEm": "2026-08-29T13:30:22.748Z",
+  "geradoEmBR": "29/08/2026, 10:30:22",
   "mes": {
     "ano": 2026,
     "mes": 8,
@@ -190,11 +190,11 @@
         "sql": 43,
         "demo": 43,
         "sal": 41,
-        "proposta": 40,
+        "proposta": 41,
         "won": 35,
         "sqlToDemoP": 100,
         "demoToSalP": 95.3,
-        "salToPropP": 97.6,
+        "salToPropP": 100,
         "winRateP": 67.3
       }
     },
