@@ -1,6 +1,6 @@
 {
-  "geradoEm": "2026-08-31T18:00:28.031Z",
-  "geradoEmBR": "31/08/2026, 15:00:28",
+  "geradoEm": "2026-08-31T18:30:27.694Z",
+  "geradoEmBR": "31/08/2026, 15:30:27",
   "mes": {
     "ano": 2026,
     "mes": 8,
@@ -208,13 +208,13 @@
       "name": "Ariel",
       "nivel": "Pleno",
       "ganhos": 20,
-      "perdidos": 33,
+      "perdidos": 34,
       "crossSellGanhos": 4,
       "aquisicaoAmount": 7589.87,
       "crossSellAmount": 1066,
       "totalAmount": 8655.87,
       "ticketMedio": 432.79,
-      "winRate": 37.7,
+      "winRate": 37,
       "metaMes": 8600,
       "metaProRata": 8600,
       "pctMetaProRata": 100.6,
@@ -286,7 +286,7 @@
   "sdrs": [
     {
       "name": "Ana",
-      "sql": 86,
+      "sql": 87,
       "recInfluenciada": 18005.29,
       "metaMes": 13000,
       "metaProRata": 13000,
