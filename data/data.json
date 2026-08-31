@@ -1,6 +1,6 @@
 {
-  "geradoEm": "2026-08-31T11:30:24.982Z",
-  "geradoEmBR": "31/08/2026, 08:30:24",
+  "geradoEm": "2026-08-31T12:00:29.117Z",
+  "geradoEmBR": "31/08/2026, 09:00:29",
   "mes": {
     "ano": 2026,
     "mes": 8,
@@ -11,11 +11,11 @@
     "sdr": 37000
   },
   "kpis": {
-    "receitaRealizada": 49409.98,
+    "receitaRealizada": 49668.88,
     "metaMensal": 47000,
-    "pctMeta": 105.1,
-    "pipelineAberto": 26312.9,
-    "mediaDiaria": 1593.87
+    "pctMeta": 105.7,
+    "pipelineAberto": 26054,
+    "mediaDiaria": 1602.22
   },
   "receitaAcumulada": {
     "labels": [
@@ -82,7 +82,7 @@
       49409.98,
       49409.98,
       49409.98,
-      49409.98
+      49668.88
     ],
     "meta": [
       1516.13,
@@ -119,9 +119,9 @@
     ]
   },
   "aging": {
-    "0-7d": 19,
+    "0-7d": 21,
     "8-15d": 24,
-    "16-30d": 20,
+    "16-30d": 19,
     "31-60d": 9,
     "+60d": 4
   },
@@ -207,27 +207,27 @@
     {
       "name": "Ariel",
       "nivel": "Pleno",
-      "ganhos": 19,
+      "ganhos": 20,
       "perdidos": 33,
       "crossSellGanhos": 4,
-      "aquisicaoAmount": 7330.97,
+      "aquisicaoAmount": 7589.87,
       "crossSellAmount": 1066,
-      "totalAmount": 8396.97,
-      "ticketMedio": 441.95,
-      "winRate": 36.5,
+      "totalAmount": 8655.87,
+      "ticketMedio": 432.79,
+      "winRate": 37.7,
       "metaMes": 8600,
       "metaProRata": 8600,
-      "pctMetaProRata": 97.6,
+      "pctMetaProRata": 100.6,
       "funil": {
         "sql": 31,
         "demo": 31,
         "sal": 24,
         "proposta": 21,
-        "won": 18,
+        "won": 19,
         "sqlToDemoP": 100,
         "demoToSalP": 77.4,
         "salToPropP": 87.5,
-        "winRateP": 46.2
+        "winRateP": 47.5
       }
     },
     {
@@ -287,14 +287,14 @@
     {
       "name": "Ana",
       "sql": 82,
-      "recInfluenciada": 17162.19,
+      "recInfluenciada": 17421.09,
       "metaMes": 13000,
       "metaProRata": 13000,
-      "pctMetaProRata": 132
+      "pctMetaProRata": 134
     },
     {
       "name": "Amanda",
-      "sql": 115,
+      "sql": 116,
       "recInfluenciada": 16483.41,
       "metaMes": 13000,
       "metaProRata": 13000,
