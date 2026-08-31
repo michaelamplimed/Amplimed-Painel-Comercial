@@ -1,6 +1,6 @@
 {
-  "geradoEm": "2026-08-31T12:00:29.117Z",
-  "geradoEmBR": "31/08/2026, 09:00:29",
+  "geradoEm": "2026-08-31T12:30:24.473Z",
+  "geradoEmBR": "31/08/2026, 09:30:24",
   "mes": {
     "ano": 2026,
     "mes": 8,
@@ -11,11 +11,11 @@
     "sdr": 37000
   },
   "kpis": {
-    "receitaRealizada": 49668.88,
+    "receitaRealizada": 49807.88,
     "metaMensal": 47000,
-    "pctMeta": 105.7,
-    "pipelineAberto": 26054,
-    "mediaDiaria": 1602.22
+    "pctMeta": 106,
+    "pipelineAberto": 25915,
+    "mediaDiaria": 1606.71
   },
   "receitaAcumulada": {
     "labels": [
@@ -82,7 +82,7 @@
       49409.98,
       49409.98,
       49409.98,
-      49668.88
+      49807.88
     ],
     "meta": [
       1516.13,
@@ -120,7 +120,7 @@
   },
   "aging": {
     "0-7d": 21,
-    "8-15d": 24,
+    "8-15d": 23,
     "16-30d": 19,
     "31-60d": 9,
     "+60d": 4
@@ -181,27 +181,27 @@
     {
       "name": "Juliano",
       "nivel": "Pleno",
-      "ganhos": 35,
+      "ganhos": 36,
       "perdidos": 27,
       "crossSellGanhos": 8,
-      "aquisicaoAmount": 7440.58,
+      "aquisicaoAmount": 7579.58,
       "crossSellAmount": 1194.7,
-      "totalAmount": 8635.28,
-      "ticketMedio": 246.72,
-      "winRate": 56.5,
+      "totalAmount": 8774.28,
+      "ticketMedio": 243.73,
+      "winRate": 57.1,
       "metaMes": 8600,
       "metaProRata": 8600,
-      "pctMetaProRata": 100.4,
+      "pctMetaProRata": 102,
       "funil": {
         "sql": 43,
         "demo": 43,
         "sal": 41,
         "proposta": 41,
-        "won": 35,
+        "won": 36,
         "sqlToDemoP": 100,
         "demoToSalP": 95.3,
         "salToPropP": 100,
-        "winRateP": 67.3
+        "winRateP": 67.9
       }
     },
     {
@@ -295,10 +295,10 @@
     {
       "name": "Amanda",
       "sql": 116,
-      "recInfluenciada": 16483.41,
+      "recInfluenciada": 16622.41,
       "metaMes": 13000,
       "metaProRata": 13000,
-      "pctMetaProRata": 126.8
+      "pctMetaProRata": 127.9
     },
     {
       "name": "Francisco",
