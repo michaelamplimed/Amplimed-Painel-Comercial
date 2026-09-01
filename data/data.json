@@ -1,6 +1,6 @@
 {
-  "geradoEm": "2026-09-01T20:00:28.611Z",
-  "geradoEmBR": "01/09/2026, 17:00:28",
+  "geradoEm": "2026-09-01T20:30:25.332Z",
+  "geradoEmBR": "01/09/2026, 17:30:25",
   "mes": {
     "ano": 2026,
     "mes": 9,
@@ -29,7 +29,7 @@
     ]
   },
   "aging": {
-    "0-7d": 28,
+    "0-7d": 29,
     "8-15d": 22,
     "16-30d": 15,
     "31-60d": 9,
@@ -77,14 +77,14 @@
       "metaProRata": 360,
       "pctMetaProRata": 0,
       "funil": {
-        "sql": 11,
-        "demo": 11,
-        "sal": 1,
-        "proposta": 0,
+        "sql": 12,
+        "demo": 12,
+        "sal": 2,
+        "proposta": 2,
         "won": 0,
         "sqlToDemoP": 100,
-        "demoToSalP": 9.1,
-        "salToPropP": 0,
+        "demoToSalP": 16.7,
+        "salToPropP": 100,
         "winRateP": 0
       }
     },
