@@ -1,6 +1,6 @@
 {
-  "geradoEm": "2026-09-01T19:00:28.648Z",
-  "geradoEmBR": "01/09/2026, 16:00:28",
+  "geradoEm": "2026-09-01T19:30:23.281Z",
+  "geradoEmBR": "01/09/2026, 16:30:23",
   "mes": {
     "ano": 2026,
     "mes": 9,
@@ -11,18 +11,18 @@
     "sdr": 40000
   },
   "kpis": {
-    "receitaRealizada": 1513.5,
+    "receitaRealizada": 2390.5,
     "metaMensal": 48000,
-    "pctMeta": 3.2,
-    "pipelineAberto": 26277,
-    "mediaDiaria": 1513.5
+    "pctMeta": 5,
+    "pipelineAberto": 25779,
+    "mediaDiaria": 2390.5
   },
   "receitaAcumulada": {
     "labels": [
       "01/09"
     ],
     "realizado": [
-      1513.5
+      2390.5
     ],
     "meta": [
       1600
@@ -39,26 +39,26 @@
     {
       "name": "Tamara",
       "nivel": "Sênior",
-      "ganhos": 1,
+      "ganhos": 2,
       "perdidos": 0,
       "crossSellGanhos": 1,
-      "aquisicaoAmount": 472.6,
+      "aquisicaoAmount": 1349.6,
       "crossSellAmount": 15,
-      "totalAmount": 487.6,
-      "ticketMedio": 487.6,
+      "totalAmount": 1364.6,
+      "ticketMedio": 682.3,
       "winRate": 100,
       "metaMes": 10800,
       "metaProRata": 360,
-      "pctMetaProRata": 135.4,
+      "pctMetaProRata": 379.1,
       "funil": {
         "sql": 16,
         "demo": 16,
-        "sal": 8,
-        "proposta": 3,
-        "won": 1,
+        "sal": 9,
+        "proposta": 4,
+        "won": 2,
         "sqlToDemoP": 100,
-        "demoToSalP": 50,
-        "salToPropP": 37.5,
+        "demoToSalP": 56.3,
+        "salToPropP": 44.4,
         "winRateP": 100
       }
     },
@@ -205,10 +205,10 @@
     {
       "name": "Amanda",
       "sql": 0,
-      "recInfluenciada": 139,
+      "recInfluenciada": 1016,
       "metaMes": 14000,
       "metaProRata": 466.67,
-      "pctMetaProRata": 29.8
+      "pctMetaProRata": 217.7
     },
     {
       "name": "Francisco",
