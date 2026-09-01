@@ -1,6 +1,6 @@
 {
-  "geradoEm": "2026-09-01T16:30:26.500Z",
-  "geradoEmBR": "01/09/2026, 13:30:26",
+  "geradoEm": "2026-09-01T17:00:30.826Z",
+  "geradoEmBR": "01/09/2026, 14:00:30",
   "mes": {
     "ano": 2026,
     "mes": 9,
@@ -29,8 +29,8 @@
     ]
   },
   "aging": {
-    "0-7d": 26,
-    "8-15d": 22,
+    "0-7d": 27,
+    "8-15d": 21,
     "16-30d": 15,
     "31-60d": 9,
     "+60d": 3
@@ -66,7 +66,7 @@
       "name": "Eduardo",
       "nivel": "Sênior",
       "ganhos": 0,
-      "perdidos": 1,
+      "perdidos": 2,
       "crossSellGanhos": 0,
       "aquisicaoAmount": 0,
       "crossSellAmount": 0,
@@ -77,13 +77,13 @@
       "metaProRata": 360,
       "pctMetaProRata": 0,
       "funil": {
-        "sql": 13,
-        "demo": 13,
+        "sql": 12,
+        "demo": 12,
         "sal": 1,
         "proposta": 0,
         "won": 0,
         "sqlToDemoP": 100,
-        "demoToSalP": 7.7,
+        "demoToSalP": 8.3,
         "salToPropP": 0,
         "winRateP": 0
       }
