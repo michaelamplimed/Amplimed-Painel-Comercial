@@ -1,6 +1,6 @@
 {
-  "geradoEm": "2026-08-31T22:30:26.594Z",
-  "geradoEmBR": "31/08/2026, 19:30:26",
+  "geradoEm": "2026-09-01T01:21:43.877Z",
+  "geradoEmBR": "31/08/2026, 22:21:43",
   "mes": {
     "ano": 2026,
     "mes": 8,
@@ -11,11 +11,11 @@
     "sdr": 37000
   },
   "kpis": {
-    "receitaRealizada": 50994.98,
+    "receitaRealizada": 51622.11,
     "metaMensal": 47000,
-    "pctMeta": 108.5,
-    "pipelineAberto": 28873.23,
-    "mediaDiaria": 1645
+    "pctMeta": 109.8,
+    "pipelineAberto": 28246.1,
+    "mediaDiaria": 1665.23
   },
   "receitaAcumulada": {
     "labels": [
@@ -82,7 +82,7 @@
       49409.98,
       49409.98,
       49409.98,
-      50994.98
+      51622.11
     ],
     "meta": [
       1516.13,
@@ -119,7 +119,7 @@
     ]
   },
   "aging": {
-    "0-7d": 25,
+    "0-7d": 24,
     "8-15d": 23,
     "16-30d": 17,
     "31-60d": 9,
@@ -207,27 +207,27 @@
     {
       "name": "Ariel",
       "nivel": "Pleno",
-      "ganhos": 20,
+      "ganhos": 21,
       "perdidos": 34,
       "crossSellGanhos": 4,
-      "aquisicaoAmount": 7589.87,
+      "aquisicaoAmount": 8217,
       "crossSellAmount": 1066,
-      "totalAmount": 8655.87,
-      "ticketMedio": 432.79,
-      "winRate": 37,
+      "totalAmount": 9283,
+      "ticketMedio": 442.05,
+      "winRate": 38.2,
       "metaMes": 8600,
       "metaProRata": 8600,
-      "pctMetaProRata": 100.6,
+      "pctMetaProRata": 107.9,
       "funil": {
         "sql": 32,
         "demo": 32,
         "sal": 25,
         "proposta": 23,
-        "won": 19,
+        "won": 20,
         "sqlToDemoP": 100,
         "demoToSalP": 78.1,
         "salToPropP": 92,
-        "winRateP": 47.5
+        "winRateP": 48.8
       }
     },
     {
@@ -302,11 +302,11 @@
     },
     {
       "name": "Francisco",
-      "sql": 62,
-      "recInfluenciada": 8356.99,
+      "sql": 63,
+      "recInfluenciada": 9713.12,
       "metaMes": 11000,
       "metaProRata": 11000,
-      "pctMetaProRata": 76
+      "pctMetaProRata": 88.3
     }
   ]
 }
