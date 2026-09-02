@@ -1,6 +1,6 @@
 {
-  "geradoEm": "2026-09-02T18:30:26.757Z",
-  "geradoEmBR": "02/09/2026, 15:30:26",
+  "geradoEm": "2026-09-02T19:00:28.234Z",
+  "geradoEmBR": "02/09/2026, 16:00:28",
   "mes": {
     "ano": 2026,
     "mes": 9,
@@ -11,11 +11,11 @@
     "sdr": 40000
   },
   "kpis": {
-    "receitaRealizada": 3543.4,
+    "receitaRealizada": 4249.4,
     "metaMensal": 48000,
-    "pctMeta": 7.4,
-    "pipelineAberto": 25489.9,
-    "mediaDiaria": 1771.7
+    "pctMeta": 8.9,
+    "pipelineAberto": 24783.9,
+    "mediaDiaria": 2124.7
   },
   "receitaAcumulada": {
     "labels": [
@@ -24,7 +24,7 @@
     ],
     "realizado": [
       2898.4,
-      3543.4
+      4249.4
     ],
     "meta": [
       1600,
@@ -32,9 +32,9 @@
     ]
   },
   "aging": {
-    "0-7d": 28,
+    "0-7d": 29,
     "8-15d": 24,
-    "16-30d": 18,
+    "16-30d": 17,
     "31-60d": 8,
     "+60d": 4
   },
@@ -146,27 +146,27 @@
     {
       "name": "Mayara",
       "nivel": "Pleno",
-      "ganhos": 1,
+      "ganhos": 2,
       "perdidos": 1,
       "crossSellGanhos": 1,
-      "aquisicaoAmount": 139,
+      "aquisicaoAmount": 845,
       "crossSellAmount": 99,
-      "totalAmount": 238,
-      "ticketMedio": 238,
-      "winRate": 50,
+      "totalAmount": 944,
+      "ticketMedio": 472,
+      "winRate": 66.7,
       "metaMes": 8800,
       "metaProRata": 586.67,
-      "pctMetaProRata": 40.6,
+      "pctMetaProRata": 160.9,
       "funil": {
         "sql": 16,
         "demo": 16,
         "sal": 14,
         "proposta": 5,
-        "won": 1,
+        "won": 2,
         "sqlToDemoP": 100,
         "demoToSalP": 87.5,
         "salToPropP": 35.7,
-        "winRateP": 50
+        "winRateP": 66.7
       }
     },
     {
@@ -208,14 +208,14 @@
     {
       "name": "Amanda",
       "sql": 4,
-      "recInfluenciada": 1404,
+      "recInfluenciada": 2110,
       "metaMes": 14000,
       "metaProRata": 933.33,
-      "pctMetaProRata": 150.4
+      "pctMetaProRata": 226.1
     },
     {
       "name": "Francisco",
-      "sql": 3,
+      "sql": 4,
       "recInfluenciada": 89,
       "metaMes": 12000,
       "metaProRata": 800,
