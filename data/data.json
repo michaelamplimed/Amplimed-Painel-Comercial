@@ -1,6 +1,6 @@
 {
-  "geradoEm": "2026-09-02T15:30:29.165Z",
-  "geradoEmBR": "02/09/2026, 12:30:29",
+  "geradoEm": "2026-09-02T16:00:30.774Z",
+  "geradoEmBR": "02/09/2026, 13:00:30",
   "mes": {
     "ano": 2026,
     "mes": 9,
@@ -32,9 +32,9 @@
     ]
   },
   "aging": {
-    "0-7d": 26,
-    "8-15d": 25,
-    "16-30d": 15,
+    "0-7d": 25,
+    "8-15d": 24,
+    "16-30d": 16,
     "31-60d": 8,
     "+60d": 4
   },
@@ -132,13 +132,13 @@
       "metaProRata": 586.67,
       "pctMetaProRata": 124.1,
       "funil": {
-        "sql": 15,
-        "demo": 15,
+        "sql": 14,
+        "demo": 14,
         "sal": 6,
         "proposta": 4,
         "won": 3,
         "sqlToDemoP": 100,
-        "demoToSalP": 40,
+        "demoToSalP": 42.9,
         "salToPropP": 66.7,
         "winRateP": 100
       }
@@ -215,7 +215,7 @@
     },
     {
       "name": "Francisco",
-      "sql": 3,
+      "sql": 2,
       "recInfluenciada": 89,
       "metaMes": 12000,
       "metaProRata": 800,
