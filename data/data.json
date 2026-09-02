@@ -1,6 +1,6 @@
 {
-  "geradoEm": "2026-09-02T20:57:15.782Z",
-  "geradoEmBR": "02/09/2026, 17:57:15",
+  "geradoEm": "2026-09-02T21:00:30.038Z",
+  "geradoEmBR": "02/09/2026, 18:00:30",
   "mes": {
     "ano": 2026,
     "mes": 9,
@@ -11,11 +11,11 @@
     "sdr": 40000
   },
   "kpis": {
-    "receitaRealizada": 4489.2,
+    "receitaRealizada": 4837.1,
     "metaMensal": 48000,
-    "pctMeta": 9.4,
-    "pipelineAberto": 24644.9,
-    "mediaDiaria": 2244.6
+    "pctMeta": 10.1,
+    "pipelineAberto": 24386,
+    "mediaDiaria": 2418.55
   },
   "receitaAcumulada": {
     "labels": [
@@ -24,7 +24,7 @@
     ],
     "realizado": [
       2898.4,
-      4489.2
+      4837.1
     ],
     "meta": [
       1600,
@@ -32,7 +32,7 @@
     ]
   },
   "aging": {
-    "0-7d": 30,
+    "0-7d": 28,
     "8-15d": 24,
     "16-30d": 17,
     "31-60d": 8,
@@ -68,27 +68,27 @@
     {
       "name": "Eduardo",
       "nivel": "Sênior",
-      "ganhos": 2,
+      "ganhos": 4,
       "perdidos": 4,
       "crossSellGanhos": 1,
-      "aquisicaoAmount": 507.9,
+      "aquisicaoAmount": 855.8,
       "crossSellAmount": 239.8,
-      "totalAmount": 747.7,
-      "ticketMedio": 373.85,
-      "winRate": 33.3,
+      "totalAmount": 1095.6,
+      "ticketMedio": 273.9,
+      "winRate": 50,
       "metaMes": 10800,
       "metaProRata": 720,
-      "pctMetaProRata": 103.8,
+      "pctMetaProRata": 152.2,
       "funil": {
-        "sql": 15,
-        "demo": 15,
-        "sal": 3,
-        "proposta": 3,
-        "won": 2,
+        "sql": 16,
+        "demo": 16,
+        "sal": 4,
+        "proposta": 4,
+        "won": 4,
         "sqlToDemoP": 100,
-        "demoToSalP": 20,
+        "demoToSalP": 25,
         "salToPropP": 100,
-        "winRateP": 33.3
+        "winRateP": 50
       }
     },
     {
@@ -208,18 +208,18 @@
     {
       "name": "Amanda",
       "sql": 6,
-      "recInfluenciada": 2110,
+      "recInfluenciada": 2199,
       "metaMes": 14000,
       "metaProRata": 933.33,
-      "pctMetaProRata": 226.1
+      "pctMetaProRata": 235.6
     },
     {
       "name": "Francisco",
       "sql": 4,
-      "recInfluenciada": 89,
+      "recInfluenciada": 347.9,
       "metaMes": 12000,
       "metaProRata": 800,
-      "pctMetaProRata": 11.1
+      "pctMetaProRata": 43.5
     }
   ]
 }
