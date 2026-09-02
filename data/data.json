@@ -1,6 +1,6 @@
 {
-  "geradoEm": "2026-09-02T12:00:33.595Z",
-  "geradoEmBR": "02/09/2026, 09:00:33",
+  "geradoEm": "2026-09-02T12:30:28.504Z",
+  "geradoEmBR": "02/09/2026, 09:30:28",
   "mes": {
     "ano": 2026,
     "mes": 9,
@@ -33,7 +33,7 @@
   },
   "aging": {
     "0-7d": 23,
-    "8-15d": 26,
+    "8-15d": 27,
     "16-30d": 15,
     "31-60d": 8,
     "+60d": 3
@@ -160,12 +160,12 @@
       "funil": {
         "sql": 15,
         "demo": 15,
-        "sal": 12,
+        "sal": 13,
         "proposta": 4,
         "won": 0,
         "sqlToDemoP": 100,
-        "demoToSalP": 80,
-        "salToPropP": 33.3,
+        "demoToSalP": 86.7,
+        "salToPropP": 30.8,
         "winRateP": 0
       }
     },
@@ -207,7 +207,7 @@
     },
     {
       "name": "Amanda",
-      "sql": 0,
+      "sql": 2,
       "recInfluenciada": 1404,
       "metaMes": 14000,
       "metaProRata": 933.33,
