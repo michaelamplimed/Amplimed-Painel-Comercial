@@ -1,6 +1,6 @@
 {
-  "geradoEm": "2026-09-03T12:00:26.971Z",
-  "geradoEmBR": "03/09/2026, 09:00:26",
+  "geradoEm": "2026-09-03T12:30:28.077Z",
+  "geradoEmBR": "03/09/2026, 09:30:28",
   "mes": {
     "ano": 2026,
     "mes": 9,
@@ -11,11 +11,11 @@
     "sdr": 40000
   },
   "kpis": {
-    "receitaRealizada": 5239.67,
+    "receitaRealizada": 5498.57,
     "metaMensal": 48000,
-    "pctMeta": 10.9,
-    "pipelineAberto": 24833.9,
-    "mediaDiaria": 1746.56
+    "pctMeta": 11.5,
+    "pipelineAberto": 24575,
+    "mediaDiaria": 1832.86
   },
   "receitaAcumulada": {
     "labels": [
@@ -26,7 +26,7 @@
     "realizado": [
       2898.4,
       4926.1,
-      5239.67
+      5498.57
     ],
     "meta": [
       1600,
@@ -36,7 +36,7 @@
   },
   "aging": {
     "0-7d": 26,
-    "8-15d": 24,
+    "8-15d": 25,
     "16-30d": 17,
     "31-60d": 8,
     "+60d": 4
@@ -45,27 +45,27 @@
     {
       "name": "Tamara",
       "nivel": "Sênior",
-      "ganhos": 3,
+      "ganhos": 4,
       "perdidos": 2,
       "crossSellGanhos": 1,
-      "aquisicaoAmount": 1438.6,
+      "aquisicaoAmount": 1697.5,
       "crossSellAmount": 15,
-      "totalAmount": 1453.6,
-      "ticketMedio": 484.53,
-      "winRate": 60,
+      "totalAmount": 1712.5,
+      "ticketMedio": 428.13,
+      "winRate": 66.7,
       "metaMes": 10800,
       "metaProRata": 1080,
-      "pctMetaProRata": 134.6,
+      "pctMetaProRata": 158.6,
       "funil": {
         "sql": 17,
         "demo": 17,
-        "sal": 8,
-        "proposta": 5,
-        "won": 3,
+        "sal": 9,
+        "proposta": 6,
+        "won": 4,
         "sqlToDemoP": 100,
-        "demoToSalP": 47.1,
-        "salToPropP": 62.5,
-        "winRateP": 60
+        "demoToSalP": 52.9,
+        "salToPropP": 66.7,
+        "winRateP": 66.7
       }
     },
     {
@@ -109,14 +109,14 @@
       "metaProRata": 880,
       "pctMetaProRata": 59.9,
       "funil": {
-        "sql": 11,
-        "demo": 11,
-        "sal": 8,
+        "sql": 12,
+        "demo": 12,
+        "sal": 9,
         "proposta": 8,
         "won": 3,
         "sqlToDemoP": 100,
-        "demoToSalP": 72.7,
-        "salToPropP": 100,
+        "demoToSalP": 75,
+        "salToPropP": 88.9,
         "winRateP": 100
       }
     },
@@ -218,11 +218,11 @@
     },
     {
       "name": "Francisco",
-      "sql": 4,
-      "recInfluenciada": 750.47,
+      "sql": 5,
+      "recInfluenciada": 1009.37,
       "metaMes": 12000,
       "metaProRata": 1200,
-      "pctMetaProRata": 62.5
+      "pctMetaProRata": 84.1
     }
   ]
 }
