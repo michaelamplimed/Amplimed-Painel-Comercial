@@ -1,6 +1,6 @@
 {
-  "geradoEm": "2026-09-03T12:30:28.077Z",
-  "geradoEmBR": "03/09/2026, 09:30:28",
+  "geradoEm": "2026-09-03T13:00:28.069Z",
+  "geradoEmBR": "03/09/2026, 10:00:28",
   "mes": {
     "ano": 2026,
     "mes": 9,
@@ -11,11 +11,11 @@
     "sdr": 40000
   },
   "kpis": {
-    "receitaRealizada": 5498.57,
+    "receitaRealizada": 5637.57,
     "metaMensal": 48000,
-    "pctMeta": 11.5,
-    "pipelineAberto": 24575,
-    "mediaDiaria": 1832.86
+    "pctMeta": 11.7,
+    "pipelineAberto": 24436,
+    "mediaDiaria": 1879.19
   },
   "receitaAcumulada": {
     "labels": [
@@ -26,7 +26,7 @@
     "realizado": [
       2898.4,
       4926.1,
-      5498.57
+      5637.57
     ],
     "meta": [
       1600,
@@ -97,23 +97,23 @@
     {
       "name": "Juliano",
       "nivel": "Pleno",
-      "ganhos": 3,
+      "ganhos": 4,
       "perdidos": 0,
       "crossSellGanhos": 2,
-      "aquisicaoAmount": 417,
+      "aquisicaoAmount": 556,
       "crossSellAmount": 109.9,
-      "totalAmount": 526.9,
-      "ticketMedio": 175.63,
+      "totalAmount": 665.9,
+      "ticketMedio": 166.48,
       "winRate": 100,
       "metaMes": 8800,
       "metaProRata": 880,
-      "pctMetaProRata": 59.9,
+      "pctMetaProRata": 75.7,
       "funil": {
         "sql": 12,
         "demo": 12,
         "sal": 9,
         "proposta": 8,
-        "won": 3,
+        "won": 4,
         "sqlToDemoP": 100,
         "demoToSalP": 75,
         "salToPropP": 88.9,
@@ -163,12 +163,12 @@
       "funil": {
         "sql": 17,
         "demo": 17,
-        "sal": 14,
-        "proposta": 6,
+        "sal": 15,
+        "proposta": 7,
         "won": 3,
         "sqlToDemoP": 100,
-        "demoToSalP": 82.4,
-        "salToPropP": 42.9,
+        "demoToSalP": 88.2,
+        "salToPropP": 46.7,
         "winRateP": 75
       }
     },
@@ -203,10 +203,10 @@
     {
       "name": "Ana",
       "sql": 6,
-      "recInfluenciada": 1125.9,
+      "recInfluenciada": 1264.9,
       "metaMes": 14000,
       "metaProRata": 1400,
-      "pctMetaProRata": 80.4
+      "pctMetaProRata": 90.4
     },
     {
       "name": "Amanda",
