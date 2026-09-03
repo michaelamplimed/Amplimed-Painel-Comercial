@@ -1,6 +1,6 @@
 {
-  "geradoEm": "2026-09-03T20:30:26.116Z",
-  "geradoEmBR": "03/09/2026, 17:30:26",
+  "geradoEm": "2026-09-03T20:54:53.081Z",
+  "geradoEmBR": "03/09/2026, 17:54:53",
   "mes": {
     "ano": 2026,
     "mes": 9,
@@ -14,7 +14,7 @@
     "receitaRealizada": 6976.62,
     "metaMensal": 48000,
     "pctMeta": 14.5,
-    "pipelineAberto": 25904.2,
+    "pipelineAberto": 25765.2,
     "mediaDiaria": 2325.54
   },
   "receitaAcumulada": {
@@ -35,8 +35,8 @@
     ]
   },
   "aging": {
-    "0-7d": 26,
-    "8-15d": 19,
+    "0-7d": 27,
+    "8-15d": 18,
     "16-30d": 19,
     "31-60d": 8,
     "+60d": 5
@@ -98,26 +98,26 @@
       "name": "Juliano",
       "nivel": "Pleno",
       "ganhos": 7,
-      "perdidos": 0,
+      "perdidos": 1,
       "crossSellGanhos": 2,
       "aquisicaoAmount": 873,
       "crossSellAmount": 109.9,
       "totalAmount": 982.9,
       "ticketMedio": 140.41,
-      "winRate": 100,
+      "winRate": 87.5,
       "metaMes": 8800,
       "metaProRata": 880,
       "pctMetaProRata": 111.7,
       "funil": {
-        "sql": 14,
-        "demo": 14,
+        "sql": 13,
+        "demo": 13,
         "sal": 12,
         "proposta": 12,
         "won": 7,
         "sqlToDemoP": 100,
-        "demoToSalP": 85.7,
+        "demoToSalP": 92.3,
         "salToPropP": 100,
-        "winRateP": 100
+        "winRateP": 87.5
       }
     },
     {
@@ -135,13 +135,13 @@
       "metaProRata": 880,
       "pctMetaProRata": 92.8,
       "funil": {
-        "sql": 14,
-        "demo": 14,
+        "sql": 15,
+        "demo": 15,
         "sal": 8,
         "proposta": 6,
         "won": 4,
         "sqlToDemoP": 100,
-        "demoToSalP": 57.1,
+        "demoToSalP": 53.3,
         "salToPropP": 75,
         "winRateP": 66.7
       }
@@ -202,7 +202,7 @@
   "sdrs": [
     {
       "name": "Ana",
-      "sql": 11,
+      "sql": 12,
       "recInfluenciada": 1770.9,
       "metaMes": 14000,
       "metaProRata": 1400,
