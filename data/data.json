@@ -1,6 +1,6 @@
 {
-  "geradoEm": "2026-09-04T18:00:28.883Z",
-  "geradoEmBR": "04/09/2026, 15:00:28",
+  "geradoEm": "2026-09-04T18:30:25.030Z",
+  "geradoEmBR": "04/09/2026, 15:30:25",
   "mes": {
     "ano": 2026,
     "mes": 9,
@@ -14,7 +14,7 @@
     "receitaRealizada": 7204.62,
     "metaMensal": 48000,
     "pctMeta": 15,
-    "pipelineAberto": 26302.1,
+    "pipelineAberto": 26700,
     "mediaDiaria": 1801.16
   },
   "receitaAcumulada": {
@@ -38,7 +38,7 @@
     ]
   },
   "aging": {
-    "0-7d": 31,
+    "0-7d": 32,
     "8-15d": 19,
     "16-30d": 20,
     "31-60d": 8,
@@ -86,13 +86,13 @@
       "metaProRata": 1440,
       "pctMetaProRata": 76.1,
       "funil": {
-        "sql": 19,
-        "demo": 19,
+        "sql": 20,
+        "demo": 20,
         "sal": 4,
         "proposta": 4,
         "won": 4,
         "sqlToDemoP": 100,
-        "demoToSalP": 21.1,
+        "demoToSalP": 20,
         "salToPropP": 100,
         "winRateP": 50
       }
@@ -213,7 +213,7 @@
     },
     {
       "name": "Amanda",
-      "sql": 14,
+      "sql": 15,
       "recInfluenciada": 2477,
       "metaMes": 14000,
       "metaProRata": 1866.67,
