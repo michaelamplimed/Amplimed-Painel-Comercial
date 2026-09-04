@@ -1,6 +1,6 @@
 {
-  "geradoEm": "2026-09-04T15:00:29.372Z",
-  "geradoEmBR": "04/09/2026, 12:00:29",
+  "geradoEm": "2026-09-04T15:30:26.978Z",
+  "geradoEmBR": "04/09/2026, 12:30:26",
   "mes": {
     "ano": 2026,
     "mes": 9,
@@ -38,7 +38,7 @@
     ]
   },
   "aging": {
-    "0-7d": 28,
+    "0-7d": 30,
     "8-15d": 19,
     "16-30d": 20,
     "31-60d": 8,
@@ -127,13 +127,13 @@
       "name": "Ariel",
       "nivel": "Pleno",
       "ganhos": 5,
-      "perdidos": 4,
+      "perdidos": 5,
       "crossSellGanhos": 0,
       "aquisicaoAmount": 956,
       "crossSellAmount": 0,
       "totalAmount": 956,
       "ticketMedio": 191.2,
-      "winRate": 55.6,
+      "winRate": 50,
       "metaMes": 8800,
       "metaProRata": 1173.33,
       "pctMetaProRata": 81.5,
@@ -213,7 +213,7 @@
     },
     {
       "name": "Amanda",
-      "sql": 11,
+      "sql": 13,
       "recInfluenciada": 2477,
       "metaMes": 14000,
       "metaProRata": 1866.67,
