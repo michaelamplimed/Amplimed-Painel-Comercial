@@ -1,6 +1,6 @@
 {
-  "geradoEm": "2026-09-04T13:30:23.974Z",
-  "geradoEmBR": "04/09/2026, 10:30:23",
+  "geradoEm": "2026-09-04T14:00:30.642Z",
+  "geradoEmBR": "04/09/2026, 11:00:30",
   "mes": {
     "ano": 2026,
     "mes": 9,
@@ -38,7 +38,7 @@
     ]
   },
   "aging": {
-    "0-7d": 25,
+    "0-7d": 26,
     "8-15d": 19,
     "16-30d": 20,
     "31-60d": 8,
@@ -140,12 +140,12 @@
       "funil": {
         "sql": 17,
         "demo": 17,
-        "sal": 9,
-        "proposta": 7,
+        "sal": 10,
+        "proposta": 8,
         "won": 5,
         "sqlToDemoP": 100,
-        "demoToSalP": 52.9,
-        "salToPropP": 77.8,
+        "demoToSalP": 58.8,
+        "salToPropP": 80,
         "winRateP": 71.4
       }
     },
@@ -221,7 +221,7 @@
     },
     {
       "name": "Francisco",
-      "sql": 6,
+      "sql": 7,
       "recInfluenciada": 1475.42,
       "metaMes": 12000,
       "metaProRata": 1600,
