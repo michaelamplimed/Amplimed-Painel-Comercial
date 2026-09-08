@@ -1,6 +1,6 @@
 {
-  "geradoEm": "2026-09-08T19:30:25.587Z",
-  "geradoEmBR": "08/09/2026, 16:30:25",
+  "geradoEm": "2026-09-08T20:00:27.261Z",
+  "geradoEmBR": "08/09/2026, 17:00:27",
   "mes": {
     "ano": 2026,
     "mes": 9,
@@ -14,7 +14,7 @@
     "receitaRealizada": 9194.12,
     "metaMensal": 48000,
     "pctMeta": 19.2,
-    "pipelineAberto": 25583.4,
+    "pipelineAberto": 25672.4,
     "mediaDiaria": 1149.27
   },
   "receitaAcumulada": {
@@ -87,26 +87,26 @@
       "name": "Eduardo",
       "nivel": "Sênior",
       "ganhos": 8,
-      "perdidos": 5,
+      "perdidos": 6,
       "crossSellGanhos": 1,
       "aquisicaoAmount": 1651.6,
       "crossSellAmount": 239.8,
       "totalAmount": 1891.4,
       "ticketMedio": 236.43,
-      "winRate": 61.5,
+      "winRate": 57.1,
       "metaMes": 10800,
       "metaProRata": 2880,
       "pctMetaProRata": 65.7,
       "funil": {
-        "sql": 24,
-        "demo": 24,
+        "sql": 23,
+        "demo": 23,
         "sal": 8,
         "proposta": 8,
         "won": 8,
         "sqlToDemoP": 100,
-        "demoToSalP": 33.3,
+        "demoToSalP": 34.8,
         "salToPropP": 100,
-        "winRateP": 61.5
+        "winRateP": 57.1
       }
     },
     {
@@ -124,13 +124,13 @@
       "metaProRata": 2346.67,
       "pctMetaProRata": 68.6,
       "funil": {
-        "sql": 19,
-        "demo": 19,
-        "sal": 17,
-        "proposta": 17,
+        "sql": 20,
+        "demo": 20,
+        "sal": 18,
+        "proposta": 18,
         "won": 11,
         "sqlToDemoP": 100,
-        "demoToSalP": 89.5,
+        "demoToSalP": 90,
         "salToPropP": 100,
         "winRateP": 84.6
       }
@@ -217,7 +217,7 @@
   "sdrs": [
     {
       "name": "Ana",
-      "sql": 21,
+      "sql": 22,
       "recInfluenciada": 3613.32,
       "metaMes": 14000,
       "metaProRata": 3733.33,
