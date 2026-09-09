@@ -1,6 +1,6 @@
 {
-  "geradoEm": "2026-09-09T17:55:29.076Z",
-  "geradoEmBR": "09/09/2026, 14:55:29",
+  "geradoEm": "2026-09-09T18:00:28.369Z",
+  "geradoEmBR": "09/09/2026, 15:00:28",
   "mes": {
     "ano": 2026,
     "mes": 9,
@@ -54,8 +54,8 @@
   },
   "aging": {
     "0-7d": 23,
-    "8-15d": 17,
-    "16-30d": 17,
+    "8-15d": 16,
+    "16-30d": 18,
     "31-60d": 10,
     "+60d": 5
   },
@@ -168,13 +168,13 @@
       "name": "Mayara",
       "nivel": "Pleno",
       "ganhos": 9,
-      "perdidos": 6,
+      "perdidos": 7,
       "crossSellGanhos": 2,
       "aquisicaoAmount": 3192.62,
       "crossSellAmount": 218.9,
       "totalAmount": 3411.52,
       "ticketMedio": 379.06,
-      "winRate": 60,
+      "winRate": 56.3,
       "metaMes": 8800,
       "metaProRata": 2640,
       "pctMetaProRata": 129.2,
@@ -228,7 +228,7 @@
     },
     {
       "name": "Amanda",
-      "sql": 30,
+      "sql": 31,
       "recInfluenciada": 4969.5,
       "metaMes": 14000,
       "metaProRata": 4200,
