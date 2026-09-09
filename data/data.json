@@ -1,6 +1,6 @@
 {
-  "geradoEm": "2026-09-09T17:00:27.847Z",
-  "geradoEmBR": "09/09/2026, 14:00:27",
+  "geradoEm": "2026-09-09T17:30:25.802Z",
+  "geradoEmBR": "09/09/2026, 14:30:25",
   "mes": {
     "ano": 2026,
     "mes": 9,
@@ -11,11 +11,11 @@
     "sdr": 40000
   },
   "kpis": {
-    "receitaRealizada": 10901.92,
+    "receitaRealizada": 10990.92,
     "metaMensal": 48000,
-    "pctMeta": 22.7,
+    "pctMeta": 22.9,
     "pipelineAberto": 22003.5,
-    "mediaDiaria": 1211.32
+    "mediaDiaria": 1221.21
   },
   "receitaAcumulada": {
     "labels": [
@@ -38,7 +38,7 @@
       8398.32,
       8398.32,
       9542.02,
-      10901.92
+      10990.92
     ],
     "meta": [
       1600,
@@ -53,7 +53,7 @@
     ]
   },
   "aging": {
-    "0-7d": 24,
+    "0-7d": 23,
     "8-15d": 17,
     "16-30d": 17,
     "31-60d": 9,
@@ -63,27 +63,27 @@
     {
       "name": "Tamara",
       "nivel": "Sênior",
-      "ganhos": 6,
+      "ganhos": 7,
       "perdidos": 5,
       "crossSellGanhos": 1,
-      "aquisicaoAmount": 2215.3,
+      "aquisicaoAmount": 2304.3,
       "crossSellAmount": 15,
-      "totalAmount": 2230.3,
-      "ticketMedio": 371.72,
-      "winRate": 54.5,
+      "totalAmount": 2319.3,
+      "ticketMedio": 331.33,
+      "winRate": 58.3,
       "metaMes": 10800,
       "metaProRata": 3240,
-      "pctMetaProRata": 68.8,
+      "pctMetaProRata": 71.6,
       "funil": {
         "sql": 19,
-        "demo": 18,
-        "sal": 10,
-        "proposta": 10,
-        "won": 6,
-        "sqlToDemoP": 94.7,
-        "demoToSalP": 55.6,
+        "demo": 19,
+        "sal": 11,
+        "proposta": 11,
+        "won": 7,
+        "sqlToDemoP": 100,
+        "demoToSalP": 57.9,
         "salToPropP": 100,
-        "winRateP": 54.5
+        "winRateP": 58.3
       }
     },
     {
@@ -229,10 +229,10 @@
     {
       "name": "Amanda",
       "sql": 29,
-      "recInfluenciada": 4880.5,
+      "recInfluenciada": 4969.5,
       "metaMes": 14000,
       "metaProRata": 4200,
-      "pctMetaProRata": 116.2
+      "pctMetaProRata": 118.3
     },
     {
       "name": "Francisco",
