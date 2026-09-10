@@ -1,6 +1,6 @@
 {
-  "geradoEm": "2026-09-10T18:00:28.078Z",
-  "geradoEmBR": "10/09/2026, 15:00:28",
+  "geradoEm": "2026-09-10T18:30:26.570Z",
+  "geradoEmBR": "10/09/2026, 15:30:26",
   "mes": {
     "ano": 2026,
     "mes": 9,
@@ -14,7 +14,7 @@
     "receitaRealizada": 13857.7,
     "metaMensal": 48000,
     "pctMeta": 28.9,
-    "pipelineAberto": 20086.5,
+    "pipelineAberto": 20345.4,
     "mediaDiaria": 1385.77
   },
   "receitaAcumulada": {
@@ -56,7 +56,7 @@
     ]
   },
   "aging": {
-    "0-7d": 23,
+    "0-7d": 27,
     "8-15d": 23,
     "16-30d": 19,
     "31-60d": 11,
@@ -78,14 +78,14 @@
       "metaProRata": 3600,
       "pctMetaProRata": 78.2,
       "funil": {
-        "sql": 20,
-        "demo": 20,
-        "sal": 11,
+        "sql": 21,
+        "demo": 21,
+        "sal": 12,
         "proposta": 11,
         "won": 9,
         "sqlToDemoP": 100,
-        "demoToSalP": 55,
-        "salToPropP": 100,
+        "demoToSalP": 57.1,
+        "salToPropP": 91.7,
         "winRateP": 60
       }
     },
@@ -182,13 +182,13 @@
       "metaProRata": 2933.33,
       "pctMetaProRata": 121.5,
       "funil": {
-        "sql": 21,
-        "demo": 21,
+        "sql": 24,
+        "demo": 24,
         "sal": 19,
         "proposta": 11,
         "won": 10,
         "sqlToDemoP": 100,
-        "demoToSalP": 90.5,
+        "demoToSalP": 79.2,
         "salToPropP": 57.9,
         "winRateP": 62.5
       }
@@ -223,7 +223,7 @@
   "sdrs": [
     {
       "name": "Ana",
-      "sql": 33,
+      "sql": 35,
       "recInfluenciada": 4988.31,
       "metaMes": 14000,
       "metaProRata": 4666.67,
@@ -231,7 +231,7 @@
     },
     {
       "name": "Amanda",
-      "sql": 42,
+      "sql": 44,
       "recInfluenciada": 7187.29,
       "metaMes": 14000,
       "metaProRata": 4666.67,
