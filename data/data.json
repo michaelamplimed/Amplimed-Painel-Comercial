@@ -1,6 +1,6 @@
 {
-  "geradoEm": "2026-09-10T18:30:26.570Z",
-  "geradoEmBR": "10/09/2026, 15:30:26",
+  "geradoEm": "2026-09-10T19:00:30.493Z",
+  "geradoEmBR": "10/09/2026, 16:00:30",
   "mes": {
     "ano": 2026,
     "mes": 9,
@@ -56,7 +56,7 @@
     ]
   },
   "aging": {
-    "0-7d": 27,
+    "0-7d": 26,
     "8-15d": 23,
     "16-30d": 19,
     "31-60d": 11,
@@ -93,13 +93,13 @@
       "name": "Eduardo",
       "nivel": "Sênior",
       "ganhos": 8,
-      "perdidos": 11,
+      "perdidos": 12,
       "crossSellGanhos": 1,
       "aquisicaoAmount": 1651.6,
       "crossSellAmount": 239.8,
       "totalAmount": 1891.4,
       "ticketMedio": 236.43,
-      "winRate": 42.1,
+      "winRate": 40,
       "metaMes": 10800,
       "metaProRata": 3600,
       "pctMetaProRata": 52.5,
@@ -145,13 +145,13 @@
       "name": "Ariel",
       "nivel": "Pleno",
       "ganhos": 8,
-      "perdidos": 9,
+      "perdidos": 10,
       "crossSellGanhos": 0,
       "aquisicaoAmount": 1871.7,
       "crossSellAmount": 0,
       "totalAmount": 1871.7,
       "ticketMedio": 233.96,
-      "winRate": 47.1,
+      "winRate": 44.4,
       "metaMes": 8800,
       "metaProRata": 2933.33,
       "pctMetaProRata": 63.8,
@@ -223,7 +223,7 @@
   "sdrs": [
     {
       "name": "Ana",
-      "sql": 35,
+      "sql": 36,
       "recInfluenciada": 4988.31,
       "metaMes": 14000,
       "metaProRata": 4666.67,
