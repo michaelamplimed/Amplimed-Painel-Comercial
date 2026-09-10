@@ -1,6 +1,6 @@
 {
-  "geradoEm": "2026-09-10T17:47:52.372Z",
-  "geradoEmBR": "10/09/2026, 14:47:52",
+  "geradoEm": "2026-09-10T18:00:28.078Z",
+  "geradoEmBR": "10/09/2026, 15:00:28",
   "mes": {
     "ano": 2026,
     "mes": 9,
@@ -231,7 +231,7 @@
     },
     {
       "name": "Amanda",
-      "sql": 40,
+      "sql": 42,
       "recInfluenciada": 7187.29,
       "metaMes": 14000,
       "metaProRata": 4666.67,
@@ -239,7 +239,7 @@
     },
     {
       "name": "Francisco",
-      "sql": 6,
+      "sql": 4,
       "recInfluenciada": 258.9,
       "metaMes": 12000,
       "metaProRata": 4000,
