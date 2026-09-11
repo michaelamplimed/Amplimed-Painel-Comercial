@@ -1,6 +1,6 @@
 {
-  "geradoEm": "2026-09-11T12:30:24.523Z",
-  "geradoEmBR": "11/09/2026, 09:30:24",
+  "geradoEm": "2026-09-11T13:00:28.926Z",
+  "geradoEmBR": "11/09/2026, 10:00:28",
   "mes": {
     "ano": 2026,
     "mes": 9,
@@ -11,11 +11,11 @@
     "sdr": 40000
   },
   "kpis": {
-    "receitaRealizada": 14392.49,
+    "receitaRealizada": 14531.49,
     "metaMensal": 48000,
-    "pctMeta": 30,
+    "pctMeta": 30.3,
     "pipelineAberto": 20917.4,
-    "mediaDiaria": 1308.41
+    "mediaDiaria": 1321.04
   },
   "receitaAcumulada": {
     "labels": [
@@ -42,7 +42,7 @@
       9542.02,
       11231.91,
       14392.49,
-      14392.49
+      14531.49
     ],
     "meta": [
       1600,
@@ -59,9 +59,9 @@
     ]
   },
   "aging": {
-    "0-7d": 21,
+    "0-7d": 22,
     "8-15d": 20,
-    "16-30d": 22,
+    "16-30d": 21,
     "31-60d": 11,
     "+60d": 5
   },
@@ -173,27 +173,27 @@
     {
       "name": "Mayara",
       "nivel": "Pleno",
-      "ganhos": 11,
+      "ganhos": 12,
       "perdidos": 8,
       "crossSellGanhos": 2,
-      "aquisicaoAmount": 3790.4,
+      "aquisicaoAmount": 3929.4,
       "crossSellAmount": 218.9,
-      "totalAmount": 4009.3,
-      "ticketMedio": 364.48,
-      "winRate": 57.9,
+      "totalAmount": 4148.3,
+      "ticketMedio": 345.69,
+      "winRate": 60,
       "metaMes": 8800,
       "metaProRata": 3226.67,
-      "pctMetaProRata": 124.3,
+      "pctMetaProRata": 128.6,
       "funil": {
         "sql": 25,
         "demo": 25,
-        "sal": 20,
-        "proposta": 12,
-        "won": 11,
+        "sal": 21,
+        "proposta": 13,
+        "won": 12,
         "sqlToDemoP": 100,
-        "demoToSalP": 80,
-        "salToPropP": 60,
-        "winRateP": 64.7
+        "demoToSalP": 84,
+        "salToPropP": 61.9,
+        "winRateP": 66.7
       }
     },
     {
@@ -234,11 +234,11 @@
     },
     {
       "name": "Amanda",
-      "sql": 44,
-      "recInfluenciada": 7722.08,
+      "sql": 45,
+      "recInfluenciada": 7861.08,
       "metaMes": 14000,
       "metaProRata": 5133.33,
-      "pctMetaProRata": 150.4
+      "pctMetaProRata": 153.1
     },
     {
       "name": "Francisco",
