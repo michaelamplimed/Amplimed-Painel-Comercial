@@ -1,6 +1,6 @@
 {
-  "geradoEm": "2026-09-11T11:30:23.818Z",
-  "geradoEmBR": "11/09/2026, 08:30:23",
+  "geradoEm": "2026-09-11T12:00:29.598Z",
+  "geradoEmBR": "11/09/2026, 09:00:29",
   "mes": {
     "ano": 2026,
     "mes": 9,
@@ -14,7 +14,7 @@
     "receitaRealizada": 14392.49,
     "metaMensal": 48000,
     "pctMeta": 30,
-    "pipelineAberto": 21557.4,
+    "pipelineAberto": 20917.4,
     "mediaDiaria": 1308.41
   },
   "receitaAcumulada": {
@@ -59,7 +59,7 @@
     ]
   },
   "aging": {
-    "0-7d": 22,
+    "0-7d": 21,
     "8-15d": 22,
     "16-30d": 21,
     "31-60d": 11,
@@ -122,26 +122,26 @@
       "name": "Juliano",
       "nivel": "Pleno",
       "ganhos": 15,
-      "perdidos": 3,
+      "perdidos": 4,
       "crossSellGanhos": 2,
       "aquisicaoAmount": 1867.89,
       "crossSellAmount": 109.9,
       "totalAmount": 1977.79,
       "ticketMedio": 131.85,
-      "winRate": 83.3,
+      "winRate": 78.9,
       "metaMes": 8800,
       "metaProRata": 3226.67,
       "pctMetaProRata": 61.3,
       "funil": {
-        "sql": 23,
-        "demo": 23,
+        "sql": 22,
+        "demo": 22,
         "sal": 21,
         "proposta": 21,
         "won": 15,
         "sqlToDemoP": 100,
-        "demoToSalP": 91.3,
+        "demoToSalP": 95.5,
         "salToPropP": 100,
-        "winRateP": 83.3
+        "winRateP": 78.9
       }
     },
     {
