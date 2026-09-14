@@ -1,6 +1,6 @@
 {
-  "geradoEm": "2026-09-14T17:30:23.134Z",
-  "geradoEmBR": "14/09/2026, 14:30:23",
+  "geradoEm": "2026-09-14T18:00:28.204Z",
+  "geradoEmBR": "14/09/2026, 15:00:28",
   "mes": {
     "ano": 2026,
     "mes": 9,
@@ -68,10 +68,10 @@
     ]
   },
   "aging": {
-    "0-7d": 26,
+    "0-7d": 27,
     "8-15d": 18,
-    "16-30d": 18,
-    "31-60d": 13,
+    "16-30d": 17,
+    "31-60d": 14,
     "+60d": 5
   },
   "closers": [
@@ -194,13 +194,13 @@
       "metaProRata": 4106.67,
       "pctMetaProRata": 118.2,
       "funil": {
-        "sql": 24,
-        "demo": 24,
+        "sql": 25,
+        "demo": 25,
         "sal": 22,
         "proposta": 15,
         "won": 13,
         "sqlToDemoP": 100,
-        "demoToSalP": 91.7,
+        "demoToSalP": 88,
         "salToPropP": 68.2,
         "winRateP": 61.9
       }
@@ -235,7 +235,7 @@
   "sdrs": [
     {
       "name": "Ana",
-      "sql": 46,
+      "sql": 45,
       "recInfluenciada": 6844.61,
       "metaMes": 14000,
       "metaProRata": 6533.33,
@@ -243,7 +243,7 @@
     },
     {
       "name": "Amanda",
-      "sql": 54,
+      "sql": 56,
       "recInfluenciada": 8546.98,
       "metaMes": 14000,
       "metaProRata": 6533.33,
