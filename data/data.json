@@ -1,6 +1,6 @@
 {
-  "geradoEm": "2026-09-14T18:00:28.204Z",
-  "geradoEmBR": "14/09/2026, 15:00:28",
+  "geradoEm": "2026-09-14T18:30:25.146Z",
+  "geradoEmBR": "14/09/2026, 15:30:25",
   "mes": {
     "ano": 2026,
     "mes": 9,
@@ -11,11 +11,11 @@
     "sdr": 40000
   },
   "kpis": {
-    "receitaRealizada": 16360.19,
+    "receitaRealizada": 16638.19,
     "metaMensal": 48000,
-    "pctMeta": 34.1,
+    "pctMeta": 34.7,
     "pipelineAberto": 22015.4,
-    "mediaDiaria": 1168.59
+    "mediaDiaria": 1188.44
   },
   "receitaAcumulada": {
     "labels": [
@@ -48,7 +48,7 @@
       16104.19,
       16104.19,
       16104.19,
-      16360.19
+      16638.19
     ],
     "meta": [
       1600,
@@ -68,8 +68,8 @@
     ]
   },
   "aging": {
-    "0-7d": 27,
-    "8-15d": 18,
+    "0-7d": 28,
+    "8-15d": 19,
     "16-30d": 17,
     "31-60d": 14,
     "+60d": 5
@@ -78,27 +78,27 @@
     {
       "name": "Tamara",
       "nivel": "Sênior",
-      "ganhos": 11,
+      "ganhos": 12,
       "perdidos": 9,
       "crossSellGanhos": 2,
-      "aquisicaoAmount": 3319.1,
+      "aquisicaoAmount": 3597.1,
       "crossSellAmount": 104,
-      "totalAmount": 3423.1,
-      "ticketMedio": 311.19,
-      "winRate": 55,
+      "totalAmount": 3701.1,
+      "ticketMedio": 308.43,
+      "winRate": 57.1,
       "metaMes": 10800,
       "metaProRata": 5040,
-      "pctMetaProRata": 67.9,
+      "pctMetaProRata": 73.4,
       "funil": {
-        "sql": 23,
-        "demo": 23,
-        "sal": 17,
-        "proposta": 13,
-        "won": 11,
+        "sql": 24,
+        "demo": 24,
+        "sal": 18,
+        "proposta": 14,
+        "won": 12,
         "sqlToDemoP": 100,
-        "demoToSalP": 73.9,
-        "salToPropP": 76.5,
-        "winRateP": 55
+        "demoToSalP": 75,
+        "salToPropP": 77.8,
+        "winRateP": 57.1
       }
     },
     {
@@ -235,7 +235,7 @@
   "sdrs": [
     {
       "name": "Ana",
-      "sql": 45,
+      "sql": 47,
       "recInfluenciada": 6844.61,
       "metaMes": 14000,
       "metaProRata": 6533.33,
