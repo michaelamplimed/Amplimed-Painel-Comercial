@@ -1,6 +1,6 @@
 {
-  "geradoEm": "2026-09-14T12:30:27.039Z",
-  "geradoEmBR": "14/09/2026, 09:30:27",
+  "geradoEm": "2026-09-14T13:00:31.282Z",
+  "geradoEmBR": "14/09/2026, 10:00:31",
   "mes": {
     "ano": 2026,
     "mes": 9,
@@ -14,7 +14,7 @@
     "receitaRealizada": 16243.19,
     "metaMensal": 48000,
     "pctMeta": 33.8,
-    "pipelineAberto": 21287.4,
+    "pipelineAberto": 21148.4,
     "mediaDiaria": 1160.23
   },
   "receitaAcumulada": {
@@ -92,12 +92,12 @@
       "funil": {
         "sql": 25,
         "demo": 25,
-        "sal": 15,
+        "sal": 16,
         "proposta": 13,
         "won": 11,
         "sqlToDemoP": 100,
-        "demoToSalP": 60,
-        "salToPropP": 86.7,
+        "demoToSalP": 64,
+        "salToPropP": 81.3,
         "winRateP": 64.7
       }
     },
@@ -157,26 +157,26 @@
       "name": "Ariel",
       "nivel": "Pleno",
       "ganhos": 9,
-      "perdidos": 12,
+      "perdidos": 13,
       "crossSellGanhos": 1,
       "aquisicaoAmount": 2010.7,
       "crossSellAmount": 90,
       "totalAmount": 2100.7,
       "ticketMedio": 233.41,
-      "winRate": 42.9,
+      "winRate": 40.9,
       "metaMes": 8800,
       "metaProRata": 4106.67,
       "pctMetaProRata": 51.2,
       "funil": {
-        "sql": 24,
-        "demo": 24,
+        "sql": 23,
+        "demo": 23,
         "sal": 14,
         "proposta": 11,
         "won": 9,
         "sqlToDemoP": 100,
-        "demoToSalP": 58.3,
+        "demoToSalP": 60.9,
         "salToPropP": 78.6,
-        "winRateP": 60
+        "winRateP": 56.3
       }
     },
     {
@@ -235,27 +235,27 @@
   "sdrs": [
     {
       "name": "Ana",
-      "sql": 40,
-      "recInfluenciada": 5835.11,
+      "sql": 41,
+      "recInfluenciada": 6094.01,
       "metaMes": 14000,
       "metaProRata": 6533.33,
-      "pctMetaProRata": 89.3
+      "pctMetaProRata": 93.3
     },
     {
       "name": "Amanda",
-      "sql": 50,
-      "recInfluenciada": 8407.98,
+      "sql": 51,
+      "recInfluenciada": 8546.98,
       "metaMes": 14000,
       "metaProRata": 6533.33,
-      "pctMetaProRata": 128.7
+      "pctMetaProRata": 130.8
     },
     {
       "name": "Francisco",
-      "sql": 4,
-      "recInfluenciada": 397.9,
+      "sql": 3,
+      "recInfluenciada": 0,
       "metaMes": 12000,
       "metaProRata": 5600,
-      "pctMetaProRata": 7.1
+      "pctMetaProRata": 0
     }
   ]
 }
