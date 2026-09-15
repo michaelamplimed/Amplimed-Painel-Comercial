@@ -1,6 +1,6 @@
 {
-  "geradoEm": "2026-09-15T12:00:27.495Z",
-  "geradoEmBR": "15/09/2026, 09:00:27",
+  "geradoEm": "2026-09-15T12:30:25.964Z",
+  "geradoEmBR": "15/09/2026, 09:30:25",
   "mes": {
     "ano": 2026,
     "mes": 9,
@@ -73,8 +73,8 @@
   "aging": {
     "0-7d": 24,
     "8-15d": 20,
-    "16-30d": 16,
-    "31-60d": 14,
+    "16-30d": 15,
+    "31-60d": 13,
     "+60d": 4
   },
   "closers": [
@@ -82,26 +82,26 @@
       "name": "Tamara",
       "nivel": "Sênior",
       "ganhos": 13,
-      "perdidos": 11,
+      "perdidos": 13,
       "crossSellGanhos": 2,
       "aquisicaoAmount": 3736.1,
       "crossSellAmount": 104,
       "totalAmount": 3840.1,
       "ticketMedio": 295.39,
-      "winRate": 54.2,
+      "winRate": 50,
       "metaMes": 10800,
       "metaProRata": 5400,
       "pctMetaProRata": 71.1,
       "funil": {
-        "sql": 23,
-        "demo": 23,
+        "sql": 21,
+        "demo": 21,
         "sal": 18,
         "proposta": 14,
         "won": 13,
         "sqlToDemoP": 100,
-        "demoToSalP": 78.3,
+        "demoToSalP": 85.7,
         "salToPropP": 77.8,
-        "winRateP": 54.2
+        "winRateP": 50
       }
     },
     {
