@@ -1,6 +1,6 @@
 {
-  "geradoEm": "2026-09-16T11:30:23.595Z",
-  "geradoEmBR": "16/09/2026, 08:30:23",
+  "geradoEm": "2026-09-16T12:00:27.967Z",
+  "geradoEmBR": "16/09/2026, 09:00:27",
   "mes": {
     "ano": 2026,
     "mes": 9,
@@ -14,7 +14,7 @@
     "receitaRealizada": 17733.19,
     "metaMensal": 48000,
     "pctMeta": 36.9,
-    "pipelineAberto": 16250.5,
+    "pipelineAberto": 16509.4,
     "mediaDiaria": 1108.32
   },
   "receitaAcumulada": {
@@ -74,7 +74,7 @@
     ]
   },
   "aging": {
-    "0-7d": 27,
+    "0-7d": 26,
     "8-15d": 20,
     "16-30d": 14,
     "31-60d": 13,
@@ -150,11 +150,11 @@
       "funil": {
         "sql": 24,
         "demo": 24,
-        "sal": 21,
-        "proposta": 21,
+        "sal": 22,
+        "proposta": 22,
         "won": 16,
         "sqlToDemoP": 100,
-        "demoToSalP": 87.5,
+        "demoToSalP": 91.7,
         "salToPropP": 100,
         "winRateP": 72.7
       }
@@ -163,26 +163,26 @@
       "name": "Ariel",
       "nivel": "Pleno",
       "ganhos": 10,
-      "perdidos": 13,
+      "perdidos": 14,
       "crossSellGanhos": 1,
       "aquisicaoAmount": 2099.7,
       "crossSellAmount": 90,
       "totalAmount": 2189.7,
       "ticketMedio": 218.97,
-      "winRate": 43.5,
+      "winRate": 41.7,
       "metaMes": 8800,
       "metaProRata": 4693.33,
       "pctMetaProRata": 46.7,
       "funil": {
-        "sql": 25,
-        "demo": 25,
+        "sql": 24,
+        "demo": 24,
         "sal": 16,
         "proposta": 13,
         "won": 10,
         "sqlToDemoP": 100,
-        "demoToSalP": 64,
+        "demoToSalP": 66.7,
         "salToPropP": 81.3,
-        "winRateP": 58.8
+        "winRateP": 55.6
       }
     },
     {
