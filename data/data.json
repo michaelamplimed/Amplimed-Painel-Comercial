@@ -1,6 +1,6 @@
 {
-  "geradoEm": "2026-09-16T17:00:28.373Z",
-  "geradoEmBR": "16/09/2026, 14:00:28",
+  "geradoEm": "2026-09-16T17:30:26.918Z",
+  "geradoEmBR": "16/09/2026, 14:30:26",
   "mes": {
     "ano": 2026,
     "mes": 9,
@@ -14,7 +14,7 @@
     "receitaRealizada": 18383.2,
     "metaMensal": 48000,
     "pctMeta": 38.3,
-    "pipelineAberto": 16613.6,
+    "pipelineAberto": 16065.58,
     "mediaDiaria": 1148.95
   },
   "receitaAcumulada": {
@@ -76,8 +76,8 @@
   "aging": {
     "0-7d": 30,
     "8-15d": 20,
-    "16-30d": 13,
-    "31-60d": 12,
+    "16-30d": 12,
+    "31-60d": 13,
     "+60d": 4
   },
   "closers": [
@@ -122,13 +122,13 @@
       "metaProRata": 5760,
       "pctMetaProRata": 37.8,
       "funil": {
-        "sql": 21,
-        "demo": 21,
+        "sql": 22,
+        "demo": 22,
         "sal": 10,
         "proposta": 10,
         "won": 9,
         "sqlToDemoP": 100,
-        "demoToSalP": 47.6,
+        "demoToSalP": 45.5,
         "salToPropP": 100,
         "winRateP": 33.3
       }
@@ -163,26 +163,26 @@
       "name": "Ariel",
       "nivel": "Pleno",
       "ganhos": 10,
-      "perdidos": 16,
+      "perdidos": 17,
       "crossSellGanhos": 1,
       "aquisicaoAmount": 2099.7,
       "crossSellAmount": 90,
       "totalAmount": 2189.7,
       "ticketMedio": 218.97,
-      "winRate": 38.5,
+      "winRate": 37,
       "metaMes": 8800,
       "metaProRata": 4693.33,
       "pctMetaProRata": 46.7,
       "funil": {
-        "sql": 23,
-        "demo": 23,
+        "sql": 22,
+        "demo": 22,
         "sal": 16,
         "proposta": 13,
         "won": 10,
         "sqlToDemoP": 100,
-        "demoToSalP": 69.6,
+        "demoToSalP": 72.7,
         "salToPropP": 81.3,
-        "winRateP": 52.6
+        "winRateP": 50
       }
     },
     {
@@ -200,14 +200,14 @@
       "metaProRata": 4693.33,
       "pctMetaProRata": 116,
       "funil": {
-        "sql": 26,
-        "demo": 26,
-        "sal": 21,
-        "proposta": 16,
+        "sql": 28,
+        "demo": 28,
+        "sal": 22,
+        "proposta": 17,
         "won": 15,
         "sqlToDemoP": 100,
-        "demoToSalP": 80.8,
-        "salToPropP": 76.2,
+        "demoToSalP": 78.6,
+        "salToPropP": 77.3,
         "winRateP": 60
       }
     },
