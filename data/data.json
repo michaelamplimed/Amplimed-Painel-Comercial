@@ -1,6 +1,6 @@
 {
-  "geradoEm": "2026-09-16T19:00:26.832Z",
-  "geradoEmBR": "16/09/2026, 16:00:26",
+  "geradoEm": "2026-09-16T19:30:24.471Z",
+  "geradoEmBR": "16/09/2026, 16:30:24",
   "mes": {
     "ano": 2026,
     "mes": 9,
@@ -74,7 +74,7 @@
     ]
   },
   "aging": {
-    "0-7d": 29,
+    "0-7d": 28,
     "8-15d": 17,
     "16-30d": 13,
     "31-60d": 13,
@@ -189,26 +189,26 @@
       "name": "Mayara",
       "nivel": "Pleno",
       "ganhos": 16,
-      "perdidos": 11,
+      "perdidos": 12,
       "crossSellGanhos": 4,
       "aquisicaoAmount": 5382.28,
       "crossSellAmount": 335.9,
       "totalAmount": 5718.18,
       "ticketMedio": 357.39,
-      "winRate": 59.3,
+      "winRate": 57.1,
       "metaMes": 8800,
       "metaProRata": 4693.33,
       "pctMetaProRata": 121.8,
       "funil": {
-        "sql": 28,
-        "demo": 28,
+        "sql": 27,
+        "demo": 27,
         "sal": 23,
         "proposta": 18,
         "won": 16,
         "sqlToDemoP": 100,
-        "demoToSalP": 82.1,
+        "demoToSalP": 85.2,
         "salToPropP": 78.3,
-        "winRateP": 61.5
+        "winRateP": 59.3
       }
     },
     {
