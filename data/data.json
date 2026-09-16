@@ -1,6 +1,6 @@
 {
-  "geradoEm": "2026-09-16T21:30:24.908Z",
-  "geradoEmBR": "16/09/2026, 18:30:24",
+  "geradoEm": "2026-09-16T21:57:12.384Z",
+  "geradoEmBR": "16/09/2026, 18:57:12",
   "mes": {
     "ano": 2026,
     "mes": 9,
@@ -11,11 +11,11 @@
     "sdr": 40000
   },
   "kpis": {
-    "receitaRealizada": 19841.08,
+    "receitaRealizada": 19960.98,
     "metaMensal": 48000,
-    "pctMeta": 41.3,
+    "pctMeta": 41.6,
     "pipelineAberto": 14808.7,
-    "mediaDiaria": 1240.07
+    "mediaDiaria": 1247.56
   },
   "receitaAcumulada": {
     "labels": [
@@ -52,7 +52,7 @@
       16104.19,
       16777.19,
       17733.19,
-      19841.08
+      19960.98
     ],
     "meta": [
       1600,
@@ -216,23 +216,23 @@
       "nivel": "Coordenadora",
       "ganhos": 3,
       "perdidos": 1,
-      "crossSellGanhos": 1,
+      "crossSellGanhos": 2,
       "aquisicaoAmount": 1737,
-      "crossSellAmount": 89,
-      "totalAmount": 1826,
-      "ticketMedio": 608.67,
+      "crossSellAmount": 208.9,
+      "totalAmount": 1945.9,
+      "ticketMedio": 648.63,
       "winRate": 75,
       "metaMes": 0,
       "metaProRata": 0,
       "pctMetaProRata": 0,
       "funil": {
-        "sql": 5,
-        "demo": 5,
+        "sql": 6,
+        "demo": 6,
         "sal": 4,
         "proposta": 3,
         "won": 3,
         "sqlToDemoP": 100,
-        "demoToSalP": 80,
+        "demoToSalP": 66.7,
         "salToPropP": 75,
         "winRateP": 75
       }
