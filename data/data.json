@@ -1,6 +1,6 @@
 {
-  "geradoEm": "2026-09-16T00:07:37.703Z",
-  "geradoEmBR": "15/09/2026, 21:07:37",
+  "geradoEm": "2026-09-16T10:00:27.770Z",
+  "geradoEmBR": "16/09/2026, 07:00:27",
   "mes": {
     "ano": 2026,
     "mes": 9,
@@ -15,7 +15,7 @@
     "metaMensal": 48000,
     "pctMeta": 36.9,
     "pipelineAberto": 16250.5,
-    "mediaDiaria": 1182.21
+    "mediaDiaria": 1108.32
   },
   "receitaAcumulada": {
     "labels": [
@@ -33,7 +33,8 @@
       "12/09",
       "13/09",
       "14/09",
-      "15/09"
+      "15/09",
+      "16/09"
     ],
     "realizado": [
       2898.4,
@@ -50,6 +51,7 @@
       16104.19,
       16104.19,
       16777.19,
+      17733.19,
       17733.19
     ],
     "meta": [
@@ -67,7 +69,8 @@
       19200,
       20800,
       22400,
-      24000
+      24000,
+      25600
     ]
   },
   "aging": {
@@ -90,8 +93,8 @@
       "ticketMedio": 284.22,
       "winRate": 51.9,
       "metaMes": 10800,
-      "metaProRata": 5400,
-      "pctMetaProRata": 73.7,
+      "metaProRata": 5760,
+      "pctMetaProRata": 69.1,
       "funil": {
         "sql": 24,
         "demo": 24,
@@ -116,8 +119,8 @@
       "ticketMedio": 242.16,
       "winRate": 31,
       "metaMes": 10800,
-      "metaProRata": 5400,
-      "pctMetaProRata": 40.4,
+      "metaProRata": 5760,
+      "pctMetaProRata": 37.8,
       "funil": {
         "sql": 22,
         "demo": 22,
@@ -142,8 +145,8 @@
       "ticketMedio": 132.3,
       "winRate": 69.6,
       "metaMes": 8800,
-      "metaProRata": 4400,
-      "pctMetaProRata": 48.1,
+      "metaProRata": 4693.33,
+      "pctMetaProRata": 45.1,
       "funil": {
         "sql": 24,
         "demo": 24,
@@ -168,8 +171,8 @@
       "ticketMedio": 218.97,
       "winRate": 43.5,
       "metaMes": 8800,
-      "metaProRata": 4400,
-      "pctMetaProRata": 49.8,
+      "metaProRata": 4693.33,
+      "pctMetaProRata": 46.7,
       "funil": {
         "sql": 25,
         "demo": 25,
@@ -194,8 +197,8 @@
       "ticketMedio": 362.81,
       "winRate": 55.6,
       "metaMes": 8800,
-      "metaProRata": 4400,
-      "pctMetaProRata": 123.7,
+      "metaProRata": 4693.33,
+      "pctMetaProRata": 116,
       "funil": {
         "sql": 25,
         "demo": 25,
@@ -241,23 +244,23 @@
       "sql": 53,
       "recInfluenciada": 7211.61,
       "metaMes": 14000,
-      "metaProRata": 7000,
-      "pctMetaProRata": 103
+      "metaProRata": 7466.67,
+      "pctMetaProRata": 96.6
     },
     {
       "name": "Amanda",
       "sql": 63,
       "recInfluenciada": 9552.98,
       "metaMes": 14000,
-      "metaProRata": 7000,
-      "pctMetaProRata": 136.5
+      "metaProRata": 7466.67,
+      "pctMetaProRata": 127.9
     },
     {
       "name": "Francisco",
       "sql": 3,
       "recInfluenciada": 0,
       "metaMes": 12000,
-      "metaProRata": 6000,
+      "metaProRata": 6400,
       "pctMetaProRata": 0
     }
   ]
