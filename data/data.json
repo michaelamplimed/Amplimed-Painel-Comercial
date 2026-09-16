@@ -1,6 +1,6 @@
 {
-  "geradoEm": "2026-09-16T16:30:25.580Z",
-  "geradoEmBR": "16/09/2026, 13:30:25",
+  "geradoEm": "2026-09-16T17:00:28.373Z",
+  "geradoEmBR": "16/09/2026, 14:00:28",
   "mes": {
     "ano": 2026,
     "mes": 9,
@@ -11,11 +11,11 @@
     "sdr": 40000
   },
   "kpis": {
-    "receitaRealizada": 18105.2,
+    "receitaRealizada": 18383.2,
     "metaMensal": 48000,
-    "pctMeta": 37.7,
-    "pipelineAberto": 15813.6,
-    "mediaDiaria": 1131.58
+    "pctMeta": 38.3,
+    "pipelineAberto": 16613.6,
+    "mediaDiaria": 1148.95
   },
   "receitaAcumulada": {
     "labels": [
@@ -52,7 +52,7 @@
       16104.19,
       16777.19,
       17733.19,
-      18105.2
+      18383.2
     ],
     "meta": [
       1600,
@@ -84,27 +84,27 @@
     {
       "name": "Tamara",
       "nivel": "Sênior",
-      "ganhos": 15,
-      "perdidos": 13,
+      "ganhos": 16,
+      "perdidos": 12,
       "crossSellGanhos": 2,
-      "aquisicaoAmount": 4014.1,
+      "aquisicaoAmount": 4292.1,
       "crossSellAmount": 104,
-      "totalAmount": 4118.1,
-      "ticketMedio": 274.54,
-      "winRate": 53.6,
+      "totalAmount": 4396.1,
+      "ticketMedio": 274.76,
+      "winRate": 57.1,
       "metaMes": 10800,
       "metaProRata": 5760,
-      "pctMetaProRata": 71.5,
+      "pctMetaProRata": 76.3,
       "funil": {
-        "sql": 26,
-        "demo": 26,
-        "sal": 20,
-        "proposta": 17,
-        "won": 15,
+        "sql": 27,
+        "demo": 27,
+        "sal": 21,
+        "proposta": 18,
+        "won": 16,
         "sqlToDemoP": 100,
-        "demoToSalP": 76.9,
-        "salToPropP": 85,
-        "winRateP": 53.6
+        "demoToSalP": 77.8,
+        "salToPropP": 85.7,
+        "winRateP": 57.1
       }
     },
     {
@@ -242,10 +242,10 @@
     {
       "name": "Ana",
       "sql": 55,
-      "recInfluenciada": 7350.61,
+      "recInfluenciada": 7628.61,
       "metaMes": 14000,
       "metaProRata": 7466.67,
-      "pctMetaProRata": 98.4
+      "pctMetaProRata": 102.2
     },
     {
       "name": "Amanda",
