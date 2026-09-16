@@ -1,6 +1,6 @@
 {
-  "geradoEm": "2026-09-16T21:00:33.218Z",
-  "geradoEmBR": "16/09/2026, 18:00:33",
+  "geradoEm": "2026-09-16T21:30:24.908Z",
+  "geradoEmBR": "16/09/2026, 18:30:24",
   "mes": {
     "ano": 2026,
     "mes": 9,
@@ -14,7 +14,7 @@
     "receitaRealizada": 19841.08,
     "metaMensal": 48000,
     "pctMeta": 41.3,
-    "pipelineAberto": 14758.7,
+    "pipelineAberto": 14808.7,
     "mediaDiaria": 1240.07
   },
   "receitaAcumulada": {
@@ -124,12 +124,12 @@
       "funil": {
         "sql": 22,
         "demo": 22,
-        "sal": 13,
+        "sal": 14,
         "proposta": 11,
         "won": 10,
         "sqlToDemoP": 100,
-        "demoToSalP": 59.1,
-        "salToPropP": 84.6,
+        "demoToSalP": 63.6,
+        "salToPropP": 78.6,
         "winRateP": 35.7
       }
     },
