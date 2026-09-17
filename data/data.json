@@ -1,6 +1,6 @@
 {
-  "geradoEm": "2026-09-17T20:00:30.024Z",
-  "geradoEmBR": "17/09/2026, 17:00:30",
+  "geradoEm": "2026-09-17T20:30:25.696Z",
+  "geradoEmBR": "17/09/2026, 17:30:25",
   "mes": {
     "ano": 2026,
     "mes": 9,
@@ -14,7 +14,7 @@
     "receitaRealizada": 20855.98,
     "metaMensal": 48000,
     "pctMeta": 43.4,
-    "pipelineAberto": 14381.7,
+    "pipelineAberto": 13413.7,
     "mediaDiaria": 1226.82
   },
   "receitaAcumulada": {
@@ -77,10 +77,10 @@
     ]
   },
   "aging": {
-    "0-7d": 32,
+    "0-7d": 33,
     "8-15d": 14,
-    "16-30d": 14,
-    "31-60d": 12,
+    "16-30d": 13,
+    "31-60d": 11,
     "+60d": 3
   },
   "closers": [
@@ -114,26 +114,26 @@
       "name": "Eduardo",
       "nivel": "Sênior",
       "ganhos": 12,
-      "perdidos": 21,
+      "perdidos": 23,
       "crossSellGanhos": 1,
       "aquisicaoAmount": 2256.6,
       "crossSellAmount": 239.8,
       "totalAmount": 2496.4,
       "ticketMedio": 208.03,
-      "winRate": 36.4,
+      "winRate": 34.3,
       "metaMes": 10800,
       "metaProRata": 6120,
       "pctMetaProRata": 40.8,
       "funil": {
-        "sql": 22,
-        "demo": 22,
+        "sql": 20,
+        "demo": 20,
         "sal": 14,
         "proposta": 13,
         "won": 12,
         "sqlToDemoP": 100,
-        "demoToSalP": 63.6,
+        "demoToSalP": 70,
         "salToPropP": 92.9,
-        "winRateP": 40
+        "winRateP": 37.5
       }
     },
     {
@@ -244,7 +244,7 @@
   "sdrs": [
     {
       "name": "Ana",
-      "sql": 65,
+      "sql": 66,
       "recInfluenciada": 8882.59,
       "metaMes": 14000,
       "metaProRata": 7933.33,
