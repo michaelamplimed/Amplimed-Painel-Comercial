@@ -1,6 +1,6 @@
 {
-  "geradoEm": "2026-09-17T11:00:28.374Z",
-  "geradoEmBR": "17/09/2026, 08:00:28",
+  "geradoEm": "2026-09-17T11:30:26.605Z",
+  "geradoEmBR": "17/09/2026, 08:30:26",
   "mes": {
     "ano": 2026,
     "mes": 9,
@@ -80,7 +80,7 @@
     "0-7d": 28,
     "8-15d": 17,
     "16-30d": 14,
-    "31-60d": 12,
+    "31-60d": 11,
     "+60d": 4
   },
   "closers": [
@@ -140,13 +140,13 @@
       "name": "Juliano",
       "nivel": "Pleno",
       "ganhos": 17,
-      "perdidos": 7,
+      "perdidos": 8,
       "crossSellGanhos": 3,
       "aquisicaoAmount": 2239.9,
       "crossSellAmount": 169.8,
       "totalAmount": 2409.7,
       "ticketMedio": 141.75,
-      "winRate": 70.8,
+      "winRate": 68,
       "metaMes": 8800,
       "metaProRata": 4986.67,
       "pctMetaProRata": 48.3,
@@ -192,26 +192,26 @@
       "name": "Mayara",
       "nivel": "Pleno",
       "ganhos": 17,
-      "perdidos": 14,
+      "perdidos": 15,
       "crossSellGanhos": 4,
       "aquisicaoAmount": 5615.28,
       "crossSellAmount": 335.9,
       "totalAmount": 5951.18,
       "ticketMedio": 350.07,
-      "winRate": 54.8,
+      "winRate": 53.1,
       "metaMes": 8800,
       "metaProRata": 4986.67,
       "pctMetaProRata": 119.3,
       "funil": {
-        "sql": 26,
-        "demo": 26,
-        "sal": 23,
+        "sql": 25,
+        "demo": 25,
+        "sal": 22,
         "proposta": 18,
         "won": 17,
         "sqlToDemoP": 100,
-        "demoToSalP": 88.5,
-        "salToPropP": 78.3,
-        "winRateP": 58.6
+        "demoToSalP": 88,
+        "salToPropP": 81.8,
+        "winRateP": 56.7
       }
     },
     {
@@ -244,7 +244,7 @@
   "sdrs": [
     {
       "name": "Ana",
-      "sql": 57,
+      "sql": 58,
       "recInfluenciada": 8704.59,
       "metaMes": 14000,
       "metaProRata": 7933.33,
