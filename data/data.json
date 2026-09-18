@@ -1,6 +1,6 @@
 {
-  "geradoEm": "2026-09-18T21:31:33.038Z",
-  "geradoEmBR": "18/09/2026, 18:31:33",
+  "geradoEm": "2026-09-18T22:00:29.920Z",
+  "geradoEmBR": "18/09/2026, 19:00:29",
   "mes": {
     "ano": 2026,
     "mes": 9,
@@ -11,11 +11,11 @@
     "sdr": 40000
   },
   "kpis": {
-    "receitaRealizada": 22461.92,
+    "receitaRealizada": 22600.92,
     "metaMensal": 48000,
-    "pctMeta": 46.8,
+    "pctMeta": 47.1,
     "pipelineAberto": 17084.8,
-    "mediaDiaria": 1247.88
+    "mediaDiaria": 1255.61
   },
   "receitaAcumulada": {
     "labels": [
@@ -56,7 +56,7 @@
       17733.19,
       19841.08,
       20736.08,
-      22461.92
+      22600.92
     ],
     "meta": [
       1600,
@@ -80,7 +80,7 @@
     ]
   },
   "aging": {
-    "0-7d": 34,
+    "0-7d": 33,
     "8-15d": 15,
     "16-30d": 16,
     "31-60d": 10,
@@ -116,27 +116,27 @@
     {
       "name": "Eduardo",
       "nivel": "Sênior",
-      "ganhos": 14,
+      "ganhos": 15,
       "perdidos": 25,
       "crossSellGanhos": 2,
-      "aquisicaoAmount": 2884.4,
+      "aquisicaoAmount": 3023.4,
       "crossSellAmount": 359.7,
-      "totalAmount": 3244.1,
-      "ticketMedio": 231.72,
-      "winRate": 35.9,
+      "totalAmount": 3383.1,
+      "ticketMedio": 225.54,
+      "winRate": 37.5,
       "metaMes": 10800,
       "metaProRata": 6480,
-      "pctMetaProRata": 50.1,
+      "pctMetaProRata": 52.2,
       "funil": {
-        "sql": 22,
-        "demo": 22,
-        "sal": 15,
-        "proposta": 15,
-        "won": 14,
+        "sql": 23,
+        "demo": 23,
+        "sal": 16,
+        "proposta": 16,
+        "won": 15,
         "sqlToDemoP": 100,
-        "demoToSalP": 68.2,
+        "demoToSalP": 69.6,
         "salToPropP": 100,
-        "winRateP": 40
+        "winRateP": 41.7
       }
     },
     {
@@ -180,14 +180,14 @@
       "metaProRata": 5280,
       "pctMetaProRata": 55.8,
       "funil": {
-        "sql": 23,
-        "demo": 23,
-        "sal": 17,
-        "proposta": 14,
+        "sql": 25,
+        "demo": 25,
+        "sal": 18,
+        "proposta": 15,
         "won": 13,
         "sqlToDemoP": 100,
-        "demoToSalP": 73.9,
-        "salToPropP": 82.4,
+        "demoToSalP": 72,
+        "salToPropP": 83.3,
         "winRateP": 52
       }
     },
@@ -256,10 +256,10 @@
     {
       "name": "Amanda",
       "sql": 76,
-      "recInfluenciada": 10824.99,
+      "recInfluenciada": 10963.99,
       "metaMes": 14000,
       "metaProRata": 8400,
-      "pctMetaProRata": 128.9
+      "pctMetaProRata": 130.5
     },
     {
       "name": "Francisco",
