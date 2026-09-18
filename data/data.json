@@ -1,6 +1,6 @@
 {
-  "geradoEm": "2026-09-18T13:30:24.494Z",
-  "geradoEmBR": "18/09/2026, 10:30:24",
+  "geradoEm": "2026-09-18T14:00:30.770Z",
+  "geradoEmBR": "18/09/2026, 11:00:30",
   "mes": {
     "ano": 2026,
     "mes": 9,
@@ -80,8 +80,8 @@
     ]
   },
   "aging": {
-    "0-7d": 29,
-    "8-15d": 16,
+    "0-7d": 27,
+    "8-15d": 17,
     "16-30d": 14,
     "31-60d": 11,
     "+60d": 3
@@ -117,13 +117,13 @@
       "name": "Eduardo",
       "nivel": "Sênior",
       "ganhos": 13,
-      "perdidos": 23,
+      "perdidos": 25,
       "crossSellGanhos": 2,
       "aquisicaoAmount": 2515.5,
       "crossSellAmount": 359.7,
       "totalAmount": 2875.2,
       "ticketMedio": 221.17,
-      "winRate": 36.1,
+      "winRate": 34.2,
       "metaMes": 10800,
       "metaProRata": 6480,
       "pctMetaProRata": 44.4,
@@ -136,7 +136,7 @@
         "sqlToDemoP": 100,
         "demoToSalP": 66.7,
         "salToPropP": 100,
-        "winRateP": 39.4
+        "winRateP": 38.2
       }
     },
     {
@@ -255,7 +255,7 @@
     },
     {
       "name": "Amanda",
-      "sql": 72,
+      "sql": 73,
       "recInfluenciada": 10824.99,
       "metaMes": 14000,
       "metaProRata": 8400,
