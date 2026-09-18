@@ -1,6 +1,6 @@
 {
-  "geradoEm": "2026-09-18T17:00:31.846Z",
-  "geradoEmBR": "18/09/2026, 14:00:31",
+  "geradoEm": "2026-09-18T17:30:25.493Z",
+  "geradoEmBR": "18/09/2026, 14:30:25",
   "mes": {
     "ano": 2026,
     "mes": 9,
@@ -14,7 +14,7 @@
     "receitaRealizada": 21416.22,
     "metaMensal": 48000,
     "pctMeta": 44.6,
-    "pipelineAberto": 15950.7,
+    "pipelineAberto": 16217.7,
     "mediaDiaria": 1189.79
   },
   "receitaAcumulada": {
@@ -80,7 +80,7 @@
     ]
   },
   "aging": {
-    "0-7d": 32,
+    "0-7d": 33,
     "8-15d": 15,
     "16-30d": 16,
     "31-60d": 10,
@@ -105,11 +105,11 @@
         "sql": 31,
         "demo": 31,
         "sal": 24,
-        "proposta": 20,
+        "proposta": 21,
         "won": 18,
         "sqlToDemoP": 100,
         "demoToSalP": 77.4,
-        "salToPropP": 83.3,
+        "salToPropP": 87.5,
         "winRateP": 60
       }
     },
@@ -156,11 +156,11 @@
       "funil": {
         "sql": 27,
         "demo": 27,
-        "sal": 23,
-        "proposta": 23,
+        "sal": 24,
+        "proposta": 24,
         "won": 18,
         "sqlToDemoP": 100,
-        "demoToSalP": 85.2,
+        "demoToSalP": 88.9,
         "salToPropP": 100,
         "winRateP": 72
       }
@@ -206,13 +206,13 @@
       "metaProRata": 5280,
       "pctMetaProRata": 116.1,
       "funil": {
-        "sql": 28,
-        "demo": 28,
+        "sql": 29,
+        "demo": 29,
         "sal": 21,
         "proposta": 18,
         "won": 17,
         "sqlToDemoP": 100,
-        "demoToSalP": 75,
+        "demoToSalP": 72.4,
         "salToPropP": 85.7,
         "winRateP": 54.8
       }
@@ -232,14 +232,14 @@
       "metaProRata": 0,
       "pctMetaProRata": 0,
       "funil": {
-        "sql": 6,
-        "demo": 6,
-        "sal": 4,
+        "sql": 7,
+        "demo": 7,
+        "sal": 5,
         "proposta": 3,
         "won": 3,
         "sqlToDemoP": 100,
-        "demoToSalP": 66.7,
-        "salToPropP": 75,
+        "demoToSalP": 71.4,
+        "salToPropP": 60,
         "winRateP": 75
       }
     }
@@ -247,7 +247,7 @@
   "sdrs": [
     {
       "name": "Ana",
-      "sql": 69,
+      "sql": 70,
       "recInfluenciada": 9141.49,
       "metaMes": 14000,
       "metaProRata": 8400,
