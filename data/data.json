@@ -1,6 +1,6 @@
 {
-  "geradoEm": "2026-09-21T16:30:23.551Z",
-  "geradoEmBR": "21/09/2026, 13:30:23",
+  "geradoEm": "2026-09-21T17:00:29.792Z",
+  "geradoEmBR": "21/09/2026, 14:00:29",
   "mes": {
     "ano": 2026,
     "mes": 9,
@@ -89,7 +89,7 @@
     ]
   },
   "aging": {
-    "0-7d": 37,
+    "0-7d": 38,
     "8-15d": 15,
     "16-30d": 19,
     "31-60d": 10,
@@ -137,13 +137,13 @@
       "metaProRata": 7560,
       "pctMetaProRata": 46.6,
       "funil": {
-        "sql": 26,
-        "demo": 26,
+        "sql": 27,
+        "demo": 27,
         "sal": 18,
         "proposta": 17,
         "won": 16,
         "sqlToDemoP": 100,
-        "demoToSalP": 69.2,
+        "demoToSalP": 66.7,
         "salToPropP": 94.4,
         "winRateP": 42.1
       }
@@ -163,14 +163,14 @@
       "metaProRata": 6160,
       "pctMetaProRata": 43.4,
       "funil": {
-        "sql": 28,
-        "demo": 28,
-        "sal": 24,
+        "sql": 29,
+        "demo": 29,
+        "sal": 25,
         "proposta": 24,
         "won": 18,
         "sqlToDemoP": 100,
-        "demoToSalP": 85.7,
-        "salToPropP": 100,
+        "demoToSalP": 86.2,
+        "salToPropP": 96,
         "winRateP": 72
       }
     },
@@ -256,7 +256,7 @@
   "sdrs": [
     {
       "name": "Ana",
-      "sql": 78,
+      "sql": 79,
       "recInfluenciada": 10390.29,
       "metaMes": 14000,
       "metaProRata": 9800,
