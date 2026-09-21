@@ -1,6 +1,6 @@
 {
-  "geradoEm": "2026-09-21T18:01:05.017Z",
-  "geradoEmBR": "21/09/2026, 15:01:05",
+  "geradoEm": "2026-09-21T18:30:22.587Z",
+  "geradoEmBR": "21/09/2026, 15:30:22",
   "mes": {
     "ano": 2026,
     "mes": 9,
@@ -89,11 +89,11 @@
     ]
   },
   "aging": {
-    "0-7d": 39,
-    "8-15d": 14,
+    "0-7d": 37,
+    "8-15d": 15,
     "16-30d": 18,
     "31-60d": 10,
-    "+60d": 3
+    "+60d": 4
   },
   "closers": [
     {
@@ -111,13 +111,13 @@
       "metaProRata": 7560,
       "pctMetaProRata": 73.9,
       "funil": {
-        "sql": 32,
-        "demo": 32,
+        "sql": 33,
+        "demo": 33,
         "sal": 24,
         "proposta": 21,
         "won": 19,
         "sqlToDemoP": 100,
-        "demoToSalP": 75,
+        "demoToSalP": 72.7,
         "salToPropP": 87.5,
         "winRateP": 61.3
       }
@@ -126,26 +126,26 @@
       "name": "Eduardo",
       "nivel": "Sênior",
       "ganhos": 16,
-      "perdidos": 27,
+      "perdidos": 28,
       "crossSellGanhos": 2,
       "aquisicaoAmount": 3162.4,
       "crossSellAmount": 359.7,
       "totalAmount": 3522.1,
       "ticketMedio": 220.13,
-      "winRate": 37.2,
+      "winRate": 36.4,
       "metaMes": 10800,
       "metaProRata": 7560,
       "pctMetaProRata": 46.6,
       "funil": {
-        "sql": 27,
-        "demo": 27,
+        "sql": 26,
+        "demo": 26,
         "sal": 18,
         "proposta": 17,
         "won": 16,
         "sqlToDemoP": 100,
-        "demoToSalP": 66.7,
+        "demoToSalP": 69.2,
         "salToPropP": 94.4,
-        "winRateP": 42.1
+        "winRateP": 41
       }
     },
     {
@@ -166,11 +166,11 @@
         "sql": 30,
         "demo": 30,
         "sal": 25,
-        "proposta": 24,
+        "proposta": 25,
         "won": 18,
         "sqlToDemoP": 100,
         "demoToSalP": 83.3,
-        "salToPropP": 96,
+        "salToPropP": 100,
         "winRateP": 72
       }
     },
@@ -264,7 +264,7 @@
     },
     {
       "name": "Amanda",
-      "sql": 88,
+      "sql": 89,
       "recInfluenciada": 11752.99,
       "metaMes": 14000,
       "metaProRata": 9800,
