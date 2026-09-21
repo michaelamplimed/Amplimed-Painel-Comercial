@@ -1,6 +1,6 @@
 {
-  "geradoEm": "2026-09-21T11:30:24.211Z",
-  "geradoEmBR": "21/09/2026, 08:30:24",
+  "geradoEm": "2026-09-21T12:00:30.044Z",
+  "geradoEmBR": "21/09/2026, 09:00:30",
   "mes": {
     "ano": 2026,
     "mes": 9,
@@ -11,11 +11,11 @@
     "sdr": 40000
   },
   "kpis": {
-    "receitaRealizada": 22739.92,
+    "receitaRealizada": 23111.92,
     "metaMensal": 48000,
-    "pctMeta": 47.4,
-    "pipelineAberto": 17456.8,
-    "mediaDiaria": 1082.85
+    "pctMeta": 48.1,
+    "pipelineAberto": 18082,
+    "mediaDiaria": 1100.57
   },
   "receitaAcumulada": {
     "labels": [
@@ -62,7 +62,7 @@
       22600.92,
       22600.92,
       22600.92,
-      22739.92
+      23111.92
     ],
     "meta": [
       1600,
@@ -89,8 +89,8 @@
     ]
   },
   "aging": {
-    "0-7d": 27,
-    "8-15d": 16,
+    "0-7d": 28,
+    "8-15d": 15,
     "16-30d": 20,
     "31-60d": 10,
     "+60d": 2
@@ -177,27 +177,27 @@
     {
       "name": "Ariel",
       "nivel": "Pleno",
-      "ganhos": 13,
+      "ganhos": 14,
       "perdidos": 20,
       "crossSellGanhos": 1,
-      "aquisicaoAmount": 2857.6,
+      "aquisicaoAmount": 3090.6,
       "crossSellAmount": 90,
-      "totalAmount": 2947.6,
-      "ticketMedio": 226.74,
-      "winRate": 39.4,
+      "totalAmount": 3180.6,
+      "ticketMedio": 227.19,
+      "winRate": 41.2,
       "metaMes": 8800,
       "metaProRata": 6160,
-      "pctMetaProRata": 47.9,
+      "pctMetaProRata": 51.6,
       "funil": {
         "sql": 26,
         "demo": 26,
         "sal": 19,
         "proposta": 16,
-        "won": 13,
+        "won": 14,
         "sqlToDemoP": 100,
         "demoToSalP": 73.1,
         "salToPropP": 84.2,
-        "winRateP": 52
+        "winRateP": 53.8
       }
     },
     {
@@ -256,11 +256,11 @@
   "sdrs": [
     {
       "name": "Ana",
-      "sql": 74,
-      "recInfluenciada": 10018.29,
+      "sql": 76,
+      "recInfluenciada": 10251.29,
       "metaMes": 14000,
       "metaProRata": 9800,
-      "pctMetaProRata": 102.2
+      "pctMetaProRata": 104.6
     },
     {
       "name": "Amanda",
