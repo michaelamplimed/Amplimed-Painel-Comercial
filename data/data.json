@@ -1,6 +1,6 @@
 {
-  "geradoEm": "2026-09-21T13:30:33.897Z",
-  "geradoEmBR": "21/09/2026, 10:30:33",
+  "geradoEm": "2026-09-21T14:00:31.991Z",
+  "geradoEmBR": "21/09/2026, 11:00:31",
   "mes": {
     "ano": 2026,
     "mes": 9,
@@ -89,7 +89,7 @@
     ]
   },
   "aging": {
-    "0-7d": 29,
+    "0-7d": 30,
     "8-15d": 14,
     "16-30d": 20,
     "31-60d": 10,
@@ -256,15 +256,15 @@
   "sdrs": [
     {
       "name": "Ana",
-      "sql": 76,
-      "recInfluenciada": 10251.29,
+      "sql": 77,
+      "recInfluenciada": 10390.29,
       "metaMes": 14000,
       "metaProRata": 9800,
-      "pctMetaProRata": 104.6
+      "pctMetaProRata": 106
     },
     {
       "name": "Amanda",
-      "sql": 77,
+      "sql": 79,
       "recInfluenciada": 11752.99,
       "metaMes": 14000,
       "metaProRata": 9800,
