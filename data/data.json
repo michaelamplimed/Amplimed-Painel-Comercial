@@ -1,6 +1,6 @@
 {
-  "geradoEm": "2026-09-22T20:00:31.059Z",
-  "geradoEmBR": "22/09/2026, 17:00:31",
+  "geradoEm": "2026-09-22T20:30:23.482Z",
+  "geradoEmBR": "22/09/2026, 17:30:23",
   "mes": {
     "ano": 2026,
     "mes": 9,
@@ -11,11 +11,11 @@
     "sdr": 40000
   },
   "kpis": {
-    "receitaRealizada": 26596.35,
+    "receitaRealizada": 26714.5,
     "metaMensal": 48000,
-    "pctMeta": 55.4,
-    "pipelineAberto": 19035.94,
-    "mediaDiaria": 1208.93
+    "pctMeta": 55.7,
+    "pipelineAberto": 18917.79,
+    "mediaDiaria": 1214.3
   },
   "receitaAcumulada": {
     "labels": [
@@ -64,7 +64,7 @@
       22600.92,
       22600.92,
       24356.06,
-      26596.35
+      26714.5
     ],
     "meta": [
       1600,
@@ -128,27 +128,27 @@
     {
       "name": "Eduardo",
       "nivel": "Sênior",
-      "ganhos": 19,
+      "ganhos": 20,
       "perdidos": 29,
       "crossSellGanhos": 2,
-      "aquisicaoAmount": 3479.4,
+      "aquisicaoAmount": 3597.55,
       "crossSellAmount": 359.7,
-      "totalAmount": 3839.1,
-      "ticketMedio": 202.06,
-      "winRate": 39.6,
+      "totalAmount": 3957.25,
+      "ticketMedio": 197.86,
+      "winRate": 40.8,
       "metaMes": 10800,
       "metaProRata": 7920,
-      "pctMetaProRata": 48.5,
+      "pctMetaProRata": 50,
       "funil": {
         "sql": 29,
         "demo": 29,
-        "sal": 20,
-        "proposta": 19,
-        "won": 19,
+        "sal": 21,
+        "proposta": 20,
+        "won": 20,
         "sqlToDemoP": 100,
-        "demoToSalP": 69,
-        "salToPropP": 95,
-        "winRateP": 44.2
+        "demoToSalP": 72.4,
+        "salToPropP": 95.2,
+        "winRateP": 45.5
       }
     },
     {
@@ -181,13 +181,13 @@
       "name": "Ariel",
       "nivel": "Pleno",
       "ganhos": 15,
-      "perdidos": 25,
+      "perdidos": 26,
       "crossSellGanhos": 1,
       "aquisicaoAmount": 4087.8,
       "crossSellAmount": 90,
       "totalAmount": 4177.8,
       "ticketMedio": 278.52,
-      "winRate": 37.5,
+      "winRate": 36.6,
       "metaMes": 8800,
       "metaProRata": 6453.33,
       "pctMetaProRata": 64.7,
@@ -259,11 +259,11 @@
   "sdrs": [
     {
       "name": "Ana",
-      "sql": 87,
-      "recInfluenciada": 12245.48,
+      "sql": 89,
+      "recInfluenciada": 12363.63,
       "metaMes": 14000,
       "metaProRata": 10266.67,
-      "pctMetaProRata": 119.3
+      "pctMetaProRata": 120.4
     },
     {
       "name": "Amanda",
