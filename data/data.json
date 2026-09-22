@@ -1,6 +1,6 @@
 {
-  "geradoEm": "2026-09-22T14:30:25.994Z",
-  "geradoEmBR": "22/09/2026, 11:30:25",
+  "geradoEm": "2026-09-22T15:00:33.478Z",
+  "geradoEmBR": "22/09/2026, 12:00:33",
   "mes": {
     "ano": 2026,
     "mes": 9,
@@ -11,11 +11,11 @@
     "sdr": 40000
   },
   "kpis": {
-    "receitaRealizada": 25872.25,
+    "receitaRealizada": 25980.15,
     "metaMensal": 48000,
-    "pctMeta": 53.9,
+    "pctMeta": 54.1,
     "pipelineAberto": 19508.7,
-    "mediaDiaria": 1176.01
+    "mediaDiaria": 1180.92
   },
   "receitaAcumulada": {
     "labels": [
@@ -64,7 +64,7 @@
       22600.92,
       22600.92,
       24356.06,
-      25872.25
+      25980.15
     ],
     "meta": [
       1600,
@@ -92,7 +92,7 @@
     ]
   },
   "aging": {
-    "0-7d": 36,
+    "0-7d": 38,
     "8-15d": 14,
     "16-30d": 15,
     "31-60d": 8,
@@ -156,15 +156,15 @@
       "nivel": "Pleno",
       "ganhos": 20,
       "perdidos": 9,
-      "crossSellGanhos": 5,
+      "crossSellGanhos": 6,
       "aquisicaoAmount": 2656.9,
-      "crossSellAmount": 295.94,
-      "totalAmount": 2952.84,
-      "ticketMedio": 147.64,
+      "crossSellAmount": 403.84,
+      "totalAmount": 3060.74,
+      "ticketMedio": 153.04,
       "winRate": 69,
       "metaMes": 8800,
       "metaProRata": 6453.33,
-      "pctMetaProRata": 45.8,
+      "pctMetaProRata": 47.4,
       "funil": {
         "sql": 32,
         "demo": 32,
@@ -220,12 +220,12 @@
       "funil": {
         "sql": 34,
         "demo": 34,
-        "sal": 30,
+        "sal": 32,
         "proposta": 26,
         "won": 22,
         "sqlToDemoP": 100,
-        "demoToSalP": 88.2,
-        "salToPropP": 86.7,
+        "demoToSalP": 94.1,
+        "salToPropP": 81.3,
         "winRateP": 59.5
       }
     },
@@ -259,7 +259,7 @@
   "sdrs": [
     {
       "name": "Ana",
-      "sql": 82,
+      "sql": 84,
       "recInfluenciada": 12106.48,
       "metaMes": 14000,
       "metaProRata": 10266.67,
