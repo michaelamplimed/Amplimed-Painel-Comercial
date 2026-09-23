@@ -1,6 +1,6 @@
 {
-  "geradoEm": "2026-09-23T14:46:54.243Z",
-  "geradoEmBR": "23/09/2026, 11:46:54",
+  "geradoEm": "2026-09-23T15:00:29.705Z",
+  "geradoEmBR": "23/09/2026, 12:00:29",
   "mes": {
     "ano": 2026,
     "mes": 9,
@@ -95,7 +95,7 @@
     ]
   },
   "aging": {
-    "0-7d": 41,
+    "0-7d": 42,
     "8-15d": 16,
     "16-30d": 12,
     "31-60d": 7,
@@ -120,11 +120,11 @@
         "sql": 34,
         "demo": 34,
         "sal": 27,
-        "proposta": 23,
+        "proposta": 24,
         "won": 21,
         "sqlToDemoP": 100,
         "demoToSalP": 79.4,
-        "salToPropP": 85.2,
+        "salToPropP": 88.9,
         "winRateP": 53.8
       }
     },
@@ -270,7 +270,7 @@
     },
     {
       "name": "Amanda",
-      "sql": 97,
+      "sql": 98,
       "recInfluenciada": 12856.09,
       "metaMes": 14000,
       "metaProRata": 10733.33,
