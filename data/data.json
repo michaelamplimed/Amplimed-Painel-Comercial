@@ -1,6 +1,6 @@
 {
-  "geradoEm": "2026-09-23T19:30:26.200Z",
-  "geradoEmBR": "23/09/2026, 16:30:26",
+  "geradoEm": "2026-09-23T20:00:29.475Z",
+  "geradoEmBR": "23/09/2026, 17:00:29",
   "mes": {
     "ano": 2026,
     "mes": 9,
@@ -14,7 +14,7 @@
     "receitaRealizada": 28685.01,
     "metaMensal": 48000,
     "pctMeta": 59.8,
-    "pipelineAberto": 18395.89,
+    "pipelineAberto": 18770.89,
     "mediaDiaria": 1247.17
   },
   "receitaAcumulada": {
@@ -95,7 +95,7 @@
     ]
   },
   "aging": {
-    "0-7d": 41,
+    "0-7d": 42,
     "8-15d": 16,
     "16-30d": 13,
     "31-60d": 7,
@@ -117,15 +117,15 @@
       "metaProRata": 8280,
       "pctMetaProRata": 79.1,
       "funil": {
-        "sql": 35,
-        "demo": 35,
-        "sal": 27,
-        "proposta": 24,
-        "won": 21,
+        "sql": 36,
+        "demo": 36,
+        "sal": 29,
+        "proposta": 25,
+        "won": 22,
         "sqlToDemoP": 100,
-        "demoToSalP": 77.1,
-        "salToPropP": 88.9,
-        "winRateP": 53.8
+        "demoToSalP": 80.6,
+        "salToPropP": 86.2,
+        "winRateP": 55
       }
     },
     {
@@ -247,22 +247,22 @@
       "metaProRata": 0,
       "pctMetaProRata": 0,
       "funil": {
-        "sql": 7,
-        "demo": 7,
-        "sal": 6,
-        "proposta": 4,
-        "won": 4,
+        "sql": 6,
+        "demo": 6,
+        "sal": 5,
+        "proposta": 3,
+        "won": 3,
         "sqlToDemoP": 100,
-        "demoToSalP": 85.7,
-        "salToPropP": 66.7,
-        "winRateP": 80
+        "demoToSalP": 83.3,
+        "salToPropP": 60,
+        "winRateP": 75
       }
     }
   ],
   "sdrs": [
     {
       "name": "Ana",
-      "sql": 96,
+      "sql": 97,
       "recInfluenciada": 13930.14,
       "metaMes": 14000,
       "metaProRata": 10733.33,
