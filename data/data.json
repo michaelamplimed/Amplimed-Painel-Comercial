@@ -1,6 +1,6 @@
 {
-  "geradoEm": "2026-09-24T14:00:33.973Z",
-  "geradoEmBR": "24/09/2026, 11:00:33",
+  "geradoEm": "2026-09-24T14:30:25.557Z",
+  "geradoEmBR": "24/09/2026, 11:30:25",
   "mes": {
     "ano": 2026,
     "mes": 9,
@@ -11,11 +11,11 @@
     "sdr": 40000
   },
   "kpis": {
-    "receitaRealizada": 28804.91,
+    "receitaRealizada": 28982.91,
     "metaMensal": 48000,
-    "pctMeta": 60,
-    "pipelineAberto": 18608.89,
-    "mediaDiaria": 1200.2
+    "pctMeta": 60.4,
+    "pipelineAberto": 18341.89,
+    "mediaDiaria": 1207.62
   },
   "receitaAcumulada": {
     "labels": [
@@ -68,7 +68,7 @@
       24356.06,
       26606.6,
       28685.01,
-      28804.91
+      28982.91
     ],
     "meta": [
       1600,
@@ -98,8 +98,8 @@
     ]
   },
   "aging": {
-    "0-7d": 40,
-    "8-15d": 18,
+    "0-7d": 39,
+    "8-15d": 17,
     "16-30d": 12,
     "31-60d": 7,
     "+60d": 2
@@ -160,27 +160,27 @@
     {
       "name": "Juliano",
       "nivel": "Pleno",
-      "ganhos": 21,
-      "perdidos": 13,
+      "ganhos": 22,
+      "perdidos": 14,
       "crossSellGanhos": 7,
-      "aquisicaoAmount": 2795.9,
+      "aquisicaoAmount": 2973.9,
       "crossSellAmount": 548.94,
-      "totalAmount": 3344.84,
-      "ticketMedio": 159.28,
-      "winRate": 61.8,
+      "totalAmount": 3522.84,
+      "ticketMedio": 160.13,
+      "winRate": 61.1,
       "metaMes": 8800,
       "metaProRata": 7040,
-      "pctMetaProRata": 47.5,
+      "pctMetaProRata": 50,
       "funil": {
-        "sql": 30,
-        "demo": 30,
-        "sal": 27,
-        "proposta": 27,
-        "won": 21,
+        "sql": 29,
+        "demo": 29,
+        "sal": 26,
+        "proposta": 26,
+        "won": 22,
         "sqlToDemoP": 100,
-        "demoToSalP": 90,
+        "demoToSalP": 89.7,
         "salToPropP": 100,
-        "winRateP": 65.6
+        "winRateP": 64.7
       }
     },
     {
@@ -274,10 +274,10 @@
     {
       "name": "Amanda",
       "sql": 101,
-      "recInfluenciada": 12856.09,
+      "recInfluenciada": 13034.09,
       "metaMes": 14000,
       "metaProRata": 11200,
-      "pctMetaProRata": 114.8
+      "pctMetaProRata": 116.4
     },
     {
       "name": "Francisco",
