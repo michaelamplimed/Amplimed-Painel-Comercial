@@ -1,6 +1,6 @@
 {
-  "geradoEm": "2026-09-24T12:00:31.345Z",
-  "geradoEmBR": "24/09/2026, 09:00:31",
+  "geradoEm": "2026-09-24T12:30:24.910Z",
+  "geradoEmBR": "24/09/2026, 09:30:24",
   "mes": {
     "ano": 2026,
     "mes": 9,
@@ -14,7 +14,7 @@
     "receitaRealizada": 28685.01,
     "metaMensal": 48000,
     "pctMeta": 59.8,
-    "pipelineAberto": 18631.89,
+    "pipelineAberto": 18608.89,
     "mediaDiaria": 1195.21
   },
   "receitaAcumulada": {
