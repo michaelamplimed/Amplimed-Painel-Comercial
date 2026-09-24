@@ -1,6 +1,6 @@
 {
-  "geradoEm": "2026-09-24T19:30:25.264Z",
-  "geradoEmBR": "24/09/2026, 16:30:25",
+  "geradoEm": "2026-09-24T20:00:29.751Z",
+  "geradoEmBR": "24/09/2026, 17:00:29",
   "mes": {
     "ano": 2026,
     "mes": 9,
@@ -11,11 +11,11 @@
     "sdr": 40000
   },
   "kpis": {
-    "receitaRealizada": 29210.91,
+    "receitaRealizada": 29349.91,
     "metaMensal": 48000,
-    "pctMeta": 60.9,
+    "pctMeta": 61.1,
     "pipelineAberto": 18761.99,
-    "mediaDiaria": 1217.12
+    "mediaDiaria": 1222.91
   },
   "receitaAcumulada": {
     "labels": [
@@ -68,7 +68,7 @@
       24356.06,
       26606.6,
       28685.01,
-      29210.91
+      29349.91
     ],
     "meta": [
       1600,
@@ -98,7 +98,7 @@
     ]
   },
   "aging": {
-    "0-7d": 40,
+    "0-7d": 39,
     "8-15d": 18,
     "16-30d": 12,
     "31-60d": 6,
@@ -186,17 +186,17 @@
     {
       "name": "Ariel",
       "nivel": "Pleno",
-      "ganhos": 16,
+      "ganhos": 17,
       "perdidos": 26,
       "crossSellGanhos": 1,
-      "aquisicaoAmount": 4346.7,
+      "aquisicaoAmount": 4485.7,
       "crossSellAmount": 90,
-      "totalAmount": 4436.7,
-      "ticketMedio": 277.29,
-      "winRate": 38.1,
+      "totalAmount": 4575.7,
+      "ticketMedio": 269.16,
+      "winRate": 39.5,
       "metaMes": 8800,
       "metaProRata": 7040,
-      "pctMetaProRata": 63,
+      "pctMetaProRata": 65,
       "funil": {
         "sql": 28,
         "demo": 28,
@@ -274,10 +274,10 @@
     {
       "name": "Amanda",
       "sql": 106,
-      "recInfluenciada": 13034.09,
+      "recInfluenciada": 13173.09,
       "metaMes": 14000,
       "metaProRata": 11200,
-      "pctMetaProRata": 116.4
+      "pctMetaProRata": 117.6
     },
     {
       "name": "Francisco",
