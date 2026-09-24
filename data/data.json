@@ -1,6 +1,6 @@
 {
-  "geradoEm": "2026-09-24T18:00:31.100Z",
-  "geradoEmBR": "24/09/2026, 15:00:31",
+  "geradoEm": "2026-09-24T18:30:27.739Z",
+  "geradoEmBR": "24/09/2026, 15:30:27",
   "mes": {
     "ano": 2026,
     "mes": 9,
@@ -14,7 +14,7 @@
     "receitaRealizada": 29210.91,
     "metaMensal": 48000,
     "pctMeta": 60.9,
-    "pipelineAberto": 18111.99,
+    "pipelineAberto": 18761.99,
     "mediaDiaria": 1217.12
   },
   "receitaAcumulada": {
@@ -227,11 +227,11 @@
         "sql": 34,
         "demo": 34,
         "sal": 34,
-        "proposta": 28,
+        "proposta": 29,
         "won": 25,
         "sqlToDemoP": 100,
         "demoToSalP": 100,
-        "salToPropP": 82.4,
+        "salToPropP": 85.3,
         "winRateP": 55.6
       }
     },
