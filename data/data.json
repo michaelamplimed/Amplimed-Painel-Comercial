@@ -1,6 +1,6 @@
 {
-  "geradoEm": "2026-09-24T11:00:32.131Z",
-  "geradoEmBR": "24/09/2026, 08:00:32",
+  "geradoEm": "2026-09-24T11:30:24.478Z",
+  "geradoEmBR": "24/09/2026, 08:30:24",
   "mes": {
     "ano": 2026,
     "mes": 9,
@@ -98,8 +98,8 @@
     ]
   },
   "aging": {
-    "0-7d": 41,
-    "8-15d": 17,
+    "0-7d": 40,
+    "8-15d": 18,
     "16-30d": 12,
     "31-60d": 7,
     "+60d": 2
@@ -120,12 +120,12 @@
       "metaProRata": 8640,
       "pctMetaProRata": 75.8,
       "funil": {
-        "sql": 36,
+        "sql": 37,
         "demo": 36,
         "sal": 29,
         "proposta": 25,
         "won": 22,
-        "sqlToDemoP": 100,
+        "sqlToDemoP": 97.3,
         "demoToSalP": 80.6,
         "salToPropP": 86.2,
         "winRateP": 55
@@ -146,13 +146,13 @@
       "metaProRata": 8640,
       "pctMetaProRata": 45.8,
       "funil": {
-        "sql": 30,
-        "demo": 30,
+        "sql": 32,
+        "demo": 31,
         "sal": 21,
         "proposta": 20,
         "won": 20,
-        "sqlToDemoP": 100,
-        "demoToSalP": 70,
+        "sqlToDemoP": 96.9,
+        "demoToSalP": 67.7,
         "salToPropP": 95.2,
         "winRateP": 45.5
       }
@@ -198,12 +198,12 @@
       "metaProRata": 7040,
       "pctMetaProRata": 63,
       "funil": {
-        "sql": 27,
+        "sql": 28,
         "demo": 27,
         "sal": 18,
         "proposta": 17,
         "won": 16,
-        "sqlToDemoP": 100,
+        "sqlToDemoP": 96.4,
         "demoToSalP": 66.7,
         "salToPropP": 94.4,
         "winRateP": 50
@@ -250,13 +250,13 @@
       "metaProRata": 0,
       "pctMetaProRata": 0,
       "funil": {
-        "sql": 6,
-        "demo": 6,
+        "sql": 7,
+        "demo": 7,
         "sal": 5,
         "proposta": 3,
         "won": 3,
         "sqlToDemoP": 100,
-        "demoToSalP": 83.3,
+        "demoToSalP": 71.4,
         "salToPropP": 60,
         "winRateP": 75
       }
