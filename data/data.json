@@ -1,6 +1,6 @@
 {
-  "geradoEm": "2026-09-25T17:30:26.433Z",
-  "geradoEmBR": "25/09/2026, 14:30:26",
+  "geradoEm": "2026-09-25T18:00:32.304Z",
+  "geradoEmBR": "25/09/2026, 15:00:32",
   "mes": {
     "ano": 2026,
     "mes": 9,
@@ -101,8 +101,8 @@
     ]
   },
   "aging": {
-    "0-7d": 30,
-    "8-15d": 21,
+    "0-7d": 28,
+    "8-15d": 20,
     "16-30d": 12,
     "31-60d": 7,
     "+60d": 3
@@ -123,14 +123,14 @@
       "metaProRata": 9000,
       "pctMetaProRata": 82.7,
       "funil": {
-        "sql": 38,
-        "demo": 38,
-        "sal": 31,
+        "sql": 39,
+        "demo": 39,
+        "sal": 32,
         "proposta": 26,
         "won": 24,
         "sqlToDemoP": 100,
-        "demoToSalP": 81.6,
-        "salToPropP": 83.9,
+        "demoToSalP": 82.1,
+        "salToPropP": 81.3,
         "winRateP": 55.8
       }
     },
@@ -164,39 +164,39 @@
       "name": "Juliano",
       "nivel": "Pleno",
       "ganhos": 22,
-      "perdidos": 14,
+      "perdidos": 16,
       "crossSellGanhos": 7,
       "aquisicaoAmount": 2973.9,
       "crossSellAmount": 548.94,
       "totalAmount": 3522.84,
       "ticketMedio": 160.13,
-      "winRate": 61.1,
+      "winRate": 57.9,
       "metaMes": 8800,
       "metaProRata": 7333.33,
       "pctMetaProRata": 48,
       "funil": {
-        "sql": 30,
-        "demo": 30,
+        "sql": 29,
+        "demo": 29,
         "sal": 27,
         "proposta": 27,
         "won": 22,
         "sqlToDemoP": 100,
-        "demoToSalP": 90,
+        "demoToSalP": 93.1,
         "salToPropP": 100,
-        "winRateP": 64.7
+        "winRateP": 62.9
       }
     },
     {
       "name": "Ariel",
       "nivel": "Pleno",
       "ganhos": 18,
-      "perdidos": 26,
+      "perdidos": 27,
       "crossSellGanhos": 1,
       "aquisicaoAmount": 4624.7,
       "crossSellAmount": 90,
       "totalAmount": 4714.7,
       "ticketMedio": 261.93,
-      "winRate": 40.9,
+      "winRate": 40,
       "metaMes": 8800,
       "metaProRata": 7333.33,
       "pctMetaProRata": 64.3,
