@@ -1,6 +1,6 @@
 {
-  "geradoEm": "2026-09-25T17:00:30.773Z",
-  "geradoEmBR": "25/09/2026, 14:00:30",
+  "geradoEm": "2026-09-25T17:30:26.433Z",
+  "geradoEmBR": "25/09/2026, 14:30:26",
   "mes": {
     "ano": 2026,
     "mes": 9,
@@ -11,11 +11,11 @@
     "sdr": 40000
   },
   "kpis": {
-    "receitaRealizada": 30693.82,
+    "receitaRealizada": 30832.82,
     "metaMensal": 48000,
-    "pctMeta": 63.9,
-    "pipelineAberto": 18176.09,
-    "mediaDiaria": 1227.75
+    "pctMeta": 64.2,
+    "pipelineAberto": 19166.09,
+    "mediaDiaria": 1233.31
   },
   "receitaAcumulada": {
     "labels": [
@@ -70,7 +70,7 @@
       26606.6,
       28685.01,
       29582.92,
-      30693.82
+      30832.82
     ],
     "meta": [
       1600,
@@ -104,7 +104,7 @@
     "0-7d": 30,
     "8-15d": 21,
     "16-30d": 12,
-    "31-60d": 8,
+    "31-60d": 7,
     "+60d": 3
   },
   "closers": [
@@ -150,12 +150,12 @@
       "pctMetaProRata": 48.1,
       "funil": {
         "sql": 34,
-        "demo": 33,
+        "demo": 34,
         "sal": 25,
         "proposta": 22,
         "won": 22,
-        "sqlToDemoP": 97.1,
-        "demoToSalP": 75.8,
+        "sqlToDemoP": 100,
+        "demoToSalP": 73.5,
         "salToPropP": 88,
         "winRateP": 44
       }
@@ -189,27 +189,27 @@
     {
       "name": "Ariel",
       "nivel": "Pleno",
-      "ganhos": 17,
+      "ganhos": 18,
       "perdidos": 26,
       "crossSellGanhos": 1,
-      "aquisicaoAmount": 4485.7,
+      "aquisicaoAmount": 4624.7,
       "crossSellAmount": 90,
-      "totalAmount": 4575.7,
-      "ticketMedio": 269.16,
-      "winRate": 39.5,
+      "totalAmount": 4714.7,
+      "ticketMedio": 261.93,
+      "winRate": 40.9,
       "metaMes": 8800,
       "metaProRata": 7333.33,
-      "pctMetaProRata": 62.4,
+      "pctMetaProRata": 64.3,
       "funil": {
         "sql": 29,
         "demo": 29,
-        "sal": 19,
-        "proposta": 18,
-        "won": 16,
+        "sal": 20,
+        "proposta": 19,
+        "won": 17,
         "sqlToDemoP": 100,
-        "demoToSalP": 65.5,
-        "salToPropP": 94.7,
-        "winRateP": 50
+        "demoToSalP": 69,
+        "salToPropP": 95,
+        "winRateP": 51.5
       }
     },
     {
@@ -277,10 +277,10 @@
     {
       "name": "Amanda",
       "sql": 109,
-      "recInfluenciada": 14378,
+      "recInfluenciada": 14517,
       "metaMes": 14000,
       "metaProRata": 11666.67,
-      "pctMetaProRata": 123.2
+      "pctMetaProRata": 124.4
     },
     {
       "name": "Francisco",
