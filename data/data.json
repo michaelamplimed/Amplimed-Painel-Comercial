@@ -1,6 +1,6 @@
 {
-  "geradoEm": "2026-09-28T11:00:32.100Z",
-  "geradoEmBR": "28/09/2026, 08:00:32",
+  "geradoEm": "2026-09-28T11:30:23.863Z",
+  "geradoEmBR": "28/09/2026, 08:30:23",
   "mes": {
     "ano": 2026,
     "mes": 9,
@@ -14,7 +14,7 @@
     "receitaRealizada": 30971.82,
     "metaMensal": 48000,
     "pctMeta": 64.5,
-    "pipelineAberto": 19276.09,
+    "pipelineAberto": 19166.09,
     "mediaDiaria": 1106.14
   },
   "receitaAcumulada": {
@@ -110,7 +110,7 @@
     ]
   },
   "aging": {
-    "0-7d": 22,
+    "0-7d": 23,
     "8-15d": 24,
     "16-30d": 13,
     "31-60d": 7,
@@ -277,7 +277,7 @@
   "sdrs": [
     {
       "name": "Ana",
-      "sql": 100,
+      "sql": 101,
       "recInfluenciada": 14436.14,
       "metaMes": 14000,
       "metaProRata": 13066.67,
