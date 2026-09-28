@@ -986,6 +986,72 @@ body{display:flex;flex-direction:column}
 @media(max-width:600px){.kgrid-hero{grid-template-columns:repeat(2,minmax(0,1fr))!important}.topbar-title{display:none}}
 
 
+
+/* Refinamento de alinhamento para TV e telas desktop */
+#sec-ceo{grid-template-rows: minmax(88px,.78fr) 1px minmax(145px,1.12fr) minmax(205px,1.42fr) minmax(145px,1fr)!important;gap:8px!important}
+.kgrid-hero{grid-template-columns:repeat(6,minmax(0,1fr))!important;gap:8px!important}
+.kcard{padding:10px 12px!important;justify-content:center!important}
+.kcard-inner{align-items:center!important;width:100%;min-width:0!important}
+.kcard-inner>div:first-child{min-width:0!important}
+.kcard-lbl{font-size:9px!important;margin-bottom:5px!important;letter-spacing:.45px!important}
+.kcard-val{font-size:clamp(17px,1.7vw,27px)!important;line-height:1.08!important;margin-bottom:3px!important;white-space:nowrap}
+.kcard:nth-child(1) .kcard-val{font-size:clamp(19px,1.9vw,30px)!important}
+.kcard-note{font-size:9px!important;line-height:1.2!important}
+.kcard-inner [id^="spark-"]{max-width:38px!important;flex:0 0 38px!important}
+.central-row,.two-col,.footer-row{gap:8px!important}
+.sec-hdr{height:36px!important;min-height:36px!important;flex-basis:36px!important;padding:0 11px!important;font-size:10px!important;gap:6px!important}
+.sec-hdr small{font-size:8px!important;margin-left:6px!important}
+.central-row .sec-body,.two-col .sec-body,.footer-row .sec-body{padding:7px 9px!important}
+.forecast-mini-grid{gap:6px!important}
+.forecast-mini-item{min-height:0!important;padding:7px 5px!important}
+.pulse-icon{font-size:15px!important;margin-bottom:3px!important}
+.forecast-mini-lbl{font-size:8px!important}
+.forecast-mini-val{font-size:clamp(14px,1.35vw,21px)!important;margin-top:4px!important}
+.forecast-mini-item small{font-size:8px!important}
+.tbl-wrap table th,.tbl-wrap table td{padding:5px 5px!important;font-size:9px!important;line-height:1.12!important}
+.tbl-wrap table th{font-size:8px!important}
+.initial-avatar{width:19px!important;height:19px!important;flex-basis:19px!important;font-size:8px!important}
+.person-cell{gap:4px!important}
+.table-progress{height:8px!important}
+.tf-step{padding:8px 4px!important}
+.tf-lbl{font-size:8px!important}
+.tf-val{font-size:clamp(14px,1.25vw,20px)!important;margin:3px 0!important}
+.tf-arrow{font-size:8px!important;min-width:17px!important}
+.composition-layout{grid-template-columns:minmax(72px,.72fr) minmax(0,1.5fr)!important;gap:7px!important}
+.donut-placeholder{width:min(100%,112px)!important}
+.composition-details{gap:5px!important}
+.composition-line{gap:4px!important;font-size:8px!important}
+.composition-line strong{font-size:9px!important}
+.composition-line small{font-size:7px!important}
+.composition-bottom{gap:4px!important}
+.mrr-box{padding:4px!important}
+.mrr-box strong{font-size:10px!important}
+.pipeline-total{font-size:clamp(18px,1.55vw,25px)!important;margin:1px 0!important}
+.pipeline-coverage{padding-bottom:5px!important;font-size:9px!important}
+.pipeline-arr{padding:5px 0!important}
+#aging-bars-wrap{margin-top:5px!important}
+.aging-bar-track{height:9px!important}
+.aging-legend{font-size:7px!important;gap:2px!important}
+@media(max-height:900px) and (min-width:901px){
+  .topbar{height:70px!important;min-height:70px!important;flex-basis:70px!important}
+  .brand-copy strong{font-size:24px!important}
+  .brand-copy small{font-size:12px!important}
+  .amp-mark{width:40px!important;height:40px!important}
+  .topbar-title strong{font-size:clamp(18px,1.8vw,24px)!important}
+  .topbar-title{padding-left:18px!important}
+  .topbar-tagline{font-size:11px!important;min-width:175px!important;padding-left:15px!important}
+  .topbar-right{padding:6px 9px!important}
+  .content{padding:7px 1%!important}
+  #sec-ceo{grid-template-rows: minmax(78px,.72fr) 1px minmax(132px,1.05fr) minmax(190px,1.4fr) minmax(130px,.95fr)!important;gap:7px!important}
+  .sec-hdr{height:33px!important;min-height:33px!important;flex-basis:33px!important}
+}
+@media(max-height:760px) and (min-width:901px){
+  #sec-ceo{grid-template-rows: minmax(70px,.68fr) 1px minmax(120px,1fr) minmax(175px,1.35fr) minmax(118px,.9fr)!important;gap:6px!important}
+  .kcard{padding:7px 9px!important}
+  .tbl-wrap table th,.tbl-wrap table td{padding:4px!important}
+  .sec-hdr{height:30px!important;min-height:30px!important;flex-basis:30px!important}
+}
+
 /* Ajustes de fidelidade e valores dinâmicos do mockup */
 .revenue-pct{display:block;color:#b7c9dc;font-size:11px;margin-top:4px}
 .revenue-progress{display:block;width:100%;height:7px;border-radius:5px;background:#173653;margin-top:7px;overflow:hidden}
