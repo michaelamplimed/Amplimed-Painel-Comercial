@@ -987,6 +987,25 @@ body{display:flex;flex-direction:column}
 
 
 
+/* Redistribuição do rodapé após simplificar o funil */
+.topbar-tagline{display:none!important}
+.footer-row{grid-template-columns:minmax(0,1.12fr) minmax(0,1.12fr) minmax(0,.96fr)!important;gap:9px!important}
+.funnel-card #team-funnel-row{display:grid!important;grid-template-columns:minmax(0,1fr) 34px minmax(0,1fr) 34px minmax(0,1fr)!important;align-items:center!important;gap:8px!important}
+.funnel-card .tf-step{width:100%!important;min-width:0!important;padding:12px 9px!important}
+.funnel-card .tf-arrow{min-width:0!important;text-align:center!important;line-height:1.25!important}
+.funnel-card .tf-lbl{font-size:10px!important}
+.funnel-card .tf-val{font-size:clamp(18px,1.65vw,27px)!important}
+.composition-card .composition-layout{grid-template-columns:minmax(90px,.8fr) minmax(0,1.4fr)!important;gap:12px!important;align-items:center!important}
+.composition-card .donut-placeholder{width:min(100%,132px)!important;max-width:132px!important}
+.composition-card .composition-line{grid-template-columns:10px minmax(0,1fr) auto auto!important;gap:6px!important;font-size:9px!important}
+.composition-card .composition-line strong{font-size:10px!important;white-space:nowrap}
+.composition-card .composition-bottom{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:7px!important}
+.composition-card .mrr-box{min-width:0!important;padding:7px!important}
+.pipeline-card .sec-body{justify-content:flex-start!important}
+.pipeline-card .pipeline-total{font-size:clamp(22px,1.8vw,30px)!important;margin:5px 0!important}
+.pipeline-card #aging-bars-wrap{margin-top:auto!important;padding-top:8px!important}
+@media(max-width:900px){.footer-row{grid-template-columns:1fr!important}.funnel-card #team-funnel-row{grid-template-columns:minmax(0,1fr) 34px minmax(0,1fr) 34px minmax(0,1fr)!important}}
+
 /* Refinamento de alinhamento para TV e telas desktop */
 #sec-ceo{grid-template-rows: minmax(88px,.78fr) 1px minmax(145px,1.12fr) minmax(205px,1.42fr) minmax(145px,1fr)!important;gap:8px!important}
 .kgrid-hero{grid-template-columns:repeat(6,minmax(0,1fr))!important;gap:8px!important}
@@ -1069,7 +1088,6 @@ body{display:flex;flex-direction:column}
 <div class="topbar">
   <div class="topbar-brand"><span class="amp-mark" aria-hidden="true">A</span><span class="brand-copy"><strong>Amplimed</strong><small>Sales Command Center</small></span></div>
   <div class="topbar-title"><span class="eyebrow">／ PERFORMANCE COMERCIAL</span><strong id="header-month">SETEMBRO DE 2026</strong></div>
-  <div class="topbar-tagline">Soluções Integradas<br>para Operadoras de Saúde</div>
   <div class="topbar-right"><span class="live-dot"></span><span id="ultima-atualizacao" style="font-size:10px;white-space:nowrap">Dados atualizados</span><button class="btn-icon" onclick="toggleDark()" title="Alternar tema">&#8635;</button></div>
 </div>
 <!-- kpi-pctmeta/kpi-pace/kpi-winrate/kpi-receitadia/tpkpi-progress-* saíram do
@@ -1146,7 +1164,7 @@ body{display:flex;flex-direction:column}
   <!-- Rodapé: funil, composição e pipeline -->
   <div class="footer-row">
     <div class="sec-card funnel-card">
-      <div class="sec-hdr"><span>▽ &nbsp; FUNIL DA EQUIPE</span><small>SQL → DEMO → SAL → PROPOSTA → GANHO</small></div>
+      <div class="sec-hdr"><span>▽ &nbsp; FUNIL DA EQUIPE</span><small>SQL → SAL → GANHO</small></div>
       <div class="sec-body" id="funil-panel-body"><div id="team-funnel-row"></div></div>
     </div>
     <div class="sec-card composition-card">
@@ -1745,11 +1763,9 @@ function aplicarDadosNoPainel(d){
   // Funil consolidado da equipe — soma dos funis já calculados por closer.
   if(el('team-funnel-row') && d.closers){
     const steps = [
-      {key:'sql',      lbl:'SQL'},
-      {key:'demo',     lbl:'Demo'},
-      {key:'sal',      lbl:'SAL'},
-      {key:'proposta', lbl:'Proposta'},
-      {key:'won',      lbl:'Ganho'}
+      {key:'sql', lbl:'SQL'},
+      {key:'sal', lbl:'SAL'},
+      {key:'won', lbl:'Ganho'}
     ];
     const totals = steps.map(s => d.closers.reduce((sum,c)=> sum + ((c.funil && c.funil[s.key]) || 0), 0));
     const maxVal = Math.max.apply(null, totals) || 1;
