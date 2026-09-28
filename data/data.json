@@ -1,20 +1,20 @@
 {
-  "geradoEm": "2026-09-28T19:30:25.543Z",
-  "geradoEmBR": "28/09/2026, 16:30:25",
+  "geradoEm": "2026-09-28T20:00:28.618Z",
+  "geradoEmBR": "28/09/2026, 17:00:28",
   "mes": {
     "ano": 2026,
     "mes": 9,
     "chave": "2026-09"
   },
   "metas": {
-    "closer": 54000,
-    "sdr": 52000
+    "closer": 48000,
+    "sdr": 40000
   },
   "kpis": {
     "receitaRealizada": 33975.73,
-    "metaMensal": 54000,
-    "pctMeta": 62.9,
-    "pipelineAberto": 14272.29,
+    "metaMensal": 48000,
+    "pctMeta": 70.8,
+    "pipelineAberto": 13735.39,
     "mediaDiaria": 1213.42
   },
   "receitaAcumulada": {
@@ -79,40 +79,40 @@
       33975.73
     ],
     "meta": [
-      1800,
-      3600,
-      5400,
-      7200,
-      9000,
-      10800,
-      12600,
+      1600,
+      3200,
+      4800,
+      6400,
+      8000,
+      9600,
+      11200,
+      12800,
       14400,
-      16200,
-      18000,
-      19800,
-      21600,
-      23400,
-      25200,
-      27000,
+      16000,
+      17600,
+      19200,
+      20800,
+      22400,
+      24000,
+      25600,
+      27200,
       28800,
-      30600,
-      32400,
-      34200,
-      36000,
-      37800,
-      39600,
-      41400,
+      30400,
+      32000,
+      33600,
+      35200,
+      36800,
+      38400,
+      40000,
+      41600,
       43200,
-      45000,
-      46800,
-      48600,
-      50400
+      44800
     ]
   },
   "aging": {
-    "0-7d": 22,
-    "8-15d": 18,
-    "16-30d": 11,
+    "0-7d": 26,
+    "8-15d": 17,
+    "16-30d": 10,
     "31-60d": 6,
     "+60d": 2
   },
@@ -147,26 +147,26 @@
       "name": "Eduardo",
       "nivel": "Sênior",
       "ganhos": 24,
-      "perdidos": 37,
+      "perdidos": 39,
       "crossSellGanhos": 2,
       "aquisicaoAmount": 5250.56,
       "crossSellAmount": 359.7,
       "totalAmount": 5610.26,
       "ticketMedio": 233.76,
-      "winRate": 39.3,
+      "winRate": 38.1,
       "metaMes": 10800,
       "metaProRata": 10080,
       "pctMetaProRata": 55.7,
       "funil": {
-        "sql": 32,
-        "demo": 32,
+        "sql": 30,
+        "demo": 30,
         "sal": 25,
         "proposta": 24,
         "won": 24,
         "sqlToDemoP": 100,
-        "demoToSalP": 78.1,
+        "demoToSalP": 83.3,
         "salToPropP": 96,
-        "winRateP": 42.9
+        "winRateP": 41.4
       }
     },
     {
@@ -303,7 +303,7 @@
   "sdrs": [
     {
       "name": "Ana",
-      "sql": 103,
+      "sql": 105,
       "recInfluenciada": 16754.14,
       "metaMes": 14000,
       "metaProRata": 13066.67,
@@ -311,19 +311,11 @@
     },
     {
       "name": "Amanda",
-      "sql": 114,
+      "sql": 115,
       "recInfluenciada": 15054.91,
       "metaMes": 14000,
       "metaProRata": 13066.67,
       "pctMetaProRata": 115.2
-    },
-    {
-      "name": "Francisco",
-      "sql": 3,
-      "recInfluenciada": 0,
-      "metaMes": 12000,
-      "metaProRata": 11200,
-      "pctMetaProRata": 0
     },
     {
       "name": "Jeferson",
