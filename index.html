@@ -994,6 +994,7 @@ body{display:flex;flex-direction:column}
 .composition-line{grid-template-columns:10px minmax(0,1fr) auto auto!important}
 .composition-line small{display:block!important;font-size:8px!important;color:#83a1bd!important}
 
+.tbl-wrap table tr.total-row td{background:#102f4e!important;border-top:1px solid #39708f!important;color:#e7f4ff!important;font-weight:800!important}.tbl-wrap table tr.total-row td:first-child{text-align:left!important}
 </style>
 </head>
 <body>
@@ -1488,7 +1489,7 @@ function aplicarDadosNoPainel(d){
     const taxaGeral = (somaGanhos+somaPerdidos)>0 ? Math.round(somaGanhos/(somaGanhos+somaPerdidos)*1000)/10 : 0;
     const metaProRataSoma = closersAtivos.reduce((s,c)=>s+(c.metaProRata||0),0);
     const pctGeral = metaProRataSoma>0 ? Math.round(somaTotalAmount/metaProRataSoma*1000)/10 : 0;
-    const linhaTotal = '<tr style="background:#F1F5F9;font-weight:700;border-top:2px solid #1B3A5C"><td>Total / M&eacute;dia</td><td>'+somaVendas+'</td><td>'+fmtMoeda(somaTotalAmount)+'</td><td>'+taxaGeral+'%</td></tr>';
+    const linhaTotal = '<tr class="total-row"><td colspan="2">Total / M&eacute;dia</td><td>'+fmtMoeda(somaTotalAmount)+'</td><td></td><td>'+pctGeral.toLocaleString('pt-BR',{minimumFractionDigits:1,maximumFractionDigits:1})+'%</td><td></td><td>'+taxaGeral+'%</td><td>'+somaVendas+'</td></tr>';
     tblMini.innerHTML = closersAtivos.length ? (linhas + linhaTotal) : '<tr><td colspan="4" style="text-align:center;color:var(--ink3);padding:22px 10px">Sem dados de closers no momento</td></tr>';
 
     // Performance dos Closers — comparativo de Receita Total por closer (dado
@@ -1524,7 +1525,7 @@ function aplicarDadosNoPainel(d){
     const somaRec = sdrsAtivos.reduce((s,x)=>s+(x.recInfluenciada||0),0);
     const somaMetaProRataSdr = sdrsAtivos.reduce((s,x)=>s+(x.metaProRata||0),0);
     const pctGeralSdr = somaMetaProRataSdr>0 ? Math.round(somaRec/somaMetaProRataSdr*1000)/10 : 0;
-    const linhaTotalSdr = '<tr style="background:#F1F5F9;font-weight:700;border-top:2px solid #0D6E6E"><td>Total / M&eacute;dia</td><td>'+somaSql+'</td><td>'+fmtMoeda(somaRec)+'</td></tr>';
+    const linhaTotalSdr = '<tr class="total-row"><td colspan="2">Total / M&eacute;dia</td><td>'+somaSql+'</td><td>'+fmtMoeda(somaRec)+'</td><td>'+pctGeralSdr.toLocaleString('pt-BR',{minimumFractionDigits:1,maximumFractionDigits:1})+'%</td></tr>';
     tblSdr.innerHTML = sdrsAtivos.length ? (linhasSdr + linhaTotalSdr) : '<tr><td colspan="3" style="text-align:center;color:var(--ink3);padding:22px 10px">Sem dados de SDR no momento</td></tr>';
     if(el('sdr-hdr-sub')){
       el('sdr-hdr-sub').textContent = sdrsAtivos.length+' SDRs ativos \u00b7 Meta '+fmtMoeda(d.metas ? d.metas.sdr : 0);
