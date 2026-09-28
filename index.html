@@ -735,6 +735,35 @@ body{height:100%;height:100dvh;min-height:0;margin:0;overflow:hidden;display:fle
  .kgrid-hero{grid-template-columns:repeat(2,minmax(0,1fr))!important}
  .topbar-center{display:none}
 }
+
+/* ═══ HOTFIX TV: restaura tabelas e distribui altura sem colapsar ═══ */
+#sec-ceo{grid-template-rows:76px 22px minmax(130px,.82fr) minmax(190px,1.18fr) minmax(112px,.78fr)!important}
+.two-col .sec-body{display:flex!important;flex-direction:column!important;justify-content:flex-start!important;gap:4px}
+.tbl-wrap{display:block!important;flex:0 0 auto!important;width:100%;height:auto!important;max-height:none!important;overflow:hidden!important}
+.tbl-wrap table{display:table!important;width:100%!important;height:auto!important;table-layout:fixed!important;border-collapse:collapse!important;flex:none!important}
+.tbl-wrap table thead{display:table-header-group!important}
+.tbl-wrap table tbody{display:table-row-group!important}
+.tbl-wrap table tr{display:table-row!important}
+.tbl-wrap table th,.tbl-wrap table td{display:table-cell!important;vertical-align:middle!important}
+#closers-tbl-wrap table,#sdr-tbl-wrap table{margin:0!important}
+#closers-insight,#sdr-insight{display:block!important;flex:1 1 auto!important;min-height:0!important;margin-top:4px!important;padding-top:4px!important;overflow:hidden!important}
+.sdr-insight-row{display:flex!important;flex-direction:row!important;align-items:center!important;width:100%!important;min-height:12px!important}
+.sdr-insight-name{display:block!important;flex:0 0 66px!important;width:66px!important}
+.sdr-insight-track{display:block!important;flex:1 1 auto!important;min-width:0!important}
+.sdr-insight-pct{display:block!important;flex:0 0 68px!important;width:68px!important;white-space:nowrap!important}
+@media(max-height:740px){
+ #sec-ceo{grid-template-rows:70px 20px minmax(120px,.85fr) minmax(190px,1.15fr)!important}
+ .footer-row{display:none!important}
+ #closers-insight .sdr-insight-row{margin-bottom:1px!important}
+ #closers-insight .sdr-insight-title{font-size:7.5px!important;margin-bottom:2px!important}
+ #closers-insight .sdr-insight-name{font-size:8px!important}
+ #closers-insight .sdr-insight-pct{font-size:8px!important}
+}
+@media(max-height:570px){
+ #sec-ceo{grid-template-rows:64px minmax(110px,.85fr) minmax(180px,1.15fr)!important}
+ .pace-bar{display:none!important}
+}
+
 </style>
 </head>
 <body>
