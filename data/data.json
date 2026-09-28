@@ -1,6 +1,6 @@
 {
-  "geradoEm": "2026-09-28T20:30:26.839Z",
-  "geradoEmBR": "28/09/2026, 17:30:26",
+  "geradoEm": "2026-09-28T21:00:30.560Z",
+  "geradoEmBR": "28/09/2026, 18:00:30",
   "mes": {
     "ano": 2026,
     "mes": 9,
@@ -11,11 +11,11 @@
     "sdr": 40000
   },
   "kpis": {
-    "receitaRealizada": 33975.73,
+    "receitaRealizada": 34064.73,
     "metaMensal": 48000,
-    "pctMeta": 70.8,
+    "pctMeta": 71,
     "pipelineAberto": 13596.39,
-    "mediaDiaria": 1213.42
+    "mediaDiaria": 1216.6
   },
   "receitaAcumulada": {
     "labels": [
@@ -76,7 +76,7 @@
       30971.82,
       30971.82,
       30971.82,
-      33975.73
+      34064.73
     ],
     "meta": [
       1600,
@@ -110,9 +110,9 @@
     ]
   },
   "aging": {
-    "0-7d": 26,
+    "0-7d": 25,
     "8-15d": 16,
-    "16-30d": 10,
+    "16-30d": 9,
     "31-60d": 6,
     "+60d": 2
   },
@@ -120,40 +120,40 @@
     {
       "name": "Tamara",
       "nivel": "Sênior",
-      "ganhos": 25,
+      "ganhos": 26,
       "perdidos": 23,
       "crossSellGanhos": 2,
-      "aquisicaoAmount": 7582.01,
+      "aquisicaoAmount": 7671.01,
       "crossSellAmount": 104,
-      "totalAmount": 7686.01,
-      "ticketMedio": 307.44,
-      "winRate": 52.1,
+      "totalAmount": 7775.01,
+      "ticketMedio": 299.04,
+      "winRate": 53.1,
       "metaMes": 10800,
       "metaProRata": 10080,
-      "pctMetaProRata": 76.3,
+      "pctMetaProRata": 77.1,
       "funil": {
-        "sql": 38,
-        "demo": 38,
-        "sal": 31,
-        "proposta": 26,
-        "won": 25,
+        "sql": 39,
+        "demo": 39,
+        "sal": 32,
+        "proposta": 27,
+        "won": 26,
         "sqlToDemoP": 100,
-        "demoToSalP": 81.6,
-        "salToPropP": 83.9,
-        "winRateP": 52.1
+        "demoToSalP": 82.1,
+        "salToPropP": 84.4,
+        "winRateP": 53.1
       }
     },
     {
       "name": "Eduardo",
       "nivel": "Sênior",
       "ganhos": 24,
-      "perdidos": 39,
+      "perdidos": 40,
       "crossSellGanhos": 2,
       "aquisicaoAmount": 5250.56,
       "crossSellAmount": 359.7,
       "totalAmount": 5610.26,
       "ticketMedio": 233.76,
-      "winRate": 38.1,
+      "winRate": 37.5,
       "metaMes": 10800,
       "metaProRata": 10080,
       "pctMetaProRata": 55.7,
@@ -212,12 +212,12 @@
       "funil": {
         "sql": 30,
         "demo": 30,
-        "sal": 21,
-        "proposta": 19,
+        "sal": 22,
+        "proposta": 20,
         "won": 18,
         "sqlToDemoP": 100,
-        "demoToSalP": 70,
-        "salToPropP": 90.5,
+        "demoToSalP": 73.3,
+        "salToPropP": 90.9,
         "winRateP": 52.9
       }
     },
@@ -304,10 +304,10 @@
     {
       "name": "Ana",
       "sql": 106,
-      "recInfluenciada": 16754.14,
+      "recInfluenciada": 16843.14,
       "metaMes": 14000,
       "metaProRata": 13066.67,
-      "pctMetaProRata": 128.2
+      "pctMetaProRata": 128.9
     },
     {
       "name": "Amanda",
