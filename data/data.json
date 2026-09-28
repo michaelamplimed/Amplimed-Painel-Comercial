@@ -1,6 +1,6 @@
 {
-  "geradoEm": "2026-09-28T13:00:31.303Z",
-  "geradoEmBR": "28/09/2026, 10:00:31",
+  "geradoEm": "2026-09-28T13:30:29.926Z",
+  "geradoEmBR": "28/09/2026, 10:30:29",
   "mes": {
     "ano": 2026,
     "mes": 9,
@@ -14,7 +14,7 @@
     "receitaRealizada": 32169.82,
     "metaMensal": 48000,
     "pctMeta": 67,
-    "pipelineAberto": 17368.29,
+    "pipelineAberto": 17507.29,
     "mediaDiaria": 1148.92
   },
   "receitaAcumulada": {
@@ -111,7 +111,7 @@
   },
   "aging": {
     "0-7d": 23,
-    "8-15d": 23,
+    "8-15d": 22,
     "16-30d": 12,
     "31-60d": 6,
     "+60d": 4
@@ -147,26 +147,26 @@
       "name": "Eduardo",
       "nivel": "Sênior",
       "ganhos": 22,
-      "perdidos": 34,
+      "perdidos": 35,
       "crossSellGanhos": 2,
       "aquisicaoAmount": 3969.56,
       "crossSellAmount": 359.7,
       "totalAmount": 4329.26,
       "ticketMedio": 196.78,
-      "winRate": 39.3,
+      "winRate": 38.6,
       "metaMes": 10800,
       "metaProRata": 10080,
       "pctMetaProRata": 42.9,
       "funil": {
-        "sql": 35,
-        "demo": 35,
+        "sql": 34,
+        "demo": 34,
         "sal": 24,
         "proposta": 22,
         "won": 22,
         "sqlToDemoP": 100,
-        "demoToSalP": 68.6,
+        "demoToSalP": 70.6,
         "salToPropP": 91.7,
-        "winRateP": 43.1
+        "winRateP": 42.3
       }
     },
     {
