@@ -880,19 +880,121 @@ body{display:flex;flex-direction:column}
 }
 @media(max-width:600px){.kgrid-hero{grid-template-columns:repeat(2,minmax(0,1fr))!important}.topbar-center{display:none}}
 
+
+/* ═══ COMMAND CENTER — fidelidade ao mockup (sem fotos/avatares de pessoas) ═══ */
+:root{--bg:#061329;--surface:#0b1e38;--surface2:#102744;--surface3:#173453;--border:#1b4262;--border2:#285675;--ink:#edf6ff;--ink2:#b7c9dc;--ink3:#83a1bd;--ink4:#54718d;--navy:#092344;--navy2:#061a34;--nav-bg:#061329;--gn:#21d69b;--bl:#36a3ff;--am:#ffae35;--rd:#ff596d}
+html,body{width:100%;height:100%;height:100dvh;min-height:0;overflow:hidden!important;background:#061329!important;color:#edf6ff!important}
+body{display:flex;flex-direction:column}
+.topbar{height:88px;min-height:88px;flex:0 0 88px;padding:0 2%;gap:2%;background:linear-gradient(110deg,#061a34,#082344 65%,#06172f)!important;border-bottom:1px solid #1b4262;box-shadow:0 5px 22px #0004;position:relative}
+.topbar-brand{display:flex;align-items:center;gap:12px;border:0;padding:0 22px 0 0;min-width:245px}
+.amp-mark{width:46px;height:46px;display:grid;place-items:center;clip-path:polygon(50% 0,100% 100%,67% 100%,56% 69%,43% 69%,31% 100%,0 100%);background:linear-gradient(145deg,#32e0b0,#079fc4);color:#06203a;font-size:0;font-weight:900;position:relative}
+.amp-mark:after{content:"";position:absolute;width:18px;height:7px;background:#06203a;top:25px;left:14px;transform:skew(-28deg)}
+.brand-copy{display:flex;flex-direction:column;line-height:1.05}
+.brand-copy strong{font-size:28px;letter-spacing:-1px;color:#f2f8ff}
+.brand-copy small{font-size:14px;color:#9ec8e7;margin-top:5px;letter-spacing:.15px}
+.topbar-title{display:flex;flex-direction:column;justify-content:center;gap:1px;flex:1;min-width:0;border-left:1px solid #214361;padding-left:28px}
+.topbar-title .eyebrow{font-size:12px;color:#a9c7df;letter-spacing:.65px}
+.topbar-title strong{font-size:27px;line-height:1.12;color:#f3f8ff;letter-spacing:.4px}
+.topbar-tagline{font-size:13px;line-height:1.35;color:#b7cde1;border-left:1px solid #214361;padding-left:22px;min-width:210px}
+.topbar-right{display:flex;align-items:center;gap:9px;border:1px solid #164b68;border-radius:30px;padding:9px 13px;background:#092443;color:#d8eaff}
+.live-dot{width:13px;height:13px;border-radius:50%;background:#21d69b;box-shadow:0 0 0 5px #21d69b20;flex:0 0 auto}
+.btn-icon{border:0!important;background:transparent!important;color:#70c9f5!important;font-size:18px!important}
+.layout{display:flex!important;flex:1!important;min-height:0!important;overflow:hidden!important;background:#061329!important}
+.content{flex:1!important;min-width:0;min-height:0!important;padding:9px 1.05%!important;overflow:hidden!important;display:flex!important;flex-direction:column!important}
+.section.active{display:flex!important;flex:1!important;flex-direction:column!important;min-height:0!important;overflow:hidden!important}
+#sec-ceo{display:grid!important;grid-template-columns:minmax(0,1fr);grid-template-rows:122px 1px minmax(185px,1fr) minmax(245px,1.22fr) minmax(188px,.94fr);gap:11px;height:100%;min-height:0;max-height:100%;overflow:hidden}
+#sec-ceo>*{min-width:0;min-height:0}
+.kgrid-hero{display:grid!important;grid-template-columns:1.35fr 1fr .85fr 1.15fr 1fr .82fr!important;gap:10px!important;margin:0!important;min-height:0;overflow:hidden}
+.kcard{height:100%;min-height:0!important;padding:14px 16px!important;border:1px solid #1b4262!important;border-top:1px solid #1b4262!important;border-radius:9px!important;background:linear-gradient(145deg,#0d2847,#091d37)!important;box-shadow:0 6px 18px #0003!important;overflow:hidden}
+.kcard:nth-child(1){border-color:#137c70!important}.kcard:nth-child(2){border-color:#246bb0!important}.kcard:nth-child(3){border-color:#28517e!important}.kcard:nth-child(4){border-color:#5b43a4!important}.kcard:nth-child(5){border-color:#854252!important}.kcard:nth-child(6){border-color:#137c70!important}
+.kcard-inner{align-items:center!important;gap:7px!important}
+.kcard-lbl{font-size:10px!important;letter-spacing:.6px!important;color:#b6cde2!important;margin-bottom:7px!important;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.kcard-val{font-size:clamp(18px,2vw,32px)!important;line-height:1.05!important;letter-spacing:-.7px!important;color:#edf6ff!important}
+.kcard:nth-child(1) .kcard-val{font-size:clamp(22px,2.35vw,38px)!important;color:#21d69b!important}
+.kcard:nth-child(2) .kcard-val{color:#36a3ff!important}.kcard:nth-child(3) .kcard-val{color:#edf6ff!important}.kcard:nth-child(4) .kcard-val{color:#a27aff!important}.kcard:nth-child(5) .kcard-val{color:#ff596d!important}.kcard:nth-child(6) .kcard-val{color:#21d69b!important}
+.kcard-note{font-size:10px!important;line-height:1.25!important;color:#b7c9dc!important;white-space:normal!important;overflow:hidden}
+.kcard-inner [id^="spark-"]{max-width:52px;overflow:hidden;flex-shrink:0}
+.kcard:nth-child(1) .kcard-note:after{content:"";display:block;height:5px;margin-top:7px;border-radius:5px;background:#173653}
+.pace-bar{height:1px!important;min-height:1px!important;max-height:1px!important;margin:0!important;padding:0!important;overflow:hidden!important;border:0!important;background:#1b4262!important;color:transparent!important}
+.central-row{display:grid!important;grid-template-columns:minmax(0,1.72fr) minmax(0,.96fr)!important;gap:11px!important;height:100%;min-height:0;max-height:100%;margin:0!important;overflow:hidden}
+.two-col{display:grid!important;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr)!important;gap:11px!important;height:100%;min-height:0;max-height:100%;margin:0!important;overflow:hidden}
+.footer-row{display:grid!important;grid-template-columns:minmax(0,1.65fr) minmax(0,.92fr) minmax(0,.78fr)!important;gap:11px!important;height:100%;min-height:0;max-height:100%;margin:0!important;overflow:hidden}
+.central-row .sec-card,.two-col .sec-card,.footer-row .sec-card{display:flex!important;flex-direction:column!important;min-width:0;min-height:0;height:100%;max-height:100%;margin:0!important;overflow:hidden!important;border:1px solid #1b4262!important;border-radius:9px!important;background:linear-gradient(145deg,#0b2340,#081a32)!important;box-shadow:0 6px 18px #0003!important}
+.sec-hdr{height:43px!important;min-height:43px!important;flex:0 0 43px!important;padding:0 14px!important;font-size:12px!important;letter-spacing:.55px!important;background:#0d3155!important;border-bottom:1px solid #1b4262!important}
+.sec-hdr small{font-size:10px;color:#a9c7df;font-weight:400;text-transform:none;letter-spacing:0;margin-left:10px}
+.central-row .sec-hdr{background:#0b2c4c!important}.central-row .sec-card:nth-child(2) .sec-hdr{background:#102d50!important}
+.two-col .sec-card:first-child .sec-hdr{background:#0b3b54!important}.two-col .sec-card:nth-child(2) .sec-hdr{background:#0b3b54!important}
+.footer-row .sec-hdr{background:#0b3b54!important}
+.central-row .sec-body,.two-col .sec-body,.footer-row .sec-body{display:flex!important;flex:1!important;flex-direction:column!important;min-height:0!important;overflow:hidden!important;padding:10px 12px!important;background:transparent!important}
+.central-row .chart-wrap{position:relative;flex:1;min-height:0;height:auto}
+.central-row .chart-wrap canvas{position:absolute;inset:0;width:100%!important;height:100%!important}
+#forecast-panel-body{justify-content:center!important}
+.forecast-mini-grid{display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:9px!important;width:100%}
+.forecast-mini-item{display:flex;flex-direction:column;align-items:center;justify-content:center;min-width:0;min-height:100px;padding:10px 8px!important;border:1px solid #1b4262!important;border-radius:9px!important;background:#0b2948!important;text-align:center}
+.pulse-icon{font-size:20px;color:#36b8ed;margin-bottom:7px}
+.forecast-mini-lbl{font-size:9px!important;letter-spacing:.4px!important;color:#b4cbe0!important;white-space:normal!important;text-align:center}
+.forecast-mini-val{font-size:clamp(16px,1.65vw,26px)!important;font-weight:800!important;color:#edf6ff!important;margin-top:7px!important;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.forecast-mini-item small{font-size:10px;color:#a9c7df;margin-top:3px}
+.forecast-mini-val.pulse-red{color:#ff596d!important}
+.tbl-wrap{display:block!important;flex:1 1 auto!important;width:100%!important;height:auto!important;max-height:none!important;min-height:0!important;overflow:hidden!important;border:0!important;border-radius:6px!important;background:#0b1e38!important}
+.tbl-wrap table{display:table!important;width:100%!important;height:auto!important;table-layout:fixed!important;border-collapse:collapse!important;font-size:10px!important;margin:0!important}
+.tbl-wrap table thead{display:table-header-group!important}.tbl-wrap table tbody{display:table-row-group!important}.tbl-wrap table tr{display:table-row!important}
+.tbl-wrap table th,.tbl-wrap table td{display:table-cell!important;vertical-align:middle!important;border-bottom:1px solid #163755!important;padding:7px 7px!important;line-height:1.2!important;color:#dceeff!important;background:transparent!important;font-size:10px!important;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.tbl-wrap table th{background:#0d2d4d!important;color:#b9d3e8!important;font-size:9px!important;letter-spacing:.35px!important;text-transform:uppercase!important}
+.tbl-wrap table tr:nth-child(even) td{background:#0d2845!important}.tbl-wrap table tr:last-child td{border-bottom:0!important;font-weight:700!important}
+#closers-tbl-wrap table th:nth-child(1){width:4%}#closers-tbl-wrap table th:nth-child(2){width:16%}#closers-tbl-wrap table th:nth-child(3){width:15%}#closers-tbl-wrap table th:nth-child(4){width:18%}#closers-tbl-wrap table th:nth-child(5){width:11%}#closers-tbl-wrap table th:nth-child(6){width:13%}#closers-tbl-wrap table th:nth-child(7){width:13%}#closers-tbl-wrap table th:nth-child(8){width:10%}
+#sdr-tbl-wrap table th:nth-child(1){width:7%}#sdr-tbl-wrap table th:nth-child(2){width:22%}#sdr-tbl-wrap table th:nth-child(3){width:12%}#sdr-tbl-wrap table th:nth-child(4){width:38%}#sdr-tbl-wrap table th:nth-child(5){width:21%}
+.rank-cell{text-align:center;color:#83a1bd!important}.person-cell{display:flex!important;align-items:center;gap:7px}
+.initial-avatar{display:inline-grid;place-items:center;flex:0 0 24px;width:24px;height:24px;border-radius:50%;background:#174568;border:1px solid #39759a;color:#d9f2ff;font-weight:800;font-size:10px}
+.table-progress{display:block;width:100%;height:11px;background:#173653;border-radius:5px;overflow:hidden}
+.table-progress i{display:block;height:100%;border-radius:5px;background:#36a3ff}.table-progress i.good{background:#21d69b}.table-progress i.mid{background:#36a3ff}.table-progress i.low{background:#ff596d}
+.pct-cell{font-weight:800!important}.pct-cell.good{color:#21d69b!important}.pct-cell.mid{color:#36a3ff!important}.pct-cell.low{color:#ff596d!important}
+.money-cell{font-variant-numeric:tabular-nums}
+.sdr-insight{display:none!important}#closers-insight,#sdr-insight{display:none!important}
+#funil-panel-body{justify-content:center!important}
+#team-funnel-row{display:flex!important;align-items:stretch!important;gap:5px!important;min-width:0!important;width:100%;overflow:hidden}
+.tf-step{flex:1!important;min-width:0!important;padding:12px 6px!important;border:1px solid #1b4262!important;border-radius:8px!important;background:#0d2b4b!important;text-align:center}
+.tf-lbl{font-size:9px!important;letter-spacing:.55px!important;color:#b8d0e5!important}
+.tf-val{font-size:clamp(16px,1.45vw,24px)!important;color:#f0f8ff!important;margin:5px 0!important}
+.tf-bar{height:7px!important;background:#173653!important}
+.tf-bar-fill{background:#21d69b!important}
+.tf-arrow{font-size:10px!important;color:#d1e4f5!important;min-width:28px!important}
+.composition-layout{display:grid;grid-template-columns:minmax(90px,.85fr) minmax(0,1.35fr);align-items:center;gap:10px;height:100%;min-height:0}
+.donut-placeholder{width:min(100%,130px);aspect-ratio:1;border-radius:50%;background:conic-gradient(#21d69b 0 94%,#36a3ff 94% 100%);display:grid;place-items:center;margin:auto}
+.donut-core{width:67%;height:67%;border-radius:50%;background:#0b1e38;display:flex;flex-direction:column;align-items:center;justify-content:center;overflow:hidden}
+.donut-core strong{font-size:clamp(10px,1vw,14px);color:#edf6ff;white-space:nowrap}.donut-core small{font-size:9px;color:#83a1bd}
+.composition-details{min-width:0;display:flex;flex-direction:column;gap:7px}
+.composition-line{display:grid;grid-template-columns:10px minmax(0,1fr) auto;align-items:center;gap:5px;font-size:9px;color:#c9dced}
+.composition-line strong{font-size:10px;color:#edf6ff}.composition-line small{display:none}
+.legend-dot{width:9px;height:9px;border-radius:50%}.legend-dot.acq{background:#21d69b}.legend-dot.cross{background:#36a3ff}
+.composition-bottom{display:grid;grid-template-columns:1fr 1fr;gap:5px}
+.mrr-box{padding:6px!important;border:1px solid #1b4262!important;border-radius:6px!important;background:#102744!important;min-width:0}
+.mrr-box small{display:block;font-size:8px;color:#83a1bd}.mrr-box strong{display:block;font-size:12px;color:#edf6ff;white-space:nowrap}.mrr-box em{display:block;font-style:normal;font-size:7px;color:#83a1bd}
+.mrr-split-track{height:6px!important;border-radius:5px!important;background:#173653!important;display:flex;overflow:hidden}
+.pipeline-total{font-size:clamp(20px,1.8vw,29px);font-weight:800;color:#edf6ff;text-align:center;margin:3px 0}
+.pipeline-coverage{text-align:center;color:#21d69b;font-size:10px;font-weight:700;padding-bottom:8px;border-bottom:1px solid #1b4262}
+.pipeline-arr{display:flex;justify-content:space-between;align-items:center;padding:7px 0;border-bottom:1px solid #1b4262}
+.pipeline-arr small{font-size:8px;color:#83a1bd}.pipeline-arr strong{font-size:12px;color:#a27aff}
+#aging-bars-wrap{margin-top:8px!important}
+#aging-bars-wrap>div:first-child{font-size:9px!important;color:#b7c9dc!important;margin-bottom:5px!important}
+.aging-bar-track{height:12px!important;border-radius:6px!important;background:#173653!important}
+.aging-legend{display:grid!important;grid-template-columns:repeat(3,1fr)!important;gap:4px!important;font-size:8px!important;color:#a9c7df!important;white-space:nowrap}
+@media(max-height:760px){#sec-ceo{grid-template-rows:105px 1px minmax(155px,1fr) minmax(220px,1.22fr) minmax(160px,.94fr)!important}.topbar{height:76px;min-height:76px;flex-basis:76px}.brand-copy strong{font-size:24px}.topbar-title strong{font-size:23px}.footer-row{display:grid!important}}
+@media(max-height:620px){#sec-ceo{grid-template-rows:92px 1px minmax(130px,1fr) minmax(190px,1.22fr) minmax(135px,.94fr)!important}.topbar{height:64px;min-height:64px;flex-basis:64px}.topbar-tagline{display:none}}
+@media(max-width:1100px){.topbar-tagline{display:none}.topbar-brand{min-width:200px}.brand-copy strong{font-size:22px}.topbar-title strong{font-size:20px}}
+@media(max-width:900px){html,body{height:auto;min-height:100%;overflow:auto!important}.layout,.content{overflow:visible!important}.section.active{overflow:visible!important}#sec-ceo{display:flex!important;height:auto;overflow:visible;gap:9px}.kgrid-hero{grid-template-columns:repeat(3,minmax(0,1fr))!important}.central-row,.two-col,.footer-row{grid-template-columns:1fr!important;height:auto;overflow:visible}.central-row .sec-card,.two-col .sec-card,.footer-row .sec-card{height:auto;min-height:150px}.central-row .chart-wrap{min-height:180px}.footer-row{display:grid!important}.initial-avatar{display:none!important}}
+@media(max-width:600px){.kgrid-hero{grid-template-columns:repeat(2,minmax(0,1fr))!important}.topbar-title{display:none}}
+
 </style>
 </head>
 <body>
 
 <!-- TOP BAR ── cockpit strip ──────────────────────────────────────────────── -->
 <div class="topbar">
-  <div class="topbar-brand">&#127968; Amplimed Sales Command Center</div>
-  <div class="topbar-center" id="header-month">Performance Comercial</div>
-  <!-- KPIs de topo migraram para o Scorecard Executivo (6 KPIs) no corpo do painel -->
-  <div class="topbar-right">
-    <span id="ultima-atualizacao" style="font-size:10px;opacity:.6;white-space:nowrap">&#128260; carregando dados&hellip;</span>
-    <button class="btn-icon" onclick="toggleDark()" title="Dark Mode">&#9790;</button>
-  </div>
+  <div class="topbar-brand"><span class="amp-mark" aria-hidden="true">A</span><span class="brand-copy"><strong>Amplimed</strong><small>Sales Command Center</small></span></div>
+  <div class="topbar-title"><span class="eyebrow">／ PERFORMANCE COMERCIAL</span><strong id="header-month">SETEMBRO DE 2026</strong></div>
+  <div class="topbar-tagline">Soluções Integradas<br>para Operadoras de Saúde</div>
+  <div class="topbar-right"><span class="live-dot"></span><span id="ultima-atualizacao" style="font-size:10px;white-space:nowrap">Dados atualizados</span><button class="btn-icon" onclick="toggleDark()" title="Alternar tema">&#8635;</button></div>
 </div>
 <!-- kpi-pctmeta/kpi-pace/kpi-winrate/kpi-receitadia/tpkpi-progress-* saíram do
      DOM: são lidos com if(el(...)) no JS, então continuam no-op com segurança. -->
@@ -927,18 +1029,15 @@ body{display:flex;flex-direction:column}
       </div>
     </div>
     <div class="sec-card">
-      <div class="sec-hdr" style="background:#4A235A">&#127775; Meta, Forecast &amp; Pipeline</div>
+      <div class="sec-hdr" style="background:#4A235A"><span>◎ &nbsp; PULSO COMERCIAL</span><small>O que precisamos para bater a meta</small></div>
       <div class="sec-body" id="forecast-panel-body">
         <!-- Meta Mensal já aparece na nota do card "Forecast do Mês" do scorecard;
              mantido aqui oculto apenas para o hook de atualização dinâmica (config.json). -->
         <strong id="kv-meta-mensal" style="display:none">R$47.000,00</strong>
-        <div class="forecast-mini-grid">
-          <div class="forecast-mini-item"><div class="forecast-mini-lbl">Meta Di&aacute;ria</div><div class="forecast-mini-val" id="kcard-meta-diaria">—</div></div>
-          <div class="forecast-mini-item"><div class="forecast-mini-lbl">Necess&aacute;rio/dia</div><div class="forecast-mini-val" id="kcard-necessario">—</div></div>
-          <div class="forecast-mini-item"><div class="forecast-mini-lbl">Dias Restantes</div><div class="forecast-mini-val" id="kcard-dias-restantes">—</div></div>
-          <div class="forecast-mini-item"><div class="forecast-mini-lbl">Pipeline Aberto</div><div class="forecast-mini-val" id="kpi-pipeline">—</div></div>
-          <div class="forecast-mini-item"><div class="forecast-mini-lbl">ARR Projetado</div><div class="forecast-mini-val" id="arr-projetado" style="color:#7C3AED">—</div></div>
-          <div class="forecast-mini-item"><div class="forecast-mini-lbl">Coverage (Meta Anual R$191k)</div><div class="forecast-mini-val" id="coverage-val" style="color:var(--rd)">—</div></div>
+        <div class="forecast-mini-grid pulse-grid">
+          <div class="forecast-mini-item"><div class="pulse-icon">▣</div><div class="forecast-mini-lbl">DIAS RESTANTES</div><div class="forecast-mini-val" id="kcard-dias-restantes">—</div><small>dias úteis</small></div>
+          <div class="forecast-mini-item"><div class="pulse-icon">▥</div><div class="forecast-mini-lbl">NECESSÁRIO / DIA</div><div class="forecast-mini-val pulse-red" id="kcard-necessario">—</div><small>para atingir a meta</small></div>
+          <div class="forecast-mini-item"><div class="pulse-icon">↗</div><div class="forecast-mini-lbl">PROJEÇÃO DO MÊS</div><div class="forecast-mini-val" id="kcard-pulse-projecao">—</div><small id="pulse-proj-note">forecast atual</small></div>
         </div>
       </div>
     </div>
@@ -950,7 +1049,7 @@ body{display:flex;flex-direction:column}
       <div class="sec-hdr" style="display:flex;justify-content:space-between;align-items:center;gap:8px"><span>&#127942; Closers MTD</span><span id="closers-hdr-sub" style="font-size:10px;font-weight:500;opacity:.9;white-space:nowrap">&mdash;</span></div>
       <div class="sec-body">
         <div class="tbl-wrap" id="closers-tbl-wrap"><table>
-          <tr><th style="background:#1B3A5C">Closer</th><th style="background:#1B3A5C">Vendas</th><th style="background:#1B3A5C">Receita Total</th><th style="background:#1B3A5C">Taxa de Ganho</th></tr>
+          <thead><tr><th>#</th><th>Closer</th><th>Receita</th><th class="progress-head">Progresso</th><th>% da meta</th><th>Meta</th><th>Taxa de ganho</th><th>Vendas</th></tr></thead>
           <tbody id="tbl-closers-mini"><tr style="background:#fff"><td>Tamara</td><td>14</td><td>R$4.387,97</td><td>74%</td></tr><tr style="background:#fff"><td>Eduardo</td><td>13</td><td>R$5.637,75</td><td>72%</td></tr><tr style="background:#fff"><td>Juliano</td><td>11</td><td>R$1.837,80</td><td>65%</td></tr><tr style="background:#fff"><td>Ariel</td><td>9</td><td>R$2.967,07</td><td>64%</td></tr><tr style="background:#fff"><td>Mayara</td><td>19</td><td>R$5.027,47</td><td>86%</td></tr>
         </table></div>
         <div class="sdr-insight" id="closers-insight"></div>
@@ -960,7 +1059,7 @@ body{display:flex;flex-direction:column}
       <div class="sec-hdr" style="background:#0D6E6E;display:flex;justify-content:space-between;align-items:center;gap:8px"><span>&#128100; SDR MTD</span><span id="sdr-hdr-sub" style="font-size:10px;font-weight:500;opacity:.9;white-space:nowrap">&mdash;</span></div>
       <div class="sec-body">
         <div class="tbl-wrap" id="sdr-tbl-wrap"><table>
-          <tr><th style="background:#0D6E6E">SDR</th><th style="background:#0D6E6E">SQL</th><th style="background:#0D6E6E">Rec. Influenciada</th></tr>
+          <thead><tr><th>#</th><th>SDR</th><th>SQL</th><th>Receita influenciada</th><th>% da meta</th></tr></thead>
           <tbody id="tbl-sdr-mini"><tr style="background:#fff"><td>Ana</td><td>33</td><td>R$9.685,35</td></tr><tr style="background:#fff"><td>Amanda</td><td>49</td><td>R$5.049,69</td></tr><tr style="background:#fff"><td>Francisco</td><td>23</td><td>R$4.335,02</td></tr></tbody>
         </table></div>
         <div class="sdr-insight" id="sdr-insight"></div>
@@ -968,43 +1067,36 @@ body{display:flex;flex-direction:column}
     </div>
   </div>
 
-  <!-- Rodapé: funil horizontal da equipe + composição da receita / aging -->
+  <!-- Rodapé: funil, composição e pipeline -->
   <div class="footer-row">
-    <div class="sec-card">
-      <div class="sec-hdr" style="background:#0F6057">&#128268; Funil da Equipe &mdash; SQL &rarr; Demo &rarr; SAL &rarr; Proposta &rarr; Ganho</div>
-      <div class="sec-body" id="funil-panel-body">
-        <div id="team-funnel-row"></div>
+    <div class="sec-card funnel-card">
+      <div class="sec-hdr"><span>▽ &nbsp; FUNIL DA EQUIPE</span><small>SQL → DEMO → SAL → PROPOSTA → GANHO</small></div>
+      <div class="sec-body" id="funil-panel-body"><div id="team-funnel-row"></div></div>
+    </div>
+    <div class="sec-card composition-card">
+      <div class="sec-hdr"><span>▣ &nbsp; COMPOSIÇÃO DA RECEITA</span></div>
+      <div class="sec-body">
+        <div class="composition-layout">
+          <div class="donut-placeholder"><div class="donut-core"><strong id="mrr-total">—</strong><small>Total</small></div></div>
+          <div class="composition-details">
+            <div class="composition-line"><i class="legend-dot acq"></i><span>Aquisição</span><strong id="mrr-acq">—</strong><small id="mrr-acq-pct">—</small></div>
+            <div class="composition-line"><i class="legend-dot cross"></i><span>Cross-Sell</span><strong id="mrr-cross">—</strong><small id="mrr-cross-pct">—</small></div>
+            <div class="mrr-split-track"><div class="mrr-split-fill-acq" id="mrr-split-acq" style="width:50%"></div><div class="mrr-split-fill-cross" id="mrr-split-cross" style="width:50%"></div></div>
+            <div class="composition-bottom">
+              <div class="mrr-box"><small>Ticket médio</small><strong class="js-ticket-medio">—</strong><div class="kcard-gauge-track"><div class="kcard-gauge-fill" id="kcard-ticket-gauge" style="width:0%"></div></div></div>
+              <div class="mrr-box"><small>Total de vendas</small><strong id="kcard-vendas-2-v">—</strong><em id="kcard-vendas-2-n">—</em></div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-    <div class="sec-card">
-      <div class="sec-hdr" style="background:#0D5C2A">&#128181; Composi&ccedil;&atilde;o da Receita</div>
+    <div class="sec-card pipeline-card">
+      <div class="sec-hdr"><span>▤ &nbsp; PIPELINE EM ABERTO</span></div>
       <div class="sec-body">
-        <div class="kgrid-2 mb-0">
-          <div class="mrr-box" style="background:var(--gn-bg)">
-            <div style="font-size:9.5px;color:var(--ink3)">Aquisi&ccedil;&atilde;o</div>
-            <div id="mrr-acq" style="font-size:12.5px;font-weight:700;color:var(--gn)">—</div>
-          </div>
-          <div class="mrr-box" style="background:var(--bl-bg)">
-            <div style="font-size:9.5px;color:var(--ink3)">Cross-Sell</div>
-            <div id="mrr-cross" style="font-size:12.5px;font-weight:700;color:var(--bl)">—</div>
-          </div>
-        </div>
-        <div style="margin-top:3px">
-          <div class="mrr-split-track"><div class="mrr-split-fill-acq" id="mrr-split-acq" style="width:50%"></div><div class="mrr-split-fill-cross" id="mrr-split-cross" style="width:50%"></div></div>
-        </div>
-        <div class="kgrid-2 mb-0" style="margin-top:3px">
-          <div class="mrr-box" style="background:var(--surface2)">
-            <div style="font-size:9.5px;color:var(--ink3)">Ticket M&eacute;dio</div>
-            <div class="js-ticket-medio" style="font-size:12.5px;font-weight:700;color:var(--ink)">—</div>
-            <div class="kcard-gauge-track"><div class="kcard-gauge-fill" id="kcard-ticket-gauge" style="width:0%"></div></div>
-          </div>
-          <div class="mrr-box" style="background:var(--surface2)">
-            <div style="font-size:9.5px;color:var(--ink3)">Total de Vendas</div>
-            <div id="kcard-vendas-2-v" style="font-size:12.5px;font-weight:700;color:var(--ink)">—</div>
-            <div id="kcard-vendas-2-n" style="font-size:9px;color:var(--ink3);margin-top:1px">—</div>
-          </div>
-        </div>
-        <div id="aging-bars-wrap" style="margin-top:7px"></div>
+        <div class="pipeline-total" id="kpi-pipeline">—</div>
+        <div class="pipeline-coverage" id="coverage-val">—</div>
+        <div class="pipeline-arr"><small>ARR PROJETADO</small><strong id="arr-projetado">—</strong></div>
+        <div id="aging-bars-wrap"></div>
       </div>
     </div>
   </div>
@@ -1369,8 +1461,12 @@ function aplicarDadosNoPainel(d){
   const tblMini = document.getElementById('tbl-closers-mini');
   if(tblMini && d.closers){
     const closersAtivos = d.closers.filter(c=>c.metaMes>0);
-    const linhas = closersAtivos.map(c=>{
-      return '<tr style="background:#fff"><td>'+c.name+'</td><td>'+c.ganhos+'</td><td>'+fmtMoeda(c.totalAmount)+'</td><td>'+c.winRate+'%</td></tr>';
+    const linhas = closersAtivos.slice().sort((a,b)=>(b.totalAmount||0)-(a.totalAmount||0)).map((c,idx)=>{
+      const meta = Number(c.metaMes||0), receita = Number(c.totalAmount||0);
+      const pct = meta>0 ? Math.round(receita/meta*1000)/10 : 0;
+      const bar = Math.max(0,Math.min(100,pct));
+      const tone = pct>=100?'good':(pct>=70?'mid':'low');
+      return '<tr><td class="rank-cell">'+(idx+1)+'</td><td class="person-cell"><span class="initial-avatar">'+String(c.name||'?').trim().charAt(0).toUpperCase()+'</span><span>'+c.name+'</span></td><td class="money-cell">'+fmtMoeda(receita)+'</td><td class="progress-cell"><span class="table-progress"><i class="'+tone+'" style="width:'+bar+'%"></i></span></td><td class="pct-cell '+tone+'">'+pct.toLocaleString('pt-BR',{minimumFractionDigits:1,maximumFractionDigits:1})+'%</td><td>'+fmtMoeda(meta)+'</td><td>'+c.winRate+'%</td><td>'+c.ganhos+'</td></tr>';
     }).join('');
     const somaVendas = closersAtivos.reduce((s,c)=>s+(c.ganhos||0),0);
     const somaTotalAmount = closersAtivos.reduce((s,c)=>s+(c.totalAmount||0),0);
@@ -1406,8 +1502,10 @@ function aplicarDadosNoPainel(d){
   const tblSdr = document.getElementById('tbl-sdr-mini');
   if(tblSdr && d.sdrs){
     const sdrsAtivos = d.sdrs.filter(s=>s.metaMes>0);
-    const linhasSdr = sdrsAtivos.map(s=>{
-      return '<tr style="background:#fff"><td>'+s.name+'</td><td>'+s.sql+'</td><td>'+fmtMoeda(s.recInfluenciada)+'</td></tr>';
+    const linhasSdr = sdrsAtivos.slice().sort((a,b)=>(b.pctMetaProRata||0)-(a.pctMetaProRata||0)).map((s,idx)=>{
+      const p=Number(s.pctMetaProRata||0), tone=p>=100?'good':(p>=70?'mid':'low');
+      const w=Math.max(0,Math.min(100,p));
+      return '<tr><td class="rank-cell">'+(idx+1)+'</td><td class="person-cell"><span class="initial-avatar">'+String(s.name||'?').trim().charAt(0).toUpperCase()+'</span><span>'+s.name+'</span></td><td>'+s.sql+'</td><td class="money-cell">'+fmtMoeda(s.recInfluenciada)+'</td><td class="pct-cell '+tone+'">'+p.toLocaleString('pt-BR',{minimumFractionDigits:1,maximumFractionDigits:1})+'%</td></tr>';
     }).join('');
     const somaSql = sdrsAtivos.reduce((s,x)=>s+(x.sql||0),0);
     const somaRec = sdrsAtivos.reduce((s,x)=>s+(x.recInfluenciada||0),0);
@@ -1525,6 +1623,8 @@ function aplicarDadosNoPainel(d){
       +' <span class="delta '+cls2+'">'+arw2+' '+projVsMeta+'%</span>';
   }
 
+  if(el('kcard-pulse-projecao')) el('kcard-pulse-projecao').textContent = fmtMoeda(projecaoMes);
+  if(el('pulse-proj-note')) el('pulse-proj-note').textContent = metaMensal>0 ? (Math.round(projecaoMes/metaMensal*1000)/10).toLocaleString('pt-BR')+'% da meta' : 'forecast atual';
   // ── Ritmo & Forecast card ────────────────────────────────────────────────
   const diasRest = totalWorkingDays - workingDaysSoFar;
   if(el('kcard-meta-diaria')) el('kcard-meta-diaria').textContent = fmtMoeda(metaDiaria);
