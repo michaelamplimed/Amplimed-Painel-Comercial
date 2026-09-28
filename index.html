@@ -649,150 +649,92 @@ body.dark ::-webkit-scrollbar-thumb{background:#2D4060}
   .status-strip{grid-template-columns:repeat(2,1fr)}
 }
 
-/* ═══ SINGLE-SCREEN — sem rolagem ═══ */
-html{height:100dvh;overflow:hidden}
-body{height:100dvh;overflow:hidden;display:flex;flex-direction:column;margin:0}
-.topbar{flex-shrink:0}
-.layout{flex:1!important;min-height:0!important;overflow:hidden!important;display:flex!important;flex-direction:column!important}
-.content{flex:1!important;min-height:0!important;overflow:hidden!important;padding:8px 14px!important;display:flex!important;flex-direction:column!important;box-sizing:border-box}
-.section.active{display:flex!important;flex-direction:column!important;flex:1!important;min-height:0!important;overflow:hidden!important}
-/* sec-ceo: grid com ultima linha preenchendo o restante */
-#sec-ceo{display:grid!important;grid-template-rows:auto auto minmax(0,.85fr) minmax(0,1.35fr) minmax(0,.9fr);gap:6px;height:100%;max-height:100%;overflow:hidden}
-/* KPI hero (scorecard executivo — 6 KPIs) — nunca quebra em 2 linhas: no
-   painel de tela única, altura é o recurso escasso, não largura. */
-.kgrid-hero{margin-bottom:0!important;gap:7px!important;grid-template-columns:repeat(6,minmax(0,1fr))!important;max-height:112px;overflow:hidden}
-.kcard-inner{padding:7px 10px!important}
-.kcard-lbl{font-size:9px!important;margin-bottom:1px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.kcard-val{font-size:16px!important}
-.kcard-note{font-size:9px!important;margin-top:1px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-/* pace bar */
-.pace-bar{padding:4px 12px!important;margin-bottom:0!important;font-size:10px!important;max-height:26px;overflow:hidden;white-space:nowrap;text-overflow:ellipsis}
-/* linha central: gráfico + painel meta/forecast/pipeline */
-.central-row{gap:7px!important;margin-bottom:0!important;display:grid!important;min-height:0;max-height:100%;height:100%;overflow:hidden}
-.central-row .sec-card{display:flex!important;flex-direction:column!important;overflow:hidden!important;min-height:0;margin-bottom:0!important}
-.central-row .sec-body{flex:1!important;min-height:0;overflow:hidden!important;padding:6px 10px!important;display:flex!important;flex-direction:column!important}
-.central-row .chart-wrap{flex:1;min-height:0;height:auto;position:relative}
+/* ═══ TV DASHBOARD — compacto, hierarquia visual e sem quebra ═══ */
+html{height:100%;height:100dvh;overflow:hidden}
+body{height:100%;height:100dvh;min-height:0;margin:0;overflow:hidden;display:flex;flex-direction:column}
+.topbar{height:40px;min-height:40px;flex:0 0 40px;padding:0 14px;gap:10px}
+.topbar-brand{font-size:12px;padding-right:10px}
+.topbar-center{font-size:11px;letter-spacing:.8px}
+.topbar-right{gap:6px;padding-left:10px}
+#ultima-atualizacao{font-size:9px!important}
+.btn-icon{padding:3px 8px;font-size:11px}
+.layout{display:flex!important;flex:1!important;min-height:0!important;overflow:hidden!important}
+.content{flex:1!important;min-width:0;min-height:0!important;overflow:hidden!important;padding:7px 10px!important;display:flex!important;flex-direction:column!important}
+.section.active{display:flex!important;flex:1!important;flex-direction:column!important;min-height:0!important;overflow:hidden!important}
+#sec-ceo{display:grid!important;grid-template-columns:minmax(0,1fr);grid-template-rows:76px 22px minmax(105px,.82fr) minmax(160px,1.18fr) minmax(112px,.78fr);gap:6px;height:100%;min-height:0;max-height:100%;overflow:hidden}
+#sec-ceo>*{min-width:0;min-height:0}
+.kgrid-hero{grid-template-columns:repeat(6,minmax(0,1fr))!important;gap:7px!important;margin:0!important;max-height:none;overflow:hidden}
+.kcard{min-width:0;min-height:0;height:100%;padding:7px 9px;border-radius:9px;box-shadow:0 2px 7px rgba(15,23,42,.07);border-top-width:3px!important}
+.kcard:hover{transform:none;box-shadow:0 2px 7px rgba(15,23,42,.07)}
+.kcard-inner{padding:0!important;gap:5px;align-items:center}
+.kcard-lbl{font-size:8px!important;letter-spacing:.55px;margin:0 0 4px!important;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.kcard-val{font-size:clamp(14px,1.15vw,19px)!important;line-height:1.05;margin:0 0 4px!important;white-space:nowrap}
+.kcard-val .bdg{font-size:13px!important;padding:2px 6px!important}
+.kcard-note{font-size:8px!important;line-height:1.2;margin:0!important;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.kcard-inner [id^="spark-"]{max-width:48px;overflow:hidden;flex-shrink:0}
+.pace-bar{height:22px;min-height:22px;max-height:22px;margin:0!important;padding:3px 9px!important;font-size:9px!important;line-height:14px;border-radius:6px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.central-row{display:grid!important;grid-template-columns:minmax(0,1.55fr) minmax(0,1fr)!important;gap:7px!important;height:100%;min-height:0;max-height:100%;margin:0!important;overflow:hidden}
+.central-row .sec-card,.two-col .sec-card,.footer-row .sec-card{display:flex!important;flex-direction:column!important;min-width:0;min-height:0;height:100%;max-height:100%;margin:0!important;overflow:hidden;border-radius:9px;box-shadow:0 2px 7px rgba(15,23,42,.07)}
+.sec-hdr{min-height:24px!important;height:24px;padding:0 9px!important;font-size:9px!important;letter-spacing:.45px;flex:0 0 24px}
+.central-row .sec-body{display:flex!important;flex:1!important;min-height:0;overflow:hidden!important;padding:5px 8px!important}
+.central-row .chart-wrap{position:relative;flex:1;min-height:0;height:auto}
 .central-row .chart-wrap canvas{position:absolute;inset:0;width:100%!important;height:100%!important}
-/* rodapé: funil da equipe + composição/aging */
-.footer-row{gap:7px!important;margin-bottom:0!important;display:grid!important;min-height:0;max-height:100%;overflow:hidden}
-.footer-row .sec-card{margin-bottom:0!important;min-height:0;max-height:100%;overflow:hidden;display:flex!important;flex-direction:column!important}
-.footer-row .sec-body{padding:4px 10px!important;min-height:0;overflow:hidden!important;flex:1!important}
-/* two-col: preenche o 1fr do grid */
-.two-col{gap:7px!important;margin-bottom:0!important;display:flex!important;align-items:stretch!important;min-height:0;height:100%;max-height:100%;overflow:hidden}
-.two-col .sec-card{display:flex!important;flex-direction:column!important;flex:1!important;overflow:hidden!important;min-height:0}
-.two-col .sec-body{flex:1!important;overflow:hidden!important;padding:0!important;display:flex!important;flex-direction:column!important;min-height:0}
-/* tabela: centraliza verticalmente em vez de esticar linhas (evita gaps desproporcionais) */
-.tbl-wrap{flex:1!important;overflow:hidden!important;min-height:0;display:flex!important;flex-direction:column!important;justify-content:center!important}
-.tbl-wrap table{width:100%!important;height:auto!important}
-/* Ranking SDR/Closer — mesa alinhada ao topo (sem centralizar), espaço remanescente vira insight de dados */
+.forecast-mini-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:5px}
+.forecast-mini-item{padding:5px 7px;border-radius:6px;min-width:0}
+.forecast-mini-lbl{font-size:7.5px}
+.forecast-mini-val{font-size:11px;margin-top:1px}
+#forecast-panel-body{justify-content:center}
+.two-col{display:grid!important;grid-template-columns:minmax(0,1.08fr) minmax(0,1fr)!important;gap:7px!important;height:100%;min-height:0;max-height:100%;margin:0!important;overflow:hidden}
+.two-col .sec-body{display:flex!important;flex:1!important;flex-direction:column!important;min-height:0;overflow:hidden!important;padding:4px 7px!important}
+.tbl-wrap{flex:1!important;min-height:0;overflow:hidden!important;display:flex!important;flex-direction:column!important;justify-content:flex-start!important;border-radius:6px}
+.tbl-wrap table{width:100%!important;height:auto!important;table-layout:fixed;font-size:10px}
+.tbl-wrap table th{padding:4px 6px!important;font-size:8px!important;line-height:1.1!important;letter-spacing:.25px}
+.tbl-wrap table td{padding:3px 6px!important;font-size:10px!important;line-height:1.1!important}
 #closers-tbl-wrap,#sdr-tbl-wrap{justify-content:flex-start!important}
-.tpkpi-progress-sub{font-size:8.5px;opacity:.6;margin-top:1px;white-space:nowrap;color:#fff;line-height:1.2}
-.sdr-insight{margin-top:8px;padding-top:8px;border-top:1px dashed var(--border);overflow:hidden}
-.sdr-insight-title{font-size:9.5px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:var(--ink2);margin-bottom:5px}
-.sdr-insight-row{display:flex;align-items:center;gap:8px;margin-bottom:4px}
-.sdr-insight-row:last-child{margin-bottom:0}
-.sdr-insight-name{width:92px;flex-shrink:0;font-size:11.5px;font-weight:600;color:var(--ink);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.sdr-insight-track{flex:1;height:8px;background:var(--border);border-radius:4px;overflow:hidden}
-.sdr-insight-fill{height:100%;border-radius:4px;transition:width .5s ease}
-.sdr-insight-pct{width:44px;text-align:right;font-size:11.5px;font-weight:700;font-variant-numeric:tabular-nums}
-/* Blindagem: em telas mais baixas (notebook, zoom do navegador), comprime
-   ainda mais o card de insight para nunca empurrar conteúdo pra fora da tela. */
-@media(max-height:820px){
-  .sdr-insight{margin-top:5px;padding-top:5px}
-  .sdr-insight-row{margin-bottom:2px}
-  .sdr-insight-title{margin-bottom:3px}
-  .footer-row .sec-body{padding:5px 8px!important}
-  .aging-legend{display:none}
+.sdr-insight{margin-top:4px;padding-top:4px;overflow:hidden}
+.sdr-insight-title{font-size:8px;margin-bottom:3px}
+.sdr-insight-row{gap:5px;margin-bottom:2px}
+.sdr-insight-name{width:66px;font-size:9px}
+.sdr-insight-track{height:5px}
+.sdr-insight-pct{width:38px;font-size:9px}
+.footer-row{display:grid!important;grid-template-columns:minmax(0,1.25fr) minmax(0,1fr)!important;gap:7px!important;height:100%;min-height:0;max-height:100%;margin:0!important;overflow:hidden}
+.footer-row .sec-body{flex:1!important;min-height:0;overflow:hidden!important;padding:5px 8px!important}
+#funil-panel-body{justify-content:center}
+#team-funnel-row{display:flex;align-items:center;gap:5px!important;min-width:0}
+.tf-step{padding:6px 5px!important;border-radius:7px;min-width:0}
+.tf-lbl{font-size:8px!important;letter-spacing:.2px}
+.tf-val{font-size:15px!important;margin:2px 0!important;line-height:1.1}
+.tf-bar{height:5px}
+.tf-arrow{font-size:8px!important;min-width:23px!important}
+.mrr-box{padding:3px 7px!important;margin-top:2px!important;border-radius:6px}
+.mrr-box div:first-child{font-size:8px!important}
+.mrr-box [id],.mrr-box .js-ticket-medio{font-size:10px!important}
+.mrr-split-track{height:5px}
+#aging-bars-wrap{margin-top:4px!important}
+.aging-legend{display:flex;justify-content:space-between;gap:3px;font-size:7px!important;white-space:nowrap}
+@media(max-height:740px){
+ #sec-ceo{grid-template-rows:70px 20px minmax(95px,.85fr) minmax(145px,1.15fr)!important}
+ .footer-row{display:none!important}
+ .pace-bar{height:20px;min-height:20px;max-height:20px}
 }
-@media(max-height:960px){
-  #sdr-insight,#closers-insight{display:none}
+@media(max-height:570px){
+ #sec-ceo{grid-template-rows:64px minmax(90px,.85fr) minmax(140px,1.15fr)!important}
+ .pace-bar{display:none!important}
 }
-@media(max-height:960px){
-  #aging-bars-wrap{display:none}
+@media(max-width:900px){
+ html,body{height:auto;min-height:100%;overflow:auto}
+ .layout,.content{overflow:visible!important}
+ .section.active{overflow:visible!important}
+ #sec-ceo{display:flex!important;height:auto;overflow:visible;gap:8px}
+ .kgrid-hero{grid-template-columns:repeat(3,minmax(0,1fr))!important}
+ .central-row,.two-col,.footer-row{grid-template-columns:1fr!important;height:auto;overflow:visible}
+ .central-row .sec-card,.two-col .sec-card,.footer-row .sec-card{height:auto;min-height:150px}
+ .central-row .chart-wrap{min-height:180px}
 }
-@media(max-height:700px){
-  .footer-row{display:none!important}
-  #sec-ceo{grid-template-rows:auto auto minmax(0,1fr) minmax(0,1.4fr)!important}
+@media(max-width:600px){
+ .kgrid-hero{grid-template-columns:repeat(2,minmax(0,1fr))!important}
+ .topbar-center{display:none}
 }
-@media(max-height:600px){
-  .pace-bar{display:none!important}
-  #sec-ceo{grid-template-rows:auto minmax(0,1fr) minmax(0,1.4fr)!important}
-}
-/* Telas com mais altura sobrando (a maioria dos monitores reais, ~850px+ de
-   área útil): os tamanhos acima são o mínimo seguro pro pior caso (1366×768).
-   Aqui a gente cresce fonte/espaçamento e volta a mostrar os blocos
-   complementares (ranking SDR, aging) pra preencher o espaço em vez de deixar
-   vazio. */
-@media(min-height:890px){
-  .tbl-wrap table td,.tbl-wrap table th{padding:7px 12px!important;font-size:13.5px!important;line-height:1.3!important}
-  .sec-hdr{padding:8px 12px!important;font-size:12px!important}
-  .central-row .sec-body{padding:10px 12px!important}
-  .footer-row .sec-body{padding:5px 12px!important}
-  .forecast-mini-grid{gap:8px}
-  .forecast-mini-item{padding:8px 10px}
-  .forecast-mini-lbl{font-size:9.5px}
-  .forecast-mini-val{font-size:15px;margin-top:2px}
-  .mrr-box{padding:3px 10px!important;margin-top:3px}
-  .mrr-box div:first-child{font-size:10.5px!important}
-  .kcard-gauge-track{height:4px!important;margin-top:2px!important}
-  .mrr-split-track{height:6px!important}
-  /* Ranking SDR — compacto: mantém nome, barra, % e cor, mas sem competir
-     visualmente com o funil ou os indicadores principais (ajuste round 7). */
-  #sdr-insight{display:block!important;margin-top:5px!important;padding-top:5px!important}
-  .sdr-insight-row{margin-bottom:3px!important}
-  .sdr-insight-title{margin-bottom:3px!important;font-size:8.5px!important}
-  .sdr-insight-name,.sdr-insight-pct{font-size:10.5px!important}
-  .sdr-insight-track{height:6px!important}
-  #aging-bars-wrap{display:block!important;margin-top:4px!important}
-  /* painel Meta/Forecast/Pipeline não tem um bloco "extra" pra crescer (como o
-     ranking do SDR ou o aging) — em vez de deixar vão embaixo, centraliza o
-     conteúdo verticalmente no espaço disponível */
-  #forecast-panel-body{justify-content:center!important}
-  /* balões do Funil da Equipe — crescem pra ocupar o espaço do card em vez de
-     ficar pequenos e colados no topo (ajuste round 7: elementos maiores,
-     mesma altura do bloco) */
-  #funil-panel-body{justify-content:center!important}
-  #team-funnel-row{gap:10px!important}
-  .tf-step{padding:14px 10px!important;border-radius:10px!important}
-  .tf-lbl{font-size:11px!important;letter-spacing:.5px!important}
-  .tf-val{font-size:24px!important;margin:6px 0!important}
-  .tf-bar{height:8px!important}
-  .tf-arrow{font-size:14px!important;min-width:38px!important}
-}
-@media(min-height:960px){
-  .tbl-wrap table td,.tbl-wrap table th{padding:9px 12px!important;font-size:14px!important}
-  .forecast-mini-item{padding:11px 12px}
-  .forecast-mini-val{font-size:16px}
-  #team-funnel-row{gap:12px!important}
-  .tf-step{padding:16px 12px!important}
-  .tf-lbl{font-size:11.5px!important}
-  .tf-val{font-size:27px!important;margin:7px 0!important}
-  .tf-bar{height:9px!important}
-  .tf-arrow{font-size:15px!important}
-}
-/* Performance dos Closers (5 pessoas, receita total) precisa de mais altura
-   que o Ranking SDR (3 pessoas) pra caber junto da própria tabela sem cortar
-   linha — só entra em telas visivelmente mais altas. Ajustado/testado por
-   medição, não por suposição. */
-@media(min-height:890px){
-  #closers-insight{display:block!important;margin-top:5px!important;padding-top:5px!important}
-  #closers-insight .sdr-insight-row{margin-bottom:2px!important}
-  #closers-insight .sdr-insight-title{margin-bottom:2px!important;font-size:8.5px!important}
-  #closers-insight .sdr-insight-name{font-size:10px!important;width:70px!important}
-  #closers-insight .sdr-insight-track{height:5px!important}
-  #closers-insight .sdr-insight-pct{font-size:9.5px!important;width:68px!important}
-}
-/* tipografia — equilibrada entre topo e base do painel */
-.sec-hdr{padding:5px 10px!important;font-size:10.5px!important;min-height:0!important}
-.tbl-wrap table td,.tbl-wrap table th{padding:3px 10px!important;font-size:11.5px!important;line-height:1.15!important}
-.kcard-val{font-size:19px!important}
-.kcard-lbl{font-size:9.5px!important}
-.kcard-inner{padding:9px 11px!important}
-.three-col .sec-body{padding:9px 12px!important}
-.kv-list .kv-row{padding:4px 0!important;font-size:12.5px!important}
-.kv-list hr{margin:3px 0!important}
-.mrr-box{padding:2px 8px!important;margin-top:2px}
-.kgrid-2{gap:5px!important}
 </style>
 </head>
 <body>
