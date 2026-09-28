@@ -1,19 +1,19 @@
 {
-  "geradoEm": "2026-09-28T19:00:31.060Z",
-  "geradoEmBR": "28/09/2026, 16:00:31",
+  "geradoEm": "2026-09-28T19:30:25.543Z",
+  "geradoEmBR": "28/09/2026, 16:30:25",
   "mes": {
     "ano": 2026,
     "mes": 9,
     "chave": "2026-09"
   },
   "metas": {
-    "closer": 48000,
-    "sdr": 40000
+    "closer": 54000,
+    "sdr": 52000
   },
   "kpis": {
     "receitaRealizada": 33975.73,
-    "metaMensal": 48000,
-    "pctMeta": 70.8,
+    "metaMensal": 54000,
+    "pctMeta": 62.9,
     "pipelineAberto": 14272.29,
     "mediaDiaria": 1213.42
   },
@@ -79,34 +79,34 @@
       33975.73
     ],
     "meta": [
-      1600,
-      3200,
-      4800,
-      6400,
-      8000,
-      9600,
-      11200,
-      12800,
+      1800,
+      3600,
+      5400,
+      7200,
+      9000,
+      10800,
+      12600,
       14400,
-      16000,
-      17600,
-      19200,
-      20800,
-      22400,
-      24000,
-      25600,
-      27200,
+      16200,
+      18000,
+      19800,
+      21600,
+      23400,
+      25200,
+      27000,
       28800,
-      30400,
-      32000,
-      33600,
-      35200,
-      36800,
-      38400,
-      40000,
-      41600,
+      30600,
+      32400,
+      34200,
+      36000,
+      37800,
+      39600,
+      41400,
       43200,
-      44800
+      45000,
+      46800,
+      48600,
+      50400
     ]
   },
   "aging": {
@@ -272,6 +272,32 @@
         "salToPropP": 75,
         "winRateP": 60
       }
+    },
+    {
+      "name": "Jessica",
+      "nivel": "Cross-sell",
+      "ganhos": 0,
+      "perdidos": 0,
+      "crossSellGanhos": 3,
+      "aquisicaoAmount": 0,
+      "crossSellAmount": 267.9,
+      "totalAmount": 267.9,
+      "ticketMedio": 0,
+      "winRate": 0,
+      "metaMes": 6000,
+      "metaProRata": 5600,
+      "pctMetaProRata": 4.8,
+      "funil": {
+        "sql": 0,
+        "demo": 0,
+        "sal": 0,
+        "proposta": 0,
+        "won": 0,
+        "sqlToDemoP": null,
+        "demoToSalP": null,
+        "salToPropP": null,
+        "winRateP": null
+      }
     }
   ],
   "sdrs": [
@@ -294,6 +320,14 @@
     {
       "name": "Francisco",
       "sql": 3,
+      "recInfluenciada": 0,
+      "metaMes": 12000,
+      "metaProRata": 11200,
+      "pctMetaProRata": 0
+    },
+    {
+      "name": "Jeferson",
+      "sql": 0,
       "recInfluenciada": 0,
       "metaMes": 12000,
       "metaProRata": 11200,
