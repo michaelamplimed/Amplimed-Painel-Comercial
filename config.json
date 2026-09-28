@@ -1,106 +1,172 @@
 {
-      "_comment": "Configuração do Painel Comercial Amplimed. As metas individuais e de time vêm do documento oficial 'Plano de Metas Comerciais — Vigência S2 2026' (aprovado, versão 02, vigência 08/jul/2026). Metas selecionadas automaticamente pelo mês corrente.",
-      "pipelineId": "default",
-      "crossSellPipelineId": "713767850",
-      "timezone": "America/Sao_Paulo",
-
-      "metasMensais": {
-              "2026-07": {
-                        "closer": 46000,
-                        "sdr": 34000
-              },
-              "2026-08": {
-                        "closer": 47000,
-                        "sdr": 37000
-              },
-              "2026-09": {
-                        "closer": 54000,
-                        "sdr": 40000
-              },
-              "2026-10": {
-                        "closer": 56000,
-                        "sdr": 43000
-              },
-              "2026-11": {
-                        "closer": 56000,
-                        "sdr": 46000
-              },
-              "2026-12": {
-                        "closer": 36000,
-                        "sdr": 27600
-              }
+  "_comment": "Configuração do Painel Comercial Amplimed. As metas individuais vêm do documento oficial 'Plano de Metas Comerciais — Vigência S2 2026'. As metas mensais do time de Closers seguem a tabela consolidada do S2 2026 informada pela gestão. Metas selecionadas automaticamente pelo mês corrente.",
+  "pipelineId": "default",
+  "crossSellPipelineId": "713767850",
+  "timezone": "America/Sao_Paulo",
+  "metasMensais": {
+    "2026-07": {
+      "closer": 46000,
+      "sdr": 34000
+    },
+    "2026-08": {
+      "closer": 47000,
+      "sdr": 37000
+    },
+    "2026-09": {
+      "closer": 48000,
+      "sdr": 40000
+    },
+    "2026-10": {
+      "closer": 50000,
+      "sdr": 43000
+    },
+    "2026-11": {
+      "closer": 50000,
+      "sdr": 46000
+    },
+    "2026-12": {
+      "closer": 30000,
+      "sdr": 27600
+    }
+  },
+  "metasIndividuais": {
+    "_comment": "Meta mensal exata por colaborador, mês a mês, extraída do Plano de Metas S2 2026. Usada em vez de rateio proporcional para eliminar qualquer arredondamento/desvio. 'Francisco' (Francisco Jeferson) saiu em set/2026; 'Jeferson' (Jeferson Alves Capeletto) assumiu a mesma meta a partir de set/2026.",
+    "closers": {
+      "2026-07": {
+        "Tamara": 10400,
+        "Eduardo": 10400,
+        "Ariel": 8400,
+        "Mayara": 8400,
+        "Juliano": 8400,
+        "Catiane": 0
       },
-
-      "metasIndividuais": {
-              "_comment": "Meta mensal exata por colaborador, mês a mês, extraída do Plano de Metas S2 2026. Usada em vez de rateio proporcional para eliminar qualquer arredondamento/desvio. 'Francisco' (Francisco Jeferson) saiu em set/2026; 'Jeferson' (Jeferson Alves Capeletto) assumiu a mesma meta a partir de set/2026.",
-              "closers": {
-                        "2026-07": { "Tamara": 10400, "Eduardo": 10400, "Ariel": 8400, "Mayara": 8400, "Juliano": 8400, "Catiane": 0 },
-                        "2026-08": { "Tamara": 10600, "Eduardo": 10600, "Ariel": 8600, "Mayara": 8600, "Juliano": 8600, "Catiane": 0 },
-                        "2026-09": { "Tamara": 10800, "Eduardo": 10800, "Ariel": 8800, "Mayara": 8800, "Juliano": 8800, "Catiane": 0, "Jessica": 6000 },
-                        "2026-10": { "Tamara": 11200, "Eduardo": 11200, "Ariel": 9200, "Mayara": 9200, "Juliano": 9200, "Catiane": 0, "Jessica": 6000 },
-                        "2026-11": { "Tamara": 11200, "Eduardo": 11200, "Ariel": 9200, "Mayara": 9200, "Juliano": 9200, "Catiane": 0, "Jessica": 6000 },
-                        "2026-12": { "Tamara": 6720, "Eduardo": 6720, "Ariel": 5520, "Mayara": 5520, "Juliano": 5520, "Catiane": 0, "Jessica": 6000 }
-              },
-              "sdrs": {
-                        "2026-07": { "Ana": 12000, "Amanda": 12000, "Francisco": 10000 },
-                        "2026-08": { "Ana": 13000, "Amanda": 13000, "Francisco": 11000 },
-                        "2026-09": { "Ana": 14000, "Amanda": 14000, "Jeferson": 12000 },
-                        "2026-10": { "Ana": 15000, "Amanda": 15000, "Jeferson": 13000 },
-                        "2026-11": { "Ana": 16000, "Amanda": 16000, "Jeferson": 14000 },
-                        "2026-12": { "Ana": 9600, "Amanda": 9600, "Jeferson": 8400 }
-              }
+      "2026-08": {
+        "Tamara": 10600,
+        "Eduardo": 10600,
+        "Ariel": 8600,
+        "Mayara": 8600,
+        "Juliano": 8600,
+        "Catiane": 0
       },
-
-      "sdrs": [
-              {
-                        "name": "Ana",
-                        "ownerId": 85856641
-              },
-              {
-                        "name": "Amanda",
-                        "ownerId": 95430598
-              },
-              {
-                        "name": "Jeferson",
-                        "ownerId": 99524984
-              }
-      ],
-
-      "closers": [
-              {
-                        "name": "Tamara",
-                        "ownerId": 418032145,
-                        "nivel": "Sênior"
-              },
-              {
-                        "name": "Eduardo",
-                        "ownerId": 88206054,
-                        "nivel": "Sênior"
-              },
-              {
-                        "name": "Juliano",
-                        "ownerId": 84254525,
-                        "nivel": "Pleno"
-              },
-              {
-                        "name": "Ariel",
-                        "ownerId": 88439406,
-                        "nivel": "Pleno"
-              },
-              {
-                        "name": "Mayara",
-                        "ownerId": 90883963,
-                        "nivel": "Pleno"
-              },
-              {
-                        "name": "Catiane",
-                        "ownerId": 421811032,
-                        "nivel": "Coordenadora"
-              },
-              {
-                        "name": "Jessica",
-                        "ownerId": 77598783,
-                        "nivel": "Cross-sell"
-              }
-      ]
+      "2026-09": {
+        "Tamara": 10800,
+        "Eduardo": 10800,
+        "Ariel": 8800,
+        "Mayara": 8800,
+        "Juliano": 8800,
+        "Catiane": 0,
+        "Jessica": 6000
+      },
+      "2026-10": {
+        "Tamara": 11200,
+        "Eduardo": 11200,
+        "Ariel": 9200,
+        "Mayara": 9200,
+        "Juliano": 9200,
+        "Catiane": 0,
+        "Jessica": 6000
+      },
+      "2026-11": {
+        "Tamara": 11200,
+        "Eduardo": 11200,
+        "Ariel": 9200,
+        "Mayara": 9200,
+        "Juliano": 9200,
+        "Catiane": 0,
+        "Jessica": 6000
+      },
+      "2026-12": {
+        "Tamara": 6720,
+        "Eduardo": 6720,
+        "Ariel": 5520,
+        "Mayara": 5520,
+        "Juliano": 5520,
+        "Catiane": 0,
+        "Jessica": 6000
+      }
+    },
+    "sdrs": {
+      "2026-07": {
+        "Ana": 12000,
+        "Amanda": 12000,
+        "Francisco": 10000
+      },
+      "2026-08": {
+        "Ana": 13000,
+        "Amanda": 13000,
+        "Francisco": 11000
+      },
+      "2026-09": {
+        "Ana": 14000,
+        "Amanda": 14000,
+        "Jeferson": 12000
+      },
+      "2026-10": {
+        "Ana": 15000,
+        "Amanda": 15000,
+        "Jeferson": 13000
+      },
+      "2026-11": {
+        "Ana": 16000,
+        "Amanda": 16000,
+        "Jeferson": 14000
+      },
+      "2026-12": {
+        "Ana": 9600,
+        "Amanda": 9600,
+        "Jeferson": 8400
+      }
+    }
+  },
+  "sdrs": [
+    {
+      "name": "Ana",
+      "ownerId": 85856641
+    },
+    {
+      "name": "Amanda",
+      "ownerId": 95430598
+    },
+    {
+      "name": "Jeferson",
+      "ownerId": 99524984
+    }
+  ],
+  "closers": [
+    {
+      "name": "Tamara",
+      "ownerId": 418032145,
+      "nivel": "Sênior"
+    },
+    {
+      "name": "Eduardo",
+      "ownerId": 88206054,
+      "nivel": "Sênior"
+    },
+    {
+      "name": "Juliano",
+      "ownerId": 84254525,
+      "nivel": "Pleno"
+    },
+    {
+      "name": "Ariel",
+      "ownerId": 88439406,
+      "nivel": "Pleno"
+    },
+    {
+      "name": "Mayara",
+      "ownerId": 90883963,
+      "nivel": "Pleno"
+    },
+    {
+      "name": "Catiane",
+      "ownerId": 421811032,
+      "nivel": "Coordenadora"
+    },
+    {
+      "name": "Jessica",
+      "ownerId": 77598783,
+      "nivel": "Cross-sell"
+    }
+  ]
 }
