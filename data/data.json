@@ -1,6 +1,6 @@
 {
-  "geradoEm": "2026-09-28T16:30:30.512Z",
-  "geradoEmBR": "28/09/2026, 13:30:30",
+  "geradoEm": "2026-09-28T17:00:31.619Z",
+  "geradoEmBR": "28/09/2026, 14:00:31",
   "mes": {
     "ano": 2026,
     "mes": 9,
@@ -132,13 +132,13 @@
       "metaProRata": 10080,
       "pctMetaProRata": 76.3,
       "funil": {
-        "sql": 41,
-        "demo": 41,
+        "sql": 42,
+        "demo": 42,
         "sal": 31,
         "proposta": 26,
         "won": 25,
         "sqlToDemoP": 100,
-        "demoToSalP": 75.6,
+        "demoToSalP": 73.8,
         "salToPropP": 83.9,
         "winRateP": 56.8
       }
@@ -147,26 +147,26 @@
       "name": "Eduardo",
       "nivel": "Sênior",
       "ganhos": 23,
-      "perdidos": 36,
+      "perdidos": 37,
       "crossSellGanhos": 2,
       "aquisicaoAmount": 5098.56,
       "crossSellAmount": 359.7,
       "totalAmount": 5458.26,
       "ticketMedio": 237.32,
-      "winRate": 39,
+      "winRate": 38.3,
       "metaMes": 10800,
       "metaProRata": 10080,
       "pctMetaProRata": 54.1,
       "funil": {
-        "sql": 33,
-        "demo": 33,
+        "sql": 32,
+        "demo": 32,
         "sal": 25,
         "proposta": 23,
         "won": 23,
         "sqlToDemoP": 100,
-        "demoToSalP": 75.8,
+        "demoToSalP": 78.1,
         "salToPropP": 92,
-        "winRateP": 42.6
+        "winRateP": 41.8
       }
     },
     {
@@ -285,7 +285,7 @@
     },
     {
       "name": "Amanda",
-      "sql": 112,
+      "sql": 113,
       "recInfluenciada": 14902.91,
       "metaMes": 14000,
       "metaProRata": 13066.67,
