@@ -1,6 +1,6 @@
 {
-  "geradoEm": "2026-09-29T18:00:30.226Z",
-  "geradoEmBR": "29/09/2026, 15:00:30",
+  "geradoEm": "2026-09-29T18:30:29.481Z",
+  "geradoEmBR": "29/09/2026, 15:30:29",
   "mes": {
     "ano": 2026,
     "mes": 9,
@@ -14,7 +14,7 @@
     "receitaRealizada": 34550.62,
     "metaMensal": 48000,
     "pctMeta": 72,
-    "pipelineAberto": 14606.6,
+    "pipelineAberto": 14745.6,
     "mediaDiaria": 1191.4
   },
   "receitaAcumulada": {
@@ -113,7 +113,7 @@
     ]
   },
   "aging": {
-    "0-7d": 25,
+    "0-7d": 26,
     "8-15d": 16,
     "16-30d": 10,
     "31-60d": 6,
@@ -187,10 +187,10 @@
       "metaProRata": 8506.67,
       "pctMetaProRata": 46.3,
       "funil": {
-        "sql": 27,
-        "demo": 27,
-        "sal": 27,
-        "proposta": 27,
+        "sql": 28,
+        "demo": 28,
+        "sal": 28,
+        "proposta": 28,
         "won": 25,
         "sqlToDemoP": 100,
         "demoToSalP": 100,
@@ -322,7 +322,7 @@
     },
     {
       "name": "Jeferson",
-      "sql": 0,
+      "sql": 1,
       "recInfluenciada": 0,
       "metaMes": 12000,
       "metaProRata": 11600,
