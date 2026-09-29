@@ -380,7 +380,7 @@ tr:hover td{background:var(--surface2)}
 /* ══════════════════════════════════════════════════
    LINHA CENTRAL — gráfico dominante + painel Meta/Forecast/Pipeline
 ══════════════════════════════════════════════════ */
-.central-row{display:grid;grid-template-columns:minmax(0,1.6fr) minmax(0,1fr);gap:var(--sp-4);margin-bottom:var(--sp-4)}
+.central-row{display:grid;grid-template-columns:minmax(0,1fr);gap:var(--sp-4);margin-bottom:var(--sp-4)}
 .forecast-mini-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:6px}
 .forecast-mini-grid.pulse-grid{grid-template-columns:repeat(4,minmax(0,1fr))}
 .forecast-mini-item{background:var(--surface2);border:1px solid var(--border);border-radius:var(--r-sm);padding:5px 8px}
@@ -672,7 +672,7 @@ body{display:flex;flex-direction:column;background:var(--bg);color:var(--ink)}
 #sec-ceo.active{
   box-sizing:border-box;display:grid;
   grid-template-columns:minmax(0,1fr);
-  grid-template-rows:minmax(75px,.6fr) 16px minmax(95px,.8fr) minmax(336px,1.3fr) minmax(224px,1fr);
+  grid-template-rows:minmax(78px,.6fr) 16px minmax(94px,.45fr) minmax(350px,1.6fr) minmax(223px,1.05fr);
   gap:6px;width:100%;height:100%;min-height:0;max-height:100%;overflow:hidden
 }
 #sec-ceo>*{min-width:0;min-height:0}
@@ -698,7 +698,7 @@ body{display:flex;flex-direction:column;background:var(--bg);color:var(--ink)}
   display:grid;box-sizing:border-box;width:100%;height:100%;min-width:0;min-height:0;
   max-height:100%;gap:8px;margin:0;overflow:hidden
 }
-.central-row{grid-template-columns:minmax(0,1.78fr) minmax(0,1fr)}
+.central-row{grid-template-columns:minmax(0,1fr)}
 .two-col{grid-template-columns:minmax(0,1.2fr) minmax(0,1fr)}
 .footer-row{grid-template-columns:minmax(0,1.43fr) minmax(0,1fr) minmax(0,1.14fr)}
 
@@ -728,15 +728,18 @@ body{display:flex;flex-direction:column;background:var(--bg);color:var(--ink)}
 
 #forecast-panel-body{justify-content:center}
 .forecast-mini-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:7px}
-.forecast-mini-grid.pulse-grid{grid-template-columns:repeat(4,minmax(0,1fr));gap:5px}
+.forecast-mini-grid.pulse-grid{grid-template-columns:repeat(4,minmax(0,1fr));gap:10px}
 .forecast-mini-item{min-width:0;min-height:0;padding:9px 6px;background:var(--surface2);border:1px solid var(--border);border-radius:8px;text-align:center;overflow:hidden}
+.pulse-grid .forecast-mini-item{padding:6px 10px;display:flex;align-items:center;justify-content:center;gap:8px;text-align:left}
 .forecast-mini-lbl{font-size:clamp(8px,.55vw,10px);color:var(--ink2);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.pulse-grid .forecast-mini-lbl{font-size:clamp(9px,.6vw,10.5px);margin-bottom:1px}
 .forecast-mini-val{font-size:clamp(15px,1.2vw,22px);color:var(--ink);font-weight:800;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.pulse-grid .forecast-mini-val{font-size:clamp(12px,.95vw,17px)}
-.pulse-grid .forecast-mini-item small{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;display:block}
+.pulse-grid .forecast-mini-val{font-size:clamp(15px,1.25vw,19px);margin-top:1px}
+.pulse-grid .forecast-mini-item small{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;display:block;font-size:clamp(8px,.5vw,9px)}
 .forecast-mini-item small{font-size:8px;color:var(--ink2)}
 .forecast-mini-val.pulse-red{color:var(--rd)}
 .pulse-icon{font-size:16px;color:var(--bl);margin-bottom:4px}
+.pulse-grid .pulse-icon{display:none}
 
 .tbl-wrap{flex:1 1 0;width:100%;min-width:0;min-height:0;overflow:hidden;border-radius:6px}
 .tbl-wrap table{width:100%;table-layout:fixed;border-collapse:collapse}
@@ -812,7 +815,7 @@ body{display:flex;flex-direction:column;background:var(--bg);color:var(--ink)}
 .revenue-pct{display:block;font-size:10px;color:var(--ink2)}
 
 @media(min-width:901px) and (max-height:760px){
-  #sec-ceo.active{grid-template-rows:minmax(78px,.72fr) 16px minmax(125px,1.05fr) minmax(185px,1.5fr) minmax(130px,1fr);gap:6px}
+  #sec-ceo.active{grid-template-rows:minmax(78px,.6fr) 16px minmax(80px,.5fr) minmax(200px,1.7fr) minmax(140px,1.1fr);gap:6px}
   .topbar{flex-basis:56px;height:56px;min-height:56px}
   .content{padding:7px}
   .sec-hdr,.sec-hdr[style]{flex-basis:29px;height:29px;min-height:29px}
@@ -871,12 +874,6 @@ body{display:flex;flex-direction:column;background:var(--bg);color:var(--ink)}
 
   <!-- Linha central: gráfico dominante Receita x Meta + painel Meta/Forecast/Pipeline -->
   <div class="central-row">
-    <div class="sec-card">
-      <div class="sec-hdr">&#128200; Receita &times; Meta (Acumulado no M&ecirc;s)</div>
-      <div class="sec-body">
-        <div class="chart-wrap"><canvas id="chartRec"></canvas></div>
-      </div>
-    </div>
     <div class="sec-card">
       <div class="sec-hdr"><span>◎ &nbsp; PULSO COMERCIAL</span><small>O que precisamos para bater a meta</small></div>
       <div class="sec-body" id="forecast-panel-body">
@@ -1041,9 +1038,6 @@ async function loadPainelData(){
 }
 
 function fmtMoeda(v){ return 'R$'+parseFloat(v).toLocaleString('pt-BR',{minimumFractionDigits:2,maximumFractionDigits:2}); }
-// Versão sem centavos, usada apenas em espaços bem estreitos (ex.: Pulso Comercial
-// com 4 colunas), onde o valor exato aos centavos não é essencial para leitura rápida.
-function fmtMoedaCurta(v){ return 'R$'+Math.round(parseFloat(v)||0).toLocaleString('pt-BR'); }
 
 function aplicarDadosNoPainel(d){
   let resultadoDia = 0; // preenchido no bloco de sparklines; usado mais abaixo no Pulso Comercial
@@ -1059,31 +1053,6 @@ function aplicarDadosNoPainel(d){
 
   const upd = document.getElementById('ultima-atualizacao');
   if(upd) upd.innerHTML = d.geradoEmBR ? ('&#128260; dados de '+d.geradoEmBR) : '&#9888; usando dados estáticos (offline)';
-
-  // ── chart: receita acumulada (duas instâncias do mesmo gráfico no painel) ──
-  const recCfg = (canvasId, colorLine) => ({
-    type:'line',
-    data:{
-      labels:d.receitaAcumulada.labels,
-      datasets:[
-        {label:'Realizado',data:d.receitaAcumulada.realizado,borderColor:colorLine,backgroundColor:colorLine+'22',
-          fill:true,tension:.35,pointRadius:3,pointHoverRadius:6},
-        {label:'Meta Acum.',data:d.receitaAcumulada.meta,borderColor:'#1675D1',borderDash:[5,3],
-          fill:false,tension:0,pointRadius:0}
-      ]
-    },
-    options:{
-      responsive:true,maintainAspectRatio:false,
-      plugins:{legend:{position:'top',labels:{font:{size:11}}},
-                tooltip:{mode:'index',callbacks:{label:ctx=>ctx.dataset.label+': '+R(ctx.raw)}}},
-      scales:{y:{ticks:{callback:R,font:{size:10}},grid:{color:brd()}},
-               x:{ticks:{maxTicksLimit:10,font:{size:10}},grid:{display:false}}}
-    }
-  });
-  if(typeof Chart !== 'undefined'){
-    { const c = document.getElementById('chartRec'); if(c) new Chart(c.getContext('2d'), recCfg('chartRec','#18C6A0')); }
-    { const c = document.getElementById('chartResultadoRec'); if(c) new Chart(c.getContext('2d'), recCfg('chartResultadoRec','#10B981')); }
-  }
 
   // ── chart: aging ──────────────────────────────────────────────────────────
   if(typeof Chart !== 'undefined'){
@@ -1443,7 +1412,7 @@ function aplicarDadosNoPainel(d){
       +' <span class="delta '+cls2+'">'+arw2+' '+projVsMeta+'%</span>';
   }
 
-  if(el('kcard-pulse-projecao')) el('kcard-pulse-projecao').textContent = fmtMoedaCurta(projecaoMes);
+  if(el('kcard-pulse-projecao')) el('kcard-pulse-projecao').textContent = fmtMoeda(projecaoMes);
   if(el('pulse-proj-note')) el('pulse-proj-note').textContent = metaMensal>0 ? (Math.round(projecaoMes/metaMensal*1000)/10).toLocaleString('pt-BR')+'% da meta' : 'forecast atual';
   // ── Ritmo & Forecast card ────────────────────────────────────────────────
   const diasRest = totalWorkingDays - workingDaysSoFar;
@@ -1457,12 +1426,12 @@ function aplicarDadosNoPainel(d){
   if(el('kcard-proj-forecast')) el('kcard-proj-forecast').textContent = fmtMoeda(projecaoMes);
   if(el('kcard-necessario')){
     const nc = necessario <= metaDiaria ? 'var(--gn)' : 'var(--rd)';
-    el('kcard-necessario').innerHTML = '<strong style="color:'+nc+'">'+fmtMoedaCurta(necessario)+'</strong>';
+    el('kcard-necessario').innerHTML = '<strong style="color:'+nc+'">'+fmtMoeda(necessario)+'</strong>';
   }
   if(el('kcard-dias-restantes')) el('kcard-dias-restantes').textContent = diasRest+' dias úteis';
   if(el('kcard-resultado-dia')){
     const ndCor = resultadoDia >= metaDiaria ? 'var(--gn)' : 'var(--rd)';
-    el('kcard-resultado-dia').innerHTML = '<strong style="color:'+ndCor+'">'+fmtMoedaCurta(resultadoDia)+'</strong>';
+    el('kcard-resultado-dia').innerHTML = '<strong style="color:'+ndCor+'">'+fmtMoeda(resultadoDia)+'</strong>';
   }
   if(el('resultado-dia-note')) el('resultado-dia-note').textContent = 'meta dia: '+fmtMoeda(metaDiaria);
 
@@ -1550,8 +1519,6 @@ ampRender();
 const AMP_REFRESH_MS = 5 * 60 * 1000;
 
 const AMP_DYNAMIC_CHARTS = [
-  'chartRec',
-  'chartResultadoRec',
   'chartAging',
   'chartFunilTotal',
   'chartFunilCloser',
