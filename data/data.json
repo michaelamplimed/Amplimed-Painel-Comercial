@@ -1,6 +1,6 @@
 {
-  "geradoEm": "2026-09-29T18:30:29.481Z",
-  "geradoEmBR": "29/09/2026, 15:30:29",
+  "geradoEm": "2026-09-29T19:00:34.309Z",
+  "geradoEmBR": "29/09/2026, 16:00:34",
   "mes": {
     "ano": 2026,
     "mes": 9,
@@ -11,11 +11,11 @@
     "sdr": 40000
   },
   "kpis": {
-    "receitaRealizada": 34550.62,
+    "receitaRealizada": 34649.62,
     "metaMensal": 48000,
-    "pctMeta": 72,
+    "pctMeta": 72.2,
     "pipelineAberto": 14745.6,
-    "mediaDiaria": 1191.4
+    "mediaDiaria": 1194.81
   },
   "receitaAcumulada": {
     "labels": [
@@ -78,7 +78,7 @@
       30971.82,
       30971.82,
       34064.73,
-      34550.62
+      34649.62
     ],
     "meta": [
       1600,
