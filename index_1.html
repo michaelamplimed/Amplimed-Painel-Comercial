@@ -1,0 +1,1964 @@
+﻿<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
+<title>Painel Gerencial Amplimed &mdash; Agosto/2026</title>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+<style>
+/* ═══════════════════════════════════════════════════════════
+   AMPLIMED SALES COMMAND CENTER — Design System v3.0
+   ═══════════════════════════════════════════════════════════ */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+
+/* ── TOKENS — paleta oficial Amplimed (tema claro) ── */
+:root{
+  /* Surface */
+  --bg:#F4F7FB;--surface:#FFFFFF;--surface2:#EAF3FC;--surface3:#E5F8F2;
+  --border:#DCE5EF;--border2:#C7D4E3;
+  /* Ink */
+  --ink:#19324D;--ink2:#718096;--ink3:#8CA0B3;--ink4:#C3CEDA;
+  /* Brand */
+  --acc:#18C6A0;--acc2:#1675D1;--acc3:#12345A;
+  --navy:#12345A;--navy2:#0E2A47;
+  /* Semantic (mapeadas para a paleta oficial) */
+  --gn:#18C6A0;--gn-bg:#E5F8F2;--gn-border:#18C6A0;--gn-text:#0F7A5F;
+  --am:#F59E0B;--am-bg:#FFF6E6;--am-border:#F59E0B;--am-text:#92400E;
+  --rd:#E5485B;--rd-bg:#FDEDEF;--rd-border:#E5485B;--rd-text:#B5253B;
+  --bl:#1675D1;--bl-bg:#EAF3FC;--bl-border:#1675D1;--bl-text:#0E4E8F;
+  /* Navigation */
+  --nav-bg:#FFFFFF;--nav-w:210px;
+  /* Shadows */
+  --shadow-xs:0 1px 2px rgba(18,52,90,.06);
+  --shadow:0 1px 3px rgba(18,52,90,.08),0 1px 2px rgba(18,52,90,.05);
+  --shadow-md:0 4px 10px rgba(18,52,90,.09),0 2px 4px rgba(18,52,90,.05);
+  --shadow-lg:0 10px 30px rgba(18,52,90,.13),0 4px 8px rgba(18,52,90,.06);
+  --shadow-xl:0 20px 48px rgba(18,52,90,.16),0 8px 16px rgba(18,52,90,.08);
+  /* Shape */
+  --r:8px;--r-sm:6px;--r-md:8px;--r-lg:12px;--r-xl:16px;
+  /* Typography */
+  --ff:'Inter','Segoe UI',system-ui,-apple-system,sans-serif;
+  /* Layout */
+  --top-h:52px;--transition:.18s ease;
+  /* Spacing */
+  --sp-1:4px;--sp-2:8px;--sp-3:12px;--sp-4:16px;--sp-5:20px;
+  --sp-6:24px;--sp-8:32px;--sp-10:40px;--sp-12:48px;
+}
+
+/* ── RESET ── */
+*{box-sizing:border-box;margin:0;padding:0}
+
+/* ── BASE ── */
+body{
+  background:var(--bg);color:var(--ink);font-family:var(--ff);
+  font-size:13px;line-height:1.5;
+  display:flex;flex-direction:column;min-height:100vh;
+  -webkit-font-smoothing:antialiased;
+  transition:background .3s,color .3s
+}
+
+/* ══════════════════════════════════════════════════
+   TOP BAR
+══════════════════════════════════════════════════ */
+.topbar{
+  height:var(--top-h);
+  background:linear-gradient(135deg,var(--navy2) 0%,var(--navy) 100%);
+  color:#fff;
+  display:flex;align-items:center;
+  padding:0 var(--sp-5);gap:var(--sp-4);
+  position:sticky;top:0;z-index:200;
+  box-shadow:0 2px 12px rgba(0,0,0,.35);
+  border-bottom:1px solid rgba(255,255,255,.07)
+}
+.topbar-brand{
+  font-size:13px;font-weight:800;white-space:nowrap;letter-spacing:.3px;
+  padding-right:var(--sp-4);border-right:1px solid rgba(255,255,255,.15);
+  display:flex;align-items:center;gap:6px
+}
+.topbar-strip{display:flex;flex:1;gap:0;overflow:hidden;height:100%}
+.tpkpi{
+  display:flex;flex-direction:column;justify-content:center;
+  padding:0 var(--sp-4);border-right:1px solid rgba(255,255,255,.1);
+  flex-shrink:0;min-width:90px;transition:background .15s
+}
+.tpkpi:last-child{border-right:none}
+.tpkpi:hover{background:rgba(255,255,255,.07)}
+.tpkpi-lbl{font-size:9px;font-weight:600;opacity:.5;text-transform:uppercase;letter-spacing:.7px;margin-bottom:2px}
+.tpkpi-val{font-size:13px;font-weight:700;white-space:nowrap;letter-spacing:-.2px}
+.tpkpi-val.ok{color:#34D399}.tpkpi-val.warn{color:#FCD34D}.tpkpi-val.crit{color:#FCA5A5}
+.tpkpi-progress-wrap{flex:1;display:flex;flex-direction:column;justify-content:center;padding:0 var(--sp-4);gap:5px;min-width:140px}
+.tpkpi-progress-lbl{font-size:9px;font-weight:600;opacity:.6;text-transform:uppercase;letter-spacing:.6px;display:flex;justify-content:space-between}
+.tpkpi-progress-track{height:7px;border-radius:5px;background:rgba(255,255,255,.14);overflow:hidden}
+.tpkpi-progress-fill{height:100%;border-radius:5px;background:linear-gradient(90deg,#34D399,#10B981);transition:width .5s ease}
+.topbar-right{
+  display:flex;gap:var(--sp-2);align-items:center;margin-left:auto;
+  padding-left:var(--sp-4);border-left:1px solid rgba(255,255,255,.12)
+}
+.btn-icon{
+  background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.12);
+  color:#fff;border-radius:var(--r-sm);cursor:pointer;font-size:12px;
+  padding:5px 10px;font-family:var(--ff);font-weight:600;transition:var(--transition)
+}
+.btn-icon:hover{background:rgba(255,255,255,.18);border-color:rgba(255,255,255,.22)}
+
+/* ══════════════════════════════════════════════════
+   LAYOUT SHELL
+══════════════════════════════════════════════════ */
+.layout{display:flex;flex:1;overflow:hidden}
+
+/* ══════════════════════════════════════════════════
+   SIDEBAR
+══════════════════════════════════════════════════ */
+.sidebar{
+  width:var(--nav-w);background:var(--nav-bg);flex-shrink:0;
+  position:sticky;top:var(--top-h);height:calc(100vh - var(--top-h));
+  overflow-y:auto;transition:width .25s;padding-bottom:var(--sp-6)
+}
+.sidebar::-webkit-scrollbar{width:3px}
+.sidebar::-webkit-scrollbar-thumb{background:#1E3047;border-radius:2px}
+.nav-sep{
+  padding:var(--sp-5) var(--sp-4) var(--sp-2);font-size:9px;
+  color:#3D5277;text-transform:uppercase;letter-spacing:.9px;font-weight:700
+}
+.nav-sep:not(:first-child){margin-top:var(--sp-2);border-top:1px solid #131E30}
+.nav-a{
+  display:flex;align-items:center;gap:8px;
+  padding:8px var(--sp-4);color:#8098B8;font-size:12px;font-weight:500;
+  text-decoration:none;border-left:2px solid transparent;
+  transition:var(--transition);border-radius:0 4px 4px 0;
+  margin:1px var(--sp-2) 1px 0
+}
+.nav-a:hover{background:rgba(255,255,255,.05);color:#C8D8EC;border-left-color:rgba(28,157,140,.4)}
+.nav-a.active{background:rgba(28,157,140,.12);color:#fff;border-left-color:var(--acc);font-weight:600}
+.nav-badge{
+  margin-left:auto;background:var(--rd);color:#fff;
+  border-radius:10px;font-size:9px;font-weight:700;padding:2px 6px;min-width:18px;text-align:center
+}
+
+/* ══════════════════════════════════════════════════
+   CONTENT AREA
+══════════════════════════════════════════════════ */
+.content{flex:1;padding:var(--sp-3) var(--sp-4);overflow-x:hidden;overflow-y:auto;max-width:100%}
+
+/* ── SECTION VISIBILITY ── */
+.section{display:none}.section.active{display:block}
+
+/* ── RESULTADO MÊS — preenche viewport inteiro ── */
+#sec-resultado.active{display:flex!important;flex-direction:column;min-height:calc(100vh - var(--top-h) - 2*var(--sp-3))}
+#sec-resultado .two-col{align-items:stretch}
+#sec-resultado .two-col .sec-card{display:flex;flex-direction:column}
+#sec-resultado .two-col .sec-card .sec-body{flex:1;display:flex;flex-direction:column}
+#sec-resultado .two-col .sec-card .chart-wrap{flex:1;height:auto;min-height:220px}
+#sec-resultado > .sec-card:last-child{flex:1;display:flex;flex-direction:column}
+#sec-resultado > .sec-card:last-child .sec-body{flex:1;display:flex;flex-direction:column}
+#sec-resultado > .sec-card:last-child .tbl-wrap{flex:1;overflow-y:auto;min-height:200px}
+
+/* ══════════════════════════════════════════════════
+   SECTION CARD
+══════════════════════════════════════════════════ */
+.sec-card{
+  background:var(--surface);border:1px solid var(--border);
+  border-radius:var(--r-lg);box-shadow:var(--shadow);
+  margin-bottom:var(--sp-4);overflow:hidden
+}
+.sec-hdr{
+  font-weight:700;font-size:11px;color:#fff;letter-spacing:.5px;
+  text-transform:uppercase;display:flex;align-items:center;gap:7px;
+  min-height:42px;padding:0 var(--sp-4);background:var(--acc2)
+}
+.sec-hdr-navy{background:var(--navy)!important}
+.sec-body{padding:var(--sp-4)}
+.sec-body-sm{padding:var(--sp-3) var(--sp-4)}
+.mb-0{margin-bottom:0!important}
+
+/* ══════════════════════════════════════════════════
+   EXEC SUMMARY BANNER
+══════════════════════════════════════════════════ */
+.exec-summary{
+  background:linear-gradient(135deg,var(--navy2) 0%,var(--navy) 100%);
+  border:1px solid rgba(28,157,140,.2);border-radius:var(--r-lg);
+  box-shadow:var(--shadow-md);overflow:hidden;margin-bottom:var(--sp-4)
+}
+.exec-summary-title{
+  font-size:10px;font-weight:700;text-transform:uppercase;
+  letter-spacing:.8px;color:rgba(255,255,255,.5);
+  padding:var(--sp-3) var(--sp-5) 0
+}
+.exec-summary-body{
+  font-size:13px;color:rgba(255,255,255,.88);line-height:1.65;
+  padding:var(--sp-2) var(--sp-5) var(--sp-4)
+}
+.exec-summary-body strong{color:#fff;font-weight:700}
+
+/* ══════════════════════════════════════════════════
+   HOME SECTION GRIDS
+══════════════════════════════════════════════════ */
+.home-grid-1{
+  display:grid;grid-template-columns:160px 1fr;
+  gap:var(--sp-4);margin-bottom:var(--sp-4);align-items:start
+}
+.home-grid-2{
+  display:grid;grid-template-columns:1fr 1fr 1fr;
+  gap:var(--sp-4);margin-bottom:var(--sp-4)
+}
+
+/* ══════════════════════════════════════════════════
+   KPI GRIDS
+══════════════════════════════════════════════════ */
+.kgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(155px,1fr));gap:var(--sp-3);margin-bottom:var(--sp-4)}
+.kgrid-2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:var(--sp-3);margin-bottom:var(--sp-4)}
+.kgrid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--sp-3);margin-bottom:var(--sp-4)}
+.kgrid-4{display:grid;grid-template-columns:repeat(4,1fr);gap:var(--sp-3);margin-bottom:var(--sp-4)}
+.kgrid-hero{display:grid;grid-template-columns:repeat(6,1fr);gap:var(--sp-4);margin-bottom:var(--sp-4)}
+
+/* ── KPI CARD ── */
+.kcard{
+  background:var(--surface);border:1px solid var(--border);border-radius:var(--r-lg);
+  box-shadow:var(--shadow);padding:var(--sp-4);
+  transition:transform .2s,box-shadow .2s;cursor:default;min-height:92px;
+  display:flex;flex-direction:column
+}
+.kcard:hover{transform:translateY(-2px);box-shadow:var(--shadow-md)}
+.kcard-inner{display:flex;justify-content:space-between;align-items:flex-start;gap:var(--sp-3);flex:1}
+.kcard-lbl{
+  font-size:10px;font-weight:600;text-transform:uppercase;
+  color:var(--ink3);letter-spacing:.6px;margin-bottom:6px
+}
+.kcard-val{font-size:20px;font-weight:800;line-height:1;margin-bottom:5px;letter-spacing:-.3px}
+.kcard-note{font-size:11px;color:var(--ink2);line-height:1.4}
+
+/* ── DKPI (KPIs Derivados) ── */
+.dkpi-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:var(--sp-3)}
+.dkpi{
+  background:var(--surface2);border:1px solid var(--border);border-radius:var(--r);
+  padding:var(--sp-3);text-align:center;transition:box-shadow .2s
+}
+.dkpi:hover{box-shadow:var(--shadow-md)}
+.dkpi-lbl{font-size:9.5px;font-weight:600;text-transform:uppercase;letter-spacing:.5px;color:var(--ink3);margin-bottom:4px}
+.dkpi-val{font-size:16px;font-weight:800;color:var(--ink);line-height:1.2;margin-bottom:2px}
+.dkpi-note{font-size:10px;color:var(--ink3)}
+
+/* ══════════════════════════════════════════════════
+   DELTA / BADGE
+══════════════════════════════════════════════════ */
+.delta{font-size:10px;font-weight:700;border-radius:4px;padding:2px 6px;white-space:nowrap;letter-spacing:.2px}
+.delta.up{background:var(--gn-bg);color:var(--gn-text)}
+.delta.dn{background:var(--rd-bg);color:var(--rd-text)}
+.delta.nt{background:var(--am-bg);color:var(--am-text)}
+.bdg{display:inline-block;border-radius:10px;font-size:10px;font-weight:700;padding:2px 8px}
+.bdg-g{background:var(--gn-bg);color:var(--gn-text)}
+.bdg-a{background:var(--am-bg);color:var(--am-text)}
+.bdg-r{background:var(--rd-bg);color:var(--rd-text)}
+.bdg-b{background:var(--bl-bg);color:var(--bl-text)}
+.fw{font-weight:700}
+
+/* ══════════════════════════════════════════════════
+   TABLES
+══════════════════════════════════════════════════ */
+.tbl-wrap{overflow-x:auto;border-radius:var(--r-lg);border:1px solid var(--border)}
+table{width:100%;border-collapse:collapse;font-size:12px;table-layout:auto}
+th{
+  text-align:center;background:var(--acc2);color:#fff;white-space:nowrap;
+  font-size:10.5px;font-weight:700;letter-spacing:.5px;text-transform:uppercase;
+  padding:10px var(--sp-3);vertical-align:middle
+}
+th:first-child{text-align:left}
+td{
+  border-bottom:1px solid var(--border);color:var(--ink);vertical-align:middle;
+  padding:9px var(--sp-3);white-space:nowrap;
+  text-align:center;font-variant-numeric:tabular-nums
+}
+td:first-child{text-align:left;font-variant-numeric:normal}
+/* Garante cor branca em tds dentro de trs com fundo escuro inline */
+tr[style*="color:#fff"] td,tr[style*="color: #fff"] td{color:#fff!important}
+tr:last-child td{border-bottom:none}
+tr:hover td{background:var(--surface2)}
+.tbl-num{font-variant-numeric:tabular-nums}
+/* Zebra rows */
+.z-ok{background:var(--gn-bg)!important}
+.z-warn{background:var(--am-bg)!important}
+.z-crit{background:var(--rd-bg)!important}
+.z-blue{background:var(--bl-bg)!important}
+.z-alt{background:var(--surface2)}
+/* Total row */
+.tr-total{background:var(--navy)!important;color:#fff!important}
+.tr-total td{color:#fff!important;font-weight:700;border-bottom:none}
+/* Alignment */
+.num{text-align:center!important;font-variant-numeric:tabular-nums}
+.num-c{text-align:center!important;font-variant-numeric:tabular-nums}
+.dt-c{text-align:center!important}
+
+/* ══════════════════════════════════════════════════
+   GAUGE
+══════════════════════════════════════════════════ */
+.gauge-wrap{position:relative;width:130px;height:80px;margin:0 auto}
+.gauge-svg{width:130px;height:80px}
+.gauge-val{position:absolute;bottom:4px;left:50%;transform:translateX(-50%);
+  font-size:24px;font-weight:800;text-align:center;white-space:nowrap}
+.gauge-lbl{font-size:10px;color:var(--ink3);text-align:center;margin-top:2px}
+@keyframes gaugeFill{from{stroke-dashoffset:251.2}to{stroke-dashoffset:var(--go)}}
+
+/* ══════════════════════════════════════════════════
+   COMMERCIAL HEALTH SCORE (CHS)
+══════════════════════════════════════════════════ */
+.chs-wrap{
+  background:var(--surface);border:1px solid var(--border);border-radius:var(--r-lg);
+  box-shadow:var(--shadow);padding:var(--sp-4);
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  text-align:center;min-height:148px
+}
+.chs-arc{display:block;margin:0 auto}
+.chs-circle{display:flex;flex-direction:column;align-items:center;justify-content:center}
+.chs-number{font-size:36px;font-weight:900;line-height:1;margin-top:4px;color:var(--chs-color,var(--acc))}
+.chs-label{font-size:11px;font-weight:800;letter-spacing:.5px;text-transform:uppercase;margin-top:2px}
+.chs-sub{font-size:10px;color:var(--ink3);margin-top:3px;font-weight:500}
+
+/* ══════════════════════════════════════════════════
+   LAYOUT HELPERS
+══════════════════════════════════════════════════ */
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:var(--sp-4);margin-bottom:var(--sp-4);align-items:start}
+.three-col{display:grid;grid-template-columns:1fr 1fr 1fr;gap:var(--sp-4);margin-bottom:var(--sp-4);align-items:start}
+
+/* ── Key-value list (replaces inline flex-col patterns) ── */
+.kv-list{display:flex;flex-direction:column;gap:6px;font-size:12px}
+.kv-row{display:flex;align-items:baseline;gap:0}
+.kv-row>span{color:var(--ink2)}
+.kv-row>span:first-child{display:flex;align-items:baseline;flex:1;min-width:0;white-space:nowrap}
+.kv-row>span:first-child::after{content:"";flex:1;border-bottom:1px dotted var(--border);margin:0 8px;transform:translateY(-4px);min-width:14px}
+.kv-row>strong,.kv-row>*:last-child{flex-shrink:0;white-space:nowrap}
+.kcard-gauge-track{height:4px;border-radius:4px;background:rgba(0,0,0,.08);overflow:hidden;margin-top:3px}
+.kcard-gauge-fill{height:100%;border-radius:4px;background:linear-gradient(90deg,#12A488,#18C6A0);transition:width .5s ease}
+.mrr-split-track{display:flex;height:7px;border-radius:6px;overflow:hidden;background:rgba(0,0,0,.08)}
+.mrr-split-fill-acq{background:var(--gn,#10B981);height:100%;transition:width .5s ease}
+.mrr-split-fill-cross{background:var(--bl,#2563EB);height:100%;transition:width .5s ease}
+.mrr-split-labels{display:flex;justify-content:space-between;font-size:9.5px;color:var(--ink3);margin-top:5px}
+
+/* ── Flex chip row ── */
+.flex-chips{display:flex;gap:6px;flex-wrap:wrap;margin-top:6px}
+
+/* ── Growth funnel chips ── */
+.funnel-chips{display:flex;gap:6px;align-items:stretch;flex-wrap:wrap}
+.funnel-chip{flex:1;min-width:90px;border-radius:var(--r);text-align:center;padding:10px var(--sp-2)}
+.funnel-chip-val{font-size:20px;font-weight:800}
+.funnel-chip-lbl{font-size:10px;opacity:.85;margin-top:3px}
+.funnel-chip-pct{font-size:10px;margin-top:4px;background:rgba(255,255,255,.2);border-radius:4px;padding:2px 4px}
+
+/* ── MRR mini stat box ── */
+.mrr-box{text-align:center;padding:var(--sp-3);border-radius:var(--r-sm)}
+
+/* ── OKR card sub-rows ── */
+.okr-exec-row{display:flex;align-items:center;gap:6px;margin-top:7px}
+.okr-mini-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;margin-top:8px}
+
+/* ── Health gauge cells ── */
+.gauge-cell{text-align:center;padding:var(--sp-4)}
+.score-cell{padding:var(--sp-3)}
+
+/* ── ROAS note banner ── */
+.roas-note{margin-top:12px;background:#FFF8E1;border-left:4px solid #F9A825;border-radius:var(--r-sm);font-size:12px;padding:var(--sp-2) var(--sp-3)}
+
+/* ══════════════════════════════════════════════════
+   PACE BAR
+══════════════════════════════════════════════════ */
+.pace-bar{
+  background:var(--surface2);border:1px solid var(--border);border-left:3px solid var(--acc);
+  border-radius:var(--r);margin-bottom:var(--sp-3);font-size:12px;color:var(--ink);
+  padding:var(--sp-2) var(--sp-4)
+}
+
+/* ══════════════════════════════════════════════════
+   HEADER — título central dinâmico (mês/ano)
+══════════════════════════════════════════════════ */
+.topbar-center{
+  flex:1;text-align:center;font-size:13px;font-weight:700;letter-spacing:.6px;
+  text-transform:uppercase;opacity:.92;white-space:nowrap;overflow:hidden;text-overflow:ellipsis
+}
+
+/* ══════════════════════════════════════════════════
+   LINHA CENTRAL — gráfico dominante + painel Meta/Forecast/Pipeline
+══════════════════════════════════════════════════ */
+.central-row{display:grid;grid-template-columns:minmax(0,1.6fr) minmax(0,1fr);gap:var(--sp-4);margin-bottom:var(--sp-4)}
+.forecast-mini-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:6px}
+.forecast-mini-item{background:var(--surface2);border:1px solid var(--border);border-radius:var(--r-sm);padding:5px 8px}
+.forecast-mini-lbl{font-size:8.5px;color:var(--ink3);text-transform:uppercase;font-weight:700;letter-spacing:.3px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.forecast-mini-val{font-size:13px;font-weight:800;color:var(--ink);margin-top:1px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+
+/* ══════════════════════════════════════════════════
+   RODAPÉ — funil da equipe + composição/aging
+══════════════════════════════════════════════════ */
+.footer-row{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:var(--sp-4);margin-bottom:0}
+#team-funnel-row{display:flex;align-items:stretch;gap:6px;overflow-x:hidden}
+.tf-step{flex:1;min-width:0;background:var(--surface2);border:1px solid var(--border);border-radius:var(--r);padding:6px 8px;text-align:center}
+.tf-lbl{font-size:9px;color:var(--ink3);text-transform:uppercase;font-weight:700;letter-spacing:.4px}
+.tf-val{font-size:15px;font-weight:800;color:var(--ink);line-height:1.3;margin:2px 0}
+.tf-bar{height:5px;border-radius:3px;background:var(--border);overflow:hidden}
+.tf-bar-fill{height:100%;border-radius:3px;background:var(--acc);transition:width .6s}
+.tf-arrow{flex-shrink:0;display:flex;flex-direction:column;align-items:center;justify-content:center;font-size:9.5px;font-weight:700;color:var(--ink3);min-width:34px}
+.aging-bar-track{display:flex;height:10px;border-radius:6px;overflow:hidden;background:var(--border)}
+.aging-bar-seg{height:100%}
+.aging-legend{display:flex;justify-content:space-between;font-size:8.5px;color:var(--ink3);margin-top:4px;flex-wrap:wrap;gap:2px}
+
+/* ══════════════════════════════════════════════════
+   SUB HEADER
+══════════════════════════════════════════════════ */
+.sub{
+  font-weight:700;font-size:12px;padding:6px 0;letter-spacing:.2px;
+  border-bottom:2px solid var(--border);margin:var(--sp-4) 0 var(--sp-3);color:var(--ink)
+}
+
+/* ══════════════════════════════════════════════════
+   INSIGHTS / ALERTS
+══════════════════════════════════════════════════ */
+.insight-item{border-radius:var(--r-sm);margin-bottom:6px;font-size:12px;padding:8px var(--sp-3);line-height:1.5}
+.alert-item{border-radius:var(--r-sm);margin-bottom:6px;font-size:12px;padding:8px var(--sp-3);line-height:1.5}
+
+/* ══════════════════════════════════════════════════
+   FUNNEL STEPS
+══════════════════════════════════════════════════ */
+.fn-step{
+  display:flex;align-items:center;gap:var(--sp-3);border-radius:var(--r);
+  margin-bottom:4px;background:var(--surface2);border:1px solid var(--border);
+  padding:var(--sp-3) var(--sp-3)
+}
+.fn-bar{flex:1;height:8px;border-radius:4px;background:var(--border)}
+.fn-fill{height:100%;border-radius:4px;background:var(--acc);transition:width .7s}
+.fn-row{display:flex;gap:var(--sp-3);align-items:stretch;overflow-x:auto;padding-bottom:4px}
+
+/* ══════════════════════════════════════════════════
+   AGING STRIP
+══════════════════════════════════════════════════ */
+.aging-strip{display:flex;flex-direction:column;gap:6px}
+.aging-row{
+  display:flex;align-items:center;gap:var(--sp-3);
+  background:var(--surface2);border:1px solid var(--border);border-radius:var(--r-sm);
+  padding:var(--sp-2) var(--sp-3)
+}
+
+/* ══════════════════════════════════════════════════
+   STATUS STRIP — full-width chip row
+══════════════════════════════════════════════════ */
+.status-strip{
+  display:grid;grid-template-columns:repeat(7,1fr);
+  gap:var(--sp-3);margin-bottom:var(--sp-4)
+}
+.status-item{
+  display:flex;flex-direction:column;align-items:center;text-align:center;
+  gap:var(--sp-1);padding:var(--sp-4) var(--sp-2) var(--sp-3);
+  background:var(--surface2);border:1px solid var(--border);border-radius:var(--r-md);
+  border-top:3px solid var(--chip-color,var(--border));
+  transition:box-shadow .15s,transform .15s;cursor:default
+}
+.status-item:hover{box-shadow:var(--shadow-md);transform:translateY(-1px)}
+.status-item.green{--chip-color:var(--gn)}
+.status-item.amber,.status-item.yellow{--chip-color:var(--am)}
+.status-item.red{--chip-color:var(--rd)}
+.status-dot{display:none}
+.status-name{font-size:10px;color:var(--ink3);font-weight:600;text-transform:uppercase;letter-spacing:.5px;order:2}
+.status-val{font-size:22px;font-weight:800;color:var(--ink);line-height:1;order:1}
+
+/* ══════════════════════════════════════════════════
+   LEADERBOARD
+══════════════════════════════════════════════════ */
+.lboard{display:flex;flex-direction:column;gap:0}
+.lboard-item{
+  display:flex;align-items:center;gap:var(--sp-3);
+  padding:var(--sp-2) var(--sp-3);border-bottom:1px solid var(--border);transition:background .15s
+}
+.lboard-item:last-child{border-bottom:none}
+.lboard-item:hover{background:var(--surface2)}
+.lboard-medal{font-size:18px;flex-shrink:0;width:28px;text-align:center}
+.lboard-info{flex:1;min-width:0}
+.lboard-name{font-size:12px;font-weight:700;color:var(--ink);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.lboard-title{font-size:10px;color:var(--ink3);font-weight:500}
+.lboard-stats{display:flex;gap:var(--sp-3);margin-top:4px}
+.lboard-stat{text-align:right}
+.lboard-stat-val{font-size:11px;font-weight:700;color:var(--ink);font-variant-numeric:tabular-nums}
+.lboard-stat-lbl{font-size:9px;color:var(--ink3);font-weight:500}
+.lboard-bar{width:100%;height:4px;background:var(--border);border-radius:2px;overflow:hidden;margin-top:4px}
+.lboard-bar-fill{height:100%;border-radius:2px;background:linear-gradient(90deg,var(--acc),var(--gn));transition:width .8s ease}
+/* Legacy leaderboard — kept for compatibility */
+.leaderboard-item{display:flex;align-items:center;gap:var(--sp-3);padding:var(--sp-2) var(--sp-3);border-bottom:1px solid var(--border)}
+.leaderboard-item:last-child{border-bottom:none}
+.lb-rank{width:24px;height:24px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;flex-shrink:0}
+.lb-name{flex:1;font-size:12px;font-weight:600}
+.lb-val{font-size:12px;font-weight:700;font-variant-numeric:tabular-nums}
+.lb-bar-wrap{width:80px;background:var(--border);border-radius:4px;height:6px;overflow:hidden}
+.lb-bar-fill{height:100%;border-radius:4px;background:var(--acc)}
+
+/* ══════════════════════════════════════════════════
+   VRA (Vitórias / Riscos / Ações)
+══════════════════════════════════════════════════ */
+.vra-item{
+  display:flex;align-items:flex-start;gap:var(--sp-2);border-radius:var(--r-sm);
+  margin-bottom:6px;padding:var(--sp-2) var(--sp-3);border-left:3px solid transparent
+}
+.vra-em{font-size:16px;flex-shrink:0;line-height:1.4;margin-top:1px}
+.vra-body{flex:1;font-size:12px;color:var(--ink);line-height:1.5}
+.vra-body small{display:block;color:var(--ink2);font-size:10.5px;margin-top:2px}
+.vra-victory{background:var(--gn-bg);border-left-color:var(--gn)}
+.vra-risk{background:var(--rd-bg);border-left-color:var(--rd)}
+.vra-risk.yellow{background:var(--am-bg);border-left-color:var(--am)}
+.vra-action{background:var(--bl-bg);border-left-color:var(--navy)}
+
+/* ══════════════════════════════════════════════════
+   OKR COMPONENTS
+══════════════════════════════════════════════════ */
+.okr-score-badge{display:inline-flex;align-items:center;justify-content:center;
+  width:48px;height:48px;border-radius:50%;font-size:14px;font-weight:800;border:3px solid}
+.chart-wrap{height:220px;position:relative;padding-top:4px}
+.chart-wrap-sm{height:170px;position:relative;padding-top:4px}
+.chart-wrap-lg{height:260px;position:relative;padding-top:4px}
+
+.okr-team-score{
+  display:flex;align-items:center;gap:var(--sp-5);
+  background:linear-gradient(135deg,var(--navy2),var(--navy));
+  color:#fff;border-radius:var(--r-lg);box-shadow:var(--shadow-lg);
+  padding:var(--sp-5) var(--sp-6);margin-bottom:var(--sp-4)
+}
+.okr-team-ring{flex-shrink:0}
+.okr-team-info{display:flex;flex-direction:column;gap:3px;flex:1;min-width:0}
+.okr-team-chs{text-align:right;flex-shrink:0}
+.okr-team-chs-lbl{font-size:10px;opacity:.6;text-transform:uppercase;letter-spacing:.6px;margin-bottom:4px}
+.okr-team-chs-val{font-size:26px;font-weight:900;line-height:1}
+.okr-team-chs-sub{font-size:10px;opacity:.65;margin-top:2px}
+.okr-team-title{font-size:11px;font-weight:700;letter-spacing:.5px;opacity:.7;text-transform:uppercase}
+.okr-team-label{font-size:26px;font-weight:900;line-height:1.1;letter-spacing:-.5px}
+.okr-team-sub{font-size:11px;opacity:.65}
+
+.okr-smart-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(175px,1fr));gap:var(--sp-3);margin-bottom:var(--sp-4)}
+.okr-smart-card{
+  background:var(--surface);border:1px solid var(--border);border-radius:var(--r-lg);
+  box-shadow:var(--shadow);padding:var(--sp-4);min-height:96px;
+  display:flex;flex-direction:column;justify-content:center;gap:3px;transition:transform .15s,box-shadow .15s
+}
+.okr-smart-card:hover{transform:translateY(-2px);box-shadow:var(--shadow-md)}
+.okr-smart-icon{font-size:20px;margin-bottom:3px}
+.okr-smart-label{font-size:10px;text-transform:uppercase;letter-spacing:.5px;color:var(--ink3);font-weight:700}
+.okr-smart-val{font-size:18px;font-weight:800;color:var(--ink);line-height:1.2}
+.okr-smart-sub{font-size:10.5px;color:var(--ink2)}
+
+.okr-ranking-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--sp-3);margin-bottom:0}
+.okr-card{
+  background:var(--surface);border:1px solid var(--border);border-radius:var(--r-lg);
+  box-shadow:var(--shadow);padding:var(--sp-4);display:flex;flex-direction:column
+}
+.okr-card-header{display:flex;align-items:center;gap:var(--sp-2);margin-bottom:var(--sp-2)}
+.okr-medal{font-size:22px;flex-shrink:0}
+.okr-card-name{flex:1;display:flex;flex-direction:column;font-size:13px;font-weight:800;color:var(--ink);min-width:0}
+.okr-trend{font-size:12px;font-weight:700;margin-top:1px}
+.okr-bars-grid{margin-top:3px}
+.okr-mini-kpi{background:var(--surface2);border-radius:6px;padding:7px 4px;text-align:center}
+.okr-mini-val{font-size:12px;font-weight:800;color:var(--ink);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.okr-mini-lbl{font-size:9px;color:var(--ink3);text-transform:uppercase;letter-spacing:.3px;margin-top:2px}
+.okr-action-line{margin-top:8px;padding-top:8px;border-top:1px dashed var(--border);font-size:11px;color:var(--ink2);line-height:1.4}
+
+/* ── Metric / generic card ── */
+.mt-card,.card{
+  background:var(--surface);border:1px solid var(--border);border-radius:var(--r-lg);
+  box-shadow:var(--shadow);padding:var(--sp-4);margin-bottom:var(--sp-3)
+}
+
+/* ══════════════════════════════════════════════════
+   DRAWER
+══════════════════════════════════════════════════ */
+#drawer{
+  position:fixed;top:0;right:-420px;width:420px;height:100vh;
+  background:var(--surface);border-left:1px solid var(--border);
+  box-shadow:-8px 0 32px rgba(0,0,0,.18);z-index:300;
+  transition:right .28s cubic-bezier(.25,.8,.25,1);overflow-y:auto;padding:var(--sp-6)
+}
+#drawer.open{right:0}
+.drawer-hdr{display:flex;justify-content:space-between;align-items:center;margin-bottom:var(--sp-5)}
+.drawer-close{background:none;border:none;font-size:22px;cursor:pointer;color:var(--ink);opacity:.5;transition:opacity .15s}
+.drawer-close:hover{opacity:1}
+#drawer-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,.45);z-index:299}
+
+/* ══════════════════════════════════════════════════
+   TOOLTIP
+══════════════════════════════════════════════════ */
+[data-tip]{position:relative;cursor:default}
+[data-tip]::after{
+  content:attr(data-tip);position:absolute;bottom:calc(100% + 8px);left:50%;
+  transform:translateX(-50%);background:#0F172A;color:#fff;font-size:10px;
+  padding:5px 9px;border-radius:5px;pointer-events:none;opacity:0;transition:.2s;z-index:100;
+  max-width:240px;white-space:normal;text-align:center
+}
+[data-tip]:hover::after{opacity:1}
+
+/* ══════════════════════════════════════════════════
+   SCROLLBAR
+══════════════════════════════════════════════════ */
+::-webkit-scrollbar{width:5px;height:5px}
+::-webkit-scrollbar-track{background:transparent}
+::-webkit-scrollbar-thumb{background:#CBD5E1;border-radius:3px}
+
+/* ══════════════════════════════════════════════════
+   RESPONSIVE
+══════════════════════════════════════════════════ */
+@media(max-width:1440px){:root{--nav-w:196px}}
+@media(max-width:1280px){
+  .kgrid-4{grid-template-columns:repeat(2,1fr)}
+  .kgrid-hero{grid-template-columns:repeat(3,1fr)}
+  .status-strip{grid-template-columns:repeat(4,1fr)}
+  :root{--nav-w:184px}
+}
+@media(max-width:1024px){
+  .kgrid-3{grid-template-columns:repeat(2,1fr)}
+  .kgrid-hero{grid-template-columns:repeat(3,1fr)}
+  .three-col{grid-template-columns:1fr 1fr}
+  .okr-ranking-grid{grid-template-columns:repeat(2,1fr)}
+  .home-grid-1{grid-template-columns:1fr}
+}
+@media(max-width:900px){
+  .sidebar{display:none}
+  .kgrid-hero{grid-template-columns:repeat(2,1fr)}
+  .two-col,.three-col,.home-grid-1,.home-grid-2{grid-template-columns:1fr}
+  .topbar-strip .tpkpi:nth-child(n+5){display:none}
+  .content{padding:var(--sp-3)}
+}
+@media(max-width:600px){
+  .kgrid,.kgrid-2,.kgrid-3,.kgrid-4,.kgrid-hero{grid-template-columns:1fr}
+  .funnel-chips{flex-direction:column}
+  .okr-ranking-grid{grid-template-columns:1fr}
+  .content{padding:var(--sp-2) var(--sp-3)}
+  .dkpi-grid{grid-template-columns:repeat(2,1fr)}
+  .okr-smart-grid{grid-template-columns:repeat(2,1fr)}
+  :root{--top-h:48px}
+}
+@media(max-width:480px){
+  .kgrid-2{grid-template-columns:1fr}
+  .topbar-strip .tpkpi:nth-child(n+3){display:none}
+  .fn-row{flex-direction:column}
+  .status-strip{grid-template-columns:repeat(2,1fr)}
+}
+
+/* ═══════════════════════════════════════════════════════════
+   TV COMMAND CENTER — layout final, tema claro Amplimed
+   Camada única de regras para o painel em telas grandes (TV/monitor),
+   substituindo as sucessivas camadas de redesign anteriores.
+   ═══════════════════════════════════════════════════════════ */
+html,body{width:100%;height:100%;height:100dvh;min-height:0;margin:0;overflow:hidden}
+body{display:flex;flex-direction:column;background:var(--bg);color:var(--ink)}
+
+.topbar{
+  box-sizing:border-box;flex:0 0 54px;height:54px;min-height:54px;
+  padding:0 20px;gap:16px;background:var(--surface);color:var(--ink);
+  border-bottom:1px solid var(--border);box-shadow:0 2px 8px rgba(18,52,90,.06);
+  overflow:hidden
+}
+.topbar-brand{flex:0 0 225px;min-width:0;max-width:225px;padding-right:16px;border-right:1px solid var(--border);color:#12345A;gap:10px;overflow:hidden}
+.amp-mark{flex:0 0 auto;font-size:30px;line-height:1;color:var(--acc)}
+.brand-copy{display:flex;flex-direction:column;justify-content:center;gap:1px;line-height:1.15;min-width:0;overflow:hidden}
+.brand-copy strong{font-size:19px;line-height:1.1;color:#12345A;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.brand-copy small{font-size:10.5px;line-height:1.1;color:var(--ink2);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.topbar-title{flex:1 1 auto;min-width:0;padding-left:16px;border-left:1px solid var(--border);display:flex;flex-direction:column;justify-content:center;gap:1px}
+.topbar-title .eyebrow{font-size:11px;color:var(--ink2);letter-spacing:.5px;white-space:nowrap}
+.topbar-title strong{font-size:clamp(16px,1.3vw,22px);line-height:1.15;color:#12345A;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.topbar-tagline{display:none}
+.topbar-right{flex:0 0 auto;display:flex;align-items:center;gap:9px;border:1px solid var(--border);border-radius:30px;padding:8px 14px;background:var(--surface2);color:var(--ink)}
+.live-dot{width:10px;height:10px;border-radius:50%;background:var(--acc);box-shadow:0 0 0 4px rgba(24,198,160,.18);flex:0 0 auto}
+.topbar-right #ultima-atualizacao{font-size:10px!important;color:var(--ink2)}
+.topbar-right .btn-icon{display:none}
+
+.layout{flex:1 1 auto;width:100%;height:auto;min-height:0;overflow:hidden;background:var(--bg)}
+.content{box-sizing:border-box;flex:1 1 auto;width:100%;height:100%;min-width:0;min-height:0;max-width:none;padding:8px 10px;overflow:hidden}
+.section.active{display:flex;flex:1;flex-direction:column;min-height:0;overflow:hidden}
+
+#sec-ceo.active{
+  box-sizing:border-box;display:grid;
+  grid-template-columns:minmax(0,1fr);
+  grid-template-rows:minmax(75px,.6fr) 16px minmax(95px,.8fr) minmax(336px,1.3fr) minmax(224px,1fr);
+  gap:6px;width:100%;height:100%;min-height:0;max-height:100%;overflow:hidden
+}
+#sec-ceo>*{min-width:0;min-height:0}
+
+.kgrid-hero{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:8px;height:100%;min-height:0;margin:0;overflow:hidden}
+.kcard{
+  box-sizing:border-box;min-width:0;min-height:0;height:100%;display:flex;
+  padding:10px 12px;border:1px solid var(--border);border-top:3px solid var(--acc);
+  border-radius:9px;background:var(--surface);box-shadow:0 2px 8px rgba(18,52,90,.06);overflow:hidden
+}
+.kcard-inner{display:flex;align-items:center;justify-content:space-between;gap:7px;width:100%;min-width:0}
+.kcard-lbl{font-size:clamp(9px,.65vw,11px);line-height:1.2;letter-spacing:.3px;color:var(--ink2);margin:0 0 5px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.kcard-val{font-size:clamp(19px,1.55vw,28px);line-height:1.08;font-weight:800;margin:0 0 4px;white-space:nowrap;color:var(--ink)}
+.kcard-note{font-size:clamp(8px,.58vw,10px);line-height:1.25;color:var(--ink2);margin:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+
+.pace-bar{
+  box-sizing:border-box;height:16px;min-height:16px;max-height:16px;margin:0;
+  padding:1px 9px;border-radius:5px;background:var(--surface2);color:var(--ink2);
+  font-size:9px;line-height:13px;white-space:nowrap;overflow:hidden
+}
+
+.central-row,.two-col,.footer-row{
+  display:grid;box-sizing:border-box;width:100%;height:100%;min-width:0;min-height:0;
+  max-height:100%;gap:8px;margin:0;overflow:hidden
+}
+.central-row{grid-template-columns:minmax(0,1.78fr) minmax(0,1fr)}
+.two-col{grid-template-columns:minmax(0,1.2fr) minmax(0,1fr)}
+.footer-row{grid-template-columns:minmax(0,1.43fr) minmax(0,1fr) minmax(0,1.14fr)}
+
+.central-row>.sec-card,.two-col>.sec-card,.footer-row>.sec-card{
+  box-sizing:border-box;display:flex;flex-direction:column;width:100%;height:100%;
+  min-width:0;min-height:0;max-height:100%;margin:0;overflow:hidden;
+  border:1px solid var(--border);border-radius:9px;background:var(--surface);
+  box-shadow:0 2px 8px rgba(18,52,90,.07)
+}
+.sec-hdr,.sec-hdr[style]{
+  box-sizing:border-box;display:flex;align-items:center;gap:8px;
+  flex:0 0 32px;height:32px;min-height:32px;padding:0 12px;
+  background:var(--surface2)!important;color:#12345A!important;
+  border-bottom:1px solid var(--border);font-size:clamp(9px,.68vw,11px);
+  font-weight:700;letter-spacing:.5px;text-transform:uppercase;
+  line-height:1;white-space:nowrap;overflow:hidden
+}
+.sec-hdr small{color:var(--ink2)!important;font-size:clamp(8px,.52vw,9px);text-transform:none;font-weight:500;letter-spacing:0}
+
+.central-row .sec-body,.two-col .sec-body,.footer-row .sec-body{
+  display:flex;flex-direction:column;
+  flex:1 1 0;min-width:0;min-height:0;padding:8px 10px;overflow:hidden;
+  background:var(--surface);color:var(--ink)
+}
+.central-row .chart-wrap{position:relative;flex:1 1 0;width:100%;height:auto;min-height:0}
+.central-row .chart-wrap canvas{position:absolute;inset:0;width:100%!important;height:100%!important}
+
+#forecast-panel-body{justify-content:center}
+.forecast-mini-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:7px}
+.forecast-mini-item{min-width:0;min-height:0;padding:9px 6px;background:var(--surface2);border:1px solid var(--border);border-radius:8px;text-align:center}
+.forecast-mini-lbl{font-size:clamp(8px,.55vw,10px);color:var(--ink2)}
+.forecast-mini-val{font-size:clamp(15px,1.2vw,22px);color:var(--ink);font-weight:800;white-space:nowrap}
+.forecast-mini-item small{font-size:8px;color:var(--ink2)}
+.forecast-mini-val.pulse-red{color:var(--rd)}
+.pulse-icon{font-size:16px;color:var(--bl);margin-bottom:4px}
+
+.tbl-wrap{flex:1 1 0;width:100%;min-width:0;min-height:0;overflow:hidden;border-radius:6px}
+.tbl-wrap table{width:100%;table-layout:fixed;border-collapse:collapse}
+.tbl-wrap table th{padding:3.5px 6px;font-size:clamp(8px,.58vw,10px);line-height:1.15;background:var(--surface2);color:#12345A;border-bottom:1px solid var(--border);text-transform:uppercase;letter-spacing:.3px}
+.tbl-wrap table td{padding:3px 6px;font-size:clamp(9px,.62vw,11px);line-height:1.15;color:var(--ink);border-bottom:1px solid var(--border)}
+.tbl-wrap table tr:last-child td{border-bottom:0}
+#tbl-closers-mini tr td,#tbl-sdr-mini tr td{background:var(--surface)}
+#tbl-closers-mini tr:nth-child(even) td,#tbl-sdr-mini tr:nth-child(even) td{background:var(--surface2)}
+.rank-cell{text-align:center;color:var(--ink2)}
+.person-cell{display:flex;align-items:center;gap:7px;text-align:left}
+.money-cell{font-variant-numeric:tabular-nums}
+.progress-cell{min-width:60px}
+.table-progress{display:block;width:100%;height:8px;background:var(--border);border-radius:5px;overflow:hidden}
+.table-progress i{display:block;height:100%;border-radius:5px;background:var(--bl)}
+.table-progress i.good{background:var(--gn)}
+.table-progress i.mid{background:var(--bl)}
+.table-progress i.low{background:var(--rd)}
+.pct-cell{font-weight:800}
+.pct-cell.good{color:var(--gn-text)}
+.pct-cell.mid{color:var(--bl-text)}
+.pct-cell.low{color:var(--rd-text)}
+.total-row{background:var(--surface2)!important}
+.total-row td{color:var(--ink)!important;font-weight:700;border-bottom:none!important}
+
+#closers-insight,#sdr-insight{flex:0 0 auto;min-height:0;overflow:hidden;margin-top:2px;padding-top:3px;border-top:1px solid var(--border)}
+.sdr-insight-title{display:block;font-size:8px;color:var(--ink2);text-transform:uppercase;letter-spacing:.4px;font-weight:700;margin-bottom:2px}
+.sdr-insight-row{display:flex;align-items:center;gap:6px;width:100%;min-height:9px;margin-bottom:1px}
+.sdr-insight-name{flex:0 0 62px;width:62px;font-size:8px;color:var(--ink2);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.sdr-insight-track{flex:1 1 auto;min-width:0;height:5px;border-radius:4px;background:var(--border);overflow:hidden}
+.sdr-insight-fill{display:block;height:100%;border-radius:4px;background:var(--acc)}
+.sdr-insight-pct{flex:0 0 56px;width:56px;text-align:right;font-size:8px;font-weight:700;color:var(--ink2);white-space:nowrap}
+
+#funil-panel-body{justify-content:center}
+#team-funnel-row{display:grid;grid-template-columns:minmax(0,1fr) 26px minmax(0,1fr) 26px minmax(0,1fr);align-items:center;gap:6px;width:100%;min-width:0}
+.tf-step{box-sizing:border-box;width:100%;min-width:0;padding:10px 7px;background:var(--surface2);border:1px solid var(--border);border-radius:8px;text-align:center}
+.tf-lbl{font-size:clamp(8px,.55vw,10px);color:var(--ink2);text-transform:uppercase;font-weight:700;letter-spacing:.3px}
+.tf-val{font-size:clamp(18px,1.4vw,25px);line-height:1.1;color:var(--ink);font-weight:800;margin:3px 0}
+.tf-bar{height:5px;background:var(--border);border-radius:3px;overflow:hidden}
+.tf-bar-fill{background:var(--acc)}
+.tf-arrow{min-width:0;font-size:8px;color:var(--ink2);text-align:center}
+
+.composition-layout{display:grid;grid-template-columns:minmax(80px,.75fr) minmax(0,1.4fr);gap:9px;align-items:center;width:100%;min-width:0;min-height:0}
+.donut-placeholder{width:min(100%,124px);max-width:124px;aspect-ratio:1;border-radius:50%;display:grid;place-items:center;margin:auto}
+.donut-core{width:68%;height:68%;border-radius:50%;background:var(--surface);border:1px solid var(--border);display:flex;flex-direction:column;align-items:center;justify-content:center;overflow:hidden;padding:0 6px;box-sizing:border-box}
+.donut-core strong{max-width:100%;font-size:clamp(8px,.62vw,11px);color:var(--ink);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.donut-core small{font-size:8px;color:var(--ink2)}
+.composition-details{display:flex;flex-direction:column;gap:5px;min-width:0}
+.composition-line{display:grid;grid-template-columns:9px minmax(0,1fr) auto auto;gap:5px;align-items:center;font-size:clamp(8px,.56vw,10px);color:var(--ink2);min-width:0}
+.composition-line strong{font-size:clamp(8px,.6vw,10px);color:var(--ink);white-space:nowrap}
+.composition-line small{font-size:8px;color:var(--ink2);white-space:nowrap}
+.legend-dot{width:9px;height:9px;border-radius:50%;display:inline-block}
+.legend-dot.acq{background:var(--acc)}
+.legend-dot.cross{background:var(--bl)}
+.composition-bottom{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:5px}
+.mrr-box{box-sizing:border-box;display:flex;flex-direction:column;gap:2px;min-width:0;padding:6px;border:1px solid var(--border);border-radius:7px;background:var(--surface2);color:var(--ink);overflow:hidden}
+.mrr-box small,.mrr-box div:first-child{display:block;font-size:8px;color:var(--ink2);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.mrr-box strong,.mrr-box [id],.mrr-box .js-ticket-medio{display:block;font-size:clamp(9px,.62vw,11px);color:var(--ink);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.mrr-box em{display:block;font-style:normal;font-size:8px;color:var(--ink2);white-space:normal;line-height:1.25}
+.mrr-split-track{height:6px;border-radius:5px;background:var(--border);display:flex;overflow:hidden}
+.mrr-split-fill-acq{background:var(--acc)}
+.mrr-split-fill-cross{background:var(--bl)}
+
+.pipeline-card .sec-body{justify-content:flex-start;gap:3px}
+.pipeline-total{font-size:clamp(22px,1.7vw,31px);line-height:1.1;margin:3px 0;color:var(--ink);font-weight:800;text-align:center}
+.pipeline-coverage{font-size:9px;padding-bottom:4px;color:var(--acc);text-align:center;font-weight:700;border-bottom:1px solid var(--border)}
+.pipeline-arr{display:flex;justify-content:space-between;align-items:center;padding:5px 0;border-bottom:1px solid var(--border)}
+.pipeline-arr small{font-size:8px;color:var(--ink2)}
+.pipeline-arr strong{font-size:clamp(10px,.7vw,12px);color:#805AD5}
+#aging-bars-wrap{margin-top:auto;padding-top:5px}
+.aging-bar-track{display:flex;height:10px;border-radius:7px;overflow:hidden;background:var(--border)}
+.aging-bar-seg{height:100%}
+.aging-legend{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:3px;font-size:7px;color:var(--ink2);white-space:nowrap;margin-top:4px}
+
+.revenue-progress{display:block;height:5px;border-radius:4px;background:var(--border);overflow:hidden;margin-top:3px}
+.revenue-progress i{display:block;height:100%;background:var(--acc);border-radius:4px}
+.revenue-pct{display:block;font-size:10px;color:var(--ink2)}
+
+@media(min-width:901px) and (max-height:760px){
+  #sec-ceo.active{grid-template-rows:minmax(78px,.72fr) 16px minmax(125px,1.05fr) minmax(185px,1.5fr) minmax(130px,1fr);gap:6px}
+  .topbar{flex-basis:56px;height:56px;min-height:56px}
+  .content{padding:7px}
+  .sec-hdr,.sec-hdr[style]{flex-basis:29px;height:29px;min-height:29px}
+  .central-row .sec-body,.two-col .sec-body,.footer-row .sec-body{padding:6px 8px}
+  .tbl-wrap table th,.tbl-wrap table td{padding:3px}
+}
+@media(max-width:900px){
+  html,body{height:auto;min-height:100%;overflow:auto}
+  body{display:block}
+  .topbar{height:auto;min-height:58px;overflow:visible}
+  .layout,.content{height:auto;overflow:visible}
+  .section.active{display:flex;flex-direction:column;height:auto;max-height:none;overflow:visible}
+  #sec-ceo.active{display:flex;height:auto;overflow:visible;gap:9px}
+  .kgrid-hero{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .central-row,.two-col,.footer-row{grid-template-columns:minmax(0,1fr);height:auto;overflow:visible}
+  .central-row>.sec-card,.two-col>.sec-card,.footer-row>.sec-card{height:auto;min-height:190px}
+  .footer-row>.sec-card{min-height:210px}
+}
+@media(max-width:600px){
+  .kgrid-hero{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .topbar-title{display:none}
+}
+</style>
+</head>
+<body>
+
+<!-- TOP BAR ── cockpit strip ──────────────────────────────────────────────── -->
+<div class="topbar">
+  <div class="topbar-brand"><span class="amp-mark" aria-hidden="true">A</span><span class="brand-copy"><strong>Amplimed</strong><small>Sales Command Center</small></span></div>
+  <div class="topbar-title"><span class="eyebrow">／ PERFORMANCE COMERCIAL</span><strong id="header-month">SETEMBRO DE 2026</strong></div>
+  <div class="topbar-right"><span class="live-dot"></span><span id="ultima-atualizacao" style="font-size:10px;white-space:nowrap">Dados atualizados</span></div>
+</div>
+<!-- kpi-pctmeta/kpi-pace/kpi-winrate/kpi-receitadia/tpkpi-progress-* saíram do
+     DOM: são lidos com if(el(...)) no JS, então continuam no-op com segurança. -->
+
+<!-- LAYOUT ──────────────────────────────────────────────────────────────────── -->
+<div class="layout">
+
+
+<!-- CONTENT ───────────────────────────────────────────────────────────────── -->
+<div class="content">
+
+<div class="section active" id="sec-ceo">
+
+  <!-- Scorecard Executivo — 6 KPIs -->
+  <div class="kgrid-hero">
+    <div class="kcard" style="border-top:3px solid #18C6A0"><div class="kcard-inner"><div style="flex:1;min-width:0"><div class="kcard-lbl">&#128181; Receita MTD</div><div class="kcard-val" id="kpi-receita" style="color:#0F7A5F">—</div><div class="kcard-note" id="kcard-receita-n">—</div></div><div style="flex-shrink:0" id="spark-receita-total"></div></div></div>
+    <div class="kcard" style="border-top:3px solid #1675D1"><div class="kcard-inner"><div style="flex:1;min-width:0"><div class="kcard-lbl">&#127919; Meta do M&ecirc;s</div><div class="kcard-val" id="kcard-prorata" style="color:#1675D1">—</div><div class="kcard-note">Objetivo comercial mensal</div></div></div></div>
+    <div class="kcard" style="border-top:3px solid #805AD5"><div class="kcard-inner"><div style="flex:1;min-width:0"><div class="kcard-lbl">&#128202; Atingimento da Meta Acum.</div><div class="kcard-val"><span id="kcard-prorata-pct" class="bdg bdg-g" style="font-size:16px;padding:2px 10px">—</span></div><div class="kcard-note">Realizado vs. meta pro-rata</div></div></div></div>
+    <div class="kcard" style="border-top:3px solid #F59E0B"><div class="kcard-inner"><div style="flex:1;min-width:0"><div class="kcard-lbl">&#128200; Forecast do M&ecirc;s</div><div class="kcard-val" id="kcard-proj-v" style="color:#B7791F">—</div><div class="kcard-note" id="kcard-proj-n">—</div></div><div style="flex-shrink:0" id="spark-projecao"></div></div></div>
+    <div class="kcard" style="border-top:3px solid #E5485B"><div class="kcard-inner"><div style="flex:1;min-width:0"><div class="kcard-lbl">&#9888; Gap para Meta</div><div class="kcard-val" id="kpi-gap" style="color:#E5485B">—</div><div class="kcard-note">Falta para bater a meta do m&ecirc;s</div></div></div></div>
+    <div class="kcard" style="border-top:3px solid #18C6A0"><div class="kcard-inner"><div style="flex:1;min-width:0"><div class="kcard-lbl">&#127942; Win Rate</div><div class="kcard-val" id="kcard-winrate-v" style="color:#0F7A5F">—</div><div class="kcard-note" id="kcard-winrate-n">—</div></div></div></div>
+  </div>
+
+  <div class="pace-bar" id="pace-bar-main">&#128197; Carregando dados&hellip;</div>
+
+  <!-- Linha central: gráfico dominante Receita x Meta + painel Meta/Forecast/Pipeline -->
+  <div class="central-row">
+    <div class="sec-card">
+      <div class="sec-hdr">&#128200; Receita &times; Meta (Acumulado no M&ecirc;s)</div>
+      <div class="sec-body">
+        <div class="chart-wrap"><canvas id="chartRec"></canvas></div>
+      </div>
+    </div>
+    <div class="sec-card">
+      <div class="sec-hdr"><span>◎ &nbsp; PULSO COMERCIAL</span><small>O que precisamos para bater a meta</small></div>
+      <div class="sec-body" id="forecast-panel-body">
+        <!-- Meta Mensal já aparece na nota do card "Forecast do Mês" do scorecard;
+             mantido aqui oculto apenas para o hook de atualização dinâmica (config.json). -->
+        <strong id="kv-meta-mensal" style="display:none">R$47.000,00</strong>
+        <div class="forecast-mini-grid pulse-grid">
+          <div class="forecast-mini-item"><div class="pulse-icon">▣</div><div class="forecast-mini-lbl">DIAS RESTANTES</div><div class="forecast-mini-val" id="kcard-dias-restantes">—</div><small>dias úteis</small></div>
+          <div class="forecast-mini-item"><div class="pulse-icon">▥</div><div class="forecast-mini-lbl">NECESSÁRIO / DIA</div><div class="forecast-mini-val pulse-red" id="kcard-necessario">—</div><small>para atingir a meta</small></div>
+          <div class="forecast-mini-item"><div class="pulse-icon">↗</div><div class="forecast-mini-lbl">PROJEÇÃO DO MÊS</div><div class="forecast-mini-val" id="kcard-pulse-projecao">—</div><small id="pulse-proj-note">forecast atual</small></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Closers + SDR summary -->
+  <div class="two-col">
+    <div class="sec-card">
+      <div class="sec-hdr" style="display:flex;justify-content:space-between;align-items:center;gap:8px"><span>&#127942; Closers MTD</span><span id="closers-hdr-sub" style="font-size:10px;font-weight:500;opacity:.9;white-space:nowrap">&mdash;</span></div>
+      <div class="sec-body">
+        <div class="tbl-wrap" id="closers-tbl-wrap"><table>
+          <thead><tr><th>#</th><th>Closer</th><th>Receita</th><th class="progress-head">Progresso</th><th>% da meta</th><th>Meta</th><th>Taxa de ganho</th><th>Vendas</th></tr></thead>
+          <tbody id="tbl-closers-mini"><tr style="background:#fff"><td>Tamara</td><td>14</td><td>R$4.387,97</td><td>74%</td></tr><tr style="background:#fff"><td>Eduardo</td><td>13</td><td>R$5.637,75</td><td>72%</td></tr><tr style="background:#fff"><td>Juliano</td><td>11</td><td>R$1.837,80</td><td>65%</td></tr><tr style="background:#fff"><td>Ariel</td><td>9</td><td>R$2.967,07</td><td>64%</td></tr><tr style="background:#fff"><td>Mayara</td><td>19</td><td>R$5.027,47</td><td>86%</td></tr>
+        </table></div>
+        <div class="sdr-insight" id="closers-insight"></div>
+      </div>
+    </div>
+    <div class="sec-card">
+      <div class="sec-hdr" style="display:flex;justify-content:space-between;align-items:center;gap:8px"><span>&#128100; SDR MTD</span><span id="sdr-hdr-sub" style="font-size:10px;font-weight:500;opacity:.9;white-space:nowrap">&mdash;</span></div>
+      <div class="sec-body">
+        <div class="tbl-wrap" id="sdr-tbl-wrap"><table>
+          <thead><tr><th>#</th><th>SDR</th><th>SQL</th><th>Receita influenciada</th><th>% da meta</th></tr></thead>
+          <tbody id="tbl-sdr-mini"><tr style="background:#fff"><td>Ana</td><td>33</td><td>R$9.685,35</td></tr><tr style="background:#fff"><td>Amanda</td><td>49</td><td>R$5.049,69</td></tr><tr style="background:#fff"><td>Francisco</td><td>23</td><td>R$4.335,02</td></tr></tbody>
+        </table></div>
+        <div class="sdr-insight" id="sdr-insight"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Rodapé: funil, composição e pipeline -->
+  <div class="footer-row">
+    <div class="sec-card funnel-card">
+      <div class="sec-hdr"><span>▽ &nbsp; FUNIL DA EQUIPE</span><small>SQL → SAL → GANHO</small></div>
+      <div class="sec-body" id="funil-panel-body"><div id="team-funnel-row"></div></div>
+    </div>
+    <div class="sec-card composition-card">
+      <div class="sec-hdr"><span>▣ &nbsp; COMPOSIÇÃO DA RECEITA</span></div>
+      <div class="sec-body">
+        <div class="composition-layout">
+          <div class="donut-placeholder" id="donut-chart"><div class="donut-core"><strong id="mrr-total">—</strong><small>Total</small></div></div>
+          <div class="composition-details">
+            <div class="composition-line"><i class="legend-dot acq"></i><span>Aquisição</span><strong id="mrr-acq">—</strong><small id="mrr-acq-pct">—</small></div>
+            <div class="composition-line"><i class="legend-dot cross"></i><span>Cross-Sell</span><strong id="mrr-cross">—</strong><small id="mrr-cross-pct">—</small></div>
+            <div class="mrr-split-track"><div class="mrr-split-fill-acq" id="mrr-split-acq" style="width:50%"></div><div class="mrr-split-fill-cross" id="mrr-split-cross" style="width:50%"></div></div>
+            <div class="composition-bottom">
+              <div class="mrr-box"><small>Ticket médio</small><strong class="js-ticket-medio">—</strong><div class="kcard-gauge-track"><div class="kcard-gauge-fill" id="kcard-ticket-gauge" style="width:0%"></div></div></div>
+              <div class="mrr-box"><small>Total de vendas</small><strong id="kcard-vendas-2-v">—</strong><em id="kcard-vendas-2-n">—</em></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="sec-card pipeline-card">
+      <div class="sec-hdr"><span>▤ &nbsp; PIPELINE EM ABERTO</span></div>
+      <div class="sec-body">
+        <div class="pipeline-total" id="kpi-pipeline">—</div>
+        <div class="pipeline-coverage" id="coverage-val">—</div>
+        <div class="pipeline-arr"><small>ARR PROJETADO</small><strong id="arr-projetado">—</strong></div>
+        <div id="aging-bars-wrap"></div>
+      </div>
+    </div>
+  </div>
+
+</div><!-- /sec-ceo -->
+</div><!-- /content -->
+</div><!-- /layout -->
+
+<!-- DRAWER ──────────────────────────────────────────────────────────────────── -->
+<div id="drawer-overlay" onclick="closeDrawer()"></div>
+<div id="drawer">
+  <div class="drawer-hdr">
+    <strong id="drawer-title">Detalhes</strong>
+    <button class="drawer-close" onclick="closeDrawer()">&times;</button>
+  </div>
+  <div id="drawer-content"></div>
+</div>
+
+<!-- JAVASCRIPT ──────────────────────────────────────────────────────────────── -->
+<script>
+// ── navigation ───────────────────────────────────────────────────────────────
+function show(id) {
+  document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
+  document.querySelectorAll('.nav-a').forEach(a => a.classList.remove('active'));
+  document.getElementById('sec-'+id).classList.add('active');
+  document.getElementById('nav-'+id).classList.add('active');
+  window.scrollTo(0,0);
+  return false;
+}
+
+// ── Operadoras tabs ───────────────────────────────────────────────────────────
+function showOTab(tab) {
+  ['funil','fechados'].forEach(t => {
+    var el = document.getElementById('otab-content-'+t);
+    var btn = document.getElementById('otab-'+t);
+    if(t === tab) {
+      el.style.display = 'block';
+      btn.style.background = 'var(--acc)';
+      btn.style.color = '#fff';
+    } else {
+      el.style.display = 'none';
+      btn.style.background = 'var(--surface2)';
+      btn.style.color = 'var(--ink2)';
+    }
+  });
+}
+
+// ── drawer ────────────────────────────────────────────────────────────────────
+function openDrawer(title, html) {
+  document.getElementById('drawer-title').textContent = title;
+  document.getElementById('drawer-content').innerHTML = html;
+  document.getElementById('drawer').classList.add('open');
+  document.getElementById('drawer-overlay').style.display = 'block';
+}
+function closeDrawer() {
+  document.getElementById('drawer').classList.remove('open');
+  document.getElementById('drawer-overlay').style.display = 'none';
+}
+
+// ── chart helpers ─────────────────────────────────────────────────────────────
+const ink   = () => getComputedStyle(document.body).getPropertyValue('--ink2').trim() || '#475569';
+const brd   = () => getComputedStyle(document.body).getPropertyValue('--border').trim() || '#E2E8F0';
+const R = v => 'R$'+parseFloat(v).toLocaleString('pt-BR',{minimumFractionDigits:0});
+
+// ══════════════════════════════════════════════════════════════════════════
+// PAINEL VIVO — busca data/data.json (atualizado de hora em hora pelo GitHub
+// Actions) e usa esses valores nos KPIs do topo + gráficos de receita/aging.
+// Se o fetch falhar (ex: abrindo o arquivo localmente com file://), usa os
+// valores estáticos abaixo como fallback, para o painel nunca quebrar.
+// ══════════════════════════════════════════════════════════════════════════
+const FALLBACK_DATA = {
+  mes:{chave:"2026-08",mes:8,ano:2026},
+  metas:{closer:47000,sdr:0},
+  receitaAcumulada:{
+    labels:["01/08","02/08","03/08","04/08","05/08","06/08","07/08","08/08","09/08","10/08","11/08","12/08","13/08","14/08","15/08","16/08","17/08"],
+    realizado:[0,0,4076.89,5910.83,9197.92,10910.91,13555.5,13555.5,13555.5,21195.99,22903.85,22903.85,22903.85,22903.85,26389.29,27389.29,29389.29],
+    meta:[0,0,2238.1,4476.2,6714.3,8952.4,11190.5,11190.5,11190.5,13428.6,15666.7,15666.7,15666.7,15666.7,17904.8,20142.9,22381.0]
+  },
+  kpis:{receitaRealizada:29389.29,metaMensal:47000,pctMeta:62.5,mediaDiaria:1728.78,pipelineAberto:34772},
+  closers:[],
+  aging:{"0-7d":70,"8-15d":10,"16-30d":8,"31-60d":5,"+60d":2},
+  geradoEmBR:null
+};
+
+async function loadPainelData(){
+  try{
+    const res = await fetch('./data/data.json?v=' + Date.now(), {cache:'no-store'});
+    if(!res.ok) throw new Error('HTTP '+res.status);
+    return await res.json();
+  }catch(e){
+    console.warn('Não foi possível carregar data/data.json, usando dados estáticos de fallback.', e);
+    return FALLBACK_DATA;
+  }
+}
+
+function fmtMoeda(v){ return 'R$'+parseFloat(v).toLocaleString('pt-BR',{minimumFractionDigits:2}); }
+
+function aplicarDadosNoPainel(d){
+  // KPIs do topo (apenas os que têm cálculo confirmado — ver README, Fase 2 traz o resto)
+  const kpiReceita = document.getElementById('kpi-receita');
+  const kpiPct = document.getElementById('kpi-pctmeta');
+  const kpiDia = document.getElementById('kpi-receitadia');
+  const kpiPipe = document.getElementById('kpi-pipeline');
+  if(kpiReceita) kpiReceita.textContent = fmtMoeda(d.kpis.receitaRealizada);
+  if(kpiPct) kpiPct.textContent = d.kpis.pctMeta+'%';
+  if(kpiDia) kpiDia.textContent = fmtMoeda(d.kpis.mediaDiaria)+'/d';
+  if(kpiPipe && d.kpis.pipelineAberto!==undefined) kpiPipe.textContent = fmtMoeda(d.kpis.pipelineAberto);
+
+  const upd = document.getElementById('ultima-atualizacao');
+  if(upd) upd.innerHTML = d.geradoEmBR ? ('&#128260; dados de '+d.geradoEmBR) : '&#9888; usando dados estáticos (offline)';
+
+  // ── chart: receita acumulada (duas instâncias do mesmo gráfico no painel) ──
+  const recCfg = (canvasId, colorLine) => ({
+    type:'line',
+    data:{
+      labels:d.receitaAcumulada.labels,
+      datasets:[
+        {label:'Realizado',data:d.receitaAcumulada.realizado,borderColor:colorLine,backgroundColor:colorLine+'22',
+          fill:true,tension:.35,pointRadius:3,pointHoverRadius:6},
+        {label:'Meta Acum.',data:d.receitaAcumulada.meta,borderColor:'#1675D1',borderDash:[5,3],
+          fill:false,tension:0,pointRadius:0}
+      ]
+    },
+    options:{
+      responsive:true,maintainAspectRatio:false,
+      plugins:{legend:{position:'top',labels:{font:{size:11}}},
+                tooltip:{mode:'index',callbacks:{label:ctx=>ctx.dataset.label+': '+R(ctx.raw)}}},
+      scales:{y:{ticks:{callback:R,font:{size:10}},grid:{color:brd()}},
+               x:{ticks:{maxTicksLimit:10,font:{size:10}},grid:{display:false}}}
+    }
+  });
+  if(typeof Chart !== 'undefined'){
+    { const c = document.getElementById('chartRec'); if(c) new Chart(c.getContext('2d'), recCfg('chartRec','#18C6A0')); }
+    { const c = document.getElementById('chartResultadoRec'); if(c) new Chart(c.getContext('2d'), recCfg('chartResultadoRec','#10B981')); }
+  }
+
+  // ── chart: aging ──────────────────────────────────────────────────────────
+  if(typeof Chart !== 'undefined'){
+    const _ca = document.getElementById('chartAging');
+    if(_ca) new Chart(_ca.getContext('2d'), {
+      type:'doughnut',
+      data:{
+        labels:["0–7d","8–15d","16–30d","31–60d","+60d"],
+        datasets:[{
+          data:[d.aging["0-7d"],d.aging["8-15d"],d.aging["16-30d"],d.aging["31-60d"],d.aging["+60d"]],
+          backgroundColor:['#10B981','#F59E0B','#F97316','#EF4444','#991B1B'],
+          borderWidth:2
+        }]
+      },
+      options:{
+        responsive:true,maintainAspectRatio:false,
+        plugins:{legend:{position:'right',labels:{font:{size:10}}}}
+      }
+    });
+  }
+  // ── tabela Closers — Desempenho MTD (Score Ativ. fica pendente até Fase 2b) ──
+  const tblCl = document.getElementById('tbl-closers-mtd');
+  if(tblCl && d.closers){
+    const rowsHtml = d.closers.map(c=>{
+      const pct = c.pctMetaProRata||0;
+      const barColor = pct>=100?'var(--gn)':(pct>=70?'var(--am)':'var(--rd)');
+      const bdgClass = pct>=100?'bdg-g':(pct>=70?'bdg-a':'bdg-r');
+      const bg = pct>=100?'#F0FDF4':(pct>=70?'#FFFBEB':'#FEF2F2');
+      return `<tr style="background:${bg}"><td><strong>${c.name}</strong></td><td class="num">${c.ganhos}</td>`+
+        `<td class="num">${fmtMoeda(c.aquisicaoAmount)}</td><td class="num">${fmtMoeda(c.crossSellAmount)}</td>`+
+        `<td class="num"><strong>${fmtMoeda(c.totalAmount)}</strong></td><td class="num">${fmtMoeda(c.ticketMedio)}</td>`+
+        `<td class="num">${c.winRate}%</td>`+
+        `<td style="min-width:140px"><div style="display:flex;align-items:center;gap:6px"><div style="flex:1;height:8px;background:var(--border);border-radius:4px;overflow:hidden"><div style="width:${Math.min(pct,100)}%;height:100%;background:${barColor};border-radius:4px;transition:width .6s"></div></div><span class="bdg ${bdgClass}">${pct}%</span></div></td>`+
+        `<td class="num" style="color:var(--ink3)" title="Ainda não automatizado — depende de definição de Score de Atividade">—</td></tr>`;
+    }).join('');
+    tblCl.innerHTML = '<tr><th style="background:#137A6E">Closer</th><th style="background:#137A6E">Vendas</th><th style="background:#137A6E">Rec.Aquisição</th><th style="background:#137A6E">Cross-Sell</th><th style="background:#137A6E">Total</th><th style="background:#137A6E">Ticket Médio</th><th style="background:#137A6E">Taxa Ganho</th><th style="background:#137A6E">% da Meta</th><th style="background:#137A6E">Score Ativ.</th></tr>'+rowsHtml;
+  }
+  // ── tabela Closers — Taxas de Conversão por Etapa (SQL/Demo/SAL/Proposta) ──
+  const tblFunil = document.getElementById('tbl-closers-funil');
+  if(tblFunil && d.closers){
+    const pctOrDash = v => (v===null || v===undefined) ? '—' : v+'%';
+    const rowsHtml = d.closers.map(c=>{
+      const f = c.funil || {};
+      return `<tr><td><strong>${c.name}</strong></td><td class="num">${f.sql??0}</td><td class="num">${f.demo??0}</td>`+
+        `<td class="num">${pctOrDash(f.sqlToDemoP)}</td><td class="num">${f.sal??0}</td><td class="num">${pctOrDash(f.demoToSalP)}</td>`+
+        `<td class="num">${f.proposta??0}</td><td class="num">${pctOrDash(f.salToPropP)}</td><td class="num">${f.won??0}</td>`+
+        `<td class="num"><strong>${pctOrDash(f.winRateP)}</strong></td></tr>`;
+    }).join('');
+    tblFunil.innerHTML = '<tr><th style="background:#137A6E">Closer</th><th style="background:#137A6E">SQL</th><th style="background:#137A6E">Demo</th><th style="background:#137A6E">SQL→Demo</th><th style="background:#137A6E">SAL</th><th style="background:#137A6E">Demo→SAL</th><th style="background:#137A6E">Prop.</th><th style="background:#137A6E">SAL→Prop</th><th style="background:#137A6E">Won</th><th style="background:#137A6E">Win Rate</th></tr>'+rowsHtml;
+  }
+
+  // ── cards dinâmicos: receita, MRR, win rate, ticket, vendas ────────────────
+  const el = id => document.getElementById(id);
+  const mrrAcq    = d.closers ? d.closers.reduce((s,c)=>s+(c.aquisicaoAmount||0),0) : 0;
+  const mrrCross  = d.closers ? d.closers.reduce((s,c)=>s+(c.crossSellAmount||0),0) : 0;
+  const mrrTotal  = d.kpis.receitaRealizada || 0;
+  const totGanhos = d.closers ? d.closers.reduce((s,c)=>s+(c.ganhos||0),0) : 0;
+  const totPerdidos = d.closers ? d.closers.reduce((s,c)=>s+(c.perdidos||0),0) : 0;
+  const totCross  = d.closers ? d.closers.reduce((s,c)=>s+(c.crossSellGanhos||0),0) : 0;
+  const totVendas = totGanhos + totCross;
+  const winRateGeral = (totGanhos+totPerdidos)>0
+    ? Math.round(totGanhos/(totGanhos+totPerdidos)*1000)/10 : 0;
+  const ticketMedio = totGanhos>0 ? Math.round(mrrAcq/totGanhos*100)/100 : 0;
+  const pctMetaMes  = d.kpis.pctMeta || 0;
+
+  document.querySelectorAll('.js-receita-total').forEach(e=>e.textContent=fmtMoeda(mrrTotal));
+  document.querySelectorAll('.js-ticket-medio').forEach(e=>e.textContent=fmtMoeda(ticketMedio));
+
+  // ── Barra de progresso "Meta do Mês" no topbar ───────────────────────────
+  if(el('tpkpi-progress-fill')) el('tpkpi-progress-fill').style.width = Math.max(0,Math.min(100,pctMetaMes))+'%';
+  if(el('tpkpi-progress-pct'))  el('tpkpi-progress-pct').textContent  = pctMetaMes+'%';
+
+  // ── Gauge do Ticket Médio vs meta de R$300 ───────────────────────────────
+  if(el('kcard-ticket-gauge')){
+    const metaTicket = 300;
+    el('kcard-ticket-gauge').style.width = Math.max(0,Math.min(100, ticketMedio/metaTicket*100))+'%';
+  }
+
+  // ── Barra de proporção MRR Novo vs Cross-Sell ────────────────────────────
+  if(el('mrr-split-acq')){
+    const splitTotal = mrrAcq+mrrCross;
+    const acqPct = splitTotal>0 ? Math.round(mrrAcq/splitTotal*100) : 0;
+    const crossPct = 100-acqPct;
+    el('mrr-split-acq').style.width = acqPct+'%';
+    el('mrr-split-cross').style.width = crossPct+'%';
+    const donut=el('donut-chart');
+    if(donut) donut.style.background='conic-gradient(#18C6A0 0 '+acqPct+'%,#1675D1 '+acqPct+'% 100%)';
+    if(el('mrr-acq-pct')) el('mrr-acq-pct').textContent=acqPct+'%';
+    if(el('mrr-cross-pct')) el('mrr-cross-pct').textContent=crossPct+'%';
+    if(el('mrr-split-acq-pct'))   el('mrr-split-acq-pct').textContent   = acqPct+'%';
+    if(el('mrr-split-cross-pct')) el('mrr-split-cross-pct').textContent = crossPct+'%';
+  }
+
+  // ── Subtítulo do header Closers MTD (closers ativos + meta) ─────────────
+  if(el('closers-hdr-sub')){
+    const nClosers = d.closers ? d.closers.filter(cc=>cc.metaMes>0).length : 0;
+    el('closers-hdr-sub').textContent = nClosers+' closers ativos \u00b7 Meta '+fmtMoeda(d.metas ? d.metas.closer : 0);
+  }
+
+  // ── Sparklines dinâmicas a partir da receita acumulada real ──────────────
+  function sparkPts(vals){
+    if(!vals || vals.length<2) return null;
+    const w=70,h=24;
+    const min=Math.min.apply(null,vals), max=Math.max.apply(null,vals);
+    const range=(max-min)||1;
+    const step=w/(vals.length-1);
+    return vals.map(function(v,i){
+      const x=Math.round(i*step*10)/10;
+      const y=Math.round((h-((v-min)/range)*h)*10)/10;
+      return x+','+y;
+    }).join(' ');
+  }
+  function paintSpark(id, vals, color){
+    const box = el(id);
+    if(!box) return;
+    const pts = sparkPts(vals);
+    box.innerHTML = pts
+      ? '<svg viewBox="0 0 70 24" style="width:70px;height:24px;display:block"><polyline points="'+pts+'" fill="none" stroke="'+color+'" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>'
+      : '';
+  }
+  if(d.receitaAcumulada && d.receitaAcumulada.realizado && d.receitaAcumulada.realizado.length>1){
+    const realArr = d.receitaAcumulada.realizado;
+    paintSpark('spark-receita-total', realArr, '#18C6A0');
+    paintSpark('spark-projecao', realArr, '#E08E0B');
+    const diarios = realArr.map(function(v,i){ return i===0 ? v : Math.max(0, v-realArr[i-1]); });
+    paintSpark('spark-recdia', diarios, '#F59E0B');
+  }
+
+  if(el('mrr-acq'))   el('mrr-acq').textContent   = fmtMoeda(mrrAcq);
+  if(el('mrr-cross')) el('mrr-cross').textContent = fmtMoeda(mrrCross);
+  if(el('mrr-total')) el('mrr-total').textContent = fmtMoeda(mrrTotal);
+
+  if(el('kcard-winrate-v')) el('kcard-winrate-v').textContent = winRateGeral+'%';
+  if(el('kcard-winrate-n')) el('kcard-winrate-n').textContent = totGanhos+' ganhos / '+(totGanhos+totPerdidos)+' SALs';
+
+  if(el('kcard-vendas-1-v')) el('kcard-vendas-1-v').textContent = totVendas;
+  if(el('kcard-vendas-1-n')) el('kcard-vendas-1-n').textContent = 'Acq '+totGanhos+' + Cross '+totCross;
+  if(el('kcard-vendas-2-v')) el('kcard-vendas-2-v').textContent = totVendas;
+  if(el('kcard-vendas-2-n')) el('kcard-vendas-2-n').textContent = 'Aquisição '+totGanhos+' + Cross '+totCross;
+
+  if(el('kcard-recdia-v') && d.receitaAcumulada){
+    const diasUteis = d.receitaAcumulada.labels.filter((_,i)=>{
+      const parts = d.receitaAcumulada.labels[i].split('/').map(Number);
+      const dt = new Date(new Date().getFullYear(), parts[1]-1, parts[0]);
+      return dt.getDay()>0 && dt.getDay()<6;
+    }).length;
+    if(diasUteis>0) el('kcard-recdia-v').textContent = fmtMoeda(Math.round(mrrTotal/diasUteis*100)/100);
+  }
+
+  if(el('meta-anual-realizado')) el('meta-anual-realizado').textContent = fmtMoeda(mrrTotal);
+  if(el('meta-anual-ating')){
+    const ae = el('meta-anual-ating');
+    ae.textContent = pctMetaMes+'%';
+    ae.className = 'bdg '+(pctMetaMes>=100?'bdg-g':(pctMetaMes>=70?'bdg-a':'bdg-r'));
+  }
+
+  // ── Comparativo AGO + Atingimento Diretoria + Closers Mini ──────────────────
+  const _countWD = labels => labels.filter(lbl => {
+    const p = lbl.split('/').map(Number);
+    const d2 = new Date(new Date().getFullYear(), p[1]-1, p[0]);
+    return d2.getDay()>0 && d2.getDay()<6;
+  }).length;
+  const _monthLabels = d.receitaAcumulada ? d.receitaAcumulada.labels : [];
+  const workingDaysSoFar = _countWD(_monthLabels);
+  const totalWorkingDays = (() => {
+    const now2 = new Date(); const yr = now2.getFullYear(), mo = now2.getMonth();
+    const dim = new Date(yr, mo+1, 0).getDate(); let cnt = 0;
+    for (let day=1;day<=dim;day++){const dt=new Date(yr,mo,day);if(dt.getDay()>0&&dt.getDay()<6)cnt++;}
+    return cnt || 21;
+  })();
+  const metaMensal = d.kpis.metaMensal || 47000;
+  const proRataMeta = totalWorkingDays>0 ? metaMensal/totalWorkingDays*workingDaysSoFar : 0;
+  const proRataPct = proRataMeta>0 ? Math.round(mrrTotal/proRataMeta*1000)/10 : 0;
+  const projecaoMes = workingDaysSoFar>0 ? Math.round(mrrTotal/workingDaysSoFar*totalWorkingDays*100)/100 : 0;
+  const metaDiaria = totalWorkingDays>0 ? Math.round(metaMensal/totalWorkingDays*100)/100 : 0;
+  const necessario = totalWorkingDays>workingDaysSoFar ? Math.round((metaMensal-mrrTotal)/(totalWorkingDays-workingDaysSoFar)*100)/100 : 0;
+
+  // Comparativo AGO column
+  if(el('comp-ago-receita')) el('comp-ago-receita').textContent = fmtMoeda(mrrTotal);
+  if(el('comp-ago-acq'))     el('comp-ago-acq').textContent     = fmtMoeda(mrrAcq);
+  if(el('comp-ago-ganhos'))  el('comp-ago-ganhos').textContent  = totVendas;
+  if(el('comp-ago-ticket'))  el('comp-ago-ticket').textContent  = fmtMoeda(ticketMedio);
+  if(el('comp-ago-pctmeta')) el('comp-ago-pctmeta').textContent = proRataPct+'%';
+
+  // Pace bar Atingimento
+  if(el('pace-bar-diretoria')) el('pace-bar-diretoria').innerHTML =
+    '📅 Meta diária '+fmtMoeda(metaDiaria)+' · D'+workingDaysSoFar+'/'+totalWorkingDays+' · Realizado '+fmtMoeda(mrrTotal)+' ('+proRataPct+'%) · Projeção '+fmtMoeda(projecaoMes)+' · Necessário '+fmtMoeda(necessario)+'/dia';
+
+  // Helper para atualizar linha do Atingimento
+  const updAting = (rowId, cells) => {
+    const row = document.getElementById(rowId); if (!row) return;
+    const tds = row.querySelectorAll('td'); if (!tds.length) return;
+    cells.forEach((val, i) => { if (tds[i+1] !== undefined) tds[i+1].innerHTML = val; });
+  };
+  const bdgSpan = (pct, v) => '<span class="bdg '+(pct>=100?'bdg-g':(pct>=70?'bdg-a':'bdg-r'))+'">'+v+'</span>';
+  const ico = ok => ok ? '✅ No alvo' : '⚠️ Atenção';
+
+  const recPct = proRataPct;
+  updAting('tbl-ating-receita', [fmtMoeda(mrrTotal), fmtMoeda(projecaoMes), fmtMoeda(metaMensal), bdgSpan(recPct, recPct+'%'), ico(recPct>=100)]);
+
+  const vndPct = Math.round(totVendas/131*1000)/10;
+  const vndProj = workingDaysSoFar>0 ? Math.round(totVendas/workingDaysSoFar*totalWorkingDays) : totVendas;
+  updAting('tbl-ating-vendas', [totVendas, vndProj, 131, bdgSpan(vndPct, vndPct+'%'), ico(vndPct>=100)]);
+
+  const tkPct = Math.round(ticketMedio/300*1000)/10;
+  updAting('tbl-ating-ticket', [fmtMoeda(ticketMedio), fmtMoeda(ticketMedio), 'R$300', bdgSpan(tkPct, tkPct+'%'), ico(tkPct>=100)]);
+
+  const wrPct = Math.round(winRateGeral/65*1000)/10;
+  updAting('tbl-ating-wr', [winRateGeral+'%', winRateGeral+'%', '65%', bdgSpan(wrPct, wrPct+'%'), ico(winRateGeral>=65)]);
+
+  const q3Meta = 141000, q3Pct = Math.round(mrrTotal/q3Meta*1000)/10;
+  const q3Proj = workingDaysSoFar>0 ? Math.round(projecaoMes*3*100)/100 : 0;
+  updAting('tbl-ating-q3', [fmtMoeda(mrrTotal), fmtMoeda(q3Proj), 'R$141.000,00', bdgSpan(q3Pct, q3Pct+'%'), '✅']);
+
+  // Closers mini-table
+  const tblMini = document.getElementById('tbl-closers-mini');
+  if(tblMini && d.closers){
+    const closersAtivos = d.closers.filter(c=>c.metaMes>0);
+    const linhas = closersAtivos.slice().sort((a,b)=>(b.totalAmount||0)-(a.totalAmount||0)).map((c,idx)=>{
+      const meta = Number(c.metaMes||0), receita = Number(c.totalAmount||0);
+      const pct = meta>0 ? Math.round(receita/meta*1000)/10 : 0;
+      const bar = Math.max(0,Math.min(100,pct));
+      const tone = pct>=100?'good':(pct>=70?'mid':'low');
+      return '<tr><td class="rank-cell">'+(idx+1)+'</td><td class="person-cell"><span>'+c.name+'</span></td><td class="money-cell">'+fmtMoeda(receita)+'</td><td class="progress-cell"><span class="table-progress"><i class="'+tone+'" style="width:'+bar+'%"></i></span></td><td class="pct-cell '+tone+'">'+pct.toLocaleString('pt-BR',{minimumFractionDigits:1,maximumFractionDigits:1})+'%</td><td>'+fmtMoeda(meta)+'</td><td>'+c.winRate+'%</td><td>'+c.ganhos+'</td></tr>';
+    }).join('');
+    const somaVendas = closersAtivos.reduce((s,c)=>s+(c.ganhos||0),0);
+    const somaTotalAmount = closersAtivos.reduce((s,c)=>s+(c.totalAmount||0),0);
+    const somaGanhos = closersAtivos.reduce((s,c)=>s+(c.ganhos||0),0);
+    const somaPerdidos = closersAtivos.reduce((s,c)=>s+(c.perdidos||0),0);
+    const taxaGeral = (somaGanhos+somaPerdidos)>0 ? Math.round(somaGanhos/(somaGanhos+somaPerdidos)*1000)/10 : 0;
+    const metaProRataSoma = closersAtivos.reduce((s,c)=>s+(c.metaProRata||0),0);
+    const pctGeral = metaProRataSoma>0 ? Math.round(somaTotalAmount/metaProRataSoma*1000)/10 : 0;
+    const linhaTotal = '<tr class="total-row"><td colspan="2">Total / M&eacute;dia</td><td>'+fmtMoeda(somaTotalAmount)+'</td><td></td><td>'+pctGeral.toLocaleString('pt-BR',{minimumFractionDigits:1,maximumFractionDigits:1})+'%</td><td></td><td>'+taxaGeral+'%</td><td>'+somaVendas+'</td></tr>';
+    tblMini.innerHTML = closersAtivos.length ? (linhas + linhaTotal) : '<tr><td colspan="4" style="text-align:center;color:var(--ink3);padding:22px 10px">Sem dados de closers no momento</td></tr>';
+
+    // Performance dos Closers — comparativo de Receita Total por closer (dado
+    // real já existente, sem número fictício), barras relativas ao maior
+    // valor do grupo (receita não tem um "alvo de 100%" natural como a meta).
+    const closersInsight = el('closers-insight');
+    if(closersInsight){
+      const rankedClosers = closersAtivos.slice().sort((a,b)=>(b.totalAmount||0)-(a.totalAmount||0));
+      const maxAmount = rankedClosers.length ? Math.max(...rankedClosers.map(c=>c.totalAmount||0), 1) : 1;
+      const linhasInsightC = rankedClosers.map((c,idx)=>{
+        const cor = idx===0 ? 'var(--acc)' : 'var(--acc3)';
+        const w = Math.max(4, Math.min(100, (c.totalAmount||0)/maxAmount*100));
+        return '<div class="sdr-insight-row">'
+          +'<span class="sdr-insight-name">'+c.name+'</span>'
+          +'<div class="sdr-insight-track"><div class="sdr-insight-fill" style="width:'+w+'%;background:'+cor+'"></div></div>'
+          +'<span class="sdr-insight-pct">'+fmtMoeda(c.totalAmount||0)+'</span>'
+          +'</div>';
+      }).join('');
+      closersInsight.innerHTML = closersAtivos.length ? ('<div class="sdr-insight-title">Performance dos Closers &mdash; Receita Total</div>' + linhasInsightC) : '';
+    }
+  }
+
+  // SDR mini-table — dados reais via HubSpot (campo "SDR do Negócio")
+  const tblSdr = document.getElementById('tbl-sdr-mini');
+  if(tblSdr && d.sdrs){
+    const sdrsAtivos = d.sdrs.filter(s=>s.metaMes>0);
+    const linhasSdr = sdrsAtivos.slice().sort((a,b)=>(b.pctMetaProRata||0)-(a.pctMetaProRata||0)).map((s,idx)=>{
+      const p=Number(s.pctMetaProRata||0), tone=p>=100?'good':(p>=70?'mid':'low');
+      const w=Math.max(0,Math.min(100,p));
+      return '<tr><td class="rank-cell">'+(idx+1)+'</td><td class="person-cell"><span>'+s.name+'</span></td><td>'+s.sql+'</td><td class="money-cell">'+fmtMoeda(s.recInfluenciada)+'</td><td class="pct-cell '+tone+'">'+p.toLocaleString('pt-BR',{minimumFractionDigits:1,maximumFractionDigits:1})+'%</td></tr>';
+    }).join('');
+    const somaSql = sdrsAtivos.reduce((s,x)=>s+(x.sql||0),0);
+    const somaRec = sdrsAtivos.reduce((s,x)=>s+(x.recInfluenciada||0),0);
+    const somaMetaProRataSdr = sdrsAtivos.reduce((s,x)=>s+(x.metaProRata||0),0);
+    const pctGeralSdr = somaMetaProRataSdr>0 ? Math.round(somaRec/somaMetaProRataSdr*1000)/10 : 0;
+    const linhaTotalSdr = '<tr class="total-row"><td colspan="2">Total / M&eacute;dia</td><td>'+somaSql+'</td><td>'+fmtMoeda(somaRec)+'</td><td>'+pctGeralSdr.toLocaleString('pt-BR',{minimumFractionDigits:1,maximumFractionDigits:1})+'%</td></tr>';
+    tblSdr.innerHTML = sdrsAtivos.length ? (linhasSdr + linhaTotalSdr) : '<tr><td colspan="3" style="text-align:center;color:var(--ink3);padding:22px 10px">Sem dados de SDR no momento</td></tr>';
+    if(el('sdr-hdr-sub')){
+      el('sdr-hdr-sub').textContent = sdrsAtivos.length+' SDRs ativos \u00b7 Meta '+fmtMoeda(d.metas ? d.metas.sdr : 0);
+    }
+
+    // Ranking visual SDR — preenche o espaço remanescente do card com dado real
+    // (a tabela tem menos linhas que a de Closers; em vez de deixar em branco,
+    // mostra um ranking por % da meta pro-rata, já calculado acima).
+    const sdrInsight = el('sdr-insight');
+    if(sdrInsight){
+      const rankedSdr = sdrsAtivos.slice().sort((a,b)=>(b.pctMetaProRata||0)-(a.pctMetaProRata||0));
+      const linhasInsight = rankedSdr.map(s=>{
+        const p = s.pctMetaProRata||0;
+        const cor = p>=100?'#18C6A0':(p>=70?'#F59E0B':'#E5485B');
+        const w = Math.max(4, Math.min(100, p/1.5));
+        return '<div class="sdr-insight-row">'
+          +'<span class="sdr-insight-name">'+s.name+'</span>'
+          +'<div class="sdr-insight-track"><div class="sdr-insight-fill" style="width:'+w+'%;background:'+cor+'"></div></div>'
+          +'<span class="sdr-insight-pct" style="color:'+cor+'">'+p+'%</span>'
+          +'</div>';
+      }).join('');
+      sdrInsight.innerHTML = '<div class="sdr-insight-title">Ranking SDR &mdash; % da meta (pro-rata)</div>' + linhasInsight;
+    }
+  }
+
+  // ── Pace-bar principal (topo do sec-ceo) ─────────────────────────────────
+  const pbMain = el('pace-bar-main');
+  if(pbMain){
+    const diasRestantes = totalWorkingDays - workingDaysSoFar;
+    const corNecessario = necessario <= metaDiaria ? '#10B981' : '#EF4444';
+    if(el('tpkpi-progress-sub')){
+      el('tpkpi-progress-sub').innerHTML = 'Necess\u00e1rio <strong style="color:'+corNecessario+'">'+fmtMoeda(necessario)+'/dia</strong> \u00b7 '+diasRestantes+'d \u00fateis';
+    }
+    pbMain.innerHTML = '📅 Meta diária <strong>'+fmtMoeda(metaDiaria)+'</strong>'
+      +' · Acum. D'+workingDaysSoFar+'/'+totalWorkingDays+': <strong>'+fmtMoeda(proRataMeta)+'</strong>'
+      +' · Realizado: <strong>'+fmtMoeda(mrrTotal)+' ('+proRataPct+'%)</strong>'
+      +' · Projeção: <strong>'+fmtMoeda(projecaoMes)+'</strong>'
+      +' · Necessário: <strong style="color:'+corNecessario+'">'+fmtMoeda(necessario)+'/dia ('+diasRestantes+' dias restantes)</strong>';
+  }
+
+  // ── Receita Diária MTD — gerado 100% a partir do data.json ───────────────
+  const mtdWrap = el('resumo-mtd-wrap');
+  const mtdLabel = el('mtd-mes-label');
+  if(mtdWrap && d.receitaAcumulada){
+    const now3 = new Date();
+    const mesNome = now3.toLocaleDateString('pt-BR',{month:'long',year:'numeric'});
+    if(mtdLabel) mtdLabel.textContent = mesNome.charAt(0).toUpperCase()+mesNome.slice(1);
+    const lbls = d.receitaAcumulada.labels;
+    const real = d.receitaAcumulada.realizado;
+    const meta3 = d.receitaAcumulada.meta;
+    let rows = '';
+    for(let i=0;i<lbls.length;i++){
+      const recDia = i===0 ? real[0] : Math.max(0, real[i]-real[i-1]);
+      const acum = real[i];
+      const metaAcum = meta3[i];
+      const pctAt = metaAcum>0 ? Math.round(acum/metaAcum*100) : 0;
+      const parts = lbls[i].split('/').map(Number);
+      const dtRow = new Date(now3.getFullYear(), parts[1]-1, parts[0]);
+      const isWknd = dtRow.getDay()===0||dtRow.getDay()===6;
+      const isToday = dtRow.toDateString()===now3.toDateString();
+      const bg = isToday?'#EFF6FF':(isWknd?'#F8FAFC':(recDia>0?'#F0FDF4':'#FEF2F2'));
+      const fw = isToday?'font-weight:700;':'';
+      const bc3 = pctAt>=100?'bdg-g':(pctAt>=70?'bdg-a':'bdg-r');
+      const todayBadge = isToday?' <span style="background:#3B82F6;color:#fff;font-size:9px;border-radius:3px;padding:1px 4px">HOJE</span>':'';
+      rows += '<tr style="background:'+bg+';'+fw+'">'
+        +'<td style="text-align:center">'+lbls[i]+todayBadge+'</td>'
+        +'<td class="num">'+fmtMoeda(recDia)+'</td>'
+        +'<td class="num"><strong>'+fmtMoeda(acum)+'</strong></td>'
+        +'<td class="num">'+fmtMoeda(metaAcum)+'</td>'
+        +'<td class="num"><span class="bdg '+bc3+'">'+pctAt+'%</span></td>'
+        +'</tr>';
+    }
+    mtdWrap.innerHTML = '<div class="tbl-wrap"><table class="tbl-num">'
+      +'<tr>'
+      +'<th style="background:#137A6E">Dia</th>'
+      +'<th style="background:#137A6E">Receita do Dia</th>'
+      +'<th style="background:#137A6E">Acumulado</th>'
+      +'<th style="background:#137A6E">Meta Acum.</th>'
+      +'<th style="background:#137A6E">% Ating.</th>'
+      +'</tr>'
+      +rows
+      +'</table></div>';
+  }
+
+  // ── Topbar: Pace e Win Rate ──────────────────────────────────────────────
+  if(el('kpi-pace')) el('kpi-pace').textContent = fmtMoeda(projecaoMes);
+  if(el('kpi-winrate')){
+    const wrEl = el('kpi-winrate');
+    wrEl.textContent = winRateGeral+'%';
+    wrEl.className = 'tpkpi-val '+(winRateGeral>=65?'ok':'warn');
+  }
+
+  // ── KCard: Receita Total — nota dinâmica ─────────────────────────────────
+  if(el('kcard-receita-n')){
+    const pctMes = metaMensal>0 ? Math.round(mrrTotal/metaMensal*1000)/10 : 0;
+    el('kcard-receita-n').innerHTML = '<span class="revenue-pct">'+pctMes.toLocaleString('pt-BR',{minimumFractionDigits:1,maximumFractionDigits:1})+'% da meta</span><span class="revenue-progress"><i style="width:'+Math.max(0,Math.min(100,pctMes))+'%"></i></span>';
+  }
+
+  // ── KCard: Projeção do Mês — valor e nota dinâmicos ──────────────────────
+  if(el('kcard-proj-v')) el('kcard-proj-v').textContent = fmtMoeda(projecaoMes);
+  if(el('kcard-proj-n')){
+    const projVsMeta = metaMensal > 0 ? Math.round(projecaoMes/metaMensal*1000)/10 : 0;
+    const arw2 = projVsMeta >= 100 ? '&#9650;' : '&#9660;';
+    const cls2 = projVsMeta >= 100 ? 'up' : 'dn';
+    el('kcard-proj-n').innerHTML = 'Meta mensal '+fmtMoeda(metaMensal)
+      +' <span class="delta '+cls2+'">'+arw2+' '+projVsMeta+'%</span>';
+  }
+
+  if(el('kcard-pulse-projecao')) el('kcard-pulse-projecao').textContent = fmtMoeda(projecaoMes);
+  if(el('pulse-proj-note')) el('pulse-proj-note').textContent = metaMensal>0 ? (Math.round(projecaoMes/metaMensal*1000)/10).toLocaleString('pt-BR')+'% da meta' : 'forecast atual';
+  // ── Ritmo & Forecast card ────────────────────────────────────────────────
+  const diasRest = totalWorkingDays - workingDaysSoFar;
+  if(el('kcard-meta-diaria')) el('kcard-meta-diaria').textContent = fmtMoeda(metaDiaria);
+  if(el('kcard-prorata')) el('kcard-prorata').textContent = fmtMoeda(metaMensal);
+  if(el('kcard-prorata-pct')){
+    const rpEl = el('kcard-prorata-pct');
+    rpEl.textContent = proRataPct+'%';
+    rpEl.className = 'bdg '+(proRataPct>=100?'bdg-g':(proRataPct>=70?'bdg-a':'bdg-r'));
+  }
+  if(el('kcard-proj-forecast')) el('kcard-proj-forecast').textContent = fmtMoeda(projecaoMes);
+  if(el('kcard-necessario')){
+    const nc = necessario <= metaDiaria ? 'var(--gn)' : 'var(--rd)';
+    el('kcard-necessario').innerHTML = '<strong style="color:'+nc+'">'+fmtMoeda(necessario)+'</strong>';
+  }
+  if(el('kcard-dias-restantes')) el('kcard-dias-restantes').textContent = diasRest+' dias úteis';
+
+  // ── Meta & Projeção Anual — ARR e Coverage dinâmicos ────────────────────
+  const metaAnual = d.kpis.metaAnual || 191000;
+  const arrProjetado = Math.round(projecaoMes * 12);
+  const coverage = metaAnual > 0 ? (arrProjetado / metaAnual).toFixed(1) : '0.0';
+  if(el('arr-projetado')) el('arr-projetado').textContent = 'R$'+arrProjetado.toLocaleString('pt-BR');
+  if(el('coverage-val')){
+    const cvEl = el('coverage-val');
+    cvEl.textContent = coverage+'x';
+    cvEl.style.color = parseFloat(coverage) >= 1 ? 'var(--gn)' : 'var(--rd)';
+  }
+
+  // ══════════════════════════════════════════════════════════════════════
+  // REDESIGN — blocos adicionais, somente apresentação. Não introduzem
+  // nenhuma regra de negócio nova: usam apenas valores já calculados acima
+  // (mrrTotal, metaMensal) ou somas simples de campos que já vêm prontos
+  // do data.json (d.closers[].funil, d.aging).
+  // ══════════════════════════════════════════════════════════════════════
+
+  // Gap para a meta do mês.
+  if(el('kpi-gap')){
+    const gapMeta = Math.max(0, Math.round((metaMensal - mrrTotal)*100)/100);
+    el('kpi-gap').textContent = fmtMoeda(gapMeta);
+  }
+
+  // Funil consolidado da equipe — soma dos funis já calculados por closer.
+  if(el('team-funnel-row') && d.closers){
+    const steps = [
+      {key:'sql', lbl:'SQL'},
+      {key:'sal', lbl:'SAL'},
+      {key:'won', lbl:'Ganho'}
+    ];
+    const totals = steps.map(s => d.closers.reduce((sum,c)=> sum + ((c.funil && c.funil[s.key]) || 0), 0));
+    const maxVal = Math.max.apply(null, totals) || 1;
+    let tfHtml = '';
+    steps.forEach((s,i) => {
+      const v = totals[i];
+      const w = Math.max(6, Math.round(v/maxVal*100));
+      tfHtml += '<div class="tf-step"><div class="tf-lbl">'+s.lbl+'</div><div class="tf-val">'+v+'</div><div class="tf-bar"><div class="tf-bar-fill" style="width:'+w+'%"></div></div></div>';
+      if(i < steps.length-1){
+        const prev = totals[i], next = totals[i+1];
+        const conv = prev>0 ? Math.round(next/prev*1000)/10 : 0;
+        tfHtml += '<div class="tf-arrow">&#8594;<br>'+conv+'%</div>';
+      }
+    });
+    el('team-funnel-row').innerHTML = tfHtml;
+  }
+
+  // Aging dos deals abertos — barra horizontal a partir dos mesmos valores
+  // de d.aging já usados no gráfico de rosca (chartAging).
+  if(el('aging-bars-wrap') && d.aging){
+    const agingKeys = ['0-7d','8-15d','16-30d','31-60d','+60d'];
+    const agingColors = ['#10B981','#F59E0B','#F97316','#EF4444','#991B1B'];
+    const agingVals = agingKeys.map(k => Number(d.aging[k]||0));
+    const agingTotal = agingVals.reduce((a,b)=>a+b,0) || 1;
+    const agTrack = agingVals.map((v,i)=>'<div class="aging-bar-seg" style="width:'+(v/agingTotal*100)+'%;background:'+agingColors[i]+'"></div>').join('');
+    const agLegend = agingKeys.map((k,i)=>'<span style="color:'+agingColors[i]+'">&#9679; '+k+' '+agingVals[i]+'%</span>').join('');
+    el('aging-bars-wrap').innerHTML = '<div style="font-size:9px;color:var(--ink3);text-transform:uppercase;font-weight:700;margin-bottom:3px">Aging Pipeline Aberto</div>'
+      + '<div class="aging-bar-track">'+agTrack+'</div>'
+      + '<div class="aging-legend">'+agLegend+'</div>';
+  }
+}
+
+// Inicialização — ampRender gerencia destrição de gráficos antigos antes de recriar
+ampRender();
+
+   // ══════════════════════════════════════════════════════════════════════════════
+// AMPLIMED PAINEL VIVO — AUTO REFRESH E METAS DINÂMICAS
+// Atualização automática a cada 30 minutos.
+// HubSpot → GitHub Actions → data.json → painel.
+// ══════════════════════════════════════════════════════════════════════════════
+
+const AMP_REFRESH_MS = 5 * 60 * 1000;
+
+const AMP_DYNAMIC_CHARTS = [
+  'chartRec',
+  'chartResultadoRec',
+  'chartAging',
+  'chartFunilTotal',
+  'chartFunilCloser',
+  'chartSdrFunil',
+  'chartSdrFunilDetalhe',
+  'chartConvSdr',
+  'chartSdrForecast'
+];
+
+function ampDestroyCharts() {
+  AMP_DYNAMIC_CHARTS.forEach(id => {
+    const canvas = document.getElementById(id);
+    if (!canvas) return;
+
+    const chart = Chart.getChart(canvas);
+
+    if (chart) {
+      chart.destroy();
+    }
+  });
+}
+
+async function ampLoadConfig() {
+  try {
+    const res = await fetch(
+      './config.json?v=' + Date.now(),
+      { cache: 'no-store' }
+    );
+
+    if (!res.ok) {
+      throw new Error('HTTP ' + res.status);
+    }
+
+    return await res.json();
+
+  } catch (e) {
+
+    console.warn(
+      '[Painel] Não foi possível carregar config.json.',
+      e
+    );
+
+    return null;
+  }
+}
+
+function ampMonthName(data) {
+
+  const ano =
+    Number(
+      data?.mes?.ano ||
+      new Date().getFullYear()
+    );
+
+  const mes =
+    Number(
+      data?.mes?.mes ||
+      new Date().getMonth() + 1
+    );
+
+  const dt =
+    new Date(
+      ano,
+      mes - 1,
+      1
+    );
+
+  const nome =
+    dt.toLocaleDateString(
+      'pt-BR',
+      {
+        month: 'long',
+        year: 'numeric'
+      }
+    );
+
+  return (
+    nome.charAt(0).toUpperCase() +
+    nome.slice(1)
+  );
+}
+
+function ampApplyDynamicMeta(data, config) {
+
+  // ─────────────────────────────────────────────────────────
+  // META MENSAL
+  // A meta vem do config.json de acordo com YYYY-MM.
+  // ─────────────────────────────────────────────────────────
+
+  const monthKey =
+    data?.mes?.chave ||
+    (
+      data?.mes?.ano &&
+      data?.mes?.mes
+        ? `${data.mes.ano}-${String(data.mes.mes).padStart(2, '0')}`
+        : null
+    );
+
+  const monthlyGoals =
+    config?.metasMensais?.[monthKey];
+
+  const metaCloser =
+    Number(
+      monthlyGoals?.closer ??
+      data?.metas?.closer ??
+      data?.kpis?.metaMensal ??
+      47000
+    );
+
+  const metaSdr =
+    Number(
+      monthlyGoals?.sdr ??
+      data?.metas?.sdr ??
+      0
+    );
+
+  // Injeta a meta no objeto usado pelo painel.
+  // Isso faz todo o cálculo existente usar a meta correta
+  // do mês sem precisar alterar o restante do código.
+  data.kpis =
+    data.kpis || {};
+
+  data.metas =
+    data.metas || {};
+
+  data.kpis.metaMensal =
+    metaCloser;
+
+  data.metas.closer =
+    metaCloser;
+
+  data.metas.sdr =
+    metaSdr;
+
+  // ─────────────────────────────────────────────────────────
+  // TÍTULO DO NAVEGADOR
+  // ─────────────────────────────────────────────────────────
+
+  document.title =
+    'Painel Gerencial Amplimed — ' +
+    ampMonthName(data);
+
+  // ─────────────────────────────────────────────────────────
+  // TÍTULO CENTRAL DO HEADER (redesign — apenas apresentação)
+  // ─────────────────────────────────────────────────────────
+
+  const headerMonthEl =
+    document.getElementById(
+      'header-month'
+    );
+
+  if (headerMonthEl) {
+    headerMonthEl.textContent =
+      'Performance Comercial — ' +
+      ampMonthName(data);
+  }
+
+  // ─────────────────────────────────────────────────────────
+  // LABEL DO MÊS
+  // ─────────────────────────────────────────────────────────
+
+  const mtdLabel =
+    document.getElementById(
+      'mtd-mes-label'
+    );
+
+  if (mtdLabel) {
+    mtdLabel.textContent =
+      ampMonthName(data);
+  }
+
+  // ─────────────────────────────────────────────────────────
+  // META MENSAL VISÍVEL
+  // ─────────────────────────────────────────────────────────
+
+  const projNote =
+    document.getElementById(
+      'kcard-proj-n'
+    );
+
+  if (
+    projNote &&
+    !projNote.innerHTML.includes(
+      'Meta mensal'
+    )
+  ) {
+    projNote.innerHTML =
+      'Meta mensal ' +
+      fmtMoeda(metaCloser);
+  }
+
+  // ─────────────────────────────────────────────────────────
+  // META DO PAINEL GERENCIAL
+  // ─────────────────────────────────────────────────────────
+
+  const metaMensalEl =
+    document.getElementById(
+      'kv-meta-mensal'
+    );
+
+  if (metaMensalEl) {
+    metaMensalEl.textContent =
+      fmtMoeda(metaCloser);
+  }
+
+  // ─────────────────────────────────────────────────────────
+  // METAS QUE SÃO FIXAS E NÃO MUDAM
+  // ─────────────────────────────────────────────────────────
+
+  const META_VENDAS = 131;
+  const META_TICKET = 300;
+  const META_WINRATE = 65;
+  const META_Q3 = 141000;
+
+  // Atualiza a linha de vendas.
+  const vendasRow =
+    document.getElementById(
+      'tbl-ating-vendas'
+    );
+
+  if (vendasRow) {
+
+    const cells =
+      vendasRow.querySelectorAll('td');
+
+    if (cells[3]) {
+      cells[3].textContent =
+        META_VENDAS;
+    }
+  }
+
+  // Atualiza a linha de ticket.
+  const ticketRow =
+    document.getElementById(
+      'tbl-ating-ticket'
+    );
+
+  if (ticketRow) {
+
+    const cells =
+      ticketRow.querySelectorAll('td');
+
+    if (cells[3]) {
+      cells[3].textContent =
+        'R$' +
+        META_TICKET.toLocaleString(
+          'pt-BR'
+        );
+    }
+  }
+
+  // Atualiza a linha de win rate.
+  const wrRow =
+    document.getElementById(
+      'tbl-ating-wr'
+    );
+
+  if (wrRow) {
+
+    const cells =
+      wrRow.querySelectorAll('td');
+
+    if (cells[3]) {
+      cells[3].textContent =
+        META_WINRATE + '%';
+    }
+  }
+
+  // Atualiza a meta Q3.
+  const q3Row =
+    document.getElementById(
+      'tbl-ating-q3'
+    );
+
+  if (q3Row) {
+
+    const cells =
+      q3Row.querySelectorAll('td');
+
+    if (cells[3]) {
+      cells[3].textContent =
+        fmtMoeda(META_Q3);
+    }
+  }
+
+  // ─────────────────────────────────────────────────────────
+  // INDICAÇÃO VISUAL DO ÚLTIMO UPDATE
+  // ─────────────────────────────────────────────────────────
+
+  const updateEl =
+    document.getElementById(
+      'ultima-atualizacao'
+    );
+
+  if (
+    updateEl &&
+    data.geradoEmBR
+  ) {
+
+    updateEl.innerHTML =
+      '&#128260; dados de ' +
+      data.geradoEmBR;
+  }
+}
+
+async function ampRender() {
+
+  try {
+
+    const [
+      data,
+      config
+    ] = await Promise.all([
+      loadPainelData(),
+      ampLoadConfig()
+    ]);
+
+    // Garante que a meta correta do mês
+    // esteja disponível para todo o painel.
+    ampApplyDynamicMeta(
+      data,
+      config
+    );
+
+    // Remove gráficos antigos antes
+    // de criar as novas instâncias.
+    ampDestroyCharts();
+
+    // Renderiza novamente todos os
+    // indicadores usando os dados atuais.
+    aplicarDadosNoPainel(data);
+
+    // Depois da renderização, reaplica
+    // as informações dinâmicas visuais.
+    ampApplyDynamicMeta(
+      data,
+      config
+    );
+
+    console.log(
+      '[Painel Amplimed] Dados atualizados:',
+      new Date().toLocaleString(
+        'pt-BR'
+      )
+    );
+
+    console.log(
+      '[Painel Amplimed] Mês:',
+      data?.mes?.chave
+    );
+
+    console.log(
+      '[Painel Amplimed] Meta Closer:',
+      data?.metas?.closer
+    );
+
+  } catch (e) {
+
+    console.error(
+      '[Painel Amplimed] Falha na atualização:',
+      e
+    );
+
+    const updateEl =
+      document.getElementById(
+        'ultima-atualizacao'
+      );
+
+    if (updateEl) {
+      updateEl.innerHTML =
+        '&#9888; erro ao atualizar dados';
+    }
+  }
+}
+
+// ─────────────────────────────────────────────────────────────
+// ATUALIZAÇÃO AUTOMÁTICA A CADA 30 MINUTOS
+// (a primeira sincronização já ocorre via ampRender() acima)
+// ─────────────────────────────────────────────────────────────
+
+setInterval(
+  ampRender,
+  AMP_REFRESH_MS
+);
+
+// Page Visibility API: recarrega imediatamente ao voltar para a aba
+// após ausência superior a AMP_REFRESH_MS (5 min).
+// Resolve o throttling de timers do Chrome em abas inativas.
+let _ampHiddenAt = null;
+document.addEventListener('visibilitychange', function () {
+  if (document.visibilityState === 'hidden') {
+    _ampHiddenAt = Date.now();
+  } else if (document.visibilityState === 'visible') {
+    const awayMs = _ampHiddenAt ? (Date.now() - _ampHiddenAt) : Infinity;
+    if (awayMs >= AMP_REFRESH_MS) {
+      console.log(
+        '[Painel Amplimed] Aba reativada após ' +
+        Math.round(awayMs / 60000) + ' min — atualizando dados.'
+      );
+      ampRender();
+    }
+    _ampHiddenAt = null;
+  }
+});
+
+console.log(
+  '[Painel Amplimed] Auto-refresh configurado: 5 min (intervalo) + visibilidade de aba.'
+);
+
+</script>
+</body>
+</html>
