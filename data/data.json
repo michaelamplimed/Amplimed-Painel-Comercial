@@ -1,6 +1,6 @@
 {
-  "geradoEm": "2026-09-29T20:00:32.544Z",
-  "geradoEmBR": "29/09/2026, 17:00:32",
+  "geradoEm": "2026-09-29T20:30:23.808Z",
+  "geradoEmBR": "29/09/2026, 17:30:23",
   "mes": {
     "ano": 2026,
     "mes": 9,
@@ -113,8 +113,8 @@
     ]
   },
   "aging": {
-    "0-7d": 27,
-    "8-15d": 16,
+    "0-7d": 26,
+    "8-15d": 17,
     "16-30d": 10,
     "31-60d": 6,
     "+60d": 2
@@ -281,15 +281,15 @@
       "nivel": "Cross-sell",
       "ganhos": 0,
       "perdidos": 0,
-      "crossSellGanhos": 4,
+      "crossSellGanhos": 7,
       "aquisicaoAmount": 0,
-      "crossSellAmount": 380.99,
-      "totalAmount": 380.99,
+      "crossSellAmount": 599.79,
+      "totalAmount": 599.79,
       "ticketMedio": 0,
       "winRate": 0,
       "metaMes": 6000,
       "metaProRata": 5800,
-      "pctMetaProRata": 6.6,
+      "pctMetaProRata": 10.3,
       "funil": {
         "sql": 0,
         "demo": 0,
