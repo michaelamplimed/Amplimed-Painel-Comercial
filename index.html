@@ -382,6 +382,7 @@ tr:hover td{background:var(--surface2)}
 ══════════════════════════════════════════════════ */
 .central-row{display:grid;grid-template-columns:minmax(0,1.6fr) minmax(0,1fr);gap:var(--sp-4);margin-bottom:var(--sp-4)}
 .forecast-mini-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:6px}
+.forecast-mini-grid.pulse-grid{grid-template-columns:repeat(4,minmax(0,1fr))}
 .forecast-mini-item{background:var(--surface2);border:1px solid var(--border);border-radius:var(--r-sm);padding:5px 8px}
 .forecast-mini-lbl{font-size:8.5px;color:var(--ink3);text-transform:uppercase;font-weight:700;letter-spacing:.3px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .forecast-mini-val{font-size:13px;font-weight:800;color:var(--ink);margin-top:1px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
@@ -397,6 +398,7 @@ tr:hover td{background:var(--surface2)}
 .tf-bar{height:5px;border-radius:3px;background:var(--border);overflow:hidden}
 .tf-bar-fill{height:100%;border-radius:3px;background:var(--acc);transition:width .6s}
 .tf-arrow{flex-shrink:0;display:flex;flex-direction:column;align-items:center;justify-content:center;font-size:9.5px;font-weight:700;color:var(--ink3);min-width:34px}
+.funil-summary{font-size:10px;color:var(--ink2);text-align:center;margin-top:6px}
 .aging-bar-track{display:flex;height:10px;border-radius:6px;overflow:hidden;background:var(--border)}
 .aging-bar-seg{height:100%}
 .aging-legend{display:flex;justify-content:space-between;font-size:8.5px;color:var(--ink3);margin-top:4px;flex-wrap:wrap;gap:2px}
@@ -726,9 +728,12 @@ body{display:flex;flex-direction:column;background:var(--bg);color:var(--ink)}
 
 #forecast-panel-body{justify-content:center}
 .forecast-mini-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:7px}
-.forecast-mini-item{min-width:0;min-height:0;padding:9px 6px;background:var(--surface2);border:1px solid var(--border);border-radius:8px;text-align:center}
-.forecast-mini-lbl{font-size:clamp(8px,.55vw,10px);color:var(--ink2)}
-.forecast-mini-val{font-size:clamp(15px,1.2vw,22px);color:var(--ink);font-weight:800;white-space:nowrap}
+.forecast-mini-grid.pulse-grid{grid-template-columns:repeat(4,minmax(0,1fr));gap:5px}
+.forecast-mini-item{min-width:0;min-height:0;padding:9px 6px;background:var(--surface2);border:1px solid var(--border);border-radius:8px;text-align:center;overflow:hidden}
+.forecast-mini-lbl{font-size:clamp(8px,.55vw,10px);color:var(--ink2);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.forecast-mini-val{font-size:clamp(15px,1.2vw,22px);color:var(--ink);font-weight:800;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.pulse-grid .forecast-mini-val{font-size:clamp(12px,.95vw,17px)}
+.pulse-grid .forecast-mini-item small{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;display:block}
 .forecast-mini-item small{font-size:8px;color:var(--ink2)}
 .forecast-mini-val.pulse-red{color:var(--rd)}
 .pulse-icon{font-size:16px;color:var(--bl);margin-bottom:4px}
@@ -756,7 +761,7 @@ body{display:flex;flex-direction:column;background:var(--bg);color:var(--ink)}
 .total-row{background:var(--surface2)!important}
 .total-row td{color:var(--ink)!important;font-weight:700;border-bottom:none!important}
 
-#closers-insight,#sdr-insight{flex:0 0 auto;min-height:0;overflow:hidden;margin-top:2px;padding-top:3px;border-top:1px solid var(--border)}
+#closers-insight{flex:0 0 auto;min-height:0;overflow:hidden;margin-top:2px;padding-top:3px;border-top:1px solid var(--border)}
 .sdr-insight-title{display:block;font-size:8px;color:var(--ink2);text-transform:uppercase;letter-spacing:.4px;font-weight:700;margin-bottom:2px}
 .sdr-insight-row{display:flex;align-items:center;gap:6px;width:100%;min-height:9px;margin-bottom:1px}
 .sdr-insight-name{flex:0 0 62px;width:62px;font-size:8px;color:var(--ink2);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
@@ -797,9 +802,6 @@ body{display:flex;flex-direction:column;background:var(--bg);color:var(--ink)}
 .pipeline-card .sec-body{justify-content:flex-start;gap:3px}
 .pipeline-total{font-size:clamp(22px,1.7vw,31px);line-height:1.1;margin:3px 0;color:var(--ink);font-weight:800;text-align:center}
 .pipeline-coverage{font-size:9px;padding-bottom:4px;color:var(--acc);text-align:center;font-weight:700;border-bottom:1px solid var(--border)}
-.pipeline-arr{display:flex;justify-content:space-between;align-items:center;padding:5px 0;border-bottom:1px solid var(--border)}
-.pipeline-arr small{font-size:8px;color:var(--ink2)}
-.pipeline-arr strong{font-size:clamp(10px,.7vw,12px);color:#805AD5}
 #aging-bars-wrap{margin-top:auto;padding-top:5px}
 .aging-bar-track{display:flex;height:10px;border-radius:7px;overflow:hidden;background:var(--border)}
 .aging-bar-seg{height:100%}
@@ -858,10 +860,10 @@ body{display:flex;flex-direction:column;background:var(--bg);color:var(--ink)}
   <!-- Scorecard Executivo — 6 KPIs -->
   <div class="kgrid-hero">
     <div class="kcard" style="border-top:3px solid #18C6A0"><div class="kcard-inner"><div style="flex:1;min-width:0"><div class="kcard-lbl">&#128181; Receita MTD</div><div class="kcard-val" id="kpi-receita" style="color:#0F7A5F">—</div><div class="kcard-note" id="kcard-receita-n">—</div></div><div style="flex-shrink:0" id="spark-receita-total"></div></div></div>
-    <div class="kcard" style="border-top:3px solid #1675D1"><div class="kcard-inner"><div style="flex:1;min-width:0"><div class="kcard-lbl">&#127919; Meta do M&ecirc;s</div><div class="kcard-val" id="kcard-prorata" style="color:#1675D1">—</div><div class="kcard-note">Objetivo comercial mensal</div></div></div></div>
-    <div class="kcard" style="border-top:3px solid #805AD5"><div class="kcard-inner"><div style="flex:1;min-width:0"><div class="kcard-lbl">&#128202; Atingimento da Meta Acum.</div><div class="kcard-val"><span id="kcard-prorata-pct" class="bdg bdg-g" style="font-size:16px;padding:2px 10px">—</span></div><div class="kcard-note">Realizado vs. meta pro-rata</div></div></div></div>
+    <div class="kcard" style="border-top:3px solid #1675D1"><div class="kcard-inner"><div style="flex:1;min-width:0"><div class="kcard-lbl">&#127919; Meta do M&ecirc;s</div><div class="kcard-val" id="kcard-prorata" style="color:#1675D1">—</div><div class="kcard-note" id="kcard-meta-nota">Objetivo comercial mensal</div></div></div></div>
+    <div class="kcard" style="border-top:3px solid #805AD5"><div class="kcard-inner"><div style="flex:1;min-width:0"><div class="kcard-lbl">&#128202; Atingimento da Meta Acum.</div><div class="kcard-val"><span id="kcard-prorata-pct" class="bdg bdg-g" style="font-size:16px;padding:2px 10px">—</span></div><div class="kcard-note" id="kcard-ating-nota">Realizado vs. meta pro-rata</div></div></div></div>
     <div class="kcard" style="border-top:3px solid #F59E0B"><div class="kcard-inner"><div style="flex:1;min-width:0"><div class="kcard-lbl">&#128200; Forecast do M&ecirc;s</div><div class="kcard-val" id="kcard-proj-v" style="color:#B7791F">—</div><div class="kcard-note" id="kcard-proj-n">—</div></div><div style="flex-shrink:0" id="spark-projecao"></div></div></div>
-    <div class="kcard" style="border-top:3px solid #E5485B"><div class="kcard-inner"><div style="flex:1;min-width:0"><div class="kcard-lbl">&#9888; Gap para Meta</div><div class="kcard-val" id="kpi-gap" style="color:#E5485B">—</div><div class="kcard-note">Falta para bater a meta do m&ecirc;s</div></div></div></div>
+    <div class="kcard" style="border-top:3px solid #E5485B"><div class="kcard-inner"><div style="flex:1;min-width:0"><div class="kcard-lbl">&#9888; Gap para Meta</div><div class="kcard-val" id="kpi-gap" style="color:#E5485B">—</div><div class="kcard-note" id="kcard-gap-nota">Falta para bater a meta do m&ecirc;s</div></div></div></div>
     <div class="kcard" style="border-top:3px solid #18C6A0"><div class="kcard-inner"><div style="flex:1;min-width:0"><div class="kcard-lbl">&#127942; Win Rate</div><div class="kcard-val" id="kcard-winrate-v" style="color:#0F7A5F">—</div><div class="kcard-note" id="kcard-winrate-n">—</div></div></div></div>
   </div>
 
@@ -885,6 +887,7 @@ body{display:flex;flex-direction:column;background:var(--bg);color:var(--ink)}
           <div class="forecast-mini-item"><div class="pulse-icon">▣</div><div class="forecast-mini-lbl">DIAS RESTANTES</div><div class="forecast-mini-val" id="kcard-dias-restantes">—</div><small>dias úteis</small></div>
           <div class="forecast-mini-item"><div class="pulse-icon">▥</div><div class="forecast-mini-lbl">NECESSÁRIO / DIA</div><div class="forecast-mini-val pulse-red" id="kcard-necessario">—</div><small>para atingir a meta</small></div>
           <div class="forecast-mini-item"><div class="pulse-icon">↗</div><div class="forecast-mini-lbl">PROJEÇÃO DO MÊS</div><div class="forecast-mini-val" id="kcard-pulse-projecao">—</div><small id="pulse-proj-note">forecast atual</small></div>
+          <div class="forecast-mini-item"><div class="pulse-icon">◆</div><div class="forecast-mini-lbl">RESULTADO DO DIA</div><div class="forecast-mini-val" id="kcard-resultado-dia">—</div><small id="resultado-dia-note">vendido hoje</small></div>
         </div>
       </div>
     </div>
@@ -909,7 +912,6 @@ body{display:flex;flex-direction:column;background:var(--bg);color:var(--ink)}
           <thead><tr><th>#</th><th>SDR</th><th>SQL</th><th>Receita influenciada</th><th>% da meta</th></tr></thead>
           <tbody id="tbl-sdr-mini"><tr style="background:#fff"><td>Ana</td><td>33</td><td>R$9.685,35</td></tr><tr style="background:#fff"><td>Amanda</td><td>49</td><td>R$5.049,69</td></tr><tr style="background:#fff"><td>Francisco</td><td>23</td><td>R$4.335,02</td></tr></tbody>
         </table></div>
-        <div class="sdr-insight" id="sdr-insight"></div>
       </div>
     </div>
   </div>
@@ -918,7 +920,7 @@ body{display:flex;flex-direction:column;background:var(--bg);color:var(--ink)}
   <div class="footer-row">
     <div class="sec-card funnel-card">
       <div class="sec-hdr"><span>▽ &nbsp; FUNIL DA EQUIPE</span><small>SQL → SAL → GANHO</small></div>
-      <div class="sec-body" id="funil-panel-body"><div id="team-funnel-row"></div></div>
+      <div class="sec-body" id="funil-panel-body"><div id="team-funnel-row"></div><div class="funil-summary" id="funil-summary">—</div></div>
     </div>
     <div class="sec-card composition-card">
       <div class="sec-hdr"><span>▣ &nbsp; COMPOSIÇÃO DA RECEITA</span></div>
@@ -941,8 +943,7 @@ body{display:flex;flex-direction:column;background:var(--bg);color:var(--ink)}
       <div class="sec-hdr"><span>▤ &nbsp; PIPELINE EM ABERTO</span></div>
       <div class="sec-body">
         <div class="pipeline-total" id="kpi-pipeline">—</div>
-        <div class="pipeline-coverage" id="coverage-val">—</div>
-        <div class="pipeline-arr"><small>ARR PROJETADO</small><strong id="arr-projetado">—</strong></div>
+        <div class="pipeline-coverage" id="pipeline-meta-ratio">—</div>
         <div id="aging-bars-wrap"></div>
       </div>
     </div>
@@ -1039,9 +1040,13 @@ async function loadPainelData(){
   }
 }
 
-function fmtMoeda(v){ return 'R$'+parseFloat(v).toLocaleString('pt-BR',{minimumFractionDigits:2}); }
+function fmtMoeda(v){ return 'R$'+parseFloat(v).toLocaleString('pt-BR',{minimumFractionDigits:2,maximumFractionDigits:2}); }
+// Versão sem centavos, usada apenas em espaços bem estreitos (ex.: Pulso Comercial
+// com 4 colunas), onde o valor exato aos centavos não é essencial para leitura rápida.
+function fmtMoedaCurta(v){ return 'R$'+Math.round(parseFloat(v)||0).toLocaleString('pt-BR'); }
 
 function aplicarDadosNoPainel(d){
+  let resultadoDia = 0; // preenchido no bloco de sparklines; usado mais abaixo no Pulso Comercial
   // KPIs do topo (apenas os que têm cálculo confirmado — ver README, Fase 2 traz o resto)
   const kpiReceita = document.getElementById('kpi-receita');
   const kpiPct = document.getElementById('kpi-pctmeta');
@@ -1205,6 +1210,7 @@ function aplicarDadosNoPainel(d){
     paintSpark('spark-projecao', realArr, '#E08E0B');
     const diarios = realArr.map(function(v,i){ return i===0 ? v : Math.max(0, v-realArr[i-1]); });
     paintSpark('spark-recdia', diarios, '#F59E0B');
+    resultadoDia = diarios[diarios.length-1] || 0;
   }
 
   if(el('mrr-acq'))   el('mrr-acq').textContent   = fmtMoeda(mrrAcq);
@@ -1352,25 +1358,6 @@ function aplicarDadosNoPainel(d){
     if(el('sdr-hdr-sub')){
       el('sdr-hdr-sub').textContent = sdrsAtivos.length+' SDRs ativos \u00b7 Meta '+fmtMoeda(d.metas ? d.metas.sdr : 0);
     }
-
-    // Ranking visual SDR — preenche o espaço remanescente do card com dado real
-    // (a tabela tem menos linhas que a de Closers; em vez de deixar em branco,
-    // mostra um ranking por % da meta pro-rata, já calculado acima).
-    const sdrInsight = el('sdr-insight');
-    if(sdrInsight){
-      const rankedSdr = sdrsAtivos.slice().sort((a,b)=>(b.pctMetaProRata||0)-(a.pctMetaProRata||0));
-      const linhasInsight = rankedSdr.map(s=>{
-        const p = s.pctMetaProRata||0;
-        const cor = p>=100?'#18C6A0':(p>=70?'#F59E0B':'#E5485B');
-        const w = Math.max(4, Math.min(100, p/1.5));
-        return '<div class="sdr-insight-row">'
-          +'<span class="sdr-insight-name">'+s.name+'</span>'
-          +'<div class="sdr-insight-track"><div class="sdr-insight-fill" style="width:'+w+'%;background:'+cor+'"></div></div>'
-          +'<span class="sdr-insight-pct" style="color:'+cor+'">'+p+'%</span>'
-          +'</div>';
-      }).join('');
-      sdrInsight.innerHTML = '<div class="sdr-insight-title">Ranking SDR &mdash; % da meta (pro-rata)</div>' + linhasInsight;
-    }
   }
 
   // ── Pace-bar principal (topo do sec-ceo) ─────────────────────────────────
@@ -1456,7 +1443,7 @@ function aplicarDadosNoPainel(d){
       +' <span class="delta '+cls2+'">'+arw2+' '+projVsMeta+'%</span>';
   }
 
-  if(el('kcard-pulse-projecao')) el('kcard-pulse-projecao').textContent = fmtMoeda(projecaoMes);
+  if(el('kcard-pulse-projecao')) el('kcard-pulse-projecao').textContent = fmtMoedaCurta(projecaoMes);
   if(el('pulse-proj-note')) el('pulse-proj-note').textContent = metaMensal>0 ? (Math.round(projecaoMes/metaMensal*1000)/10).toLocaleString('pt-BR')+'% da meta' : 'forecast atual';
   // ── Ritmo & Forecast card ────────────────────────────────────────────────
   const diasRest = totalWorkingDays - workingDaysSoFar;
@@ -1470,20 +1457,21 @@ function aplicarDadosNoPainel(d){
   if(el('kcard-proj-forecast')) el('kcard-proj-forecast').textContent = fmtMoeda(projecaoMes);
   if(el('kcard-necessario')){
     const nc = necessario <= metaDiaria ? 'var(--gn)' : 'var(--rd)';
-    el('kcard-necessario').innerHTML = '<strong style="color:'+nc+'">'+fmtMoeda(necessario)+'</strong>';
+    el('kcard-necessario').innerHTML = '<strong style="color:'+nc+'">'+fmtMoedaCurta(necessario)+'</strong>';
   }
   if(el('kcard-dias-restantes')) el('kcard-dias-restantes').textContent = diasRest+' dias úteis';
-
-  // ── Meta & Projeção Anual — ARR e Coverage dinâmicos ────────────────────
-  const metaAnual = d.kpis.metaAnual || 191000;
-  const arrProjetado = Math.round(projecaoMes * 12);
-  const coverage = metaAnual > 0 ? (arrProjetado / metaAnual).toFixed(1) : '0.0';
-  if(el('arr-projetado')) el('arr-projetado').textContent = 'R$'+arrProjetado.toLocaleString('pt-BR');
-  if(el('coverage-val')){
-    const cvEl = el('coverage-val');
-    cvEl.textContent = coverage+'x';
-    cvEl.style.color = parseFloat(coverage) >= 1 ? 'var(--gn)' : 'var(--rd)';
+  if(el('kcard-resultado-dia')){
+    const ndCor = resultadoDia >= metaDiaria ? 'var(--gn)' : 'var(--rd)';
+    el('kcard-resultado-dia').innerHTML = '<strong style="color:'+ndCor+'">'+fmtMoedaCurta(resultadoDia)+'</strong>';
   }
+  if(el('resultado-dia-note')) el('resultado-dia-note').textContent = 'meta dia: '+fmtMoeda(metaDiaria);
+
+  // ── Complementos textuais dos KPI cards — anexados à nota existente na
+  // mesma linha (sem criar uma linha nova) para não alterar a altura do
+  // card; texto excedente é truncado com reticências (ellipsis já definido
+  // em .kcard-note), nunca cortado de forma invisível.
+  if(el('kcard-meta-nota')) el('kcard-meta-nota').textContent = 'Objetivo comercial mensal · Diária '+fmtMoeda(metaDiaria);
+  if(el('kcard-ating-nota')) el('kcard-ating-nota').textContent = 'Realizado vs. meta pro-rata ('+fmtMoeda(proRataMeta)+')';
 
   // ══════════════════════════════════════════════════════════════════════
   // REDESIGN — blocos adicionais, somente apresentação. Não introduzem
@@ -1496,6 +1484,16 @@ function aplicarDadosNoPainel(d){
   if(el('kpi-gap')){
     const gapMeta = Math.max(0, Math.round((metaMensal - mrrTotal)*100)/100);
     el('kpi-gap').textContent = fmtMoeda(gapMeta);
+  }
+  if(el('kcard-gap-nota')) el('kcard-gap-nota').textContent = 'Falta para bater a meta · '+fmtMoeda(necessario)+'/dia necessário';
+
+  // Pipeline em aberto vs. meta mensal — leitura direta do quanto o pipeline
+  // atual representa frente à meta do mês corrente (substitui o antigo
+  // indicador de cobertura anual de ARR).
+  if(el('pipeline-meta-ratio')){
+    const pipeAberto = d.kpis.pipelineAberto || 0;
+    const ratioPipeMeta = metaMensal>0 ? Math.round(pipeAberto/metaMensal*1000)/10 : 0;
+    el('pipeline-meta-ratio').textContent = ratioPipeMeta.toLocaleString('pt-BR',{minimumFractionDigits:1,maximumFractionDigits:1})+'% da meta mensal em pipeline';
   }
 
   // Funil consolidado da equipe — soma dos funis já calculados por closer.
@@ -1519,6 +1517,10 @@ function aplicarDadosNoPainel(d){
       }
     });
     el('team-funnel-row').innerHTML = tfHtml;
+    if(el('funil-summary')){
+      const convGeral = totals[0]>0 ? Math.round(totals[2]/totals[0]*1000)/10 : 0;
+      el('funil-summary').textContent = 'Conversão geral SQL → Ganho: '+convGeral.toLocaleString('pt-BR',{minimumFractionDigits:1,maximumFractionDigits:1})+'%';
+    }
   }
 
   // Aging dos deals abertos — barra horizontal a partir dos mesmos valores
