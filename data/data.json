@@ -1,6 +1,6 @@
 {
-  "geradoEm": "2026-09-30T18:30:25.285Z",
-  "geradoEmBR": "30/09/2026, 15:30:25",
+  "geradoEm": "2026-09-30T19:00:30.582Z",
+  "geradoEmBR": "30/09/2026, 16:00:30",
   "mes": {
     "ano": 2026,
     "mes": 9,
@@ -119,7 +119,7 @@
     "0-7d": 28,
     "8-15d": 17,
     "16-30d": 11,
-    "31-60d": 5,
+    "31-60d": 6,
     "+60d": 3
   },
   "closers": [
@@ -138,13 +138,13 @@
       "metaProRata": 10800,
       "pctMetaProRata": 73.3,
       "funil": {
-        "sql": 38,
-        "demo": 38,
+        "sql": 39,
+        "demo": 39,
         "sal": 31,
         "proposta": 29,
         "won": 27,
         "sqlToDemoP": 100,
-        "demoToSalP": 81.6,
+        "demoToSalP": 79.5,
         "salToPropP": 93.5,
         "winRateP": 50
       }
@@ -317,7 +317,7 @@
     },
     {
       "name": "Amanda",
-      "sql": 129,
+      "sql": 130,
       "recInfluenciada": 16095.81,
       "metaMes": 14000,
       "metaProRata": 14000,
