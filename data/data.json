@@ -1,6 +1,6 @@
 {
-  "geradoEm": "2026-09-30T22:00:28.565Z",
-  "geradoEmBR": "30/09/2026, 19:00:28",
+  "geradoEm": "2026-09-30T22:30:23.046Z",
+  "geradoEmBR": "30/09/2026, 19:30:23",
   "mes": {
     "ano": 2026,
     "mes": 9,
@@ -11,11 +11,11 @@
     "sdr": 40000
   },
   "kpis": {
-    "receitaRealizada": 39030.57,
+    "receitaRealizada": 39264.57,
     "metaMensal": 48000,
-    "pctMeta": 81.3,
-    "pipelineAberto": 9693.6,
-    "mediaDiaria": 1301.02
+    "pctMeta": 81.8,
+    "pipelineAberto": 9459.6,
+    "mediaDiaria": 1308.82
   },
   "receitaAcumulada": {
     "labels": [
@@ -80,7 +80,7 @@
       30971.82,
       34064.73,
       34846.77,
-      39030.57
+      39264.57
     ],
     "meta": [
       1600,
@@ -119,34 +119,34 @@
     "0-7d": 27,
     "8-15d": 15,
     "16-30d": 12,
-    "31-60d": 5,
+    "31-60d": 4,
     "+60d": 3
   },
   "closers": [
     {
       "name": "Tamara",
       "nivel": "Sênior",
-      "ganhos": 27,
+      "ganhos": 28,
       "perdidos": 27,
       "crossSellGanhos": 2,
-      "aquisicaoAmount": 7810.01,
+      "aquisicaoAmount": 8044.01,
       "crossSellAmount": 104,
-      "totalAmount": 7914.01,
-      "ticketMedio": 293.11,
-      "winRate": 50,
+      "totalAmount": 8148.01,
+      "ticketMedio": 291,
+      "winRate": 50.9,
       "metaMes": 10800,
       "metaProRata": 10800,
-      "pctMetaProRata": 73.3,
+      "pctMetaProRata": 75.4,
       "funil": {
         "sql": 40,
         "demo": 39,
-        "sal": 31,
-        "proposta": 29,
-        "won": 27,
+        "sal": 32,
+        "proposta": 30,
+        "won": 28,
         "sqlToDemoP": 97.5,
-        "demoToSalP": 79.5,
-        "salToPropP": 93.5,
-        "winRateP": 50
+        "demoToSalP": 82.1,
+        "salToPropP": 93.8,
+        "winRateP": 50.9
       }
     },
     {
@@ -318,10 +318,10 @@
     {
       "name": "Amanda",
       "sql": 131,
-      "recInfluenciada": 16884.81,
+      "recInfluenciada": 17118.81,
       "metaMes": 14000,
       "metaProRata": 14000,
-      "pctMetaProRata": 120.6
+      "pctMetaProRata": 122.3
     },
     {
       "name": "Jeferson",
