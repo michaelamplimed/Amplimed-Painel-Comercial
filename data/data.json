@@ -1,6 +1,6 @@
 {
-  "geradoEm": "2026-09-30T16:00:31.595Z",
-  "geradoEmBR": "30/09/2026, 13:00:31",
+  "geradoEm": "2026-09-30T16:18:28.046Z",
+  "geradoEmBR": "30/09/2026, 13:18:28",
   "mes": {
     "ano": 2026,
     "mes": 9,
@@ -116,9 +116,9 @@
     ]
   },
   "aging": {
-    "0-7d": 24,
+    "0-7d": 27,
     "8-15d": 18,
-    "16-30d": 10,
+    "16-30d": 9,
     "31-60d": 5,
     "+60d": 3
   },
@@ -127,26 +127,26 @@
       "name": "Tamara",
       "nivel": "Sênior",
       "ganhos": 26,
-      "perdidos": 26,
+      "perdidos": 27,
       "crossSellGanhos": 2,
       "aquisicaoAmount": 7671.01,
       "crossSellAmount": 104,
       "totalAmount": 7775.01,
       "ticketMedio": 299.04,
-      "winRate": 50,
+      "winRate": 49.1,
       "metaMes": 10800,
       "metaProRata": 10800,
       "pctMetaProRata": 72,
       "funil": {
-        "sql": 39,
-        "demo": 39,
+        "sql": 38,
+        "demo": 38,
         "sal": 31,
         "proposta": 29,
         "won": 26,
         "sqlToDemoP": 100,
-        "demoToSalP": 79.5,
+        "demoToSalP": 81.6,
         "salToPropP": 93.5,
-        "winRateP": 50
+        "winRateP": 49.1
       }
     },
     {
@@ -309,7 +309,7 @@
   "sdrs": [
     {
       "name": "Ana",
-      "sql": 111,
+      "sql": 112,
       "recInfluenciada": 16843.14,
       "metaMes": 14000,
       "metaProRata": 14000,
@@ -317,7 +317,7 @@
     },
     {
       "name": "Amanda",
-      "sql": 126,
+      "sql": 128,
       "recInfluenciada": 15977.66,
       "metaMes": 14000,
       "metaProRata": 14000,
