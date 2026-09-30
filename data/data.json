@@ -1,6 +1,6 @@
 {
-  "geradoEm": "2026-09-30T17:00:30.234Z",
-  "geradoEmBR": "30/09/2026, 14:00:30",
+  "geradoEm": "2026-09-30T17:30:24.686Z",
+  "geradoEmBR": "30/09/2026, 14:30:24",
   "mes": {
     "ano": 2026,
     "mes": 9,
@@ -11,11 +11,11 @@
     "sdr": 40000
   },
   "kpis": {
-    "receitaRealizada": 35319.37,
+    "receitaRealizada": 35458.37,
     "metaMensal": 48000,
-    "pctMeta": 73.6,
-    "pipelineAberto": 12565.6,
-    "mediaDiaria": 1177.31
+    "pctMeta": 73.9,
+    "pipelineAberto": 12426.6,
+    "mediaDiaria": 1181.95
   },
   "receitaAcumulada": {
     "labels": [
@@ -80,7 +80,7 @@
       30971.82,
       34064.73,
       34846.77,
-      35319.37
+      35458.37
     ],
     "meta": [
       1600,
@@ -116,11 +116,11 @@
     ]
   },
   "aging": {
-    "0-7d": 27,
+    "0-7d": 29,
     "8-15d": 18,
     "16-30d": 10,
     "31-60d": 5,
-    "+60d": 4
+    "+60d": 3
   },
   "closers": [
     {
@@ -230,27 +230,27 @@
     {
       "name": "Mayara",
       "nivel": "Pleno",
-      "ganhos": 28,
+      "ganhos": 29,
       "perdidos": 25,
       "crossSellGanhos": 6,
-      "aquisicaoAmount": 8891.88,
+      "aquisicaoAmount": 9030.88,
       "crossSellAmount": 587.24,
-      "totalAmount": 9479.12,
-      "ticketMedio": 338.54,
-      "winRate": 52.8,
+      "totalAmount": 9618.12,
+      "ticketMedio": 331.66,
+      "winRate": 53.7,
       "metaMes": 8800,
       "metaProRata": 8800,
-      "pctMetaProRata": 107.7,
+      "pctMetaProRata": 109.3,
       "funil": {
         "sql": 38,
         "demo": 38,
         "sal": 37,
         "proposta": 31,
-        "won": 28,
+        "won": 29,
         "sqlToDemoP": 100,
         "demoToSalP": 97.4,
         "salToPropP": 83.8,
-        "winRateP": 58.3
+        "winRateP": 59.2
       }
     },
     {
@@ -310,14 +310,14 @@
     {
       "name": "Ana",
       "sql": 112,
-      "recInfluenciada": 16843.14,
+      "recInfluenciada": 16982.14,
       "metaMes": 14000,
       "metaProRata": 14000,
-      "pctMetaProRata": 120.3
+      "pctMetaProRata": 121.3
     },
     {
       "name": "Amanda",
-      "sql": 128,
+      "sql": 129,
       "recInfluenciada": 15977.66,
       "metaMes": 14000,
       "metaProRata": 14000,
@@ -325,7 +325,7 @@
     },
     {
       "name": "Jeferson",
-      "sql": 1,
+      "sql": 2,
       "recInfluenciada": 0,
       "metaMes": 12000,
       "metaProRata": 12000,
