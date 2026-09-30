@@ -1,6 +1,6 @@
 {
-  "geradoEm": "2026-09-30T21:00:27.591Z",
-  "geradoEmBR": "30/09/2026, 18:00:27",
+  "geradoEm": "2026-09-30T21:30:24.146Z",
+  "geradoEmBR": "30/09/2026, 18:30:24",
   "mes": {
     "ano": 2026,
     "mes": 9,
@@ -11,11 +11,11 @@
     "sdr": 40000
   },
   "kpis": {
-    "receitaRealizada": 38404.52,
+    "receitaRealizada": 38773.42,
     "metaMensal": 48000,
-    "pctMeta": 80,
+    "pctMeta": 80.8,
     "pipelineAberto": 9598.6,
-    "mediaDiaria": 1280.15
+    "mediaDiaria": 1292.45
   },
   "receitaAcumulada": {
     "labels": [
@@ -80,7 +80,7 @@
       30971.82,
       34064.73,
       34846.77,
-      38404.52
+      38773.42
     ],
     "meta": [
       1600,
@@ -117,7 +117,7 @@
   },
   "aging": {
     "0-7d": 27,
-    "8-15d": 16,
+    "8-15d": 15,
     "16-30d": 12,
     "31-60d": 6,
     "+60d": 3
@@ -178,27 +178,27 @@
     {
       "name": "Juliano",
       "nivel": "Pleno",
-      "ganhos": 27,
+      "ganhos": 28,
       "perdidos": 20,
       "crossSellGanhos": 7,
-      "aquisicaoAmount": 3627.2,
+      "aquisicaoAmount": 3996.1,
       "crossSellAmount": 548.94,
-      "totalAmount": 4176.14,
-      "ticketMedio": 154.67,
-      "winRate": 57.4,
+      "totalAmount": 4545.04,
+      "ticketMedio": 162.32,
+      "winRate": 58.3,
       "metaMes": 8800,
       "metaProRata": 8800,
-      "pctMetaProRata": 47.5,
+      "pctMetaProRata": 51.6,
       "funil": {
         "sql": 31,
         "demo": 31,
-        "sal": 29,
-        "proposta": 29,
-        "won": 27,
+        "sal": 30,
+        "proposta": 30,
+        "won": 28,
         "sqlToDemoP": 100,
-        "demoToSalP": 93.5,
+        "demoToSalP": 96.8,
         "salToPropP": 100,
-        "winRateP": 61.4
+        "winRateP": 62.2
       }
     },
     {
@@ -309,11 +309,11 @@
   "sdrs": [
     {
       "name": "Ana",
-      "sql": 115,
-      "recInfluenciada": 18882.14,
+      "sql": 117,
+      "recInfluenciada": 19529.04,
       "metaMes": 14000,
       "metaProRata": 14000,
-      "pctMetaProRata": 134.9
+      "pctMetaProRata": 139.5
     },
     {
       "name": "Amanda",
@@ -325,11 +325,11 @@
     },
     {
       "name": "Jeferson",
-      "sql": 2,
-      "recInfluenciada": 278,
+      "sql": 0,
+      "recInfluenciada": 0,
       "metaMes": 12000,
       "metaProRata": 12000,
-      "pctMetaProRata": 2.3
+      "pctMetaProRata": 0
     }
   ]
 }
