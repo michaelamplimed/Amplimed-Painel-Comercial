@@ -1,6 +1,6 @@
 {
-  "geradoEm": "2026-09-30T18:00:29.110Z",
-  "geradoEmBR": "30/09/2026, 15:00:29",
+  "geradoEm": "2026-09-30T18:30:25.285Z",
+  "geradoEmBR": "30/09/2026, 15:30:25",
   "mes": {
     "ano": 2026,
     "mes": 9,
@@ -11,11 +11,11 @@
     "sdr": 40000
   },
   "kpis": {
-    "receitaRealizada": 35715.52,
+    "receitaRealizada": 35854.52,
     "metaMensal": 48000,
-    "pctMeta": 74.4,
+    "pctMeta": 74.7,
     "pipelineAberto": 12148.6,
-    "mediaDiaria": 1190.52
+    "mediaDiaria": 1195.15
   },
   "receitaAcumulada": {
     "labels": [
@@ -80,7 +80,7 @@
       30971.82,
       34064.73,
       34846.77,
-      35715.52
+      35854.52
     ],
     "meta": [
       1600,
@@ -116,9 +116,9 @@
     ]
   },
   "aging": {
-    "0-7d": 29,
-    "8-15d": 18,
-    "16-30d": 10,
+    "0-7d": 28,
+    "8-15d": 17,
+    "16-30d": 11,
     "31-60d": 5,
     "+60d": 3
   },
@@ -152,27 +152,27 @@
     {
       "name": "Eduardo",
       "nivel": "Sênior",
-      "ganhos": 25,
+      "ganhos": 26,
       "perdidos": 43,
       "crossSellGanhos": 2,
-      "aquisicaoAmount": 5723.16,
+      "aquisicaoAmount": 5862.16,
       "crossSellAmount": 359.7,
-      "totalAmount": 6082.86,
-      "ticketMedio": 243.31,
-      "winRate": 36.8,
+      "totalAmount": 6221.86,
+      "ticketMedio": 239.3,
+      "winRate": 37.7,
       "metaMes": 10800,
       "metaProRata": 10800,
-      "pctMetaProRata": 56.3,
+      "pctMetaProRata": 57.6,
       "funil": {
-        "sql": 29,
-        "demo": 29,
-        "sal": 25,
-        "proposta": 25,
-        "won": 25,
+        "sql": 30,
+        "demo": 30,
+        "sal": 26,
+        "proposta": 26,
+        "won": 26,
         "sqlToDemoP": 100,
-        "demoToSalP": 86.2,
+        "demoToSalP": 86.7,
         "salToPropP": 100,
-        "winRateP": 40.3
+        "winRateP": 41.3
       }
     },
     {
@@ -326,10 +326,10 @@
     {
       "name": "Jeferson",
       "sql": 2,
-      "recInfluenciada": 139,
+      "recInfluenciada": 278,
       "metaMes": 12000,
       "metaProRata": 12000,
-      "pctMetaProRata": 1.2
+      "pctMetaProRata": 2.3
     }
   ]
 }
