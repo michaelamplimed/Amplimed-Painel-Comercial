@@ -1,6 +1,6 @@
 {
-  "geradoEm": "2026-10-01T21:00:28.798Z",
-  "geradoEmBR": "01/10/2026, 18:00:28",
+  "geradoEm": "2026-10-01T21:30:24.984Z",
+  "geradoEmBR": "01/10/2026, 18:30:24",
   "mes": {
     "ano": 2026,
     "mes": 10,
@@ -11,25 +11,25 @@
     "sdr": 43000
   },
   "kpis": {
-    "receitaRealizada": 1064.45,
+    "receitaRealizada": 1203.64,
     "metaMensal": 50000,
-    "pctMeta": 2.1,
+    "pctMeta": 2.4,
     "pipelineAberto": 9199.6,
-    "mediaDiaria": 1064.45
+    "mediaDiaria": 1203.64
   },
   "receitaAcumulada": {
     "labels": [
       "01/10"
     ],
     "realizado": [
-      1064.45
+      1203.64
     ],
     "meta": [
       1612.9
     ]
   },
   "aging": {
-    "0-7d": 26,
+    "0-7d": 25,
     "8-15d": 14,
     "16-30d": 10,
     "31-60d": 4,
@@ -91,27 +91,27 @@
     {
       "name": "Juliano",
       "nivel": "Pleno",
-      "ganhos": 0,
+      "ganhos": 1,
       "perdidos": 1,
       "crossSellGanhos": 0,
-      "aquisicaoAmount": 0,
+      "aquisicaoAmount": 139,
       "crossSellAmount": 0,
-      "totalAmount": 0,
-      "ticketMedio": 0,
-      "winRate": 0,
+      "totalAmount": 139,
+      "ticketMedio": 139,
+      "winRate": 50,
       "metaMes": 9200,
       "metaProRata": 296.77,
-      "pctMetaProRata": 0,
+      "pctMetaProRata": 46.8,
       "funil": {
-        "sql": 3,
-        "demo": 3,
-        "sal": 3,
-        "proposta": 3,
-        "won": 0,
+        "sql": 4,
+        "demo": 4,
+        "sal": 4,
+        "proposta": 4,
+        "won": 1,
         "sqlToDemoP": 100,
         "demoToSalP": 100,
         "salToPropP": 100,
-        "winRateP": null
+        "winRateP": 100
       }
     },
     {
@@ -197,15 +197,15 @@
       "nivel": "Cross-sell",
       "ganhos": 0,
       "perdidos": 0,
-      "crossSellGanhos": 1,
+      "crossSellGanhos": 2,
       "aquisicaoAmount": 0,
-      "crossSellAmount": 199,
-      "totalAmount": 199,
+      "crossSellAmount": 199.19,
+      "totalAmount": 199.19,
       "ticketMedio": 0,
       "winRate": 0,
       "metaMes": 6000,
       "metaProRata": 193.55,
-      "pctMetaProRata": 102.8,
+      "pctMetaProRata": 102.9,
       "funil": {
         "sql": 0,
         "demo": 0,
@@ -223,10 +223,10 @@
     {
       "name": "Ana",
       "sql": 0,
-      "recInfluenciada": 139,
+      "recInfluenciada": 278,
       "metaMes": 15000,
       "metaProRata": 483.87,
-      "pctMetaProRata": 28.7
+      "pctMetaProRata": 57.5
     },
     {
       "name": "Amanda",
