@@ -1,6 +1,6 @@
 {
-  "geradoEm": "2026-10-01T16:00:34.876Z",
-  "geradoEmBR": "01/10/2026, 13:00:34",
+  "geradoEm": "2026-10-01T16:30:25.421Z",
+  "geradoEmBR": "01/10/2026, 13:30:25",
   "mes": {
     "ano": 2026,
     "mes": 10,
@@ -11,26 +11,26 @@
     "sdr": 43000
   },
   "kpis": {
-    "receitaRealizada": 354.45,
+    "receitaRealizada": 493.45,
     "metaMensal": 50000,
-    "pctMeta": 0.7,
+    "pctMeta": 1,
     "pipelineAberto": 9708.6,
-    "mediaDiaria": 354.45
+    "mediaDiaria": 493.45
   },
   "receitaAcumulada": {
     "labels": [
       "01/10"
     ],
     "realizado": [
-      354.45
+      493.45
     ],
     "meta": [
       1612.9
     ]
   },
   "aging": {
-    "0-7d": 29,
-    "8-15d": 17,
+    "0-7d": 27,
+    "8-15d": 15,
     "16-30d": 11,
     "31-60d": 4,
     "+60d": 3
@@ -40,50 +40,50 @@
       "name": "Tamara",
       "nivel": "Sênior",
       "ganhos": 1,
-      "perdidos": 0,
+      "perdidos": 3,
       "crossSellGanhos": 0,
       "aquisicaoAmount": 236.3,
       "crossSellAmount": 0,
       "totalAmount": 236.3,
       "ticketMedio": 236.3,
-      "winRate": 100,
+      "winRate": 25,
       "metaMes": 11200,
       "metaProRata": 361.29,
       "pctMetaProRata": 65.4,
       "funil": {
-        "sql": 13,
-        "demo": 13,
+        "sql": 10,
+        "demo": 10,
         "sal": 5,
         "proposta": 3,
         "won": 1,
         "sqlToDemoP": 100,
-        "demoToSalP": 38.5,
+        "demoToSalP": 50,
         "salToPropP": 60,
-        "winRateP": 100
+        "winRateP": 25
       }
     },
     {
       "name": "Eduardo",
       "nivel": "Sênior",
-      "ganhos": 1,
+      "ganhos": 2,
       "perdidos": 0,
       "crossSellGanhos": 0,
-      "aquisicaoAmount": 118.15,
+      "aquisicaoAmount": 257.15,
       "crossSellAmount": 0,
-      "totalAmount": 118.15,
-      "ticketMedio": 118.15,
+      "totalAmount": 257.15,
+      "ticketMedio": 128.57,
       "winRate": 100,
       "metaMes": 11200,
       "metaProRata": 361.29,
-      "pctMetaProRata": 32.7,
+      "pctMetaProRata": 71.2,
       "funil": {
-        "sql": 3,
-        "demo": 3,
-        "sal": 1,
-        "proposta": 1,
-        "won": 1,
+        "sql": 4,
+        "demo": 4,
+        "sal": 2,
+        "proposta": 2,
+        "won": 2,
         "sqlToDemoP": 100,
-        "demoToSalP": 33.3,
+        "demoToSalP": 50,
         "salToPropP": 100,
         "winRateP": 100
       }
@@ -239,10 +239,10 @@
     {
       "name": "Jeferson",
       "sql": 0,
-      "recInfluenciada": 0,
+      "recInfluenciada": 139,
       "metaMes": 13000,
       "metaProRata": 419.35,
-      "pctMetaProRata": 0
+      "pctMetaProRata": 33.1
     }
   ]
 }
