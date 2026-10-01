@@ -1,6 +1,6 @@
 {
-  "geradoEm": "2026-10-01T13:30:28.064Z",
-  "geradoEmBR": "01/10/2026, 10:30:28",
+  "geradoEm": "2026-10-01T14:00:29.669Z",
+  "geradoEmBR": "01/10/2026, 11:00:29",
   "mes": {
     "ano": 2026,
     "mes": 10,
@@ -11,27 +11,27 @@
     "sdr": 43000
   },
   "kpis": {
-    "receitaRealizada": 236.3,
+    "receitaRealizada": 354.45,
     "metaMensal": 50000,
-    "pctMeta": 0.5,
+    "pctMeta": 0.7,
     "pipelineAberto": 9459.6,
-    "mediaDiaria": 236.3
+    "mediaDiaria": 354.45
   },
   "receitaAcumulada": {
     "labels": [
       "01/10"
     ],
     "realizado": [
-      236.3
+      354.45
     ],
     "meta": [
       1612.9
     ]
   },
   "aging": {
-    "0-7d": 28,
-    "8-15d": 15,
-    "16-30d": 12,
+    "0-7d": 27,
+    "8-15d": 16,
+    "16-30d": 11,
     "31-60d": 4,
     "+60d": 3
   },
@@ -65,27 +65,27 @@
     {
       "name": "Eduardo",
       "nivel": "Sênior",
-      "ganhos": 0,
+      "ganhos": 1,
       "perdidos": 0,
       "crossSellGanhos": 0,
-      "aquisicaoAmount": 0,
+      "aquisicaoAmount": 118.15,
       "crossSellAmount": 0,
-      "totalAmount": 0,
-      "ticketMedio": 0,
-      "winRate": 0,
+      "totalAmount": 118.15,
+      "ticketMedio": 118.15,
+      "winRate": 100,
       "metaMes": 11200,
       "metaProRata": 361.29,
-      "pctMetaProRata": 0,
+      "pctMetaProRata": 32.7,
       "funil": {
-        "sql": 2,
-        "demo": 2,
-        "sal": 0,
-        "proposta": 0,
-        "won": 0,
+        "sql": 3,
+        "demo": 3,
+        "sal": 1,
+        "proposta": 1,
+        "won": 1,
         "sqlToDemoP": 100,
-        "demoToSalP": 0,
-        "salToPropP": null,
-        "winRateP": null
+        "demoToSalP": 33.3,
+        "salToPropP": 100,
+        "winRateP": 100
       }
     },
     {
@@ -231,10 +231,10 @@
     {
       "name": "Amanda",
       "sql": 0,
-      "recInfluenciada": 236.3,
+      "recInfluenciada": 354.45,
       "metaMes": 15000,
       "metaProRata": 483.87,
-      "pctMetaProRata": 48.8
+      "pctMetaProRata": 73.3
     },
     {
       "name": "Jeferson",
