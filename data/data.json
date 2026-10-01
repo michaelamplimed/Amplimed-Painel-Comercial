@@ -1,6 +1,6 @@
 {
-  "geradoEm": "2026-10-01T14:00:29.669Z",
-  "geradoEmBR": "01/10/2026, 11:00:29",
+  "geradoEm": "2026-10-01T14:30:25.667Z",
+  "geradoEmBR": "01/10/2026, 11:30:25",
   "mes": {
     "ano": 2026,
     "mes": 10,
@@ -14,7 +14,7 @@
     "receitaRealizada": 354.45,
     "metaMensal": 50000,
     "pctMeta": 0.7,
-    "pipelineAberto": 9459.6,
+    "pipelineAberto": 9708.6,
     "mediaDiaria": 354.45
   },
   "receitaAcumulada": {
@@ -29,7 +29,7 @@
     ]
   },
   "aging": {
-    "0-7d": 27,
+    "0-7d": 28,
     "8-15d": 16,
     "16-30d": 11,
     "31-60d": 4,
@@ -106,11 +106,11 @@
         "sql": 3,
         "demo": 3,
         "sal": 3,
-        "proposta": 2,
+        "proposta": 3,
         "won": 0,
         "sqlToDemoP": 100,
         "demoToSalP": 100,
-        "salToPropP": 66.7,
+        "salToPropP": 100,
         "winRateP": null
       }
     },
