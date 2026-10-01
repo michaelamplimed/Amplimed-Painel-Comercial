@@ -1,6 +1,6 @@
 {
-  "geradoEm": "2026-10-01T19:00:43.239Z",
-  "geradoEmBR": "01/10/2026, 16:00:43",
+  "geradoEm": "2026-10-01T19:30:25.579Z",
+  "geradoEmBR": "01/10/2026, 16:30:25",
   "mes": {
     "ano": 2026,
     "mes": 10,
@@ -11,25 +11,25 @@
     "sdr": 43000
   },
   "kpis": {
-    "receitaRealizada": 865.45,
+    "receitaRealizada": 1064.45,
     "metaMensal": 50000,
-    "pctMeta": 1.7,
-    "pipelineAberto": 9120.6,
-    "mediaDiaria": 865.45
+    "pctMeta": 2.1,
+    "pipelineAberto": 9495.6,
+    "mediaDiaria": 1064.45
   },
   "receitaAcumulada": {
     "labels": [
       "01/10"
     ],
     "realizado": [
-      865.45
+      1064.45
     ],
     "meta": [
       1612.9
     ]
   },
   "aging": {
-    "0-7d": 28,
+    "0-7d": 26,
     "8-15d": 15,
     "16-30d": 10,
     "31-60d": 4,
@@ -40,13 +40,13 @@
       "name": "Tamara",
       "nivel": "Sênior",
       "ganhos": 1,
-      "perdidos": 4,
+      "perdidos": 5,
       "crossSellGanhos": 0,
       "aquisicaoAmount": 236.3,
       "crossSellAmount": 0,
       "totalAmount": 236.3,
       "ticketMedio": 236.3,
-      "winRate": 20,
+      "winRate": 16.7,
       "metaMes": 11200,
       "metaProRata": 361.29,
       "pctMetaProRata": 65.4,
@@ -59,7 +59,7 @@
         "sqlToDemoP": 100,
         "demoToSalP": 55.6,
         "salToPropP": 60,
-        "winRateP": 20
+        "winRateP": 16.7
       }
     },
     {
@@ -93,15 +93,15 @@
       "nivel": "Pleno",
       "ganhos": 0,
       "perdidos": 1,
-      "crossSellGanhos": 0,
+      "crossSellGanhos": 1,
       "aquisicaoAmount": 0,
-      "crossSellAmount": 0,
-      "totalAmount": 0,
+      "crossSellAmount": 199,
+      "totalAmount": 199,
       "ticketMedio": 0,
       "winRate": 0,
       "metaMes": 9200,
       "metaProRata": 296.77,
-      "pctMetaProRata": 0,
+      "pctMetaProRata": 67.1,
       "funil": {
         "sql": 3,
         "demo": 3,
@@ -118,13 +118,13 @@
       "name": "Ariel",
       "nivel": "Pleno",
       "ganhos": 1,
-      "perdidos": 0,
+      "perdidos": 1,
       "crossSellGanhos": 0,
       "aquisicaoAmount": 139,
       "crossSellAmount": 0,
       "totalAmount": 139,
       "ticketMedio": 139,
-      "winRate": 100,
+      "winRate": 50,
       "metaMes": 9200,
       "metaProRata": 296.77,
       "pctMetaProRata": 46.8,
@@ -157,12 +157,12 @@
       "funil": {
         "sql": 12,
         "demo": 12,
-        "sal": 8,
-        "proposta": 2,
+        "sal": 9,
+        "proposta": 3,
         "won": 1,
         "sqlToDemoP": 100,
-        "demoToSalP": 66.7,
-        "salToPropP": 25,
+        "demoToSalP": 75,
+        "salToPropP": 33.3,
         "winRateP": 100
       }
     },
