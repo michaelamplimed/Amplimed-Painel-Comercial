@@ -1,6 +1,6 @@
 {
-  "geradoEm": "2026-10-02T12:30:26.090Z",
-  "geradoEmBR": "02/10/2026, 09:30:26",
+  "geradoEm": "2026-10-02T13:00:31.214Z",
+  "geradoEmBR": "02/10/2026, 10:00:31",
   "mes": {
     "ano": 2026,
     "mes": 10,
@@ -14,7 +14,7 @@
     "receitaRealizada": 1926.54,
     "metaMensal": 50000,
     "pctMeta": 3.9,
-    "pipelineAberto": 8824.6,
+    "pipelineAberto": 8557.6,
     "mediaDiaria": 963.27
   },
   "receitaAcumulada": {
@@ -32,9 +32,9 @@
     ]
   },
   "aging": {
-    "0-7d": 23,
+    "0-7d": 24,
     "8-15d": 12,
-    "16-30d": 11,
+    "16-30d": 10,
     "31-60d": 5,
     "+60d": 3
   },
@@ -43,26 +43,26 @@
       "name": "Tamara",
       "nivel": "Sênior",
       "ganhos": 1,
-      "perdidos": 6,
+      "perdidos": 7,
       "crossSellGanhos": 0,
       "aquisicaoAmount": 236.3,
       "crossSellAmount": 0,
       "totalAmount": 236.3,
       "ticketMedio": 236.3,
-      "winRate": 14.3,
+      "winRate": 12.5,
       "metaMes": 11200,
       "metaProRata": 722.58,
       "pctMetaProRata": 32.7,
       "funil": {
-        "sql": 8,
-        "demo": 8,
-        "sal": 4,
+        "sql": 7,
+        "demo": 7,
+        "sal": 3,
         "proposta": 2,
         "won": 1,
         "sqlToDemoP": 100,
-        "demoToSalP": 50,
-        "salToPropP": 50,
-        "winRateP": 14.3
+        "demoToSalP": 42.9,
+        "salToPropP": 66.7,
+        "winRateP": 12.5
       }
     },
     {
@@ -158,13 +158,13 @@
       "metaProRata": 593.55,
       "pctMetaProRata": 117.4,
       "funil": {
-        "sql": 13,
-        "demo": 13,
+        "sql": 14,
+        "demo": 14,
         "sal": 10,
         "proposta": 4,
         "won": 3,
         "sqlToDemoP": 100,
-        "demoToSalP": 76.9,
+        "demoToSalP": 71.4,
         "salToPropP": 40,
         "winRateP": 100
       }
@@ -225,7 +225,7 @@
   "sdrs": [
     {
       "name": "Ana",
-      "sql": 0,
+      "sql": 1,
       "recInfluenciada": 653,
       "metaMes": 15000,
       "metaProRata": 967.74,
