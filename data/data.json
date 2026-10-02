@@ -1,6 +1,6 @@
 {
-  "geradoEm": "2026-10-02T19:00:31.010Z",
-  "geradoEmBR": "02/10/2026, 16:00:31",
+  "geradoEm": "2026-10-02T19:30:26.140Z",
+  "geradoEmBR": "02/10/2026, 16:30:26",
   "mes": {
     "ano": 2026,
     "mes": 10,
@@ -32,7 +32,7 @@
     ]
   },
   "aging": {
-    "0-7d": 26,
+    "0-7d": 27,
     "8-15d": 12,
     "16-30d": 10,
     "31-60d": 5,
@@ -80,13 +80,13 @@
       "metaProRata": 722.58,
       "pctMetaProRata": 35.6,
       "funil": {
-        "sql": 5,
-        "demo": 5,
+        "sql": 6,
+        "demo": 6,
         "sal": 2,
         "proposta": 2,
         "won": 2,
         "sqlToDemoP": 100,
-        "demoToSalP": 40,
+        "demoToSalP": 33.3,
         "salToPropP": 100,
         "winRateP": 100
       }
@@ -241,7 +241,7 @@
     },
     {
       "name": "Jeferson",
-      "sql": 3,
+      "sql": 4,
       "recInfluenciada": 228,
       "metaMes": 13000,
       "metaProRata": 838.71,
