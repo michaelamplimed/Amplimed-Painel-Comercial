@@ -1,6 +1,6 @@
 {
-  "geradoEm": "2026-10-02T21:00:26.604Z",
-  "geradoEmBR": "02/10/2026, 18:00:26",
+  "geradoEm": "2026-10-02T21:30:25.452Z",
+  "geradoEmBR": "02/10/2026, 18:30:25",
   "mes": {
     "ano": 2026,
     "mes": 10,
@@ -200,15 +200,15 @@
       "nivel": "Cross-sell",
       "ganhos": 0,
       "perdidos": 0,
-      "crossSellGanhos": 4,
+      "crossSellGanhos": 5,
       "aquisicaoAmount": 0,
-      "crossSellAmount": 578.19,
-      "totalAmount": 578.19,
+      "crossSellAmount": 698.09,
+      "totalAmount": 698.09,
       "ticketMedio": 0,
       "winRate": 0,
       "metaMes": 6000,
       "metaProRata": 387.1,
-      "pctMetaProRata": 149.4,
+      "pctMetaProRata": 180.3,
       "funil": {
         "sql": 0,
         "demo": 0,
