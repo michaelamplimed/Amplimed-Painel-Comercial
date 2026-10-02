@@ -1,6 +1,6 @@
 {
-  "geradoEm": "2026-10-02T12:00:29.097Z",
-  "geradoEmBR": "02/10/2026, 09:00:29",
+  "geradoEm": "2026-10-02T12:30:26.090Z",
+  "geradoEmBR": "02/10/2026, 09:30:26",
   "mes": {
     "ano": 2026,
     "mes": 10,
@@ -200,7 +200,7 @@
       "nivel": "Cross-sell",
       "ganhos": 0,
       "perdidos": 0,
-      "crossSellGanhos": 2,
+      "crossSellGanhos": 3,
       "aquisicaoAmount": 0,
       "crossSellAmount": 199.19,
       "totalAmount": 199.19,
