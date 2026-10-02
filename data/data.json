@@ -1,6 +1,6 @@
 {
-  "geradoEm": "2026-10-02T11:00:29.376Z",
-  "geradoEmBR": "02/10/2026, 08:00:29",
+  "geradoEm": "2026-10-02T11:30:27.190Z",
+  "geradoEmBR": "02/10/2026, 08:30:27",
   "mes": {
     "ano": 2026,
     "mes": 10,
@@ -11,11 +11,11 @@
     "sdr": 43000
   },
   "kpis": {
-    "receitaRealizada": 1203.64,
+    "receitaRealizada": 1578.64,
     "metaMensal": 50000,
-    "pctMeta": 2.4,
-    "pipelineAberto": 9199.6,
-    "mediaDiaria": 601.82
+    "pctMeta": 3.2,
+    "pipelineAberto": 8824.6,
+    "mediaDiaria": 789.32
   },
   "receitaAcumulada": {
     "labels": [
@@ -24,7 +24,7 @@
     ],
     "realizado": [
       1203.64,
-      1203.64
+      1578.64
     ],
     "meta": [
       1612.9,
@@ -33,8 +33,8 @@
   },
   "aging": {
     "0-7d": 25,
-    "8-15d": 13,
-    "16-30d": 10,
+    "8-15d": 12,
+    "16-30d": 11,
     "31-60d": 5,
     "+60d": 3
   },
@@ -146,25 +146,25 @@
     {
       "name": "Mayara",
       "nivel": "Pleno",
-      "ganhos": 1,
+      "ganhos": 2,
       "perdidos": 0,
       "crossSellGanhos": 0,
-      "aquisicaoAmount": 233,
+      "aquisicaoAmount": 608,
       "crossSellAmount": 0,
-      "totalAmount": 233,
-      "ticketMedio": 233,
+      "totalAmount": 608,
+      "ticketMedio": 304,
       "winRate": 100,
       "metaMes": 9200,
       "metaProRata": 593.55,
-      "pctMetaProRata": 39.3,
+      "pctMetaProRata": 102.4,
       "funil": {
-        "sql": 12,
-        "demo": 12,
+        "sql": 13,
+        "demo": 13,
         "sal": 9,
         "proposta": 3,
-        "won": 1,
+        "won": 2,
         "sqlToDemoP": 100,
-        "demoToSalP": 75,
+        "demoToSalP": 69.2,
         "salToPropP": 33.3,
         "winRateP": 100
       }
@@ -226,10 +226,10 @@
     {
       "name": "Ana",
       "sql": 0,
-      "recInfluenciada": 278,
+      "recInfluenciada": 653,
       "metaMes": 15000,
       "metaProRata": 967.74,
-      "pctMetaProRata": 28.7
+      "pctMetaProRata": 67.5
     },
     {
       "name": "Amanda",
@@ -241,7 +241,7 @@
     },
     {
       "name": "Jeferson",
-      "sql": 0,
+      "sql": 1,
       "recInfluenciada": 139,
       "metaMes": 13000,
       "metaProRata": 838.71,
