@@ -1,6 +1,6 @@
 {
-  "geradoEm": "2026-10-02T16:30:24.574Z",
-  "geradoEmBR": "02/10/2026, 13:30:24",
+  "geradoEm": "2026-10-02T17:00:31.396Z",
+  "geradoEmBR": "02/10/2026, 14:00:31",
   "mes": {
     "ano": 2026,
     "mes": 10,
@@ -11,11 +11,11 @@
     "sdr": 43000
   },
   "kpis": {
-    "receitaRealizada": 1926.73,
+    "receitaRealizada": 2065.73,
     "metaMensal": 50000,
-    "pctMeta": 3.9,
-    "pipelineAberto": 8557.6,
-    "mediaDiaria": 963.37
+    "pctMeta": 4.1,
+    "pipelineAberto": 8418.6,
+    "mediaDiaria": 1032.87
   },
   "receitaAcumulada": {
     "labels": [
@@ -24,7 +24,7 @@
     ],
     "realizado": [
       1203.83,
-      1926.73
+      2065.73
     ],
     "meta": [
       1612.9,
@@ -33,7 +33,7 @@
   },
   "aging": {
     "0-7d": 26,
-    "8-15d": 10,
+    "8-15d": 11,
     "16-30d": 10,
     "31-60d": 5,
     "+60d": 4
@@ -94,23 +94,23 @@
     {
       "name": "Juliano",
       "nivel": "Pleno",
-      "ganhos": 2,
+      "ganhos": 3,
       "perdidos": 1,
       "crossSellGanhos": 0,
-      "aquisicaoAmount": 397.9,
+      "aquisicaoAmount": 536.9,
       "crossSellAmount": 0,
-      "totalAmount": 397.9,
-      "ticketMedio": 198.95,
-      "winRate": 66.7,
+      "totalAmount": 536.9,
+      "ticketMedio": 178.97,
+      "winRate": 75,
       "metaMes": 9200,
       "metaProRata": 593.55,
-      "pctMetaProRata": 67,
+      "pctMetaProRata": 90.5,
       "funil": {
         "sql": 4,
         "demo": 4,
         "sal": 4,
         "proposta": 4,
-        "won": 2,
+        "won": 3,
         "sqlToDemoP": 100,
         "demoToSalP": 100,
         "salToPropP": 100,
@@ -225,15 +225,15 @@
   "sdrs": [
     {
       "name": "Ana",
-      "sql": 2,
-      "recInfluenciada": 653,
+      "sql": 3,
+      "recInfluenciada": 792,
       "metaMes": 15000,
       "metaProRata": 967.74,
-      "pctMetaProRata": 67.5
+      "pctMetaProRata": 81.8
     },
     {
       "name": "Amanda",
-      "sql": 0,
+      "sql": 1,
       "recInfluenciada": 846.54,
       "metaMes": 15000,
       "metaProRata": 967.74,
