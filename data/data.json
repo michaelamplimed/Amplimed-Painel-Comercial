@@ -1,6 +1,6 @@
 {
-  "geradoEm": "2026-10-02T20:30:25.041Z",
-  "geradoEmBR": "02/10/2026, 17:30:25",
+  "geradoEm": "2026-10-02T20:52:36.270Z",
+  "geradoEmBR": "02/10/2026, 17:52:36",
   "mes": {
     "ano": 2026,
     "mes": 10,
@@ -225,7 +225,7 @@
   "sdrs": [
     {
       "name": "Ana",
-      "sql": 3,
+      "sql": 4,
       "recInfluenciada": 792,
       "metaMes": 15000,
       "metaProRata": 967.74,
