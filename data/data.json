@@ -1,6 +1,6 @@
 {
-  "geradoEm": "2026-10-02T13:00:31.214Z",
-  "geradoEmBR": "02/10/2026, 10:00:31",
+  "geradoEm": "2026-10-02T13:30:25.329Z",
+  "geradoEmBR": "02/10/2026, 10:30:25",
   "mes": {
     "ano": 2026,
     "mes": 10,
@@ -11,11 +11,11 @@
     "sdr": 43000
   },
   "kpis": {
-    "receitaRealizada": 1926.54,
+    "receitaRealizada": 1926.73,
     "metaMensal": 50000,
     "pctMeta": 3.9,
     "pipelineAberto": 8557.6,
-    "mediaDiaria": 963.27
+    "mediaDiaria": 963.37
   },
   "receitaAcumulada": {
     "labels": [
@@ -23,8 +23,8 @@
       "02/10"
     ],
     "realizado": [
-      1203.64,
-      1926.54
+      1203.83,
+      1926.73
     ],
     "meta": [
       1612.9,
@@ -34,8 +34,8 @@
   "aging": {
     "0-7d": 24,
     "8-15d": 12,
-    "16-30d": 10,
-    "31-60d": 5,
+    "16-30d": 9,
+    "31-60d": 6,
     "+60d": 3
   },
   "closers": [
@@ -149,14 +149,14 @@
       "ganhos": 3,
       "perdidos": 0,
       "crossSellGanhos": 0,
-      "aquisicaoAmount": 697,
+      "aquisicaoAmount": 697.19,
       "crossSellAmount": 0,
-      "totalAmount": 697,
-      "ticketMedio": 232.33,
+      "totalAmount": 697.19,
+      "ticketMedio": 232.4,
       "winRate": 100,
       "metaMes": 9200,
       "metaProRata": 593.55,
-      "pctMetaProRata": 117.4,
+      "pctMetaProRata": 117.5,
       "funil": {
         "sql": 14,
         "demo": 14,
@@ -234,7 +234,7 @@
     {
       "name": "Amanda",
       "sql": 0,
-      "recInfluenciada": 846.35,
+      "recInfluenciada": 846.54,
       "metaMes": 15000,
       "metaProRata": 967.74,
       "pctMetaProRata": 87.5
