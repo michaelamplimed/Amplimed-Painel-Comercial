@@ -472,7 +472,10 @@ async function main() {
           {
             propertyName: 'data_de_entrada_em_sql',
             operator: 'GTE',
-            value: String(firstTimestamp)
+            // Propriedade do tipo DATA (guardada à meia-noite UTC): o limiar precisa ser
+            // 00:00 UTC do dia 1º. Com o início do mês em BRT (03:00 UTC) todos os SQLs
+            // do dia 1º ficavam de fora.
+            value: String(Date.UTC(year, month - 1, 1))
           }
         ]
       }],
@@ -482,6 +485,52 @@ async function main() {
         'data_de_entrada_em_sql'
       ]
     );
+
+  // ==========================================================
+  // 5a. NEGÓCIOS QUE ENTRARAM EM CADA ETAPA NO MÊS (funil por eventos)
+  // ==========================================================
+  // Usa as datas nativas "hs_v2_date_entered_<etapa>" do HubSpot (data/hora exata),
+  // então cada número do funil é reproduzível no HubSpot como
+  // "negócios que entraram na etapa X no mês".
+
+  const FLOW_STAGES = [
+    'appointmentscheduled',   // SQL
+    'qualifiedtobuy',         // Demo Realizada
+    'presentationscheduled',  // SAL
+    'decisionmakerboughtin',  // Proposta Enviada
+    'contractsent',           // Forecast
+    'closedwon',              // Negócio fechado
+    'closedlost'              // Negócio perdido
+  ];
+
+  const flowDeals =
+    await fetchAllDeals(
+      ['appointmentscheduled', 'qualifiedtobuy', 'presentationscheduled',
+       'decisionmakerboughtin', 'closedwon'].map(st => ({
+        filters: [
+          {
+            propertyName: 'pipeline',
+            operator: 'EQ',
+            value: config.pipelineId
+          },
+          {
+            propertyName: 'hs_v2_date_entered_' + st,
+            operator: 'GTE',
+            value: String(firstTimestamp)
+          }
+        ]
+      })),
+      [
+        'dealname',
+        'dealstage',
+        'closer_do_negocio',
+        'hubspot_owner_id',
+        'sdr_do_negocio',
+        ...FLOW_STAGES.map(st => 'hs_v2_date_entered_' + st)
+      ]
+    );
+
+  await sleep(500);
 
   // ==========================================================
   // 5b. MQLs DO MÊS (pipeline Prospecção Inbound), para o funil por SDR
@@ -786,125 +835,107 @@ async function main() {
     );
   }
 
-  const funilPorCloser = {};
+  // ----------------------------------------------------------
+  // FUNIL DO MÊS por eventos, atribuído ao "Closer do Negócio"
+  // (mesma dimensão da receita). Sem "closer do negócio" válido,
+  // cai no dono do negócio se for um closer; senão fica só no total do time.
+  // ----------------------------------------------------------
 
-  for (
-    const c of config.closers
-  ) {
+  const monthStartMs = Number(firstTimestamp);
 
-    const deals =
-      allDefaultDeals.filter(
-        d =>
-          Number(
-            d.properties
-              .hubspot_owner_id
-          ) ===
-          c.ownerId
-      );
+  const enteredInMonth = (d, st) => {
+    const v = d.properties['hs_v2_date_entered_' + st];
+    if (!v) return false;
+    const t = Date.parse(v);
+    return Number.isFinite(t) && t >= monthStartMs;
+  };
 
-    const sql =
-      deals.filter(
-        d =>
-          reachedStage(
-            d,
-            'appointmentscheduled'
-          )
-      ).length;
+  const hasEntered = (d, st) =>
+    !!d.properties['hs_v2_date_entered_' + st];
 
-    const demo =
-      deals.filter(
-        d =>
-          reachedStage(
-            d,
-            'qualifiedtobuy'
-          )
-      ).length;
+  const closerIdSet =
+    new Set((config.closers || []).map(c => Number(c.ownerId)));
 
-    const sal =
-      deals.filter(
-        d =>
-          reachedStage(
-            d,
-            'presentationscheduled'
-          )
-      ).length;
+  const closerDoDeal = d => {
+    const c = Number(d.properties.closer_do_negocio);
+    if (closerIdSet.has(c)) return c;
+    const o = Number(d.properties.hubspot_owner_id);
+    return closerIdSet.has(o) ? o : null;
+  };
 
-    const proposta =
-      deals.filter(
-        d =>
-          reachedStage(
-            d,
-            'decisionmakerboughtin'
-          )
-      ).length;
+  const pctDe = (a, b) =>
+    b > 0 ? Math.round((a / b) * 1000) / 10 : null;
 
-    const won =
-      deals.filter(
-        d =>
-          d.properties.dealstage ===
-          'closedwon'
-      ).length;
+  // Funil por COORTE: negócios que entraram em SQL no mês e até onde chegaram
+  // (etapa atual ou qualquer etapa posterior já registrada). Nunca passa de 100%.
+  const ORDEM_ETAPAS = [
+    'appointmentscheduled',   // 0 SQL
+    'qualifiedtobuy',         // 1 Demo Realizada
+    'presentationscheduled',  // 2 SAL
+    'decisionmakerboughtin',  // 3 Proposta Enviada
+    'contractsent',           // 4 Forecast
+    'closedwon'               // 5 Negócio fechado
+  ];
 
-    const lost =
-      deals.filter(
-        d =>
-          d.properties.dealstage ===
-          'closedlost'
-      ).length;
+  const chegouEm = (d, k) => {
+    const atual = ORDEM_ETAPAS.indexOf(d.properties.dealstage);
+    if (atual >= k) return true;
+    for (let i = k; i < ORDEM_ETAPAS.length; i++) {
+      if (hasEntered(d, ORDEM_ETAPAS[i])) return true;
+    }
+    return false;
+  };
 
-    funilPorCloser[c.name] = {
-      sql,
-      demo,
-      sal,
-      proposta,
-      won,
-
-      sqlToDemoP:
-        sql > 0
-          ? Math.round(
-              (
-                demo /
-                sql
-              ) * 1000
-            ) / 10
-          : null,
-
-      demoToSalP:
-        demo > 0
-          ? Math.round(
-              (
-                sal /
-                demo
-              ) * 1000
-            ) / 10
-          : null,
-
-      salToPropP:
-        sal > 0
-          ? Math.round(
-              (
-                proposta /
-                sal
-              ) * 1000
-            ) / 10
-          : null,
-
-      winRateP:
-        (
-          won + lost
-        ) > 0
-          ? Math.round(
-              (
-                won /
-                (
-                  won +
-                  lost
-                )
-              ) * 1000
-            ) / 10
-          : null
+  function buildFunil(deals) {
+    const coorte = deals.filter(d => enteredInMonth(d, 'appointmentscheduled'));
+    const sql = coorte.length;
+    const demo = coorte.filter(d => chegouEm(d, 1)).length;
+    const sal = coorte.filter(d => chegouEm(d, 2)).length;
+    const proposta = coorte.filter(d => chegouEm(d, 3)).length;
+    const won = coorte.filter(d => d.properties.dealstage === 'closedwon').length;
+    const lost = coorte.filter(d => d.properties.dealstage === 'closedlost').length;
+    return {
+      sql, demo, sal, proposta, won, lost,
+      sqlToDemoP: pctDe(demo, sql),
+      demoToSalP: pctDe(sal, demo),
+      salToPropP: pctDe(proposta, sal),
+      winRateP: pctDe(won, won + lost)
     };
   }
+
+  // Demos realizadas no mês e até onde seguiram (etapa atual de cada negócio).
+  function buildDemoFlow(deals) {
+    const coorte = deals.filter(d => enteredInMonth(d, 'qualifiedtobuy'));
+    const em = st => coorte.filter(d => d.properties.dealstage === st).length;
+    const demos = coorte.length;
+    const parouDemo = em('qualifiedtobuy');
+    const sal = em('presentationscheduled');
+    const proposta = em('decisionmakerboughtin') + em('contractsent');
+    const ganho = em('closedwon');
+    const perdido = em('closedlost');
+    const voltou = demos - parouDemo - sal - proposta - ganho - perdido;
+    const avancaram = coorte.filter(d => chegouEm(d, 2)).length;
+    return {
+      demos, parouDemo, sal, proposta, ganho, perdido,
+      voltou: Math.max(0, voltou),
+      avancaram,
+      avancouP: pctDe(avancaram, demos),
+      ganhoP: pctDe(ganho, demos)
+    };
+  }
+
+  const funilPorCloser = {};
+  const demoFlowPorCloser = {};
+
+  for (const c of config.closers) {
+    const deals =
+      flowDeals.filter(d => closerDoDeal(d) === Number(c.ownerId));
+    funilPorCloser[c.name] = buildFunil(deals);
+    demoFlowPorCloser[c.name] = buildDemoFlow(deals);
+  }
+
+  const funilTime = buildFunil(flowDeals);
+  const demoFlowTime = buildDemoFlow(flowDeals);
 
   // ==========================================================
   // ESTATÍSTICAS POR CLOSER
@@ -1083,7 +1114,12 @@ async function main() {
                 ) / 10
               : 0,
 
-          funil
+          funil,
+
+          demoFlow:
+            demoFlowPorCloser[
+              c.name
+            ] || null
         };
       }
     );
@@ -1310,6 +1346,10 @@ async function main() {
     },
 
     qualidade,
+
+    funilTime,
+
+    demoFlowTime,
 
     metas: {
       closer:
