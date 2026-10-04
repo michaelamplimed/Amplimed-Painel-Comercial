@@ -855,6 +855,16 @@ body{display:flex;flex-direction:column;background:var(--bg);color:var(--ink)}
 #closers-demo-panel .mql-grid{row-gap:2px}
 #closers-demo-panel .mql-row.mql-total .mql-name,#closers-demo-panel .mql-row.mql-total .mql-num,#closers-demo-panel .mql-row.mql-total .mql-pct{padding-top:1px}
 #closers-demo-panel .mql-row.mql-total .mql-bar{margin-top:1px}
+#closers-demo-panel .mql-grid.etp-grid{grid-template-columns:74px repeat(4,minmax(0,1fr)) 54px;column-gap:6px;row-gap:1px}
+.etp-h{display:flex;align-items:center;justify-content:center;gap:4px}
+.etp-dot{display:inline-block;width:8px;height:8px;border-radius:2px;flex:0 0 auto}
+.etp-dot.dmo,.etp-dot.sal,.etp-dot.prp,.etp-dot.fct{display:inline-block}
+.etp-dot.dmo{background:var(--am)}.etp-dot.sal{background:var(--bl)}.etp-dot.prp{background:var(--acc)}.etp-dot.fct{background:var(--gn-text)}
+.etp-n{text-align:center;font-size:clamp(11px,.82vw,16px);font-weight:800;color:var(--ink);line-height:1}
+.etp-n.z{color:var(--ink3);font-weight:600}
+.etp-tot{color:#12345A}
+.mql-row.mql-total .etp-n{border-top:1px solid var(--border);padding-top:1px}
+.etp-sem .mql-name{color:var(--ink2);font-style:italic}
 #closers-demo-panel .mql-grid{grid-template-columns:62px 46px minmax(0,1fr) 70px 82px}
 #closers-demo-panel .mql-bar{height:14px}
 #closers-demo-panel .mql-num{font-size:clamp(12px,.78vw,15px)}
@@ -1522,51 +1532,40 @@ function aplicarDadosNoPainel(d){
     const linhaTotal = '<tr class="total-row"><td colspan="2">Total / M&eacute;dia</td><td>'+fmtMoeda(somaTotalAmount)+'</td><td></td><td>'+pctGeral.toLocaleString('pt-BR',{minimumFractionDigits:1,maximumFractionDigits:1})+'%</td><td></td><td>'+taxaGeral+'%</td><td>'+somaVendas+'</td></tr>';
     tblMini.innerHTML = closersAtivos.length ? (linhas + linhaTotal) : '<tr><td colspan="4" style="text-align:center;color:var(--ink3);padding:22px 10px">Sem dados de closers no momento</td></tr>';
 
-    // ── Conversão de demos por closer: demos realizadas no mês e até onde seguiram ──
-    // Fonte: d.closers[].demoFlow / d.demoFlowTime (fetch-hubspot-data.js). Demo realizada =
-    // negócio que entrou na etapa "Demo Realizada" no mês; a barra mostra a etapa ATUAL de
-    // cada um desses negócios. "Avançaram" = chegaram a SAL ou além; "Demo→Ganho" = ganhos ÷ demos.
+    // ── Negócios ABERTOS por etapa, por closer (foto de hoje) ──
+    // Fonte: d.etapasAbertas (fetch-hubspot-data.js) = negócios abertos do funil de vendas nas etapas
+    // Demo Realizada, SAL, Proposta Enviada e Forecast, atribuídos por "Closer do Negócio".
+    // Ganho/Perdido ficam de fora de propósito (já aparecem no MTD acima).
     const demoPanel = el('closers-demo-panel');
     if(demoPanel){
-      const lista = closersAtivos.filter(c => c.demoFlow && !(c.demoFlow.demos===0 && c.nivel==='Cross-sell'));
-      const tf = d.demoFlowTime;
-      if(!lista.length || !tf){
+      const ea = d.etapasAbertas;
+      if(!ea || !ea.porCloser || !ea.time){
         demoPanel.style.display = 'none';
         demoPanel.innerHTML = '';
       } else {
-        const fmtPct = v => Number(v||0).toLocaleString('pt-BR',{minimumFractionDigits:1,maximumFractionDigits:1})+'%';
-        const ETAPAS = [
-          ['parouDemo','dmo','Demo realizada'],
-          ['sal','sal','SAL'],
-          ['proposta','prp','Proposta / Forecast'],
-          ['ganho','ngn','Ganho'],
-          ['perdido','prd','Perdido']
-        ];
-        if((tf.voltou||0) > 0) ETAPAS.push(['voltou','vlt','Voltou p/ SQL']);
-        const barra = f => '<div class="mql-bar">'+ETAPAS.map(e=>{
-          const n = (f && f[e[0]]) || 0;
-          return n>0 ? '<span class="mql-seg '+e[1]+'" style="flex-grow:'+n+'" title="'+e[2]+': '+n+'">'+n+'</span>' : '';
-        }).join('')+'</div>';
+        const metaDe = {};
+        (d.closers||[]).forEach(c=>{ metaDe[c.name] = c; });
+        const COLS = [['demo','dmo','Demo realizada'],['sal','sal','SAL'],['proposta','prp','Proposta enviada'],['forecast','fct','Forecast']];
+        const lista = ea.porCloser.filter(x => x.total>0 || ((metaDe[x.name]||{}).metaMes>0 && x.nivel!=='Cross-sell'));
+        lista.sort((a,b)=> b.total-a.total || a.name.localeCompare(b.name));
+        const cel = n => '<span class="etp-n'+(n>0?'':' z')+'">'+n+'</span>';
         const linha = (nome, f, extra) => '<div class="mql-row'+(extra||'')+'">'
           +'<span class="mql-name">'+nome+'</span>'
-          +'<span class="mql-num">'+(f.demos||0)+'</span>'
-          + barra(f)
-          +'<span class="mql-pct">'+(f.demos>0 ? fmtPct(f.avancouP) : '—')+'</span>'
-          +'<span class="mql-pct">'+(f.demos>0 ? fmtPct(f.ganhoP) : '—')+'</span>'
+          + COLS.map(c=>cel(f[c[0]]||0)).join('')
+          +'<span class="etp-n etp-tot'+((f.total||0)>0?'':' z')+'">'+(f.total||0)+'</span>'
           +'</div>';
-        const ordenados = lista.slice().sort((a,b)=>(b.demoFlow.demos||0)-(a.demoFlow.demos||0) || (b.demoFlow.ganho||0)-(a.demoFlow.ganho||0));
-        const linhas = ordenados.map(c=>linha(c.name, c.demoFlow, '')).join('');
-        const linhaTot = linha('Time', tf, ' mql-total');
-        const filas = ordenados.map(c=>({nome:c.name, n:c.demoFlow.parouDemo||0})).sort((a,b)=>b.n-a.n);
-        const alerta = ''; // aviso "demos paradas" removido do painel a pedido da gestão
+        const linhas = lista.map(x=>linha(x.name, x, '')).join('');
+        const semC = ea.semCloser && ea.semCloser.total>0
+          ? linha('Sem closer', ea.semCloser, ' etp-sem') : '';
+        const nLin = lista.length + 1 + (semC?1:0);
         demoPanel.innerHTML =
-          '<div class="mql-title"><span>Conversão de demos do mês — onde estão hoje</span><div class="mql-legend">'+ETAPAS.map(e=>'<span><i class="'+e[1]+'"></i>'+e[2]+'</span>').join('')+'</div></div>'
-          +'<div class="mql-grid" style="grid-template-rows:13px repeat('+(ordenados.length+1)+',minmax(15px,34px))">'
-            +'<span class="mql-h">Closer</span><span class="mql-h c">Demos</span><span class="mql-h">Etapa atual das demos</span>'
-            +'<span class="mql-h c" title="Demos que chegaram a SAL ou além">Avançaram</span><span class="mql-h c" title="Ganhos ÷ demos realizadas no mês">Demo→Ganho</span>'
-            + linhas + linhaTot
-          +'</div>'
-          + alerta;
+          '<div class="mql-title"><span>Negócios abertos por etapa — onde estão hoje</span><small>foto atual do funil de vendas, por closer</small></div>'
+          +'<div class="mql-grid etp-grid" style="grid-template-rows:14px repeat('+nLin+',minmax(13px,34px))">'
+            +'<span class="mql-h">Closer</span>'
+            + COLS.map(c=>'<span class="mql-h c etp-h"><i class="etp-dot '+c[1]+'"></i>'+c[2]+'</span>').join('')
+            +'<span class="mql-h c etp-h">Total</span>'
+            + linhas + semC + linha('Time', ea.time, ' mql-total')
+          +'</div>';
         demoPanel.style.display = '';
       }
     }
