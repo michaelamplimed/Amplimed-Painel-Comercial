@@ -852,28 +852,20 @@ body{display:flex;flex-direction:column;background:var(--bg);color:var(--ink)}
 #pace-bar-main{display:none!important}
 /* Conversão de demos por closer (mesma linguagem do funil de prospecção dos SDRs) */
 #closers-demo-panel{margin-top:4px;padding-top:4px;gap:3px}
-#closers-demo-panel .mql-grid{row-gap:2px}
+#closers-demo-panel .mql-grid{row-gap:1px}
 #closers-demo-panel .mql-row.mql-total .mql-name,#closers-demo-panel .mql-row.mql-total .mql-num,#closers-demo-panel .mql-row.mql-total .mql-pct{padding-top:1px}
 #closers-demo-panel .mql-row.mql-total .mql-bar{margin-top:1px}
-#closers-demo-panel .mql-grid.etp-grid{grid-template-columns:74px repeat(4,minmax(0,1fr)) 54px;column-gap:6px;row-gap:1px}
-.etp-h{display:flex;align-items:center;justify-content:center;gap:4px}
-.etp-dot{display:inline-block;width:8px;height:8px;border-radius:2px;flex:0 0 auto}
-.etp-dot.dmo,.etp-dot.sal,.etp-dot.prp,.etp-dot.fct{display:inline-block}
-.etp-dot.dmo{background:var(--am)}.etp-dot.sal{background:var(--bl)}.etp-dot.prp{background:var(--acc)}.etp-dot.fct{background:var(--gn-text)}
-.etp-n{text-align:center;font-size:clamp(11px,.82vw,16px);font-weight:800;color:var(--ink);line-height:1}
-.etp-n.z{color:var(--ink3);font-weight:600}
-.etp-tot{color:#12345A}
-.mql-row.mql-total .etp-n{border-top:1px solid var(--border);padding-top:1px}
+#closers-demo-panel .mql-grid{grid-template-columns:70px 46px minmax(0,1fr)}
+#closers-demo-panel .mql-bar{height:13px}
 .etp-sem .mql-name{color:var(--ink2);font-style:italic}
-#closers-demo-panel .mql-grid{grid-template-columns:62px 46px minmax(0,1fr) 70px 82px}
-#closers-demo-panel .mql-bar{height:14px}
-#closers-demo-panel .mql-num{font-size:clamp(12px,.78vw,15px)}
+#closers-demo-panel .mql-num{font-size:clamp(11px,.72vw,14px)}
 #closers-demo-panel .mql-name,#closers-demo-panel .mql-pct{line-height:1.1}
 .mql-seg.dmo,.mql-legend i.dmo{background:var(--am)}
 .mql-seg.sal,.mql-legend i.sal{background:var(--bl)}
 .mql-seg.prp,.mql-legend i.prp{background:var(--acc)}
 .mql-seg.ngn,.mql-legend i.ngn{background:var(--gn-text)}
 .mql-seg.vlt,.mql-legend i.vlt{background:var(--ink3)}
+.mql-seg.fct,.mql-legend i.fct{background:var(--gn-text)}
 .mql-seg.prd,.mql-legend i.prd{background:var(--rd)}
 .mql-alert{font-size:clamp(9px,.62vw,11px);color:var(--ink2);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .mql-alert strong{color:var(--rd-text)}
@@ -1545,25 +1537,26 @@ function aplicarDadosNoPainel(d){
       } else {
         const metaDe = {};
         (d.closers||[]).forEach(c=>{ metaDe[c.name] = c; });
-        const COLS = [['demo','dmo','Demo realizada'],['sal','sal','SAL'],['proposta','prp','Proposta enviada'],['forecast','fct','Forecast']];
+        const ETAPAS = [['demo','dmo','Demo realizada'],['sal','sal','SAL'],['proposta','prp','Proposta enviada'],['forecast','fct','Forecast']];
         const lista = ea.porCloser.filter(x => x.total>0 || ((metaDe[x.name]||{}).metaMes>0 && x.nivel!=='Cross-sell'));
         lista.sort((a,b)=> b.total-a.total || a.name.localeCompare(b.name));
-        const cel = n => '<span class="etp-n'+(n>0?'':' z')+'">'+n+'</span>';
+        const barra = f => '<div class="mql-bar">'+ETAPAS.map(e=>{
+          const n = (f && f[e[0]]) || 0;
+          return n>0 ? '<span class="mql-seg '+e[1]+'" style="flex-grow:'+n+'" title="'+e[2]+': '+n+'">'+n+'</span>' : '';
+        }).join('')+'</div>';
         const linha = (nome, f, extra) => '<div class="mql-row'+(extra||'')+'">'
           +'<span class="mql-name">'+nome+'</span>'
-          + COLS.map(c=>cel(f[c[0]]||0)).join('')
-          +'<span class="etp-n etp-tot'+((f.total||0)>0?'':' z')+'">'+(f.total||0)+'</span>'
+          +'<span class="mql-num">'+(f.total||0)+'</span>'
+          + barra(f)
           +'</div>';
         const linhas = lista.map(x=>linha(x.name, x, '')).join('');
-        const semC = ea.semCloser && ea.semCloser.total>0
-          ? linha('Sem closer', ea.semCloser, ' etp-sem') : '';
+        const semC = ea.semCloser && ea.semCloser.total>0 ? linha('Sem closer', ea.semCloser, ' etp-sem') : '';
         const nLin = lista.length + 1 + (semC?1:0);
         demoPanel.innerHTML =
           '<div class="mql-title"><span>Negócios abertos por etapa — onde estão hoje</span><small>foto atual do funil de vendas, por closer</small></div>'
-          +'<div class="mql-grid etp-grid" style="grid-template-rows:14px repeat('+nLin+',minmax(13px,34px))">'
-            +'<span class="mql-h">Closer</span>'
-            + COLS.map(c=>'<span class="mql-h c etp-h"><i class="etp-dot '+c[1]+'"></i>'+c[2]+'</span>').join('')
-            +'<span class="mql-h c etp-h">Total</span>'
+          +'<div class="mql-legend">'+ETAPAS.map(e=>'<span><i class="'+e[1]+'"></i>'+e[2]+'</span>').join('')+'</div>'
+          +'<div class="mql-grid" style="grid-template-rows:13px repeat('+nLin+',minmax(13px,34px))">'
+            +'<span class="mql-h">Closer</span><span class="mql-h c" title="Negócios abertos em Demo realizada, SAL, Proposta enviada e Forecast">Qtd</span><span class="mql-h">Etapa atual dos negócios</span>'
             + linhas + semC + linha('Time', ea.time, ' mql-total')
           +'</div>';
         demoPanel.style.display = '';
