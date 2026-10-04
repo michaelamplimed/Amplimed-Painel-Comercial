@@ -134,10 +134,19 @@ async function hubspotSearch(objectType, body, retries = 3) {
   }
 }
 
+// Negócios de teste (ex.: "Bianca - Teste", "teste mkt") são registros internos de
+// validação do CRM e não podem entrar em nenhum número do painel. Qualquer deal
+// com a palavra "teste" ou "test" no nome é descartado e listado em qualidade.testesExcluidos.
+const TESTES_EXCLUIDOS = new Map();
+const REGEX_TESTE = /(?<![\p{L}\p{N}])(teste|test)(?![\p{L}\p{N}])/iu;
+
 /**
  * Busca todos os deals respeitando a paginação.
  */
 async function fetchAllDeals(filterGroups, properties) {
+  properties = properties.includes('dealname')
+    ? properties
+    : properties.concat('dealname');
   let results = [];
   let after = undefined;
   let pageNum = 0;
@@ -176,7 +185,14 @@ async function fetchAllDeals(filterGroups, properties) {
 
   } while (after);
 
-  return results;
+  return results.filter(d => {
+    const nome = String((d.properties && d.properties.dealname) || '');
+    if (REGEX_TESTE.test(nome)) {
+      TESTES_EXCLUIDOS.set(String(d.id), nome.trim().slice(0, 40));
+      return false;
+    }
+    return true;
+  });
 }
 
 /**
@@ -777,6 +793,19 @@ async function main() {
     classificaIdade(Math.floor((nowReal - naEtapa) / DIA_MS), agingBuckets);
   }
 
+  // Valor em risco: negócios abertos há mais de 30 dias na mesma etapa.
+  const agingRisco = { qtd: 0, valor: 0, qtdComValor: 0 };
+  for (const d of openDeals) {
+    const naEtapaStr = d.properties.hs_v2_date_entered_current_stage;
+    const naEtapa = naEtapaStr ? new Date(naEtapaStr) : new Date(d.properties.createdate);
+    if (Math.floor((nowReal - naEtapa) / DIA_MS) > 30) {
+      const v = parseFloat(d.properties.amount || '0') || 0;
+      agingRisco.qtd++;
+      if (v > 0) { agingRisco.qtdComValor++; agingRisco.valor += v; }
+    }
+  }
+  agingRisco.valor = Math.round(agingRisco.valor * 100) / 100;
+
   const pipelineAbertoComValor = openDeals.filter(
     d => (parseFloat(d.properties.amount || '0') || 0) > 0
   ).length;
@@ -1303,7 +1332,10 @@ async function main() {
     // Ganhos de aquisição sem SDR do negócio (não entram na receita influenciada de nenhum SDR)
     ganhosSemSdr: wonDeals
       .filter(d => !d.properties.sdr_do_negocio)
-      .map(d => ({ id: String(d.id), nome: nomeDeal(d), valor: valorDeal(d) }))
+      .map(d => ({ id: String(d.id), nome: nomeDeal(d), valor: valorDeal(d) })),
+
+    // Negócios de teste descartados de todos os cálculos
+    testesExcluidos: [...TESTES_EXCLUIDOS.entries()].map(([id, nome]) => ({ id, nome }))
   };
 
   // ==========================================================
@@ -1384,6 +1416,8 @@ async function main() {
       agingBuckets,
 
     agingCriacao,
+
+    agingRisco,
 
     closers:
       closerStats,
