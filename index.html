@@ -646,21 +646,22 @@ html,body{width:100%;height:100%;height:100dvh;min-height:0;margin:0;overflow:hi
 body{display:flex;flex-direction:column;background:var(--bg);color:var(--ink)}
 
 .topbar{
-  box-sizing:border-box;flex:0 0 42px;height:42px;min-height:42px;
-  padding:0 18px;gap:14px;background:var(--surface);color:var(--ink);
+  box-sizing:border-box;flex:0 0 34px;height:34px;min-height:34px;
+  padding:0 16px;gap:12px;background:var(--surface);color:var(--ink);
   border-bottom:1px solid var(--border);box-shadow:0 2px 8px rgba(18,52,90,.06);
   overflow:hidden
 }
-.topbar-brand{flex:0 0 205px;min-width:0;max-width:205px;padding-right:14px;border-right:1px solid var(--border);color:#12345A;gap:10px;overflow:hidden}
-.amp-mark{flex:0 0 auto;font-size:24px;line-height:1;color:var(--acc)}
+.topbar-brand{flex:0 0 190px;min-width:0;max-width:190px;padding-right:12px;border-right:1px solid var(--border);color:#12345A;gap:10px;overflow:hidden}
+.amp-mark{flex:0 0 auto;font-size:20px;line-height:1;color:var(--acc)}
 .brand-copy{display:flex;flex-direction:column;justify-content:center;gap:1px;line-height:1.15;min-width:0;overflow:hidden}
-.brand-copy strong{font-size:16px;line-height:1.1;color:#12345A;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.brand-copy small{font-size:9px;line-height:1.1;color:var(--ink2);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.brand-copy strong{font-size:14px;line-height:1.1;color:#12345A;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.brand-copy small{font-size:8px;line-height:1.1;color:var(--ink2);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .topbar-title{flex:1 1 auto;min-width:0;padding-left:14px;border-left:1px solid var(--border);display:flex;flex-direction:column;justify-content:center;gap:1px}
-.topbar-title .eyebrow{font-size:9.5px;color:var(--ink2);letter-spacing:.5px;white-space:nowrap}
-.topbar-title strong{font-size:clamp(15px,1.1vw,19px);line-height:1.15;color:#12345A;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.topbar-title{padding-top:2px}
+.topbar-title .eyebrow{line-height:1.1;font-size:8px;color:var(--ink2);letter-spacing:.5px;white-space:nowrap}
+.topbar-title strong{font-size:clamp(14px,.98vw,17px);line-height:1.15;color:#12345A;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .topbar-tagline{display:none}
-.topbar-right{flex:0 0 auto;display:flex;align-items:center;gap:9px;border:1px solid var(--border);border-radius:30px;padding:4px 12px;background:var(--surface2);color:var(--ink)}
+.topbar-right{flex:0 0 auto;display:flex;align-items:center;gap:9px;border:1px solid var(--border);border-radius:30px;padding:2px 10px;background:var(--surface2);color:var(--ink)}
 .live-dot{width:10px;height:10px;border-radius:50%;background:var(--acc);box-shadow:0 0 0 4px rgba(24,198,160,.18);flex:0 0 auto}
 .topbar-right #ultima-atualizacao{font-size:clamp(10px,.62vw,12px)!important;color:var(--ink2)}
 .topbar-right[data-nivel="aviso"]{background:#FFF4DB;border-color:#F2B74A}
@@ -681,7 +682,7 @@ body{display:flex;flex-direction:column;background:var(--bg);color:var(--ink)}
 #sec-ceo.active{
   box-sizing:border-box;display:grid;
   grid-template-columns:minmax(0,1fr);
-  grid-template-rows:minmax(112px,.82fr) minmax(70px,.43fr) minmax(366px,2.5fr) minmax(223px,1.2fr);
+  grid-template-rows:minmax(112px,.92fr) minmax(50px,.3fr) minmax(366px,2.85fr) minmax(223px,1.3fr);
   gap:6px;width:100%;height:100%;min-height:0;max-height:100%;overflow:hidden
 }
 #sec-ceo>*{min-width:0;min-height:0}
@@ -734,6 +735,8 @@ body{display:flex;flex-direction:column;background:var(--bg);color:var(--ink)}
 }
 /* Faixa de título do Pulso Comercial removida (os 4 indicadores permanecem) */
 .central-row>.sec-card>.sec-hdr{display:none}
+.central-row .sec-body#forecast-panel-body{padding:5px 10px}
+.pulse-grid .forecast-mini-item{padding:2px 10px!important}
 .central-row .chart-wrap{position:relative;flex:1 1 0;width:100%;height:auto;min-height:0}
 .central-row .chart-wrap canvas{position:absolute;inset:0;width:100%!important;height:100%!important}
 
@@ -813,10 +816,8 @@ body{display:flex;flex-direction:column;background:var(--bg);color:var(--ink)}
 #closers-tbl-wrap .table-progress{height:clamp(8px,.6vw,11px)}
 
 #sdr-tbl-wrap{flex:0 0 auto}
-@media(min-height:1000px){
-  #sdr-tbl-wrap table th{font-size:clamp(9px,.64vw,12px)}
-  #sdr-tbl-wrap table td{font-size:clamp(10px,.76vw,14px);padding:5px 6px}
-}
+#sdr-tbl-wrap table th{font-size:clamp(9px,.64vw,12px)}
+#sdr-tbl-wrap table td{font-size:clamp(10px,.76vw,14px);padding:4px 6px}
 #sdr-mql-panel,#closers-demo-panel{flex:1 1 0;min-height:0;overflow:hidden;display:flex;flex-direction:column;gap:4px;margin-top:6px;padding-top:6px;border-top:1px solid var(--border)}
 .mql-title{display:flex;justify-content:space-between;align-items:baseline;gap:8px;font-size:clamp(9px,.64vw,11px);color:#12345A;text-transform:uppercase;letter-spacing:.4px;font-weight:700;white-space:nowrap;overflow:hidden}
 .mql-title small{color:var(--ink2);font-size:clamp(8px,.52vw,10px);text-transform:none;font-weight:500;letter-spacing:0;overflow:hidden;text-overflow:ellipsis}
@@ -912,12 +913,14 @@ body{display:flex;flex-direction:column;background:var(--bg);color:var(--ink)}
 .pipe-stat small{display:block;font-size:clamp(8px,.55vw,10px);color:var(--ink2);text-transform:uppercase;font-weight:700;letter-spacing:.3px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .pipe-stat strong{display:block;font-size:clamp(14px,1.9vh,26px);line-height:1.1;color:var(--ink);font-weight:800;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 #aging-bars-wrap{margin-top:auto;padding-top:2px}
-.aging-title{font-size:clamp(9px,.6vw,11px);color:var(--ink2);text-transform:uppercase;font-weight:800;letter-spacing:.4px;margin-bottom:3px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.aging-title{display:flex;justify-content:space-between;align-items:baseline;gap:8px;font-size:clamp(9px,.6vw,11px);color:var(--ink2);text-transform:uppercase;font-weight:800;letter-spacing:.4px;margin-bottom:3px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .aging-bar-track{display:flex;height:clamp(12px,1.5vh,18px);border-radius:8px;overflow:hidden;background:var(--border)}
 .aging-bar-seg{height:100%}
 .aging-legend{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:4px;font-size:clamp(9px,.62vw,11px);color:var(--ink2);white-space:nowrap;margin-top:3px}
 .aging-legend span{overflow:hidden;text-overflow:ellipsis}
 .aging-legend i{font-style:normal}
+.aging-risk{color:var(--rd-text);text-transform:none;letter-spacing:0;font-weight:700;overflow:hidden;text-overflow:ellipsis}
+.aging-risk.ok{color:var(--gn-text)}
 .aging-legend b{color:var(--ink);font-weight:800}
 .aging-legend em{font-style:normal;color:var(--ink2)}
 
@@ -927,7 +930,7 @@ body{display:flex;flex-direction:column;background:var(--bg);color:var(--ink)}
 
 @media(min-width:901px) and (max-height:760px){
   #sec-ceo.active{grid-template-rows:minmax(78px,.6fr) minmax(80px,.5fr) minmax(200px,1.7fr) minmax(140px,1.1fr);gap:6px}
-  .topbar{flex-basis:42px;height:42px;min-height:42px}
+  .topbar{flex-basis:34px;height:34px;min-height:34px}
   .content{padding:7px}
   .sec-hdr,.sec-hdr[style]{flex-basis:29px;height:29px;min-height:29px}
   .central-row .sec-body,.two-col .sec-body,.footer-row .sec-body{padding:6px 8px}
@@ -1555,9 +1558,7 @@ function aplicarDadosNoPainel(d){
         const linhas = ordenados.map(c=>linha(c.name, c.demoFlow, '')).join('');
         const linhaTot = linha('Time', tf, ' mql-total');
         const filas = ordenados.map(c=>({nome:c.name, n:c.demoFlow.parouDemo||0})).sort((a,b)=>b.n-a.n);
-        const alerta = (tf.parouDemo||0)>0
-          ? '<div class="mql-alert">⚠ <strong>'+tf.parouDemo+' demos paradas em "Demo realizada"</strong> ('+Math.round(tf.parouDemo/Math.max(tf.demos,1)*100)+'% das demos) · maior fila: <strong>'+filas[0].nome+' ('+filas[0].n+')</strong></div>'
-          : '<div class="mql-alert ok">✔ <strong>Nenhuma demo parada em "Demo realizada"</strong></div>';
+        const alerta = ''; // aviso "demos paradas" removido do painel a pedido da gestão
         demoPanel.innerHTML =
           '<div class="mql-title"><span>Conversão de demos do mês — onde estão hoje</span><div class="mql-legend">'+ETAPAS.map(e=>'<span><i class="'+e[1]+'"></i>'+e[2]+'</span>').join('')+'</div></div>'
           +'<div class="mql-grid" style="grid-template-rows:13px repeat('+(ordenados.length+1)+',minmax(15px,34px))">'
@@ -1908,7 +1909,14 @@ function aplicarDadosNoPainel(d){
     const agingTotal = agingVals.reduce((a,b)=>a+b,0) || 1;
     const agTrack = agingVals.map((v,i)=>'<div class="aging-bar-seg" style="width:'+(v/agingTotal*100)+'%;background:'+agingColors[i]+'"></div>').join('');
     const agLegend = agingKeys.map((k,i)=>'<span><i style="color:'+agingColors[i]+'">&#9679;</i> '+k+' <b>'+agingVals[i]+'</b> <em>('+Math.round(agingVals[i]/agingTotal*100)+'%)</em></span>').join('');
-    el('aging-bars-wrap').innerHTML = '<div class="aging-title">Aging do pipeline aberto \u00b7 dias na etapa atual</div>'
+    // Valor em risco: negócios parados há mais de 30 dias na mesma etapa (d.agingRisco).
+    const rk = d.agingRisco;
+    const riscoHtml = rk
+      ? (rk.qtd>0
+          ? '<span class="aging-risk" title="'+rk.qtdComValor+' de '+rk.qtd+' neg\u00f3cios parados t\u00eam valor preenchido">\u26a0 '+rk.qtd+' &gt;30d parados \u00b7 '+fmtMoeda(rk.valor)+' em risco</span>'
+          : '<span class="aging-risk ok">\u2714 nenhum neg\u00f3cio parado &gt;30d</span>')
+      : '';
+    el('aging-bars-wrap').innerHTML = '<div class="aging-title"><span>Aging do pipeline \u00b7 dias na etapa</span>'+riscoHtml+'</div>'
       + '<div class="aging-bar-track">'+agTrack+'</div>'
       + '<div class="aging-legend">'+agLegend+'</div>';
   }
