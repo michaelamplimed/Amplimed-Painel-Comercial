@@ -681,7 +681,7 @@ body{display:flex;flex-direction:column;background:var(--bg);color:var(--ink)}
 #sec-ceo.active{
   box-sizing:border-box;display:grid;
   grid-template-columns:minmax(0,1fr);
-  grid-template-rows:minmax(78px,.6fr) 16px minmax(94px,.45fr) minmax(350px,1.6fr) minmax(223px,1.05fr);
+  grid-template-rows:minmax(78px,.6fr) minmax(94px,.45fr) minmax(366px,2.2fr) minmax(223px,1.05fr);
   gap:6px;width:100%;height:100%;min-height:0;max-height:100%;overflow:hidden
 }
 #sec-ceo>*{min-width:0;min-height:0}
@@ -807,7 +807,7 @@ body{display:flex;flex-direction:column;background:var(--bg);color:var(--ink)}
 #closers-tbl-wrap td,#sdr-tbl-wrap td{vertical-align:middle}
 #closers-tbl-wrap .person-cell,#sdr-tbl-wrap .person-cell{display:table-cell}
 #closers-tbl-wrap table th{font-size:clamp(9px,.64vw,12px)}
-#closers-tbl-wrap table td{font-size:clamp(10px,.74vw,14px);padding-top:2px;padding-bottom:2px}
+#closers-tbl-wrap table td{font-size:clamp(10px,.7vw,13.5px);padding-top:2px;padding-bottom:2px}
 #closers-tbl-wrap .table-progress{height:clamp(8px,.6vw,11px)}
 
 #sdr-tbl-wrap{flex:0 0 auto}
@@ -815,7 +815,7 @@ body{display:flex;flex-direction:column;background:var(--bg);color:var(--ink)}
   #sdr-tbl-wrap table th{font-size:clamp(9px,.64vw,12px)}
   #sdr-tbl-wrap table td{font-size:clamp(10px,.76vw,14px);padding:5px 6px}
 }
-#sdr-mql-panel{flex:1 1 0;min-height:0;overflow:hidden;display:flex;flex-direction:column;gap:4px;margin-top:6px;padding-top:6px;border-top:1px solid var(--border)}
+#sdr-mql-panel,#closers-demo-panel{flex:1 1 0;min-height:0;overflow:hidden;display:flex;flex-direction:column;gap:4px;margin-top:6px;padding-top:6px;border-top:1px solid var(--border)}
 .mql-title{display:flex;justify-content:space-between;align-items:baseline;gap:8px;font-size:clamp(9px,.64vw,11px);color:#12345A;text-transform:uppercase;letter-spacing:.4px;font-weight:700;white-space:nowrap;overflow:hidden}
 .mql-title small{color:var(--ink2);font-size:clamp(8px,.52vw,10px);text-transform:none;font-weight:500;letter-spacing:0;overflow:hidden;text-overflow:ellipsis}
 .mql-legend{display:flex;flex-wrap:nowrap;gap:10px;font-size:clamp(8px,.55vw,10px);color:var(--ink2);white-space:nowrap;overflow:hidden}
@@ -838,6 +838,29 @@ body{display:flex;flex-direction:column;background:var(--bg);color:var(--ink)}
 .mql-seg.per,.mql-legend i.per{background:var(--ink3)}
 .mql-row.mql-total .mql-name,.mql-row.mql-total .mql-num,.mql-row.mql-total .mql-pct{padding-top:3px;border-top:1px solid var(--border)}
 .mql-row.mql-total .mql-bar{margin-top:3px}
+
+/* Velocímetros nos cards de KPI */
+.kcard-gauge{flex:0 0 auto;width:clamp(66px,4.6vw,90px);display:flex;align-items:center;justify-content:center}
+.kcard-gauge svg{display:block;width:100%;height:auto;overflow:visible}
+#spark-receita-total,#spark-projecao{display:none!important}
+.kcard:has(.kcard-gauge) .kcard-val{font-size:clamp(18px,1.36vw,25px)}
+.kcard:has(.kcard-gauge) .kcard-note{white-space:normal;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical}
+#pace-bar-main{display:none!important}
+/* Conversão de demos por closer (mesma linguagem do funil de prospecção dos SDRs) */
+#closers-demo-panel{margin-top:4px;padding-top:4px;gap:3px}
+#closers-demo-panel .mql-grid{row-gap:2px}
+#closers-demo-panel .mql-row.mql-total .mql-name,#closers-demo-panel .mql-row.mql-total .mql-num,#closers-demo-panel .mql-row.mql-total .mql-pct{padding-top:1px}
+#closers-demo-panel .mql-row.mql-total .mql-bar{margin-top:1px}
+#closers-demo-panel .mql-grid{grid-template-columns:62px 46px minmax(0,1fr) 70px 82px}
+#closers-demo-panel .mql-bar{height:14px}
+#closers-demo-panel .mql-num{font-size:clamp(12px,.78vw,15px)}
+#closers-demo-panel .mql-name,#closers-demo-panel .mql-pct{line-height:1.1}
+.mql-seg.dmo,.mql-legend i.dmo{background:var(--am)}
+.mql-seg.sal,.mql-legend i.sal{background:var(--bl)}
+.mql-seg.prp,.mql-legend i.prp{background:var(--acc)}
+.mql-seg.ngn,.mql-legend i.ngn{background:var(--gn-text)}
+.mql-seg.vlt,.mql-legend i.vlt{background:var(--ink3)}
+.mql-seg.prd,.mql-legend i.prd{background:var(--rd)}
 .mql-alert{font-size:clamp(9px,.62vw,11px);color:var(--ink2);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .mql-alert strong{color:var(--rd-text)}
 .mql-alert.ok strong{color:var(--gn-text)}
@@ -900,7 +923,7 @@ body{display:flex;flex-direction:column;background:var(--bg);color:var(--ink)}
 .revenue-pct{display:block;font-size:10px;color:var(--ink2)}
 
 @media(min-width:901px) and (max-height:760px){
-  #sec-ceo.active{grid-template-rows:minmax(78px,.6fr) 16px minmax(80px,.5fr) minmax(200px,1.7fr) minmax(140px,1.1fr);gap:6px}
+  #sec-ceo.active{grid-template-rows:minmax(78px,.6fr) minmax(80px,.5fr) minmax(200px,1.7fr) minmax(140px,1.1fr);gap:6px}
   .topbar{flex-basis:56px;height:56px;min-height:56px}
   .content{padding:7px}
   .sec-hdr,.sec-hdr[style]{flex-basis:29px;height:29px;min-height:29px}
@@ -947,11 +970,11 @@ body{display:flex;flex-direction:column;background:var(--bg);color:var(--ink)}
 
   <!-- Scorecard Executivo — 6 KPIs -->
   <div class="kgrid-hero">
-    <div class="kcard" style="border-top:3px solid #18C6A0"><div class="kcard-inner"><div style="flex:1;min-width:0"><div class="kcard-lbl">&#128181; Receita MTD</div><div class="kcard-val" id="kpi-receita" style="color:#0F7A5F">—</div><div class="kcard-note" id="kcard-receita-n">—</div></div><div style="flex-shrink:0" id="spark-receita-total"></div></div></div>
-    <div class="kcard" style="border-top:3px solid #1675D1"><div class="kcard-inner"><div style="flex:1;min-width:0"><div class="kcard-lbl">&#127919; Meta do M&ecirc;s</div><div class="kcard-val" id="kcard-prorata" style="color:#1675D1">—</div><div class="kcard-note" id="kcard-meta-nota">Objetivo comercial mensal</div></div></div></div>
-    <div class="kcard" style="border-top:3px solid #805AD5"><div class="kcard-inner"><div style="flex:1;min-width:0"><div class="kcard-lbl">&#128202; Atingimento da Meta Acum.</div><div class="kcard-val"><span id="kcard-prorata-pct" class="bdg bdg-g" style="font-size:16px;padding:2px 10px">—</span></div><div class="kcard-note" id="kcard-ating-nota">Realizado vs. meta pro-rata</div></div></div></div>
-    <div class="kcard" style="border-top:3px solid #F59E0B"><div class="kcard-inner"><div style="flex:1;min-width:0"><div class="kcard-lbl">&#128200; Forecast do M&ecirc;s</div><div class="kcard-val" id="kcard-proj-v" style="color:#B7791F">—</div><div class="kcard-note" id="kcard-proj-n">—</div></div><div style="flex-shrink:0" id="spark-projecao"></div></div></div>
-    <div class="kcard" style="border-top:3px solid #E5485B"><div class="kcard-inner"><div style="flex:1;min-width:0"><div class="kcard-lbl">&#9888; Gap para Meta</div><div class="kcard-val" id="kpi-gap" style="color:#E5485B">—</div><div class="kcard-note" id="kcard-gap-nota">Falta para bater a meta do m&ecirc;s</div></div></div></div>
+    <div class="kcard" style="border-top:3px solid #18C6A0"><div class="kcard-inner"><div style="flex:1;min-width:0"><div class="kcard-lbl">&#128181; Receita MTD</div><div class="kcard-val" id="kpi-receita" style="color:#0F7A5F">—</div><div class="kcard-note" id="kcard-receita-n">—</div></div><div style="flex-shrink:0" id="spark-receita-total"></div><div class="kcard-gauge" id="gauge-receita"></div></div></div>
+    <div class="kcard" style="border-top:3px solid #1675D1"><div class="kcard-inner"><div style="flex:1;min-width:0"><div class="kcard-lbl">&#127919; Meta do M&ecirc;s</div><div class="kcard-val" id="kcard-prorata" style="color:#1675D1">—</div><div class="kcard-note" id="kcard-meta-nota">Objetivo comercial mensal</div></div><div class="kcard-gauge" id="gauge-meta"></div></div></div>
+    <div class="kcard" style="border-top:3px solid #805AD5"><div class="kcard-inner"><div style="flex:1;min-width:0"><div class="kcard-lbl">&#128202; Atingimento Meta Acum.</div><div class="kcard-val"><span id="kcard-prorata-pct" class="bdg bdg-g" style="font-size:16px;padding:2px 10px">—</span></div><div class="kcard-note" id="kcard-ating-nota">Realizado vs. meta pro-rata</div></div><div class="kcard-gauge" id="gauge-ating"></div></div></div>
+    <div class="kcard" style="border-top:3px solid #F59E0B"><div class="kcard-inner"><div style="flex:1;min-width:0"><div class="kcard-lbl">&#128200; Forecast do M&ecirc;s</div><div class="kcard-val" id="kcard-proj-v" style="color:#B7791F">—</div><div class="kcard-note" id="kcard-proj-n">—</div></div><div style="flex-shrink:0" id="spark-projecao"></div><div class="kcard-gauge" id="gauge-forecast"></div></div></div>
+    <div class="kcard" style="border-top:3px solid #E5485B"><div class="kcard-inner"><div style="flex:1;min-width:0"><div class="kcard-lbl">&#9888; Gap para Meta</div><div class="kcard-val" id="kpi-gap" style="color:#E5485B">—</div><div class="kcard-note" id="kcard-gap-nota">Falta para bater a meta do m&ecirc;s</div></div><div class="kcard-gauge" id="gauge-gap"></div></div></div>
     <div class="kcard" style="border-top:3px solid #18C6A0"><div class="kcard-inner"><div style="flex:1;min-width:0"><div class="kcard-lbl">&#127942; Win Rate</div><div class="kcard-val" id="kcard-winrate-v" style="color:#0F7A5F">—</div><div class="kcard-note" id="kcard-winrate-n">—</div></div><div id="winrate-viz"></div></div></div>
   </div>
 
@@ -984,7 +1007,7 @@ body{display:flex;flex-direction:column;background:var(--bg);color:var(--ink)}
           <thead><tr><th>#</th><th>Closer</th><th>Receita</th><th class="progress-head">Progresso</th><th>% da meta</th><th>Meta</th><th>Taxa de ganho</th><th>Vendas</th></tr></thead>
           <tbody id="tbl-closers-mini"><tr style="background:#fff"><td>Tamara</td><td>14</td><td>R$4.387,97</td><td>74%</td></tr><tr style="background:#fff"><td>Eduardo</td><td>13</td><td>R$5.637,75</td><td>72%</td></tr><tr style="background:#fff"><td>Juliano</td><td>11</td><td>R$1.837,80</td><td>65%</td></tr><tr style="background:#fff"><td>Ariel</td><td>9</td><td>R$2.967,07</td><td>64%</td></tr><tr style="background:#fff"><td>Mayara</td><td>19</td><td>R$5.027,47</td><td>86%</td></tr>
         </table></div>
-        <div class="sdr-insight" id="closers-insight"></div>
+        <div id="closers-demo-panel" style="display:none"></div>
       </div>
     </div>
     <div class="sec-card">
@@ -1002,7 +1025,7 @@ body{display:flex;flex-direction:column;background:var(--bg);color:var(--ink)}
   <!-- Rodapé: funil, composição e pipeline -->
   <div class="footer-row">
     <div class="sec-card funnel-card">
-      <div class="sec-hdr"><span>▽ &nbsp; FUNIL DA EQUIPE</span><small>SQLs criados no mês · SQL → SAL → GANHO</small></div>
+      <div class="sec-hdr"><span>▽ &nbsp; FUNIL DA EQUIPE</span><small>Coorte: SQLs que entraram no mês · SQL → SAL → GANHO</small></div>
       <div class="sec-body" id="funil-panel-body"><div id="team-funnel-row"></div><div class="funil-summary" id="funil-summary">—</div></div>
     </div>
     <div class="sec-card composition-card">
@@ -1187,6 +1210,41 @@ const AMP_FERIADOS = ['2026-09-07','2026-10-12','2026-11-02','2026-11-20','2026-
 function ampYmd(dt){ return dt.getFullYear()+'-'+String(dt.getMonth()+1).padStart(2,'0')+'-'+String(dt.getDate()).padStart(2,'0'); }
 function ampIsUtil(dt){ const w=dt.getDay(); return w>0 && w<6 && AMP_FERIADOS.indexOf(ampYmd(dt))<0; }
 function fmtMoeda(v){ return 'R$'+parseFloat(v).toLocaleString('pt-BR',{minimumFractionDigits:2,maximumFractionDigits:2}); }
+
+
+// Velocímetro (SVG): arco segmentado vermelho→verde (ou invertido), ponteiro e marca de referência.
+// o.pct = posição do ponteiro (0..1); o.tick = marca de referência (0..1); o.invert = menor é melhor;
+// o.mono = cor única (indicadores neutros, como tempo); o.min/o.max = rótulos das pontas.
+function ampGauge(o){
+  const clamp = v => Math.max(0, Math.min(1, Number(v)||0));
+  const pct = clamp(o.pct);
+  const cx=60, cy=60, R=52, r=36, N=12, g=0.022;
+  const P = (a,rad) => [cx+rad*Math.cos(a), cy-rad*Math.sin(a)];
+  const f = n => n.toFixed(2);
+  let segs = '';
+  for(let i=0;i<N;i++){
+    const a0 = Math.PI*(1-i/N)-g, a1 = Math.PI*(1-(i+1)/N)+g;
+    const t = (i+.5)/N;
+    const cor = o.mono || ('hsl('+Math.round(140*(o.invert ? 1-t : t))+',72%,45%)');
+    const on = pct>0 && (i/N) < pct;
+    const A = P(a0,R), B = P(a1,R), C = P(a1,r), D = P(a0,r);
+    segs += '<path d="M'+f(A[0])+' '+f(A[1])+' A'+R+' '+R+' 0 0 1 '+f(B[0])+' '+f(B[1])
+      +' L'+f(C[0])+' '+f(C[1])+' A'+r+' '+r+' 0 0 0 '+f(D[0])+' '+f(D[1])+' Z" fill="'+cor+'" opacity="'+(on?1:.26)+'"/>';
+  }
+  const th = Math.PI*(1-pct);
+  const tip = P(th, R-5), b1 = P(th+Math.PI/2, 5), b2 = P(th-Math.PI/2, 5);
+  const needle = '<polygon points="'+f(tip[0])+','+f(tip[1])+' '+f(cx+(b1[0]-cx))+','+f(cy+(b1[1]-cy))+' '+f(cx+(b2[0]-cx))+','+f(cy+(b2[1]-cy))+'" fill="#19324D"/>'
+    +'<circle cx="'+cx+'" cy="'+cy+'" r="6.5" fill="#19324D"/><circle cx="'+cx+'" cy="'+cy+'" r="2.4" fill="#fff"/>';
+  let tick = '';
+  if(o.tick!=null){
+    const ta = Math.PI*(1-clamp(o.tick));
+    const t1 = P(ta, R+2), t2 = P(ta, R+9);
+    tick = '<line x1="'+f(t1[0])+'" y1="'+f(t1[1])+'" x2="'+f(t2[0])+'" y2="'+f(t2[1])+'" stroke="#19324D" stroke-width="2.6" stroke-linecap="round"/>';
+  }
+  const lbl = '<text x="'+(cx-(R+r)/2)+'" y="'+(cy+13)+'" text-anchor="middle" font-size="9.5" font-weight="700" fill="#718096">'+(o.min||'0')+'</text>'
+    +'<text x="'+(cx+(R+r)/2)+'" y="'+(cy+13)+'" text-anchor="middle" font-size="9.5" font-weight="700" fill="#718096">'+(o.max||'100%')+'</text>';
+  return '<svg viewBox="-4 -8 128 90" role="img" aria-label="'+(o.label||'')+'"><title>'+(o.label||'')+'</title>'+segs+tick+needle+lbl+'</svg>';
+}
 
 function aplicarDadosNoPainel(d){
   let resultadoDia = 0; // preenchido no bloco de sparklines; usado mais abaixo no Pulso Comercial
@@ -1458,23 +1516,55 @@ function aplicarDadosNoPainel(d){
     const linhaTotal = '<tr class="total-row"><td colspan="2">Total / M&eacute;dia</td><td>'+fmtMoeda(somaTotalAmount)+'</td><td></td><td>'+pctGeral.toLocaleString('pt-BR',{minimumFractionDigits:1,maximumFractionDigits:1})+'%</td><td></td><td>'+taxaGeral+'%</td><td>'+somaVendas+'</td></tr>';
     tblMini.innerHTML = closersAtivos.length ? (linhas + linhaTotal) : '<tr><td colspan="4" style="text-align:center;color:var(--ink3);padding:22px 10px">Sem dados de closers no momento</td></tr>';
 
-    // Performance dos Closers — comparativo de Receita Total por closer (dado
-    // real já existente, sem número fictício), barras relativas ao maior
-    // valor do grupo (receita não tem um "alvo de 100%" natural como a meta).
-    const closersInsight = el('closers-insight');
-    if(closersInsight){
-      const rankedClosers = closersAtivos.slice().sort((a,b)=>(b.totalAmount||0)-(a.totalAmount||0));
-      const maxAmount = rankedClosers.length ? Math.max(...rankedClosers.map(c=>c.totalAmount||0), 1) : 1;
-      const linhasInsightC = rankedClosers.map((c,idx)=>{
-        const cor = idx===0 ? 'var(--acc)' : 'var(--acc3)';
-        const w = Math.max(4, Math.min(100, (c.totalAmount||0)/maxAmount*100));
-        return '<div class="sdr-insight-row">'
-          +'<span class="sdr-insight-name">'+c.name+'</span>'
-          +'<div class="sdr-insight-track"><div class="sdr-insight-fill" style="width:'+w+'%;background:'+cor+'"></div></div>'
-          +'<span class="sdr-insight-pct">'+fmtMoeda(c.totalAmount||0)+'</span>'
+    // ── Conversão de demos por closer: demos realizadas no mês e até onde seguiram ──
+    // Fonte: d.closers[].demoFlow / d.demoFlowTime (fetch-hubspot-data.js). Demo realizada =
+    // negócio que entrou na etapa "Demo Realizada" no mês; a barra mostra a etapa ATUAL de
+    // cada um desses negócios. "Avançaram" = chegaram a SAL ou além; "Demo→Ganho" = ganhos ÷ demos.
+    const demoPanel = el('closers-demo-panel');
+    if(demoPanel){
+      const lista = closersAtivos.filter(c => c.demoFlow && !(c.demoFlow.demos===0 && c.nivel==='Cross-sell'));
+      const tf = d.demoFlowTime;
+      if(!lista.length || !tf){
+        demoPanel.style.display = 'none';
+        demoPanel.innerHTML = '';
+      } else {
+        const fmtPct = v => Number(v||0).toLocaleString('pt-BR',{minimumFractionDigits:1,maximumFractionDigits:1})+'%';
+        const ETAPAS = [
+          ['parouDemo','dmo','Demo realizada'],
+          ['sal','sal','SAL'],
+          ['proposta','prp','Proposta / Forecast'],
+          ['ganho','ngn','Ganho'],
+          ['perdido','prd','Perdido']
+        ];
+        if((tf.voltou||0) > 0) ETAPAS.push(['voltou','vlt','Voltou p/ SQL']);
+        const barra = f => '<div class="mql-bar">'+ETAPAS.map(e=>{
+          const n = (f && f[e[0]]) || 0;
+          return n>0 ? '<span class="mql-seg '+e[1]+'" style="flex-grow:'+n+'" title="'+e[2]+': '+n+'">'+n+'</span>' : '';
+        }).join('')+'</div>';
+        const linha = (nome, f, extra) => '<div class="mql-row'+(extra||'')+'">'
+          +'<span class="mql-name">'+nome+'</span>'
+          +'<span class="mql-num">'+(f.demos||0)+'</span>'
+          + barra(f)
+          +'<span class="mql-pct">'+(f.demos>0 ? fmtPct(f.avancouP) : '—')+'</span>'
+          +'<span class="mql-pct">'+(f.demos>0 ? fmtPct(f.ganhoP) : '—')+'</span>'
           +'</div>';
-      }).join('');
-      closersInsight.innerHTML = closersAtivos.length ? ('<div class="sdr-insight-title">Performance dos Closers &mdash; Receita Total</div>' + linhasInsightC) : '';
+        const ordenados = lista.slice().sort((a,b)=>(b.demoFlow.demos||0)-(a.demoFlow.demos||0) || (b.demoFlow.ganho||0)-(a.demoFlow.ganho||0));
+        const linhas = ordenados.map(c=>linha(c.name, c.demoFlow, '')).join('');
+        const linhaTot = linha('Time', tf, ' mql-total');
+        const filas = ordenados.map(c=>({nome:c.name, n:c.demoFlow.parouDemo||0})).sort((a,b)=>b.n-a.n);
+        const alerta = (tf.parouDemo||0)>0
+          ? '<div class="mql-alert">⚠ <strong>'+tf.parouDemo+' demos paradas em "Demo realizada"</strong> ('+Math.round(tf.parouDemo/Math.max(tf.demos,1)*100)+'% das demos) · maior fila: <strong>'+filas[0].nome+' ('+filas[0].n+')</strong></div>'
+          : '<div class="mql-alert ok">✔ <strong>Nenhuma demo parada em "Demo realizada"</strong></div>';
+        demoPanel.innerHTML =
+          '<div class="mql-title"><span>Conversão de demos do mês — onde estão hoje</span><div class="mql-legend">'+ETAPAS.map(e=>'<span><i class="'+e[1]+'"></i>'+e[2]+'</span>').join('')+'</div></div>'
+          +'<div class="mql-grid" style="grid-template-rows:13px repeat('+(ordenados.length+1)+',minmax(15px,34px))">'
+            +'<span class="mql-h">Closer</span><span class="mql-h c">Demos</span><span class="mql-h">Etapa atual das demos</span>'
+            +'<span class="mql-h c" title="Demos que chegaram a SAL ou além">Avançaram</span><span class="mql-h c" title="Ganhos ÷ demos realizadas no mês">Demo→Ganho</span>'
+            + linhas + linhaTot
+          +'</div>'
+          + alerta;
+        demoPanel.style.display = '';
+      }
     }
   }
 
@@ -1740,6 +1830,23 @@ function aplicarDadosNoPainel(d){
   }
   if(el('kcard-gap-nota')) el('kcard-gap-nota').textContent = 'Falta para bater a meta · '+fmtMoeda(necessario)+'/dia necessário';
 
+  // ── Velocímetros dos cards de KPI (todos derivados dos mesmos números exibidos nos cards) ──
+  {
+    const gapV = Math.max(0, metaMensal - mrrTotal);
+    const fmtP = v => v.toLocaleString('pt-BR',{minimumFractionDigits:1,maximumFractionDigits:1})+'%';
+    const setG = (id, o) => { const e = el(id); if(e) e.innerHTML = ampGauge(o); };
+    setG('gauge-receita', {pct: metaMensal>0 ? mrrTotal/metaMensal : 0, tick: metaMensal>0 ? proRataMeta/metaMensal : null,
+      label:'Receita realizada: '+fmtP(metaMensal>0 ? mrrTotal/metaMensal*100 : 0)+' da meta do mês; marca = meta acumulada até hoje ('+fmtMoeda(proRataMeta)+')'});
+    setG('gauge-meta', {pct: totalWorkingDays>0 ? workingDaysSoFar/totalWorkingDays : 0, mono:'#1675D1', max: totalWorkingDays+'d',
+      label:'Dias úteis decorridos: '+workingDaysSoFar+' de '+totalWorkingDays});
+    setG('gauge-ating', {pct: proRataPct/120, tick: 100/120, max:'120%',
+      label:'Atingimento da meta acumulada: '+fmtP(proRataPct)+' (marca = 100%, no ritmo)'});
+    setG('gauge-forecast', {pct: metaMensal>0 ? projecaoMes/metaMensal/1.2 : 0, tick: 1/1.2, max:'120%',
+      label:'Forecast: '+fmtP(metaMensal>0 ? projecaoMes/metaMensal*100 : 0)+' da meta do mês (marca = 100%)'});
+    setG('gauge-gap', {pct: metaMensal>0 ? gapV/metaMensal : 0, invert:true,
+      label:'Falta '+fmtP(metaMensal>0 ? gapV/metaMensal*100 : 0)+' da meta do mês'});
+  }
+
   // Pipeline em aberto vs. meta mensal — leitura direta do quanto o pipeline
   // atual representa frente à meta do mês corrente (substitui o antigo
   // indicador de cobertura anual de ARR).
@@ -1767,7 +1874,8 @@ function aplicarDadosNoPainel(d){
       {key:'sal', lbl:'SAL'},
       {key:'won', lbl:'Ganho'}
     ];
-    const totals = steps.map(s => d.closers.reduce((sum,c)=> sum + ((c.funil && c.funil[s.key]) || 0), 0));
+    // Coorte do mês (SQLs que entraram no mês e até onde chegaram): d.funilTime; sem ele, soma dos closers.
+    const totals = steps.map(s => d.funilTime ? (d.funilTime[s.key]||0) : d.closers.reduce((sum,c)=> sum + ((c.funil && c.funil[s.key]) || 0), 0));
     const maxVal = Math.max.apply(null, totals) || 1;
     let tfHtml = '';
     steps.forEach((s,i) => {
