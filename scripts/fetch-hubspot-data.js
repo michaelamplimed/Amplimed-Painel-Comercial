@@ -484,6 +484,43 @@ async function main() {
     );
 
   // ==========================================================
+  // 5b. MQLs DO MÊS (pipeline Prospecção Inbound), para o funil por SDR
+  // ==========================================================
+  // MQL recebido = negócio criado no pipeline de Prospecção Inbound
+  // durante o mês (entra na etapa NMQL). A etapa atual do negócio mostra
+  // até onde o SDR avançou com aquele MQL.
+
+  const prospeccao =
+    config.prospeccaoInbound || null;
+
+  const mqlDeals =
+    prospeccao && prospeccao.pipelineId
+      ? await fetchAllDeals(
+          [{
+            filters: [
+              {
+                propertyName: 'pipeline',
+                operator: 'EQ',
+                value: prospeccao.pipelineId
+              },
+              {
+                propertyName: 'createdate',
+                operator: 'GTE',
+                value: String(firstTimestamp)
+              }
+            ]
+          }],
+          [
+            'dealname',
+            'dealstage',
+            'sdr_do_negocio',
+            'hubspot_owner_id',
+            'createdate'
+          ]
+        )
+      : [];
+
+  // ==========================================================
   // FUNIL
   // ==========================================================
 
@@ -1090,6 +1127,59 @@ async function main() {
               ) === s.ownerId
           );
 
+        // MQLs recebidos pelo SDR no mês, distribuídos por etapa atual.
+        // Atribuição pelo campo "SDR do Negócio"; se vazio, pelo dono do negócio.
+        const mqlPorSdr =
+          mqlDeals.filter(
+            d => {
+              const dono =
+                Number(
+                  d.properties.sdr_do_negocio ||
+                  d.properties.hubspot_owner_id
+                );
+
+              return dono === s.ownerId;
+            }
+          );
+
+        const mqlEtapas = {
+          nmql: 0,
+          cadencia: 0,
+          conexao: 0,
+          nutricao: 0,
+          ganho: 0,
+          perdido: 0,
+          outros: 0
+        };
+
+        const etapasConfig =
+          (prospeccao && prospeccao.etapas) || {};
+
+        for (const d of mqlPorSdr) {
+          const stage =
+            String(d.properties.dealstage);
+
+          const balde =
+            Object.keys(etapasConfig).find(
+              k =>
+                (etapasConfig[k] || [])
+                  .map(String)
+                  .includes(stage)
+            );
+
+          if (balde && balde in mqlEtapas) {
+            mqlEtapas[balde]++;
+          } else {
+            mqlEtapas.outros++;
+          }
+        }
+
+        const mqlTotal = mqlPorSdr.length;
+
+        // % de MQLs já trabalhados = saíram de NMQL (houve primeira ação do SDR)
+        const mqlTrabalhados =
+          mqlTotal - mqlEtapas.nmql;
+
         const recAquisicao =
           wonPorSdr.reduce(
             (sum, d) =>
@@ -1127,6 +1217,24 @@ async function main() {
           name: s.name,
 
           sql: sqlPorSdr.length,
+
+          mql: mqlTotal,
+
+          mqlEtapas,
+
+          mqlPctTrabalhados:
+            mqlTotal > 0
+              ? Math.round(
+                  (mqlTrabalhados / mqlTotal) * 1000
+                ) / 10
+              : 0,
+
+          mqlParaSqlPct:
+            mqlTotal > 0
+              ? Math.round(
+                  (sqlPorSdr.length / mqlTotal) * 1000
+                ) / 10
+              : 0,
 
           recInfluenciada:
             Math.round(recInfluenciada * 100) / 100,
