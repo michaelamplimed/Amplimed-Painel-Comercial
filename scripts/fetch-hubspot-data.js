@@ -448,7 +448,8 @@ async function main() {
         'amount',
         'createdate',
         'hubspot_owner_id',
-        'dealstage'
+        'dealstage',
+        'hs_v2_date_entered_current_stage'
       ]
     );
 
@@ -743,57 +744,42 @@ async function main() {
   // AGING
   // ==========================================================
 
-  const agingBuckets = {
+  // Aging = dias PARADOS na etapa atual (hs_v2_date_entered_current_stage).
+  // Se o HubSpot não trouxer a data de entrada na etapa, usa a data de criação.
+  // agingCriacao mantém a leitura antiga (idade total do negócio) para conferência.
+  const novoBalde = () => ({
     '0-7d': 0,
     '8-15d': 0,
     '16-30d': 0,
     '31-60d': 0,
     '+60d': 0
+  });
+
+  const agingBuckets = novoBalde();
+  const agingCriacao = novoBalde();
+
+  const classificaIdade = (ageDays, baldes) => {
+    if (ageDays <= 7) baldes['0-7d']++;
+    else if (ageDays <= 15) baldes['8-15d']++;
+    else if (ageDays <= 30) baldes['16-30d']++;
+    else if (ageDays <= 60) baldes['31-60d']++;
+    else baldes['+60d']++;
   };
 
-  for (
-    const d of openDeals
-  ) {
+  const DIA_MS = 1000 * 60 * 60 * 24;
 
-    const created =
-      new Date(
-        d.properties.createdate
-      );
+  for (const d of openDeals) {
+    const criado = new Date(d.properties.createdate);
+    const naEtapaStr = d.properties.hs_v2_date_entered_current_stage;
+    const naEtapa = naEtapaStr ? new Date(naEtapaStr) : criado;
 
-    const ageDays =
-      Math.floor(
-        (
-          nowReal -
-          created
-        ) /
-        (
-          1000 *
-          60 *
-          60 *
-          24
-        )
-      );
-
-    if (
-      ageDays <= 7
-    ) {
-      agingBuckets['0-7d']++;
-    } else if (
-      ageDays <= 15
-    ) {
-      agingBuckets['8-15d']++;
-    } else if (
-      ageDays <= 30
-    ) {
-      agingBuckets['16-30d']++;
-    } else if (
-      ageDays <= 60
-    ) {
-      agingBuckets['31-60d']++;
-    } else {
-      agingBuckets['+60d']++;
-    }
+    classificaIdade(Math.floor((nowReal - criado) / DIA_MS), agingCriacao);
+    classificaIdade(Math.floor((nowReal - naEtapa) / DIA_MS), agingBuckets);
   }
+
+  const pipelineAbertoComValor = openDeals.filter(
+    d => (parseFloat(d.properties.amount || '0') || 0) > 0
+  ).length;
 
   // ==========================================================
   // FUNIL DE CONVERSÃO
@@ -1378,6 +1364,11 @@ async function main() {
           100
         ) / 100,
 
+      pipelineAbertoQtd:
+        openDeals.length,
+
+      pipelineAbertoComValor,
+
       mediaDiaria
     },
 
@@ -1391,6 +1382,8 @@ async function main() {
 
     aging:
       agingBuckets,
+
+    agingCriacao,
 
     closers:
       closerStats,
