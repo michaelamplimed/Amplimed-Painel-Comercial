@@ -1861,12 +1861,15 @@ function aplicarDadosNoPainel(d){
   if(el('pipeline-stats')){
     const pipeAb = d.kpis.pipelineAberto || 0;
     const nAb = d.aging ? Object.keys(d.aging).reduce((s,k)=>s+Number(d.aging[k]||0),0) : 0;
-    const ticketAb = nAb>0 ? pipeAb/nAb : 0;
+    // Ticket médio só entre negócios COM valor (muitos negócios abertos não têm valor preenchido).
+    const nValor = (d.kpis.pipelineAbertoComValor!=null) ? Number(d.kpis.pipelineAbertoComValor) : nAb;
+    const ticketAb = nValor>0 ? pipeAb/nValor : 0;
+    const ticketLbl = (d.kpis.pipelineAbertoComValor!=null && nValor<nAb) ? 'Ticket ('+nValor+' c/ valor)' : 'Ticket m\u00e9dio';
     const gapAb = Math.max(0, metaMensal - mrrTotal);
     const cobGap = gapAb>0 ? pipeAb/gapAb*100 : 100;
     el('pipeline-stats').innerHTML =
       '<div class="pipe-stat"><small>Neg\u00f3cios abertos</small><strong>'+nAb+'</strong></div>'
-      +'<div class="pipe-stat"><small>Ticket m\u00e9dio</small><strong>'+fmtMoeda(ticketAb)+'</strong></div>'
+      +'<div class="pipe-stat"><small>'+ticketLbl+'</small><strong>'+fmtMoeda(ticketAb)+'</strong></div>'
       +'<div class="pipe-stat"><small>Cobre do gap</small><strong>'+cobGap.toLocaleString('pt-BR',{minimumFractionDigits:1,maximumFractionDigits:1})+'%</strong></div>';
   }
 
@@ -1905,7 +1908,7 @@ function aplicarDadosNoPainel(d){
     const agingTotal = agingVals.reduce((a,b)=>a+b,0) || 1;
     const agTrack = agingVals.map((v,i)=>'<div class="aging-bar-seg" style="width:'+(v/agingTotal*100)+'%;background:'+agingColors[i]+'"></div>').join('');
     const agLegend = agingKeys.map((k,i)=>'<span><i style="color:'+agingColors[i]+'">&#9679;</i> '+k+' <b>'+agingVals[i]+'</b> <em>('+Math.round(agingVals[i]/agingTotal*100)+'%)</em></span>').join('');
-    el('aging-bars-wrap').innerHTML = '<div class="aging-title">Aging do pipeline aberto \u00b7 dias parados</div>'
+    el('aging-bars-wrap').innerHTML = '<div class="aging-title">Aging do pipeline aberto \u00b7 dias na etapa atual</div>'
       + '<div class="aging-bar-track">'+agTrack+'</div>'
       + '<div class="aging-legend">'+agLegend+'</div>';
   }
