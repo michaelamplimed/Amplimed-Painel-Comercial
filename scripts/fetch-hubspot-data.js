@@ -1254,6 +1254,37 @@ async function main() {
     );
 
   // ==========================================================
+  // QUALIDADE DOS DADOS (pendências de CRM que distorcem o painel)
+  // ==========================================================
+
+  const closerIdsValidos = new Set(
+    (config.closers || []).map(c => String(c.ownerId))
+  );
+
+  const nomeDeal = d =>
+    String(d.properties.dealname || d.id).trim().slice(0, 40);
+
+  const valorDeal = d =>
+    parseFloat(d.properties.amount || '0') || 0;
+
+  const qualidade = {
+    // Ganhos (aquisição ou cross-sell) sem valor ou com valor simbólico (< R$ 1)
+    ganhosSemValor: [...wonDeals, ...crossSellDeals]
+      .filter(d => valorDeal(d) < 1)
+      .map(d => ({ id: String(d.id), nome: nomeDeal(d), valor: valorDeal(d) })),
+
+    // Ganhos de aquisição sem "closer do negócio" válido (não entram na receita de nenhum closer)
+    ganhosSemCloser: wonDeals
+      .filter(d => !closerIdsValidos.has(String(d.properties.closer_do_negocio)))
+      .map(d => ({ id: String(d.id), nome: nomeDeal(d), valor: valorDeal(d) })),
+
+    // Ganhos de aquisição sem SDR do negócio (não entram na receita influenciada de nenhum SDR)
+    ganhosSemSdr: wonDeals
+      .filter(d => !d.properties.sdr_do_negocio)
+      .map(d => ({ id: String(d.id), nome: nomeDeal(d), valor: valorDeal(d) }))
+  };
+
+  // ==========================================================
   // DATA.JSON
   // ==========================================================
 
@@ -1277,6 +1308,8 @@ async function main() {
       mes: month,
       chave: monthKey
     },
+
+    qualidade,
 
     metas: {
       closer:
