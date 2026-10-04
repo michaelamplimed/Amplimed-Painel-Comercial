@@ -464,6 +464,7 @@ async function main() {
         'amount',
         'createdate',
         'hubspot_owner_id',
+        'closer_do_negocio',
         'dealstage',
         'hs_v2_date_entered_current_stage'
       ]
@@ -952,6 +953,42 @@ async function main() {
   const funilTime = buildFunil(flowDeals);
   const demoFlowTime = buildDemoFlow(flowDeals);
 
+  // Negócios ABERTOS por etapa (foto de hoje), por closer: Demo Realizada, SAL,
+  // Proposta Enviada e Forecast. Mesmo critério de atribuição (closer_do_negocio).
+  // Negócios abertos nessas etapas sem closer válido entram em "semCloser" para
+  // que o total do time bata exatamente com o HubSpot.
+  const ETAPAS_ABERTAS = {
+    qualifiedtobuy: 'demo',
+    presentationscheduled: 'sal',
+    decisionmakerboughtin: 'proposta',
+    contractsent: 'forecast'
+  };
+  const zeraEtapas = () =>
+    ({ demo: 0, sal: 0, proposta: 0, forecast: 0, total: 0 });
+  const etapasAbertas = {
+    porCloser: config.closers.map(c => ({
+      name: c.name,
+      nivel: c.nivel || null,
+      ownerId: Number(c.ownerId),
+      ...zeraEtapas()
+    })),
+    time: zeraEtapas(),
+    semCloser: zeraEtapas()
+  };
+  for (const d of openDeals) {
+    const k = ETAPAS_ABERTAS[d.properties.dealstage];
+    if (!k) continue;
+    const dono = closerDoDeal(d);
+    const alvo =
+      etapasAbertas.porCloser.find(x => x.ownerId === dono) ||
+      etapasAbertas.semCloser;
+    alvo[k]++;
+    alvo.total++;
+    etapasAbertas.time[k]++;
+    etapasAbertas.time.total++;
+  }
+  etapasAbertas.porCloser.forEach(x => { delete x.ownerId; });
+
   // ==========================================================
   // ESTATÍSTICAS POR CLOSER
   // ==========================================================
@@ -1368,6 +1405,8 @@ async function main() {
     funilTime,
 
     demoFlowTime,
+
+    etapasAbertas,
 
     metas: {
       closer:
