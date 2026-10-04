@@ -1,6 +1,6 @@
 {
-  "geradoEm": "2026-10-04T21:35:49.381Z",
-  "geradoEmBR": "04/10/2026, 18:35:49",
+  "geradoEm": "2026-10-04T21:47:20.480Z",
+  "geradoEmBR": "04/10/2026, 18:47:20",
   "mes": {
     "ano": 2026,
     "mes": 10,
@@ -20,7 +20,13 @@
       }
     ],
     "ganhosSemCloser": [],
-    "ganhosSemSdr": []
+    "ganhosSemSdr": [],
+    "testesExcluidos": [
+      {
+        "id": "65536970773",
+        "nome": "Bianca - Teste"
+      }
+    ]
   },
   "funilTime": {
     "sql": 21,
@@ -92,6 +98,11 @@
     "16-30d": 13,
     "31-60d": 6,
     "+60d": 4
+  },
+  "agingRisco": {
+    "qtd": 5,
+    "valor": 2433,
+    "qtdComValor": 2
   },
   "closers": [
     {
@@ -372,18 +383,18 @@
     {
       "name": "Ana",
       "sql": 8,
-      "mql": 21,
+      "mql": 20,
       "mqlEtapas": {
         "nmql": 9,
-        "cadencia": 11,
+        "cadencia": 10,
         "conexao": 0,
         "nutricao": 0,
         "ganho": 0,
         "perdido": 1,
         "outros": 0
       },
-      "mqlPctTrabalhados": 57.1,
-      "mqlParaSqlPct": 38.1,
+      "mqlPctTrabalhados": 55,
+      "mqlParaSqlPct": 40,
       "recInfluenciada": 931,
       "metaMes": 15000,
       "metaProRata": 1935.48,
