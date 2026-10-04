@@ -1,10 +1,26 @@
 {
-  "geradoEm": "2026-10-04T20:30:25.334Z",
-  "geradoEmBR": "04/10/2026, 17:30:25",
+  "geradoEm": "2026-10-04T20:54:38.072Z",
+  "geradoEmBR": "04/10/2026, 17:54:38",
   "mes": {
     "ano": 2026,
     "mes": 10,
     "chave": "2026-10"
+  },
+  "qualidade": {
+    "ganhosSemValor": [
+      {
+        "id": "65489550260",
+        "nome": "7643 ALMECORP - Novo(a) Deal",
+        "valor": 0.19
+      },
+      {
+        "id": "65572637293",
+        "nome": "46747 NOVACLIN ATENDIMENTOS MEDICOS - No",
+        "valor": 0
+      }
+    ],
+    "ganhosSemCloser": [],
+    "ganhosSemSdr": []
   },
   "metas": {
     "closer": 50000,
@@ -272,9 +288,9 @@
     {
       "name": "Jeferson",
       "sql": 4,
-      "mql": 24,
+      "mql": 25,
       "mqlEtapas": {
-        "nmql": 9,
+        "nmql": 10,
         "cadencia": 7,
         "conexao": 8,
         "nutricao": 0,
@@ -282,8 +298,8 @@
         "perdido": 0,
         "outros": 0
       },
-      "mqlPctTrabalhados": 62.5,
-      "mqlParaSqlPct": 16.7,
+      "mqlPctTrabalhados": 60,
+      "mqlParaSqlPct": 16,
       "recInfluenciada": 228,
       "metaMes": 13000,
       "metaProRata": 1677.42,
