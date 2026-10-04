@@ -1,6 +1,6 @@
 {
-  "geradoEm": "2026-10-04T22:14:29.266Z",
-  "geradoEmBR": "04/10/2026, 19:14:29",
+  "geradoEm": "2026-10-04T22:22:30.077Z",
+  "geradoEmBR": "04/10/2026, 19:22:30",
   "mes": {
     "ano": 2026,
     "mes": 10,
@@ -51,6 +51,87 @@
     "avancaram": 10,
     "avancouP": 55.6,
     "ganhoP": 38.9
+  },
+  "etapasAbertas": {
+    "porCloser": [
+      {
+        "name": "Tamara",
+        "nivel": "Sênior",
+        "demo": 4,
+        "sal": 1,
+        "proposta": 1,
+        "forecast": 0,
+        "total": 6
+      },
+      {
+        "name": "Eduardo",
+        "nivel": "Sênior",
+        "demo": 4,
+        "sal": 0,
+        "proposta": 0,
+        "forecast": 0,
+        "total": 4
+      },
+      {
+        "name": "Juliano",
+        "nivel": "Pleno",
+        "demo": 1,
+        "sal": 0,
+        "proposta": 2,
+        "forecast": 0,
+        "total": 3
+      },
+      {
+        "name": "Ariel",
+        "nivel": "Pleno",
+        "demo": 8,
+        "sal": 1,
+        "proposta": 0,
+        "forecast": 1,
+        "total": 10
+      },
+      {
+        "name": "Mayara",
+        "nivel": "Pleno",
+        "demo": 2,
+        "sal": 6,
+        "proposta": 1,
+        "forecast": 0,
+        "total": 9
+      },
+      {
+        "name": "Catiane",
+        "nivel": "Coordenadora",
+        "demo": 1,
+        "sal": 1,
+        "proposta": 0,
+        "forecast": 0,
+        "total": 2
+      },
+      {
+        "name": "Jessica",
+        "nivel": "Cross-sell",
+        "demo": 0,
+        "sal": 0,
+        "proposta": 0,
+        "forecast": 0,
+        "total": 0
+      }
+    ],
+    "time": {
+      "demo": 21,
+      "sal": 9,
+      "proposta": 4,
+      "forecast": 1,
+      "total": 35
+    },
+    "semCloser": {
+      "demo": 1,
+      "sal": 0,
+      "proposta": 0,
+      "forecast": 0,
+      "total": 1
+    }
   },
   "metas": {
     "closer": 50000,
