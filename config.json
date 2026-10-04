@@ -2,6 +2,18 @@
   "_comment": "Configuração do Painel Comercial Amplimed. As metas individuais vêm do documento oficial 'Plano de Metas Comerciais — Vigência S2 2026'. As metas mensais do time de Closers seguem a tabela consolidada do S2 2026 informada pela gestão. Metas selecionadas automaticamente pelo mês corrente.",
   "pipelineId": "default",
   "crossSellPipelineId": "713767850",
+  "prospeccaoInbound": {
+    "_comment": "Pipeline 'Gestão de Clínicas - Prospecção Inbound'. MQL = negócio criado neste pipeline no mês (entra na etapa NMQL). A etapa atual é agrupada em baldes para o painel de funil de prospecção por SDR.",
+    "pipelineId": "31467391",
+    "etapas": {
+      "nmql": ["71077487"],
+      "cadencia": ["71077488", "71077489", "71077490", "71077491", "142813015"],
+      "conexao": ["1324915282"],
+      "nutricao": ["71080960"],
+      "ganho": ["78201953"],
+      "perdido": ["71077493"]
+    }
+  },
   "timezone": "America/Sao_Paulo",
   "metasMensais": {
     "2026-07": {

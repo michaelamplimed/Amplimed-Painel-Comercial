@@ -772,6 +772,34 @@ body{display:flex;flex-direction:column;background:var(--bg);color:var(--ink)}
 .sdr-insight-fill{display:block;height:100%;border-radius:4px;background:var(--acc)}
 .sdr-insight-pct{flex:0 0 56px;width:56px;text-align:right;font-size:8px;font-weight:700;color:var(--ink2);white-space:nowrap}
 
+#sdr-tbl-wrap{flex:0 0 auto}
+#sdr-mql-panel{flex:1 1 0;min-height:0;overflow:hidden;display:flex;flex-direction:column;gap:4px;margin-top:6px;padding-top:6px;border-top:1px solid var(--border)}
+.mql-title{display:flex;justify-content:space-between;align-items:baseline;gap:8px;font-size:clamp(9px,.64vw,11px);color:#12345A;text-transform:uppercase;letter-spacing:.4px;font-weight:700;white-space:nowrap;overflow:hidden}
+.mql-title small{color:var(--ink2);font-size:clamp(8px,.52vw,10px);text-transform:none;font-weight:500;letter-spacing:0;overflow:hidden;text-overflow:ellipsis}
+.mql-legend{display:flex;flex-wrap:nowrap;gap:10px;font-size:clamp(8px,.55vw,10px);color:var(--ink2);white-space:nowrap;overflow:hidden}
+.mql-legend i{display:inline-block;width:9px;height:9px;border-radius:2px;margin-right:4px;vertical-align:-1px}
+.mql-grid{flex:1 1 0;display:grid;grid-template-columns:70px 40px minmax(0,1fr) 78px 78px;column-gap:8px;row-gap:5px;align-items:center;align-content:start;min-height:0;overflow:hidden}
+.mql-row{display:contents}
+.mql-h{font-size:clamp(8px,.52vw,9px);color:var(--ink2);text-transform:uppercase;letter-spacing:.3px;font-weight:700;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.mql-h.c,.mql-num,.mql-pct{text-align:center}
+.mql-name{font-size:clamp(9px,.64vw,11px);color:var(--ink);font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.mql-num{font-size:clamp(13px,.95vw,17px);color:var(--ink);font-weight:800;line-height:1}
+.mql-pct{font-size:clamp(9px,.64vw,11px);font-weight:800;white-space:nowrap}
+.mql-pct.good{color:var(--gn-text)}.mql-pct.mid{color:var(--bl-text)}.mql-pct.low{color:var(--rd-text)}
+.mql-bar{display:flex;height:20px;border-radius:5px;overflow:hidden;background:var(--border);min-width:0}
+.mql-seg{display:flex;align-items:center;justify-content:center;flex-basis:0;min-width:2px;overflow:hidden;font-size:clamp(8px,.58vw,10px);font-weight:800;color:#fff;line-height:1}
+.mql-seg.nmql,.mql-legend i.nmql{background:var(--rd)}
+.mql-seg.cad,.mql-legend i.cad{background:var(--bl)}
+.mql-seg.con,.mql-legend i.con{background:var(--acc)}
+.mql-seg.nut,.mql-legend i.nut{background:var(--am)}
+.mql-seg.gan,.mql-legend i.gan{background:var(--gn-text)}
+.mql-seg.per,.mql-legend i.per{background:var(--ink3)}
+.mql-row.mql-total .mql-name,.mql-row.mql-total .mql-num,.mql-row.mql-total .mql-pct{padding-top:3px;border-top:1px solid var(--border)}
+.mql-row.mql-total .mql-bar{margin-top:3px}
+.mql-alert{font-size:clamp(9px,.62vw,11px);color:var(--ink2);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.mql-alert strong{color:var(--rd-text)}
+.mql-alert.ok strong{color:var(--gn-text)}
+
 #funil-panel-body{justify-content:center}
 #team-funnel-row{display:grid;grid-template-columns:minmax(0,1fr) 26px minmax(0,1fr) 26px minmax(0,1fr);align-items:center;gap:6px;width:100%;min-width:0}
 .tf-step{box-sizing:border-box;width:100%;min-width:0;padding:10px 7px;background:var(--surface2);border:1px solid var(--border);border-radius:8px;text-align:center}
@@ -781,24 +809,24 @@ body{display:flex;flex-direction:column;background:var(--bg);color:var(--ink)}
 .tf-bar-fill{background:var(--acc)}
 .tf-arrow{min-width:0;font-size:8px;color:var(--ink2);text-align:center}
 
-.composition-layout{display:grid;grid-template-columns:minmax(80px,.75fr) minmax(0,1.4fr);gap:9px;align-items:center;width:100%;min-width:0;min-height:0}
-.donut-placeholder{width:min(100%,124px);max-width:124px;aspect-ratio:1;border-radius:50%;display:grid;place-items:center;margin:auto}
-.donut-core{width:68%;height:68%;border-radius:50%;background:var(--surface);border:1px solid var(--border);display:flex;flex-direction:column;align-items:center;justify-content:center;overflow:hidden;padding:0 6px;box-sizing:border-box}
-.donut-core strong{max-width:100%;font-size:clamp(8px,.62vw,11px);color:var(--ink);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.donut-core small{font-size:8px;color:var(--ink2)}
-.composition-details{display:flex;flex-direction:column;gap:5px;min-width:0}
-.composition-line{display:grid;grid-template-columns:9px minmax(0,1fr) auto auto;gap:5px;align-items:center;font-size:clamp(8px,.56vw,10px);color:var(--ink2);min-width:0}
-.composition-line strong{font-size:clamp(8px,.6vw,10px);color:var(--ink);white-space:nowrap}
-.composition-line small{font-size:8px;color:var(--ink2);white-space:nowrap}
-.legend-dot{width:9px;height:9px;border-radius:50%;display:inline-block}
+.composition-layout{flex:1 1 0;display:grid;grid-template-columns:auto minmax(0,1fr);grid-template-rows:minmax(0,1fr);gap:16px;align-items:center;width:100%;min-width:0;min-height:0}
+.donut-placeholder{align-self:stretch;justify-self:start;height:100%;max-height:100%;width:auto;aspect-ratio:1;border-radius:50%;display:grid;place-items:center;margin:0;min-height:0}
+.donut-core{width:66%;height:66%;border-radius:50%;background:var(--surface);border:1px solid var(--border);display:flex;flex-direction:column;align-items:center;justify-content:center;overflow:hidden;padding:0 6px;box-sizing:border-box}
+.donut-core strong{max-width:100%;font-size:clamp(11px,.75vw,15px);font-weight:800;color:var(--ink);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.donut-core small{font-size:clamp(9px,.55vw,11px);color:var(--ink2)}
+.composition-details{display:flex;flex-direction:column;justify-content:center;gap:9px;min-width:0}
+.composition-line{display:grid;grid-template-columns:12px minmax(0,1fr) auto auto;gap:7px;align-items:center;font-size:clamp(10px,.72vw,14px);color:var(--ink2);min-width:0}
+.composition-line strong{font-size:clamp(11px,.8vw,15px);color:var(--ink);white-space:nowrap}
+.composition-line small{font-size:clamp(9px,.6vw,12px);color:var(--ink2);white-space:nowrap}
+.legend-dot{width:11px;height:11px;border-radius:50%;display:inline-block}
 .legend-dot.acq{background:var(--acc)}
 .legend-dot.cross{background:var(--bl)}
-.composition-bottom{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:5px}
-.mrr-box{box-sizing:border-box;display:flex;flex-direction:column;gap:2px;min-width:0;padding:6px;border:1px solid var(--border);border-radius:7px;background:var(--surface2);color:var(--ink);overflow:hidden}
-.mrr-box small,.mrr-box div:first-child{display:block;font-size:8px;color:var(--ink2);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.mrr-box strong,.mrr-box [id],.mrr-box .js-ticket-medio{display:block;font-size:clamp(9px,.62vw,11px);color:var(--ink);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.mrr-box em{display:block;font-style:normal;font-size:8px;color:var(--ink2);white-space:normal;line-height:1.25}
-.mrr-split-track{height:6px;border-radius:5px;background:var(--border);display:flex;overflow:hidden}
+.composition-bottom{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+.mrr-box{box-sizing:border-box;display:flex;flex-direction:column;gap:3px;min-width:0;padding:8px 9px;border:1px solid var(--border);border-radius:8px;background:var(--surface2);color:var(--ink);overflow:hidden}
+.mrr-box small,.mrr-box div:first-child{display:block;font-size:clamp(9px,.58vw,11px);color:var(--ink2);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.mrr-box strong,.mrr-box [id]:not(em),.mrr-box .js-ticket-medio{display:block;font-size:clamp(13px,.95vw,18px);font-weight:800;color:var(--ink);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.mrr-box em,.mrr-box em[id]{display:block;font-style:normal;font-weight:500;font-size:clamp(9px,.52vw,10px);color:var(--ink2);white-space:normal;overflow:hidden;line-height:1.25}
+.mrr-split-track{height:9px;border-radius:5px;background:var(--border);display:flex;overflow:hidden}
 .mrr-split-fill-acq{background:var(--acc)}
 .mrr-split-fill-cross{background:var(--bl)}
 
@@ -909,6 +937,7 @@ body{display:flex;flex-direction:column;background:var(--bg);color:var(--ink)}
           <thead><tr><th>#</th><th>SDR</th><th>SQL</th><th>Receita influenciada</th><th>% da meta</th></tr></thead>
           <tbody id="tbl-sdr-mini"><tr style="background:#fff"><td>Ana</td><td>33</td><td>R$9.685,35</td></tr><tr style="background:#fff"><td>Amanda</td><td>49</td><td>R$5.049,69</td></tr><tr style="background:#fff"><td>Francisco</td><td>23</td><td>R$4.335,02</td></tr></tbody>
         </table></div>
+        <div id="sdr-mql-panel" style="display:none"></div>
       </div>
     </div>
   </div>
@@ -1326,6 +1355,79 @@ function aplicarDadosNoPainel(d){
     tblSdr.innerHTML = sdrsAtivos.length ? (linhasSdr + linhaTotalSdr) : '<tr><td colspan="3" style="text-align:center;color:var(--ink3);padding:22px 10px">Sem dados de SDR no momento</td></tr>';
     if(el('sdr-hdr-sub')){
       el('sdr-hdr-sub').textContent = sdrsAtivos.length+' SDRs ativos \u00b7 Meta '+fmtMoeda(d.metas ? d.metas.sdr : 0);
+    }
+
+    // \u2500\u2500 Funil de prospec\u00e7\u00e3o: MQLs recebidos por SDR e etapa atual \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500
+    // MQL = neg\u00f3cio criado no m\u00eas no pipeline "Prospec\u00e7\u00e3o Inbound" (campo
+    // d.sdrs[].mql / mqlEtapas, gerado pelo fetch-hubspot-data.js).
+    const mqlPanel = document.getElementById('sdr-mql-panel');
+    if(mqlPanel){
+      const temMql = sdrsAtivos.some(s=>typeof s.mql==='number');
+      if(!temMql){
+        mqlPanel.style.display = 'none';
+        mqlPanel.innerHTML = '';
+      } else {
+        const ETAPAS = [
+          ['nmql','nmql','Sem 1\u00ba contato (NMQL)'],
+          ['cadencia','cad','Em cad\u00eancia (D1\u2013D7)'],
+          ['conexao','con','Conex\u00e3o'],
+          ['nutricao','nut','Nutri\u00e7\u00e3o'],
+          ['ganho','gan','Ganho SDR'],
+          ['perdido','per','Perdido']
+        ];
+        const fmtPct = v => Number(v||0).toLocaleString('pt-BR',{minimumFractionDigits:1,maximumFractionDigits:1})+'%';
+        const toneMql = p => p>=80 ? 'good' : (p>=50 ? 'mid' : 'low');
+        const barra = (et) => '<div class="mql-bar">'+ETAPAS.map(e=>{
+          const n = (et && et[e[0]]) || 0;
+          return n>0 ? '<span class="mql-seg '+e[1]+'" style="flex-grow:'+n+'" title="'+e[2]+': '+n+'">'+n+'</span>' : '';
+        }).join('')+'</div>';
+
+        const ordenados = sdrsAtivos.slice().sort((a,b)=>(b.pctMetaProRata||0)-(a.pctMetaProRata||0));
+        const tot = {mql:0, sql:0, etapas:{}};
+        ETAPAS.forEach(e=>tot.etapas[e[0]]=0);
+
+        const linhas = ordenados.map(s=>{
+          const et = s.mqlEtapas || {};
+          const mql = s.mql || 0;
+          tot.mql += mql; tot.sql += (s.sql||0);
+          ETAPAS.forEach(e=>tot.etapas[e[0]] += (et[e[0]]||0));
+          const trab = mql>0 ? (mql-(et.nmql||0))/mql*100 : 0;
+          const conv = mql>0 ? (s.sql||0)/mql*100 : 0;
+          return '<div class="mql-row">'
+            +'<span class="mql-name">'+s.name+'</span>'
+            +'<span class="mql-num">'+mql+'</span>'
+            + barra(et)
+            +'<span class="mql-pct '+(mql>0?toneMql(trab):'')+'">'+(mql>0?fmtPct(trab):'\u2014')+'</span>'
+            +'<span class="mql-pct">'+(mql>0?fmtPct(conv):'\u2014')+'</span>'
+            +'</div>';
+        }).join('');
+
+        const trabTot = tot.mql>0 ? (tot.mql-tot.etapas.nmql)/tot.mql*100 : 0;
+        const convTot = tot.mql>0 ? tot.sql/tot.mql*100 : 0;
+        const linhaTotal = '<div class="mql-row mql-total">'
+          +'<span class="mql-name">Time</span>'
+          +'<span class="mql-num">'+tot.mql+'</span>'
+          + barra(tot.etapas)
+          +'<span class="mql-pct '+(tot.mql>0?toneMql(trabTot):'')+'">'+(tot.mql>0?fmtPct(trabTot):'\u2014')+'</span>'
+          +'<span class="mql-pct">'+(tot.mql>0?fmtPct(convTot):'\u2014')+'</span>'
+          +'</div>';
+
+        // Alerta de gest\u00e3o: fila de MQLs ainda sem 1\u00ba contato
+        const filas = ordenados.map(s=>({nome:s.name, n:(s.mqlEtapas&&s.mqlEtapas.nmql)||0})).sort((a,b)=>b.n-a.n);
+        const alerta = tot.etapas.nmql>0
+          ? '<div class="mql-alert">\u26a0 <strong>'+tot.etapas.nmql+' MQLs sem 1\u00ba contato</strong> ('+Math.round(tot.etapas.nmql/Math.max(tot.mql,1)*100)+'% do m\u00eas) \u00b7 maior fila: <strong>'+filas[0].nome+' ('+filas[0].n+')</strong></div>'
+          : '<div class="mql-alert ok">\u2714 <strong>Todos os MQLs do m\u00eas j\u00e1 foram abordados</strong></div>';
+
+        mqlPanel.innerHTML =
+          '<div class="mql-title"><span>Funil de prospec\u00e7\u00e3o \u2014 MQL por etapa</span><small>MQLs recebidos no m\u00eas (Prospec\u00e7\u00e3o Inbound)</small></div>'
+          +'<div class="mql-legend">'+ETAPAS.map(e=>'<span><i class="'+e[1]+'"></i>'+e[2]+'</span>').join('')+'</div>'
+          +'<div class="mql-grid" style="grid-template-rows:14px repeat('+(ordenados.length+1)+',minmax(22px,40px))">'
+            +'<span class="mql-h">SDR</span><span class="mql-h c">MQL</span><span class="mql-h">Etapa atual dos MQLs</span><span class="mql-h c" title="MQLs que sa\u00edram de NMQL">Abordados</span><span class="mql-h c" title="SQL do m\u00eas \u00f7 MQL do m\u00eas">SQL / MQL</span>'
+            + linhas + linhaTotal
+          +'</div>'
+          + alerta;
+        mqlPanel.style.display = '';
+      }
     }
   }
 
