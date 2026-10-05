@@ -1,6 +1,6 @@
 {
-  "geradoEm": "2026-10-05T18:00:31.015Z",
-  "geradoEmBR": "05/10/2026, 15:00:31",
+  "geradoEm": "2026-10-05T18:30:27.392Z",
+  "geradoEmBR": "05/10/2026, 15:30:27",
   "mes": {
     "ano": 2026,
     "mes": 10,
@@ -30,14 +30,14 @@
   },
   "funilTime": {
     "sql": 24,
-    "demo": 13,
-    "sal": 9,
-    "proposta": 7,
+    "demo": 14,
+    "sal": 10,
+    "proposta": 8,
     "won": 6,
     "lost": 1,
-    "sqlToDemoP": 54.2,
-    "demoToSalP": 69.2,
-    "salToPropP": 77.8,
+    "sqlToDemoP": 58.3,
+    "demoToSalP": 71.4,
+    "salToPropP": 80,
     "winRateP": 85.7
   },
   "demoFlowTime": {
@@ -87,8 +87,8 @@
         "demo": 8,
         "sal": 1,
         "proposta": 0,
-        "forecast": 2,
-        "total": 11
+        "forecast": 3,
+        "total": 12
       },
       {
         "name": "Mayara",
@@ -122,8 +122,8 @@
       "demo": 20,
       "sal": 9,
       "proposta": 3,
-      "forecast": 2,
-      "total": 34
+      "forecast": 3,
+      "total": 35
     },
     "semCloser": {
       "demo": 1,
@@ -322,14 +322,14 @@
       "pctMetaProRata": 9.4,
       "funil": {
         "sql": 4,
-        "demo": 1,
-        "sal": 0,
-        "proposta": 0,
+        "demo": 2,
+        "sal": 1,
+        "proposta": 1,
         "won": 0,
         "lost": 0,
-        "sqlToDemoP": 25,
-        "demoToSalP": 0,
-        "salToPropP": null,
+        "sqlToDemoP": 50,
+        "demoToSalP": 50,
+        "salToPropP": 100,
         "winRateP": null
       },
       "demoFlow": {
@@ -467,10 +467,10 @@
     {
       "name": "Ana",
       "sql": 8,
-      "mql": 21,
+      "mql": 22,
       "mqlEtapas": {
         "nmql": 0,
-        "cadencia": 19,
+        "cadencia": 20,
         "conexao": 0,
         "nutricao": 0,
         "ganho": 0,
@@ -478,7 +478,7 @@
         "outros": 0
       },
       "mqlPctTrabalhados": 100,
-      "mqlParaSqlPct": 38.1,
+      "mqlParaSqlPct": 36.4,
       "recInfluenciada": 1070,
       "metaMes": 15000,
       "metaProRata": 2419.35,
