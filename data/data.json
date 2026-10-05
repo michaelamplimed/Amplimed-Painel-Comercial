@@ -1,6 +1,6 @@
 {
-  "geradoEm": "2026-10-05T19:00:44.489Z",
-  "geradoEmBR": "05/10/2026, 16:00:44",
+  "geradoEm": "2026-10-05T19:07:33.301Z",
+  "geradoEmBR": "05/10/2026, 16:07:33",
   "mes": {
     "ano": 2026,
     "mes": 10,
@@ -33,12 +33,12 @@
     "demo": 16,
     "sal": 11,
     "proposta": 9,
-    "won": 6,
+    "won": 7,
     "lost": 1,
     "sqlToDemoP": 64,
     "demoToSalP": 68.8,
     "salToPropP": 81.8,
-    "winRateP": 85.7
+    "winRateP": 87.5
   },
   "demoFlowTime": {
     "demos": 24,
@@ -87,8 +87,8 @@
         "demo": 8,
         "sal": 1,
         "proposta": 0,
-        "forecast": 3,
-        "total": 12
+        "forecast": 2,
+        "total": 11
       },
       {
         "name": "Mayara",
@@ -122,8 +122,8 @@
       "demo": 21,
       "sal": 8,
       "proposta": 4,
-      "forecast": 4,
-      "total": 37
+      "forecast": 3,
+      "total": 36
     },
     "semCloser": {
       "demo": 1,
@@ -138,13 +138,13 @@
     "sdr": 43000
   },
   "kpis": {
-    "receitaRealizada": 3281.63,
+    "receitaRealizada": 3501.69,
     "metaMensal": 50000,
-    "pctMeta": 6.6,
-    "pipelineAberto": 12534.26,
-    "pipelineAbertoQtd": 55,
-    "pipelineAbertoComValor": 17,
-    "mediaDiaria": 656.33
+    "pctMeta": 7,
+    "pipelineAberto": 12314.2,
+    "pipelineAbertoQtd": 54,
+    "pipelineAbertoComValor": 16,
+    "mediaDiaria": 700.34
   },
   "receitaAcumulada": {
     "labels": [
@@ -159,7 +159,7 @@
       2842.63,
       2842.63,
       2842.63,
-      3281.63
+      3501.69
     ],
     "meta": [
       1612.9,
@@ -170,14 +170,14 @@
     ]
   },
   "aging": {
-    "0-7d": 34,
+    "0-7d": 33,
     "8-15d": 9,
     "16-30d": 8,
     "31-60d": 4,
     "+60d": 0
   },
   "agingCriacao": {
-    "0-7d": 23,
+    "0-7d": 22,
     "8-15d": 12,
     "16-30d": 12,
     "31-60d": 4,
@@ -309,28 +309,28 @@
     {
       "name": "Ariel",
       "nivel": "Pleno",
-      "ganhos": 1,
+      "ganhos": 2,
       "perdidos": 0,
       "crossSellGanhos": 0,
-      "aquisicaoAmount": 139,
+      "aquisicaoAmount": 359.06,
       "crossSellAmount": 0,
-      "totalAmount": 139,
-      "ticketMedio": 139,
+      "totalAmount": 359.06,
+      "ticketMedio": 179.53,
       "winRate": 100,
       "metaMes": 9200,
       "metaProRata": 1483.87,
-      "pctMetaProRata": 9.4,
+      "pctMetaProRata": 24.2,
       "funil": {
         "sql": 4,
         "demo": 2,
         "sal": 1,
         "proposta": 1,
-        "won": 0,
+        "won": 1,
         "lost": 0,
         "sqlToDemoP": 50,
         "demoToSalP": 50,
         "salToPropP": 100,
-        "winRateP": null
+        "winRateP": 100
       },
       "demoFlow": {
         "demos": 2,
@@ -499,10 +499,10 @@
       },
       "mqlPctTrabalhados": 100,
       "mqlParaSqlPct": 33.3,
-      "recInfluenciada": 985.54,
+      "recInfluenciada": 1205.6,
       "metaMes": 15000,
       "metaProRata": 2419.35,
-      "pctMetaProRata": 40.7
+      "pctMetaProRata": 49.8
     },
     {
       "name": "Jeferson",
