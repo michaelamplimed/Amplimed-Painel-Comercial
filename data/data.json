@@ -1,6 +1,6 @@
 {
-  "geradoEm": "2026-10-05T11:30:27.404Z",
-  "geradoEmBR": "05/10/2026, 08:30:27",
+  "geradoEm": "2026-10-05T12:00:33.941Z",
+  "geradoEmBR": "05/10/2026, 09:00:33",
   "mes": {
     "ano": 2026,
     "mes": 10,
@@ -30,27 +30,27 @@
   },
   "funilTime": {
     "sql": 21,
-    "demo": 9,
+    "demo": 11,
     "sal": 7,
     "proposta": 6,
     "won": 5,
     "lost": 1,
-    "sqlToDemoP": 42.9,
-    "demoToSalP": 77.8,
+    "sqlToDemoP": 52.4,
+    "demoToSalP": 63.6,
     "salToPropP": 85.7,
     "winRateP": 83.3
   },
   "demoFlowTime": {
-    "demos": 18,
-    "parouDemo": 5,
+    "demos": 20,
+    "parouDemo": 7,
     "sal": 2,
     "proposta": 1,
     "ganho": 7,
     "perdido": 3,
     "voltou": 0,
     "avancaram": 10,
-    "avancouP": 55.6,
-    "ganhoP": 38.9
+    "avancouP": 50,
+    "ganhoP": 35
   },
   "etapasAbertas": {
     "porCloser": [
@@ -66,29 +66,29 @@
       {
         "name": "Eduardo",
         "nivel": "Sênior",
-        "demo": 4,
+        "demo": 5,
         "sal": 0,
         "proposta": 0,
         "forecast": 0,
-        "total": 4
+        "total": 5
       },
       {
         "name": "Juliano",
         "nivel": "Pleno",
         "demo": 1,
         "sal": 0,
-        "proposta": 2,
+        "proposta": 1,
         "forecast": 0,
-        "total": 3
+        "total": 2
       },
       {
         "name": "Ariel",
         "nivel": "Pleno",
-        "demo": 8,
+        "demo": 9,
         "sal": 1,
         "proposta": 0,
         "forecast": 1,
-        "total": 10
+        "total": 11
       },
       {
         "name": "Mayara",
@@ -119,11 +119,11 @@
       }
     ],
     "time": {
-      "demo": 21,
+      "demo": 23,
       "sal": 9,
-      "proposta": 4,
+      "proposta": 3,
       "forecast": 1,
-      "total": 35
+      "total": 36
     },
     "semCloser": {
       "demo": 1,
@@ -141,9 +141,9 @@
     "receitaRealizada": 2842.63,
     "metaMensal": 50000,
     "pctMeta": 5.7,
-    "pipelineAberto": 8793.6,
-    "pipelineAbertoQtd": 57,
-    "pipelineAbertoComValor": 12,
+    "pipelineAberto": 8534.7,
+    "pipelineAbertoQtd": 56,
+    "pipelineAbertoComValor": 11,
     "mediaDiaria": 568.53
   },
   "receitaAcumulada": {
@@ -172,7 +172,7 @@
   "aging": {
     "0-7d": 33,
     "8-15d": 10,
-    "16-30d": 9,
+    "16-30d": 8,
     "31-60d": 5,
     "+60d": 0
   },
@@ -180,7 +180,7 @@
     "0-7d": 22,
     "8-15d": 12,
     "16-30d": 13,
-    "31-60d": 6,
+    "31-60d": 5,
     "+60d": 4
   },
   "agingRisco": {
@@ -244,40 +244,40 @@
       "pctMetaProRata": 14.2,
       "funil": {
         "sql": 7,
-        "demo": 3,
+        "demo": 4,
         "sal": 2,
         "proposta": 2,
         "won": 2,
         "lost": 0,
-        "sqlToDemoP": 42.9,
-        "demoToSalP": 66.7,
+        "sqlToDemoP": 57.1,
+        "demoToSalP": 50,
         "salToPropP": 100,
         "winRateP": 100
       },
       "demoFlow": {
-        "demos": 4,
-        "parouDemo": 2,
+        "demos": 5,
+        "parouDemo": 3,
         "sal": 0,
         "proposta": 0,
         "ganho": 2,
         "perdido": 0,
         "voltou": 0,
         "avancaram": 2,
-        "avancouP": 50,
-        "ganhoP": 50
+        "avancouP": 40,
+        "ganhoP": 40
       }
     },
     {
       "name": "Juliano",
       "nivel": "Pleno",
       "ganhos": 3,
-      "perdidos": 1,
+      "perdidos": 2,
       "crossSellGanhos": 0,
       "aquisicaoAmount": 536.9,
       "crossSellAmount": 0,
       "totalAmount": 536.9,
       "ticketMedio": 178.97,
-      "winRate": 75,
+      "winRate": 60,
       "metaMes": 9200,
       "metaProRata": 1483.87,
       "pctMetaProRata": 36.2,
@@ -322,19 +322,19 @@
       "pctMetaProRata": 9.4,
       "funil": {
         "sql": 3,
-        "demo": 0,
+        "demo": 1,
         "sal": 0,
         "proposta": 0,
         "won": 0,
         "lost": 0,
-        "sqlToDemoP": 0,
-        "demoToSalP": null,
+        "sqlToDemoP": 33.3,
+        "demoToSalP": 0,
         "salToPropP": null,
         "winRateP": null
       },
       "demoFlow": {
-        "demos": 1,
-        "parouDemo": 1,
+        "demos": 2,
+        "parouDemo": 2,
         "sal": 0,
         "proposta": 0,
         "ganho": 0,
@@ -510,8 +510,8 @@
       "mql": 26,
       "mqlEtapas": {
         "nmql": 0,
-        "cadencia": 26,
-        "conexao": 0,
+        "cadencia": 16,
+        "conexao": 10,
         "nutricao": 0,
         "ganho": 0,
         "perdido": 0,
