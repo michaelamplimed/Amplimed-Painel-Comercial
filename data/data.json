@@ -1,6 +1,6 @@
 {
-  "geradoEm": "2026-10-05T12:30:25.519Z",
-  "geradoEmBR": "05/10/2026, 09:30:25",
+  "geradoEm": "2026-10-05T13:00:31.904Z",
+  "geradoEmBR": "05/10/2026, 10:00:31",
   "mes": {
     "ano": 2026,
     "mes": 10,
@@ -29,28 +29,28 @@
     ]
   },
   "funilTime": {
-    "sql": 21,
-    "demo": 11,
-    "sal": 7,
+    "sql": 22,
+    "demo": 12,
+    "sal": 8,
     "proposta": 6,
     "won": 5,
     "lost": 1,
-    "sqlToDemoP": 52.4,
-    "demoToSalP": 63.6,
-    "salToPropP": 85.7,
+    "sqlToDemoP": 54.5,
+    "demoToSalP": 66.7,
+    "salToPropP": 75,
     "winRateP": 83.3
   },
   "demoFlowTime": {
-    "demos": 20,
-    "parouDemo": 7,
-    "sal": 2,
+    "demos": 21,
+    "parouDemo": 6,
+    "sal": 3,
     "proposta": 1,
     "ganho": 7,
-    "perdido": 3,
+    "perdido": 4,
     "voltou": 0,
-    "avancaram": 10,
-    "avancouP": 50,
-    "ganhoP": 35
+    "avancaram": 11,
+    "avancouP": 52.4,
+    "ganhoP": 33.3
   },
   "etapasAbertas": {
     "porCloser": [
@@ -67,10 +67,10 @@
         "name": "Eduardo",
         "nivel": "Sênior",
         "demo": 5,
-        "sal": 0,
+        "sal": 1,
         "proposta": 0,
         "forecast": 0,
-        "total": 5
+        "total": 6
       },
       {
         "name": "Juliano",
@@ -93,11 +93,11 @@
       {
         "name": "Mayara",
         "nivel": "Pleno",
-        "demo": 2,
-        "sal": 6,
+        "demo": 0,
+        "sal": 5,
         "proposta": 1,
         "forecast": 0,
-        "total": 9
+        "total": 6
       },
       {
         "name": "Catiane",
@@ -119,11 +119,11 @@
       }
     ],
     "time": {
-      "demo": 23,
+      "demo": 21,
       "sal": 9,
       "proposta": 3,
       "forecast": 1,
-      "total": 36
+      "total": 34
     },
     "semCloser": {
       "demo": 1,
@@ -141,9 +141,9 @@
     "receitaRealizada": 2842.63,
     "metaMensal": 50000,
     "pctMeta": 5.7,
-    "pipelineAberto": 10067.2,
-    "pipelineAbertoQtd": 55,
-    "pipelineAbertoComValor": 12,
+    "pipelineAberto": 10316.2,
+    "pipelineAbertoQtd": 53,
+    "pipelineAbertoComValor": 13,
     "mediaDiaria": 568.53
   },
   "receitaAcumulada": {
@@ -170,7 +170,7 @@
     ]
   },
   "aging": {
-    "0-7d": 33,
+    "0-7d": 31,
     "8-15d": 10,
     "16-30d": 8,
     "31-60d": 4,
@@ -178,8 +178,8 @@
   },
   "agingCriacao": {
     "0-7d": 22,
-    "8-15d": 12,
-    "16-30d": 13,
+    "8-15d": 11,
+    "16-30d": 12,
     "31-60d": 4,
     "+60d": 4
   },
@@ -244,27 +244,27 @@
       "pctMetaProRata": 14.2,
       "funil": {
         "sql": 6,
-        "demo": 4,
-        "sal": 2,
+        "demo": 5,
+        "sal": 3,
         "proposta": 2,
         "won": 2,
         "lost": 0,
-        "sqlToDemoP": 66.7,
-        "demoToSalP": 50,
-        "salToPropP": 100,
+        "sqlToDemoP": 83.3,
+        "demoToSalP": 60,
+        "salToPropP": 66.7,
         "winRateP": 100
       },
       "demoFlow": {
-        "demos": 5,
+        "demos": 6,
         "parouDemo": 3,
-        "sal": 0,
+        "sal": 1,
         "proposta": 0,
         "ganho": 2,
         "perdido": 0,
         "voltou": 0,
-        "avancaram": 2,
-        "avancouP": 40,
-        "ganhoP": 40
+        "avancaram": 3,
+        "avancouP": 50,
+        "ganhoP": 33.3
       }
     },
     {
@@ -321,13 +321,13 @@
       "metaProRata": 1483.87,
       "pctMetaProRata": 9.4,
       "funil": {
-        "sql": 3,
+        "sql": 4,
         "demo": 1,
         "sal": 0,
         "proposta": 0,
         "won": 0,
         "lost": 0,
-        "sqlToDemoP": 33.3,
+        "sqlToDemoP": 25,
         "demoToSalP": 0,
         "salToPropP": null,
         "winRateP": null
@@ -349,13 +349,13 @@
       "name": "Mayara",
       "nivel": "Pleno",
       "ganhos": 4,
-      "perdidos": 2,
+      "perdidos": 5,
       "crossSellGanhos": 0,
       "aquisicaoAmount": 836.19,
       "crossSellAmount": 0,
       "totalAmount": 836.19,
       "ticketMedio": 209.05,
-      "winRate": 66.7,
+      "winRate": 44.4,
       "metaMes": 9200,
       "metaProRata": 1483.87,
       "pctMetaProRata": 56.4,
@@ -373,11 +373,11 @@
       },
       "demoFlow": {
         "demos": 5,
-        "parouDemo": 1,
+        "parouDemo": 0,
         "sal": 2,
         "proposta": 0,
         "ganho": 2,
-        "perdido": 0,
+        "perdido": 1,
         "voltou": 0,
         "avancaram": 4,
         "avancouP": 80,
