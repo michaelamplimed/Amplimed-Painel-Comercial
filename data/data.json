@@ -1,6 +1,6 @@
 {
-  "geradoEm": "2026-10-05T12:00:33.941Z",
-  "geradoEmBR": "05/10/2026, 09:00:33",
+  "geradoEm": "2026-10-05T12:30:25.519Z",
+  "geradoEmBR": "05/10/2026, 09:30:25",
   "mes": {
     "ano": 2026,
     "mes": 10,
@@ -141,9 +141,9 @@
     "receitaRealizada": 2842.63,
     "metaMensal": 50000,
     "pctMeta": 5.7,
-    "pipelineAberto": 8534.7,
-    "pipelineAbertoQtd": 56,
-    "pipelineAbertoComValor": 11,
+    "pipelineAberto": 10067.2,
+    "pipelineAbertoQtd": 55,
+    "pipelineAbertoComValor": 12,
     "mediaDiaria": 568.53
   },
   "receitaAcumulada": {
@@ -173,18 +173,18 @@
     "0-7d": 33,
     "8-15d": 10,
     "16-30d": 8,
-    "31-60d": 5,
+    "31-60d": 4,
     "+60d": 0
   },
   "agingCriacao": {
     "0-7d": 22,
     "8-15d": 12,
     "16-30d": 13,
-    "31-60d": 5,
+    "31-60d": 4,
     "+60d": 4
   },
   "agingRisco": {
-    "qtd": 5,
+    "qtd": 4,
     "valor": 2433,
     "qtdComValor": 2
   },
@@ -204,13 +204,13 @@
       "metaProRata": 1806.45,
       "pctMetaProRata": 20.8,
       "funil": {
-        "sql": 4,
+        "sql": 5,
         "demo": 2,
         "sal": 1,
         "proposta": 1,
         "won": 1,
         "lost": 1,
-        "sqlToDemoP": 50,
+        "sqlToDemoP": 40,
         "demoToSalP": 50,
         "salToPropP": 100,
         "winRateP": 50
@@ -232,24 +232,24 @@
       "name": "Eduardo",
       "nivel": "Sênior",
       "ganhos": 2,
-      "perdidos": 1,
+      "perdidos": 2,
       "crossSellGanhos": 0,
       "aquisicaoAmount": 257.15,
       "crossSellAmount": 0,
       "totalAmount": 257.15,
       "ticketMedio": 128.57,
-      "winRate": 66.7,
+      "winRate": 50,
       "metaMes": 11200,
       "metaProRata": 1806.45,
       "pctMetaProRata": 14.2,
       "funil": {
-        "sql": 7,
+        "sql": 6,
         "demo": 4,
         "sal": 2,
         "proposta": 2,
         "won": 2,
         "lost": 0,
-        "sqlToDemoP": 57.1,
+        "sqlToDemoP": 66.7,
         "demoToSalP": 50,
         "salToPropP": 100,
         "winRateP": 100
