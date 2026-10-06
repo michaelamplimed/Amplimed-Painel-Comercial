@@ -1,6 +1,6 @@
 {
-  "geradoEm": "2026-10-06T11:30:29.840Z",
-  "geradoEmBR": "06/10/2026, 08:30:29",
+  "geradoEm": "2026-10-06T12:00:32.494Z",
+  "geradoEmBR": "06/10/2026, 09:00:32",
   "mes": {
     "ano": 2026,
     "mes": 10,
@@ -41,36 +41,36 @@
     "winRateP": 88.9
   },
   "demoFlowTime": {
-    "demos": 25,
-    "parouDemo": 7,
+    "demos": 26,
+    "parouDemo": 8,
     "sal": 3,
     "proposta": 2,
     "ganho": 9,
     "perdido": 4,
     "voltou": 0,
     "avancaram": 14,
-    "avancouP": 56,
-    "ganhoP": 36
+    "avancouP": 53.8,
+    "ganhoP": 34.6
   },
   "etapasAbertas": {
     "porCloser": [
       {
         "name": "Tamara",
         "nivel": "Sênior",
-        "demo": 4,
+        "demo": 5,
         "sal": 0,
         "proposta": 2,
         "forecast": 0,
-        "total": 6
+        "total": 7
       },
       {
         "name": "Eduardo",
         "nivel": "Sênior",
-        "demo": 6,
+        "demo": 5,
         "sal": 1,
         "proposta": 0,
         "forecast": 0,
-        "total": 7
+        "total": 6
       },
       {
         "name": "Juliano",
@@ -141,9 +141,9 @@
     "receitaRealizada": 3978.69,
     "metaMensal": 50000,
     "pctMeta": 8,
-    "pipelineAberto": 12175.2,
+    "pipelineAberto": 11806.3,
     "pipelineAbertoQtd": 52,
-    "pipelineAbertoComValor": 15,
+    "pipelineAbertoComValor": 14,
     "mediaDiaria": 663.12
   },
   "receitaAcumulada": {
@@ -173,16 +173,16 @@
     ]
   },
   "aging": {
-    "0-7d": 32,
-    "8-15d": 8,
+    "0-7d": 33,
+    "8-15d": 7,
     "16-30d": 8,
     "31-60d": 4,
     "+60d": 0
   },
   "agingCriacao": {
-    "0-7d": 21,
+    "0-7d": 22,
     "8-15d": 11,
-    "16-30d": 12,
+    "16-30d": 11,
     "31-60d": 4,
     "+60d": 4
   },
@@ -219,29 +219,29 @@
         "winRateP": 50
       },
       "demoFlow": {
-        "demos": 6,
-        "parouDemo": 0,
+        "demos": 7,
+        "parouDemo": 1,
         "sal": 0,
         "proposta": 1,
         "ganho": 2,
         "perdido": 3,
         "voltou": 0,
         "avancaram": 3,
-        "avancouP": 50,
-        "ganhoP": 33.3
+        "avancouP": 42.9,
+        "ganhoP": 28.6
       }
     },
     {
       "name": "Eduardo",
       "nivel": "Sênior",
       "ganhos": 3,
-      "perdidos": 2,
+      "perdidos": 3,
       "crossSellGanhos": 0,
       "aquisicaoAmount": 396.15,
       "crossSellAmount": 0,
       "totalAmount": 396.15,
       "ticketMedio": 132.05,
-      "winRate": 60,
+      "winRate": 50,
       "metaMes": 11200,
       "metaProRata": 2167.74,
       "pctMetaProRata": 18.3,
@@ -470,10 +470,10 @@
     {
       "name": "Ana",
       "sql": 8,
-      "mql": 30,
+      "mql": 33,
       "mqlEtapas": {
         "nmql": 0,
-        "cadencia": 28,
+        "cadencia": 31,
         "conexao": 0,
         "nutricao": 0,
         "ganho": 0,
@@ -481,7 +481,7 @@
         "outros": 0
       },
       "mqlPctTrabalhados": 100,
-      "mqlParaSqlPct": 26.7,
+      "mqlParaSqlPct": 24.2,
       "recInfluenciada": 1159,
       "metaMes": 15000,
       "metaProRata": 2903.23,
@@ -490,10 +490,10 @@
     {
       "name": "Amanda",
       "sql": 8,
-      "mql": 31,
+      "mql": 32,
       "mqlEtapas": {
         "nmql": 0,
-        "cadencia": 25,
+        "cadencia": 26,
         "conexao": 1,
         "nutricao": 0,
         "ganho": 0,
@@ -501,7 +501,7 @@
         "outros": 0
       },
       "mqlPctTrabalhados": 100,
-      "mqlParaSqlPct": 25.8,
+      "mqlParaSqlPct": 25,
       "recInfluenciada": 1593.6,
       "metaMes": 15000,
       "metaProRata": 2903.23,
@@ -510,18 +510,18 @@
     {
       "name": "Jeferson",
       "sql": 11,
-      "mql": 28,
+      "mql": 26,
       "mqlEtapas": {
-        "nmql": 6,
-        "cadencia": 19,
+        "nmql": 0,
+        "cadencia": 23,
         "conexao": 3,
         "nutricao": 0,
         "ganho": 0,
         "perdido": 0,
         "outros": 0
       },
-      "mqlPctTrabalhados": 78.6,
-      "mqlParaSqlPct": 39.3,
+      "mqlPctTrabalhados": 100,
+      "mqlParaSqlPct": 42.3,
       "recInfluenciada": 228,
       "metaMes": 13000,
       "metaProRata": 2516.13,
