@@ -1,6 +1,6 @@
 {
-  "geradoEm": "2026-10-06T18:30:26.525Z",
-  "geradoEmBR": "06/10/2026, 15:30:26",
+  "geradoEm": "2026-10-06T19:00:31.944Z",
+  "geradoEmBR": "06/10/2026, 16:00:31",
   "mes": {
     "ano": 2026,
     "mes": 10,
@@ -138,13 +138,13 @@
     "sdr": 43000
   },
   "kpis": {
-    "receitaRealizada": 4067.69,
+    "receitaRealizada": 4267.69,
     "metaMensal": 50000,
-    "pctMeta": 8.1,
+    "pctMeta": 8.5,
     "pipelineAberto": 13055.3,
     "pipelineAbertoQtd": 57,
     "pipelineAbertoComValor": 16,
-    "mediaDiaria": 677.95
+    "mediaDiaria": 711.28
   },
   "receitaAcumulada": {
     "labels": [
@@ -161,7 +161,7 @@
       2842.63,
       2842.63,
       3590.69,
-      4067.69
+      4267.69
     ],
     "meta": [
       1612.9,
@@ -431,15 +431,15 @@
       "nivel": "Cross-sell",
       "ganhos": 0,
       "perdidos": 0,
-      "crossSellGanhos": 7,
+      "crossSellGanhos": 8,
       "aquisicaoAmount": 0,
-      "crossSellAmount": 998.09,
-      "totalAmount": 998.09,
+      "crossSellAmount": 1198.09,
+      "totalAmount": 1198.09,
       "ticketMedio": 0,
       "winRate": 0,
       "metaMes": 6000,
       "metaProRata": 1161.29,
-      "pctMetaProRata": 85.9,
+      "pctMetaProRata": 103.2,
       "funil": {
         "sql": 0,
         "demo": 0,
@@ -470,18 +470,18 @@
     {
       "name": "Ana",
       "sql": 10,
-      "mql": 33,
+      "mql": 34,
       "mqlEtapas": {
         "nmql": 0,
         "cadencia": 31,
-        "conexao": 0,
+        "conexao": 1,
         "nutricao": 0,
         "ganho": 0,
         "perdido": 2,
         "outros": 0
       },
       "mqlPctTrabalhados": 100,
-      "mqlParaSqlPct": 30.3,
+      "mqlParaSqlPct": 29.4,
       "recInfluenciada": 1159,
       "metaMes": 15000,
       "metaProRata": 2903.23,
@@ -493,11 +493,11 @@
       "mql": 36,
       "mqlEtapas": {
         "nmql": 0,
-        "cadencia": 28,
+        "cadencia": 27,
         "conexao": 1,
         "nutricao": 0,
         "ganho": 0,
-        "perdido": 7,
+        "perdido": 8,
         "outros": 0
       },
       "mqlPctTrabalhados": 100,
