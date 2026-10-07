@@ -1,6 +1,6 @@
 {
-  "geradoEm": "2026-10-07T12:00:32.006Z",
-  "geradoEmBR": "07/10/2026, 09:00:32",
+  "geradoEm": "2026-10-07T12:30:28.236Z",
+  "geradoEmBR": "07/10/2026, 09:30:28",
   "mes": {
     "ano": 2026,
     "mes": 10,
@@ -31,25 +31,25 @@
   "funilTime": {
     "sql": 38,
     "demo": 27,
-    "sal": 18,
+    "sal": 19,
     "proposta": 14,
     "won": 11,
     "lost": 2,
     "sqlToDemoP": 71.1,
-    "demoToSalP": 66.7,
-    "salToPropP": 77.8,
+    "demoToSalP": 70.4,
+    "salToPropP": 73.7,
     "winRateP": 84.6
   },
   "demoFlowTime": {
     "demos": 36,
-    "parouDemo": 11,
-    "sal": 5,
+    "parouDemo": 10,
+    "sal": 6,
     "proposta": 3,
     "ganho": 12,
     "perdido": 5,
     "voltou": 0,
-    "avancaram": 20,
-    "avancouP": 55.6,
+    "avancaram": 21,
+    "avancouP": 58.3,
     "ganhoP": 33.3
   },
   "etapasAbertas": {
@@ -93,8 +93,8 @@
       {
         "name": "Mayara",
         "nivel": "Pleno",
-        "demo": 2,
-        "sal": 4,
+        "demo": 1,
+        "sal": 5,
         "proposta": 1,
         "forecast": 0,
         "total": 7
@@ -119,8 +119,8 @@
       }
     ],
     "time": {
-      "demo": 25,
-      "sal": 9,
+      "demo": 24,
+      "sal": 10,
       "proposta": 5,
       "forecast": 1,
       "total": 40
@@ -183,8 +183,8 @@
     "+60d": 0
   },
   "agingCriacao": {
-    "0-7d": 27,
-    "8-15d": 11,
+    "0-7d": 26,
+    "8-15d": 12,
     "16-30d": 11,
     "31-60d": 4,
     "+60d": 5
@@ -368,25 +368,25 @@
       "funil": {
         "sql": 7,
         "demo": 6,
-        "sal": 4,
+        "sal": 5,
         "proposta": 3,
         "won": 3,
         "lost": 0,
         "sqlToDemoP": 85.7,
-        "demoToSalP": 66.7,
-        "salToPropP": 75,
+        "demoToSalP": 83.3,
+        "salToPropP": 60,
         "winRateP": 100
       },
       "demoFlow": {
         "demos": 8,
-        "parouDemo": 2,
-        "sal": 2,
+        "parouDemo": 1,
+        "sal": 3,
         "proposta": 0,
         "ganho": 3,
         "perdido": 1,
         "voltou": 0,
-        "avancaram": 5,
-        "avancouP": 62.5,
+        "avancaram": 6,
+        "avancouP": 75,
         "ganhoP": 37.5
       }
     },
@@ -493,10 +493,10 @@
     {
       "name": "Amanda",
       "sql": 14,
-      "mql": 40,
+      "mql": 41,
       "mqlEtapas": {
         "nmql": 0,
-        "cadencia": 31,
+        "cadencia": 32,
         "conexao": 0,
         "nutricao": 0,
         "ganho": 0,
@@ -504,7 +504,7 @@
         "outros": 0
       },
       "mqlPctTrabalhados": 100,
-      "mqlParaSqlPct": 35,
+      "mqlParaSqlPct": 34.1,
       "recInfluenciada": 1771.6,
       "metaMes": 15000,
       "metaProRata": 3387.1,
@@ -513,10 +513,10 @@
     {
       "name": "Jeferson",
       "sql": 13,
-      "mql": 36,
+      "mql": 37,
       "mqlEtapas": {
         "nmql": 0,
-        "cadencia": 35,
+        "cadencia": 36,
         "conexao": 0,
         "nutricao": 0,
         "ganho": 0,
@@ -524,7 +524,7 @@
         "outros": 0
       },
       "mqlPctTrabalhados": 100,
-      "mqlParaSqlPct": 36.1,
+      "mqlParaSqlPct": 35.1,
       "recInfluenciada": 228,
       "metaMes": 13000,
       "metaProRata": 2935.48,
