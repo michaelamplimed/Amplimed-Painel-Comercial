@@ -1,6 +1,6 @@
 {
-  "geradoEm": "2026-10-07T13:00:34.798Z",
-  "geradoEmBR": "07/10/2026, 10:00:34",
+  "geradoEm": "2026-10-07T13:31:02.260Z",
+  "geradoEmBR": "07/10/2026, 10:31:02",
   "mes": {
     "ano": 2026,
     "mes": 10,
@@ -29,22 +29,22 @@
     ]
   },
   "funilTime": {
-    "sql": 39,
+    "sql": 40,
     "demo": 27,
     "sal": 19,
-    "proposta": 14,
+    "proposta": 15,
     "won": 11,
     "lost": 2,
-    "sqlToDemoP": 69.2,
+    "sqlToDemoP": 67.5,
     "demoToSalP": 70.4,
-    "salToPropP": 73.7,
+    "salToPropP": 78.9,
     "winRateP": 84.6
   },
   "demoFlowTime": {
     "demos": 36,
     "parouDemo": 10,
-    "sal": 6,
-    "proposta": 3,
+    "sal": 5,
+    "proposta": 4,
     "ganho": 12,
     "perdido": 5,
     "voltou": 0,
@@ -76,8 +76,8 @@
         "name": "Juliano",
         "nivel": "Pleno",
         "demo": 0,
-        "sal": 1,
-        "proposta": 2,
+        "sal": 0,
+        "proposta": 3,
         "forecast": 0,
         "total": 3
       },
@@ -120,8 +120,8 @@
     ],
     "time": {
       "demo": 24,
-      "sal": 10,
-      "proposta": 5,
+      "sal": 9,
+      "proposta": 6,
       "forecast": 1,
       "total": 40
     },
@@ -141,9 +141,9 @@
     "receitaRealizada": 4445.69,
     "metaMensal": 50000,
     "pctMeta": 8.9,
-    "pipelineAberto": 13822.1,
-    "pipelineAbertoQtd": 59,
-    "pipelineAbertoComValor": 18,
+    "pipelineAberto": 14000.1,
+    "pipelineAbertoQtd": 60,
+    "pipelineAbertoComValor": 19,
     "mediaDiaria": 635.1
   },
   "receitaAcumulada": {
@@ -176,14 +176,14 @@
     ]
   },
   "aging": {
-    "0-7d": 37,
+    "0-7d": 38,
     "8-15d": 10,
     "16-30d": 8,
     "31-60d": 4,
     "+60d": 0
   },
   "agingCriacao": {
-    "0-7d": 26,
+    "0-7d": 27,
     "8-15d": 12,
     "16-30d": 11,
     "31-60d": 4,
@@ -288,22 +288,22 @@
       "metaProRata": 2077.42,
       "pctMetaProRata": 30.1,
       "funil": {
-        "sql": 8,
+        "sql": 9,
         "demo": 4,
         "sal": 4,
-        "proposta": 3,
+        "proposta": 4,
         "won": 1,
         "lost": 0,
-        "sqlToDemoP": 50,
+        "sqlToDemoP": 44.4,
         "demoToSalP": 100,
-        "salToPropP": 75,
+        "salToPropP": 100,
         "winRateP": 100
       },
       "demoFlow": {
         "demos": 6,
         "parouDemo": 0,
-        "sal": 1,
-        "proposta": 2,
+        "sal": 0,
+        "proposta": 3,
         "ganho": 2,
         "perdido": 1,
         "voltou": 0,
@@ -472,11 +472,11 @@
   "sdrs": [
     {
       "name": "Ana",
-      "sql": 11,
-      "mql": 38,
+      "sql": 12,
+      "mql": 37,
       "mqlEtapas": {
         "nmql": 0,
-        "cadencia": 36,
+        "cadencia": 35,
         "conexao": 0,
         "nutricao": 0,
         "ganho": 0,
@@ -484,7 +484,7 @@
         "outros": 0
       },
       "mqlPctTrabalhados": 100,
-      "mqlParaSqlPct": 28.9,
+      "mqlParaSqlPct": 32.4,
       "recInfluenciada": 1248,
       "metaMes": 15000,
       "metaProRata": 3387.1,
@@ -492,19 +492,19 @@
     },
     {
       "name": "Amanda",
-      "sql": 14,
+      "sql": 15,
       "mql": 43,
       "mqlEtapas": {
-        "nmql": 2,
-        "cadencia": 32,
+        "nmql": 0,
+        "cadencia": 34,
         "conexao": 0,
         "nutricao": 0,
         "ganho": 0,
         "perdido": 9,
         "outros": 0
       },
-      "mqlPctTrabalhados": 95.3,
-      "mqlParaSqlPct": 32.6,
+      "mqlPctTrabalhados": 100,
+      "mqlParaSqlPct": 34.9,
       "recInfluenciada": 1771.6,
       "metaMes": 15000,
       "metaProRata": 3387.1,
@@ -513,10 +513,10 @@
     {
       "name": "Jeferson",
       "sql": 13,
-      "mql": 37,
+      "mql": 38,
       "mqlEtapas": {
         "nmql": 0,
-        "cadencia": 36,
+        "cadencia": 37,
         "conexao": 0,
         "nutricao": 0,
         "ganho": 0,
@@ -524,7 +524,7 @@
         "outros": 0
       },
       "mqlPctTrabalhados": 100,
-      "mqlParaSqlPct": 35.1,
+      "mqlParaSqlPct": 34.2,
       "recInfluenciada": 228,
       "metaMes": 13000,
       "metaProRata": 2935.48,
