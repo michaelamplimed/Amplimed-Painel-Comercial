@@ -1,6 +1,6 @@
 {
-  "geradoEm": "2026-10-07T16:30:29.752Z",
-  "geradoEmBR": "07/10/2026, 13:30:29",
+  "geradoEm": "2026-10-07T17:19:50.137Z",
+  "geradoEmBR": "07/10/2026, 14:19:50",
   "mes": {
     "ano": 2026,
     "mes": 10,
@@ -30,27 +30,27 @@
   },
   "funilTime": {
     "sql": 41,
-    "demo": 28,
-    "sal": 20,
-    "proposta": 17,
+    "demo": 29,
+    "sal": 21,
+    "proposta": 18,
     "won": 11,
     "lost": 2,
-    "sqlToDemoP": 68.3,
-    "demoToSalP": 71.4,
-    "salToPropP": 85,
+    "sqlToDemoP": 70.7,
+    "demoToSalP": 72.4,
+    "salToPropP": 85.7,
     "winRateP": 84.6
   },
   "demoFlowTime": {
-    "demos": 37,
+    "demos": 38,
     "parouDemo": 10,
     "sal": 4,
-    "proposta": 6,
+    "proposta": 7,
     "ganho": 12,
     "perdido": 5,
     "voltou": 0,
-    "avancaram": 22,
-    "avancouP": 59.5,
-    "ganhoP": 32.4
+    "avancaram": 23,
+    "avancouP": 60.5,
+    "ganhoP": 31.6
   },
   "etapasAbertas": {
     "porCloser": [
@@ -59,9 +59,9 @@
         "nivel": "Sênior",
         "demo": 5,
         "sal": 1,
-        "proposta": 2,
+        "proposta": 3,
         "forecast": 0,
-        "total": 8
+        "total": 9
       },
       {
         "name": "Eduardo",
@@ -121,9 +121,9 @@
     "time": {
       "demo": 24,
       "sal": 8,
-      "proposta": 6,
+      "proposta": 7,
       "forecast": 3,
-      "total": 41
+      "total": 42
     },
     "semCloser": {
       "demo": 1,
@@ -141,9 +141,9 @@
     "receitaRealizada": 4574.69,
     "metaMensal": 50000,
     "pctMeta": 9.1,
-    "pipelineAberto": 14348,
+    "pipelineAberto": 14597,
     "pipelineAbertoQtd": 61,
-    "pipelineAbertoComValor": 21,
+    "pipelineAbertoComValor": 22,
     "mediaDiaria": 653.53
   },
   "receitaAcumulada": {
@@ -176,8 +176,8 @@
     ]
   },
   "aging": {
-    "0-7d": 38,
-    "8-15d": 11,
+    "0-7d": 37,
+    "8-15d": 12,
     "16-30d": 8,
     "31-60d": 4,
     "+60d": 0
@@ -211,27 +211,27 @@
       "pctMetaProRata": 18.4,
       "funil": {
         "sql": 9,
-        "demo": 5,
-        "sal": 4,
-        "proposta": 3,
+        "demo": 6,
+        "sal": 5,
+        "proposta": 4,
         "won": 2,
         "lost": 1,
-        "sqlToDemoP": 55.6,
-        "demoToSalP": 80,
-        "salToPropP": 75,
+        "sqlToDemoP": 66.7,
+        "demoToSalP": 83.3,
+        "salToPropP": 80,
         "winRateP": 66.7
       },
       "demoFlow": {
-        "demos": 9,
+        "demos": 10,
         "parouDemo": 1,
         "sal": 1,
-        "proposta": 1,
+        "proposta": 2,
         "ganho": 3,
         "perdido": 3,
         "voltou": 0,
-        "avancaram": 5,
-        "avancouP": 55.6,
-        "ganhoP": 33.3
+        "avancaram": 6,
+        "avancouP": 60,
+        "ganhoP": 30
       }
     },
     {
@@ -473,9 +473,9 @@
     {
       "name": "Ana",
       "sql": 12,
-      "mql": 39,
+      "mql": 38,
       "mqlEtapas": {
-        "nmql": 1,
+        "nmql": 0,
         "cadencia": 36,
         "conexao": 0,
         "nutricao": 0,
@@ -483,8 +483,8 @@
         "perdido": 2,
         "outros": 0
       },
-      "mqlPctTrabalhados": 97.4,
-      "mqlParaSqlPct": 30.8,
+      "mqlPctTrabalhados": 100,
+      "mqlParaSqlPct": 31.6,
       "recInfluenciada": 1248,
       "metaMes": 15000,
       "metaProRata": 3387.1,
@@ -496,11 +496,11 @@
       "mql": 44,
       "mqlEtapas": {
         "nmql": 0,
-        "cadencia": 34,
+        "cadencia": 33,
         "conexao": 1,
         "nutricao": 0,
         "ganho": 0,
-        "perdido": 9,
+        "perdido": 10,
         "outros": 0
       },
       "mqlPctTrabalhados": 100,
@@ -513,9 +513,9 @@
     {
       "name": "Jeferson",
       "sql": 14,
-      "mql": 39,
+      "mql": 41,
       "mqlEtapas": {
-        "nmql": 0,
+        "nmql": 2,
         "cadencia": 38,
         "conexao": 0,
         "nutricao": 0,
@@ -523,8 +523,8 @@
         "perdido": 1,
         "outros": 0
       },
-      "mqlPctTrabalhados": 100,
-      "mqlParaSqlPct": 35.9,
+      "mqlPctTrabalhados": 95.1,
+      "mqlParaSqlPct": 34.1,
       "recInfluenciada": 228,
       "metaMes": 13000,
       "metaProRata": 2935.48,
