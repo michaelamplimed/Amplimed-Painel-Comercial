@@ -1,6 +1,6 @@
 {
-  "geradoEm": "2026-10-07T13:31:02.260Z",
-  "geradoEmBR": "07/10/2026, 10:31:02",
+  "geradoEm": "2026-10-07T14:00:31.103Z",
+  "geradoEmBR": "07/10/2026, 11:00:31",
   "mes": {
     "ano": 2026,
     "mes": 10,
@@ -138,13 +138,13 @@
     "sdr": 43000
   },
   "kpis": {
-    "receitaRealizada": 4445.69,
+    "receitaRealizada": 4574.69,
     "metaMensal": 50000,
-    "pctMeta": 8.9,
+    "pctMeta": 9.1,
     "pipelineAberto": 14000.1,
     "pipelineAbertoQtd": 60,
     "pipelineAbertoComValor": 19,
-    "mediaDiaria": 635.1
+    "mediaDiaria": 653.53
   },
   "receitaAcumulada": {
     "labels": [
@@ -163,7 +163,7 @@
       2842.63,
       3590.69,
       4445.69,
-      4445.69
+      4574.69
     ],
     "meta": [
       1612.9,
@@ -176,8 +176,8 @@
     ]
   },
   "aging": {
-    "0-7d": 38,
-    "8-15d": 10,
+    "0-7d": 37,
+    "8-15d": 11,
     "16-30d": 8,
     "31-60d": 4,
     "+60d": 0
@@ -434,15 +434,15 @@
       "nivel": "Cross-sell",
       "ganhos": 0,
       "perdidos": 0,
-      "crossSellGanhos": 8,
+      "crossSellGanhos": 9,
       "aquisicaoAmount": 0,
-      "crossSellAmount": 1198.09,
-      "totalAmount": 1198.09,
+      "crossSellAmount": 1327.09,
+      "totalAmount": 1327.09,
       "ticketMedio": 0,
       "winRate": 0,
       "metaMes": 6000,
       "metaProRata": 1354.84,
-      "pctMetaProRata": 88.4,
+      "pctMetaProRata": 98,
       "funil": {
         "sql": 0,
         "demo": 0,
@@ -473,9 +473,9 @@
     {
       "name": "Ana",
       "sql": 12,
-      "mql": 37,
+      "mql": 38,
       "mqlEtapas": {
-        "nmql": 0,
+        "nmql": 1,
         "cadencia": 35,
         "conexao": 0,
         "nutricao": 0,
@@ -483,8 +483,8 @@
         "perdido": 2,
         "outros": 0
       },
-      "mqlPctTrabalhados": 100,
-      "mqlParaSqlPct": 32.4,
+      "mqlPctTrabalhados": 97.4,
+      "mqlParaSqlPct": 31.6,
       "recInfluenciada": 1248,
       "metaMes": 15000,
       "metaProRata": 3387.1,
@@ -496,8 +496,8 @@
       "mql": 43,
       "mqlEtapas": {
         "nmql": 0,
-        "cadencia": 34,
-        "conexao": 0,
+        "cadencia": 33,
+        "conexao": 1,
         "nutricao": 0,
         "ganho": 0,
         "perdido": 9,
