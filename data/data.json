@@ -1,6 +1,6 @@
 {
-  "geradoEm": "2026-10-08T21:00:36.183Z",
-  "geradoEmBR": "08/10/2026, 18:00:36",
+  "geradoEm": "2026-10-08T21:30:24.820Z",
+  "geradoEmBR": "08/10/2026, 18:30:24",
   "mes": {
     "ano": 2026,
     "mes": 10,
@@ -43,14 +43,14 @@
   "demoFlowTime": {
     "demos": 49,
     "parouDemo": 15,
-    "sal": 6,
+    "sal": 5,
     "proposta": 4,
-    "ganho": 19,
+    "ganho": 20,
     "perdido": 5,
     "voltou": 0,
     "avancaram": 29,
     "avancouP": 59.2,
-    "ganhoP": 38.8
+    "ganhoP": 40.8
   },
   "etapasAbertas": {
     "porCloser": [
@@ -67,10 +67,10 @@
         "name": "Eduardo",
         "nivel": "Sênior",
         "demo": 8,
-        "sal": 2,
+        "sal": 1,
         "proposta": 0,
         "forecast": 0,
-        "total": 10
+        "total": 9
       },
       {
         "name": "Juliano",
@@ -120,10 +120,10 @@
     ],
     "time": {
       "demo": 28,
-      "sal": 11,
+      "sal": 10,
       "proposta": 6,
       "forecast": 2,
-      "total": 47
+      "total": 46
     },
     "semCloser": {
       "demo": 1,
@@ -138,13 +138,13 @@
     "sdr": 43000
   },
   "kpis": {
-    "receitaRealizada": 6492.18,
+    "receitaRealizada": 6783.17,
     "metaMensal": 50000,
-    "pctMeta": 13,
-    "pipelineAberto": 15992.65,
-    "pipelineAbertoQtd": 64,
-    "pipelineAbertoComValor": 21,
-    "mediaDiaria": 811.52
+    "pctMeta": 13.6,
+    "pipelineAberto": 15714.65,
+    "pipelineAbertoQtd": 63,
+    "pipelineAbertoComValor": 20,
+    "mediaDiaria": 847.9
   },
   "receitaAcumulada": {
     "labels": [
@@ -165,7 +165,7 @@
       3590.69,
       4431.79,
       5207.13,
-      6492.18
+      6783.17
     ],
     "meta": [
       1612.9,
@@ -179,7 +179,7 @@
     ]
   },
   "aging": {
-    "0-7d": 37,
+    "0-7d": 36,
     "8-15d": 12,
     "16-30d": 11,
     "31-60d": 4,
@@ -187,7 +187,7 @@
   },
   "agingCriacao": {
     "0-7d": 24,
-    "8-15d": 17,
+    "8-15d": 16,
     "16-30d": 14,
     "31-60d": 4,
     "+60d": 5
@@ -240,17 +240,17 @@
     {
       "name": "Eduardo",
       "nivel": "Sênior",
-      "ganhos": 3,
+      "ganhos": 4,
       "perdidos": 3,
       "crossSellGanhos": 0,
-      "aquisicaoAmount": 396.15,
+      "aquisicaoAmount": 674.15,
       "crossSellAmount": 0,
-      "totalAmount": 396.15,
-      "ticketMedio": 132.05,
-      "winRate": 50,
+      "totalAmount": 674.15,
+      "ticketMedio": 168.54,
+      "winRate": 57.1,
       "metaMes": 11200,
       "metaProRata": 2890.32,
-      "pctMetaProRata": 13.7,
+      "pctMetaProRata": 23.3,
       "funil": {
         "sql": 10,
         "demo": 10,
@@ -266,14 +266,14 @@
       "demoFlow": {
         "demos": 12,
         "parouDemo": 7,
-        "sal": 2,
+        "sal": 1,
         "proposta": 0,
-        "ganho": 3,
+        "ganho": 4,
         "perdido": 0,
         "voltou": 0,
         "avancaram": 5,
         "avancouP": 41.7,
-        "ganhoP": 25
+        "ganhoP": 33.3
       }
     },
     {
@@ -488,10 +488,10 @@
       },
       "mqlPctTrabalhados": 100,
       "mqlParaSqlPct": 28.3,
-      "recInfluenciada": 1693.15,
+      "recInfluenciada": 1971.15,
       "metaMes": 15000,
       "metaProRata": 3870.97,
-      "pctMetaProRata": 43.7
+      "pctMetaProRata": 50.9
     },
     {
       "name": "Amanda",
