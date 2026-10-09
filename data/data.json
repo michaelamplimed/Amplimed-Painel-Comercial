@@ -1,6 +1,6 @@
 {
-  "geradoEm": "2026-10-09T14:30:30.012Z",
-  "geradoEmBR": "09/10/2026, 11:30:30",
+  "geradoEm": "2026-10-09T15:00:31.862Z",
+  "geradoEmBR": "09/10/2026, 12:00:31",
   "mes": {
     "ano": 2026,
     "mes": 10,
@@ -34,15 +34,15 @@
   },
   "funilTime": {
     "sql": 55,
-    "demo": 46,
-    "sal": 30,
-    "proposta": 24,
-    "won": 18,
+    "demo": 47,
+    "sal": 31,
+    "proposta": 25,
+    "won": 19,
     "lost": 3,
-    "sqlToDemoP": 83.6,
-    "demoToSalP": 65.2,
-    "salToPropP": 80,
-    "winRateP": 85.7
+    "sqlToDemoP": 85.5,
+    "demoToSalP": 66,
+    "salToPropP": 80.6,
+    "winRateP": 86.4
   },
   "demoFlowTime": {
     "demos": 53,
@@ -99,8 +99,8 @@
         "nivel": "Pleno",
         "demo": 4,
         "sal": 4,
-        "proposta": 2,
-        "forecast": 0,
+        "proposta": 1,
+        "forecast": 1,
         "total": 10
       },
       {
@@ -125,8 +125,8 @@
     "time": {
       "demo": 28,
       "sal": 12,
-      "proposta": 7,
-      "forecast": 2,
+      "proposta": 6,
+      "forecast": 3,
       "total": 49
     },
     "semCloser": {
@@ -142,13 +142,13 @@
     "sdr": 43000
   },
   "kpis": {
-    "receitaRealizada": 6783.17,
+    "receitaRealizada": 6922.17,
     "metaMensal": 50000,
-    "pctMeta": 13.6,
-    "pipelineAberto": 15114.7,
-    "pipelineAbertoQtd": 63,
-    "pipelineAbertoComValor": 22,
-    "mediaDiaria": 753.69
+    "pctMeta": 13.8,
+    "pipelineAberto": 14975.7,
+    "pipelineAbertoQtd": 62,
+    "pipelineAbertoComValor": 21,
+    "mediaDiaria": 769.13
   },
   "receitaAcumulada": {
     "labels": [
@@ -171,7 +171,7 @@
       4431.79,
       5207.13,
       6783.17,
-      6783.17
+      6922.17
     ],
     "meta": [
       1612.9,
@@ -186,8 +186,8 @@
     ]
   },
   "aging": {
-    "0-7d": 36,
-    "8-15d": 13,
+    "0-7d": 34,
+    "8-15d": 14,
     "16-30d": 10,
     "31-60d": 4,
     "+60d": 0
@@ -197,7 +197,7 @@
     "8-15d": 17,
     "16-30d": 13,
     "31-60d": 4,
-    "+60d": 6
+    "+60d": 5
   },
   "agingRisco": {
     "qtd": 4,
@@ -325,28 +325,28 @@
     {
       "name": "Ariel",
       "nivel": "Pleno",
-      "ganhos": 4,
+      "ganhos": 5,
       "perdidos": 1,
       "crossSellGanhos": 0,
-      "aquisicaoAmount": 697.06,
+      "aquisicaoAmount": 836.06,
       "crossSellAmount": 0,
-      "totalAmount": 697.06,
-      "ticketMedio": 174.27,
-      "winRate": 80,
+      "totalAmount": 836.06,
+      "ticketMedio": 167.21,
+      "winRate": 83.3,
       "metaMes": 9200,
       "metaProRata": 2670.97,
-      "pctMetaProRata": 26.1,
+      "pctMetaProRata": 31.3,
       "funil": {
         "sql": 10,
-        "demo": 7,
-        "sal": 4,
-        "proposta": 3,
-        "won": 2,
+        "demo": 8,
+        "sal": 5,
+        "proposta": 4,
+        "won": 3,
         "lost": 1,
-        "sqlToDemoP": 70,
-        "demoToSalP": 57.1,
-        "salToPropP": 75,
-        "winRateP": 66.7
+        "sqlToDemoP": 80,
+        "demoToSalP": 62.5,
+        "salToPropP": 80,
+        "winRateP": 75
       },
       "demoFlow": {
         "demos": 4,
@@ -483,10 +483,10 @@
     {
       "name": "Ana",
       "sql": 16,
-      "mql": 56,
+      "mql": 58,
       "mqlEtapas": {
         "nmql": 0,
-        "cadencia": 47,
+        "cadencia": 49,
         "conexao": 1,
         "nutricao": 0,
         "ganho": 0,
@@ -494,7 +494,7 @@
         "outros": 0
       },
       "mqlPctTrabalhados": 100,
-      "mqlParaSqlPct": 28.6,
+      "mqlParaSqlPct": 27.6,
       "recInfluenciada": 1971.15,
       "metaMes": 15000,
       "metaProRata": 4354.84,
@@ -505,20 +505,20 @@
       "sql": 21,
       "mql": 57,
       "mqlEtapas": {
-        "nmql": 1,
-        "cadencia": 39,
+        "nmql": 0,
+        "cadencia": 40,
         "conexao": 2,
         "nutricao": 0,
         "ganho": 0,
         "perdido": 15,
         "outros": 0
       },
-      "mqlPctTrabalhados": 98.2,
+      "mqlPctTrabalhados": 100,
       "mqlParaSqlPct": 36.8,
-      "recInfluenciada": 2276.85,
+      "recInfluenciada": 2415.85,
       "metaMes": 15000,
       "metaProRata": 4354.84,
-      "pctMetaProRata": 52.3
+      "pctMetaProRata": 55.5
     },
     {
       "name": "Jeferson",
