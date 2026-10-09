@@ -1,6 +1,6 @@
 {
-  "geradoEm": "2026-10-08T22:30:25.402Z",
-  "geradoEmBR": "08/10/2026, 19:30:25",
+  "geradoEm": "2026-10-09T02:25:59.811Z",
+  "geradoEmBR": "08/10/2026, 23:25:59",
   "mes": {
     "ano": 2026,
     "mes": 10,
@@ -437,15 +437,15 @@
       "nivel": "Cross-sell",
       "ganhos": 0,
       "perdidos": 0,
-      "crossSellGanhos": 13,
+      "crossSellGanhos": 14,
       "aquisicaoAmount": 0,
-      "crossSellAmount": 1786.28,
-      "totalAmount": 1786.28,
+      "crossSellAmount": 1799.27,
+      "totalAmount": 1799.27,
       "ticketMedio": 0,
       "winRate": 0,
       "metaMes": 6000,
       "metaProRata": 1548.39,
-      "pctMetaProRata": 115.4,
+      "pctMetaProRata": 116.2,
       "funil": {
         "sql": 0,
         "demo": 0,
@@ -476,9 +476,9 @@
     {
       "name": "Ana",
       "sql": 15,
-      "mql": 53,
+      "mql": 54,
       "mqlEtapas": {
-        "nmql": 0,
+        "nmql": 1,
         "cadencia": 47,
         "conexao": 0,
         "nutricao": 0,
@@ -486,8 +486,8 @@
         "perdido": 6,
         "outros": 0
       },
-      "mqlPctTrabalhados": 100,
-      "mqlParaSqlPct": 28.3,
+      "mqlPctTrabalhados": 98.1,
+      "mqlParaSqlPct": 27.8,
       "recInfluenciada": 1971.15,
       "metaMes": 15000,
       "metaProRata": 3870.97,
@@ -516,9 +516,9 @@
     {
       "name": "Jeferson",
       "sql": 18,
-      "mql": 50,
+      "mql": 52,
       "mqlEtapas": {
-        "nmql": 0,
+        "nmql": 2,
         "cadencia": 38,
         "conexao": 8,
         "nutricao": 0,
@@ -526,8 +526,8 @@
         "perdido": 4,
         "outros": 0
       },
-      "mqlPctTrabalhados": 100,
-      "mqlParaSqlPct": 36,
+      "mqlPctTrabalhados": 96.2,
+      "mqlParaSqlPct": 34.6,
       "recInfluenciada": 735.9,
       "metaMes": 13000,
       "metaProRata": 3354.84,
