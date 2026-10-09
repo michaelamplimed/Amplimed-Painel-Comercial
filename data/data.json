@@ -1,6 +1,6 @@
 {
-  "geradoEm": "2026-10-09T16:51:49.340Z",
-  "geradoEmBR": "09/10/2026, 13:51:49",
+  "geradoEm": "2026-10-09T17:00:33.662Z",
+  "geradoEmBR": "09/10/2026, 14:00:33",
   "mes": {
     "ano": 2026,
     "mes": 10,
@@ -146,7 +146,7 @@
     "metaMensal": 50000,
     "pctMeta": 13.8,
     "pipelineAberto": 14975.7,
-    "pipelineAbertoQtd": 62,
+    "pipelineAbertoQtd": 61,
     "pipelineAbertoComValor": 21,
     "mediaDiaria": 769.13
   },
@@ -187,14 +187,14 @@
   },
   "aging": {
     "0-7d": 35,
-    "8-15d": 13,
+    "8-15d": 12,
     "16-30d": 10,
     "31-60d": 4,
     "+60d": 0
   },
   "agingCriacao": {
     "0-7d": 23,
-    "8-15d": 17,
+    "8-15d": 16,
     "16-30d": 13,
     "31-60d": 4,
     "+60d": 5
@@ -326,13 +326,13 @@
       "name": "Ariel",
       "nivel": "Pleno",
       "ganhos": 5,
-      "perdidos": 1,
+      "perdidos": 2,
       "crossSellGanhos": 0,
       "aquisicaoAmount": 836.06,
       "crossSellAmount": 0,
       "totalAmount": 836.06,
       "ticketMedio": 167.21,
-      "winRate": 83.3,
+      "winRate": 71.4,
       "metaMes": 9200,
       "metaProRata": 2670.97,
       "pctMetaProRata": 31.3,
