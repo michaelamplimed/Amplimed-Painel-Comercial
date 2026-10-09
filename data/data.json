@@ -1,6 +1,6 @@
 {
-  "geradoEm": "2026-10-09T14:00:30.893Z",
-  "geradoEmBR": "09/10/2026, 11:00:30",
+  "geradoEm": "2026-10-09T14:30:30.012Z",
+  "geradoEmBR": "09/10/2026, 11:30:30",
   "mes": {
     "ano": 2026,
     "mes": 10,
@@ -145,9 +145,9 @@
     "receitaRealizada": 6783.17,
     "metaMensal": 50000,
     "pctMeta": 13.6,
-    "pipelineAberto": 14975.7,
+    "pipelineAberto": 15114.7,
     "pipelineAbertoQtd": 63,
-    "pipelineAbertoComValor": 21,
+    "pipelineAbertoComValor": 22,
     "mediaDiaria": 753.69
   },
   "receitaAcumulada": {
@@ -483,9 +483,9 @@
     {
       "name": "Ana",
       "sql": 16,
-      "mql": 57,
+      "mql": 56,
       "mqlEtapas": {
-        "nmql": 1,
+        "nmql": 0,
         "cadencia": 47,
         "conexao": 1,
         "nutricao": 0,
@@ -493,8 +493,8 @@
         "perdido": 8,
         "outros": 0
       },
-      "mqlPctTrabalhados": 98.2,
-      "mqlParaSqlPct": 28.1,
+      "mqlPctTrabalhados": 100,
+      "mqlParaSqlPct": 28.6,
       "recInfluenciada": 1971.15,
       "metaMes": 15000,
       "metaProRata": 4354.84,
@@ -503,18 +503,18 @@
     {
       "name": "Amanda",
       "sql": 21,
-      "mql": 52,
+      "mql": 57,
       "mqlEtapas": {
-        "nmql": 0,
-        "cadencia": 35,
+        "nmql": 1,
+        "cadencia": 39,
         "conexao": 2,
         "nutricao": 0,
         "ganho": 0,
         "perdido": 15,
         "outros": 0
       },
-      "mqlPctTrabalhados": 100,
-      "mqlParaSqlPct": 40.4,
+      "mqlPctTrabalhados": 98.2,
+      "mqlParaSqlPct": 36.8,
       "recInfluenciada": 2276.85,
       "metaMes": 15000,
       "metaProRata": 4354.84,
@@ -525,15 +525,15 @@
       "sql": 18,
       "mql": 52,
       "mqlEtapas": {
-        "nmql": 1,
+        "nmql": 0,
         "cadencia": 36,
         "conexao": 10,
         "nutricao": 0,
         "ganho": 0,
-        "perdido": 5,
+        "perdido": 6,
         "outros": 0
       },
-      "mqlPctTrabalhados": 98.1,
+      "mqlPctTrabalhados": 100,
       "mqlParaSqlPct": 34.6,
       "recInfluenciada": 735.9,
       "metaMes": 13000,
