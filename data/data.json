@@ -1,6 +1,6 @@
 {
-  "geradoEm": "2026-10-09T17:30:26.440Z",
-  "geradoEmBR": "09/10/2026, 14:30:26",
+  "geradoEm": "2026-10-09T18:00:33.124Z",
+  "geradoEmBR": "09/10/2026, 15:00:33",
   "mes": {
     "ano": 2026,
     "mes": 10,
@@ -33,27 +33,27 @@
     ]
   },
   "funilTime": {
-    "sql": 59,
+    "sql": 60,
     "demo": 47,
-    "sal": 31,
-    "proposta": 25,
+    "sal": 32,
+    "proposta": 26,
     "won": 19,
     "lost": 3,
-    "sqlToDemoP": 79.7,
-    "demoToSalP": 66,
-    "salToPropP": 80.6,
+    "sqlToDemoP": 78.3,
+    "demoToSalP": 68.1,
+    "salToPropP": 81.3,
     "winRateP": 86.4
   },
   "demoFlowTime": {
     "demos": 54,
-    "parouDemo": 17,
+    "parouDemo": 16,
     "sal": 7,
-    "proposta": 5,
+    "proposta": 6,
     "ganho": 20,
     "perdido": 5,
     "voltou": 0,
-    "avancaram": 32,
-    "avancouP": 59.3,
+    "avancaram": 33,
+    "avancouP": 61.1,
     "ganhoP": 37
   },
   "etapasAbertas": {
@@ -79,9 +79,9 @@
       {
         "name": "Juliano",
         "nivel": "Pleno",
-        "demo": 3,
+        "demo": 2,
         "sal": 0,
-        "proposta": 3,
+        "proposta": 4,
         "forecast": 0,
         "total": 6
       },
@@ -123,9 +123,9 @@
       }
     ],
     "time": {
-      "demo": 29,
+      "demo": 28,
       "sal": 12,
-      "proposta": 6,
+      "proposta": 7,
       "forecast": 3,
       "total": 50
     },
@@ -145,9 +145,9 @@
     "receitaRealizada": 6922.17,
     "metaMensal": 50000,
     "pctMeta": 13.8,
-    "pipelineAberto": 14975.7,
-    "pipelineAbertoQtd": 65,
-    "pipelineAbertoComValor": 21,
+    "pipelineAberto": 15064.7,
+    "pipelineAbertoQtd": 66,
+    "pipelineAbertoComValor": 22,
     "mediaDiaria": 769.13
   },
   "receitaAcumulada": {
@@ -186,7 +186,7 @@
     ]
   },
   "aging": {
-    "0-7d": 39,
+    "0-7d": 40,
     "8-15d": 12,
     "16-30d": 10,
     "31-60d": 4,
@@ -194,7 +194,7 @@
   },
   "agingCriacao": {
     "0-7d": 27,
-    "8-15d": 16,
+    "8-15d": 17,
     "16-30d": 13,
     "31-60d": 4,
     "+60d": 5
@@ -259,13 +259,13 @@
       "metaProRata": 3251.61,
       "pctMetaProRata": 20.7,
       "funil": {
-        "sql": 10,
+        "sql": 11,
         "demo": 10,
         "sal": 5,
         "proposta": 3,
         "won": 3,
         "lost": 0,
-        "sqlToDemoP": 100,
+        "sqlToDemoP": 90.9,
         "demoToSalP": 50,
         "salToPropP": 60,
         "winRateP": 100
@@ -300,25 +300,25 @@
       "funil": {
         "sql": 12,
         "demo": 9,
-        "sal": 7,
-        "proposta": 7,
+        "sal": 8,
+        "proposta": 8,
         "won": 4,
         "lost": 0,
         "sqlToDemoP": 75,
-        "demoToSalP": 77.8,
+        "demoToSalP": 88.9,
         "salToPropP": 100,
         "winRateP": 100
       },
       "demoFlow": {
         "demos": 12,
-        "parouDemo": 3,
+        "parouDemo": 2,
         "sal": 0,
-        "proposta": 3,
+        "proposta": 4,
         "ganho": 5,
         "perdido": 1,
         "voltou": 0,
-        "avancaram": 8,
-        "avancouP": 66.7,
+        "avancaram": 9,
+        "avancouP": 75,
         "ganhoP": 41.7
       }
     },
@@ -485,15 +485,15 @@
       "sql": 17,
       "mql": 58,
       "mqlEtapas": {
-        "nmql": 1,
-        "cadencia": 48,
+        "nmql": 0,
+        "cadencia": 49,
         "conexao": 1,
         "nutricao": 0,
         "ganho": 0,
         "perdido": 8,
         "outros": 0
       },
-      "mqlPctTrabalhados": 98.3,
+      "mqlPctTrabalhados": 100,
       "mqlParaSqlPct": 29.3,
       "recInfluenciada": 1971.15,
       "metaMes": 15000,
@@ -502,11 +502,11 @@
     },
     {
       "name": "Amanda",
-      "sql": 23,
-      "mql": 60,
+      "sql": 24,
+      "mql": 59,
       "mqlEtapas": {
         "nmql": 0,
-        "cadencia": 36,
+        "cadencia": 35,
         "conexao": 2,
         "nutricao": 0,
         "ganho": 0,
@@ -514,7 +514,7 @@
         "outros": 0
       },
       "mqlPctTrabalhados": 100,
-      "mqlParaSqlPct": 38.3,
+      "mqlParaSqlPct": 40.7,
       "recInfluenciada": 2415.85,
       "metaMes": 15000,
       "metaProRata": 4354.84,
