@@ -1,6 +1,6 @@
 {
-  "geradoEm": "2026-10-09T12:30:26.985Z",
-  "geradoEmBR": "09/10/2026, 09:30:26",
+  "geradoEm": "2026-10-09T13:00:33.114Z",
+  "geradoEmBR": "09/10/2026, 10:00:33",
   "mes": {
     "ano": 2026,
     "mes": 10,
@@ -25,6 +25,10 @@
       {
         "id": "65536970773",
         "nome": "Bianca - Teste"
+      },
+      {
+        "id": "65843803953",
+        "nome": "Thiago Teste"
       }
     ]
   },
@@ -501,15 +505,15 @@
       "sql": 20,
       "mql": 52,
       "mqlEtapas": {
-        "nmql": 1,
-        "cadencia": 38,
-        "conexao": 0,
+        "nmql": 0,
+        "cadencia": 35,
+        "conexao": 2,
         "nutricao": 0,
         "ganho": 0,
-        "perdido": 13,
+        "perdido": 15,
         "outros": 0
       },
-      "mqlPctTrabalhados": 98.1,
+      "mqlPctTrabalhados": 100,
       "mqlParaSqlPct": 38.5,
       "recInfluenciada": 2276.85,
       "metaMes": 15000,
