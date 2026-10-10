@@ -1,6 +1,6 @@
 {
-  "geradoEm": "2026-10-10T14:30:24.894Z",
-  "geradoEmBR": "10/10/2026, 11:30:24",
+  "geradoEm": "2026-10-10T15:00:29.614Z",
+  "geradoEmBR": "10/10/2026, 12:00:29",
   "mes": {
     "ano": 2026,
     "mes": 10,
@@ -142,13 +142,13 @@
     "sdr": 43000
   },
   "kpis": {
-    "receitaRealizada": 7453.82,
+    "receitaRealizada": 7466.81,
     "metaMensal": 50000,
     "pctMeta": 14.9,
     "pipelineAberto": 16024.85,
     "pipelineAbertoQtd": 67,
     "pipelineAbertoComValor": 26,
-    "mediaDiaria": 745.38
+    "mediaDiaria": 746.68
   },
   "receitaAcumulada": {
     "labels": [
@@ -173,7 +173,7 @@
       5207.13,
       6783.17,
       7404.82,
-      7453.82
+      7466.81
     ],
     "meta": [
       1612.9,
@@ -447,15 +447,15 @@
       "nivel": "Cross-sell",
       "ganhos": 0,
       "perdidos": 0,
-      "crossSellGanhos": 15,
+      "crossSellGanhos": 16,
       "aquisicaoAmount": 0,
-      "crossSellAmount": 1848.27,
-      "totalAmount": 1848.27,
+      "crossSellAmount": 1861.26,
+      "totalAmount": 1861.26,
       "ticketMedio": 0,
       "winRate": 0,
       "metaMes": 6000,
       "metaProRata": 1935.48,
-      "pctMetaProRata": 95.5,
+      "pctMetaProRata": 96.2,
       "funil": {
         "sql": 0,
         "demo": 0,
@@ -526,9 +526,9 @@
     {
       "name": "Jeferson",
       "sql": 19,
-      "mql": 56,
+      "mql": 57,
       "mqlEtapas": {
-        "nmql": 3,
+        "nmql": 4,
         "cadencia": 38,
         "conexao": 9,
         "nutricao": 0,
@@ -536,8 +536,8 @@
         "perdido": 6,
         "outros": 0
       },
-      "mqlPctTrabalhados": 94.6,
-      "mqlParaSqlPct": 33.9,
+      "mqlPctTrabalhados": 93,
+      "mqlParaSqlPct": 33.3,
       "recInfluenciada": 735.9,
       "metaMes": 13000,
       "metaProRata": 4193.55,
