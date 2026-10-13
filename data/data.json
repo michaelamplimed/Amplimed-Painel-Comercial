@@ -1,6 +1,6 @@
 {
-  "geradoEm": "2026-10-13T14:30:26.658Z",
-  "geradoEmBR": "13/10/2026, 11:30:26",
+  "geradoEm": "2026-10-13T15:00:35.014Z",
+  "geradoEmBR": "13/10/2026, 12:00:35",
   "mes": {
     "ano": 2026,
     "mes": 10,
@@ -33,28 +33,28 @@
     ]
   },
   "funilTime": {
-    "sql": 68,
-    "demo": 55,
-    "sal": 40,
-    "proposta": 31,
-    "won": 23,
+    "sql": 69,
+    "demo": 56,
+    "sal": 41,
+    "proposta": 32,
+    "won": 24,
     "lost": 3,
-    "sqlToDemoP": 80.9,
-    "demoToSalP": 72.7,
-    "salToPropP": 77.5,
-    "winRateP": 88.5
+    "sqlToDemoP": 81.2,
+    "demoToSalP": 73.2,
+    "salToPropP": 78,
+    "winRateP": 88.9
   },
   "demoFlowTime": {
-    "demos": 61,
+    "demos": 62,
     "parouDemo": 15,
     "sal": 10,
     "proposta": 8,
-    "ganho": 23,
+    "ganho": 24,
     "perdido": 5,
     "voltou": 0,
-    "avancaram": 41,
-    "avancouP": 67.2,
-    "ganhoP": 37.7
+    "avancaram": 42,
+    "avancouP": 67.7,
+    "ganhoP": 38.7
   },
   "etapasAbertas": {
     "porCloser": [
@@ -142,13 +142,13 @@
     "sdr": 43000
   },
   "kpis": {
-    "receitaRealizada": 8109.71,
+    "receitaRealizada": 8198.71,
     "metaMensal": 50000,
-    "pctMeta": 16.2,
+    "pctMeta": 16.4,
     "pipelineAberto": 15676.41,
     "pipelineAbertoQtd": 68,
     "pipelineAbertoComValor": 26,
-    "mediaDiaria": 623.82
+    "mediaDiaria": 630.67
   },
   "receitaAcumulada": {
     "labels": [
@@ -179,7 +179,7 @@
       7466.81,
       7466.81,
       7466.81,
-      8109.71
+      8198.71
     ],
     "meta": [
       1612.9,
@@ -220,40 +220,40 @@
     {
       "name": "Tamara",
       "nivel": "Sênior",
-      "ganhos": 7,
+      "ganhos": 8,
       "perdidos": 13,
       "crossSellGanhos": 0,
-      "aquisicaoAmount": 1253.3,
+      "aquisicaoAmount": 1342.3,
       "crossSellAmount": 0,
-      "totalAmount": 1253.3,
-      "ticketMedio": 179.04,
-      "winRate": 35,
+      "totalAmount": 1342.3,
+      "ticketMedio": 167.79,
+      "winRate": 38.1,
       "metaMes": 11200,
       "metaProRata": 4696.77,
-      "pctMetaProRata": 26.7,
+      "pctMetaProRata": 28.6,
       "funil": {
-        "sql": 15,
-        "demo": 11,
-        "sal": 9,
-        "proposta": 6,
-        "won": 5,
+        "sql": 16,
+        "demo": 12,
+        "sal": 10,
+        "proposta": 7,
+        "won": 6,
         "lost": 1,
-        "sqlToDemoP": 73.3,
-        "demoToSalP": 81.8,
-        "salToPropP": 66.7,
-        "winRateP": 83.3
+        "sqlToDemoP": 75,
+        "demoToSalP": 83.3,
+        "salToPropP": 70,
+        "winRateP": 85.7
       },
       "demoFlow": {
-        "demos": 15,
+        "demos": 16,
         "parouDemo": 2,
         "sal": 3,
         "proposta": 1,
-        "ganho": 6,
+        "ganho": 7,
         "perdido": 3,
         "voltou": 0,
-        "avancaram": 10,
-        "avancouP": 66.7,
-        "ganhoP": 40
+        "avancaram": 11,
+        "avancouP": 68.8,
+        "ganhoP": 43.8
       }
     },
     {
@@ -494,7 +494,7 @@
   "sdrs": [
     {
       "name": "Ana",
-      "sql": 20,
+      "sql": 21,
       "mql": 64,
       "mqlEtapas": {
         "nmql": 0,
@@ -506,11 +506,11 @@
         "outros": 0
       },
       "mqlPctTrabalhados": 100,
-      "mqlParaSqlPct": 31.3,
-      "recInfluenciada": 2051.25,
+      "mqlParaSqlPct": 32.8,
+      "recInfluenciada": 2140.25,
       "metaMes": 15000,
       "metaProRata": 6290.32,
-      "pctMetaProRata": 32.6
+      "pctMetaProRata": 34
     },
     {
       "name": "Amanda",
@@ -535,18 +535,18 @@
     {
       "name": "Jeferson",
       "sql": 21,
-      "mql": 66,
+      "mql": 67,
       "mqlEtapas": {
-        "nmql": 1,
-        "cadencia": 55,
+        "nmql": 0,
+        "cadencia": 54,
         "conexao": 4,
         "nutricao": 0,
         "ganho": 0,
-        "perdido": 6,
+        "perdido": 9,
         "outros": 0
       },
-      "mqlPctTrabalhados": 98.5,
-      "mqlParaSqlPct": 31.8,
+      "mqlPctTrabalhados": 100,
+      "mqlParaSqlPct": 31.3,
       "recInfluenciada": 1378.8,
       "metaMes": 13000,
       "metaProRata": 5451.61,
