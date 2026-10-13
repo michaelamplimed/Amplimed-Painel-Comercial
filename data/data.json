@@ -1,6 +1,6 @@
 {
-  "geradoEm": "2026-10-13T12:30:26.678Z",
-  "geradoEmBR": "13/10/2026, 09:30:26",
+  "geradoEm": "2026-10-13T13:00:34.914Z",
+  "geradoEmBR": "13/10/2026, 10:00:34",
   "mes": {
     "ano": 2026,
     "mes": 10,
@@ -33,13 +33,13 @@
     ]
   },
   "funilTime": {
-    "sql": 64,
+    "sql": 65,
     "demo": 55,
     "sal": 40,
     "proposta": 31,
     "won": 23,
     "lost": 3,
-    "sqlToDemoP": 85.9,
+    "sqlToDemoP": 84.6,
     "demoToSalP": 72.7,
     "salToPropP": 77.5,
     "winRateP": 88.5
@@ -146,7 +146,7 @@
     "metaMensal": 50000,
     "pctMeta": 16.2,
     "pipelineAberto": 15381.95,
-    "pipelineAbertoQtd": 64,
+    "pipelineAbertoQtd": 65,
     "pipelineAbertoComValor": 25,
     "mediaDiaria": 623.82
   },
@@ -199,13 +199,13 @@
   },
   "aging": {
     "0-7d": 34,
-    "8-15d": 13,
+    "8-15d": 14,
     "16-30d": 12,
     "31-60d": 5,
     "+60d": 0
   },
   "agingCriacao": {
-    "0-7d": 19,
+    "0-7d": 20,
     "8-15d": 23,
     "16-30d": 12,
     "31-60d": 6,
@@ -271,13 +271,13 @@
       "metaProRata": 4696.77,
       "pctMetaProRata": 28,
       "funil": {
-        "sql": 11,
+        "sql": 12,
         "demo": 11,
         "sal": 5,
         "proposta": 4,
         "won": 4,
         "lost": 0,
-        "sqlToDemoP": 100,
+        "sqlToDemoP": 91.7,
         "demoToSalP": 45.5,
         "salToPropP": 80,
         "winRateP": 100
@@ -494,11 +494,11 @@
   "sdrs": [
     {
       "name": "Ana",
-      "sql": 19,
-      "mql": 64,
+      "sql": 20,
+      "mql": 63,
       "mqlEtapas": {
         "nmql": 0,
-        "cadencia": 56,
+        "cadencia": 55,
         "conexao": 0,
         "nutricao": 0,
         "ganho": 0,
@@ -506,7 +506,7 @@
         "outros": 0
       },
       "mqlPctTrabalhados": 100,
-      "mqlParaSqlPct": 29.7,
+      "mqlParaSqlPct": 31.7,
       "recInfluenciada": 2051.25,
       "metaMes": 15000,
       "metaProRata": 6290.32,
@@ -535,9 +535,9 @@
     {
       "name": "Jeferson",
       "sql": 19,
-      "mql": 66,
+      "mql": 67,
       "mqlEtapas": {
-        "nmql": 1,
+        "nmql": 2,
         "cadencia": 57,
         "conexao": 2,
         "nutricao": 0,
@@ -545,8 +545,8 @@
         "perdido": 6,
         "outros": 0
       },
-      "mqlPctTrabalhados": 98.5,
-      "mqlParaSqlPct": 28.8,
+      "mqlPctTrabalhados": 97,
+      "mqlParaSqlPct": 28.4,
       "recInfluenciada": 1378.8,
       "metaMes": 13000,
       "metaProRata": 5451.61,
