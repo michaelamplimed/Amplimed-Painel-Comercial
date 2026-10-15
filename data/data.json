@@ -1,6 +1,6 @@
 {
-  "geradoEm": "2026-10-15T18:56:46.995Z",
-  "geradoEmBR": "15/10/2026, 15:56:46",
+  "geradoEm": "2026-10-15T19:00:32.436Z",
+  "geradoEmBR": "15/10/2026, 16:00:32",
   "mes": {
     "ano": 2026,
     "mes": 10,
@@ -34,27 +34,27 @@
   },
   "funilTime": {
     "sql": 99,
-    "demo": 76,
+    "demo": 77,
     "sal": 55,
     "proposta": 43,
     "won": 34,
     "lost": 17,
-    "sqlToDemoP": 76.8,
-    "demoToSalP": 72.4,
+    "sqlToDemoP": 77.8,
+    "demoToSalP": 71.4,
     "salToPropP": 78.2,
     "winRateP": 66.7
   },
   "demoFlowTime": {
-    "demos": 79,
-    "parouDemo": 12,
+    "demos": 80,
+    "parouDemo": 13,
     "sal": 10,
     "proposta": 9,
     "ganho": 31,
     "perdido": 17,
     "voltou": 0,
     "avancaram": 53,
-    "avancouP": 67.1,
-    "ganhoP": 39.2
+    "avancouP": 66.3,
+    "ganhoP": 38.8
   },
   "etapasAbertas": {
     "porCloser": [
@@ -97,11 +97,11 @@
       {
         "name": "Mayara",
         "nivel": "Pleno",
-        "demo": 0,
+        "demo": 1,
         "sal": 7,
         "proposta": 1,
         "forecast": 0,
-        "total": 8
+        "total": 9
       },
       {
         "name": "Catiane",
@@ -123,11 +123,11 @@
       }
     ],
     "time": {
-      "demo": 19,
+      "demo": 20,
       "sal": 15,
       "proposta": 9,
       "forecast": 4,
-      "total": 47
+      "total": 48
     },
     "semCloser": {
       "demo": 1,
@@ -395,27 +395,27 @@
       "pctMetaProRata": 40.7,
       "funil": {
         "sql": 21,
-        "demo": 16,
+        "demo": 17,
         "sal": 13,
         "proposta": 8,
         "won": 8,
         "lost": 5,
-        "sqlToDemoP": 76.2,
-        "demoToSalP": 81.3,
+        "sqlToDemoP": 81,
+        "demoToSalP": 76.5,
         "salToPropP": 61.5,
         "winRateP": 61.5
       },
       "demoFlow": {
-        "demos": 18,
-        "parouDemo": 0,
+        "demos": 19,
+        "parouDemo": 1,
         "sal": 5,
         "proposta": 0,
         "ganho": 8,
         "perdido": 5,
         "voltou": 0,
         "avancaram": 14,
-        "avancouP": 77.8,
-        "ganhoP": 44.4
+        "avancouP": 73.7,
+        "ganhoP": 42.1
       }
     },
     {
@@ -524,12 +524,12 @@
       "mql": 106,
       "mqlEtapas": {
         "nmql": 0,
-        "cadencia": 47,
+        "cadencia": 46,
         "conexao": 3,
         "nutricao": 0,
         "ganho": 0,
         "perdido": 56,
-        "outros": 0
+        "outros": 1
       },
       "mqlPctTrabalhados": 100,
       "mqlParaSqlPct": 37.7,
