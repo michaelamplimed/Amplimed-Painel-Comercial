@@ -1,6 +1,6 @@
 {
-  "geradoEm": "2026-10-15T12:30:29.897Z",
-  "geradoEmBR": "15/10/2026, 09:30:29",
+  "geradoEm": "2026-10-15T13:00:35.431Z",
+  "geradoEmBR": "15/10/2026, 10:00:35",
   "mes": {
     "ano": 2026,
     "mes": 10,
@@ -33,28 +33,28 @@
     ]
   },
   "funilTime": {
-    "sql": 87,
-    "demo": 70,
+    "sql": 89,
+    "demo": 71,
     "sal": 51,
     "proposta": 41,
     "won": 33,
-    "lost": 15,
-    "sqlToDemoP": 80.5,
-    "demoToSalP": 72.9,
+    "lost": 16,
+    "sqlToDemoP": 79.8,
+    "demoToSalP": 71.8,
     "salToPropP": 80.4,
-    "winRateP": 68.8
+    "winRateP": 67.3
   },
   "demoFlowTime": {
-    "demos": 74,
+    "demos": 75,
     "parouDemo": 12,
     "sal": 9,
     "proposta": 8,
     "ganho": 30,
-    "perdido": 15,
+    "perdido": 16,
     "voltou": 0,
     "avancaram": 50,
-    "avancouP": 67.6,
-    "ganhoP": 40.5
+    "avancouP": 66.7,
+    "ganhoP": 40
   },
   "etapasAbertas": {
     "porCloser": [
@@ -107,10 +107,10 @@
         "name": "Catiane",
         "nivel": "Coordenadora",
         "demo": 1,
-        "sal": 1,
+        "sal": 0,
         "proposta": 0,
         "forecast": 0,
-        "total": 2
+        "total": 1
       },
       {
         "name": "Jessica",
@@ -124,10 +124,10 @@
     ],
     "time": {
       "demo": 19,
-      "sal": 14,
+      "sal": 13,
       "proposta": 9,
       "forecast": 3,
-      "total": 45
+      "total": 44
     },
     "semCloser": {
       "demo": 1,
@@ -145,7 +145,7 @@
     "receitaRealizada": 10943.11,
     "metaMensal": 50000,
     "pctMeta": 21.9,
-    "pipelineAberto": 17856.06,
+    "pipelineAberto": 23797.06,
     "pipelineAbertoQtd": 63,
     "pipelineAbertoComValor": 25,
     "mediaDiaria": 729.54
@@ -204,18 +204,18 @@
     ]
   },
   "aging": {
-    "0-7d": 29,
+    "0-7d": 30,
     "8-15d": 19,
-    "16-30d": 11,
+    "16-30d": 10,
     "31-60d": 4,
     "+60d": 0
   },
   "agingCriacao": {
     "0-7d": 19,
-    "8-15d": 20,
+    "8-15d": 21,
     "16-30d": 14,
     "31-60d": 5,
-    "+60d": 5
+    "+60d": 4
   },
   "agingRisco": {
     "qtd": 4,
@@ -238,13 +238,13 @@
       "metaProRata": 5419.35,
       "pctMetaProRata": 43.1,
       "funil": {
-        "sql": 21,
+        "sql": 22,
         "demo": 16,
         "sal": 11,
         "proposta": 8,
         "won": 7,
         "lost": 5,
-        "sqlToDemoP": 76.2,
+        "sqlToDemoP": 72.7,
         "demoToSalP": 68.8,
         "salToPropP": 72.7,
         "winRateP": 58.3
@@ -383,46 +383,46 @@
       "name": "Mayara",
       "nivel": "Pleno",
       "ganhos": 11,
-      "perdidos": 9,
+      "perdidos": 10,
       "crossSellGanhos": 0,
       "aquisicaoAmount": 1809.94,
       "crossSellAmount": 0,
       "totalAmount": 1809.94,
       "ticketMedio": 164.54,
-      "winRate": 55,
+      "winRate": 52.4,
       "metaMes": 9200,
       "metaProRata": 4451.61,
       "pctMetaProRata": 40.7,
       "funil": {
-        "sql": 17,
-        "demo": 14,
+        "sql": 18,
+        "demo": 15,
         "sal": 12,
         "proposta": 8,
         "won": 8,
-        "lost": 4,
-        "sqlToDemoP": 82.4,
-        "demoToSalP": 85.7,
+        "lost": 5,
+        "sqlToDemoP": 83.3,
+        "demoToSalP": 80,
         "salToPropP": 66.7,
-        "winRateP": 66.7
+        "winRateP": 61.5
       },
       "demoFlow": {
-        "demos": 16,
+        "demos": 17,
         "parouDemo": 0,
         "sal": 4,
         "proposta": 0,
         "ganho": 8,
-        "perdido": 4,
+        "perdido": 5,
         "voltou": 0,
         "avancaram": 13,
-        "avancouP": 81.3,
-        "ganhoP": 50
+        "avancouP": 76.5,
+        "ganhoP": 47.1
       }
     },
     {
       "name": "Catiane",
       "nivel": "Coordenadora",
       "ganhos": 0,
-      "perdidos": 0,
+      "perdidos": 1,
       "crossSellGanhos": 0,
       "aquisicaoAmount": 0,
       "crossSellAmount": 0,
@@ -500,19 +500,19 @@
   "sdrs": [
     {
       "name": "Ana",
-      "sql": 27,
-      "mql": 82,
+      "sql": 28,
+      "mql": 80,
       "mqlEtapas": {
-        "nmql": 1,
-        "cadencia": 69,
+        "nmql": 0,
+        "cadencia": 65,
         "conexao": 0,
         "nutricao": 0,
         "ganho": 0,
-        "perdido": 12,
+        "perdido": 15,
         "outros": 0
       },
-      "mqlPctTrabalhados": 98.8,
-      "mqlParaSqlPct": 32.9,
+      "mqlPctTrabalhados": 100,
+      "mqlParaSqlPct": 35,
       "recInfluenciada": 3102.85,
       "metaMes": 15000,
       "metaProRata": 7258.06,
@@ -521,18 +521,18 @@
     {
       "name": "Amanda",
       "sql": 35,
-      "mql": 101,
+      "mql": 104,
       "mqlEtapas": {
-        "nmql": 0,
-        "cadencia": 43,
+        "nmql": 1,
+        "cadencia": 45,
         "conexao": 4,
         "nutricao": 0,
         "ganho": 0,
         "perdido": 54,
         "outros": 0
       },
-      "mqlPctTrabalhados": 100,
-      "mqlParaSqlPct": 34.7,
+      "mqlPctTrabalhados": 99,
+      "mqlParaSqlPct": 33.7,
       "recInfluenciada": 3943.4,
       "metaMes": 15000,
       "metaProRata": 7258.06,
@@ -540,19 +540,19 @@
     },
     {
       "name": "Jeferson",
-      "sql": 25,
-      "mql": 83,
+      "sql": 26,
+      "mql": 82,
       "mqlEtapas": {
         "nmql": 0,
-        "cadencia": 55,
+        "cadencia": 47,
         "conexao": 5,
         "nutricao": 0,
         "ganho": 0,
-        "perdido": 23,
+        "perdido": 30,
         "outros": 0
       },
       "mqlPctTrabalhados": 100,
-      "mqlParaSqlPct": 30.1,
+      "mqlParaSqlPct": 31.7,
       "recInfluenciada": 1467.8,
       "metaMes": 13000,
       "metaProRata": 6290.32,
