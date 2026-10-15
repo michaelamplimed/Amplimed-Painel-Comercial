@@ -1,6 +1,6 @@
 {
-  "geradoEm": "2026-10-15T14:44:26.810Z",
-  "geradoEmBR": "15/10/2026, 11:44:26",
+  "geradoEm": "2026-10-15T15:00:33.998Z",
+  "geradoEmBR": "15/10/2026, 12:00:33",
   "mes": {
     "ano": 2026,
     "mes": 10,
@@ -35,25 +35,25 @@
   "funilTime": {
     "sql": 92,
     "demo": 73,
-    "sal": 52,
+    "sal": 53,
     "proposta": 43,
     "won": 34,
     "lost": 16,
     "sqlToDemoP": 79.3,
-    "demoToSalP": 71.2,
-    "salToPropP": 82.7,
+    "demoToSalP": 72.6,
+    "salToPropP": 81.1,
     "winRateP": 68
   },
   "demoFlowTime": {
     "demos": 77,
-    "parouDemo": 13,
-    "sal": 8,
+    "parouDemo": 12,
+    "sal": 9,
     "proposta": 9,
     "ganho": 31,
     "perdido": 16,
     "voltou": 0,
-    "avancaram": 51,
-    "avancouP": 66.2,
+    "avancaram": 52,
+    "avancouP": 67.5,
     "ganhoP": 40.3
   },
   "etapasAbertas": {
@@ -61,8 +61,8 @@
       {
         "name": "Tamara",
         "nivel": "Sênior",
-        "demo": 4,
-        "sal": 2,
+        "demo": 3,
+        "sal": 3,
         "proposta": 2,
         "forecast": 0,
         "total": 8
@@ -123,8 +123,8 @@
       }
     ],
     "time": {
-      "demo": 20,
-      "sal": 12,
+      "demo": 19,
+      "sal": 13,
       "proposta": 9,
       "forecast": 4,
       "total": 45
@@ -240,25 +240,25 @@
       "funil": {
         "sql": 23,
         "demo": 17,
-        "sal": 12,
+        "sal": 13,
         "proposta": 9,
         "won": 8,
         "lost": 5,
         "sqlToDemoP": 73.9,
-        "demoToSalP": 70.6,
-        "salToPropP": 75,
+        "demoToSalP": 76.5,
+        "salToPropP": 69.2,
         "winRateP": 61.5
       },
       "demoFlow": {
         "demos": 21,
-        "parouDemo": 3,
-        "sal": 2,
+        "parouDemo": 2,
+        "sal": 3,
         "proposta": 1,
         "ganho": 9,
         "perdido": 6,
         "voltou": 0,
-        "avancaram": 13,
-        "avancouP": 61.9,
+        "avancaram": 14,
+        "avancouP": 66.7,
         "ganhoP": 42.9
       }
     },
@@ -501,18 +501,18 @@
     {
       "name": "Ana",
       "sql": 29,
-      "mql": 81,
+      "mql": 82,
       "mqlEtapas": {
-        "nmql": 0,
-        "cadencia": 60,
-        "conexao": 0,
+        "nmql": 1,
+        "cadencia": 59,
+        "conexao": 1,
         "nutricao": 0,
         "ganho": 0,
         "perdido": 21,
         "outros": 0
       },
-      "mqlPctTrabalhados": 100,
-      "mqlParaSqlPct": 35.8,
+      "mqlPctTrabalhados": 98.8,
+      "mqlParaSqlPct": 35.4,
       "recInfluenciada": 3343.75,
       "metaMes": 15000,
       "metaProRata": 7258.06,
