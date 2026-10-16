@@ -1,6 +1,6 @@
 {
-  "geradoEm": "2026-10-16T22:00:29.983Z",
-  "geradoEmBR": "16/10/2026, 19:00:29",
+  "geradoEm": "2026-10-16T22:30:23.727Z",
+  "geradoEmBR": "16/10/2026, 19:30:23",
   "mes": {
     "ano": 2026,
     "mes": 10,
@@ -34,38 +34,38 @@
   },
   "funilTime": {
     "sql": 112,
-    "demo": 93,
+    "demo": 94,
     "sal": 64,
     "proposta": 52,
     "won": 44,
     "lost": 20,
-    "sqlToDemoP": 83,
-    "demoToSalP": 68.8,
+    "sqlToDemoP": 83.9,
+    "demoToSalP": 68.1,
     "salToPropP": 81.3,
     "winRateP": 68.8
   },
   "demoFlowTime": {
-    "demos": 93,
-    "parouDemo": 18,
+    "demos": 94,
+    "parouDemo": 19,
     "sal": 10,
     "proposta": 6,
     "ganho": 40,
     "perdido": 19,
     "voltou": 0,
     "avancaram": 59,
-    "avancouP": 63.4,
-    "ganhoP": 43
+    "avancouP": 62.8,
+    "ganhoP": 42.6
   },
   "etapasAbertas": {
     "porCloser": [
       {
         "name": "Tamara",
         "nivel": "Sênior",
-        "demo": 6,
+        "demo": 7,
         "sal": 2,
         "proposta": 2,
         "forecast": 0,
-        "total": 10
+        "total": 11
       },
       {
         "name": "Eduardo",
@@ -123,11 +123,11 @@
       }
     ],
     "time": {
-      "demo": 25,
+      "demo": 26,
       "sal": 15,
       "proposta": 8,
       "forecast": 4,
-      "total": 52
+      "total": 53
     },
     "semCloser": {
       "demo": 1,
@@ -145,9 +145,9 @@
     "receitaRealizada": 16534.61,
     "metaMensal": 50000,
     "pctMeta": 33.1,
-    "pipelineAberto": 24901.46,
+    "pipelineAberto": 25179.46,
     "pipelineAbertoQtd": 71,
-    "pipelineAbertoComValor": 26,
+    "pipelineAbertoComValor": 27,
     "mediaDiaria": 1033.41
   },
   "receitaAcumulada": {
@@ -242,27 +242,27 @@
       "pctMetaProRata": 48.6,
       "funil": {
         "sql": 27,
-        "demo": 22,
+        "demo": 23,
         "sal": 14,
         "proposta": 11,
         "won": 10,
         "lost": 6,
-        "sqlToDemoP": 81.5,
-        "demoToSalP": 63.6,
+        "sqlToDemoP": 85.2,
+        "demoToSalP": 60.9,
         "salToPropP": 78.6,
         "winRateP": 62.5
       },
       "demoFlow": {
-        "demos": 26,
-        "parouDemo": 5,
+        "demos": 27,
+        "parouDemo": 6,
         "sal": 2,
         "proposta": 1,
         "ganho": 11,
         "perdido": 7,
         "voltou": 0,
         "avancaram": 15,
-        "avancouP": 57.7,
-        "ganhoP": 42.3
+        "avancouP": 55.6,
+        "ganhoP": 40.7
       }
     },
     {
