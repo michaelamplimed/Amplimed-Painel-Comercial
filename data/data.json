@@ -1,6 +1,6 @@
 {
-  "geradoEm": "2026-10-16T13:00:34.142Z",
-  "geradoEmBR": "16/10/2026, 10:00:34",
+  "geradoEm": "2026-10-16T13:30:28.375Z",
+  "geradoEmBR": "16/10/2026, 10:30:28",
   "mes": {
     "ano": 2026,
     "mes": 10,
@@ -35,26 +35,26 @@
   "funilTime": {
     "sql": 105,
     "demo": 85,
-    "sal": 58,
-    "proposta": 48,
-    "won": 38,
+    "sal": 59,
+    "proposta": 49,
+    "won": 39,
     "lost": 20,
     "sqlToDemoP": 81,
-    "demoToSalP": 68.2,
-    "salToPropP": 82.8,
-    "winRateP": 65.5
+    "demoToSalP": 69.4,
+    "salToPropP": 83.1,
+    "winRateP": 66.1
   },
   "demoFlowTime": {
     "demos": 88,
-    "parouDemo": 16,
+    "parouDemo": 15,
     "sal": 9,
     "proposta": 9,
-    "ganho": 35,
+    "ganho": 36,
     "perdido": 19,
     "voltou": 0,
-    "avancaram": 56,
-    "avancouP": 63.6,
-    "ganhoP": 39.8
+    "avancaram": 57,
+    "avancouP": 64.8,
+    "ganhoP": 40.9
   },
   "etapasAbertas": {
     "porCloser": [
@@ -97,11 +97,11 @@
       {
         "name": "Mayara",
         "nivel": "Pleno",
-        "demo": 2,
+        "demo": 1,
         "sal": 7,
         "proposta": 1,
         "forecast": 0,
-        "total": 10
+        "total": 9
       },
       {
         "name": "Catiane",
@@ -123,11 +123,11 @@
       }
     ],
     "time": {
-      "demo": 23,
+      "demo": 22,
       "sal": 13,
       "proposta": 9,
       "forecast": 5,
-      "total": 50
+      "total": 49
     },
     "semCloser": {
       "demo": 1,
@@ -142,13 +142,13 @@
     "sdr": 43000
   },
   "kpis": {
-    "receitaRealizada": 12794.63,
+    "receitaRealizada": 13021.82,
     "metaMensal": 50000,
-    "pctMeta": 25.6,
-    "pipelineAberto": 27636.06,
-    "pipelineAbertoQtd": 70,
-    "pipelineAbertoComValor": 27,
-    "mediaDiaria": 799.66
+    "pctMeta": 26,
+    "pipelineAberto": 27409.06,
+    "pipelineAbertoQtd": 69,
+    "pipelineAbertoComValor": 26,
+    "mediaDiaria": 813.86
   },
   "receitaAcumulada": {
     "labels": [
@@ -185,7 +185,7 @@
       9015.71,
       10943.11,
       12055.02,
-      12794.63
+      13021.82
     ],
     "meta": [
       1612.9,
@@ -207,16 +207,16 @@
     ]
   },
   "aging": {
-    "0-7d": 36,
+    "0-7d": 35,
     "8-15d": 18,
     "16-30d": 12,
     "31-60d": 4,
     "+60d": 0
   },
   "agingCriacao": {
-    "0-7d": 23,
-    "8-15d": 22,
-    "16-30d": 15,
+    "0-7d": 22,
+    "8-15d": 21,
+    "16-30d": 16,
     "31-60d": 6,
     "+60d": 4
   },
@@ -385,40 +385,40 @@
     {
       "name": "Mayara",
       "nivel": "Pleno",
-      "ganhos": 12,
+      "ganhos": 13,
       "perdidos": 10,
       "crossSellGanhos": 0,
-      "aquisicaoAmount": 2030.01,
+      "aquisicaoAmount": 2257.2,
       "crossSellAmount": 0,
-      "totalAmount": 2030.01,
-      "ticketMedio": 169.17,
-      "winRate": 54.5,
+      "totalAmount": 2257.2,
+      "ticketMedio": 173.63,
+      "winRate": 56.5,
       "metaMes": 9200,
       "metaProRata": 4748.39,
-      "pctMetaProRata": 42.8,
+      "pctMetaProRata": 47.5,
       "funil": {
         "sql": 22,
         "demo": 19,
-        "sal": 14,
-        "proposta": 9,
-        "won": 9,
+        "sal": 15,
+        "proposta": 10,
+        "won": 10,
         "lost": 5,
         "sqlToDemoP": 86.4,
-        "demoToSalP": 73.7,
-        "salToPropP": 64.3,
-        "winRateP": 64.3
+        "demoToSalP": 78.9,
+        "salToPropP": 66.7,
+        "winRateP": 66.7
       },
       "demoFlow": {
         "demos": 21,
-        "parouDemo": 2,
+        "parouDemo": 1,
         "sal": 5,
         "proposta": 0,
-        "ganho": 9,
+        "ganho": 10,
         "perdido": 5,
         "voltou": 0,
-        "avancaram": 15,
-        "avancouP": 71.4,
-        "ganhoP": 42.9
+        "avancaram": 16,
+        "avancouP": 76.2,
+        "ganhoP": 47.6
       }
     },
     {
@@ -548,18 +548,18 @@
       "mqlEtapas": {
         "nmql": 0,
         "cadencia": 41,
-        "conexao": 5,
+        "conexao": 2,
         "nutricao": 0,
         "ganho": 0,
-        "perdido": 42,
+        "perdido": 45,
         "outros": 0
       },
       "mqlPctTrabalhados": 100,
       "mqlParaSqlPct": 36.4,
-      "recInfluenciada": 1606.8,
+      "recInfluenciada": 1833.99,
       "metaMes": 13000,
       "metaProRata": 6709.68,
-      "pctMetaProRata": 23.9
+      "pctMetaProRata": 27.3
     }
   ]
 }
