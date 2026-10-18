@@ -1,6 +1,6 @@
 {
-  "geradoEm": "2026-10-18T18:00:32.718Z",
-  "geradoEmBR": "18/10/2026, 15:00:32",
+  "geradoEm": "2026-10-18T18:30:26.519Z",
+  "geradoEmBR": "18/10/2026, 15:30:26",
   "mes": {
     "ano": 2026,
     "mes": 10,
@@ -510,9 +510,9 @@
     {
       "name": "Ana",
       "sql": 32,
-      "mql": 104,
+      "mql": 105,
       "mqlEtapas": {
-        "nmql": 10,
+        "nmql": 11,
         "cadencia": 39,
         "conexao": 2,
         "nutricao": 0,
@@ -520,8 +520,8 @@
         "perdido": 53,
         "outros": 0
       },
-      "mqlPctTrabalhados": 90.4,
-      "mqlParaSqlPct": 30.8,
+      "mqlPctTrabalhados": 89.5,
+      "mqlParaSqlPct": 30.5,
       "recInfluenciada": 3482.75,
       "metaMes": 15000,
       "metaProRata": 8709.68,
