@@ -1,6 +1,6 @@
 {
-  "geradoEm": "2026-10-19T13:30:26.370Z",
-  "geradoEmBR": "19/10/2026, 10:30:26",
+  "geradoEm": "2026-10-19T14:00:33.488Z",
+  "geradoEmBR": "19/10/2026, 11:00:33",
   "mes": {
     "ano": 2026,
     "mes": 10,
@@ -37,24 +37,24 @@
     "demo": 97,
     "sal": 66,
     "proposta": 54,
-    "won": 46,
+    "won": 47,
     "lost": 21,
     "sqlToDemoP": 82.9,
     "demoToSalP": 68,
     "salToPropP": 81.8,
-    "winRateP": 68.7
+    "winRateP": 69.1
   },
   "demoFlowTime": {
     "demos": 97,
     "parouDemo": 19,
     "sal": 8,
-    "proposta": 8,
-    "ganho": 41,
+    "proposta": 7,
+    "ganho": 42,
     "perdido": 20,
     "voltou": 1,
     "avancaram": 61,
     "avancouP": 62.9,
-    "ganhoP": 42.3
+    "ganhoP": 43.3
   },
   "etapasAbertas": {
     "porCloser": [
@@ -100,8 +100,8 @@
         "demo": 1,
         "sal": 7,
         "proposta": 2,
-        "forecast": 1,
-        "total": 11
+        "forecast": 0,
+        "total": 10
       },
       {
         "name": "Catiane",
@@ -126,8 +126,8 @@
       "demo": 26,
       "sal": 13,
       "proposta": 9,
-      "forecast": 4,
-      "total": 52
+      "forecast": 3,
+      "total": 51
     },
     "semCloser": {
       "demo": 1,
@@ -142,13 +142,13 @@
     "sdr": 43000
   },
   "kpis": {
-    "receitaRealizada": 18151.61,
+    "receitaRealizada": 18530.41,
     "metaMensal": 50000,
-    "pctMeta": 36.3,
-    "pipelineAberto": 26228.36,
-    "pipelineAbertoQtd": 73,
-    "pipelineAbertoComValor": 28,
-    "mediaDiaria": 955.35
+    "pctMeta": 37.1,
+    "pipelineAberto": 25969.46,
+    "pipelineAbertoQtd": 72,
+    "pipelineAbertoComValor": 27,
+    "mediaDiaria": 975.28
   },
   "receitaAcumulada": {
     "labels": [
@@ -191,7 +191,7 @@
       18012.61,
       18012.61,
       18012.61,
-      18151.61
+      18530.41
     ],
     "meta": [
       1612.9,
@@ -216,14 +216,14 @@
     ]
   },
   "aging": {
-    "0-7d": 30,
+    "0-7d": 29,
     "8-15d": 21,
     "16-30d": 15,
     "31-60d": 6,
     "+60d": 1
   },
   "agingCriacao": {
-    "0-7d": 20,
+    "0-7d": 19,
     "8-15d": 18,
     "16-30d": 23,
     "31-60d": 9,
@@ -394,40 +394,40 @@
     {
       "name": "Mayara",
       "nivel": "Pleno",
-      "ganhos": 13,
+      "ganhos": 14,
       "perdidos": 10,
       "crossSellGanhos": 0,
-      "aquisicaoAmount": 2257.2,
+      "aquisicaoAmount": 2516.1,
       "crossSellAmount": 0,
-      "totalAmount": 2257.2,
-      "ticketMedio": 173.63,
-      "winRate": 56.5,
+      "totalAmount": 2516.1,
+      "ticketMedio": 179.72,
+      "winRate": 58.3,
       "metaMes": 9200,
       "metaProRata": 5638.71,
-      "pctMetaProRata": 40,
+      "pctMetaProRata": 44.6,
       "funil": {
         "sql": 24,
         "demo": 21,
         "sal": 17,
         "proposta": 11,
-        "won": 10,
+        "won": 11,
         "lost": 5,
         "sqlToDemoP": 87.5,
         "demoToSalP": 81,
         "salToPropP": 64.7,
-        "winRateP": 66.7
+        "winRateP": 68.8
       },
       "demoFlow": {
         "demos": 23,
         "parouDemo": 1,
         "sal": 5,
-        "proposta": 2,
-        "ganho": 10,
+        "proposta": 1,
+        "ganho": 11,
         "perdido": 5,
         "voltou": 0,
         "avancaram": 18,
         "avancouP": 78.3,
-        "ganhoP": 43.5
+        "ganhoP": 47.8
       }
     },
     {
@@ -536,19 +536,19 @@
       "mql": 129,
       "mqlEtapas": {
         "nmql": 0,
-        "cadencia": 65,
+        "cadencia": 63,
         "conexao": 3,
         "nutricao": 0,
         "ganho": 0,
-        "perdido": 61,
+        "perdido": 63,
         "outros": 0
       },
       "mqlPctTrabalhados": 100,
       "mqlParaSqlPct": 36.4,
-      "recInfluenciada": 5784.48,
+      "recInfluenciada": 6043.38,
       "metaMes": 15000,
       "metaProRata": 9193.55,
-      "pctMetaProRata": 62.9
+      "pctMetaProRata": 65.7
     },
     {
       "name": "Jeferson",
@@ -556,8 +556,8 @@
       "mql": 104,
       "mqlEtapas": {
         "nmql": 0,
-        "cadencia": 52,
-        "conexao": 1,
+        "cadencia": 51,
+        "conexao": 2,
         "nutricao": 1,
         "ganho": 0,
         "perdido": 50,
