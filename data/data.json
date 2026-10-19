@@ -1,6 +1,6 @@
 {
-  "geradoEm": "2026-10-19T11:00:32.617Z",
-  "geradoEmBR": "19/10/2026, 08:00:32",
+  "geradoEm": "2026-10-19T11:30:26.553Z",
+  "geradoEmBR": "19/10/2026, 08:30:26",
   "mes": {
     "ano": 2026,
     "mes": 10,
@@ -145,9 +145,9 @@
     "receitaRealizada": 18012.61,
     "metaMensal": 50000,
     "pctMeta": 36,
-    "pipelineAberto": 24652.46,
+    "pipelineAberto": 24901.46,
     "pipelineAbertoQtd": 69,
-    "pipelineAbertoComValor": 25,
+    "pipelineAbertoComValor": 26,
     "mediaDiaria": 948.03
   },
   "receitaAcumulada": {
@@ -513,18 +513,18 @@
     {
       "name": "Ana",
       "sql": 32,
-      "mql": 107,
+      "mql": 108,
       "mqlEtapas": {
-        "nmql": 3,
-        "cadencia": 49,
+        "nmql": 1,
+        "cadencia": 52,
         "conexao": 2,
         "nutricao": 0,
         "ganho": 0,
         "perdido": 53,
         "outros": 0
       },
-      "mqlPctTrabalhados": 97.2,
-      "mqlParaSqlPct": 29.9,
+      "mqlPctTrabalhados": 99.1,
+      "mqlParaSqlPct": 29.6,
       "recInfluenciada": 3482.75,
       "metaMes": 15000,
       "metaProRata": 9193.55,
@@ -535,15 +535,15 @@
       "sql": 44,
       "mql": 127,
       "mqlEtapas": {
-        "nmql": 6,
-        "cadencia": 59,
+        "nmql": 0,
+        "cadencia": 65,
         "conexao": 3,
         "nutricao": 0,
         "ganho": 0,
         "perdido": 59,
         "outros": 0
       },
-      "mqlPctTrabalhados": 95.3,
+      "mqlPctTrabalhados": 100,
       "mqlParaSqlPct": 34.6,
       "recInfluenciada": 5784.48,
       "metaMes": 15000,
@@ -553,18 +553,18 @@
     {
       "name": "Jeferson",
       "sql": 36,
-      "mql": 104,
+      "mql": 103,
       "mqlEtapas": {
-        "nmql": 14,
-        "cadencia": 40,
+        "nmql": 0,
+        "cadencia": 53,
         "conexao": 1,
         "nutricao": 1,
         "ganho": 0,
         "perdido": 48,
         "outros": 0
       },
-      "mqlPctTrabalhados": 86.5,
-      "mqlParaSqlPct": 34.6,
+      "mqlPctTrabalhados": 100,
+      "mqlParaSqlPct": 35,
       "recInfluenciada": 5285.78,
       "metaMes": 13000,
       "metaProRata": 7967.74,
