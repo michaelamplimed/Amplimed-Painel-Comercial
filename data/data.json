@@ -1,6 +1,6 @@
 {
-  "geradoEm": "2026-10-20T14:48:26.572Z",
-  "geradoEmBR": "20/10/2026, 11:48:26",
+  "geradoEm": "2026-10-20T15:00:30.820Z",
+  "geradoEmBR": "20/10/2026, 12:00:30",
   "mes": {
     "ano": 2026,
     "mes": 10,
@@ -85,8 +85,8 @@
         "nivel": "Pleno",
         "demo": 4,
         "sal": 0,
-        "proposta": 4,
-        "forecast": 0,
+        "proposta": 3,
+        "forecast": 1,
         "total": 8
       },
       {
@@ -129,8 +129,8 @@
     "time": {
       "demo": 27,
       "sal": 12,
-      "proposta": 10,
-      "forecast": 4,
+      "proposta": 9,
+      "forecast": 5,
       "total": 53
     },
     "semCloser": {
@@ -223,8 +223,8 @@
     ]
   },
   "aging": {
-    "0-7d": 38,
-    "8-15d": 16,
+    "0-7d": 39,
+    "8-15d": 15,
     "16-30d": 13,
     "31-60d": 4,
     "+60d": 1
@@ -520,9 +520,9 @@
     {
       "name": "Ana",
       "sql": 41,
-      "mql": 116,
+      "mql": 117,
       "mqlEtapas": {
-        "nmql": 0,
+        "nmql": 1,
         "cadencia": 53,
         "conexao": 2,
         "nutricao": 0,
@@ -530,8 +530,8 @@
         "perdido": 61,
         "outros": 0
       },
-      "mqlPctTrabalhados": 100,
-      "mqlParaSqlPct": 35.3,
+      "mqlPctTrabalhados": 99.1,
+      "mqlParaSqlPct": 35,
       "recInfluenciada": 3959.75,
       "metaMes": 15000,
       "metaProRata": 9677.42,
@@ -542,15 +542,15 @@
       "sql": 56,
       "mql": 134,
       "mqlEtapas": {
-        "nmql": 1,
-        "cadencia": 54,
+        "nmql": 0,
+        "cadencia": 55,
         "conexao": 2,
         "nutricao": 0,
         "ganho": 0,
         "perdido": 77,
         "outros": 0
       },
-      "mqlPctTrabalhados": 99.3,
+      "mqlPctTrabalhados": 100,
       "mqlParaSqlPct": 41.8,
       "recInfluenciada": 6500.38,
       "metaMes": 15000,
@@ -560,18 +560,18 @@
     {
       "name": "Jeferson",
       "sql": 37,
-      "mql": 110,
+      "mql": 111,
       "mqlEtapas": {
-        "nmql": 1,
-        "cadencia": 34,
+        "nmql": 0,
+        "cadencia": 36,
         "conexao": 8,
         "nutricao": 1,
         "ganho": 0,
         "perdido": 66,
         "outros": 0
       },
-      "mqlPctTrabalhados": 99.1,
-      "mqlParaSqlPct": 33.6,
+      "mqlPctTrabalhados": 100,
+      "mqlParaSqlPct": 33.3,
       "recInfluenciada": 5796.79,
       "metaMes": 13000,
       "metaProRata": 8387.1,
