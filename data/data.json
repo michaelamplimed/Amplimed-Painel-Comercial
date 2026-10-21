@@ -1,6 +1,6 @@
 {
-  "geradoEm": "2026-10-21T15:00:35.084Z",
-  "geradoEmBR": "21/10/2026, 12:00:35",
+  "geradoEm": "2026-10-21T15:30:27.619Z",
+  "geradoEmBR": "21/10/2026, 12:30:27",
   "mes": {
     "ano": 2026,
     "mes": 10,
@@ -38,27 +38,27 @@
   },
   "funilTime": {
     "sql": 149,
-    "demo": 119,
+    "demo": 120,
     "sal": 83,
     "proposta": 69,
     "won": 58,
     "lost": 32,
-    "sqlToDemoP": 79.9,
-    "demoToSalP": 69.7,
+    "sqlToDemoP": 80.5,
+    "demoToSalP": 69.2,
     "salToPropP": 83.1,
     "winRateP": 64.4
   },
   "demoFlowTime": {
-    "demos": 118,
-    "parouDemo": 17,
+    "demos": 119,
+    "parouDemo": 18,
     "sal": 6,
     "proposta": 11,
     "ganho": 51,
     "perdido": 32,
     "voltou": 1,
     "avancaram": 76,
-    "avancouP": 64.4,
-    "ganhoP": 43.2
+    "avancouP": 63.9,
+    "ganhoP": 42.9
   },
   "etapasAbertas": {
     "porCloser": [
@@ -110,11 +110,11 @@
       {
         "name": "Catiane",
         "nivel": "Coordenadora",
-        "demo": 1,
+        "demo": 2,
         "sal": 0,
         "proposta": 0,
         "forecast": 0,
-        "total": 1
+        "total": 2
       },
       {
         "name": "Jessica",
@@ -127,11 +127,11 @@
       }
     ],
     "time": {
-      "demo": 22,
+      "demo": 23,
       "sal": 10,
       "proposta": 10,
       "forecast": 5,
-      "total": 47
+      "total": 48
     },
     "semCloser": {
       "demo": 0,
@@ -456,27 +456,27 @@
       "pctMetaProRata": 0,
       "funil": {
         "sql": 1,
-        "demo": 0,
+        "demo": 1,
         "sal": 0,
         "proposta": 0,
         "won": 0,
         "lost": 0,
-        "sqlToDemoP": 0,
-        "demoToSalP": null,
+        "sqlToDemoP": 100,
+        "demoToSalP": 0,
         "salToPropP": null,
         "winRateP": null
       },
       "demoFlow": {
-        "demos": 0,
-        "parouDemo": 0,
+        "demos": 1,
+        "parouDemo": 1,
         "sal": 0,
         "proposta": 0,
         "ganho": 0,
         "perdido": 0,
         "voltou": 0,
         "avancaram": 0,
-        "avancouP": null,
-        "ganhoP": null
+        "avancouP": 0,
+        "ganhoP": 0
       }
     },
     {
