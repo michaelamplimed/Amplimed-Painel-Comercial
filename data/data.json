@@ -1,6 +1,6 @@
 {
-  "geradoEm": "2026-10-21T21:00:30.692Z",
-  "geradoEmBR": "21/10/2026, 18:00:30",
+  "geradoEm": "2026-10-21T21:30:26.881Z",
+  "geradoEmBR": "21/10/2026, 18:30:26",
   "mes": {
     "ano": 2026,
     "mes": 10,
@@ -39,25 +39,25 @@
   "funilTime": {
     "sql": 154,
     "demo": 128,
-    "sal": 85,
+    "sal": 86,
     "proposta": 72,
     "won": 62,
     "lost": 37,
     "sqlToDemoP": 83.1,
-    "demoToSalP": 66.4,
-    "salToPropP": 84.7,
+    "demoToSalP": 67.2,
+    "salToPropP": 83.7,
     "winRateP": 62.6
   },
   "demoFlowTime": {
     "demos": 127,
-    "parouDemo": 20,
-    "sal": 5,
+    "parouDemo": 19,
+    "sal": 6,
     "proposta": 11,
     "ganho": 54,
     "perdido": 36,
     "voltou": 1,
-    "avancaram": 78,
-    "avancouP": 61.4,
+    "avancaram": 79,
+    "avancouP": 62.2,
     "ganhoP": 42.5
   },
   "etapasAbertas": {
@@ -74,8 +74,8 @@
       {
         "name": "Eduardo",
         "nivel": "Sênior",
-        "demo": 9,
-        "sal": 1,
+        "demo": 8,
+        "sal": 2,
         "proposta": 0,
         "forecast": 0,
         "total": 10
@@ -127,8 +127,8 @@
       }
     ],
     "time": {
-      "demo": 25,
-      "sal": 8,
+      "demo": 24,
+      "sal": 9,
       "proposta": 11,
       "forecast": 3,
       "total": 47
@@ -301,25 +301,25 @@
       "funil": {
         "sql": 30,
         "demo": 26,
-        "sal": 11,
+        "sal": 12,
         "proposta": 9,
         "won": 9,
         "lost": 9,
         "sqlToDemoP": 86.7,
-        "demoToSalP": 42.3,
-        "salToPropP": 81.8,
+        "demoToSalP": 46.2,
+        "salToPropP": 75,
         "winRateP": 50
       },
       "demoFlow": {
         "demos": 28,
-        "parouDemo": 8,
-        "sal": 1,
+        "parouDemo": 7,
+        "sal": 2,
         "proposta": 0,
         "ganho": 11,
         "perdido": 8,
         "voltou": 0,
-        "avancaram": 13,
-        "avancouP": 46.4,
+        "avancaram": 14,
+        "avancouP": 50,
         "ganhoP": 39.3
       }
     },
