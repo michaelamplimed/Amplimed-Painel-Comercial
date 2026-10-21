@@ -1,6 +1,6 @@
 {
-  "geradoEm": "2026-10-21T14:55:29.957Z",
-  "geradoEmBR": "21/10/2026, 11:55:29",
+  "geradoEm": "2026-10-21T15:00:35.084Z",
+  "geradoEmBR": "21/10/2026, 12:00:35",
   "mes": {
     "ano": 2026,
     "mes": 10,
@@ -566,11 +566,11 @@
       "mql": 120,
       "mqlEtapas": {
         "nmql": 0,
-        "cadencia": 37,
+        "cadencia": 35,
         "conexao": 14,
         "nutricao": 1,
         "ganho": 0,
-        "perdido": 68,
+        "perdido": 70,
         "outros": 0
       },
       "mqlPctTrabalhados": 100,
