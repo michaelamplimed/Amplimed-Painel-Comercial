@@ -1,6 +1,6 @@
 {
-  "geradoEm": "2026-10-22T20:00:32.652Z",
-  "geradoEmBR": "22/10/2026, 17:00:32",
+  "geradoEm": "2026-10-22T20:30:28.850Z",
+  "geradoEmBR": "22/10/2026, 17:30:28",
   "mes": {
     "ano": 2026,
     "mes": 10,
@@ -38,27 +38,27 @@
   },
   "funilTime": {
     "sql": 161,
-    "demo": 133,
-    "sal": 89,
+    "demo": 134,
+    "sal": 90,
     "proposta": 77,
     "won": 67,
     "lost": 43,
-    "sqlToDemoP": 82.6,
-    "demoToSalP": 66.9,
-    "salToPropP": 86.5,
+    "sqlToDemoP": 83.2,
+    "demoToSalP": 67.2,
+    "salToPropP": 85.6,
     "winRateP": 60.9
   },
   "demoFlowTime": {
-    "demos": 130,
+    "demos": 131,
     "parouDemo": 18,
-    "sal": 5,
+    "sal": 6,
     "proposta": 8,
     "ganho": 59,
     "perdido": 39,
     "voltou": 1,
-    "avancaram": 80,
-    "avancouP": 61.5,
-    "ganhoP": 45.4
+    "avancaram": 81,
+    "avancouP": 61.8,
+    "ganhoP": 45
   },
   "etapasAbertas": {
     "porCloser": [
@@ -84,10 +84,10 @@
         "name": "Juliano",
         "nivel": "Pleno",
         "demo": 4,
-        "sal": 0,
+        "sal": 1,
         "proposta": 4,
         "forecast": 0,
-        "total": 8
+        "total": 9
       },
       {
         "name": "Ariel",
@@ -128,10 +128,10 @@
     ],
     "time": {
       "demo": 23,
-      "sal": 7,
+      "sal": 8,
       "proposta": 9,
       "forecast": 3,
-      "total": 42
+      "total": 43
     },
     "semCloser": {
       "demo": 0,
@@ -230,16 +230,16 @@
   },
   "aging": {
     "0-7d": 36,
-    "8-15d": 10,
-    "16-30d": 13,
+    "8-15d": 9,
+    "16-30d": 14,
     "31-60d": 3,
     "+60d": 1
   },
   "agingCriacao": {
     "0-7d": 26,
     "8-15d": 10,
-    "16-30d": 18,
-    "31-60d": 5,
+    "16-30d": 17,
+    "31-60d": 6,
     "+60d": 4
   },
   "agingRisco": {
@@ -342,27 +342,27 @@
       "pctMetaProRata": 53.7,
       "funil": {
         "sql": 30,
-        "demo": 23,
-        "sal": 18,
+        "demo": 24,
+        "sal": 19,
         "proposta": 18,
         "won": 14,
         "lost": 4,
-        "sqlToDemoP": 76.7,
-        "demoToSalP": 78.3,
-        "salToPropP": 100,
+        "sqlToDemoP": 80,
+        "demoToSalP": 79.2,
+        "salToPropP": 94.7,
         "winRateP": 77.8
       },
       "demoFlow": {
-        "demos": 27,
+        "demos": 28,
         "parouDemo": 4,
-        "sal": 0,
+        "sal": 1,
         "proposta": 4,
         "ganho": 15,
         "perdido": 4,
         "voltou": 0,
-        "avancaram": 20,
-        "avancouP": 74.1,
-        "ganhoP": 55.6
+        "avancaram": 21,
+        "avancouP": 75,
+        "ganhoP": 53.6
       }
     },
     {
