@@ -1,6 +1,6 @@
 {
-  "geradoEm": "2026-10-22T19:00:32.538Z",
-  "geradoEmBR": "22/10/2026, 16:00:32",
+  "geradoEm": "2026-10-22T19:05:02.513Z",
+  "geradoEmBR": "22/10/2026, 16:05:02",
   "mes": {
     "ano": 2026,
     "mes": 10,
@@ -40,21 +40,21 @@
     "sql": 161,
     "demo": 133,
     "sal": 89,
-    "proposta": 76,
+    "proposta": 77,
     "won": 66,
-    "lost": 44,
+    "lost": 43,
     "sqlToDemoP": 82.6,
     "demoToSalP": 66.9,
-    "salToPropP": 85.4,
-    "winRateP": 60
+    "salToPropP": 86.5,
+    "winRateP": 60.6
   },
   "demoFlowTime": {
     "demos": 130,
     "parouDemo": 18,
     "sal": 5,
-    "proposta": 8,
+    "proposta": 9,
     "ganho": 58,
-    "perdido": 40,
+    "perdido": 39,
     "voltou": 1,
     "avancaram": 80,
     "avancouP": 61.5,
@@ -104,8 +104,8 @@
         "demo": 1,
         "sal": 1,
         "proposta": 2,
-        "forecast": 0,
-        "total": 4
+        "forecast": 1,
+        "total": 5
       },
       {
         "name": "Catiane",
@@ -130,8 +130,8 @@
       "demo": 23,
       "sal": 7,
       "proposta": 9,
-      "forecast": 3,
-      "total": 42
+      "forecast": 4,
+      "total": 43
     },
     "semCloser": {
       "demo": 0,
@@ -149,9 +149,9 @@
     "receitaRealizada": 26675.87,
     "metaMensal": 50000,
     "pctMeta": 53.4,
-    "pipelineAberto": 20966.76,
-    "pipelineAbertoQtd": 63,
-    "pipelineAbertoComValor": 26,
+    "pipelineAberto": 21091.76,
+    "pipelineAbertoQtd": 64,
+    "pipelineAbertoComValor": 27,
     "mediaDiaria": 1212.54
   },
   "receitaAcumulada": {
@@ -229,7 +229,7 @@
     ]
   },
   "aging": {
-    "0-7d": 37,
+    "0-7d": 38,
     "8-15d": 10,
     "16-30d": 12,
     "31-60d": 3,
@@ -237,7 +237,7 @@
   },
   "agingCriacao": {
     "0-7d": 26,
-    "8-15d": 10,
+    "8-15d": 11,
     "16-30d": 18,
     "31-60d": 5,
     "+60d": 4
@@ -408,13 +408,13 @@
       "name": "Mayara",
       "nivel": "Pleno",
       "ganhos": 18,
-      "perdidos": 18,
+      "perdidos": 17,
       "crossSellGanhos": 0,
       "aquisicaoAmount": 3343.1,
       "crossSellAmount": 0,
       "totalAmount": 3343.1,
       "ticketMedio": 185.73,
-      "winRate": 50,
+      "winRate": 51.4,
       "metaMes": 9200,
       "metaProRata": 6529.03,
       "pctMetaProRata": 51.2,
@@ -422,21 +422,21 @@
         "sql": 32,
         "demo": 27,
         "sal": 20,
-        "proposta": 15,
+        "proposta": 16,
         "won": 14,
-        "lost": 11,
+        "lost": 10,
         "sqlToDemoP": 84.4,
         "demoToSalP": 74.1,
-        "salToPropP": 75,
-        "winRateP": 56
+        "salToPropP": 80,
+        "winRateP": 58.3
       },
       "demoFlow": {
         "demos": 29,
         "parouDemo": 1,
         "sal": 1,
-        "proposta": 1,
+        "proposta": 2,
         "ganho": 15,
-        "perdido": 11,
+        "perdido": 10,
         "voltou": 0,
         "avancaram": 21,
         "avancouP": 72.4,
