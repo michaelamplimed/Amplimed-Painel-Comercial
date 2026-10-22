@@ -1,6 +1,6 @@
 {
-  "geradoEm": "2026-10-22T19:05:02.513Z",
-  "geradoEmBR": "22/10/2026, 16:05:02",
+  "geradoEm": "2026-10-22T19:30:28.050Z",
+  "geradoEmBR": "22/10/2026, 16:30:28",
   "mes": {
     "ano": 2026,
     "mes": 10,
@@ -149,7 +149,7 @@
     "receitaRealizada": 26675.87,
     "metaMensal": 50000,
     "pctMeta": 53.4,
-    "pipelineAberto": 21091.76,
+    "pipelineAberto": 21091.95,
     "pipelineAbertoQtd": 64,
     "pipelineAbertoComValor": 27,
     "mediaDiaria": 1212.54
