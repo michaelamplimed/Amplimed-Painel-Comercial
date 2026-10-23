@@ -1,6 +1,6 @@
 {
-  "geradoEm": "2026-10-23T12:30:26.499Z",
-  "geradoEmBR": "23/10/2026, 09:30:26",
+  "geradoEm": "2026-10-23T13:00:32.794Z",
+  "geradoEmBR": "23/10/2026, 10:00:32",
   "mes": {
     "ano": 2026,
     "mes": 10,
@@ -39,25 +39,25 @@
   "funilTime": {
     "sql": 162,
     "demo": 137,
-    "sal": 91,
+    "sal": 92,
     "proposta": 78,
     "won": 70,
     "lost": 43,
     "sqlToDemoP": 84.6,
-    "demoToSalP": 66.4,
-    "salToPropP": 85.7,
+    "demoToSalP": 67.2,
+    "salToPropP": 84.8,
     "winRateP": 61.9
   },
   "demoFlowTime": {
     "demos": 134,
-    "parouDemo": 20,
-    "sal": 6,
+    "parouDemo": 19,
+    "sal": 7,
     "proposta": 7,
     "ganho": 61,
     "perdido": 39,
     "voltou": 1,
-    "avancaram": 82,
-    "avancouP": 61.2,
+    "avancaram": 83,
+    "avancouP": 61.9,
     "ganhoP": 45.5
   },
   "etapasAbertas": {
@@ -65,8 +65,8 @@
       {
         "name": "Tamara",
         "nivel": "Sênior",
-        "demo": 3,
-        "sal": 2,
+        "demo": 2,
+        "sal": 3,
         "proposta": 2,
         "forecast": 0,
         "total": 7
@@ -127,8 +127,8 @@
       }
     ],
     "time": {
-      "demo": 25,
-      "sal": 8,
+      "demo": 24,
+      "sal": 9,
       "proposta": 8,
       "forecast": 2,
       "total": 43
@@ -149,9 +149,9 @@
     "receitaRealizada": 27447.96,
     "metaMensal": 50000,
     "pctMeta": 54.9,
-    "pipelineAberto": 20458.86,
+    "pipelineAberto": 20877.86,
     "pipelineAbertoQtd": 61,
-    "pipelineAbertoComValor": 25,
+    "pipelineAbertoComValor": 26,
     "mediaDiaria": 1193.39
   },
   "receitaAcumulada": {
@@ -240,8 +240,8 @@
   },
   "agingCriacao": {
     "0-7d": 24,
-    "8-15d": 9,
-    "16-30d": 17,
+    "8-15d": 8,
+    "16-30d": 18,
     "31-60d": 7,
     "+60d": 4
   },
@@ -268,25 +268,25 @@
       "funil": {
         "sql": 38,
         "demo": 31,
-        "sal": 21,
+        "sal": 22,
         "proposta": 17,
         "won": 14,
         "lost": 11,
         "sqlToDemoP": 81.6,
-        "demoToSalP": 67.7,
-        "salToPropP": 81,
+        "demoToSalP": 71,
+        "salToPropP": 77.3,
         "winRateP": 56
       },
       "demoFlow": {
         "demos": 35,
-        "parouDemo": 3,
-        "sal": 2,
+        "parouDemo": 2,
+        "sal": 3,
         "proposta": 2,
         "ganho": 15,
         "perdido": 13,
         "voltou": 0,
-        "avancaram": 22,
-        "avancouP": 62.9,
+        "avancaram": 23,
+        "avancouP": 65.7,
         "ganhoP": 42.9
       }
     },
@@ -549,18 +549,18 @@
     {
       "name": "Amanda",
       "sql": 67,
-      "mql": 152,
+      "mql": 155,
       "mqlEtapas": {
         "nmql": 0,
-        "cadencia": 40,
+        "cadencia": 42,
         "conexao": 3,
         "nutricao": 0,
         "ganho": 0,
-        "perdido": 109,
+        "perdido": 110,
         "outros": 0
       },
       "mqlPctTrabalhados": 100,
-      "mqlParaSqlPct": 44.1,
+      "mqlParaSqlPct": 43.2,
       "recInfluenciada": 8292.43,
       "metaMes": 15000,
       "metaProRata": 11129.03,
@@ -572,8 +572,8 @@
       "mql": 142,
       "mqlEtapas": {
         "nmql": 1,
-        "cadencia": 48,
-        "conexao": 7,
+        "cadencia": 46,
+        "conexao": 9,
         "nutricao": 1,
         "ganho": 0,
         "perdido": 85,
