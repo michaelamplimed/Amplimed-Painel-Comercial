@@ -1,6 +1,6 @@
 {
-  "geradoEm": "2026-10-23T18:30:28.049Z",
-  "geradoEmBR": "23/10/2026, 15:30:28",
+  "geradoEm": "2026-10-23T18:55:02.348Z",
+  "geradoEmBR": "23/10/2026, 15:55:02",
   "mes": {
     "ano": 2026,
     "mes": 10,
@@ -38,27 +38,27 @@
   },
   "funilTime": {
     "sql": 170,
-    "demo": 142,
+    "demo": 143,
     "sal": 93,
     "proposta": 79,
     "won": 71,
-    "lost": 44,
-    "sqlToDemoP": 83.5,
-    "demoToSalP": 65.5,
+    "lost": 45,
+    "sqlToDemoP": 84.1,
+    "demoToSalP": 65,
     "salToPropP": 84.9,
-    "winRateP": 61.7
+    "winRateP": 61.2
   },
   "demoFlowTime": {
-    "demos": 139,
-    "parouDemo": 23,
+    "demos": 140,
+    "parouDemo": 24,
     "sal": 7,
     "proposta": 6,
     "ganho": 62,
     "perdido": 40,
     "voltou": 1,
     "avancaram": 84,
-    "avancouP": 60.4,
-    "ganhoP": 44.6
+    "avancouP": 60,
+    "ganhoP": 44.3
   },
   "etapasAbertas": {
     "porCloser": [
@@ -101,11 +101,11 @@
       {
         "name": "Mayara",
         "nivel": "Pleno",
-        "demo": 2,
+        "demo": 3,
         "sal": 1,
         "proposta": 2,
         "forecast": 0,
-        "total": 5
+        "total": 6
       },
       {
         "name": "Catiane",
@@ -127,11 +127,11 @@
       }
     ],
     "time": {
-      "demo": 26,
+      "demo": 27,
       "sal": 9,
       "proposta": 7,
       "forecast": 2,
-      "total": 44
+      "total": 45
     },
     "semCloser": {
       "demo": 0,
@@ -146,13 +146,13 @@
     "sdr": 43000
   },
   "kpis": {
-    "receitaRealizada": 30586.86,
+    "receitaRealizada": 30599.85,
     "metaMensal": 50000,
     "pctMeta": 61.2,
-    "pipelineAberto": 19909.86,
-    "pipelineAbertoQtd": 65,
-    "pipelineAbertoComValor": 24,
-    "mediaDiaria": 1329.86
+    "pipelineAberto": 20215.26,
+    "pipelineAbertoQtd": 64,
+    "pipelineAbertoComValor": 25,
+    "mediaDiaria": 1330.43
   },
   "receitaAcumulada": {
     "labels": [
@@ -203,7 +203,7 @@
       20956.31,
       25470.97,
       27050.06,
-      30586.86
+      30599.85
     ],
     "meta": [
       1612.9,
@@ -232,14 +232,14 @@
     ]
   },
   "aging": {
-    "0-7d": 41,
+    "0-7d": 40,
     "8-15d": 9,
     "16-30d": 11,
     "31-60d": 3,
     "+60d": 1
   },
   "agingCriacao": {
-    "0-7d": 26,
+    "0-7d": 25,
     "8-15d": 12,
     "16-30d": 18,
     "31-60d": 5,
@@ -372,13 +372,13 @@
       "name": "Ariel",
       "nivel": "Pleno",
       "ganhos": 21,
-      "perdidos": 12,
+      "perdidos": 13,
       "crossSellGanhos": 0,
       "aquisicaoAmount": 8584.76,
       "crossSellAmount": 0,
       "totalAmount": 8584.76,
       "ticketMedio": 408.8,
-      "winRate": 63.6,
+      "winRate": 61.8,
       "metaMes": 9200,
       "metaProRata": 6825.81,
       "pctMetaProRata": 125.8,
@@ -388,11 +388,11 @@
         "sal": 19,
         "proposta": 18,
         "won": 18,
-        "lost": 7,
+        "lost": 8,
         "sqlToDemoP": 78.8,
         "demoToSalP": 73.1,
         "salToPropP": 94.7,
-        "winRateP": 72
+        "winRateP": 69.2
       },
       "demoFlow": {
         "demos": 11,
@@ -423,27 +423,27 @@
       "pctMetaProRata": 50.8,
       "funil": {
         "sql": 34,
-        "demo": 28,
+        "demo": 29,
         "sal": 20,
         "proposta": 16,
         "won": 15,
         "lost": 10,
-        "sqlToDemoP": 82.4,
-        "demoToSalP": 71.4,
+        "sqlToDemoP": 85.3,
+        "demoToSalP": 69,
         "salToPropP": 80,
         "winRateP": 60
       },
       "demoFlow": {
-        "demos": 30,
-        "parouDemo": 2,
+        "demos": 31,
+        "parouDemo": 3,
         "sal": 1,
         "proposta": 1,
         "ganho": 16,
         "perdido": 10,
         "voltou": 0,
         "avancaram": 21,
-        "avancouP": 70,
-        "ganhoP": 53.3
+        "avancouP": 67.7,
+        "ganhoP": 51.6
       }
     },
     {
@@ -490,15 +490,15 @@
       "nivel": "Cross-sell",
       "ganhos": 0,
       "perdidos": 0,
-      "crossSellGanhos": 33,
+      "crossSellGanhos": 34,
       "aquisicaoAmount": 0,
-      "crossSellAmount": 4699.29,
-      "totalAmount": 4699.29,
+      "crossSellAmount": 4712.28,
+      "totalAmount": 4712.28,
       "ticketMedio": 0,
       "winRate": 0,
       "metaMes": 6000,
       "metaProRata": 4451.61,
-      "pctMetaProRata": 105.6,
+      "pctMetaProRata": 105.9,
       "funil": {
         "sql": 0,
         "demo": 0,
