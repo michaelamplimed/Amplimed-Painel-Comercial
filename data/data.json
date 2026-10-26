@@ -1,6 +1,6 @@
 {
-  "geradoEm": "2026-10-26T15:00:31.300Z",
-  "geradoEmBR": "26/10/2026, 12:00:31",
+  "geradoEm": "2026-10-26T15:30:30.761Z",
+  "geradoEmBR": "26/10/2026, 12:30:30",
   "mes": {
     "ano": 2026,
     "mes": 10,
@@ -38,27 +38,27 @@
   },
   "funilTime": {
     "sql": 177,
-    "demo": 153,
+    "demo": 154,
     "sal": 104,
     "proposta": 89,
     "won": 79,
     "lost": 52,
-    "sqlToDemoP": 86.4,
-    "demoToSalP": 68,
+    "sqlToDemoP": 87,
+    "demoToSalP": 67.5,
     "salToPropP": 85.6,
     "winRateP": 60.3
   },
   "demoFlowTime": {
-    "demos": 150,
-    "parouDemo": 21,
+    "demos": 151,
+    "parouDemo": 22,
     "sal": 6,
     "proposta": 6,
     "ganho": 70,
     "perdido": 45,
     "voltou": 2,
     "avancaram": 95,
-    "avancouP": 63.3,
-    "ganhoP": 46.7
+    "avancouP": 62.9,
+    "ganhoP": 46.4
   },
   "etapasAbertas": {
     "porCloser": [
@@ -74,11 +74,11 @@
       {
         "name": "Eduardo",
         "nivel": "Sênior",
-        "demo": 8,
+        "demo": 9,
         "sal": 2,
         "proposta": 0,
         "forecast": 0,
-        "total": 10
+        "total": 11
       },
       {
         "name": "Juliano",
@@ -127,11 +127,11 @@
       }
     ],
     "time": {
-      "demo": 24,
+      "demo": 25,
       "sal": 8,
       "proposta": 7,
       "forecast": 2,
-      "total": 41
+      "total": 42
     },
     "semCloser": {
       "demo": 0,
@@ -315,27 +315,27 @@
       "pctMetaProRata": 46.3,
       "funil": {
         "sql": 33,
-        "demo": 30,
+        "demo": 31,
         "sal": 15,
         "proposta": 12,
         "won": 12,
         "lost": 11,
-        "sqlToDemoP": 90.9,
-        "demoToSalP": 50,
+        "sqlToDemoP": 93.9,
+        "demoToSalP": 48.4,
         "salToPropP": 80,
         "winRateP": 52.2
       },
       "demoFlow": {
-        "demos": 32,
-        "parouDemo": 7,
+        "demos": 33,
+        "parouDemo": 8,
         "sal": 2,
         "proposta": 0,
         "ganho": 14,
         "perdido": 9,
         "voltou": 0,
         "avancaram": 17,
-        "avancouP": 53.1,
-        "ganhoP": 43.8
+        "avancouP": 51.5,
+        "ganhoP": 42.4
       }
     },
     {
