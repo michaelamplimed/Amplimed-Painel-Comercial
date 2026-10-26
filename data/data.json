@@ -1,6 +1,6 @@
 {
-  "geradoEm": "2026-10-26T19:30:26.693Z",
-  "geradoEmBR": "26/10/2026, 16:30:26",
+  "geradoEm": "2026-10-26T20:00:58.653Z",
+  "geradoEmBR": "26/10/2026, 17:00:58",
   "mes": {
     "ano": 2026,
     "mes": 10,
@@ -20,7 +20,13 @@
       }
     ],
     "ganhosSemCloser": [],
-    "ganhosSemSdr": [],
+    "ganhosSemSdr": [
+      {
+        "id": "66778131351",
+        "nome": "MOA Serviços Médicos Ltda",
+        "valor": 139
+      }
+    ],
     "testesExcluidos": [
       {
         "id": "65536970773",
@@ -41,24 +47,24 @@
     "demo": 155,
     "sal": 105,
     "proposta": 90,
-    "won": 79,
+    "won": 80,
     "lost": 53,
     "sqlToDemoP": 85.2,
     "demoToSalP": 67.7,
     "salToPropP": 85.7,
-    "winRateP": 59.8
+    "winRateP": 60.2
   },
   "demoFlowTime": {
     "demos": 152,
     "parouDemo": 22,
     "sal": 6,
-    "proposta": 7,
-    "ganho": 70,
+    "proposta": 6,
+    "ganho": 71,
     "perdido": 45,
     "voltou": 2,
     "avancaram": 96,
     "avancouP": 63.2,
-    "ganhoP": 46.1
+    "ganhoP": 46.7
   },
   "etapasAbertas": {
     "porCloser": [
@@ -86,8 +92,8 @@
         "demo": 4,
         "sal": 0,
         "proposta": 3,
-        "forecast": 1,
-        "total": 8
+        "forecast": 0,
+        "total": 7
       },
       {
         "name": "Ariel",
@@ -130,8 +136,8 @@
       "demo": 25,
       "sal": 7,
       "proposta": 7,
-      "forecast": 3,
-      "total": 42
+      "forecast": 2,
+      "total": 41
     },
     "semCloser": {
       "demo": 0,
@@ -146,13 +152,13 @@
     "sdr": 43000
   },
   "kpis": {
-    "receitaRealizada": 33542.71,
+    "receitaRealizada": 33681.71,
     "metaMensal": 50000,
-    "pctMeta": 67.1,
-    "pipelineAberto": 20557.9,
-    "pipelineAbertoQtd": 59,
-    "pipelineAbertoComValor": 25,
-    "mediaDiaria": 1290.1
+    "pctMeta": 67.4,
+    "pipelineAberto": 20418.9,
+    "pipelineAbertoQtd": 58,
+    "pipelineAbertoComValor": 24,
+    "mediaDiaria": 1295.45
   },
   "receitaAcumulada": {
     "labels": [
@@ -209,7 +215,7 @@
       32572.31,
       32877.71,
       32877.71,
-      33542.71
+      33681.71
     ],
     "meta": [
       1612.9,
@@ -241,14 +247,14 @@
     ]
   },
   "aging": {
-    "0-7d": 36,
+    "0-7d": 35,
     "8-15d": 6,
     "16-30d": 12,
     "31-60d": 3,
     "+60d": 2
   },
   "agingCriacao": {
-    "0-7d": 21,
+    "0-7d": 20,
     "8-15d": 13,
     "16-30d": 15,
     "31-60d": 7,
@@ -341,40 +347,40 @@
     {
       "name": "Juliano",
       "nivel": "Pleno",
-      "ganhos": 20,
+      "ganhos": 21,
       "perdidos": 10,
       "crossSellGanhos": 0,
-      "aquisicaoAmount": 3931.92,
+      "aquisicaoAmount": 4070.92,
       "crossSellAmount": 0,
-      "totalAmount": 3931.92,
-      "ticketMedio": 196.6,
-      "winRate": 66.7,
+      "totalAmount": 4070.92,
+      "ticketMedio": 193.85,
+      "winRate": 67.7,
       "metaMes": 9200,
       "metaProRata": 7716.13,
-      "pctMetaProRata": 51,
+      "pctMetaProRata": 52.8,
       "funil": {
         "sql": 35,
         "demo": 29,
         "sal": 23,
         "proposta": 22,
-        "won": 16,
+        "won": 17,
         "lost": 7,
         "sqlToDemoP": 82.9,
         "demoToSalP": 79.3,
         "salToPropP": 95.7,
-        "winRateP": 69.6
+        "winRateP": 70.8
       },
       "demoFlow": {
         "demos": 33,
         "parouDemo": 4,
         "sal": 0,
-        "proposta": 4,
-        "ganho": 17,
+        "proposta": 3,
+        "ganho": 18,
         "perdido": 7,
         "voltou": 1,
         "avancaram": 25,
         "avancouP": 75.8,
-        "ganhoP": 51.5
+        "ganhoP": 54.5
       }
     },
     {
@@ -541,11 +547,11 @@
       "mql": 153,
       "mqlEtapas": {
         "nmql": 0,
-        "cadencia": 58,
-        "conexao": 3,
+        "cadencia": 54,
+        "conexao": 4,
         "nutricao": 0,
         "ganho": 0,
-        "perdido": 92,
+        "perdido": 95,
         "outros": 0
       },
       "mqlPctTrabalhados": 100,
@@ -578,9 +584,9 @@
     {
       "name": "Jeferson",
       "sql": 47,
-      "mql": 163,
+      "mql": 165,
       "mqlEtapas": {
-        "nmql": 0,
+        "nmql": 2,
         "cadencia": 51,
         "conexao": 13,
         "nutricao": 1,
@@ -588,8 +594,8 @@
         "perdido": 98,
         "outros": 0
       },
-      "mqlPctTrabalhados": 100,
-      "mqlParaSqlPct": 28.8,
+      "mqlPctTrabalhados": 98.8,
+      "mqlParaSqlPct": 28.5,
       "recInfluenciada": 6377.98,
       "metaMes": 13000,
       "metaProRata": 10903.23,
