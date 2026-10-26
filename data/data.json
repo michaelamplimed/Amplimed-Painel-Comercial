@@ -1,6 +1,6 @@
 {
-  "geradoEm": "2026-10-26T10:30:27.382Z",
-  "geradoEmBR": "26/10/2026, 07:30:27",
+  "geradoEm": "2026-10-26T11:00:31.636Z",
+  "geradoEmBR": "26/10/2026, 08:00:31",
   "mes": {
     "ano": 2026,
     "mes": 10,
@@ -38,27 +38,27 @@
   },
   "funilTime": {
     "sql": 173,
-    "demo": 149,
+    "demo": 150,
     "sal": 98,
     "proposta": 85,
     "won": 76,
     "lost": 46,
-    "sqlToDemoP": 86.1,
-    "demoToSalP": 65.8,
+    "sqlToDemoP": 86.7,
+    "demoToSalP": 65.3,
     "salToPropP": 86.7,
     "winRateP": 62.3
   },
   "demoFlowTime": {
-    "demos": 146,
-    "parouDemo": 24,
+    "demos": 147,
+    "parouDemo": 25,
     "sal": 6,
     "proposta": 7,
     "ganho": 67,
     "perdido": 41,
     "voltou": 1,
     "avancaram": 89,
-    "avancouP": 61,
-    "ganhoP": 45.9
+    "avancouP": 60.5,
+    "ganhoP": 45.6
   },
   "etapasAbertas": {
     "porCloser": [
@@ -101,11 +101,11 @@
       {
         "name": "Mayara",
         "nivel": "Pleno",
-        "demo": 2,
+        "demo": 3,
         "sal": 1,
         "proposta": 2,
         "forecast": 0,
-        "total": 5
+        "total": 6
       },
       {
         "name": "Catiane",
@@ -127,11 +127,11 @@
       }
     ],
     "time": {
-      "demo": 27,
+      "demo": 28,
       "sal": 8,
       "proposta": 8,
       "forecast": 2,
-      "total": 45
+      "total": 46
     },
     "semCloser": {
       "demo": 0,
@@ -432,27 +432,27 @@
       "pctMetaProRata": 50.1,
       "funil": {
         "sql": 35,
-        "demo": 30,
+        "demo": 31,
         "sal": 22,
         "proposta": 18,
         "won": 17,
         "lost": 10,
-        "sqlToDemoP": 85.7,
-        "demoToSalP": 73.3,
+        "sqlToDemoP": 88.6,
+        "demoToSalP": 71,
         "salToPropP": 81.8,
         "winRateP": 63
       },
       "demoFlow": {
-        "demos": 32,
-        "parouDemo": 2,
+        "demos": 33,
+        "parouDemo": 3,
         "sal": 1,
         "proposta": 1,
         "ganho": 18,
         "perdido": 10,
         "voltou": 0,
         "avancaram": 23,
-        "avancouP": 71.9,
-        "ganhoP": 56.3
+        "avancouP": 69.7,
+        "ganhoP": 54.5
       }
     },
     {
@@ -560,15 +560,15 @@
       "sql": 74,
       "mql": 164,
       "mqlEtapas": {
-        "nmql": 11,
-        "cadencia": 37,
+        "nmql": 9,
+        "cadencia": 39,
         "conexao": 1,
         "nutricao": 0,
         "ganho": 0,
         "perdido": 115,
         "outros": 0
       },
-      "mqlPctTrabalhados": 93.3,
+      "mqlPctTrabalhados": 94.5,
       "mqlParaSqlPct": 45.1,
       "recInfluenciada": 9230.19,
       "metaMes": 15000,
@@ -580,15 +580,15 @@
       "sql": 45,
       "mql": 155,
       "mqlEtapas": {
-        "nmql": 10,
-        "cadencia": 51,
+        "nmql": 1,
+        "cadencia": 60,
         "conexao": 4,
         "nutricao": 1,
         "ganho": 0,
         "perdido": 89,
         "outros": 0
       },
-      "mqlPctTrabalhados": 93.5,
+      "mqlPctTrabalhados": 99.4,
       "mqlParaSqlPct": 29,
       "recInfluenciada": 6238.98,
       "metaMes": 13000,
