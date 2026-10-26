@@ -1,6 +1,6 @@
 {
-  "geradoEm": "2026-10-26T20:00:58.653Z",
-  "geradoEmBR": "26/10/2026, 17:00:58",
+  "geradoEm": "2026-10-26T20:30:29.465Z",
+  "geradoEmBR": "26/10/2026, 17:30:29",
   "mes": {
     "ano": 2026,
     "mes": 10,
@@ -20,13 +20,7 @@
       }
     ],
     "ganhosSemCloser": [],
-    "ganhosSemSdr": [
-      {
-        "id": "66778131351",
-        "nome": "MOA Serviços Médicos Ltda",
-        "valor": 139
-      }
-    ],
+    "ganhosSemSdr": [],
     "testesExcluidos": [
       {
         "id": "65536970773",
@@ -44,27 +38,27 @@
   },
   "funilTime": {
     "sql": 182,
-    "demo": 155,
+    "demo": 156,
     "sal": 105,
     "proposta": 90,
     "won": 80,
     "lost": 53,
-    "sqlToDemoP": 85.2,
-    "demoToSalP": 67.7,
+    "sqlToDemoP": 85.7,
+    "demoToSalP": 67.3,
     "salToPropP": 85.7,
     "winRateP": 60.2
   },
   "demoFlowTime": {
-    "demos": 152,
-    "parouDemo": 22,
+    "demos": 153,
+    "parouDemo": 23,
     "sal": 6,
     "proposta": 6,
     "ganho": 71,
     "perdido": 45,
     "voltou": 2,
     "avancaram": 96,
-    "avancouP": 63.2,
-    "ganhoP": 46.7
+    "avancouP": 62.7,
+    "ganhoP": 46.4
   },
   "etapasAbertas": {
     "porCloser": [
@@ -98,11 +92,11 @@
       {
         "name": "Ariel",
         "nivel": "Pleno",
-        "demo": 4,
+        "demo": 5,
         "sal": 1,
         "proposta": 0,
         "forecast": 2,
-        "total": 7
+        "total": 8
       },
       {
         "name": "Mayara",
@@ -133,11 +127,11 @@
       }
     ],
     "time": {
-      "demo": 25,
+      "demo": 26,
       "sal": 7,
       "proposta": 7,
       "forecast": 2,
-      "total": 41
+      "total": 42
     },
     "semCloser": {
       "demo": 0,
@@ -399,27 +393,27 @@
       "pctMetaProRata": 111.3,
       "funil": {
         "sql": 36,
-        "demo": 26,
+        "demo": 27,
         "sal": 19,
         "proposta": 18,
         "won": 18,
         "lost": 10,
-        "sqlToDemoP": 72.2,
-        "demoToSalP": 73.1,
+        "sqlToDemoP": 75,
+        "demoToSalP": 70.4,
         "salToPropP": 94.7,
         "winRateP": 64.3
       },
       "demoFlow": {
-        "demos": 11,
-        "parouDemo": 3,
+        "demos": 12,
+        "parouDemo": 4,
         "sal": 0,
         "proposta": 0,
         "ganho": 4,
         "perdido": 3,
         "voltou": 1,
         "avancaram": 4,
-        "avancouP": 36.4,
-        "ganhoP": 36.4
+        "avancouP": 33.3,
+        "ganhoP": 33.3
       }
     },
     {
@@ -543,19 +537,19 @@
   "sdrs": [
     {
       "name": "Ana",
-      "sql": 56,
+      "sql": 57,
       "mql": 153,
       "mqlEtapas": {
         "nmql": 0,
-        "cadencia": 54,
+        "cadencia": 45,
         "conexao": 4,
         "nutricao": 0,
         "ganho": 0,
-        "perdido": 95,
+        "perdido": 104,
         "outros": 0
       },
       "mqlPctTrabalhados": 100,
-      "mqlParaSqlPct": 36.6,
+      "mqlParaSqlPct": 37.3,
       "recInfluenciada": 9975.36,
       "metaMes": 15000,
       "metaProRata": 12580.65,
@@ -583,23 +577,23 @@
     },
     {
       "name": "Jeferson",
-      "sql": 47,
+      "sql": 48,
       "mql": 165,
       "mqlEtapas": {
-        "nmql": 2,
-        "cadencia": 51,
+        "nmql": 0,
+        "cadencia": 53,
         "conexao": 13,
         "nutricao": 1,
         "ganho": 0,
         "perdido": 98,
         "outros": 0
       },
-      "mqlPctTrabalhados": 98.8,
-      "mqlParaSqlPct": 28.5,
-      "recInfluenciada": 6377.98,
+      "mqlPctTrabalhados": 100,
+      "mqlParaSqlPct": 29.1,
+      "recInfluenciada": 6516.98,
       "metaMes": 13000,
       "metaProRata": 10903.23,
-      "pctMetaProRata": 58.5
+      "pctMetaProRata": 59.8
     }
   ]
 }
