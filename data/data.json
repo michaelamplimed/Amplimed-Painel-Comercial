@@ -1,6 +1,6 @@
 {
-  "geradoEm": "2026-10-27T17:30:32.961Z",
-  "geradoEmBR": "27/10/2026, 14:30:32",
+  "geradoEm": "2026-10-27T18:00:35.002Z",
+  "geradoEmBR": "27/10/2026, 15:00:35",
   "mes": {
     "ano": 2026,
     "mes": 10,
@@ -42,14 +42,14 @@
   },
   "funilTime": {
     "sql": 192,
-    "demo": 163,
-    "sal": 113,
+    "demo": 164,
+    "sal": 114,
     "proposta": 96,
     "won": 85,
     "lost": 55,
-    "sqlToDemoP": 84.9,
-    "demoToSalP": 69.3,
-    "salToPropP": 85,
+    "sqlToDemoP": 85.4,
+    "demoToSalP": 69.5,
+    "salToPropP": 84.2,
     "winRateP": 60.7
   },
   "demoFlowTime": {
@@ -97,10 +97,10 @@
         "name": "Ariel",
         "nivel": "Pleno",
         "demo": 5,
-        "sal": 1,
+        "sal": 2,
         "proposta": 0,
         "forecast": 2,
-        "total": 8
+        "total": 9
       },
       {
         "name": "Mayara",
@@ -132,10 +132,10 @@
     ],
     "time": {
       "demo": 24,
-      "sal": 9,
+      "sal": 10,
       "proposta": 7,
       "forecast": 3,
-      "total": 43
+      "total": 44
     },
     "semCloser": {
       "demo": 0,
@@ -153,9 +153,9 @@
     "receitaRealizada": 35202.61,
     "metaMensal": 50000,
     "pctMeta": 70.4,
-    "pipelineAberto": 23407.8,
+    "pipelineAberto": 25264.8,
     "pipelineAbertoQtd": 61,
-    "pipelineAbertoComValor": 27,
+    "pipelineAbertoComValor": 28,
     "mediaDiaria": 1303.8
   },
   "receitaAcumulada": {
@@ -400,14 +400,14 @@
       "pctMetaProRata": 107.1,
       "funil": {
         "sql": 38,
-        "demo": 27,
-        "sal": 19,
+        "demo": 28,
+        "sal": 20,
         "proposta": 18,
         "won": 18,
         "lost": 11,
-        "sqlToDemoP": 71.1,
-        "demoToSalP": 70.4,
-        "salToPropP": 94.7,
+        "sqlToDemoP": 73.7,
+        "demoToSalP": 71.4,
+        "salToPropP": 90,
         "winRateP": 62.1
       },
       "demoFlow": {
