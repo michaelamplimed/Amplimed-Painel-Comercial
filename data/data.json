@@ -1,6 +1,6 @@
 {
-  "geradoEm": "2026-10-27T19:00:34.255Z",
-  "geradoEmBR": "27/10/2026, 16:00:34",
+  "geradoEm": "2026-10-27T19:30:29.187Z",
+  "geradoEmBR": "27/10/2026, 16:30:29",
   "mes": {
     "ano": 2026,
     "mes": 10,
@@ -42,27 +42,27 @@
   },
   "funilTime": {
     "sql": 192,
-    "demo": 164,
+    "demo": 165,
     "sal": 114,
     "proposta": 96,
     "won": 85,
     "lost": 55,
-    "sqlToDemoP": 85.4,
-    "demoToSalP": 69.5,
+    "sqlToDemoP": 85.9,
+    "demoToSalP": 69.1,
     "salToPropP": 84.2,
     "winRateP": 60.7
   },
   "demoFlowTime": {
-    "demos": 160,
-    "parouDemo": 21,
+    "demos": 161,
+    "parouDemo": 22,
     "sal": 8,
     "proposta": 7,
     "ganho": 76,
     "perdido": 47,
     "voltou": 1,
     "avancaram": 104,
-    "avancouP": 65,
-    "ganhoP": 47.5
+    "avancouP": 64.6,
+    "ganhoP": 47.2
   },
   "etapasAbertas": {
     "porCloser": [
@@ -105,11 +105,11 @@
       {
         "name": "Mayara",
         "nivel": "Pleno",
-        "demo": 2,
+        "demo": 3,
         "sal": 0,
         "proposta": 1,
         "forecast": 1,
-        "total": 4
+        "total": 5
       },
       {
         "name": "Catiane",
@@ -131,11 +131,11 @@
       }
     ],
     "time": {
-      "demo": 24,
+      "demo": 25,
       "sal": 10,
       "proposta": 7,
       "forecast": 3,
-      "total": 44
+      "total": 45
     },
     "semCloser": {
       "demo": 0,
@@ -439,27 +439,27 @@
       "pctMetaProRata": 54.7,
       "funil": {
         "sql": 38,
-        "demo": 34,
+        "demo": 35,
         "sal": 25,
         "proposta": 21,
         "won": 20,
         "lost": 12,
-        "sqlToDemoP": 89.5,
-        "demoToSalP": 73.5,
+        "sqlToDemoP": 92.1,
+        "demoToSalP": 71.4,
         "salToPropP": 84,
         "winRateP": 62.5
       },
       "demoFlow": {
-        "demos": 36,
-        "parouDemo": 2,
+        "demos": 37,
+        "parouDemo": 3,
         "sal": 0,
         "proposta": 1,
         "ganho": 21,
         "perdido": 12,
         "voltou": 0,
         "avancaram": 26,
-        "avancouP": 72.2,
-        "ganhoP": 58.3
+        "avancouP": 70.3,
+        "ganhoP": 56.8
       }
     },
     {
@@ -565,10 +565,10 @@
     {
       "name": "Amanda",
       "sql": 78,
-      "mql": 168,
+      "mql": 169,
       "mqlEtapas": {
         "nmql": 0,
-        "cadencia": 35,
+        "cadencia": 36,
         "conexao": 2,
         "nutricao": 0,
         "ganho": 0,
@@ -576,7 +576,7 @@
         "outros": 0
       },
       "mqlPctTrabalhados": 100,
-      "mqlParaSqlPct": 46.4,
+      "mqlParaSqlPct": 46.2,
       "recInfluenciada": 10102.09,
       "metaMes": 15000,
       "metaProRata": 13064.52,
