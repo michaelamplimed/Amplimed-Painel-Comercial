@@ -1,6 +1,6 @@
 {
-  "geradoEm": "2026-10-27T11:30:27.618Z",
-  "geradoEmBR": "27/10/2026, 08:30:27",
+  "geradoEm": "2026-10-27T12:00:34.232Z",
+  "geradoEmBR": "27/10/2026, 09:00:34",
   "mes": {
     "ano": 2026,
     "mes": 10,
@@ -40,19 +40,19 @@
     "sql": 187,
     "demo": 159,
     "sal": 108,
-    "proposta": 91,
+    "proposta": 92,
     "won": 81,
     "lost": 53,
     "sqlToDemoP": 85,
     "demoToSalP": 67.9,
-    "salToPropP": 84.3,
+    "salToPropP": 85.2,
     "winRateP": 60.4
   },
   "demoFlowTime": {
     "demos": 156,
     "parouDemo": 23,
-    "sal": 8,
-    "proposta": 6,
+    "sal": 7,
+    "proposta": 7,
     "ganho": 72,
     "perdido": 45,
     "voltou": 2,
@@ -84,8 +84,8 @@
         "name": "Juliano",
         "nivel": "Pleno",
         "demo": 4,
-        "sal": 1,
-        "proposta": 3,
+        "sal": 0,
+        "proposta": 4,
         "forecast": 0,
         "total": 8
       },
@@ -128,8 +128,8 @@
     ],
     "time": {
       "demo": 26,
-      "sal": 9,
-      "proposta": 7,
+      "sal": 8,
+      "proposta": 8,
       "forecast": 2,
       "total": 44
     },
@@ -149,9 +149,9 @@
     "receitaRealizada": 33820.71,
     "metaMensal": 50000,
     "pctMeta": 67.6,
-    "pipelineAberto": 23178.9,
+    "pipelineAberto": 23317.9,
     "pipelineAbertoQtd": 62,
-    "pipelineAbertoComValor": 25,
+    "pipelineAbertoComValor": 26,
     "mediaDiaria": 1252.62
   },
   "receitaAcumulada": {
@@ -244,8 +244,8 @@
     ]
   },
   "aging": {
-    "0-7d": 39,
-    "8-15d": 6,
+    "0-7d": 38,
+    "8-15d": 7,
     "16-30d": 12,
     "31-60d": 3,
     "+60d": 2
@@ -359,19 +359,19 @@
         "sql": 36,
         "demo": 30,
         "sal": 24,
-        "proposta": 22,
+        "proposta": 23,
         "won": 17,
         "lost": 7,
         "sqlToDemoP": 83.3,
         "demoToSalP": 80,
-        "salToPropP": 91.7,
+        "salToPropP": 95.8,
         "winRateP": 70.8
       },
       "demoFlow": {
         "demos": 34,
         "parouDemo": 4,
-        "sal": 1,
-        "proposta": 3,
+        "sal": 0,
+        "proposta": 4,
         "ganho": 18,
         "perdido": 7,
         "voltou": 1,
@@ -561,9 +561,9 @@
     {
       "name": "Amanda",
       "sql": 76,
-      "mql": 167,
+      "mql": 169,
       "mqlEtapas": {
-        "nmql": 0,
+        "nmql": 2,
         "cadencia": 37,
         "conexao": 0,
         "nutricao": 0,
@@ -571,8 +571,8 @@
         "perdido": 130,
         "outros": 0
       },
-      "mqlPctTrabalhados": 100,
-      "mqlParaSqlPct": 45.5,
+      "mqlPctTrabalhados": 98.8,
+      "mqlParaSqlPct": 45,
       "recInfluenciada": 9369.19,
       "metaMes": 15000,
       "metaProRata": 13064.52,
