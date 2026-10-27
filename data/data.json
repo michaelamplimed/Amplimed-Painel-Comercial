@@ -1,6 +1,6 @@
 {
-  "geradoEm": "2026-10-27T16:30:27.619Z",
-  "geradoEmBR": "27/10/2026, 13:30:27",
+  "geradoEm": "2026-10-27T17:00:32.691Z",
+  "geradoEmBR": "27/10/2026, 14:00:32",
   "mes": {
     "ano": 2026,
     "mes": 10,
@@ -43,25 +43,25 @@
   "funilTime": {
     "sql": 191,
     "demo": 163,
-    "sal": 111,
-    "proposta": 94,
+    "sal": 112,
+    "proposta": 95,
     "won": 83,
-    "lost": 56,
+    "lost": 55,
     "sqlToDemoP": 85.3,
-    "demoToSalP": 68.1,
-    "salToPropP": 84.7,
-    "winRateP": 59.7
+    "demoToSalP": 68.7,
+    "salToPropP": 84.8,
+    "winRateP": 60.1
   },
   "demoFlowTime": {
     "demos": 160,
     "parouDemo": 22,
     "sal": 8,
-    "proposta": 7,
+    "proposta": 8,
     "ganho": 74,
-    "perdido": 48,
+    "perdido": 47,
     "voltou": 1,
-    "avancaram": 102,
-    "avancouP": 63.8,
+    "avancaram": 103,
+    "avancouP": 64.4,
     "ganhoP": 46.3
   },
   "etapasAbertas": {
@@ -90,8 +90,8 @@
         "demo": 3,
         "sal": 0,
         "proposta": 4,
-        "forecast": 0,
-        "total": 7
+        "forecast": 1,
+        "total": 8
       },
       {
         "name": "Ariel",
@@ -134,8 +134,8 @@
       "demo": 25,
       "sal": 9,
       "proposta": 7,
-      "forecast": 3,
-      "total": 44
+      "forecast": 4,
+      "total": 45
     },
     "semCloser": {
       "demo": 0,
@@ -153,9 +153,9 @@
     "receitaRealizada": 34854.71,
     "metaMensal": 50000,
     "pctMeta": 69.7,
-    "pipelineAberto": 23407.8,
-    "pipelineAbertoQtd": 61,
-    "pipelineAbertoComValor": 27,
+    "pipelineAberto": 23635.8,
+    "pipelineAbertoQtd": 62,
+    "pipelineAbertoComValor": 29,
     "mediaDiaria": 1290.92
   },
   "receitaAcumulada": {
@@ -248,7 +248,7 @@
     ]
   },
   "aging": {
-    "0-7d": 39,
+    "0-7d": 40,
     "8-15d": 6,
     "16-30d": 11,
     "31-60d": 3,
@@ -256,7 +256,7 @@
   },
   "agingCriacao": {
     "0-7d": 24,
-    "8-15d": 13,
+    "8-15d": 14,
     "16-30d": 14,
     "31-60d": 7,
     "+60d": 3
@@ -349,38 +349,38 @@
       "name": "Juliano",
       "nivel": "Pleno",
       "ganhos": 22,
-      "perdidos": 11,
+      "perdidos": 10,
       "crossSellGanhos": 0,
       "aquisicaoAmount": 4159.92,
       "crossSellAmount": 0,
       "totalAmount": 4159.92,
       "ticketMedio": 189.09,
-      "winRate": 66.7,
+      "winRate": 68.8,
       "metaMes": 9200,
       "metaProRata": 8012.9,
       "pctMetaProRata": 51.9,
       "funil": {
         "sql": 37,
         "demo": 31,
-        "sal": 25,
-        "proposta": 24,
+        "sal": 26,
+        "proposta": 25,
         "won": 18,
-        "lost": 8,
+        "lost": 7,
         "sqlToDemoP": 83.8,
-        "demoToSalP": 80.6,
-        "salToPropP": 96,
-        "winRateP": 69.2
+        "demoToSalP": 83.9,
+        "salToPropP": 96.2,
+        "winRateP": 72
       },
       "demoFlow": {
         "demos": 35,
         "parouDemo": 3,
         "sal": 0,
-        "proposta": 4,
+        "proposta": 5,
         "ganho": 19,
-        "perdido": 8,
+        "perdido": 7,
         "voltou": 1,
-        "avancaram": 27,
-        "avancouP": 77.1,
+        "avancaram": 28,
+        "avancouP": 80,
         "ganhoP": 54.3
       }
     },
@@ -565,9 +565,9 @@
     {
       "name": "Amanda",
       "sql": 78,
-      "mql": 167,
+      "mql": 168,
       "mqlEtapas": {
-        "nmql": 0,
+        "nmql": 1,
         "cadencia": 34,
         "conexao": 2,
         "nutricao": 0,
@@ -575,8 +575,8 @@
         "perdido": 131,
         "outros": 0
       },
-      "mqlPctTrabalhados": 100,
-      "mqlParaSqlPct": 46.7,
+      "mqlPctTrabalhados": 99.4,
+      "mqlParaSqlPct": 46.4,
       "recInfluenciada": 9754.19,
       "metaMes": 15000,
       "metaProRata": 13064.52,
@@ -588,11 +588,11 @@
       "mql": 165,
       "mqlEtapas": {
         "nmql": 0,
-        "cadencia": 55,
+        "cadencia": 53,
         "conexao": 10,
         "nutricao": 1,
         "ganho": 0,
-        "perdido": 99,
+        "perdido": 101,
         "outros": 0
       },
       "mqlPctTrabalhados": 100,
