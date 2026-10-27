@@ -1,6 +1,6 @@
 {
-  "geradoEm": "2026-10-27T10:00:38.387Z",
-  "geradoEmBR": "27/10/2026, 07:00:38",
+  "geradoEm": "2026-10-27T10:30:29.140Z",
+  "geradoEmBR": "27/10/2026, 07:30:29",
   "mes": {
     "ano": 2026,
     "mes": 10,
@@ -37,13 +37,13 @@
     ]
   },
   "funilTime": {
-    "sql": 182,
+    "sql": 184,
     "demo": 157,
     "sal": 106,
     "proposta": 90,
     "won": 80,
     "lost": 53,
-    "sqlToDemoP": 86.3,
+    "sqlToDemoP": 85.3,
     "demoToSalP": 67.5,
     "salToPropP": 84.9,
     "winRateP": 60.2
@@ -150,7 +150,7 @@
     "metaMensal": 50000,
     "pctMeta": 67.4,
     "pipelineAberto": 20418.9,
-    "pipelineAbertoQtd": 58,
+    "pipelineAbertoQtd": 60,
     "pipelineAbertoComValor": 24,
     "mediaDiaria": 1247.47
   },
@@ -244,15 +244,15 @@
     ]
   },
   "aging": {
-    "0-7d": 35,
+    "0-7d": 37,
     "8-15d": 6,
     "16-30d": 12,
     "31-60d": 3,
     "+60d": 2
   },
   "agingCriacao": {
-    "0-7d": 20,
-    "8-15d": 13,
+    "0-7d": 21,
+    "8-15d": 14,
     "16-30d": 15,
     "31-60d": 7,
     "+60d": 3
@@ -278,13 +278,13 @@
       "metaProRata": 9754.84,
       "pctMetaProRata": 48.8,
       "funil": {
-        "sql": 40,
+        "sql": 41,
         "demo": 36,
         "sal": 24,
         "proposta": 18,
         "won": 14,
         "lost": 12,
-        "sqlToDemoP": 90,
+        "sqlToDemoP": 87.8,
         "demoToSalP": 66.7,
         "salToPropP": 75,
         "winRateP": 53.8
@@ -434,13 +434,13 @@
       "metaProRata": 8012.9,
       "pctMetaProRata": 51.1,
       "funil": {
-        "sql": 36,
+        "sql": 37,
         "demo": 33,
         "sal": 24,
         "proposta": 20,
         "won": 19,
         "lost": 12,
-        "sqlToDemoP": 91.7,
+        "sqlToDemoP": 89.2,
         "demoToSalP": 72.7,
         "salToPropP": 83.3,
         "winRateP": 61.3
@@ -580,19 +580,19 @@
     },
     {
       "name": "Jeferson",
-      "sql": 48,
-      "mql": 167,
+      "sql": 50,
+      "mql": 165,
       "mqlEtapas": {
         "nmql": 2,
-        "cadencia": 55,
-        "conexao": 11,
+        "cadencia": 54,
+        "conexao": 10,
         "nutricao": 1,
         "ganho": 0,
         "perdido": 98,
         "outros": 0
       },
       "mqlPctTrabalhados": 98.8,
-      "mqlParaSqlPct": 28.7,
+      "mqlParaSqlPct": 30.3,
       "recInfluenciada": 6516.98,
       "metaMes": 13000,
       "metaProRata": 11322.58,
