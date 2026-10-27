@@ -1,6 +1,6 @@
 {
-  "geradoEm": "2026-10-27T20:00:30.567Z",
-  "geradoEmBR": "27/10/2026, 17:00:30",
+  "geradoEm": "2026-10-27T20:29:32.238Z",
+  "geradoEmBR": "27/10/2026, 17:29:32",
   "mes": {
     "ano": 2026,
     "mes": 10,
@@ -150,13 +150,13 @@
     "sdr": 43000
   },
   "kpis": {
-    "receitaRealizada": 35809.61,
+    "receitaRealizada": 35908.61,
     "metaMensal": 50000,
-    "pctMeta": 71.6,
+    "pctMeta": 71.8,
     "pipelineAberto": 24845.8,
     "pipelineAbertoQtd": 61,
     "pipelineAbertoComValor": 27,
-    "mediaDiaria": 1326.28
+    "mediaDiaria": 1329.95
   },
   "receitaAcumulada": {
     "labels": [
@@ -215,7 +215,7 @@
       32877.71,
       32877.71,
       33681.71,
-      35809.61
+      35908.61
     ],
     "meta": [
       1612.9,
@@ -248,8 +248,8 @@
     ]
   },
   "aging": {
-    "0-7d": 37,
-    "8-15d": 8,
+    "0-7d": 36,
+    "8-15d": 9,
     "16-30d": 11,
     "31-60d": 3,
     "+60d": 2
@@ -506,15 +506,15 @@
       "nivel": "Cross-sell",
       "ganhos": 0,
       "perdidos": 0,
-      "crossSellGanhos": 42,
+      "crossSellGanhos": 43,
       "aquisicaoAmount": 0,
-      "crossSellAmount": 5767.18,
-      "totalAmount": 5767.18,
+      "crossSellAmount": 5866.18,
+      "totalAmount": 5866.18,
       "ticketMedio": 0,
       "winRate": 0,
       "metaMes": 6000,
       "metaProRata": 5225.81,
-      "pctMetaProRata": 110.4,
+      "pctMetaProRata": 112.3,
       "funil": {
         "sql": 0,
         "demo": 0,
@@ -587,15 +587,15 @@
       "sql": 54,
       "mql": 168,
       "mqlEtapas": {
-        "nmql": 1,
-        "cadencia": 54,
+        "nmql": 0,
+        "cadencia": 55,
         "conexao": 10,
         "nutricao": 1,
         "ganho": 0,
         "perdido": 102,
         "outros": 0
       },
-      "mqlPctTrabalhados": 99.4,
+      "mqlPctTrabalhados": 100,
       "mqlParaSqlPct": 32.1,
       "recInfluenciada": 6516.98,
       "metaMes": 13000,
