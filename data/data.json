@@ -1,6 +1,6 @@
 {
-  "geradoEm": "2026-10-28T16:00:33.766Z",
-  "geradoEmBR": "28/10/2026, 13:00:33",
+  "geradoEm": "2026-10-28T16:29:10.030Z",
+  "geradoEmBR": "28/10/2026, 13:29:10",
   "mes": {
     "ano": 2026,
     "mes": 10,
@@ -49,12 +49,12 @@
     "demo": 170,
     "sal": 117,
     "proposta": 100,
-    "won": 89,
+    "won": 90,
     "lost": 57,
     "sqlToDemoP": 85,
     "demoToSalP": 68.8,
     "salToPropP": 85.5,
-    "winRateP": 61
+    "winRateP": 61.2
   },
   "demoFlowTime": {
     "demos": 165,
@@ -103,8 +103,8 @@
         "demo": 4,
         "sal": 2,
         "proposta": 0,
-        "forecast": 3,
-        "total": 9
+        "forecast": 2,
+        "total": 8
       },
       {
         "name": "Mayara",
@@ -138,8 +138,8 @@
       "demo": 25,
       "sal": 10,
       "proposta": 7,
-      "forecast": 3,
-      "total": 45
+      "forecast": 2,
+      "total": 44
     },
     "semCloser": {
       "demo": 0,
@@ -154,13 +154,13 @@
     "sdr": 43000
   },
   "kpis": {
-    "receitaRealizada": 36494.05,
+    "receitaRealizada": 36783.05,
     "metaMensal": 50000,
-    "pctMeta": 73,
-    "pipelineAberto": 23870.3,
-    "pipelineAbertoQtd": 63,
-    "pipelineAbertoComValor": 26,
-    "mediaDiaria": 1303.36
+    "pctMeta": 73.6,
+    "pipelineAberto": 23581.3,
+    "pipelineAbertoQtd": 62,
+    "pipelineAbertoComValor": 25,
+    "mediaDiaria": 1313.68
   },
   "receitaAcumulada": {
     "labels": [
@@ -221,7 +221,7 @@
       32877.71,
       33681.71,
       35908.61,
-      36494.05
+      36783.05
     ],
     "meta": [
       1612.9,
@@ -255,14 +255,14 @@
     ]
   },
   "aging": {
-    "0-7d": 37,
+    "0-7d": 36,
     "8-15d": 11,
     "16-30d": 10,
     "31-60d": 3,
     "+60d": 2
   },
   "agingCriacao": {
-    "0-7d": 25,
+    "0-7d": 24,
     "8-15d": 15,
     "16-30d": 13,
     "31-60d": 7,
@@ -394,28 +394,28 @@
     {
       "name": "Ariel",
       "nivel": "Pleno",
-      "ganhos": 21,
+      "ganhos": 22,
       "perdidos": 18,
       "crossSellGanhos": 0,
-      "aquisicaoAmount": 8584.76,
+      "aquisicaoAmount": 8873.76,
       "crossSellAmount": 0,
-      "totalAmount": 8584.76,
-      "ticketMedio": 408.8,
-      "winRate": 53.8,
+      "totalAmount": 8873.76,
+      "ticketMedio": 403.35,
+      "winRate": 55,
       "metaMes": 9200,
       "metaProRata": 8309.68,
-      "pctMetaProRata": 103.3,
+      "pctMetaProRata": 106.8,
       "funil": {
         "sql": 39,
         "demo": 29,
         "sal": 21,
         "proposta": 19,
-        "won": 18,
+        "won": 19,
         "lost": 12,
         "sqlToDemoP": 74.4,
         "demoToSalP": 72.4,
         "salToPropP": 90.5,
-        "winRateP": 60
+        "winRateP": 61.3
       },
       "demoFlow": {
         "demos": 12,
@@ -564,10 +564,10 @@
       },
       "mqlPctTrabalhados": 100,
       "mqlParaSqlPct": 37.3,
-      "recInfluenciada": 10685.35,
+      "recInfluenciada": 10974.35,
       "metaMes": 15000,
       "metaProRata": 13548.39,
-      "pctMetaProRata": 78.9
+      "pctMetaProRata": 81
     },
     {
       "name": "Amanda",
