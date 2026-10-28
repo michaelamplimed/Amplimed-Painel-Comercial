@@ -1,6 +1,6 @@
 {
-  "geradoEm": "2026-10-28T15:30:29.704Z",
-  "geradoEmBR": "28/10/2026, 12:30:29",
+  "geradoEm": "2026-10-28T16:00:33.766Z",
+  "geradoEmBR": "28/10/2026, 13:00:33",
   "mes": {
     "ano": 2026,
     "mes": 10,
@@ -572,9 +572,9 @@
     {
       "name": "Amanda",
       "sql": 82,
-      "mql": 177,
+      "mql": 178,
       "mqlEtapas": {
-        "nmql": 1,
+        "nmql": 2,
         "cadencia": 42,
         "conexao": 0,
         "nutricao": 0,
@@ -582,8 +582,8 @@
         "perdido": 134,
         "outros": 0
       },
-      "mqlPctTrabalhados": 99.4,
-      "mqlParaSqlPct": 46.3,
+      "mqlPctTrabalhados": 98.9,
+      "mqlParaSqlPct": 46.1,
       "recInfluenciada": 10338.39,
       "metaMes": 15000,
       "metaProRata": 13548.39,
