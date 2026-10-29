@@ -1,6 +1,6 @@
 {
-  "geradoEm": "2026-10-29T14:00:31.845Z",
-  "geradoEmBR": "29/10/2026, 11:00:31",
+  "geradoEm": "2026-10-29T14:30:28.431Z",
+  "geradoEmBR": "29/10/2026, 11:30:28",
   "mes": {
     "ano": 2026,
     "mes": 10,
@@ -45,27 +45,27 @@
     ]
   },
   "funilTime": {
-    "sql": 212,
+    "sql": 213,
     "demo": 180,
-    "sal": 122,
+    "sal": 123,
     "proposta": 105,
     "won": 95,
     "lost": 64,
-    "sqlToDemoP": 84.9,
-    "demoToSalP": 67.8,
-    "salToPropP": 86.1,
+    "sqlToDemoP": 84.5,
+    "demoToSalP": 68.3,
+    "salToPropP": 85.4,
     "winRateP": 59.7
   },
   "demoFlowTime": {
     "demos": 175,
-    "parouDemo": 21,
-    "sal": 6,
+    "parouDemo": 20,
+    "sal": 7,
     "proposta": 6,
     "ganho": 85,
     "perdido": 57,
     "voltou": 0,
-    "avancaram": 111,
-    "avancouP": 63.4,
+    "avancaram": 112,
+    "avancouP": 64,
     "ganhoP": 48.6
   },
   "etapasAbertas": {
@@ -91,8 +91,8 @@
       {
         "name": "Juliano",
         "nivel": "Pleno",
-        "demo": 5,
-        "sal": 0,
+        "demo": 4,
+        "sal": 1,
         "proposta": 4,
         "forecast": 1,
         "total": 10
@@ -135,8 +135,8 @@
       }
     ],
     "time": {
-      "demo": 24,
-      "sal": 8,
+      "demo": 23,
+      "sal": 9,
       "proposta": 6,
       "forecast": 3,
       "total": 41
@@ -154,13 +154,13 @@
     "sdr": 43000
   },
   "kpis": {
-    "receitaRealizada": 37452.45,
+    "receitaRealizada": 37572.35,
     "metaMensal": 50000,
-    "pctMeta": 74.9,
+    "pctMeta": 75.1,
     "pipelineAberto": 22281.5,
-    "pipelineAbertoQtd": 61,
+    "pipelineAbertoQtd": 62,
     "pipelineAbertoComValor": 22,
-    "mediaDiaria": 1291.46
+    "mediaDiaria": 1295.6
   },
   "receitaAcumulada": {
     "labels": [
@@ -223,7 +223,7 @@
       33681.71,
       35908.61,
       37209.2,
-      37452.45
+      37572.35
     ],
     "meta": [
       1612.9,
@@ -258,17 +258,17 @@
     ]
   },
   "aging": {
-    "0-7d": 38,
+    "0-7d": 39,
     "8-15d": 9,
     "16-30d": 9,
     "31-60d": 3,
     "+60d": 2
   },
   "agingCriacao": {
-    "0-7d": 25,
-    "8-15d": 15,
+    "0-7d": 26,
+    "8-15d": 14,
     "16-30d": 11,
-    "31-60d": 7,
+    "31-60d": 8,
     "+60d": 3
   },
   "agingRisco": {
@@ -372,25 +372,25 @@
       "funil": {
         "sql": 43,
         "demo": 36,
-        "sal": 28,
+        "sal": 29,
         "proposta": 28,
         "won": 21,
         "lost": 7,
         "sqlToDemoP": 83.7,
-        "demoToSalP": 77.8,
-        "salToPropP": 100,
+        "demoToSalP": 80.6,
+        "salToPropP": 96.6,
         "winRateP": 75
       },
       "demoFlow": {
         "demos": 40,
-        "parouDemo": 5,
-        "sal": 0,
+        "parouDemo": 4,
+        "sal": 1,
         "proposta": 5,
         "ganho": 22,
         "perdido": 8,
         "voltou": 0,
-        "avancaram": 30,
-        "avancouP": 75,
+        "avancaram": 31,
+        "avancouP": 77.5,
         "ganhoP": 55
       }
     },
@@ -409,13 +409,13 @@
       "metaProRata": 8606.45,
       "pctMetaProRata": 103.1,
       "funil": {
-        "sql": 41,
+        "sql": 42,
         "demo": 31,
         "sal": 21,
         "proposta": 19,
         "won": 19,
         "lost": 12,
-        "sqlToDemoP": 75.6,
+        "sqlToDemoP": 73.8,
         "demoToSalP": 67.7,
         "salToPropP": 90.5,
         "winRateP": 61.3
@@ -554,11 +554,11 @@
   "sdrs": [
     {
       "name": "Ana",
-      "sql": 66,
-      "mql": 171,
+      "sql": 67,
+      "mql": 170,
       "mqlEtapas": {
         "nmql": 1,
-        "cadencia": 41,
+        "cadencia": 40,
         "conexao": 6,
         "nutricao": 0,
         "ganho": 0,
@@ -566,7 +566,7 @@
         "outros": 0
       },
       "mqlPctTrabalhados": 99.4,
-      "mqlParaSqlPct": 38.6,
+      "mqlParaSqlPct": 39.4,
       "recInfluenciada": 11188.45,
       "metaMes": 15000,
       "metaProRata": 14032.26,
@@ -597,15 +597,15 @@
       "sql": 58,
       "mql": 183,
       "mqlEtapas": {
-        "nmql": 1,
+        "nmql": 0,
         "cadencia": 60,
-        "conexao": 9,
+        "conexao": 10,
         "nutricao": 1,
         "ganho": 0,
         "perdido": 112,
         "outros": 0
       },
-      "mqlPctTrabalhados": 99.5,
+      "mqlPctTrabalhados": 100,
       "mqlParaSqlPct": 31.7,
       "recInfluenciada": 6753.28,
       "metaMes": 13000,
