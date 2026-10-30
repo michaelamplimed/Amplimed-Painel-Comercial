@@ -1,6 +1,6 @@
 {
-  "geradoEm": "2026-10-30T18:00:30.244Z",
-  "geradoEmBR": "30/10/2026, 15:00:30",
+  "geradoEm": "2026-10-30T18:30:23.049Z",
+  "geradoEmBR": "30/10/2026, 15:30:23",
   "mes": {
     "ano": 2026,
     "mes": 10,
@@ -62,19 +62,19 @@
     "sal": 131,
     "proposta": 112,
     "won": 100,
-    "lost": 73,
+    "lost": 74,
     "sqlToDemoP": 87.8,
     "demoToSalP": 67.5,
     "salToPropP": 85.5,
-    "winRateP": 57.8
+    "winRateP": 57.5
   },
   "demoFlowTime": {
     "demos": 188,
-    "parouDemo": 19,
+    "parouDemo": 18,
     "sal": 8,
     "proposta": 6,
     "ganho": 90,
-    "perdido": 65,
+    "perdido": 66,
     "voltou": 0,
     "avancaram": 119,
     "avancouP": 63.3,
@@ -94,11 +94,11 @@
       {
         "name": "Eduardo",
         "nivel": "Sênior",
-        "demo": 6,
+        "demo": 5,
         "sal": 4,
         "proposta": 0,
         "forecast": 0,
-        "total": 10
+        "total": 9
       },
       {
         "name": "Juliano",
@@ -147,11 +147,11 @@
       }
     ],
     "time": {
-      "demo": 22,
+      "demo": 21,
       "sal": 9,
       "proposta": 6,
       "forecast": 5,
-      "total": 42
+      "total": 41
     },
     "semCloser": {
       "demo": 0,
@@ -166,13 +166,13 @@
     "sdr": 43000
   },
   "kpis": {
-    "receitaRealizada": 38486.62,
+    "receitaRealizada": 38585.62,
     "metaMensal": 50000,
-    "pctMeta": 77,
-    "pipelineAberto": 22884.6,
-    "pipelineAbertoQtd": 57,
+    "pctMeta": 77.2,
+    "pipelineAberto": 22581.6,
+    "pipelineAbertoQtd": 56,
     "pipelineAbertoComValor": 24,
-    "mediaDiaria": 1282.89
+    "mediaDiaria": 1286.19
   },
   "receitaAcumulada": {
     "labels": [
@@ -237,7 +237,7 @@
       35908.61,
       37209.2,
       38275.34,
-      38486.62
+      38585.62
     ],
     "meta": [
       1612.9,
@@ -274,14 +274,14 @@
   },
   "aging": {
     "0-7d": 35,
-    "8-15d": 8,
+    "8-15d": 7,
     "16-30d": 9,
     "31-60d": 3,
     "+60d": 2
   },
   "agingCriacao": {
     "0-7d": 21,
-    "8-15d": 13,
+    "8-15d": 12,
     "16-30d": 10,
     "31-60d": 9,
     "+60d": 4
@@ -335,13 +335,13 @@
       "name": "Eduardo",
       "nivel": "Sênior",
       "ganhos": 18,
-      "perdidos": 20,
+      "perdidos": 21,
       "crossSellGanhos": 0,
       "aquisicaoAmount": 4955.47,
       "crossSellAmount": 0,
       "totalAmount": 4955.47,
       "ticketMedio": 275.3,
-      "winRate": 47.4,
+      "winRate": 46.2,
       "metaMes": 11200,
       "metaProRata": 10838.71,
       "pctMetaProRata": 45.7,
@@ -351,19 +351,19 @@
         "sal": 21,
         "proposta": 16,
         "won": 16,
-        "lost": 17,
+        "lost": 18,
         "sqlToDemoP": 95.2,
         "demoToSalP": 52.5,
         "salToPropP": 76.2,
-        "winRateP": 48.5
+        "winRateP": 47.1
       },
       "demoFlow": {
         "demos": 42,
-        "parouDemo": 5,
+        "parouDemo": 4,
         "sal": 4,
         "proposta": 0,
         "ganho": 18,
-        "perdido": 15,
+        "perdido": 16,
         "voltou": 0,
         "avancaram": 23,
         "avancouP": 54.8,
@@ -531,15 +531,15 @@
       "nivel": "Cross-sell",
       "ganhos": 0,
       "perdidos": 0,
-      "crossSellGanhos": 49,
+      "crossSellGanhos": 50,
       "aquisicaoAmount": 0,
-      "crossSellAmount": 6332.07,
-      "totalAmount": 6332.07,
+      "crossSellAmount": 6431.07,
+      "totalAmount": 6431.07,
       "ticketMedio": 0,
       "winRate": 0,
       "metaMes": 6000,
       "metaProRata": 5806.45,
-      "pctMetaProRata": 109.1,
+      "pctMetaProRata": 110.8,
       "funil": {
         "sql": 0,
         "demo": 0,
@@ -570,10 +570,10 @@
     {
       "name": "Ana",
       "sql": 72,
-      "mql": 182,
+      "mql": 183,
       "mqlEtapas": {
         "nmql": 0,
-        "cadencia": 43,
+        "cadencia": 44,
         "conexao": 8,
         "nutricao": 0,
         "ganho": 0,
@@ -581,7 +581,7 @@
         "outros": 0
       },
       "mqlPctTrabalhados": 100,
-      "mqlParaSqlPct": 39.6,
+      "mqlParaSqlPct": 39.3,
       "recInfluenciada": 11299.73,
       "metaMes": 15000,
       "metaProRata": 14516.13,
