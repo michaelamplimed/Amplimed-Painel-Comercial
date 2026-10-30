@@ -1,6 +1,6 @@
 {
-  "geradoEm": "2026-10-30T15:30:25.746Z",
-  "geradoEmBR": "30/10/2026, 12:30:25",
+  "geradoEm": "2026-10-30T16:00:30.900Z",
+  "geradoEmBR": "30/10/2026, 13:00:30",
   "mes": {
     "ano": 2026,
     "mes": 10,
@@ -269,16 +269,16 @@
     ]
   },
   "aging": {
-    "0-7d": 37,
-    "8-15d": 8,
+    "0-7d": 36,
+    "8-15d": 9,
     "16-30d": 9,
     "31-60d": 3,
     "+60d": 2
   },
   "agingCriacao": {
     "0-7d": 24,
-    "8-15d": 14,
-    "16-30d": 9,
+    "8-15d": 13,
+    "16-30d": 10,
     "31-60d": 9,
     "+60d": 3
   },
@@ -566,9 +566,9 @@
     {
       "name": "Ana",
       "sql": 70,
-      "mql": 181,
+      "mql": 182,
       "mqlEtapas": {
-        "nmql": 1,
+        "nmql": 2,
         "cadencia": 42,
         "conexao": 8,
         "nutricao": 0,
@@ -576,8 +576,8 @@
         "perdido": 130,
         "outros": 0
       },
-      "mqlPctTrabalhados": 99.4,
-      "mqlParaSqlPct": 38.7,
+      "mqlPctTrabalhados": 98.9,
+      "mqlParaSqlPct": 38.5,
       "recInfluenciada": 11188.45,
       "metaMes": 15000,
       "metaProRata": 14516.13,
@@ -586,9 +586,9 @@
     {
       "name": "Amanda",
       "sql": 88,
-      "mql": 187,
+      "mql": 188,
       "mqlEtapas": {
-        "nmql": 0,
+        "nmql": 1,
         "cadencia": 30,
         "conexao": 0,
         "nutricao": 0,
@@ -596,8 +596,8 @@
         "perdido": 157,
         "outros": 0
       },
-      "mqlPctTrabalhados": 100,
-      "mqlParaSqlPct": 47.1,
+      "mqlPctTrabalhados": 99.5,
+      "mqlParaSqlPct": 46.8,
       "recInfluenciada": 10734.54,
       "metaMes": 15000,
       "metaProRata": 14516.13,
@@ -606,9 +606,9 @@
     {
       "name": "Jeferson",
       "sql": 60,
-      "mql": 198,
+      "mql": 199,
       "mqlEtapas": {
-        "nmql": 0,
+        "nmql": 1,
         "cadencia": 69,
         "conexao": 10,
         "nutricao": 1,
@@ -616,8 +616,8 @@
         "perdido": 118,
         "outros": 0
       },
-      "mqlPctTrabalhados": 100,
-      "mqlParaSqlPct": 30.3,
+      "mqlPctTrabalhados": 99.5,
+      "mqlParaSqlPct": 30.2,
       "recInfluenciada": 7230.28,
       "metaMes": 13000,
       "metaProRata": 12580.65,
