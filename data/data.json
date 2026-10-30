@@ -1,6 +1,6 @@
 {
-  "geradoEm": "2026-10-30T21:30:25.577Z",
-  "geradoEmBR": "30/10/2026, 18:30:25",
+  "geradoEm": "2026-10-30T22:00:31.389Z",
+  "geradoEmBR": "30/10/2026, 19:00:31",
   "mes": {
     "ano": 2026,
     "mes": 10,
@@ -61,13 +61,13 @@
     ]
   },
   "funilTime": {
-    "sql": 224,
+    "sql": 225,
     "demo": 197,
     "sal": 134,
     "proposta": 116,
     "won": 102,
     "lost": 74,
-    "sqlToDemoP": 87.9,
+    "sqlToDemoP": 87.6,
     "demoToSalP": 68,
     "salToPropP": 86.6,
     "winRateP": 58
@@ -174,7 +174,7 @@
     "metaMensal": 50000,
     "pctMeta": 79.4,
     "pipelineAberto": 22827,
-    "pipelineAbertoQtd": 56,
+    "pipelineAbertoQtd": 57,
     "pipelineAbertoComValor": 24,
     "mediaDiaria": 1323.57
   },
@@ -277,14 +277,14 @@
     ]
   },
   "aging": {
-    "0-7d": 35,
+    "0-7d": 36,
     "8-15d": 7,
     "16-30d": 9,
     "31-60d": 3,
     "+60d": 2
   },
   "agingCriacao": {
-    "0-7d": 22,
+    "0-7d": 23,
     "8-15d": 13,
     "16-30d": 10,
     "31-60d": 8,
@@ -573,11 +573,11 @@
   "sdrs": [
     {
       "name": "Ana",
-      "sql": 74,
-      "mql": 187,
+      "sql": 75,
+      "mql": 186,
       "mqlEtapas": {
         "nmql": 0,
-        "cadencia": 45,
+        "cadencia": 44,
         "conexao": 9,
         "nutricao": 0,
         "ganho": 0,
@@ -585,7 +585,7 @@
         "outros": 0
       },
       "mqlPctTrabalhados": 100,
-      "mqlParaSqlPct": 39.6,
+      "mqlParaSqlPct": 40.3,
       "recInfluenciada": 12421.33,
       "metaMes": 15000,
       "metaProRata": 14516.13,
