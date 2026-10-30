@@ -1,6 +1,6 @@
 {
-  "geradoEm": "2026-10-30T15:00:32.450Z",
-  "geradoEmBR": "30/10/2026, 12:00:32",
+  "geradoEm": "2026-10-30T15:30:25.746Z",
+  "geradoEmBR": "30/10/2026, 12:30:25",
   "mes": {
     "ano": 2026,
     "mes": 10,
@@ -45,6 +45,10 @@
       {
         "id": "67106489219",
         "nome": "Julia Teste"
+      },
+      {
+        "id": "67155818378",
+        "nome": "TESTE ANA"
       }
     ]
   },
@@ -158,13 +162,13 @@
     "sdr": 43000
   },
   "kpis": {
-    "receitaRealizada": 38275.34,
+    "receitaRealizada": 38375.34,
     "metaMensal": 50000,
-    "pctMeta": 76.6,
+    "pctMeta": 76.8,
     "pipelineAberto": 22484.6,
     "pipelineAbertoQtd": 59,
     "pipelineAbertoComValor": 23,
-    "mediaDiaria": 1275.84
+    "mediaDiaria": 1279.18
   },
   "receitaAcumulada": {
     "labels": [
@@ -229,7 +233,7 @@
       35908.61,
       37209.2,
       38275.34,
-      38275.34
+      38375.34
     ],
     "meta": [
       1612.9,
@@ -523,15 +527,15 @@
       "nivel": "Cross-sell",
       "ganhos": 0,
       "perdidos": 0,
-      "crossSellGanhos": 48,
+      "crossSellGanhos": 49,
       "aquisicaoAmount": 0,
-      "crossSellAmount": 6232.07,
-      "totalAmount": 6232.07,
+      "crossSellAmount": 6332.07,
+      "totalAmount": 6332.07,
       "ticketMedio": 0,
       "winRate": 0,
       "metaMes": 6000,
       "metaProRata": 5806.45,
-      "pctMetaProRata": 107.3,
+      "pctMetaProRata": 109.1,
       "funil": {
         "sql": 0,
         "demo": 0,
@@ -562,9 +566,9 @@
     {
       "name": "Ana",
       "sql": 70,
-      "mql": 180,
+      "mql": 181,
       "mqlEtapas": {
-        "nmql": 0,
+        "nmql": 1,
         "cadencia": 42,
         "conexao": 8,
         "nutricao": 0,
@@ -572,8 +576,8 @@
         "perdido": 130,
         "outros": 0
       },
-      "mqlPctTrabalhados": 100,
-      "mqlParaSqlPct": 38.9,
+      "mqlPctTrabalhados": 99.4,
+      "mqlParaSqlPct": 38.7,
       "recInfluenciada": 11188.45,
       "metaMes": 15000,
       "metaProRata": 14516.13,
