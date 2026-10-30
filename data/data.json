@@ -1,6 +1,6 @@
 {
-  "geradoEm": "2026-10-30T12:00:31.846Z",
-  "geradoEmBR": "30/10/2026, 09:00:31",
+  "geradoEm": "2026-10-30T12:30:27.467Z",
+  "geradoEmBR": "30/10/2026, 09:30:27",
   "mes": {
     "ano": 2026,
     "mes": 10,
@@ -274,8 +274,8 @@
   "agingCriacao": {
     "0-7d": 23,
     "8-15d": 15,
-    "16-30d": 11,
-    "31-60d": 8,
+    "16-30d": 10,
+    "31-60d": 9,
     "+60d": 3
   },
   "agingRisco": {
@@ -564,15 +564,15 @@
       "sql": 69,
       "mql": 175,
       "mqlEtapas": {
-        "nmql": 4,
-        "cadencia": 33,
+        "nmql": 0,
+        "cadencia": 37,
         "conexao": 8,
         "nutricao": 0,
         "ganho": 0,
         "perdido": 130,
         "outros": 0
       },
-      "mqlPctTrabalhados": 97.7,
+      "mqlPctTrabalhados": 100,
       "mqlParaSqlPct": 39.4,
       "recInfluenciada": 11188.45,
       "metaMes": 15000,
@@ -582,18 +582,18 @@
     {
       "name": "Amanda",
       "sql": 88,
-      "mql": 187,
+      "mql": 186,
       "mqlEtapas": {
-        "nmql": 2,
-        "cadencia": 36,
+        "nmql": 0,
+        "cadencia": 37,
         "conexao": 0,
         "nutricao": 0,
         "ganho": 0,
         "perdido": 149,
         "outros": 0
       },
-      "mqlPctTrabalhados": 98.9,
-      "mqlParaSqlPct": 47.1,
+      "mqlPctTrabalhados": 100,
+      "mqlParaSqlPct": 47.3,
       "recInfluenciada": 10734.54,
       "metaMes": 15000,
       "metaProRata": 14516.13,
@@ -602,9 +602,9 @@
     {
       "name": "Jeferson",
       "sql": 60,
-      "mql": 194,
+      "mql": 195,
       "mqlEtapas": {
-        "nmql": 0,
+        "nmql": 1,
         "cadencia": 66,
         "conexao": 10,
         "nutricao": 1,
@@ -612,8 +612,8 @@
         "perdido": 117,
         "outros": 0
       },
-      "mqlPctTrabalhados": 100,
-      "mqlParaSqlPct": 30.9,
+      "mqlPctTrabalhados": 99.5,
+      "mqlParaSqlPct": 30.8,
       "recInfluenciada": 7230.28,
       "metaMes": 13000,
       "metaProRata": 12580.65,
