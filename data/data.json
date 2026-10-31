@@ -1,6 +1,6 @@
 {
-  "geradoEm": "2026-10-31T14:00:30.801Z",
-  "geradoEmBR": "31/10/2026, 11:00:30",
+  "geradoEm": "2026-10-31T14:30:25.659Z",
+  "geradoEmBR": "31/10/2026, 11:30:25",
   "mes": {
     "ano": 2026,
     "mes": 10,
@@ -62,27 +62,27 @@
   },
   "funilTime": {
     "sql": 226,
-    "demo": 199,
-    "sal": 134,
+    "demo": 200,
+    "sal": 135,
     "proposta": 116,
     "won": 103,
     "lost": 76,
-    "sqlToDemoP": 88.1,
-    "demoToSalP": 67.3,
-    "salToPropP": 86.6,
+    "sqlToDemoP": 88.5,
+    "demoToSalP": 67.5,
+    "salToPropP": 85.9,
     "winRateP": 57.5
   },
   "demoFlowTime": {
-    "demos": 192,
+    "demos": 193,
     "parouDemo": 19,
-    "sal": 6,
+    "sal": 7,
     "proposta": 7,
     "ganho": 92,
     "perdido": 68,
     "voltou": 0,
-    "avancaram": 121,
-    "avancouP": 63,
-    "ganhoP": 47.9
+    "avancaram": 122,
+    "avancouP": 63.2,
+    "ganhoP": 47.7
   },
   "etapasAbertas": {
     "porCloser": [
@@ -99,10 +99,10 @@
         "name": "Eduardo",
         "nivel": "Sênior",
         "demo": 5,
-        "sal": 2,
+        "sal": 3,
         "proposta": 0,
         "forecast": 0,
-        "total": 7
+        "total": 8
       },
       {
         "name": "Juliano",
@@ -152,10 +152,10 @@
     ],
     "time": {
       "demo": 22,
-      "sal": 7,
+      "sal": 8,
       "proposta": 7,
       "forecast": 4,
-      "total": 40
+      "total": 41
     },
     "semCloser": {
       "demo": 0,
@@ -170,13 +170,13 @@
     "sdr": 43000
   },
   "kpis": {
-    "receitaRealizada": 40023.22,
+    "receitaRealizada": 40091.22,
     "metaMensal": 50000,
-    "pctMeta": 80,
+    "pctMeta": 80.2,
     "pipelineAberto": 22372,
     "pipelineAbertoQtd": 55,
     "pipelineAbertoComValor": 22,
-    "mediaDiaria": 1291.07
+    "mediaDiaria": 1293.27
   },
   "receitaAcumulada": {
     "labels": [
@@ -243,7 +243,7 @@
       37209.2,
       38275.34,
       39707.22,
-      40023.22
+      40091.22
     ],
     "meta": [
       1612.9,
@@ -354,27 +354,27 @@
       "pctMetaProRata": 46.5,
       "funil": {
         "sql": 44,
-        "demo": 41,
-        "sal": 21,
+        "demo": 42,
+        "sal": 22,
         "proposta": 17,
         "won": 17,
         "lost": 20,
-        "sqlToDemoP": 93.2,
-        "demoToSalP": 51.2,
-        "salToPropP": 81,
+        "sqlToDemoP": 95.5,
+        "demoToSalP": 52.4,
+        "salToPropP": 77.3,
         "winRateP": 45.9
       },
       "demoFlow": {
-        "demos": 43,
+        "demos": 44,
         "parouDemo": 4,
-        "sal": 2,
+        "sal": 3,
         "proposta": 0,
         "ganho": 19,
         "perdido": 18,
         "voltou": 0,
-        "avancaram": 23,
-        "avancouP": 53.5,
-        "ganhoP": 44.2
+        "avancaram": 24,
+        "avancouP": 54.5,
+        "ganhoP": 43.2
       }
     },
     {
