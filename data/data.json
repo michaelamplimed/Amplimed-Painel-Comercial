@@ -1,6 +1,6 @@
 {
-  "geradoEm": "2026-10-31T15:00:29.783Z",
-  "geradoEmBR": "31/10/2026, 12:00:29",
+  "geradoEm": "2026-10-31T15:30:24.265Z",
+  "geradoEmBR": "31/10/2026, 12:30:24",
   "mes": {
     "ano": 2026,
     "mes": 10,
@@ -289,8 +289,8 @@
   "agingCriacao": {
     "0-7d": 21,
     "8-15d": 13,
-    "16-30d": 9,
-    "31-60d": 9,
+    "16-30d": 8,
+    "31-60d": 10,
     "+60d": 3
   },
   "agingRisco": {
@@ -577,9 +577,9 @@
     {
       "name": "Ana",
       "sql": 76,
-      "mql": 191,
+      "mql": 192,
       "mqlEtapas": {
-        "nmql": 1,
+        "nmql": 2,
         "cadencia": 47,
         "conexao": 9,
         "nutricao": 0,
@@ -587,8 +587,8 @@
         "perdido": 134,
         "outros": 0
       },
-      "mqlPctTrabalhados": 99.5,
-      "mqlParaSqlPct": 39.8,
+      "mqlPctTrabalhados": 99,
+      "mqlParaSqlPct": 39.6,
       "recInfluenciada": 12737.33,
       "metaMes": 15000,
       "metaProRata": 15000,
