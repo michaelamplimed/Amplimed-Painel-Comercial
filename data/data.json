@@ -1,6 +1,6 @@
 {
-  "geradoEm": "2026-10-31T19:00:29.703Z",
-  "geradoEmBR": "31/10/2026, 16:00:29",
+  "geradoEm": "2026-10-31T19:30:24.161Z",
+  "geradoEmBR": "31/10/2026, 16:30:24",
   "mes": {
     "ano": 2026,
     "mes": 10,
@@ -62,27 +62,27 @@
   },
   "funilTime": {
     "sql": 226,
-    "demo": 201,
-    "sal": 135,
+    "demo": 202,
+    "sal": 136,
     "proposta": 116,
     "won": 103,
     "lost": 76,
-    "sqlToDemoP": 88.9,
-    "demoToSalP": 67.2,
-    "salToPropP": 85.9,
+    "sqlToDemoP": 89.4,
+    "demoToSalP": 67.3,
+    "salToPropP": 85.3,
     "winRateP": 57.5
   },
   "demoFlowTime": {
-    "demos": 194,
+    "demos": 195,
     "parouDemo": 20,
-    "sal": 7,
+    "sal": 8,
     "proposta": 7,
     "ganho": 92,
     "perdido": 68,
     "voltou": 0,
-    "avancaram": 122,
-    "avancouP": 62.9,
-    "ganhoP": 47.4
+    "avancaram": 123,
+    "avancouP": 63.1,
+    "ganhoP": 47.2
   },
   "etapasAbertas": {
     "porCloser": [
@@ -152,17 +152,17 @@
     ],
     "time": {
       "demo": 23,
-      "sal": 8,
+      "sal": 9,
       "proposta": 7,
       "forecast": 4,
-      "total": 42
+      "total": 43
     },
     "semCloser": {
       "demo": 0,
-      "sal": 0,
+      "sal": 1,
       "proposta": 0,
       "forecast": 0,
-      "total": 0
+      "total": 1
     }
   },
   "metas": {
@@ -280,8 +280,8 @@
     ]
   },
   "aging": {
-    "0-7d": 32,
-    "8-15d": 8,
+    "0-7d": 31,
+    "8-15d": 9,
     "16-30d": 9,
     "31-60d": 4,
     "+60d": 2
@@ -314,13 +314,13 @@
       "metaProRata": 11200,
       "pctMetaProRata": 41.4,
       "funil": {
-        "sql": 51,
+        "sql": 50,
         "demo": 46,
         "sal": 30,
         "proposta": 23,
         "won": 20,
         "lost": 17,
-        "sqlToDemoP": 90.2,
+        "sqlToDemoP": 92,
         "demoToSalP": 65.2,
         "salToPropP": 76.7,
         "winRateP": 54.1
