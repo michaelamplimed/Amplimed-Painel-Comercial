@@ -1,6 +1,6 @@
 {
-  "geradoEm": "2026-11-02T12:00:33.042Z",
-  "geradoEmBR": "02/11/2026, 09:00:33",
+  "geradoEm": "2026-11-02T12:30:26.424Z",
+  "geradoEmBR": "02/11/2026, 09:30:26",
   "mes": {
     "ano": 2026,
     "mes": 11,
@@ -442,9 +442,9 @@
     {
       "name": "Ana",
       "sql": 0,
-      "mql": 4,
+      "mql": 5,
       "mqlEtapas": {
-        "nmql": 4,
+        "nmql": 5,
         "cadencia": 0,
         "conexao": 0,
         "nutricao": 0,
