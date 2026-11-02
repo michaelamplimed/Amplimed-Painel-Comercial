@@ -1,6 +1,6 @@
 {
-  "geradoEm": "2026-11-02T13:30:26.146Z",
-  "geradoEmBR": "02/11/2026, 10:30:26",
+  "geradoEm": "2026-11-02T14:00:30.485Z",
+  "geradoEmBR": "02/11/2026, 11:00:30",
   "mes": {
     "ano": 2026,
     "mes": 11,
@@ -482,9 +482,9 @@
     {
       "name": "Jeferson",
       "sql": 0,
-      "mql": 6,
+      "mql": 8,
       "mqlEtapas": {
-        "nmql": 6,
+        "nmql": 8,
         "cadencia": 0,
         "conexao": 0,
         "nutricao": 0,
