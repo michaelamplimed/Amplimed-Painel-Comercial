@@ -1,6 +1,6 @@
 {
-  "geradoEm": "2026-11-02T21:30:26.073Z",
-  "geradoEmBR": "02/11/2026, 18:30:26",
+  "geradoEm": "2026-11-02T22:00:30.861Z",
+  "geradoEmBR": "02/11/2026, 19:00:30",
   "mes": {
     "ano": 2026,
     "mes": 11,
@@ -152,8 +152,8 @@
     "+60d": 2
   },
   "agingCriacao": {
-    "0-7d": 17,
-    "8-15d": 11,
+    "0-7d": 16,
+    "8-15d": 12,
     "16-30d": 9,
     "31-60d": 11,
     "+60d": 2
@@ -462,9 +462,9 @@
     {
       "name": "Amanda",
       "sql": 0,
-      "mql": 8,
+      "mql": 9,
       "mqlEtapas": {
-        "nmql": 8,
+        "nmql": 9,
         "cadencia": 0,
         "conexao": 0,
         "nutricao": 0,
@@ -482,9 +482,9 @@
     {
       "name": "Jeferson",
       "sql": 0,
-      "mql": 10,
+      "mql": 11,
       "mqlEtapas": {
-        "nmql": 10,
+        "nmql": 11,
         "cadencia": 0,
         "conexao": 0,
         "nutricao": 0,
