@@ -1,6 +1,6 @@
 {
-  "geradoEm": "2026-11-03T12:00:29.426Z",
-  "geradoEmBR": "03/11/2026, 09:00:29",
+  "geradoEm": "2026-11-03T12:30:27.663Z",
+  "geradoEmBR": "03/11/2026, 09:30:27",
   "mes": {
     "ano": 2026,
     "mes": 11,
@@ -61,9 +61,9 @@
         "nivel": "Pleno",
         "demo": 4,
         "sal": 0,
-        "proposta": 4,
+        "proposta": 3,
         "forecast": 2,
-        "total": 10
+        "total": 9
       },
       {
         "name": "Ariel",
@@ -80,8 +80,8 @@
         "demo": 1,
         "sal": 1,
         "proposta": 1,
-        "forecast": 1,
-        "total": 4
+        "forecast": 0,
+        "total": 3
       },
       {
         "name": "Catiane",
@@ -105,9 +105,9 @@
     "time": {
       "demo": 20,
       "sal": 7,
-      "proposta": 6,
-      "forecast": 5,
-      "total": 38
+      "proposta": 5,
+      "forecast": 4,
+      "total": 36
     },
     "semCloser": {
       "demo": 0,
@@ -122,13 +122,13 @@
     "sdr": 46000
   },
   "kpis": {
-    "receitaRealizada": 0,
+    "receitaRealizada": 139,
     "metaMensal": 50000,
-    "pctMeta": 0,
-    "pipelineAberto": 21138.9,
-    "pipelineAbertoQtd": 51,
-    "pipelineAbertoComValor": 20,
-    "mediaDiaria": 0
+    "pctMeta": 0.3,
+    "pipelineAberto": 20310.1,
+    "pipelineAbertoQtd": 49,
+    "pipelineAbertoComValor": 18,
+    "mediaDiaria": 46.33
   },
   "receitaAcumulada": {
     "labels": [
@@ -139,7 +139,7 @@
     "realizado": [
       0,
       0,
-      0
+      139
     ],
     "meta": [
       1666.67,
@@ -148,15 +148,15 @@
     ]
   },
   "aging": {
-    "0-7d": 29,
-    "8-15d": 6,
+    "0-7d": 26,
+    "8-15d": 7,
     "16-30d": 7,
     "31-60d": 7,
     "+60d": 2
   },
   "agingCriacao": {
-    "0-7d": 17,
-    "8-15d": 12,
+    "0-7d": 16,
+    "8-15d": 11,
     "16-30d": 9,
     "31-60d": 11,
     "+60d": 2
@@ -249,7 +249,7 @@
       "name": "Juliano",
       "nivel": "Pleno",
       "ganhos": 0,
-      "perdidos": 0,
+      "perdidos": 1,
       "crossSellGanhos": 0,
       "aquisicaoAmount": 0,
       "crossSellAmount": 0,
@@ -326,17 +326,17 @@
     {
       "name": "Mayara",
       "nivel": "Pleno",
-      "ganhos": 0,
+      "ganhos": 1,
       "perdidos": 0,
       "crossSellGanhos": 0,
-      "aquisicaoAmount": 0,
+      "aquisicaoAmount": 139,
       "crossSellAmount": 0,
-      "totalAmount": 0,
-      "ticketMedio": 0,
-      "winRate": 0,
+      "totalAmount": 139,
+      "ticketMedio": 139,
+      "winRate": 100,
       "metaMes": 9200,
       "metaProRata": 920,
-      "pctMetaProRata": 0,
+      "pctMetaProRata": 15.1,
       "funil": {
         "sql": 0,
         "demo": 0,
@@ -447,15 +447,15 @@
       "sql": 0,
       "mql": 12,
       "mqlEtapas": {
-        "nmql": 1,
-        "cadencia": 11,
+        "nmql": 0,
+        "cadencia": 12,
         "conexao": 0,
         "nutricao": 0,
         "ganho": 0,
         "perdido": 0,
         "outros": 0
       },
-      "mqlPctTrabalhados": 91.7,
+      "mqlPctTrabalhados": 100,
       "mqlParaSqlPct": 0,
       "recInfluenciada": 0,
       "metaMes": 16000,
@@ -465,10 +465,10 @@
     {
       "name": "Amanda",
       "sql": 1,
-      "mql": 12,
+      "mql": 13,
       "mqlEtapas": {
         "nmql": 0,
-        "cadencia": 10,
+        "cadencia": 11,
         "conexao": 0,
         "nutricao": 0,
         "ganho": 0,
@@ -476,11 +476,11 @@
         "outros": 0
       },
       "mqlPctTrabalhados": 100,
-      "mqlParaSqlPct": 8.3,
-      "recInfluenciada": 0,
+      "mqlParaSqlPct": 7.7,
+      "recInfluenciada": 139,
       "metaMes": 16000,
       "metaProRata": 1600,
-      "pctMetaProRata": 0
+      "pctMetaProRata": 8.7
     },
     {
       "name": "Jeferson",
