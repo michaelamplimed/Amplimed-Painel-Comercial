@@ -1,6 +1,6 @@
 {
-  "geradoEm": "2026-11-03T19:00:47.305Z",
-  "geradoEmBR": "03/11/2026, 16:00:47",
+  "geradoEm": "2026-11-03T19:30:38.895Z",
+  "geradoEmBR": "03/11/2026, 16:30:38",
   "mes": {
     "ano": 2026,
     "mes": 11,
@@ -27,14 +27,14 @@
   },
   "funilTime": {
     "sql": 15,
-    "demo": 5,
-    "sal": 1,
+    "demo": 6,
+    "sal": 2,
     "proposta": 1,
     "won": 1,
     "lost": 2,
-    "sqlToDemoP": 33.3,
-    "demoToSalP": 20,
-    "salToPropP": 100,
+    "sqlToDemoP": 40,
+    "demoToSalP": 33.3,
+    "salToPropP": 50,
     "winRateP": 33.3
   },
   "demoFlowTime": {
@@ -82,10 +82,10 @@
         "name": "Ariel",
         "nivel": "Pleno",
         "demo": 5,
-        "sal": 1,
+        "sal": 2,
         "proposta": 0,
         "forecast": 2,
-        "total": 8
+        "total": 9
       },
       {
         "name": "Mayara",
@@ -117,10 +117,10 @@
     ],
     "time": {
       "demo": 21,
-      "sal": 5,
+      "sal": 6,
       "proposta": 5,
       "forecast": 4,
-      "total": 35
+      "total": 36
     },
     "semCloser": {
       "demo": 0,
@@ -313,14 +313,14 @@
       "pctMetaProRata": 0,
       "funil": {
         "sql": 2,
-        "demo": 0,
-        "sal": 0,
+        "demo": 1,
+        "sal": 1,
         "proposta": 0,
         "won": 0,
         "lost": 0,
-        "sqlToDemoP": 0,
-        "demoToSalP": null,
-        "salToPropP": null,
+        "sqlToDemoP": 50,
+        "demoToSalP": 100,
+        "salToPropP": 0,
         "winRateP": null
       },
       "demoFlow": {
