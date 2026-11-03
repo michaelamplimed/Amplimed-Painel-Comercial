@@ -1,6 +1,6 @@
 {
-  "geradoEm": "2026-11-03T16:30:27.794Z",
-  "geradoEmBR": "03/11/2026, 13:30:27",
+  "geradoEm": "2026-11-03T17:00:32.977Z",
+  "geradoEmBR": "03/11/2026, 14:00:32",
   "mes": {
     "ano": 2026,
     "mes": 11,
@@ -18,32 +18,36 @@
       {
         "id": "67349309760",
         "nome": "Teste Ana"
+      },
+      {
+        "id": "67353452575",
+        "nome": "Teste Jefe"
       }
     ]
   },
   "funilTime": {
-    "sql": 10,
-    "demo": 1,
+    "sql": 11,
+    "demo": 2,
     "sal": 1,
     "proposta": 1,
     "won": 1,
     "lost": 0,
-    "sqlToDemoP": 10,
-    "demoToSalP": 100,
+    "sqlToDemoP": 18.2,
+    "demoToSalP": 50,
     "salToPropP": 100,
     "winRateP": 100
   },
   "demoFlowTime": {
-    "demos": 1,
-    "parouDemo": 0,
+    "demos": 2,
+    "parouDemo": 1,
     "sal": 0,
     "proposta": 0,
     "ganho": 1,
     "perdido": 0,
     "voltou": 0,
     "avancaram": 1,
-    "avancouP": 100,
-    "ganhoP": 100
+    "avancouP": 50,
+    "ganhoP": 50
   },
   "etapasAbertas": {
     "porCloser": [
@@ -68,11 +72,11 @@
       {
         "name": "Juliano",
         "nivel": "Pleno",
-        "demo": 3,
+        "demo": 4,
         "sal": 0,
         "proposta": 3,
         "forecast": 2,
-        "total": 8
+        "total": 9
       },
       {
         "name": "Ariel",
@@ -112,11 +116,11 @@
       }
     ],
     "time": {
-      "demo": 19,
+      "demo": 20,
       "sal": 6,
       "proposta": 5,
       "forecast": 4,
-      "total": 34
+      "total": 35
     },
     "semCloser": {
       "demo": 0,
@@ -135,7 +139,7 @@
     "metaMensal": 50000,
     "pctMeta": 1.3,
     "pipelineAberto": 19587.3,
-    "pipelineAbertoQtd": 55,
+    "pipelineAbertoQtd": 56,
     "pipelineAbertoComValor": 16,
     "mediaDiaria": 209.07
   },
@@ -157,14 +161,14 @@
     ]
   },
   "aging": {
-    "0-7d": 31,
+    "0-7d": 32,
     "8-15d": 8,
     "16-30d": 7,
     "31-60d": 7,
     "+60d": 2
   },
   "agingCriacao": {
-    "0-7d": 23,
+    "0-7d": 24,
     "8-15d": 10,
     "16-30d": 9,
     "31-60d": 11,
@@ -269,28 +273,28 @@
       "metaProRata": 920,
       "pctMetaProRata": 0,
       "funil": {
-        "sql": 2,
-        "demo": 0,
+        "sql": 3,
+        "demo": 1,
         "sal": 0,
         "proposta": 0,
         "won": 0,
         "lost": 0,
-        "sqlToDemoP": 0,
-        "demoToSalP": null,
+        "sqlToDemoP": 33.3,
+        "demoToSalP": 0,
         "salToPropP": null,
         "winRateP": null
       },
       "demoFlow": {
-        "demos": 0,
-        "parouDemo": 0,
+        "demos": 1,
+        "parouDemo": 1,
         "sal": 0,
         "proposta": 0,
         "ganho": 0,
         "perdido": 0,
         "voltou": 0,
         "avancaram": 0,
-        "avancouP": null,
-        "ganhoP": null
+        "avancouP": 0,
+        "ganhoP": 0
       }
     },
     {
@@ -453,7 +457,7 @@
   "sdrs": [
     {
       "name": "Ana",
-      "sql": 5,
+      "sql": 6,
       "mql": 13,
       "mqlEtapas": {
         "nmql": 0,
@@ -465,7 +469,7 @@
         "outros": 0
       },
       "mqlPctTrabalhados": 100,
-      "mqlParaSqlPct": 38.5,
+      "mqlParaSqlPct": 46.2,
       "recInfluenciada": 71.2,
       "metaMes": 16000,
       "metaProRata": 1600,
@@ -474,18 +478,18 @@
     {
       "name": "Amanda",
       "sql": 3,
-      "mql": 14,
+      "mql": 15,
       "mqlEtapas": {
         "nmql": 1,
-        "cadencia": 9,
+        "cadencia": 10,
         "conexao": 0,
         "nutricao": 0,
         "ganho": 0,
         "perdido": 4,
         "outros": 0
       },
-      "mqlPctTrabalhados": 92.9,
-      "mqlParaSqlPct": 21.4,
+      "mqlPctTrabalhados": 93.3,
+      "mqlParaSqlPct": 20,
       "recInfluenciada": 556,
       "metaMes": 16000,
       "metaProRata": 1600,
@@ -496,15 +500,15 @@
       "sql": 2,
       "mql": 17,
       "mqlEtapas": {
-        "nmql": 1,
-        "cadencia": 15,
+        "nmql": 0,
+        "cadencia": 16,
         "conexao": 0,
         "nutricao": 0,
         "ganho": 0,
         "perdido": 1,
         "outros": 0
       },
-      "mqlPctTrabalhados": 94.1,
+      "mqlPctTrabalhados": 100,
       "mqlParaSqlPct": 11.8,
       "recInfluenciada": 0,
       "metaMes": 14000,
