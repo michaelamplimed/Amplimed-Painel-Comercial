@@ -1,6 +1,6 @@
 {
-  "geradoEm": "2026-11-03T11:00:32.667Z",
-  "geradoEmBR": "03/11/2026, 08:00:32",
+  "geradoEm": "2026-11-03T11:30:24.807Z",
+  "geradoEmBR": "03/11/2026, 08:30:24",
   "mes": {
     "ano": 2026,
     "mes": 11,
@@ -125,7 +125,7 @@
     "receitaRealizada": 0,
     "metaMensal": 50000,
     "pctMeta": 0,
-    "pipelineAberto": 21299,
+    "pipelineAberto": 21138.9,
     "pipelineAbertoQtd": 50,
     "pipelineAbertoComValor": 20,
     "mediaDiaria": 0
@@ -163,7 +163,7 @@
   },
   "agingRisco": {
     "qtd": 9,
-    "valor": 4378.1,
+    "valor": 4218,
     "qtdComValor": 3
   },
   "closers": [
@@ -447,15 +447,15 @@
       "sql": 0,
       "mql": 11,
       "mqlEtapas": {
-        "nmql": 11,
-        "cadencia": 0,
+        "nmql": 0,
+        "cadencia": 11,
         "conexao": 0,
         "nutricao": 0,
         "ganho": 0,
         "perdido": 0,
         "outros": 0
       },
-      "mqlPctTrabalhados": 0,
+      "mqlPctTrabalhados": 100,
       "mqlParaSqlPct": 0,
       "recInfluenciada": 0,
       "metaMes": 16000,
@@ -465,17 +465,17 @@
     {
       "name": "Amanda",
       "sql": 0,
-      "mql": 12,
+      "mql": 13,
       "mqlEtapas": {
-        "nmql": 12,
-        "cadencia": 0,
+        "nmql": 1,
+        "cadencia": 10,
         "conexao": 0,
         "nutricao": 0,
         "ganho": 0,
-        "perdido": 0,
+        "perdido": 2,
         "outros": 0
       },
-      "mqlPctTrabalhados": 0,
+      "mqlPctTrabalhados": 92.3,
       "mqlParaSqlPct": 0,
       "recInfluenciada": 0,
       "metaMes": 16000,
@@ -487,15 +487,15 @@
       "sql": 0,
       "mql": 14,
       "mqlEtapas": {
-        "nmql": 3,
-        "cadencia": 11,
+        "nmql": 0,
+        "cadencia": 14,
         "conexao": 0,
         "nutricao": 0,
         "ganho": 0,
         "perdido": 0,
         "outros": 0
       },
-      "mqlPctTrabalhados": 78.6,
+      "mqlPctTrabalhados": 100,
       "mqlParaSqlPct": 0,
       "recInfluenciada": 0,
       "metaMes": 14000,
