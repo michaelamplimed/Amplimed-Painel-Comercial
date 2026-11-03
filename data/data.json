@@ -1,6 +1,6 @@
 {
-  "geradoEm": "2026-11-03T12:30:27.663Z",
-  "geradoEmBR": "03/11/2026, 09:30:27",
+  "geradoEm": "2026-11-03T13:00:31.855Z",
+  "geradoEmBR": "03/11/2026, 10:00:31",
   "mes": {
     "ano": 2026,
     "mes": 11,
@@ -13,7 +13,7 @@
     "testesExcluidos": []
   },
   "funilTime": {
-    "sql": 1,
+    "sql": 2,
     "demo": 0,
     "sal": 0,
     "proposta": 0,
@@ -126,7 +126,7 @@
     "metaMensal": 50000,
     "pctMeta": 0.3,
     "pipelineAberto": 20310.1,
-    "pipelineAbertoQtd": 49,
+    "pipelineAbertoQtd": 50,
     "pipelineAbertoComValor": 18,
     "mediaDiaria": 46.33
   },
@@ -148,14 +148,14 @@
     ]
   },
   "aging": {
-    "0-7d": 26,
+    "0-7d": 27,
     "8-15d": 7,
     "16-30d": 7,
     "31-60d": 7,
     "+60d": 2
   },
   "agingCriacao": {
-    "0-7d": 16,
+    "0-7d": 17,
     "8-15d": 11,
     "16-30d": 9,
     "31-60d": 11,
@@ -338,13 +338,13 @@
       "metaProRata": 920,
       "pctMetaProRata": 15.1,
       "funil": {
-        "sql": 0,
+        "sql": 1,
         "demo": 0,
         "sal": 0,
         "proposta": 0,
         "won": 0,
         "lost": 0,
-        "sqlToDemoP": null,
+        "sqlToDemoP": 0,
         "demoToSalP": null,
         "salToPropP": null,
         "winRateP": null
@@ -444,11 +444,11 @@
   "sdrs": [
     {
       "name": "Ana",
-      "sql": 0,
-      "mql": 12,
+      "sql": 1,
+      "mql": 11,
       "mqlEtapas": {
         "nmql": 0,
-        "cadencia": 12,
+        "cadencia": 11,
         "conexao": 0,
         "nutricao": 0,
         "ganho": 0,
@@ -456,7 +456,7 @@
         "outros": 0
       },
       "mqlPctTrabalhados": 100,
-      "mqlParaSqlPct": 0,
+      "mqlParaSqlPct": 9.1,
       "recInfluenciada": 0,
       "metaMes": 16000,
       "metaProRata": 1600,
@@ -468,11 +468,11 @@
       "mql": 13,
       "mqlEtapas": {
         "nmql": 0,
-        "cadencia": 11,
+        "cadencia": 10,
         "conexao": 0,
         "nutricao": 0,
         "ganho": 0,
-        "perdido": 2,
+        "perdido": 3,
         "outros": 0
       },
       "mqlPctTrabalhados": 100,
