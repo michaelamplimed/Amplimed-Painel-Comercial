@@ -1,6 +1,6 @@
 {
-  "geradoEm": "2026-11-03T17:00:32.977Z",
-  "geradoEmBR": "03/11/2026, 14:00:32",
+  "geradoEm": "2026-11-03T17:30:29.094Z",
+  "geradoEmBR": "03/11/2026, 14:30:29",
   "mes": {
     "ano": 2026,
     "mes": 11,
@@ -26,13 +26,13 @@
     ]
   },
   "funilTime": {
-    "sql": 11,
+    "sql": 13,
     "demo": 2,
     "sal": 1,
     "proposta": 1,
     "won": 1,
     "lost": 0,
-    "sqlToDemoP": 18.2,
+    "sqlToDemoP": 15.4,
     "demoToSalP": 50,
     "salToPropP": 100,
     "winRateP": 100
@@ -139,7 +139,7 @@
     "metaMensal": 50000,
     "pctMeta": 1.3,
     "pipelineAberto": 19587.3,
-    "pipelineAbertoQtd": 56,
+    "pipelineAbertoQtd": 58,
     "pipelineAbertoComValor": 16,
     "mediaDiaria": 209.07
   },
@@ -161,14 +161,14 @@
     ]
   },
   "aging": {
-    "0-7d": 32,
+    "0-7d": 34,
     "8-15d": 8,
     "16-30d": 7,
     "31-60d": 7,
     "+60d": 2
   },
   "agingCriacao": {
-    "0-7d": 24,
+    "0-7d": 26,
     "8-15d": 10,
     "16-30d": 9,
     "31-60d": 11,
@@ -195,7 +195,7 @@
       "metaProRata": 1120,
       "pctMetaProRata": 0,
       "funil": {
-        "sql": 2,
+        "sql": 4,
         "demo": 0,
         "sal": 0,
         "proposta": 0,
@@ -477,19 +477,19 @@
     },
     {
       "name": "Amanda",
-      "sql": 3,
+      "sql": 4,
       "mql": 15,
       "mqlEtapas": {
-        "nmql": 1,
+        "nmql": 0,
         "cadencia": 10,
         "conexao": 0,
         "nutricao": 0,
         "ganho": 0,
-        "perdido": 4,
+        "perdido": 5,
         "outros": 0
       },
-      "mqlPctTrabalhados": 93.3,
-      "mqlParaSqlPct": 20,
+      "mqlPctTrabalhados": 100,
+      "mqlParaSqlPct": 26.7,
       "recInfluenciada": 556,
       "metaMes": 16000,
       "metaProRata": 1600,
@@ -497,11 +497,11 @@
     },
     {
       "name": "Jeferson",
-      "sql": 2,
-      "mql": 17,
+      "sql": 3,
+      "mql": 18,
       "mqlEtapas": {
         "nmql": 0,
-        "cadencia": 16,
+        "cadencia": 17,
         "conexao": 0,
         "nutricao": 0,
         "ganho": 0,
@@ -509,7 +509,7 @@
         "outros": 0
       },
       "mqlPctTrabalhados": 100,
-      "mqlParaSqlPct": 11.8,
+      "mqlParaSqlPct": 16.7,
       "recInfluenciada": 0,
       "metaMes": 14000,
       "metaProRata": 1400,
