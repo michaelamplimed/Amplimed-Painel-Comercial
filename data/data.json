@@ -1,6 +1,6 @@
 {
-  "geradoEm": "2026-11-04T13:30:26.609Z",
-  "geradoEmBR": "04/11/2026, 10:30:26",
+  "geradoEm": "2026-11-04T14:00:30.035Z",
+  "geradoEmBR": "04/11/2026, 11:00:30",
   "mes": {
     "ano": 2026,
     "mes": 11,
@@ -135,13 +135,13 @@
     "sdr": 46000
   },
   "kpis": {
-    "receitaRealizada": 2044.85,
+    "receitaRealizada": 2244.85,
     "metaMensal": 50000,
-    "pctMeta": 4.1,
+    "pctMeta": 4.5,
     "pipelineAberto": 18686,
     "pipelineAbertoQtd": 57,
     "pipelineAbertoComValor": 17,
-    "mediaDiaria": 511.21
+    "mediaDiaria": 561.21
   },
   "receitaAcumulada": {
     "labels": [
@@ -154,7 +154,7 @@
       0,
       0,
       1833.2,
-      2044.85
+      2244.85
     ],
     "meta": [
       1666.67,
@@ -164,8 +164,8 @@
     ]
   },
   "aging": {
-    "0-7d": 35,
-    "8-15d": 9,
+    "0-7d": 34,
+    "8-15d": 10,
     "16-30d": 5,
     "31-60d": 6,
     "+60d": 2
@@ -422,15 +422,15 @@
       "nivel": "Cross-sell",
       "ganhos": 0,
       "perdidos": 0,
-      "crossSellGanhos": 0,
+      "crossSellGanhos": 1,
       "aquisicaoAmount": 0,
-      "crossSellAmount": 0,
-      "totalAmount": 0,
+      "crossSellAmount": 200,
+      "totalAmount": 200,
       "ticketMedio": 0,
       "winRate": 0,
       "metaMes": 6000,
       "metaProRata": 800,
-      "pctMetaProRata": 0,
+      "pctMetaProRata": 25,
       "funil": {
         "sql": 0,
         "demo": 0,
@@ -461,10 +461,10 @@
     {
       "name": "Ana",
       "sql": 10,
-      "mql": 19,
+      "mql": 20,
       "mqlEtapas": {
         "nmql": 0,
-        "cadencia": 18,
+        "cadencia": 19,
         "conexao": 0,
         "nutricao": 0,
         "ganho": 0,
@@ -472,7 +472,7 @@
         "outros": 0
       },
       "mqlPctTrabalhados": 100,
-      "mqlParaSqlPct": 52.6,
+      "mqlParaSqlPct": 50,
       "recInfluenciada": 282.85,
       "metaMes": 16000,
       "metaProRata": 2133.33,
@@ -484,11 +484,11 @@
       "mql": 21,
       "mqlEtapas": {
         "nmql": 0,
-        "cadencia": 14,
+        "cadencia": 13,
         "conexao": 1,
         "nutricao": 0,
         "ganho": 0,
-        "perdido": 6,
+        "perdido": 7,
         "outros": 0
       },
       "mqlPctTrabalhados": 100,
