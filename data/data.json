@@ -1,6 +1,6 @@
 {
-  "geradoEm": "2026-11-04T17:00:30.522Z",
-  "geradoEmBR": "04/11/2026, 14:00:30",
+  "geradoEm": "2026-11-04T17:30:27.905Z",
+  "geradoEmBR": "04/11/2026, 14:30:27",
   "mes": {
     "ano": 2026,
     "mes": 11,
@@ -276,13 +276,13 @@
       "metaProRata": 1226.67,
       "pctMetaProRata": 0,
       "funil": {
-        "sql": 3,
+        "sql": 2,
         "demo": 2,
         "sal": 0,
         "proposta": 0,
         "won": 0,
         "lost": 1,
-        "sqlToDemoP": 66.7,
+        "sqlToDemoP": 100,
         "demoToSalP": 0,
         "salToPropP": null,
         "winRateP": 0
@@ -315,13 +315,13 @@
       "metaProRata": 1226.67,
       "pctMetaProRata": 17.3,
       "funil": {
-        "sql": 3,
+        "sql": 4,
         "demo": 2,
         "sal": 2,
         "proposta": 1,
         "won": 1,
         "lost": 0,
-        "sqlToDemoP": 66.7,
+        "sqlToDemoP": 50,
         "demoToSalP": 100,
         "salToPropP": 50,
         "winRateP": 100
@@ -503,15 +503,15 @@
       "sql": 4,
       "mql": 26,
       "mqlEtapas": {
-        "nmql": 1,
-        "cadencia": 24,
+        "nmql": 0,
+        "cadencia": 25,
         "conexao": 0,
         "nutricao": 0,
         "ganho": 0,
         "perdido": 1,
         "outros": 0
       },
-      "mqlPctTrabalhados": 96.2,
+      "mqlPctTrabalhados": 100,
       "mqlParaSqlPct": 15.4,
       "recInfluenciada": 1206,
       "metaMes": 14000,
