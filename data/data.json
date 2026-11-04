@@ -1,6 +1,6 @@
 {
-  "geradoEm": "2026-11-04T14:30:26.352Z",
-  "geradoEmBR": "04/11/2026, 11:30:26",
+  "geradoEm": "2026-11-04T15:00:32.689Z",
+  "geradoEmBR": "04/11/2026, 12:00:32",
   "mes": {
     "ano": 2026,
     "mes": 11,
@@ -55,10 +55,10 @@
         "name": "Tamara",
         "nivel": "Sênior",
         "demo": 8,
-        "sal": 2,
+        "sal": 1,
         "proposta": 1,
         "forecast": 0,
-        "total": 11
+        "total": 10
       },
       {
         "name": "Eduardo",
@@ -84,8 +84,8 @@
         "demo": 4,
         "sal": 2,
         "proposta": 0,
-        "forecast": 2,
-        "total": 8
+        "forecast": 3,
+        "total": 9
       },
       {
         "name": "Mayara",
@@ -117,9 +117,9 @@
     ],
     "time": {
       "demo": 24,
-      "sal": 7,
+      "sal": 6,
       "proposta": 4,
-      "forecast": 4,
+      "forecast": 5,
       "total": 39
     },
     "semCloser": {
@@ -164,8 +164,8 @@
     ]
   },
   "aging": {
-    "0-7d": 33,
-    "8-15d": 11,
+    "0-7d": 34,
+    "8-15d": 10,
     "16-30d": 5,
     "31-60d": 6,
     "+60d": 2
@@ -187,13 +187,13 @@
       "name": "Tamara",
       "nivel": "Sênior",
       "ganhos": 1,
-      "perdidos": 1,
+      "perdidos": 2,
       "crossSellGanhos": 0,
       "aquisicaoAmount": 1206,
       "crossSellAmount": 0,
       "totalAmount": 1206,
       "ticketMedio": 1206,
-      "winRate": 50,
+      "winRate": 33.3,
       "metaMes": 11200,
       "metaProRata": 1493.33,
       "pctMetaProRata": 80.8,
@@ -501,9 +501,9 @@
     {
       "name": "Jeferson",
       "sql": 4,
-      "mql": 25,
+      "mql": 26,
       "mqlEtapas": {
-        "nmql": 0,
+        "nmql": 1,
         "cadencia": 24,
         "conexao": 0,
         "nutricao": 0,
@@ -511,8 +511,8 @@
         "perdido": 1,
         "outros": 0
       },
-      "mqlPctTrabalhados": 100,
-      "mqlParaSqlPct": 16,
+      "mqlPctTrabalhados": 96.2,
+      "mqlParaSqlPct": 15.4,
       "recInfluenciada": 1206,
       "metaMes": 14000,
       "metaProRata": 1866.67,
