@@ -1,6 +1,6 @@
 {
-  "geradoEm": "2026-11-04T21:00:29.082Z",
-  "geradoEmBR": "04/11/2026, 18:00:29",
+  "geradoEm": "2026-11-04T21:30:24.017Z",
+  "geradoEmBR": "04/11/2026, 18:30:24",
   "mes": {
     "ano": 2026,
     "mes": 11,
@@ -26,13 +26,13 @@
     ]
   },
   "funilTime": {
-    "sql": 21,
+    "sql": 22,
     "demo": 14,
     "sal": 6,
     "proposta": 4,
     "won": 4,
     "lost": 2,
-    "sqlToDemoP": 66.7,
+    "sqlToDemoP": 63.6,
     "demoToSalP": 42.9,
     "salToPropP": 66.7,
     "winRateP": 66.7
@@ -139,7 +139,7 @@
     "metaMensal": 50000,
     "pctMeta": 5.3,
     "pipelineAberto": 18686,
-    "pipelineAbertoQtd": 56,
+    "pipelineAbertoQtd": 57,
     "pipelineAbertoComValor": 17,
     "mediaDiaria": 668.26
   },
@@ -164,14 +164,14 @@
     ]
   },
   "aging": {
-    "0-7d": 32,
+    "0-7d": 33,
     "8-15d": 10,
     "16-30d": 6,
     "31-60d": 6,
     "+60d": 2
   },
   "agingCriacao": {
-    "0-7d": 21,
+    "0-7d": 22,
     "8-15d": 16,
     "16-30d": 9,
     "31-60d": 8,
@@ -198,13 +198,13 @@
       "metaProRata": 1493.33,
       "pctMetaProRata": 86.7,
       "funil": {
-        "sql": 6,
+        "sql": 7,
         "demo": 3,
         "sal": 1,
         "proposta": 1,
         "won": 1,
         "lost": 0,
-        "sqlToDemoP": 50,
+        "sqlToDemoP": 42.9,
         "demoToSalP": 33.3,
         "salToPropP": 100,
         "winRateP": 100
@@ -480,19 +480,19 @@
     },
     {
       "name": "Amanda",
-      "sql": 6,
-      "mql": 25,
+      "sql": 7,
+      "mql": 24,
       "mqlEtapas": {
         "nmql": 0,
         "cadencia": 16,
-        "conexao": 2,
+        "conexao": 1,
         "nutricao": 0,
         "ganho": 0,
         "perdido": 7,
         "outros": 0
       },
       "mqlPctTrabalhados": 100,
-      "mqlParaSqlPct": 24,
+      "mqlParaSqlPct": 29.2,
       "recInfluenciada": 695,
       "metaMes": 16000,
       "metaProRata": 2133.33,
