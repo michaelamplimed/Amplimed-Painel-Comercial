@@ -1,6 +1,6 @@
 {
-  "geradoEm": "2026-11-05T15:30:32.459Z",
-  "geradoEmBR": "05/11/2026, 12:30:32",
+  "geradoEm": "2026-11-05T16:30:26.313Z",
+  "geradoEmBR": "05/11/2026, 13:30:26",
   "mes": {
     "ano": 2026,
     "mes": 11,
@@ -9,13 +9,7 @@
   "qualidade": {
     "ganhosSemValor": [],
     "ganhosSemCloser": [],
-    "ganhosSemSdr": [
-      {
-        "id": "67504428201",
-        "nome": "Mauricio Ribeiro",
-        "valor": 89
-      }
-    ],
+    "ganhosSemSdr": [],
     "testesExcluidos": [
       {
         "id": "67347868224",
@@ -180,8 +174,8 @@
     "+60d": 2
   },
   "agingCriacao": {
-    "0-7d": 26,
-    "8-15d": 15,
+    "0-7d": 25,
+    "8-15d": 16,
     "16-30d": 10,
     "31-60d": 7,
     "+60d": 2
@@ -472,15 +466,15 @@
       "sql": 14,
       "mql": 28,
       "mqlEtapas": {
-        "nmql": 1,
-        "cadencia": 26,
+        "nmql": 0,
+        "cadencia": 27,
         "conexao": 0,
         "nutricao": 0,
         "ganho": 0,
         "perdido": 1,
         "outros": 0
       },
-      "mqlPctTrabalhados": 96.4,
+      "mqlPctTrabalhados": 100,
       "mqlParaSqlPct": 50,
       "recInfluenciada": 461.04,
       "metaMes": 16000,
@@ -489,39 +483,39 @@
     },
     {
       "name": "Amanda",
-      "sql": 10,
-      "mql": 29,
+      "sql": 11,
+      "mql": 30,
       "mqlEtapas": {
-        "nmql": 2,
-        "cadencia": 20,
+        "nmql": 0,
+        "cadencia": 22,
         "conexao": 0,
         "nutricao": 0,
         "ganho": 0,
-        "perdido": 7,
+        "perdido": 8,
         "outros": 0
       },
-      "mqlPctTrabalhados": 93.1,
-      "mqlParaSqlPct": 34.5,
-      "recInfluenciada": 923,
+      "mqlPctTrabalhados": 100,
+      "mqlParaSqlPct": 36.7,
+      "recInfluenciada": 1012,
       "metaMes": 16000,
       "metaProRata": 2666.67,
-      "pctMetaProRata": 34.6
+      "pctMetaProRata": 37.9
     },
     {
       "name": "Jeferson",
       "sql": 5,
-      "mql": 33,
+      "mql": 35,
       "mqlEtapas": {
         "nmql": 1,
-        "cadencia": 30,
+        "cadencia": 31,
         "conexao": 0,
         "nutricao": 0,
-        "ganho": 0,
+        "ganho": 1,
         "perdido": 2,
         "outros": 0
       },
-      "mqlPctTrabalhados": 97,
-      "mqlParaSqlPct": 15.2,
+      "mqlPctTrabalhados": 97.1,
+      "mqlParaSqlPct": 14.3,
       "recInfluenciada": 1206,
       "metaMes": 14000,
       "metaProRata": 2333.33,
