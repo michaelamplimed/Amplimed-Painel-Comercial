@@ -1,6 +1,6 @@
 {
-  "geradoEm": "2026-11-05T20:00:30.052Z",
-  "geradoEmBR": "05/11/2026, 17:00:30",
+  "geradoEm": "2026-11-05T20:30:24.539Z",
+  "geradoEmBR": "05/11/2026, 17:30:24",
   "mes": {
     "ano": 2026,
     "mes": 11,
@@ -32,13 +32,13 @@
     ]
   },
   "funilTime": {
-    "sql": 37,
+    "sql": 38,
     "demo": 26,
     "sal": 15,
     "proposta": 10,
     "won": 9,
     "lost": 4,
-    "sqlToDemoP": 70.3,
+    "sqlToDemoP": 68.4,
     "demoToSalP": 57.7,
     "salToPropP": 66.7,
     "winRateP": 69.2
@@ -144,9 +144,9 @@
     "receitaRealizada": 3436.42,
     "metaMensal": 50000,
     "pctMeta": 6.9,
-    "pipelineAberto": 17219,
-    "pipelineAbertoQtd": 62,
-    "pipelineAbertoComValor": 19,
+    "pipelineAberto": 17330.2,
+    "pipelineAbertoQtd": 63,
+    "pipelineAbertoComValor": 20,
     "mediaDiaria": 687.28
   },
   "receitaAcumulada": {
@@ -173,14 +173,14 @@
     ]
   },
   "aging": {
-    "0-7d": 37,
-    "8-15d": 12,
+    "0-7d": 36,
+    "8-15d": 14,
     "16-30d": 6,
     "31-60d": 5,
     "+60d": 2
   },
   "agingCriacao": {
-    "0-7d": 25,
+    "0-7d": 26,
     "8-15d": 17,
     "16-30d": 11,
     "31-60d": 7,
@@ -207,13 +207,13 @@
       "metaProRata": 1866.67,
       "pctMetaProRata": 81.6,
       "funil": {
-        "sql": 10,
+        "sql": 11,
         "demo": 8,
         "sal": 4,
         "proposta": 4,
         "won": 3,
         "lost": 1,
-        "sqlToDemoP": 80,
+        "sqlToDemoP": 72.7,
         "demoToSalP": 50,
         "salToPropP": 100,
         "winRateP": 75
@@ -469,11 +469,11 @@
   "sdrs": [
     {
       "name": "Ana",
-      "sql": 14,
-      "mql": 31,
+      "sql": 15,
+      "mql": 30,
       "mqlEtapas": {
         "nmql": 0,
-        "cadencia": 30,
+        "cadencia": 29,
         "conexao": 0,
         "nutricao": 0,
         "ganho": 0,
@@ -481,7 +481,7 @@
         "outros": 0
       },
       "mqlPctTrabalhados": 100,
-      "mqlParaSqlPct": 45.2,
+      "mqlParaSqlPct": 50,
       "recInfluenciada": 461.04,
       "metaMes": 16000,
       "metaProRata": 2666.67,
@@ -490,10 +490,10 @@
     {
       "name": "Amanda",
       "sql": 16,
-      "mql": 28,
+      "mql": 29,
       "mqlEtapas": {
         "nmql": 0,
-        "cadencia": 19,
+        "cadencia": 20,
         "conexao": 0,
         "nutricao": 0,
         "ganho": 0,
@@ -501,7 +501,7 @@
         "outros": 0
       },
       "mqlPctTrabalhados": 100,
-      "mqlParaSqlPct": 57.1,
+      "mqlParaSqlPct": 55.2,
       "recInfluenciada": 1151.19,
       "metaMes": 16000,
       "metaProRata": 2666.67,
