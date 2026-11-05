@@ -1,13 +1,19 @@
 {
-  "geradoEm": "2026-11-05T19:30:25.645Z",
-  "geradoEmBR": "05/11/2026, 16:30:25",
+  "geradoEm": "2026-11-05T20:00:30.052Z",
+  "geradoEmBR": "05/11/2026, 17:00:30",
   "mes": {
     "ano": 2026,
     "mes": 11,
     "chave": "2026-11"
   },
   "qualidade": {
-    "ganhosSemValor": [],
+    "ganhosSemValor": [
+      {
+        "id": "67089254323",
+        "nome": "Personalizado | Rooney Ribeiro | Clínica",
+        "valor": 0.19
+      }
+    ],
     "ganhosSemCloser": [],
     "ganhosSemSdr": [],
     "testesExcluidos": [
@@ -26,13 +32,13 @@
     ]
   },
   "funilTime": {
-    "sql": 36,
+    "sql": 37,
     "demo": 26,
     "sal": 15,
     "proposta": 10,
     "won": 9,
     "lost": 4,
-    "sqlToDemoP": 72.2,
+    "sqlToDemoP": 70.3,
     "demoToSalP": 57.7,
     "salToPropP": 66.7,
     "winRateP": 69.2
@@ -135,13 +141,13 @@
     "sdr": 46000
   },
   "kpis": {
-    "receitaRealizada": 3436.23,
+    "receitaRealizada": 3436.42,
     "metaMensal": 50000,
     "pctMeta": 6.9,
     "pipelineAberto": 17219,
-    "pipelineAbertoQtd": 61,
+    "pipelineAbertoQtd": 62,
     "pipelineAbertoComValor": 19,
-    "mediaDiaria": 687.25
+    "mediaDiaria": 687.28
   },
   "receitaAcumulada": {
     "labels": [
@@ -156,7 +162,7 @@
       0,
       1833.2,
       2673.04,
-      3436.23
+      3436.42
     ],
     "meta": [
       1666.67,
@@ -167,14 +173,14 @@
     ]
   },
   "aging": {
-    "0-7d": 36,
+    "0-7d": 37,
     "8-15d": 12,
     "16-30d": 6,
     "31-60d": 5,
     "+60d": 2
   },
   "agingCriacao": {
-    "0-7d": 24,
+    "0-7d": 25,
     "8-15d": 17,
     "16-30d": 11,
     "31-60d": 7,
@@ -318,13 +324,13 @@
       "metaProRata": 1533.33,
       "pctMetaProRata": 28.7,
       "funil": {
-        "sql": 7,
+        "sql": 8,
         "demo": 3,
         "sal": 3,
         "proposta": 2,
         "won": 2,
         "lost": 1,
-        "sqlToDemoP": 42.9,
+        "sqlToDemoP": 37.5,
         "demoToSalP": 100,
         "salToPropP": 66.7,
         "winRateP": 66.7
@@ -425,10 +431,10 @@
       "nivel": "Cross-sell",
       "ganhos": 0,
       "perdidos": 0,
-      "crossSellGanhos": 3,
+      "crossSellGanhos": 4,
       "aquisicaoAmount": 0,
-      "crossSellAmount": 479,
-      "totalAmount": 479,
+      "crossSellAmount": 479.19,
+      "totalAmount": 479.19,
       "ticketMedio": 0,
       "winRate": 0,
       "metaMes": 6000,
@@ -464,10 +470,10 @@
     {
       "name": "Ana",
       "sql": 14,
-      "mql": 30,
+      "mql": 31,
       "mqlEtapas": {
         "nmql": 0,
-        "cadencia": 29,
+        "cadencia": 30,
         "conexao": 0,
         "nutricao": 0,
         "ganho": 0,
@@ -475,7 +481,7 @@
         "outros": 0
       },
       "mqlPctTrabalhados": 100,
-      "mqlParaSqlPct": 46.7,
+      "mqlParaSqlPct": 45.2,
       "recInfluenciada": 461.04,
       "metaMes": 16000,
       "metaProRata": 2666.67,
@@ -483,11 +489,11 @@
     },
     {
       "name": "Amanda",
-      "sql": 15,
-      "mql": 29,
+      "sql": 16,
+      "mql": 28,
       "mqlEtapas": {
         "nmql": 0,
-        "cadencia": 20,
+        "cadencia": 19,
         "conexao": 0,
         "nutricao": 0,
         "ganho": 0,
@@ -495,7 +501,7 @@
         "outros": 0
       },
       "mqlPctTrabalhados": 100,
-      "mqlParaSqlPct": 51.7,
+      "mqlParaSqlPct": 57.1,
       "recInfluenciada": 1151.19,
       "metaMes": 16000,
       "metaProRata": 2666.67,
@@ -506,15 +512,15 @@
       "sql": 7,
       "mql": 39,
       "mqlEtapas": {
-        "nmql": 1,
+        "nmql": 0,
         "cadencia": 34,
         "conexao": 0,
         "nutricao": 0,
         "ganho": 0,
-        "perdido": 4,
+        "perdido": 5,
         "outros": 0
       },
-      "mqlPctTrabalhados": 97.4,
+      "mqlPctTrabalhados": 100,
       "mqlParaSqlPct": 17.9,
       "recInfluenciada": 1345,
       "metaMes": 14000,
