@@ -1,6 +1,6 @@
 {
-  "geradoEm": "2026-11-05T12:00:29.642Z",
-  "geradoEmBR": "05/11/2026, 09:00:29",
+  "geradoEm": "2026-11-05T12:30:25.400Z",
+  "geradoEmBR": "05/11/2026, 09:30:25",
   "mes": {
     "ano": 2026,
     "mes": 11,
@@ -466,15 +466,15 @@
       "sql": 11,
       "mql": 27,
       "mqlEtapas": {
-        "nmql": 1,
-        "cadencia": 25,
+        "nmql": 0,
+        "cadencia": 26,
         "conexao": 0,
         "nutricao": 0,
         "ganho": 0,
         "perdido": 1,
         "outros": 0
       },
-      "mqlPctTrabalhados": 96.3,
+      "mqlPctTrabalhados": 100,
       "mqlParaSqlPct": 40.7,
       "recInfluenciada": 372.04,
       "metaMes": 16000,
@@ -486,15 +486,15 @@
       "sql": 8,
       "mql": 28,
       "mqlEtapas": {
-        "nmql": 2,
-        "cadencia": 19,
+        "nmql": 0,
+        "cadencia": 21,
         "conexao": 0,
         "nutricao": 0,
         "ganho": 0,
         "perdido": 7,
         "outros": 0
       },
-      "mqlPctTrabalhados": 92.9,
+      "mqlPctTrabalhados": 100,
       "mqlParaSqlPct": 28.6,
       "recInfluenciada": 834,
       "metaMes": 16000,
