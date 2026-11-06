@@ -1,6 +1,6 @@
 {
-  "geradoEm": "2026-11-06T10:30:29.635Z",
-  "geradoEmBR": "06/11/2026, 07:30:29",
+  "geradoEm": "2026-11-06T11:00:31.339Z",
+  "geradoEmBR": "06/11/2026, 08:00:31",
   "mes": {
     "ano": 2026,
     "mes": 11,
@@ -495,15 +495,15 @@
       "sql": 16,
       "mql": 32,
       "mqlEtapas": {
-        "nmql": 3,
-        "cadencia": 20,
+        "nmql": 0,
+        "cadencia": 23,
         "conexao": 0,
         "nutricao": 0,
         "ganho": 0,
         "perdido": 9,
         "outros": 0
       },
-      "mqlPctTrabalhados": 90.6,
+      "mqlPctTrabalhados": 100,
       "mqlParaSqlPct": 50,
       "recInfluenciada": 1151.19,
       "metaMes": 16000,
