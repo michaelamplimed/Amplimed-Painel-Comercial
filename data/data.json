@@ -1,6 +1,6 @@
 {
-  "geradoEm": "2026-11-06T16:00:29.542Z",
-  "geradoEmBR": "06/11/2026, 13:00:29",
+  "geradoEm": "2026-11-06T16:30:25.755Z",
+  "geradoEmBR": "06/11/2026, 13:30:25",
   "mes": {
     "ano": 2026,
     "mes": 11,
@@ -473,9 +473,9 @@
     {
       "name": "Ana",
       "sql": 18,
-      "mql": 40,
+      "mql": 39,
       "mqlEtapas": {
-        "nmql": 1,
+        "nmql": 0,
         "cadencia": 34,
         "conexao": 0,
         "nutricao": 0,
@@ -483,8 +483,8 @@
         "perdido": 5,
         "outros": 0
       },
-      "mqlPctTrabalhados": 97.5,
-      "mqlParaSqlPct": 45,
+      "mqlPctTrabalhados": 100,
+      "mqlParaSqlPct": 46.2,
       "recInfluenciada": 617.84,
       "metaMes": 16000,
       "metaProRata": 3200,
@@ -493,18 +493,18 @@
     {
       "name": "Amanda",
       "sql": 19,
-      "mql": 35,
+      "mql": 36,
       "mqlEtapas": {
-        "nmql": 2,
-        "cadencia": 23,
+        "nmql": 0,
+        "cadencia": 25,
         "conexao": 0,
         "nutricao": 0,
-        "ganho": 0,
+        "ganho": 1,
         "perdido": 10,
         "outros": 0
       },
-      "mqlPctTrabalhados": 94.3,
-      "mqlParaSqlPct": 54.3,
+      "mqlPctTrabalhados": 100,
+      "mqlParaSqlPct": 52.8,
       "recInfluenciada": 1290.19,
       "metaMes": 16000,
       "metaProRata": 3200,
@@ -515,15 +515,15 @@
       "sql": 8,
       "mql": 45,
       "mqlEtapas": {
-        "nmql": 1,
-        "cadencia": 39,
+        "nmql": 0,
+        "cadencia": 40,
         "conexao": 0,
         "nutricao": 0,
         "ganho": 0,
         "perdido": 5,
         "outros": 0
       },
-      "mqlPctTrabalhados": 97.8,
+      "mqlPctTrabalhados": 100,
       "mqlParaSqlPct": 17.8,
       "recInfluenciada": 1434,
       "metaMes": 14000,
