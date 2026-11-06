@@ -1,6 +1,6 @@
 {
-  "geradoEm": "2026-11-06T19:30:26.608Z",
-  "geradoEmBR": "06/11/2026, 16:30:26",
+  "geradoEm": "2026-11-06T20:00:27.939Z",
+  "geradoEmBR": "06/11/2026, 17:00:27",
   "mes": {
     "ano": 2026,
     "mes": 11,
@@ -32,13 +32,13 @@
     ]
   },
   "funilTime": {
-    "sql": 48,
+    "sql": 49,
     "demo": 36,
     "sal": 22,
     "proposta": 18,
     "won": 16,
     "lost": 5,
-    "sqlToDemoP": 75,
+    "sqlToDemoP": 73.5,
     "demoToSalP": 61.1,
     "salToPropP": 81.8,
     "winRateP": 76.2
@@ -176,8 +176,8 @@
     ]
   },
   "aging": {
-    "0-7d": 38,
-    "8-15d": 14,
+    "0-7d": 36,
+    "8-15d": 16,
     "16-30d": 5,
     "31-60d": 6,
     "+60d": 2
@@ -366,13 +366,13 @@
       "metaProRata": 1840,
       "pctMetaProRata": 22.1,
       "funil": {
-        "sql": 9,
+        "sql": 10,
         "demo": 7,
         "sal": 5,
         "proposta": 3,
         "won": 3,
         "lost": 1,
-        "sqlToDemoP": 77.8,
+        "sqlToDemoP": 70,
         "demoToSalP": 71.4,
         "salToPropP": 60,
         "winRateP": 75
@@ -512,7 +512,7 @@
     },
     {
       "name": "Jeferson",
-      "sql": 9,
+      "sql": 10,
       "mql": 46,
       "mqlEtapas": {
         "nmql": 0,
@@ -524,7 +524,7 @@
         "outros": 0
       },
       "mqlPctTrabalhados": 100,
-      "mqlParaSqlPct": 19.6,
+      "mqlParaSqlPct": 21.7,
       "recInfluenciada": 1573,
       "metaMes": 14000,
       "metaProRata": 2800,
