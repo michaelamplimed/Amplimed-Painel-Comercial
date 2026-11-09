@@ -1,6 +1,6 @@
 {
-  "geradoEm": "2026-11-09T13:00:32.219Z",
-  "geradoEmBR": "09/11/2026, 10:00:32",
+  "geradoEm": "2026-11-09T13:30:26.736Z",
+  "geradoEmBR": "09/11/2026, 10:30:26",
   "mes": {
     "ano": 2026,
     "mes": 11,
@@ -504,15 +504,15 @@
       "sql": 23,
       "mql": 55,
       "mqlEtapas": {
-        "nmql": 1,
-        "cadencia": 41,
+        "nmql": 0,
+        "cadencia": 42,
         "conexao": 0,
         "nutricao": 0,
         "ganho": 0,
         "perdido": 13,
         "outros": 0
       },
-      "mqlPctTrabalhados": 98.2,
+      "mqlPctTrabalhados": 100,
       "mqlParaSqlPct": 41.8,
       "recInfluenciada": 1739.59,
       "metaMes": 16000,
@@ -522,18 +522,18 @@
     {
       "name": "Jeferson",
       "sql": 10,
-      "mql": 69,
+      "mql": 70,
       "mqlEtapas": {
-        "nmql": 6,
-        "cadencia": 58,
+        "nmql": 1,
+        "cadencia": 63,
         "conexao": 0,
         "nutricao": 0,
         "ganho": 0,
-        "perdido": 5,
+        "perdido": 6,
         "outros": 0
       },
-      "mqlPctTrabalhados": 91.3,
-      "mqlParaSqlPct": 14.5,
+      "mqlPctTrabalhados": 98.6,
+      "mqlParaSqlPct": 14.3,
       "recInfluenciada": 1805.4,
       "metaMes": 14000,
       "metaProRata": 4200,
