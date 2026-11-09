@@ -1,6 +1,6 @@
 {
-  "geradoEm": "2026-11-09T20:00:33.452Z",
-  "geradoEmBR": "09/11/2026, 17:00:33",
+  "geradoEm": "2026-11-09T20:30:28.095Z",
+  "geradoEmBR": "09/11/2026, 17:30:28",
   "mes": {
     "ano": 2026,
     "mes": 11,
@@ -32,13 +32,13 @@
     ]
   },
   "funilTime": {
-    "sql": 60,
+    "sql": 61,
     "demo": 51,
     "sal": 28,
     "proposta": 24,
     "won": 20,
     "lost": 9,
-    "sqlToDemoP": 85,
+    "sqlToDemoP": 83.6,
     "demoToSalP": 54.9,
     "salToPropP": 85.7,
     "winRateP": 69
@@ -145,7 +145,7 @@
     "metaMensal": 50000,
     "pctMeta": 11.9,
     "pipelineAberto": 14976.6,
-    "pipelineAbertoQtd": 58,
+    "pipelineAbertoQtd": 59,
     "pipelineAbertoComValor": 20,
     "mediaDiaria": 661.34
   },
@@ -185,14 +185,14 @@
     ]
   },
   "aging": {
-    "0-7d": 31,
+    "0-7d": 32,
     "8-15d": 13,
     "16-30d": 8,
     "31-60d": 4,
     "+60d": 2
   },
   "agingCriacao": {
-    "0-7d": 25,
+    "0-7d": 26,
     "8-15d": 14,
     "16-30d": 9,
     "31-60d": 8,
@@ -258,13 +258,13 @@
       "metaProRata": 3360,
       "pctMetaProRata": 23.6,
       "funil": {
-        "sql": 11,
+        "sql": 12,
         "demo": 8,
         "sal": 4,
         "proposta": 3,
         "won": 3,
         "lost": 0,
-        "sqlToDemoP": 72.7,
+        "sqlToDemoP": 66.7,
         "demoToSalP": 50,
         "salToPropP": 75,
         "winRateP": 100
@@ -481,11 +481,11 @@
   "sdrs": [
     {
       "name": "Ana",
-      "sql": 21,
-      "mql": 75,
+      "sql": 22,
+      "mql": 74,
       "mqlEtapas": {
         "nmql": 0,
-        "cadencia": 65,
+        "cadencia": 64,
         "conexao": 0,
         "nutricao": 0,
         "ganho": 0,
@@ -493,7 +493,7 @@
         "outros": 0
       },
       "mqlPctTrabalhados": 100,
-      "mqlParaSqlPct": 28,
+      "mqlParaSqlPct": 29.7,
       "recInfluenciada": 912.84,
       "metaMes": 16000,
       "metaProRata": 4800,
@@ -504,15 +504,15 @@
       "sql": 28,
       "mql": 63,
       "mqlEtapas": {
-        "nmql": 1,
-        "cadencia": 43,
+        "nmql": 0,
+        "cadencia": 44,
         "conexao": 1,
         "nutricao": 0,
         "ganho": 0,
         "perdido": 18,
         "outros": 0
       },
-      "mqlPctTrabalhados": 98.4,
+      "mqlPctTrabalhados": 100,
       "mqlParaSqlPct": 44.4,
       "recInfluenciada": 2017.59,
       "metaMes": 16000,
@@ -522,10 +522,10 @@
     {
       "name": "Jeferson",
       "sql": 11,
-      "mql": 76,
+      "mql": 77,
       "mqlEtapas": {
         "nmql": 1,
-        "cadencia": 65,
+        "cadencia": 66,
         "conexao": 0,
         "nutricao": 0,
         "ganho": 0,
@@ -533,7 +533,7 @@
         "outros": 0
       },
       "mqlPctTrabalhados": 98.7,
-      "mqlParaSqlPct": 14.5,
+      "mqlParaSqlPct": 14.3,
       "recInfluenciada": 1805.4,
       "metaMes": 14000,
       "metaProRata": 4200,
