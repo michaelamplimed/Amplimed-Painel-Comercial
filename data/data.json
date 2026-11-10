@@ -1,6 +1,6 @@
 {
-  "geradoEm": "2026-11-10T21:00:32.781Z",
-  "geradoEmBR": "10/11/2026, 18:00:32",
+  "geradoEm": "2026-11-10T21:30:25.724Z",
+  "geradoEmBR": "10/11/2026, 18:30:25",
   "mes": {
     "ano": 2026,
     "mes": 11,
@@ -144,9 +144,9 @@
     "receitaRealizada": 7244.97,
     "metaMensal": 50000,
     "pctMeta": 14.5,
-    "pipelineAberto": 14776.4,
+    "pipelineAberto": 16161.2,
     "pipelineAbertoQtd": 64,
-    "pipelineAbertoComValor": 18,
+    "pipelineAbertoComValor": 19,
     "mediaDiaria": 724.5
   },
   "receitaAcumulada": {
@@ -525,9 +525,9 @@
     {
       "name": "Jeferson",
       "sql": 16,
-      "mql": 93,
+      "mql": 94,
       "mqlEtapas": {
-        "nmql": 0,
+        "nmql": 1,
         "cadencia": 80,
         "conexao": 0,
         "nutricao": 0,
@@ -535,8 +535,8 @@
         "perdido": 13,
         "outros": 0
       },
-      "mqlPctTrabalhados": 100,
-      "mqlParaSqlPct": 17.2,
+      "mqlPctTrabalhados": 98.9,
+      "mqlParaSqlPct": 17,
       "recInfluenciada": 2108.5,
       "metaMes": 14000,
       "metaProRata": 4666.67,
