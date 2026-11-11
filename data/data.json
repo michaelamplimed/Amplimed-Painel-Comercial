@@ -1,6 +1,6 @@
 {
-  "geradoEm": "2026-11-11T21:00:34.424Z",
-  "geradoEmBR": "11/11/2026, 18:00:34",
+  "geradoEm": "2026-11-11T21:30:25.515Z",
+  "geradoEmBR": "11/11/2026, 18:30:25",
   "mes": {
     "ano": 2026,
     "mes": 11,
@@ -32,17 +32,21 @@
       {
         "id": "67872395658",
         "nome": "TESTE ANA PAULA"
+      },
+      {
+        "id": "67799135257",
+        "nome": "Teste Preview Claude"
       }
     ]
   },
   "funilTime": {
-    "sql": 93,
+    "sql": 94,
     "demo": 73,
     "sal": 47,
     "proposta": 41,
     "won": 33,
     "lost": 13,
-    "sqlToDemoP": 78.5,
+    "sqlToDemoP": 77.7,
     "demoToSalP": 64.4,
     "salToPropP": 87.2,
     "winRateP": 71.7
@@ -149,7 +153,7 @@
     "metaMensal": 50000,
     "pctMeta": 18,
     "pipelineAberto": 17261,
-    "pipelineAbertoQtd": 73,
+    "pipelineAbertoQtd": 74,
     "pipelineAbertoComValor": 25,
     "mediaDiaria": 818.44
   },
@@ -195,14 +199,14 @@
     ]
   },
   "aging": {
-    "0-7d": 46,
+    "0-7d": 47,
     "8-15d": 12,
     "16-30d": 9,
     "31-60d": 4,
     "+60d": 2
   },
   "agingCriacao": {
-    "0-7d": 33,
+    "0-7d": 34,
     "8-15d": 20,
     "16-30d": 10,
     "31-60d": 7,
@@ -385,13 +389,13 @@
       "metaProRata": 3373.33,
       "pctMetaProRata": 30,
       "funil": {
-        "sql": 19,
+        "sql": 20,
         "demo": 16,
         "sal": 10,
         "proposta": 8,
         "won": 6,
         "lost": 2,
-        "sqlToDemoP": 84.2,
+        "sqlToDemoP": 80,
         "demoToSalP": 62.5,
         "salToPropP": 80,
         "winRateP": 75
@@ -491,11 +495,11 @@
   "sdrs": [
     {
       "name": "Ana",
-      "sql": 37,
-      "mql": 96,
+      "sql": 38,
+      "mql": 95,
       "mqlEtapas": {
         "nmql": 0,
-        "cadencia": 77,
+        "cadencia": 76,
         "conexao": 1,
         "nutricao": 0,
         "ganho": 0,
@@ -503,7 +507,7 @@
         "outros": 0
       },
       "mqlPctTrabalhados": 100,
-      "mqlParaSqlPct": 38.5,
+      "mqlParaSqlPct": 40,
       "recInfluenciada": 1915.89,
       "metaMes": 16000,
       "metaProRata": 5866.67,
