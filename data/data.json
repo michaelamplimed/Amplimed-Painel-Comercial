@@ -1,6 +1,6 @@
 {
-  "geradoEm": "2026-11-11T19:00:32.217Z",
-  "geradoEmBR": "11/11/2026, 16:00:32",
+  "geradoEm": "2026-11-11T19:30:26.197Z",
+  "geradoEmBR": "11/11/2026, 16:30:26",
   "mes": {
     "ano": 2026,
     "mes": 11,
@@ -15,13 +15,7 @@
       }
     ],
     "ganhosSemCloser": [],
-    "ganhosSemSdr": [
-      {
-        "id": "67797537942",
-        "nome": "Consultório Cristiane Silveira",
-        "valor": 152
-      }
-    ],
+    "ganhosSemSdr": [],
     "testesExcluidos": [
       {
         "id": "67347868224",
@@ -34,17 +28,21 @@
       {
         "id": "67353452575",
         "nome": "Teste Jefe"
+      },
+      {
+        "id": "67872395658",
+        "nome": "TESTE ANA PAULA"
       }
     ]
   },
   "funilTime": {
-    "sql": 89,
+    "sql": 90,
     "demo": 73,
     "sal": 46,
     "proposta": 40,
     "won": 32,
     "lost": 13,
-    "sqlToDemoP": 82,
+    "sqlToDemoP": 81.1,
     "demoToSalP": 63,
     "salToPropP": 87,
     "winRateP": 71.1
@@ -151,7 +149,7 @@
     "metaMensal": 50000,
     "pctMeta": 16.1,
     "pipelineAberto": 17261,
-    "pipelineAbertoQtd": 70,
+    "pipelineAbertoQtd": 71,
     "pipelineAbertoComValor": 25,
     "mediaDiaria": 729.95
   },
@@ -197,14 +195,14 @@
     ]
   },
   "aging": {
-    "0-7d": 43,
+    "0-7d": 44,
     "8-15d": 12,
     "16-30d": 9,
     "31-60d": 4,
     "+60d": 2
   },
   "agingCriacao": {
-    "0-7d": 31,
+    "0-7d": 32,
     "8-15d": 19,
     "16-30d": 10,
     "31-60d": 7,
@@ -231,13 +229,13 @@
       "metaProRata": 4106.67,
       "pctMetaProRata": 61.6,
       "funil": {
-        "sql": 23,
+        "sql": 24,
         "demo": 20,
         "sal": 14,
         "proposta": 12,
         "won": 9,
         "lost": 3,
-        "sqlToDemoP": 87,
+        "sqlToDemoP": 83.3,
         "demoToSalP": 70,
         "salToPropP": 85.7,
         "winRateP": 75
@@ -493,39 +491,39 @@
   "sdrs": [
     {
       "name": "Ana",
-      "sql": 34,
+      "sql": 35,
       "mql": 96,
       "mqlEtapas": {
-        "nmql": 1,
-        "cadencia": 82,
+        "nmql": 0,
+        "cadencia": 81,
         "conexao": 0,
         "nutricao": 0,
         "ganho": 0,
-        "perdido": 13,
+        "perdido": 15,
         "outros": 0
       },
-      "mqlPctTrabalhados": 99,
-      "mqlParaSqlPct": 35.4,
-      "recInfluenciada": 1763.89,
+      "mqlPctTrabalhados": 100,
+      "mqlParaSqlPct": 36.5,
+      "recInfluenciada": 1915.89,
       "metaMes": 16000,
       "metaProRata": 5866.67,
-      "pctMetaProRata": 30.1
+      "pctMetaProRata": 32.7
     },
     {
       "name": "Amanda",
       "sql": 36,
-      "mql": 97,
+      "mql": 99,
       "mqlEtapas": {
-        "nmql": 3,
-        "cadencia": 53,
+        "nmql": 0,
+        "cadencia": 58,
         "conexao": 3,
         "nutricao": 0,
         "ganho": 0,
         "perdido": 38,
         "outros": 0
       },
-      "mqlPctTrabalhados": 96.9,
-      "mqlParaSqlPct": 37.1,
+      "mqlPctTrabalhados": 100,
+      "mqlParaSqlPct": 36.4,
       "recInfluenciada": 2231.69,
       "metaMes": 16000,
       "metaProRata": 5866.67,
@@ -533,10 +531,10 @@
     },
     {
       "name": "Jeferson",
-      "sql": 18,
-      "mql": 109,
+      "sql": 19,
+      "mql": 108,
       "mqlEtapas": {
-        "nmql": 2,
+        "nmql": 1,
         "cadencia": 94,
         "conexao": 0,
         "nutricao": 0,
@@ -544,8 +542,8 @@
         "perdido": 13,
         "outros": 0
       },
-      "mqlPctTrabalhados": 98.2,
-      "mqlParaSqlPct": 16.5,
+      "mqlPctTrabalhados": 99.1,
+      "mqlParaSqlPct": 17.6,
       "recInfluenciada": 2226.65,
       "metaMes": 14000,
       "metaProRata": 5133.33,
