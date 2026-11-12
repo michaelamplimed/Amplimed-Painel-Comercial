@@ -1,6 +1,6 @@
 {
-  "geradoEm": "2026-11-12T21:30:26.462Z",
-  "geradoEmBR": "12/11/2026, 18:30:26",
+  "geradoEm": "2026-11-12T22:00:29.247Z",
+  "geradoEmBR": "12/11/2026, 19:00:29",
   "mes": {
     "ano": 2026,
     "mes": 11,
@@ -45,27 +45,27 @@
   },
   "funilTime": {
     "sql": 114,
-    "demo": 93,
+    "demo": 94,
     "sal": 59,
     "proposta": 51,
     "won": 41,
     "lost": 16,
-    "sqlToDemoP": 81.6,
-    "demoToSalP": 63.4,
+    "sqlToDemoP": 82.5,
+    "demoToSalP": 62.8,
     "salToPropP": 86.4,
     "winRateP": 71.9
   },
   "demoFlowTime": {
-    "demos": 87,
-    "parouDemo": 22,
+    "demos": 88,
+    "parouDemo": 23,
     "sal": 6,
     "proposta": 9,
     "ganho": 36,
     "perdido": 14,
     "voltou": 0,
     "avancaram": 52,
-    "avancouP": 59.8,
-    "ganhoP": 41.4
+    "avancouP": 59.1,
+    "ganhoP": 40.9
   },
   "etapasAbertas": {
     "porCloser": [
@@ -117,11 +117,11 @@
       {
         "name": "Catiane",
         "nivel": "Coordenadora",
-        "demo": 2,
+        "demo": 3,
         "sal": 0,
         "proposta": 0,
         "forecast": 0,
-        "total": 2
+        "total": 3
       },
       {
         "name": "Jessica",
@@ -134,11 +134,11 @@
       }
     ],
     "time": {
-      "demo": 30,
+      "demo": 31,
       "sal": 10,
       "proposta": 12,
       "forecast": 4,
-      "total": 56
+      "total": 57
     },
     "semCloser": {
       "demo": 0,
@@ -436,27 +436,27 @@
       "pctMetaProRata": 0,
       "funil": {
         "sql": 3,
-        "demo": 2,
+        "demo": 3,
         "sal": 1,
         "proposta": 1,
         "won": 1,
         "lost": 0,
-        "sqlToDemoP": 66.7,
-        "demoToSalP": 50,
+        "sqlToDemoP": 100,
+        "demoToSalP": 33.3,
         "salToPropP": 100,
         "winRateP": 100
       },
       "demoFlow": {
-        "demos": 2,
-        "parouDemo": 1,
+        "demos": 3,
+        "parouDemo": 2,
         "sal": 0,
         "proposta": 0,
         "ganho": 1,
         "perdido": 0,
         "voltou": 0,
         "avancaram": 1,
-        "avancouP": 50,
-        "ganhoP": 50
+        "avancouP": 33.3,
+        "ganhoP": 33.3
       }
     },
     {
