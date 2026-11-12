@@ -1,6 +1,6 @@
 {
-  "geradoEm": "2026-11-12T21:00:31.618Z",
-  "geradoEmBR": "12/11/2026, 18:00:31",
+  "geradoEm": "2026-11-12T21:30:26.462Z",
+  "geradoEmBR": "12/11/2026, 18:30:26",
   "mes": {
     "ano": 2026,
     "mes": 11,
@@ -56,16 +56,16 @@
     "winRateP": 71.9
   },
   "demoFlowTime": {
-    "demos": 86,
-    "parouDemo": 21,
+    "demos": 87,
+    "parouDemo": 22,
     "sal": 6,
     "proposta": 9,
     "ganho": 36,
     "perdido": 14,
     "voltou": 0,
     "avancaram": 52,
-    "avancouP": 60.5,
-    "ganhoP": 41.9
+    "avancouP": 59.8,
+    "ganhoP": 41.4
   },
   "etapasAbertas": {
     "porCloser": [
@@ -369,16 +369,16 @@
         "winRateP": 66.7
       },
       "demoFlow": {
-        "demos": 4,
-        "parouDemo": 1,
+        "demos": 5,
+        "parouDemo": 2,
         "sal": 0,
         "proposta": 1,
         "ganho": 1,
         "perdido": 1,
         "voltou": 0,
         "avancaram": 3,
-        "avancouP": 75,
-        "ganhoP": 25
+        "avancouP": 60,
+        "ganhoP": 20
       }
     },
     {
