@@ -1,6 +1,6 @@
 {
-  "geradoEm": "2026-11-12T17:30:26.453Z",
-  "geradoEmBR": "12/11/2026, 14:30:26",
+  "geradoEm": "2026-11-12T17:58:22.319Z",
+  "geradoEmBR": "12/11/2026, 14:58:22",
   "mes": {
     "ano": 2026,
     "mes": 11,
@@ -41,14 +41,14 @@
   },
   "funilTime": {
     "sql": 109,
-    "demo": 83,
-    "sal": 57,
+    "demo": 84,
+    "sal": 58,
     "proposta": 50,
     "won": 41,
     "lost": 14,
-    "sqlToDemoP": 76.1,
-    "demoToSalP": 68.7,
-    "salToPropP": 87.7,
+    "sqlToDemoP": 77.1,
+    "demoToSalP": 69,
+    "salToPropP": 86.2,
     "winRateP": 74.5
   },
   "demoFlowTime": {
@@ -69,10 +69,10 @@
         "name": "Tamara",
         "nivel": "Sênior",
         "demo": 7,
-        "sal": 4,
+        "sal": 5,
         "proposta": 3,
         "forecast": 0,
-        "total": 14
+        "total": 15
       },
       {
         "name": "Eduardo",
@@ -131,10 +131,10 @@
     ],
     "time": {
       "demo": 26,
-      "sal": 8,
+      "sal": 9,
       "proposta": 11,
       "forecast": 3,
-      "total": 48
+      "total": 49
     },
     "semCloser": {
       "demo": 0,
@@ -153,7 +153,7 @@
     "metaMensal": 50000,
     "pctMeta": 35.4,
     "pipelineAberto": 9510.4,
-    "pipelineAbertoQtd": 79,
+    "pipelineAbertoQtd": 81,
     "pipelineAbertoComValor": 23,
     "mediaDiaria": 1476.52
   },
@@ -202,14 +202,14 @@
     ]
   },
   "aging": {
-    "0-7d": 52,
+    "0-7d": 54,
     "8-15d": 13,
     "16-30d": 8,
     "31-60d": 4,
     "+60d": 2
   },
   "agingCriacao": {
-    "0-7d": 36,
+    "0-7d": 38,
     "8-15d": 23,
     "16-30d": 11,
     "31-60d": 6,
@@ -237,14 +237,14 @@
       "pctMetaProRata": 60.4,
       "funil": {
         "sql": 27,
-        "demo": 23,
-        "sal": 16,
+        "demo": 24,
+        "sal": 17,
         "proposta": 13,
         "won": 11,
         "lost": 4,
-        "sqlToDemoP": 85.2,
-        "demoToSalP": 69.6,
-        "salToPropP": 81.3,
+        "sqlToDemoP": 88.9,
+        "demoToSalP": 70.8,
+        "salToPropP": 76.5,
         "winRateP": 73.3
       },
       "demoFlow": {
@@ -499,10 +499,10 @@
     {
       "name": "Ana",
       "sql": 43,
-      "mql": 107,
+      "mql": 108,
       "mqlEtapas": {
         "nmql": 0,
-        "cadencia": 86,
+        "cadencia": 87,
         "conexao": 1,
         "nutricao": 0,
         "ganho": 0,
@@ -510,7 +510,7 @@
         "outros": 0
       },
       "mqlPctTrabalhados": 100,
-      "mqlParaSqlPct": 40.2,
+      "mqlParaSqlPct": 39.8,
       "recInfluenciada": 9714.09,
       "metaMes": 16000,
       "metaProRata": 6400,
@@ -518,19 +518,19 @@
     },
     {
       "name": "Amanda",
-      "sql": 45,
-      "mql": 108,
+      "sql": 47,
+      "mql": 106,
       "mqlEtapas": {
-        "nmql": 1,
-        "cadencia": 65,
+        "nmql": 0,
+        "cadencia": 64,
         "conexao": 3,
         "nutricao": 0,
         "ganho": 0,
         "perdido": 39,
         "outros": 0
       },
-      "mqlPctTrabalhados": 99.1,
-      "mqlParaSqlPct": 41.7,
+      "mqlPctTrabalhados": 100,
+      "mqlParaSqlPct": 44.3,
       "recInfluenciada": 3598.19,
       "metaMes": 16000,
       "metaProRata": 6400,
@@ -539,10 +539,10 @@
     {
       "name": "Jeferson",
       "sql": 21,
-      "mql": 111,
+      "mql": 112,
       "mqlEtapas": {
         "nmql": 1,
-        "cadencia": 86,
+        "cadencia": 87,
         "conexao": 0,
         "nutricao": 0,
         "ganho": 0,
@@ -550,7 +550,7 @@
         "outros": 0
       },
       "mqlPctTrabalhados": 99.1,
-      "mqlParaSqlPct": 18.9,
+      "mqlParaSqlPct": 18.8,
       "recInfluenciada": 2351.75,
       "metaMes": 14000,
       "metaProRata": 5600,
