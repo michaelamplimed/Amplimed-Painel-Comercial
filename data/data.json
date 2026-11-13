@@ -1,6 +1,6 @@
 {
-  "geradoEm": "2026-11-13T12:00:31.737Z",
-  "geradoEmBR": "13/11/2026, 09:00:31",
+  "geradoEm": "2026-11-13T12:30:25.791Z",
+  "geradoEmBR": "13/11/2026, 09:30:25",
   "mes": {
     "ano": 2026,
     "mes": 11,
@@ -8,6 +8,11 @@
   },
   "qualidade": {
     "ganhosSemValor": [
+      {
+        "id": "66899553552",
+        "nome": "Plus | Norival | 60413 INSTITUTO ASTER M",
+        "valor": 0
+      },
       {
         "id": "67089254323",
         "nome": "Personalizado | Rooney Ribeiro | Clínica",
@@ -108,11 +113,11 @@
       {
         "name": "Mayara",
         "nivel": "Pleno",
-        "demo": 7,
+        "demo": 6,
         "sal": 3,
         "proposta": 3,
         "forecast": 0,
-        "total": 13
+        "total": 12
       },
       {
         "name": "Catiane",
@@ -134,11 +139,11 @@
       }
     ],
     "time": {
-      "demo": 31,
+      "demo": 30,
       "sal": 10,
       "proposta": 12,
       "forecast": 3,
-      "total": 56
+      "total": 55
     },
     "semCloser": {
       "demo": 0,
@@ -157,7 +162,7 @@
     "metaMensal": 50000,
     "pctMeta": 36.2,
     "pipelineAberto": 9879.75,
-    "pipelineAbertoQtd": 81,
+    "pipelineAbertoQtd": 80,
     "pipelineAbertoComValor": 25,
     "mediaDiaria": 1391.74
   },
@@ -211,14 +216,14 @@
   "aging": {
     "0-7d": 56,
     "8-15d": 12,
-    "16-30d": 9,
+    "16-30d": 8,
     "31-60d": 3,
     "+60d": 1
   },
   "agingCriacao": {
     "0-7d": 37,
     "8-15d": 23,
-    "16-30d": 14,
+    "16-30d": 13,
     "31-60d": 6,
     "+60d": 1
   },
@@ -388,13 +393,13 @@
       "name": "Mayara",
       "nivel": "Pleno",
       "ganhos": 8,
-      "perdidos": 2,
+      "perdidos": 3,
       "crossSellGanhos": 0,
       "aquisicaoAmount": 1415,
       "crossSellAmount": 0,
       "totalAmount": 1415,
       "ticketMedio": 176.88,
-      "winRate": 80,
+      "winRate": 72.7,
       "metaMes": 9200,
       "metaProRata": 3986.67,
       "pctMetaProRata": 35.5,
@@ -467,7 +472,7 @@
       "nivel": "Cross-sell",
       "ganhos": 0,
       "perdidos": 0,
-      "crossSellGanhos": 12,
+      "crossSellGanhos": 13,
       "aquisicaoAmount": 0,
       "crossSellAmount": 2054.19,
       "totalAmount": 2054.19,
@@ -506,10 +511,10 @@
     {
       "name": "Ana",
       "sql": 43,
-      "mql": 114,
+      "mql": 115,
       "mqlEtapas": {
         "nmql": 0,
-        "cadencia": 93,
+        "cadencia": 94,
         "conexao": 1,
         "nutricao": 0,
         "ganho": 0,
@@ -517,7 +522,7 @@
         "outros": 0
       },
       "mqlPctTrabalhados": 100,
-      "mqlParaSqlPct": 37.7,
+      "mqlParaSqlPct": 37.4,
       "recInfluenciada": 9714.09,
       "metaMes": 16000,
       "metaProRata": 6933.33,
@@ -529,8 +534,8 @@
       "mql": 110,
       "mqlEtapas": {
         "nmql": 0,
-        "cadencia": 67,
-        "conexao": 2,
+        "cadencia": 66,
+        "conexao": 3,
         "nutricao": 0,
         "ganho": 0,
         "perdido": 41,
@@ -546,10 +551,10 @@
     {
       "name": "Jeferson",
       "sql": 23,
-      "mql": 115,
+      "mql": 114,
       "mqlEtapas": {
         "nmql": 0,
-        "cadencia": 90,
+        "cadencia": 89,
         "conexao": 0,
         "nutricao": 0,
         "ganho": 0,
@@ -557,7 +562,7 @@
         "outros": 0
       },
       "mqlPctTrabalhados": 100,
-      "mqlParaSqlPct": 20,
+      "mqlParaSqlPct": 20.2,
       "recInfluenciada": 2351.75,
       "metaMes": 14000,
       "metaProRata": 6066.67,
