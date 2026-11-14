@@ -1,6 +1,6 @@
 {
-  "geradoEm": "2026-11-14T16:00:30.103Z",
-  "geradoEmBR": "14/11/2026, 13:00:30",
+  "geradoEm": "2026-11-14T16:26:17.545Z",
+  "geradoEmBR": "14/11/2026, 13:26:17",
   "mes": {
     "ano": 2026,
     "mes": 11,
@@ -554,9 +554,9 @@
     {
       "name": "Jeferson",
       "sql": 24,
-      "mql": 129,
+      "mql": 130,
       "mqlEtapas": {
-        "nmql": 6,
+        "nmql": 7,
         "cadencia": 98,
         "conexao": 0,
         "nutricao": 0,
@@ -564,8 +564,8 @@
         "perdido": 25,
         "outros": 0
       },
-      "mqlPctTrabalhados": 95.3,
-      "mqlParaSqlPct": 18.6,
+      "mqlPctTrabalhados": 94.6,
+      "mqlParaSqlPct": 18.5,
       "recInfluenciada": 2462.95,
       "metaMes": 14000,
       "metaProRata": 6533.33,
