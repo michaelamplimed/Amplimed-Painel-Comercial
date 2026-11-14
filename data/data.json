@@ -1,6 +1,6 @@
 {
-  "geradoEm": "2026-11-14T14:30:26.627Z",
-  "geradoEmBR": "14/11/2026, 11:30:26",
+  "geradoEm": "2026-11-14T15:00:29.966Z",
+  "geradoEmBR": "14/11/2026, 12:00:29",
   "mes": {
     "ano": 2026,
     "mes": 11,
@@ -50,27 +50,27 @@
   },
   "funilTime": {
     "sql": 121,
-    "demo": 98,
+    "demo": 99,
     "sal": 64,
     "proposta": 54,
     "won": 46,
     "lost": 21,
-    "sqlToDemoP": 81,
-    "demoToSalP": 65.3,
+    "sqlToDemoP": 81.8,
+    "demoToSalP": 64.6,
     "salToPropP": 84.4,
     "winRateP": 68.7
   },
   "demoFlowTime": {
-    "demos": 92,
-    "parouDemo": 19,
+    "demos": 93,
+    "parouDemo": 20,
     "sal": 7,
     "proposta": 7,
     "ganho": 41,
     "perdido": 18,
     "voltou": 0,
     "avancaram": 57,
-    "avancouP": 62,
-    "ganhoP": 44.6
+    "avancouP": 61.3,
+    "ganhoP": 44.1
   },
   "etapasAbertas": {
     "porCloser": [
@@ -86,11 +86,11 @@
       {
         "name": "Eduardo",
         "nivel": "Sênior",
-        "demo": 5,
+        "demo": 6,
         "sal": 2,
         "proposta": 0,
         "forecast": 0,
-        "total": 7
+        "total": 8
       },
       {
         "name": "Juliano",
@@ -139,11 +139,11 @@
       }
     ],
     "time": {
-      "demo": 26,
+      "demo": 27,
       "sal": 11,
       "proposta": 11,
       "forecast": 2,
-      "total": 50
+      "total": 51
     },
     "semCloser": {
       "demo": 0,
@@ -224,8 +224,8 @@
     "+60d": 1
   },
   "agingCriacao": {
-    "0-7d": 37,
-    "8-15d": 15,
+    "0-7d": 35,
+    "8-15d": 17,
     "16-30d": 17,
     "31-60d": 7,
     "+60d": 1
@@ -291,27 +291,27 @@
       "pctMetaProRata": 39.5,
       "funil": {
         "sql": 25,
-        "demo": 21,
+        "demo": 22,
         "sal": 15,
         "proposta": 13,
         "won": 13,
         "lost": 2,
-        "sqlToDemoP": 84,
-        "demoToSalP": 71.4,
+        "sqlToDemoP": 88,
+        "demoToSalP": 68.2,
         "salToPropP": 86.7,
         "winRateP": 86.7
       },
       "demoFlow": {
-        "demos": 20,
-        "parouDemo": 5,
+        "demos": 21,
+        "parouDemo": 6,
         "sal": 1,
         "proposta": 0,
         "ganho": 13,
         "perdido": 1,
         "voltou": 0,
         "avancaram": 14,
-        "avancouP": 70,
-        "ganhoP": 65
+        "avancouP": 66.7,
+        "ganhoP": 61.9
       }
     },
     {
